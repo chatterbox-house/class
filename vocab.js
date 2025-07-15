@@ -1,4 +1,4 @@
-window.vocab = [
+var vocab = [
   // CONCRETE WORDS (Nouns, Verbs, Adjectives, Adverbs)
 
   // 1. NOUNS
