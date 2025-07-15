@@ -686,42 +686,54 @@ function loadSelectedFile() {
     
     const reader = new FileReader();
     reader.onload = function(e) {
-        // Split into sections first
         const sections = e.target.result.split('#')
             .map(section => section.trim())
             .filter(section => section.length > 0);
         
-        sentences = []; // Reset sentences array
+        sentences = [];
+        let currentNumber = 1; // Start numbering from 1
         
         sections.forEach(section => {
             const lines = section.split('\n')
                 .map(line => line.trim())
-                .filter(line => line.length > 0 && !line.startsWith('STORY') && !line.startsWith('QUESTIONS'));
+                .filter(line => line.length > 0);
             
             const isQuestionSection = section.startsWith('QUESTIONS');
             
-            // Process each pair of lines (English then Japanese)
-            for (let i = 0; i < lines.length; i += 2) {
-                const englishLine = lines[i];
-                const japaneseLine = lines[i+1] || ''; // Use empty string if no matching Japanese
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                if (!line) continue;
                 
-                if (englishLine) {
-                    // Remove line numbers if present (like "1. ")
-                    const cleanEnglish = englishLine.replace(/^\d+\.\s*/, '');
-                    const cleanJapanese = japaneseLine.replace(/^\d+\.\s*/, '');
-                    
-                    // Extract emoji if present
-                    const emojiMatch = cleanEnglish.match(/(.+?)\s*([\u{1F300}-\u{1F9FF}]+)/u);
-                    const englishText = emojiMatch ? emojiMatch[1] : cleanEnglish;
-                    const emoji = emojiMatch ? emojiMatch[2] : '📝';
-                    
+                // Extract potential number (like "1. ")
+                const numberMatch = line.match(/^(\d+)\.\s*(.*)/);
+                const textContent = numberMatch ? numberMatch[2] : line;
+                const lineNumber = numberMatch ? parseInt(numberMatch[1]) : currentNumber;
+                
+                // Extract emoji if present
+                const emojiMatch = textContent.match(/(.*?)([\u{1F300}-\u{1F9FF}]+)?$/u);
+                const text = emojiMatch[1].trim();
+                let emoji = emojiMatch[2] || (i % 2 === 0 ? '🇬🇧' : '🇯🇵');
+                
+                // Only count English lines for numbering
+                if (i % 2 === 0) {
+                    currentNumber = lineNumber;
+                }
+                
+                // Only store pairs (English + Japanese)
+                if (i % 2 === 0) {
                     sentences.push({
-                        english: englishText,
-                        japanese: cleanJapanese,
+                        english: text,
+                        japanese: '', // Will be filled by next line
                         emoji: emoji,
                         isQuestion: isQuestionSection,
-                        number: sentences.length + 1
+                        number: lineNumber
                     });
+                } else if (sentences.length > 0) {
+                    sentences[sentences.length - 1].japanese = text;
+                    // Use same emoji for Japanese unless specified
+                    if (!emojiMatch[2]) {
+                        sentences[sentences.length - 1].emoji = emoji;
+                    }
                 }
             }
         });
@@ -1048,21 +1060,21 @@ function displayCurrentSentence() {
         return;
     }
     
-    // Ensure index is within bounds
-    if (currentSentenceIndex < 0) currentSentenceIndex = 0;
-    if (currentSentenceIndex >= sentences.length) currentSentenceIndex = sentences.length - 1;
-    
     const sentence = sentences[currentSentenceIndex];
     
-    // Capitalize first letter if it's a question
-    let displayText = sentence.english;
-    if (sentence.isQuestion && displayText.length > 0) {
-        displayText = displayText.charAt(0).toUpperCase() + displayText.slice(1);
+    // Capitalize questions
+    let englishText = sentence.english;
+    if (sentence.isQuestion && englishText.length > 0) {
+        englishText = englishText.charAt(0).toUpperCase() + englishText.slice(1);
     }
 
-    // Display with numbering and emoji
-    sentenceDisplay.innerHTML = `${sentence.number}. ${displayText} ${sentence.emoji || '📝'}`;
-    japaneseDisplay.innerHTML = `${sentence.number}. ${sentence.japanese} ${sentence.emoji || '📝'}`;
+    // Ensure we have valid numbering and emoji
+    const displayNumber = sentence.number || currentSentenceIndex + 1;
+    const englishEmoji = sentence.emoji || '🇬🇧';
+    const japaneseEmoji = sentence.emoji || '🇯🇵';
+
+    sentenceDisplay.innerHTML = `${displayNumber}. ${englishText} ${englishEmoji}`;
+    japaneseDisplay.innerHTML = `${displayNumber}. ${sentence.japanese} ${japaneseEmoji}`;
     
     // Update progress
     progressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
