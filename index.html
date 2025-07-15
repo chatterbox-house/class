@@ -539,7 +539,16 @@
         <div id="classSelector" class="class-selector">
             <!-- Class buttons will be added dynamically -->
         </div>
-        
+
+        <div id="fileUpload" style="display: none; margin: 20px; text-align: center;">
+    <h3>Or Upload Lesson File</h3>
+    <input type="file" id="lessonFile" accept=".txt" style="display: none;">
+    <label for="lessonFile" class="btn" style="cursor: pointer; margin: 10px;">
+        Choose File
+    </label>
+    <button id="loadFileBtn" class="btn" style="margin: 10px;">Load Selected File</button>
+    <div id="fileNameDisplay" style="margin: 10px;"></div>
+</div>
         <div class="content-area">
             <div id="initialMessage">
                 <p>Please select a mode and class to begin</p>
@@ -648,33 +657,157 @@
         
         // Vocabulary data (loaded from vocab.js)
         let vocabData = [];
-        
-        // Initialize the app
-        function init() {
-            // Load vocab data
-            if (typeof window.vocab !== 'undefined') {
-                vocabData = window.vocab;
-            } else {
-                console.error("Vocab data not loaded. Please ensure vocab.js is loaded.");
-                // Fallback to empty array
-                vocabData = [];
-            }
-            
-            // Set up event listeners
-            readingBtn.addEventListener('click', () => setMode('reading'));
-            matchingBtn.addEventListener('click', () => setMode('matching'));
-            concreteBtn.addEventListener('click', () => setCategory('concrete'));
-            abstractBtn.addEventListener('click', () => setCategory('abstract'));
-            prevBtn.addEventListener('click', showPreviousSentence);
-            nextBtn.addEventListener('click', showNextSentence);
-            toggleGameBtn.addEventListener('click', toggleGame);
-            spinBtn.addEventListener('click', spinFruitMachine);
-            spinWheelBtn.addEventListener('click', spinWheel);
-            
-            // Create class buttons
-            createClassButtons();
+// Add these functions right before init()
+function setupFileUpload() {
+    const fileInput = document.getElementById('lessonFile');
+    const loadBtn = document.getElementById('loadFileBtn');
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+    
+    fileInput.addEventListener('change', (e) => {
+        if (e.target.files.length > 0) {
+            fileNameDisplay.textContent = `Selected: ${e.target.files[0].name}`;
         }
+    });
+    
+    loadBtn.addEventListener('click', loadSelectedFile);
+}
+
+function loadSelectedFile() {
+    const fileInput = document.getElementById('lessonFile');
+    const file = fileInput.files[0];
+    
+    if (!file) {
+        alert("Please select a file first!");
+        return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        // Split into sections first
+        const sections = e.target.result.split('#')
+            .map(section => section.trim())
+            .filter(section => section.length > 0);
         
+        sentences = []; // Reset sentences array
+        
+        sections.forEach(section => {
+            const lines = section.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0 && !line.startsWith('STORY') && !line.startsWith('QUESTIONS'));
+            
+            const isQuestionSection = section.startsWith('QUESTIONS');
+            
+            // Process each pair of lines (English then Japanese)
+            for (let i = 0; i < lines.length; i += 2) {
+                const englishLine = lines[i];
+                const japaneseLine = lines[i+1] || ''; // Use empty string if no matching Japanese
+                
+                if (englishLine) {
+                    // Remove line numbers if present (like "1. ")
+                    const cleanEnglish = englishLine.replace(/^\d+\.\s*/, '');
+                    const cleanJapanese = japaneseLine.replace(/^\d+\.\s*/, '');
+                    
+                    sentences.push({
+                        english: cleanEnglish,
+                        japanese: cleanJapanese,
+                        isQuestion: isQuestionSection
+                    });
+                }
+            }
+        });
+        
+        if (sentences.length > 0) {
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
+            console.log(`Loaded ${sentences.length} sentences`);
+        } else {
+            alert("No valid sentences found in the file!");
+        }
+    };
+    
+    reader.onerror = function() {
+        alert("Error reading file. Please try another file.");
+    };
+    reader.readAsText(file);
+}
+
+// In your parseLessonFile function:
+function parseLessonFile(text) {
+    sentences = []; // Clear previous sentences
+    
+    // Split into sections first
+    const sections = text.split('#').map(section => section.trim()).filter(section => section.length > 0);
+    
+    sections.forEach(section => {
+        const sectionLines = section.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+        if (sectionLines.length === 0) return;
+        
+        const sectionName = sectionLines[0];
+        const isQuestionSection = sectionName === 'QUESTIONS';
+        
+        // Process each pair of lines (English then Japanese)
+        for (let i = 1; i < sectionLines.length; i += 2) {
+            const englishLine = sectionLines[i];
+            const japaneseLine = sectionLines[i+1] || ''; // Use empty string if no matching Japanese line
+            
+            if (englishLine) {
+                sentences.push({
+                    english: englishLine,
+                    japanese: japaneseLine,
+                    isQuestion: isQuestionSection
+                });
+            }
+        }
+    });
+    
+    // Start displaying from the beginning
+    if (sentences.length > 0) {
+        currentSentenceIndex = 0;
+        displayCurrentSentence();
+        console.log(`Successfully loaded ${sentences.length} sentences`);
+    } else {
+        console.error("No sentences were loaded from the file");
+    }
+}
+
+function debugSentences() {
+    console.log("Total sentences loaded:", sentences.length);
+    console.log("Current sentence index:", currentSentenceIndex);
+    console.log("All loaded sentences:", sentences);
+    console.log("Previous button disabled:", prevBtn.disabled);
+    console.log("Next button disabled:", nextBtn.disabled);
+}
+
+// Initialize the app
+function init() {
+    // Load vocab data
+    if (typeof window.vocab !== 'undefined') {
+        vocabData = window.vocab;
+    } else {
+        console.error("Vocab data not loaded. Please ensure vocab.js is loaded.");
+        vocabData = [];
+    }
+    
+    // Set up event listeners
+    readingBtn.addEventListener('click', () => setMode('reading'));
+    matchingBtn.addEventListener('click', () => setMode('matching'));
+    concreteBtn.addEventListener('click', () => setCategory('concrete'));
+    abstractBtn.addEventListener('click', () => setCategory('abstract'));
+    prevBtn.addEventListener('click', showPreviousSentence);
+    nextBtn.addEventListener('click', showNextSentence);
+    toggleGameBtn.addEventListener('click', toggleGame);
+    spinBtn.addEventListener('click', spinFruitMachine);
+    spinWheelBtn.addEventListener('click', spinWheel);
+    
+    // Set up file upload
+    setupFileUpload();
+    
+    // Create class buttons
+    createClassButtons();
+}
+
+// Initialize the app when the page loads
+window.addEventListener('DOMContentLoaded', init);
         // Create class selection buttons based on mode
         function createClassButtons() {
             classSelector.innerHTML = '';
@@ -691,11 +824,14 @@
         }
         
         // Set the current mode (reading or matching)
-        function setMode(mode) {
-            currentMode = mode;
-            initialMessage.style.display = 'none';
-            readingMode.style.display = 'none';
-            matchingGame.style.display = 'none';
+function setMode(mode) {
+    currentMode = mode;
+    initialMessage.style.display = 'none';
+    readingMode.style.display = 'none';
+    matchingGame.style.display = 'none';
+    
+    // Add this line to show upload only in reading mode
+    document.getElementById('fileUpload').style.display = mode === 'reading' ? 'block' : 'none';
             
             // Show category selector only for matching game
             categorySelector.style.display = mode === 'matching' ? 'block' : 'none';
@@ -765,28 +901,28 @@
         }
         
         // Display the current sentence with verb highlighting
-        function displayCurrentSentence() {
-            if (sentences.length === 0 || currentSentenceIndex < 0 || currentSentenceIndex >= sentences.length) {
-                sentenceDisplay.textContent = "No sentences available.";
-                japaneseDisplay.textContent = "";
-                return;
-            }
-            
-            const sentence = sentences[currentSentenceIndex];
-            
-            // Update progress bar
-            progressBar.style.width = `${((currentSentenceIndex + 1) / sentences.length) * 100}%`;
-            
-            // Simple verb highlighting (in a real app, this would use proper NLP)
-            const englishWithHighlight = highlightVerbs(sentence.english);
-            const japaneseWithHighlight = highlightVerbs(sentence.japanese);
-            
-            sentenceDisplay.innerHTML = englishWithHighlight;
-            japaneseDisplay.innerHTML = japaneseWithHighlight;
-            
-            // Speak the English sentence
-            speakSentence(sentence.english);
-        }
+function displayCurrentSentence() {
+    if (!sentences || sentences.length === 0) {
+        console.error("No sentences available to display");
+        return;
+    }
+    
+    console.log(`Displaying sentence ${currentSentenceIndex + 1} of ${sentences.length}`);
+    
+    const sentence = sentences[currentSentenceIndex];
+    sentenceDisplay.innerHTML = sentence.isQuestion ? "❓ " + sentence.english : sentence.english;
+    japaneseDisplay.innerHTML = sentence.isQuestion ? "❓ " + sentence.japanese : sentence.japanese;
+    
+    // Update progress
+    progressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
+    
+    // Update button states
+    prevBtn.disabled = currentSentenceIndex <= 0;
+    nextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
+    
+    // Speak the English sentence
+    speakSentence(sentence.english);
+}
         
         // Simple verb highlighting (very basic implementation)
         function highlightVerbs(text) {
@@ -825,27 +961,131 @@
         }
         
         // Navigation functions
-        function showPreviousSentence() {
-            if (currentSentenceIndex > 0) {
-                currentSentenceIndex--;
-                displayCurrentSentence();
-                gameArea.style.display = 'none';
-            }
-        }
-        
-        function showNextSentence() {
-            if (currentSentenceIndex < sentences.length - 1) {
-                currentSentenceIndex++;
-                displayCurrentSentence();
+function showNextSentence() {
+    if (sentences.length === 0) return;
+    
+    if (currentSentenceIndex < sentences.length - 1) {
+        currentSentenceIndex++;
+    } else {
+        // Loop back to beginning if at end
+        currentSentenceIndex = 0;
+    }
+    displayCurrentSentence();
+    
+    // Show/hide game area if enabled
+    if (gameEnabled && currentSentenceIndex % 2 === 1) {
+        gameArea.style.display = 'block';
+    } else {
+        gameArea.style.display = 'none';
+    }
+}
+
+function showPreviousSentence() {
+    if (sentences.length === 0) return;
+    
+    if (currentSentenceIndex > 0) {
+        currentSentenceIndex--;
+    } else {
+        // Loop to end if at beginning
+        currentSentenceIndex = sentences.length - 1;
+    }
+    displayCurrentSentence();
+    
+    // Always hide game when going back
+    gameArea.style.display = 'none';
+}
+function debugSentences() {
+    console.log("Total sentences loaded:", sentences.length);
+    console.log("Current sentence index:", currentSentenceIndex);
+    console.log("All loaded sentences:", sentences);
+    
+    // Verify navigation buttons
+    console.log("Previous button disabled:", prevBtn.disabled);
+    console.log("Next button disabled:", nextBtn.disabled);
+}
+// Modified loadTextFile function
+
+    async function loadTextFile(cls) {
+        try {
+            const fileNumber = cls === 'X' ? '007' : '001';
+            const response = await fetch(`./${cls}/${fileNumber}.txt`);
+            if (!response.ok) throw new Error("File not found");
+            const text = await response.text();
+            
+            // CORRECTED PARSING - handles all sections properly
+            sentences = [];
+            const sections = text.split('#')
+                .map(section => section.trim())
+                .filter(section => section.length > 0);
+            
+            sections.forEach(section => {
+                const lines = section.split('\n')
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0 && !line.startsWith('SECTION'));
                 
-                // Show game if enabled and at even-numbered sentences
-                if (gameEnabled && currentSentenceIndex % 2 === 1) {
-                    gameArea.style.display = 'block';
-                } else {
-                    gameArea.style.display = 'none';
+                if (lines.length === 0) return;
+                
+                const sectionName = lines[0];
+                const isQuestionSection = sectionName === 'QUESTIONS';
+                
+                // Process each pair of lines
+                for (let i = 1; i < lines.length; i++) {
+                    if (i + 1 < lines.length) {
+                        sentences.push({
+                            english: lines[i],
+                            japanese: lines[i + 1],
+                            isQuestion: isQuestionSection
+                        });
+                        i++; // Skip next line since we processed it
+                    }
                 }
-            }
+            });
+            
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
+            console.log(`Loaded ${sentences.length} sentences`);
+        } catch (error) {
+            console.error("Error loading text file:", error);
+            // Fallback example text
+            sentences = [
+                { english: "Jay was hot and tired after class.", japanese: "授業の後、ジェイは暑くて疲れていました。", isQuestion: false },
+                { english: "He saw a vending machine outside the eikaiwa.", japanese: "英会話教室の外に自動販売機を見つけました。", isQuestion: false },
+                // ... more sentences ...
+            ];
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
         }
+    }
+
+
+// Modified display function to handle questions differently
+function displayCurrentSentence() {
+    if (!sentences || sentences.length === 0) {
+        sentenceDisplay.textContent = "No sentences loaded";
+        japaneseDisplay.textContent = "";
+        return;
+    }
+    
+    // Ensure index is within bounds
+    if (currentSentenceIndex < 0) currentSentenceIndex = 0;
+    if (currentSentenceIndex >= sentences.length) currentSentenceIndex = sentences.length - 1;
+    
+    const sentence = sentences[currentSentenceIndex];
+    const questionPrefix = sentence.isQuestion ? "❓ " : "";
+    
+    sentenceDisplay.innerHTML = questionPrefix + highlightVerbs(sentence.english);
+    japaneseDisplay.innerHTML = questionPrefix + highlightVerbs(sentence.japanese);
+    
+    // Update progress
+    progressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
+    
+    // Update button states
+    prevBtn.disabled = currentSentenceIndex <= 0;
+    nextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
+    
+    // Speak the English sentence
+    speakSentence(sentence.english);
+}
         
         // Toggle the fruit game
         function toggleGame() {
