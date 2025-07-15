@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatterbox English Learning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --info: #7209b7;
+            --text: #2b2d42;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            font-size: 18px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 90%);
+        }
+        
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            text-align: center;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--warning));
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        
+        .mode-selector {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 200px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .btn:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+        
+        .class-selector {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .class-btn {
+            background-color: var(--accent);
+            min-width: 120px;
+        }
+        
+        .category-selector {
+            margin-bottom: 20px;
+        }
+        
+        .category-btn {
+            background-color: var(--info);
+            min-width: 150px;
+            margin: 0 5px;
+        }
+        
+        .content-area {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .sentence-container {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        .sentence {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            color: var(--text);
+        }
+        
+        .japanese {
+            color: var(--secondary);
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .verb {
+            color: var(--info);
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 4px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .nav-btn {
+            font-size: 1rem;
+            padding: 12px 25px;
+            min-width: 120px;
+        }
+        
+        .game-area {
+            display: none;
+            margin-top: 30px;
+            width: 100%;
+            background: rgba(67, 97, 238, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        
+        .fruit-machine {
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            padding: 20px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+            text-align: center;
+        }
+
+        .reels-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            perspective: 1000px;
+        }
+
+        .reel {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform-style: preserve-3d;
+        }
+
+        .reel-symbol {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+        }
+
+        .spin-btn {
+            background-color: var(--warning);
+            margin-top: 20px;
+        }
+
+        .spin-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .result {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            min-height: 60px;
+            color: white;
+        }
+        
+        .win {
+            color: #f8f9fa;
+            animation: pulse 1s infinite, rainbow 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes rainbow {
+            0% { color: #f72585; }
+            25% { color: #b5179e; }
+            50% { color: #7209b7; }
+            75% { color: #4361ee; }
+            100% { color: #4cc9f0; }
+        }
+        
+        /* Matching game styles */
+        .matching-game {
+            display: none;
+            width: 100%;
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .score-display {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .card {
+            background-color: var(--primary);
+            color: white;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            perspective: 1000px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .card.selected {
+            background-color: var(--accent);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .card.matched {
+            background-color: var(--success);
+            cursor: default;
+            animation: bounce 0.5s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        
+        .card-front {
+            background-color: var(--primary);
+        }
+        
+        .card-back {
+            background-color: var(--accent);
+            transform: rotateY(180deg);
+        }
+        
+        .wheel-container {
+            display: none;
+            margin-top: 30px;
+            background: rgba(72, 149, 239, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .wheel {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #f72585 0% 20%,
+                #b5179e 20% 40%,
+                #7209b7 40% 60%,
+                #560bad 60% 80%,
+                #480ca8 80% 100%
+            );
+            margin: 0 auto;
+            position: relative;
+            transition: transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            border: 8px solid white;
+        }
+        
+        .wheel-pointer {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 40px solid var(--warning);
+            z-index: 10;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+        
+        .wheel-segment {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            transform-origin: bottom right;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .chips-display {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            background-color: var(--success);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        
+        .emoji {
+            font-size: 1.8rem;
+            margin-right: 8px;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            margin: 20px 0;
+            height: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--primary));
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 2.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .btn {
+                min-width: 160px;
+                padding: 12px 20px;
+            }
+            
+            .sentence {
+                font-size: 1.4rem;
+            }
+            
+            .japanese {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span class="logo-icon">💬</span>
+            <span>Chatterbox</span>
+        </div>
+        
+        <h1>English Learning System</h1>
+        
+        <div class="mode-selector">
+            <button id="readingBtn" class="btn">Reading Mode</button>
+            <button id="matchingBtn" class="btn">Matching Game</button>
+        </div>
+        
+        <div id="categorySelector" class="category-selector" style="display: none;">
+            <button id="concreteBtn" class="btn category-btn">Concrete Words</button>
+            <button id="abstractBtn" class="btn category-btn">Abstract Words</button>
+        </div>
+        
+        <div id="classSelector" class="class-selector">
+            <!-- Class buttons will be added dynamically -->
+        </div>
+        
+        <div class="content-area">
+            <div id="initialMessage">
+                <p>Please select a mode and class to begin</p>
+            </div>
+            
+            <div id="readingMode" style="display: none;">
+                <div class="sentence-container">
+                    <div id="sentenceDisplay" class="sentence"></div>
+                    <div id="japaneseDisplay" class="japanese"></div>
+                </div>
+                
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                
+                <div class="controls">
+                    <button id="prevBtn" class="btn nav-btn">Previous</button>
+                    <button id="nextBtn" class="btn nav-btn">Next</button>
+                    <button id="toggleGameBtn" class="btn nav-btn">Toggle Game</button>
+                </div>
+                
+                <div id="gameArea" class="game-area">
+                    <h2>Fruit Machine</h2>
+                    <div id="fruitMachine" class="fruit-machine">
+                        <div class="reels-container">
+                            <div class="reel" id="reel1">
+                                <div class="reel-symbol">🍎</div>
+                            </div>
+                            <div class="reel" id="reel2">
+                                <div class="reel-symbol">🍊</div>
+                            </div>
+                            <div class="reel" id="reel3">
+                                <div class="reel-symbol">🍇</div>
+                            </div>
+                        </div>
+                        <button id="spinBtn" class="btn spin-btn">Spin!</button>
+                        <div id="resultDisplay" class="result"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="matchingGame" class="matching-game">
+                <div class="game-header">
+                    <h2>Match the Words</h2>
+                    <div id="scoreDisplay" class="score-display">Matches: 0/4</div>
+                </div>
+                <div id="cardsContainer" class="cards-container">
+                    <!-- Cards will be added dynamically -->
+                </div>
+                <div id="wheelContainer" class="wheel-container">
+                    <h3>Spin the Wheel!</h3>
+                    <div class="wheel-pointer"></div>
+                    <div id="wheel" class="wheel"></div>
+                    <button id="spinWheelBtn" class="btn" style="margin-top: 20px;">Spin Wheel</button>
+                    <div id="chipsDisplay" class="chips-display">Chips: 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let currentMode = null;
+        let currentClass = null;
+        let currentCategory = 'concrete'; // 'concrete' or 'abstract'
+        let sentences = [];
+        let currentSentenceIndex = 0;
+        let gameEnabled = false;
+        let matchedPairs = 0;
+        let chips = 0;
+        let selectedCards = [];
+        
+        // Fruit machine variables
+        const fruits = ['🍎', '🍊', '🍇', '🍉', '🍌', '🍒', '🍓', '🍑'];
+        let spinning = false;
+        
+        // DOM elements
+        const readingBtn = document.getElementById('readingBtn');
+        const matchingBtn = document.getElementById('matchingBtn');
+        const concreteBtn = document.getElementById('concreteBtn');
+        const abstractBtn = document.getElementById('abstractBtn');
+        const categorySelector = document.getElementById('categorySelector');
+        const classSelector = document.getElementById('classSelector');
+        const initialMessage = document.getElementById('initialMessage');
+        const readingMode = document.getElementById('readingMode');
+        const matchingGame = document.getElementById('matchingGame');
+        const sentenceDisplay = document.getElementById('sentenceDisplay');
+        const japaneseDisplay = document.getElementById('japaneseDisplay');
+        const progressBar = document.getElementById('progressBar');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const toggleGameBtn = document.getElementById('toggleGameBtn');
+        const gameArea = document.getElementById('gameArea');
+        const fruitMachine = document.getElementById('fruitMachine');
+        const spinBtn = document.getElementById('spinBtn');
+        const resultDisplay = document.getElementById('resultDisplay');
+        const cardsContainer = document.getElementById('cardsContainer');
+        const wheelContainer = document.getElementById('wheelContainer');
+        const wheel = document.getElementById('wheel');
+        const spinWheelBtn = document.getElementById('spinWheelBtn');
+        const chipsDisplay = document.getElementById('chipsDisplay');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const reel1 = document.getElementById('reel1');
+        const reel2 = document.getElementById('reel2');
+        const reel3 = document.getElementById('reel3');
+        
+        // Vocabulary data (loaded from vocab.js)
+        let vocabData = [];
+        
+        // Initialize the app
+        function init() {
+            // Load vocab data
+            if (typeof window.vocab !== 'undefined') {
+                vocabData = window.vocab;
+            } else {
+                console.error("Vocab data not loaded. Please ensure vocab.js is loaded.");
+                // Fallback to empty array
+                vocabData = [];
+            }
+            
+            // Set up event listeners
+            readingBtn.addEventListener('click', () => setMode('reading'));
+            matchingBtn.addEventListener('click', () => setMode('matching'));
+            concreteBtn.addEventListener('click', () => setCategory('concrete'));
+            abstractBtn.addEventListener('click', () => setCategory('abstract'));
+            prevBtn.addEventListener('click', showPreviousSentence);
+            nextBtn.addEventListener('click', showNextSentence);
+            toggleGameBtn.addEventListener('click', toggleGame);
+            spinBtn.addEventListener('click', spinFruitMachine);
+            spinWheelBtn.addEventListener('click', spinWheel);
+            
+            // Create class buttons
+            createClassButtons();
+        }
+        
+        // Create class selection buttons based on mode
+        function createClassButtons() {
+            classSelector.innerHTML = '';
+            
+            const modeClasses = currentMode === 'reading' ? classes.reading : classes.matching;
+            
+            modeClasses.forEach(cls => {
+                const btn = document.createElement('button');
+                btn.className = 'btn class-btn';
+                btn.textContent = cls;
+                btn.addEventListener('click', () => setClass(cls));
+                classSelector.appendChild(btn);
+            });
+        }
+        
+        // Set the current mode (reading or matching)
+        function setMode(mode) {
+            currentMode = mode;
+            initialMessage.style.display = 'none';
+            readingMode.style.display = 'none';
+            matchingGame.style.display = 'none';
+            
+            // Show category selector only for matching game
+            categorySelector.style.display = mode === 'matching' ? 'block' : 'none';
+            
+            createClassButtons();
+            
+            if (mode === 'reading') {
+                readingBtn.classList.add('active');
+                matchingBtn.classList.remove('active');
+            } else {
+                matchingBtn.classList.add('active');
+                readingBtn.classList.remove('active');
+            }
+        }
+        
+        // Set the word category (concrete or abstract)
+        function setCategory(category) {
+            currentCategory = category;
+            concreteBtn.classList.toggle('active', category === 'concrete');
+            abstractBtn.classList.toggle('active', category === 'abstract');
+            
+            // If we already have a class selected, refresh the game
+            if (currentClass) {
+                setupMatchingGame(currentClass);
+            }
+        }
+        
+        // Set the current class and load appropriate content
+        function setClass(cls) {
+            currentClass = cls;
+            
+            if (currentMode === 'reading') {
+                loadTextFile(cls);
+                readingMode.style.display = 'block';
+                matchingGame.style.display = 'none';
+            } else {
+                setupMatchingGame(cls);
+                matchingGame.style.display = 'block';
+                readingMode.style.display = 'none';
+            }
+        }
+        
+        // Load text file for reading mode
+        function loadTextFile(cls) {
+            // In a real implementation, this would fetch the latest file from the folder
+            // For this demo, we'll use a hardcoded example
+            const exampleText = `1. I like apples.　りんごが好きです。
+2. He is eating.　彼は食べています。
+3. She will go to school tomorrow.　彼女は明日学校に行きます。
+4. We have studied English for three years.　私たちは3年間英語を勉強しています。
+5. They were playing soccer when it started to rain.　雨が降り始めたとき、彼らはサッカーをしていました。`;
+            
+            // Parse the text file
+            sentences = exampleText.split('\n').map(line => {
+                const match = line.match(/^\d+\.\s+(.+?)　(.+)$/);
+                if (match) {
+                    return {
+                        english: match[1],
+                        japanese: match[2]
+                    };
+                }
+                return null;
+            }).filter(Boolean);
+            
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
+        }
+        
+        // Display the current sentence with verb highlighting
+        function displayCurrentSentence() {
+            if (sentences.length === 0 || currentSentenceIndex < 0 || currentSentenceIndex >= sentences.length) {
+                sentenceDisplay.textContent = "No sentences available.";
+                japaneseDisplay.textContent = "";
+                return;
+            }
+            
+            const sentence = sentences[currentSentenceIndex];
+            
+            // Update progress bar
+            progressBar.style.width = `${((currentSentenceIndex + 1) / sentences.length) * 100}%`;
+            
+            // Simple verb highlighting (in a real app, this would use proper NLP)
+            const englishWithHighlight = highlightVerbs(sentence.english);
+            const japaneseWithHighlight = highlightVerbs(sentence.japanese);
+            
+            sentenceDisplay.innerHTML = englishWithHighlight;
+            japaneseDisplay.innerHTML = japaneseWithHighlight;
+            
+            // Speak the English sentence
+            speakSentence(sentence.english);
+        }
+        
+        // Simple verb highlighting (very basic implementation)
+        function highlightVerbs(text) {
+            // Common English verbs
+            const englishVerbs = ['is', 'am', 'are', 'was', 'were', 'have', 'has', 'had', 'do', 'does', 'did', 
+                                'go', 'went', 'like', 'eat', 'eating', 'studied', 'playing', 'started'];
+            
+            // Common Japanese verb endings
+            const japaneseVerbs = ['します', 'しています', 'ました', 'ています', '始め', '好きです'];
+            
+            let highlighted = text;
+            
+            // Highlight English verbs
+            englishVerbs.forEach(verb => {
+                const regex = new RegExp(`\\b${verb}\\b`, 'gi');
+                highlighted = highlighted.replace(regex, `<span class="verb">${verb}</span>`);
+            });
+            
+            // Highlight Japanese verbs
+            japaneseVerbs.forEach(verb => {
+                const regex = new RegExp(verb, 'g');
+                highlighted = highlighted.replace(regex, `<span class="verb">${verb}</span>`);
+            });
+            
+            return highlighted;
+        }
+        
+        // Text-to-speech function
+        function speakSentence(text) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+        
+        // Navigation functions
+        function showPreviousSentence() {
+            if (currentSentenceIndex > 0) {
+                currentSentenceIndex--;
+                displayCurrentSentence();
+                gameArea.style.display = 'none';
+            }
+        }
+        
+        function showNextSentence() {
+            if (currentSentenceIndex < sentences.length - 1) {
+                currentSentenceIndex++;
+                displayCurrentSentence();
+                
+                // Show game if enabled and at even-numbered sentences
+                if (gameEnabled && currentSentenceIndex % 2 === 1) {
+                    gameArea.style.display = 'block';
+                } else {
+                    gameArea.style.display = 'none';
+                }
+            }
+        }
+        
+        // Toggle the fruit game
+        function toggleGame() {
+            gameEnabled = !gameEnabled;
+            toggleGameBtn.textContent = gameEnabled ? 'Game: ON' : 'Game: OFF';
+            gameArea.style.display = gameEnabled ? 'block' : 'none';
+        }
+        
+        // Fruit machine game
+        function spinFruitMachine() {
+            if (spinning) return;
+            
+            spinning = true;
+            spinBtn.disabled = true;
+            resultDisplay.textContent = '';
+            resultDisplay.className = 'result';
+            
+            // Reset reels
+            reel1.innerHTML = '<div class="reel-symbol">?</div>';
+            reel2.innerHTML = '<div class="reel-symbol">?</div>';
+            reel3.innerHTML = '<div class="reel-symbol">?</div>';
+            
+            // Spin each reel with different durations
+            spinReel(reel1, 1000 + Math.random() * 500);
+            spinReel(reel2, 1500 + Math.random() * 500);
+            spinReel(reel3, 2000 + Math.random() * 500, checkResult);
+        }
+        
+        function spinReel(reel, duration, callback) {
+            const startTime = Date.now();
+            const endTime = startTime + duration;
+            
+            function update() {
+                const currentTime = Date.now();
+                const progress = (currentTime - startTime) / duration;
+                
+                if (currentTime >= endTime) {
+                    // Final spin result
+                    const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+                    reel.innerHTML = `<div class="reel-symbol">${randomFruit}</div>`;
+                    if (callback) callback();
+                    return;
+                }
+                
+                // Show random fruit during spin
+                const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+                reel.innerHTML = `<div class="reel-symbol">${randomFruit}</div>`;
+                
+                requestAnimationFrame(update);
+            }
+            
+            update();
+        }
+        
+        function checkResult() {
+            spinning = false;
+            spinBtn.disabled = false;
+            
+            const symbol1 = reel1.textContent.trim();
+            const symbol2 = reel2.textContent.trim();
+            const symbol3 = reel3.textContent.trim();
+            
+            // Check for wins
+            if (symbol1 === symbol2 && symbol2 === symbol3) {
+                // 3 matching symbols
+                resultDisplay.textContent = "Jackpot! 🎉";
+                resultDisplay.className = "result win";
+                playSound('win');
+                chips += 5;
+            } else if (symbol1 === symbol2 || symbol2 === symbol3 || symbol1 === symbol3) {
+                // 2 matching symbols
+                resultDisplay.textContent = "You Win! 🎊";
+                resultDisplay.className = "result win";
+                playSound('win');
+                chips += 2;
+            } else {
+                // No match
+                resultDisplay.textContent = "Try Again!";
+                resultDisplay.className = "result";
+                playSound('lose');
+            }
+            
+            chipsDisplay.textContent = `Chips: ${chips}`;
+        }
+        
+        // Set up matching game
+        function setupMatchingGame(cls) {
+            // Filter vocab based on selected category
+            const filteredVocab = vocabData.filter(item => {
+                return item.category === currentCategory;
+            });
+            
+            // Get 8 random items from the filtered vocab
+            const selectedVocab = getRandomItems(filteredVocab, 8);
+            
+            // Create cards
+            cardsContainer.innerHTML = '';
+            wheelContainer.style.display = 'none';
+            matchedPairs = 0;
+            selectedCards = [];
+            updateScoreDisplay();
+            
+            // Duplicate and shuffle the cards
+            let cards = [];
+            selectedVocab.forEach((item, index) => {
+                cards.push({
+                    type: 'english',
+                    content: item.word,
+                    pairId: index,
+                    matched: false
+                });
+                
+                const displayContent = currentCategory === 'concrete' 
+                    ? `<span class="emoji">${item.emoji || '📝'}</span> ${item.japanese}`
+                    : item.japanese;
+                
+                cards.push({
+                    type: 'japanese',
+                    content: displayContent,
+                    pairId: index,
+                    matched: false
+                });
+            });
+            
+            // Shuffle the cards
+            cards = shuffleArray(cards);
+            
+            // Create card elements
+            cards.forEach((card, index) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+                cardElement.dataset.index = index;
+                cardElement.dataset.pairId = card.pairId;
+                cardElement.dataset.type = card.type;
+                cardElement.addEventListener('click', () => selectCard(cardElement, cards));
+                
+                const cardFront = document.createElement('div');
+                cardFront.className = 'card-front';
+                cardFront.textContent = '?';
+                
+                const cardBack = document.createElement('div');
+                cardBack.className = 'card-back';
+                cardBack.innerHTML = card.content;
+                
+                cardElement.appendChild(cardFront);
+                cardElement.appendChild(cardBack);
+                cardsContainer.appendChild(cardElement);
+            });
+        }
+        
+        // Card selection logic for matching game
+        function selectCard(cardElement, cards) {
+            const cardIndex = parseInt(cardElement.dataset.index);
+            const card = cards[cardIndex];
+            
+            // Ignore if already matched or if already selected
+            if (card.matched || selectedCards.includes(cardIndex)) {
+                return;
+            }
+            
+            // Ignore if two cards are already selected
+            if (selectedCards.length >= 2) {
+                return;
+            }
+            
+            // Select the card
+            cardElement.classList.add('selected');
+            selectedCards.push(cardIndex);
+            
+            // Check for match if two cards are selected
+            if (selectedCards.length === 2) {
+                const firstCard = cards[selectedCards[0]];
+                const secondCard = cards[selectedCards[1]];
+                
+                if (firstCard.pairId === secondCard.pairId && firstCard.type !== secondCard.type) {
+                    // Match found
+                    playSound('correct');
+                    matchedPairs++;
+                    updateScoreDisplay();
+                    
+                    // Mark as matched
+                    cards[selectedCards[0]].matched = true;
+                    cards[selectedCards[1]].matched = true;
+                    
+                    document.querySelector(`.card[data-index="${selectedCards[0]}"]`).classList.add('matched');
+                    document.querySelector(`.card[data-index="${selectedCards[1]}"]`).classList.add('matched');
+                    
+                    // Check if game is complete
+                    if (matchedPairs === 4) {
+                        setTimeout(() => {
+                            wheelContainer.style.display = 'block';
+                        }, 1000);
+                    }
+                } else {
+                    // No match
+                    playSound('wrong');
+                    setTimeout(() => {
+                        document.querySelector(`.card[data-index="${selectedCards[0]}"]`).classList.remove('selected');
+                        document.querySelector(`.card[data-index="${selectedCards[1]}"]`).classList.remove('selected');
+                    }, 1000);
+                }
+                
+                // Reset selection after delay
+                setTimeout(() => {
+                    selectedCards = [];
+                }, 1000);
+            }
+        }
+        
+        // Update the score display
+        function updateScoreDisplay() {
+            scoreDisplay.textContent = `Matches: ${matchedPairs}/4`;
+        }
+        
+        // Spin the wheel mini-game
+        function spinWheel() {
+            const segments = 5;
+            const spinDegrees = 1800 + Math.floor(Math.random() * 360); // 5-6 full rotations plus random
+            const winningSegment = Math.floor((spinDegrees % 360) / (360 / segments));
+            const chipsWon = winningSegment + 1; // 1-5 chips
+            
+            wheel.style.transform = `rotate(${spinDegrees}deg)`;
+            spinWheelBtn.disabled = true;
+            
+            setTimeout(() => {
+                chips += chipsWon;
+                chipsDisplay.textContent = `Chips: ${chips}`;
+                playSound('win');
+                spinWheelBtn.disabled = false;
+                
+                // Reset the matching game after a delay
+                setTimeout(() => {
+                    setupMatchingGame(currentClass);
+                }, 3000);
+            }, 3000);
+        }
+        
+        // Helper functions
+        function getRandomItems(array, count) {
+            if (array.length === 0) return [];
+            const shuffled = array.slice().sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, Math.min(count, array.length));
+        }
+        
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        
+        function playSound(type) {
+            // In a real implementation, this would play sound effects
+            console.log(`Playing ${type} sound`);
+        }
+        
+        // Class data
+        const classes = {
+            reading: ['C', 'X', 'HighSchool', 'Adult'],
+            matching: ['T2', 'A', 'B']
+        };
+        
+        // Initialize the app when the page loads
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+    
+    <!-- Load vocab.js after the main script but before the DOM is fully loaded -->
+    <script src="vocab.js"></script>
+</body>
+</html>
