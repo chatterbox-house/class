@@ -209,13 +209,18 @@
             transition: width 0.5s ease;
         }
         
-        .controls {
-            display: flex;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+.controls {
+    display: flex;
+    gap: 30px;
+    margin-top: auto; /* Push to bottom */
+    padding-top: 20px;
+    position: sticky;
+    bottom: 0;
+    background-color: var(--card-bg);
+    z-index: 10;
+    width: 100%;
+    justify-content: center;
+}
         
         .nav-btn {
             font-size: 1.5rem;
@@ -361,6 +366,84 @@
     transform: scale(1.1);
     box-shadow: 0 0 0 3px var(--accent);
 }
+.sentence {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: var(--text);
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding: 0 20px;
+    text-align: center;
+    /* Dynamic font sizing */
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.japanese {
+    color: var(--secondary);
+    margin-top: 20px;
+    font-size: 2rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding: 0 20px;
+    text-align: center;
+    /* Dynamic font sizing */
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.content-area {
+    /* Add these to existing content-area styles */
+    overflow-y: auto;
+    max-height: 70vh;
+    padding: 20px;
+}
+
+.sentence-container {
+    /* Add these to existing sentence-container styles */
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* For fullscreen mode */
+.fullscreen-mode .sentence {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+}
+
+.fullscreen-mode .japanese {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+.fullscreen-mode .content-area {
+    max-height: 80vh;
+    padding: 40px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
         }
     </style>
 </head>
@@ -487,6 +570,13 @@ const classes = {
         
         // Initialize the app
         function init() {
+// Add this to your init() function
+window.addEventListener('resize', () => {
+    if (currentMode === 'reading' && sentences.length > 0) {
+        const container = document.getElementById('contentContainer') || document;
+        adjustTextSize(container);
+    }
+});
             // Set up event listeners
             readingBtn.addEventListener('click', () => setMode('reading'));
             matchingBtn.addEventListener('click', () => setMode('matching'));
@@ -592,7 +682,38 @@ if (typeof adult !== 'undefined') {
                 }
             });
         }
-        
+ // Add this function to your JavaScript
+function adjustTextSize(container) {
+    const sentenceElement = container.querySelector('#sentenceDisplay');
+    const japaneseElement = container.querySelector('#japaneseDisplay');
+    
+    // Reset to default sizes first
+    sentenceElement.style.fontSize = '';
+    japaneseElement.style.fontSize = '';
+    
+    // Function to check if element is overflowing
+    function isOverflowing(el) {
+        return el.scrollHeight > el.clientHeight || el.scrollWidth > el.clientWidth;
+    }
+    
+    // Adjust English sentence
+    let fontSize = window.getComputedStyle(sentenceElement).fontSize;
+    let currentSize = parseFloat(fontSize);
+    
+    while (isOverflowing(sentenceElement) && currentSize > 20) { // Don't go below 20px
+        currentSize -= 2;
+        sentenceElement.style.fontSize = `${currentSize}px`;
+    }
+    
+    // Adjust Japanese sentence
+    fontSize = window.getComputedStyle(japaneseElement).fontSize;
+    currentSize = parseFloat(fontSize);
+    
+    while (isOverflowing(japaneseElement) && currentSize > 16) { // Don't go below 16px
+        currentSize -= 2;
+        japaneseElement.style.fontSize = `${currentSize}px`;
+    }
+}       
         // Set the current mode (reading or matching)
 function setMode(mode) {
     stopSpeech();
@@ -756,70 +877,65 @@ function loadTextContent(cls) {
 }
         
         // Parse story file content
-        function parseStoryFile(text) {
-            const lines = text.split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0);
-            
-            let currentSection = null;
-            const result = [];
-            let englishLine = null;
-            
-            for (const line of lines) {
-                if (line.startsWith('#STORY')) {
-                    currentSection = 'story';
-                    continue;
-                } else if (line.startsWith('#QUESTIONS')) {
-                    currentSection = 'questions';
-                    continue;
-                }
-                
-                if (!currentSection) continue;
-                
-                if (/[a-zA-Z]/.test(line)) {
-                    englishLine = line;
-                } else if (englishLine) {
-                    result.push({
-                        english: englishLine,
-                        japanese: line,
-                        section: currentSection,
-                        number: result.length + 1
-                    });
-                    englishLine = null;
-                }
-            }
-            
-            return result;
+function parseStoryFile(text) {
+    const lines = text.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !line.startsWith('#')); // Ignore empty lines and # markers
+    
+    const result = [];
+    let englishLine = null;
+    
+    for (const line of lines) {
+        if (/[a-zA-Z]/.test(line)) {
+            // English line
+            englishLine = line;
+        } else if (englishLine) {
+            // Japanese line (following an English line)
+            result.push({
+                english: englishLine,
+                japanese: line,
+                number: result.length + 1
+            });
+            englishLine = null;
         }
+    }
+    
+    return result;
+}
         
         // Display current sentence
-        function displayCurrentSentence(isFullscreen = false) {
-            const container = isFullscreen ? document.getElementById('contentContainer') : document;
-            
-            const currentSentenceDisplay = container.querySelector('#sentenceDisplay');
-            const currentJapaneseDisplay = container.querySelector('#japaneseDisplay');
-            const currentProgressBar = container.querySelector('#progressBar');
-            const currentPrevBtn = container.querySelector('#prevBtn');
-            const currentNextBtn = container.querySelector('#nextBtn');
-            
-            if (!sentences || sentences.length === 0) {
-                currentSentenceDisplay.textContent = "No sentences loaded";
-                currentJapaneseDisplay.textContent = "";
-                return;
-            }
-            
-            const sentence = sentences[currentSentenceIndex];
-            
-            currentSentenceDisplay.textContent = `${sentence.number}. ${sentence.english}`;
-            currentJapaneseDisplay.textContent = `${sentence.number}. ${sentence.japanese}`;
-            
-            // Update progress
-            currentProgressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
-            
-            // Update button states
-            if (currentPrevBtn) currentPrevBtn.disabled = currentSentenceIndex <= 0;
-            if (currentNextBtn) currentNextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
-        }
+function displayCurrentSentence(isFullscreen = false) {
+    const container = isFullscreen ? document.getElementById('contentContainer') : document;
+    
+    const currentSentenceDisplay = container.querySelector('#sentenceDisplay');
+    const currentJapaneseDisplay = container.querySelector('#japaneseDisplay');
+    const currentProgressBar = container.querySelector('#progressBar');
+    const currentPrevBtn = container.querySelector('#prevBtn');
+    const currentNextBtn = container.querySelector('#nextBtn');
+    
+    if (!sentences || sentences.length === 0) {
+        currentSentenceDisplay.textContent = "No sentences loaded";
+        currentJapaneseDisplay.textContent = "";
+        return;
+    }
+    
+    const sentence = sentences[currentSentenceIndex];
+    
+    currentSentenceDisplay.textContent = `${sentence.number}. ${sentence.english}`;
+    currentJapaneseDisplay.textContent = `${sentence.number}. ${sentence.japanese}`;
+    
+    // Update progress
+    currentProgressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
+    
+    // Update button states
+    if (currentPrevBtn) currentPrevBtn.disabled = currentSentenceIndex <= 0;
+    if (currentNextBtn) currentNextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
+    
+    // Adjust text size if needed
+    setTimeout(() => {
+        adjustTextSize(container);
+    }, 50);
+}
         
         // Play current sentence audio
 function playCurrentSentence() {
