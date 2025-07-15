@@ -556,9 +556,12 @@
             
             <div id="readingMode" style="display: none;">
                 <div class="sentence-container">
-                    <div id="sentenceDisplay" class="sentence"></div>
-                    <div id="japaneseDisplay" class="japanese"></div>
-                </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div id="sentenceDisplay" class="sentence"></div>
+        <button id="playBtn" class="play-btn" style="margin-left: 10px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--primary);">▶</button>
+    </div>
+    <div id="japaneseDisplay" class="japanese"></div>
+</div>
                 
                 <div class="progress-container">
                     <div id="progressBar" class="progress-bar"></div>
@@ -798,6 +801,13 @@ function init() {
     toggleGameBtn.addEventListener('click', toggleGame);
     spinBtn.addEventListener('click', spinFruitMachine);
     spinWheelBtn.addEventListener('click', spinWheel);
+const playBtn = document.getElementById('playBtn');
+playBtn.addEventListener('click', () => {
+    if (sentences.length > 0 && currentSentenceIndex >= 0) {
+        const sentence = sentences[currentSentenceIndex];
+        speakSentence(sentence.english);
+    }
+});
     
     // Set up file upload
     setupFileUpload();
@@ -806,8 +816,7 @@ function init() {
     createClassButtons();
 }
 
-// Initialize the app when the page loads
-window.addEventListener('DOMContentLoaded', init);
+
         // Create class selection buttons based on mode
         function createClassButtons() {
             classSelector.innerHTML = '';
@@ -825,6 +834,7 @@ window.addEventListener('DOMContentLoaded', init);
         
         // Set the current mode (reading or matching)
 function setMode(mode) {
+    stopSpeech(); // Stop speech when changing mode
     currentMode = mode;
     initialMessage.style.display = 'none';
     readingMode.style.display = 'none';
@@ -899,31 +909,14 @@ function setMode(mode) {
             currentSentenceIndex = 0;
             displayCurrentSentence();
         }
-        
-        // Display the current sentence with verb highlighting
-function displayCurrentSentence() {
-    if (!sentences || sentences.length === 0) {
-        console.error("No sentences available to display");
-        return;
+
+// Add this function to stop speech
+function stopSpeech() {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
     }
-    
-    console.log(`Displaying sentence ${currentSentenceIndex + 1} of ${sentences.length}`);
-    
-    const sentence = sentences[currentSentenceIndex];
-    sentenceDisplay.innerHTML = sentence.isQuestion ? "❓ " + sentence.english : sentence.english;
-    japaneseDisplay.innerHTML = sentence.isQuestion ? "❓ " + sentence.japanese : sentence.japanese;
-    
-    // Update progress
-    progressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
-    
-    // Update button states
-    prevBtn.disabled = currentSentenceIndex <= 0;
-    nextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
-    
-    // Speak the English sentence
-    speakSentence(sentence.english);
 }
-        
+               
         // Simple verb highlighting (very basic implementation)
         function highlightVerbs(text) {
             // Common English verbs
@@ -962,6 +955,7 @@ function displayCurrentSentence() {
         
         // Navigation functions
 function showNextSentence() {
+    stopSpeech(); // Stop speech when navigating
     if (sentences.length === 0) return;
     
     if (currentSentenceIndex < sentences.length - 1) {
@@ -981,6 +975,7 @@ function showNextSentence() {
 }
 
 function showPreviousSentence() {
+    stopSpeech(); // Stop speech when navigating
     if (sentences.length === 0) return;
     
     if (currentSentenceIndex > 0) {
@@ -1343,14 +1338,14 @@ function displayCurrentSentence() {
             console.log(`Playing ${type} sound`);
         }
         
+// Initialize the app when the page loads
+window.addEventListener('DOMContentLoaded', init);
+        
         // Class data
         const classes = {
             reading: ['C', 'X', 'HighSchool', 'Adult'],
             matching: ['T2', 'A', 'B']
         };
-        
-        // Initialize the app when the page loads
-        window.addEventListener('DOMContentLoaded', init);
     </script>
     
     <!-- Load vocab.js after the main script but before the DOM is fully loaded -->
