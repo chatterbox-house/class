@@ -710,10 +710,17 @@ function loadSelectedFile() {
                     const cleanEnglish = englishLine.replace(/^\d+\.\s*/, '');
                     const cleanJapanese = japaneseLine.replace(/^\d+\.\s*/, '');
                     
+                    // Extract emoji if present
+                    const emojiMatch = cleanEnglish.match(/(.+?)\s*([\u{1F300}-\u{1F9FF}]+)/u);
+                    const englishText = emojiMatch ? emojiMatch[1] : cleanEnglish;
+                    const emoji = emojiMatch ? emojiMatch[2] : '📝';
+                    
                     sentences.push({
-                        english: cleanEnglish,
+                        english: englishText,
                         japanese: cleanJapanese,
-                        isQuestion: isQuestionSection
+                        emoji: emoji,
+                        isQuestion: isQuestionSection,
+                        number: sentences.length + 1
                     });
                 }
             }
@@ -918,30 +925,10 @@ function stopSpeech() {
 }
                
         // Simple verb highlighting (very basic implementation)
-        function highlightVerbs(text) {
-            // Common English verbs
-            const englishVerbs = ['is', 'am', 'are', 'was', 'were', 'have', 'has', 'had', 'do', 'does', 'did', 
-                                'go', 'went', 'like', 'eat', 'eating', 'studied', 'playing', 'started'];
-            
-            // Common Japanese verb endings
-            const japaneseVerbs = ['します', 'しています', 'ました', 'ています', '始め', '好きです'];
-            
-            let highlighted = text;
-            
-            // Highlight English verbs
-            englishVerbs.forEach(verb => {
-                const regex = new RegExp(`\\b${verb}\\b`, 'gi');
-                highlighted = highlighted.replace(regex, `<span class="verb">${verb}</span>`);
-            });
-            
-            // Highlight Japanese verbs
-            japaneseVerbs.forEach(verb => {
-                const regex = new RegExp(verb, 'g');
-                highlighted = highlighted.replace(regex, `<span class="verb">${verb}</span>`);
-            });
-            
-            return highlighted;
-        }
+function highlightVerbs(text) {
+    // We're removing verb highlighting completely
+    return text;
+}
         
         // Text-to-speech function
         function speakSentence(text) {
@@ -1066,10 +1053,16 @@ function displayCurrentSentence() {
     if (currentSentenceIndex >= sentences.length) currentSentenceIndex = sentences.length - 1;
     
     const sentence = sentences[currentSentenceIndex];
-    const questionPrefix = sentence.isQuestion ? "❓ " : "";
     
-    sentenceDisplay.innerHTML = questionPrefix + highlightVerbs(sentence.english);
-    japaneseDisplay.innerHTML = questionPrefix + highlightVerbs(sentence.japanese);
+    // Capitalize first letter if it's a question
+    let displayText = sentence.english;
+    if (sentence.isQuestion && displayText.length > 0) {
+        displayText = displayText.charAt(0).toUpperCase() + displayText.slice(1);
+    }
+
+    // Display with numbering and emoji
+    sentenceDisplay.innerHTML = `${sentence.number}. ${displayText} ${sentence.emoji || '📝'}`;
+    japaneseDisplay.innerHTML = `${sentence.number}. ${sentence.japanese} ${sentence.emoji || '📝'}`;
     
     // Update progress
     progressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
