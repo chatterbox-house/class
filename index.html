@@ -450,10 +450,10 @@
 let currentStory = null;
         
         // Class data
-        const classes = {
-            reading: ['X', 'HighSchool', 'Adult'],
-            matching: ['T2', 'A', 'B']
-        };
+const classes = {
+    reading: ['X', 'C', 'HighSchool', 'Adult'],  // Added 'C' to the reading classes
+    matching: ['T2', 'A', 'B']
+};
         
         // Vocabulary data (will be loaded from vocab.js)
         let vocabData = [];
@@ -564,6 +564,16 @@ let currentStory = null;
                         lessonsData['X'] = x;
                         console.log('X class data loaded');
                     }
+// Add this to load C class data
+if (typeof c !== 'undefined') {
+    lessonsData['C'] = c;
+    console.log('C class data loaded');
+}
+// Add this to load Adult class data
+if (typeof adult !== 'undefined') {
+    lessonsData['Adult'] = adult;
+    console.log('Adult class data loaded');
+}
                     
                     // Load other class data here as needed
                     // if (typeof highschool !== 'undefined') {
@@ -1202,8 +1212,8 @@ function playSound(type) {
     <!-- Load external scripts -->
     <script src="vocab.js"></script>
     <script src="x.js"></script>
-        <script src="c.js"></script>
-        <script src="adult.js"></script>
+    <script src="c.js"></script>
+    <script src="adult.js"></script>
     <!-- Add other class files as needed -->
     <!-- <script src="highschool.js"></script> -->
     <!-- <script src="adult.js"></script> -->
