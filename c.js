@@ -1,4 +1,4 @@
-var x = {
+var c = {
     story1: `#STORY
 🍎 Tony and Jay are teachers from England.
 トニーとジェイはイングランド出身の先生です。
