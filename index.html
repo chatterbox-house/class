@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -514,10 +515,85 @@
             .japanese {
                 font-size: 1.2rem;
             }
+       .fullscreen-mode {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--card-bg);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .exit-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--warning);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 101;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .fullscreen-content {
+            width: 90%;
+            height: 85%;
+            overflow: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .class-selection-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        /* Make buttons more TV-friendly */
+        .btn {
+            min-width: 250px;
+            min-height: 80px;
+            font-size: 1.5rem;
+            margin: 15px;
+        }
+        
+        /* Focus styles for TV remote navigation */
+        *:focus {
+            outline: 4px solid var(--accent);
+            transform: scale(1.05);
+        }
+        
+        /* Larger text for TV viewing */
+        .sentence {
+            font-size: 2.5rem;
+        }
+        
+        .japanese {
+            font-size: 2rem;
+        }
+        
+        .mode-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
+    <!-- Exit button (initially hidden) -->
+    <button id="exitBtn" class="exit-btn" style="display: none;">Exit (Back)</button>
     <div class="container">
         <div class="logo">
             <span class="logo-icon">💬</span>
@@ -613,6 +689,184 @@
     </div>
 
     <script>
+// Add these variables at the top
+        const exitBtn = document.getElementById('exitBtn');
+        let currentScreen = 'main'; // 'main', 'class-select', 'content'
+        
+        // Modified setMode function
+        function setMode(mode) {
+            currentMode = mode;
+            currentScreen = 'class-select';
+            
+            // Hide main UI
+            document.querySelector('.container').style.display = 'none';
+            
+            // Show exit button
+            exitBtn.style.display = 'block';
+            
+            // Create class selection screen
+            const classScreen = document.createElement('div');
+            classScreen.className = 'fullscreen-mode';
+            classScreen.id = 'classSelectionScreen';
+            
+            // Add title
+            const title = document.createElement('h2');
+            title.className = 'mode-title';
+            title.textContent = `Select Class for ${mode === 'reading' ? 'Reading Mode' : 'Matching Game'}`;
+            classScreen.appendChild(title);
+            
+            // Add class buttons
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'class-selection-screen';
+            
+            const modeClasses = mode === 'reading' ? classes.reading : classes.matching;
+            modeClasses.forEach(cls => {
+                const btn = document.createElement('button');
+                btn.className = 'btn class-btn';
+                btn.textContent = cls;
+                btn.addEventListener('click', () => {
+                    currentClass = cls;
+                    showContentScreen();
+                });
+                buttonContainer.appendChild(btn);
+            });
+            
+            classScreen.appendChild(buttonContainer);
+            document.body.appendChild(classScreen);
+            
+            // Focus first button
+            setTimeout(() => {
+                const firstBtn = buttonContainer.querySelector('.btn');
+                if (firstBtn) firstBtn.focus();
+            }, 100);
+            
+            // Set up TV navigation
+            setupTVNavigation();
+        }
+        
+        // New function to show content screen
+        function showContentScreen() {
+            currentScreen = 'content';
+            
+            // Remove class selection screen
+            const classScreen = document.getElementById('classSelectionScreen');
+            if (classScreen) classScreen.remove();
+            
+            // Create content screen
+            const contentScreen = document.createElement('div');
+            contentScreen.className = 'fullscreen-mode';
+            contentScreen.id = 'contentScreen';
+            
+            // Clone the relevant content
+            const contentToClone = currentMode === 'reading' ? readingMode : matchingGame;
+            const clonedContent = contentToClone.cloneNode(true);
+            clonedContent.style.display = 'block';
+            clonedContent.className += ' fullscreen-content';
+            
+            // Initialize the content
+            if (currentMode === 'reading') {
+                loadTextFile(currentClass);
+            } else {
+                setupMatchingGame(currentClass);
+            }
+            
+            contentScreen.appendChild(clonedContent);
+            document.body.appendChild(contentScreen);
+            
+            // Focus first interactive element
+            setTimeout(() => {
+                const firstInteractive = currentMode === 'reading' 
+                    ? contentScreen.querySelector('.nav-btn:not([disabled])')
+                    : contentScreen.querySelector('.card');
+                if (firstInteractive) firstInteractive.focus();
+            }, 100);
+        }
+// Modified exit function
+        function exitFullscreen() {
+            if (currentScreen === 'content') {
+                // Go back to class selection
+                const contentScreen = document.getElementById('contentScreen');
+                if (contentScreen) contentScreen.remove();
+                setMode(currentMode);
+            } else if (currentScreen === 'class-select') {
+                // Go back to main menu
+                const classScreen = document.getElementById('classSelectionScreen');
+                if (classScreen) classScreen.remove();
+                document.querySelector('.container').style.display = 'block';
+                exitBtn.style.display = 'none';
+                currentScreen = 'main';
+                
+                // Focus mode buttons
+                setTimeout(() => {
+                    const firstBtn = document.querySelector('.mode-selector .btn');
+                    if (firstBtn) firstBtn.focus();
+                }, 100);
+            }
+        }
+        
+        // Modified TV navigation
+        function setupTVNavigation() {
+            document.addEventListener('keydown', handleTVRemote);
+        }
+        
+        function handleTVRemote(e) {
+            if (currentScreen === 'main') {
+                // Navigation for main menu
+                const activeElement = document.activeElement;
+                const focusable = Array.from(document.querySelectorAll('.mode-selector .btn'));
+                const currentIndex = focusable.indexOf(activeElement);
+                
+                if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    const nextIndex = Math.max(0, currentIndex - 1);
+                    focusable[nextIndex].focus();
+                    e.preventDefault();
+                } else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                    const nextIndex = Math.min(focusable.length - 1, currentIndex + 1);
+                    focusable[nextIndex].focus();
+                    e.preventDefault();
+                } else if (e.key === 'Enter' && activeElement) {
+                    activeElement.click();
+                } else if (e.key === 'Backspace') {
+                    // No action on main menu back button
+                }
+            } else {
+                // Navigation for other screens
+                switch(e.key) {
+                    case 'ArrowUp':
+                        navigate('up');
+                        e.preventDefault();
+                        break;
+                    case 'ArrowDown':
+                        navigate('down');
+                        e.preventDefault();
+                        break;
+                    case 'ArrowLeft':
+                        if (currentMode === 'reading' && currentScreen === 'content') {
+                            showPreviousSentence();
+                        } else {
+                            navigate('left');
+                        }
+                        e.preventDefault();
+                        break;
+                    case 'ArrowRight':
+                        if (currentMode === 'reading' && currentScreen === 'content') {
+                            showNextSentence();
+                        } else {
+                            navigate('right');
+                        }
+                        e.preventDefault();
+                        break;
+                    case 'Enter':
+                        const activeElement = document.activeElement;
+                        if (activeElement) activeElement.click();
+                        break;
+                    case 'Backspace':
+                        exitFullscreen();
+                        break;
+                }
+            }
+        }
+        
         // Global variables
         let currentMode = null;
         let currentClass = null;
@@ -820,13 +1074,22 @@ function init() {
     toggleGameBtn.addEventListener('click', toggleGame);
     spinBtn.addEventListener('click', spinFruitMachine);
     spinWheelBtn.addEventListener('click', spinWheel);
-const playBtn = document.getElementById('playBtn');
-playBtn.addEventListener('click', () => {
-    if (sentences.length > 0 && currentSentenceIndex >= 0) {
-        const sentence = sentences[currentSentenceIndex];
-        speakSentence(sentence.english);
-    }
-});
+    
+    const playBtn = document.getElementById('playBtn');
+    playBtn.addEventListener('click', () => {
+        if (sentences.length > 0 && currentSentenceIndex >= 0) {
+            const sentence = sentences[currentSentenceIndex];
+            speakSentence(sentence.english);
+        }
+    });
+    
+    exitBtn.addEventListener('click', exitFullscreen);
+    
+    // Initial focus on mode buttons
+    setTimeout(() => {
+        const firstBtn = document.querySelector('.mode-selector .btn');
+        if (firstBtn) firstBtn.focus();
+    }, 100);
     
     // Set up file upload
     setupFileUpload();
@@ -835,21 +1098,20 @@ playBtn.addEventListener('click', () => {
     createClassButtons();
 }
 
-
-        // Create class selection buttons based on mode
-        function createClassButtons() {
-            classSelector.innerHTML = '';
-            
-            const modeClasses = currentMode === 'reading' ? classes.reading : classes.matching;
-            
-            modeClasses.forEach(cls => {
-                const btn = document.createElement('button');
-                btn.className = 'btn class-btn';
-                btn.textContent = cls;
-                btn.addEventListener('click', () => setClass(cls));
-                classSelector.appendChild(btn);
-            });
-        }
+// Create class selection buttons based on mode
+function createClassButtons() {
+    classSelector.innerHTML = '';
+    
+    const modeClasses = currentMode === 'reading' ? classes.reading : classes.matching;
+    
+    modeClasses.forEach(cls => {
+        const btn = document.createElement('button');
+        btn.className = 'btn class-btn';
+        btn.textContent = cls;
+        btn.addEventListener('click', () => setClass(cls));
+        classSelector.appendChild(btn);
+    });
+}
         
         // Set the current mode (reading or matching)
 function setMode(mode) {
