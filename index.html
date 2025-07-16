@@ -426,6 +426,101 @@
                 top: 100%;
             }
         }
+/* Translation Popup Styles */
+.translation-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    z-index: 1000;
+    padding: 20px;
+    display: none;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.translation-popup.active {
+    display: block;
+}
+
+.translation-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.translation-popup-close {
+    background-color: var(--warning);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translation-content {
+    margin-bottom: 15px;
+}
+
+.translation-original {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.translation-result {
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 8px;
+}
+
+.translation-tts {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.translation-tts:hover {
+    background-color: var(--secondary);
+}
+
+.translation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.translation-overlay.active {
+    display: block;
+}
 @media (max-width: 800px) {
     .sentence-display {
         font-size: 32px !important; /* Minimum readable size */
@@ -503,6 +598,24 @@
         let currentStory = null;
         let sentences = [];
         let currentSentenceIndex = 0;
+
+
+// Initialize translation elements
+function initTranslationElements() {
+    translationPopup = document.getElementById('translationPopup');
+    translationOverlay = document.getElementById('translationOverlay');
+    closeTranslationPopup = document.getElementById('closeTranslationPopup');
+    translationOriginal = document.getElementById('translationOriginal');
+    translationResult = document.getElementById('translationResult');
+    translationTts = document.getElementById('translationTts');
+    
+    if (!translationPopup || !translationOverlay || !closeTranslationPopup || 
+        !translationOriginal || !translationResult || !translationTts) {
+        console.error('One or more translation elements not found');
+        return false;
+    }
+    return true;
+}
         
         // Fruit game state variables
         let fruitGameEnabled = false;
@@ -686,15 +799,18 @@
             }
         }
         
-        // Enter reading mode
-        function enterReadingMode(cls) {
-            // Hide main container and show reading container
-            mainContainer.style.display = 'none';
-            readingModeContainer.style.display = 'flex';
-            
-            // Load the content
-            loadTextContent(cls);
-        }
+// Enter reading mode
+function enterReadingMode(cls) {
+    // Hide main container and show reading container
+    mainContainer.style.display = 'none';
+    readingModeContainer.style.display = 'flex';
+    
+    // Initialize translation events
+    initTranslationEvents();
+    
+    // Load the content
+    loadTextContent(cls);
+}
         
         // Exit reading mode
         function exitReadingMode() {
@@ -868,6 +984,116 @@ function playSentence(type) {
                 window.speechSynthesis.cancel();
             }
         }
+// Show translation popup
+function showTranslationPopup(text, lang) {
+    selectedText = text.trim();
+    translationLang = lang;
+    
+    translationOriginal.textContent = selectedText;
+    translationResult.textContent = "Loading translation...";
+    
+    // Show popup
+    translationPopup.classList.add('active');
+    translationOverlay.classList.add('active');
+    
+    // Fetch translation (using a free CORS proxy)
+    fetchTranslation(selectedText, lang);
+}
+
+// Close translation popup
+function closeTranslationPopupHandler() {
+    translationPopup.classList.remove('active');
+    translationOverlay.classList.remove('active');
+    stopSpeech();
+}
+
+// Fetch translation from a free API
+function fetchTranslation(text, lang) {
+    const direction = lang === 'en' ? 'en-ja' : 'ja-en';
+    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${direction}`;
+    
+    // Using a CORS proxy to avoid CORS issues
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    
+    fetch(proxyUrl + apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.responseData && data.responseData.translatedText) {
+                translationResult.textContent = data.responseData.translatedText;
+            } else {
+                translationResult.textContent = "Translation not available";
+            }
+        })
+        .catch(error => {
+            console.error('Translation error:', error);
+            translationResult.textContent = "Translation error - try again";
+        });
+}
+
+// Handle text selection
+function handleTextSelection() {
+    const selection = window.getSelection();
+    if (!selection.toString().trim()) return;
+    
+    // Determine which language was selected
+    const activeElement = document.activeElement;
+    let lang = '';
+    
+    if (activeElement === englishSentence || englishSentence.contains(activeElement)) {
+        lang = 'en';
+    } else if (activeElement === japaneseSentence || japaneseSentence.contains(activeElement)) {
+        lang = 'ja';
+    }
+    
+    if (lang) {
+        showTranslationPopup(selection.toString(), lang);
+    }
+}
+
+// Initialize text selection events
+function initTranslationEvents() {
+    // Initialize translation elements first
+    if (!initTranslationElements()) return;
+    
+    // Click event for single words
+    englishSentence.addEventListener('click', (e) => {
+        if (e.target === englishSentence) {
+            const word = getWordAtPoint(englishSentence, e.clientX, e.clientY);
+            if (word) showTranslationPopup(word, 'en');
+        }
+    });
+    
+    japaneseSentence.addEventListener('click', (e) => {
+        if (e.target === japaneseSentence) {
+            const word = getWordAtPoint(japaneseSentence, e.clientX, e.clientY);
+            if (word) showTranslationPopup(word, 'ja');
+        }
+    });
+    
+    // Selection event for phrases
+    document.addEventListener('mouseup', handleTextSelection);
+    
+    // Close popup events
+    closeTranslationPopup.addEventListener('click', closeTranslationPopupHandler);
+    translationOverlay.addEventListener('click', closeTranslationPopupHandler);
+    
+    // TTS button
+    translationTts.addEventListener('click', () => {
+        if (selectedText && translationLang) {
+            speakSentence(selectedText, translationLang === 'en' ? 'en-US' : 'ja-JP');
+        }
+    });
+}
+
+// Helper function to get word at specific coordinates
+function getWordAtPoint(element, x, y) {
+    const range = document.caretRangeFromPoint(x, y);
+    if (!range) return null;
+    
+    range.expand('word');
+    const word = range.toString().trim();
+    return word || null;
+}
         
         // Navigation functions
         function showNextSentence() {
@@ -1322,5 +1548,20 @@ function playSentence(type) {
     <script src="x.js"></script>
     <script src="c.js"></script>
     <script src="adult.js"></script>
+<!-- Translation Popup -->
+<div class="translation-overlay" id="translationOverlay"></div>
+<div class="translation-popup" id="translationPopup">
+    <div class="translation-popup-header">
+        <h3>Translation</h3>
+        <button class="translation-popup-close" id="closeTranslationPopup">×</button>
+    </div>
+    <div class="translation-content">
+        <div class="translation-original" id="translationOriginal"></div>
+        <div class="translation-result" id="translationResult"></div>
+        <button class="translation-tts" id="translationTts">
+            <span>🔊 Play Sound</span>
+        </button>
+    </div>
+</div>
 </body>
 </html>
