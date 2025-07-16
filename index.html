@@ -426,22 +426,63 @@
                 top: 100%;
             }
         }
+/* Highlight Styles */
+.highlighted-text {
+    background-color: rgba(255, 235, 59, 0.3);
+    border-radius: 3px;
+    padding: 0;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 /* Translation Popup Styles */
 .translation-popup {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 800px;
     background-color: var(--card-bg);
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     z-index: 1000;
-    padding: 20px;
+    padding: 30px;
     display: none;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow-y: auto;
+}
+
+.translation-original {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+    background-color: rgba(0,0,0,0.05) !important;
+    border-radius: 12px !important;
+}
+
+.translation-result {
+    font-size: 2.5rem !important;
+    padding: 20px !important;
+    background-color: rgba(67, 97, 238, 0.1) !important;
+    border-radius: 12px !important;
+}
+
+.translation-tts {
+    font-size: 2rem !important;
+    padding: 15px 25px !important;
+    margin-top: 25px !important;
+}
+
+.translation-popup-header h3 {
+    font-size: 2.5rem !important;
+}
+
+.translation-popup-close {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 2rem !important;
 }
 
 .translation-popup.active {
@@ -1000,11 +1041,21 @@ function showTranslationPopup(text, lang) {
     fetchTranslation(selectedText, lang);
 }
 
-// Close translation popup
+// Close translation popup and clean up highlights
 function closeTranslationPopupHandler() {
     translationPopup.classList.remove('active');
     translationOverlay.classList.remove('active');
     stopSpeech();
+    
+    // Remove all highlights and restore original text
+    document.querySelectorAll('.highlighted-text').forEach(el => {
+        const parent = el.parentNode;
+        while (el.firstChild) {
+            parent.insertBefore(el.firstChild, el);
+        }
+        parent.removeChild(el);
+        parent.normalize(); // Combine adjacent text nodes
+    });
 }
 
 // Fetch translation from a free API
@@ -1050,18 +1101,58 @@ function handleTextSelection() {
     const selection = window.getSelection();
     if (!selection.toString().trim()) return;
     
-    // Determine which language was selected
-    const activeElement = document.activeElement;
-    let lang = '';
+    // Clear previous highlights
+    closeTranslationPopupHandler();
     
-    if (activeElement === englishSentence || englishSentence.contains(activeElement)) {
-        lang = 'en';
-    } else if (activeElement === japaneseSentence || japaneseSentence.contains(activeElement)) {
-        lang = 'ja';
-    }
-    
-    if (lang) {
-        showTranslationPopup(selection.toString(), lang);
+    try {
+        // Highlight the selected text
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            
+            // Only proceed if the selection is within our target elements
+            const container = range.commonAncestorContainer;
+            if (!englishSentence.contains(container) && !japaneseSentence.contains(container)) {
+                return;
+            }
+            
+            // Create highlight span
+            const span = document.createElement('span');
+            span.className = 'highlighted-text';
+            
+            // Special handling for selections that cross node boundaries
+            if (range.collapsed) {
+                return;
+            }
+            
+            // Surround the content
+            range.surroundContents(span);
+            
+            // Determine which language was selected
+            let lang = '';
+            if (englishSentence.contains(container)) {
+                lang = 'en';
+            } else if (japaneseSentence.contains(container)) {
+                lang = 'ja';
+            }
+            
+            if (lang) {
+                showTranslationPopup(selection.toString(), lang);
+            }
+        }
+    } catch (e) {
+        console.error('Error highlighting selection:', e);
+        // If highlighting fails, just show the translation without highlight
+        const container = selection.anchorNode.parentElement;
+        let lang = '';
+        if (englishSentence.contains(container)) {
+            lang = 'en';
+        } else if (japaneseSentence.contains(container)) {
+            lang = 'ja';
+        }
+        
+        if (lang) {
+            showTranslationPopup(selection.toString(), lang);
+        }
     }
 }
 
@@ -1567,16 +1658,15 @@ function getWordAtPoint(element, x, y) {
 <div class="translation-overlay" id="translationOverlay"></div>
 <div class="translation-popup" id="translationPopup">
     <div class="translation-popup-header">
-        <h3>Translation</h3>
+        <h3>TRANSLATION</h3>
         <button class="translation-popup-close" id="closeTranslationPopup">×</button>
     </div>
     <div class="translation-content">
         <div class="translation-original" id="translationOriginal"></div>
         <div class="translation-result" id="translationResult"></div>
         <button class="translation-tts" id="translationTts">
-            <span>🔊 Play Sound</span>
+            <span>🔊 PLAY SOUND</span>
         </button>
     </div>
-</div>
-</body>
+</div></body>
 </html>
