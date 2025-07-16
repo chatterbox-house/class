@@ -591,6 +591,18 @@
 let fruitGameEnabled = false;
 let fruitGameActive = false;
 let shouldAdvanceAfterGame = false; // <-- Add this line
+const categories = [
+    { name: 'Fruits', items: ['🍎', '🍊', '🍇', '🍋', '🍉', '🍓', '🍒', '🍑', '🍍', '🥝'] },
+    { name: 'Vegetables', items: ['🥕', '🥦', '🍅', '🥒', '🌽', '🍆', '🥬', '🧅', '🧄', '🥔'] },
+    { name: 'Nature', items: ['🌲', '🌵', '🌊', '⛰️', '🌋', '🏝️', '🌅', '🌈', '❄️', '🌪️'] },
+    { name: 'Animals', items: ['🐶', '🐱', '🦁', '🐯', '🦊', '🐻', '🐼', '🐨', '🐵', '🦄'] },
+    { name: 'Food', items: ['🍕', '🍔', '🌭', '🍟', '🍣', '🍩', '🍪', '🍿', '🍦', '🍫'] },
+    { name: 'Sports', items: ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🎱', '🏓', '🏸', '🥊'] },
+    { name: 'Vehicles', items: ['🚗', '🚕', '🚙', '🚌', '🚑', '🚒', '🚜', '🚲', '🛵', '✈️'] },
+    { name: 'Household', items: ['🛏️', '🛋️', '🚪', '🪑', '🛁', '🚿', '🧻', '🧹', '🧴', '🔪'] },
+    { name: 'Clothing', items: ['👕', '👖', '🧥', '👗', '👔', '👚', '👟', '🧦', '🧤', '🎩'] },
+    { name: 'Electronics', items: ['📱', '💻', '🖥️', '🖨️', '📷', '🎥', '📺', '🎮', '⌚', '🔌'] }
+];
 
 // Initialize the fruit game button
 function initFruitGameButton() {
@@ -1239,94 +1251,118 @@ function showFruitGame() {
 }
 
 function spinReels() {
-    const fruits = ['🍎', '🍊', '🍇', '🍋', '🍉', '🍓', '🍒'];
+    // Select a random category for this spin
+    const currentCategory = categories[Math.floor(Math.random() * categories.length)];
+    const items = currentCategory.items;
+    
     const reels = [
         document.getElementById('reel1'),
         document.getElementById('reel2'),
         document.getElementById('reel3')
     ];
+    const resultDisplay = document.getElementById('fruitResult');
+    
+    // Reset display
+    resultDisplay.textContent = '';
+    resultDisplay.style.color = '';
     
     // Play spinning sound
     playSound('spin');
     
     // Determine if we should have a match (1 in 3 chance)
     const shouldMatch = Math.random() < 0.33;
-    let matchingFruit = '';
+    let matchingItem = '';
     
     if (shouldMatch) {
-        matchingFruit = fruits[Math.floor(Math.random() * fruits.length)];
+        matchingItem = items[Math.floor(Math.random() * items.length)];
     }
     
-    // Spin each reel
-    reels.forEach((reel, index) => {
+    // Spin each reel with delays between them
+    spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
+        playSound('reelStop');
+        spinReel(reels[1], 300, items, matchingItem, shouldMatch, () => {
+            playSound('reelStop');
+            spinReel(reels[2], 300, items, matchingItem, shouldMatch, () => {
+                playSound('reelStop');
+                
+                // Check for win after last reel stops
+                setTimeout(() => {
+// Inside the win condition in spinReels()
+if (shouldMatch && reels[0].textContent === reels[1].textContent && 
+    reels[1].textContent === reels[2].textContent) {
+    // Win condition
+    playSound('win');
+    playSound('coin'); // Add this line
+    resultDisplay.textContent = '🎉 WINNER! 🎉';
+                        resultDisplay.style.color = 'var(--success)';
+                        resultDisplay.style.fontWeight = 'bold';
+                        
+                        // Celebration animation
+                        reels.forEach(reel => {
+                            reel.style.transform = 'scale(1.2)';
+                            reel.style.transition = 'all 0.3s';
+                            reel.style.boxShadow = '0 0 20px gold';
+                        });
+                        
+                        // Confetti effect
+                        setTimeout(() => {
+                            createConfetti();
+                        }, 500);
+                        
+                        setTimeout(hideFruitGame, 3000);
+                    } else {
+                        // Lose condition
+                        playSound('lose');
+                        resultDisplay.textContent = 'Try again!';
+                        resultDisplay.style.color = 'var(--warning)';
+                        
+                        // Shake animation
+                        reels.forEach(reel => {
+                            reel.style.animation = 'shake 0.5s';
+                        });
+                        
+                        setTimeout(hideFruitGame, 2000);
+                    }
+                }, 300);
+            });
+        });
+    });
+}
+
+// Helper function to spin a single reel
+function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
+    setTimeout(() => {
         let spins = 0;
         const spinInterval = setInterval(() => {
-            // For the first few spins, show random fruits
+            // For the first few spins, show random items
             if (spins < 10) {
-                reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+                reel.textContent = items[Math.floor(Math.random() * items.length)];
             } 
             // Then slow down to the final result
             else if (spins < 15) {
-                if (index % 2 === 0) {
-                    reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+                if (spins % 2 === 0) {
+                    reel.textContent = items[Math.floor(Math.random() * items.length)];
                 }
             } 
             // Final result
             else {
                 clearInterval(spinInterval);
                 if (shouldMatch) {
-                    reel.textContent = matchingFruit;
+                    reel.textContent = matchingItem;
                 } else {
-                    reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+                    reel.textContent = items[Math.floor(Math.random() * items.length)];
                 }
-                
-                // Check for win on last reel
-if (index === 2) {
-    setTimeout(() => {
-        const resultDisplay = document.getElementById('fruitResult');
-        if (shouldMatch && reels[0].textContent === reels[1].textContent && reels[1].textContent === reels[2].textContent) {
-            // Win condition
-            playSound('win');
-            resultDisplay.textContent = '🎉 WINNER! 🎉';
-            resultDisplay.style.color = 'var(--success)';
-            resultDisplay.style.fontWeight = 'bold';
-            
-            // Celebration animation
-            reels.forEach(reel => {
-                reel.style.transform = 'scale(1.2)';
-                reel.style.transition = 'all 0.3s';
-                reel.style.boxShadow = '0 0 20px gold';
-            });
-            
-            // Confetti effect
-            setTimeout(() => {
-                createConfetti();
-            }, 500);
-            
-            setTimeout(hideFruitGame, 3000);
-        } else {
-            // Lose condition
-            playSound('lose');
-            resultDisplay.textContent = 'Try again!';
-            resultDisplay.style.color = 'var(--warning)';
-            
-            // Shake animation
-            reels.forEach(reel => {
-                reel.style.animation = 'shake 0.5s';
-            });
-            
-            setTimeout(hideFruitGame, 2000);
-        }
-    }, 300);
-}
+                if (callback) callback();
             }
             spins++;
         }, 100);
-    });
+    }, delay);
 }
 
 // Add to playSound function
 function playSound(type) {
+    if (!window.AudioContext) return;
+    
     const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     let oscillator = audioCtx.createOscillator();
     let gainNode = audioCtx.createGain();
@@ -1334,32 +1370,74 @@ function playSound(type) {
     oscillator.connect(gainNode);
     gainNode.connect(audioCtx.destination);
     
+    // Different sounds for different events
     switch(type) {
-        // ... existing cases ...
         case 'spin':
+            // Continuous spinning sound
             oscillator.type = 'sawtooth';
             oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
-            oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.3);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
+            gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.8);
             break;
+            
+        case 'reelStop':
+            // Short click when a reel stops
+            oscillator.type = 'square';
+            oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime);
+            gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.1);
+            break;
+            
         case 'win':
+            // Winning fanfare
             oscillator.type = 'sine';
             oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
             oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
             oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
+            oscillator.frequency.setValueAtTime(1046.5, audioCtx.currentTime + 0.3); // C6
+            gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
             gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.5);
             break;
+            
         case 'lose':
+            // Sad trombone
             oscillator.type = 'square';
-            oscillator.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
-            oscillator.frequency.exponentialRampToValueAtTime(110, audioCtx.currentTime + 0.5);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            oscillator.frequency.setValueAtTime(349.23, audioCtx.currentTime); // F4
+            oscillator.frequency.exponentialRampToValueAtTime(261.63, audioCtx.currentTime + 0.5); // C4
+            gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.6);
+            break;
+            
+        case 'activate':
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(784, audioCtx.currentTime); // G5
+            oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2); // C6
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.3);
+            break;
+            
+        case 'coin':
+            // Coin sound for wins
+            oscillator.type = 'triangle';
+            oscillator.frequency.setValueAtTime(988, audioCtx.currentTime); // B5
+            oscillator.frequency.exponentialRampToValueAtTime(1318, audioCtx.currentTime + 0.1); // E6
+            gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+            oscillator.start();
+            oscillator.stop(audioCtx.currentTime + 0.2);
             break;
     }
-    
-    oscillator.start();
-    oscillator.stop(audioCtx.currentTime + 0.5);
-}  
+} 
  
 // New matching game implementation
 function setupMatchingGame(cls) {
@@ -1487,42 +1565,150 @@ emojiBtn.addEventListener('click', () => {
 }
 
 function playSound(type) {
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    let oscillator = audioCtx.createOscillator();
-    let gainNode = audioCtx.createGain();
+    if (!window.AudioContext) return;
     
-    oscillator.connect(gainNode);
-    gainNode.connect(audioCtx.destination);
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     
     // Different sounds for different events
     switch(type) {
-        case 'correct':
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+        case 'spin':
+            // Gentle spinning sound
+            const spinOsc = audioCtx.createOscillator();
+            const spinGain = audioCtx.createGain();
+            spinOsc.connect(spinGain);
+            spinGain.connect(audioCtx.destination);
+            
+            spinOsc.type = 'sine';
+            spinOsc.frequency.value = 300;
+            spinGain.gain.value = 0.2;
+            
+            // Add some randomness to make it more interesting
+            const spinInterval = setInterval(() => {
+                spinOsc.frequency.setValueAtTime(
+                    300 + Math.random() * 100, 
+                    audioCtx.currentTime
+                );
+            }, 100);
+            
+            spinOsc.start();
+            
+            // Stop after 0.8 seconds
+            setTimeout(() => {
+                clearInterval(spinInterval);
+                spinGain.gain.exponentialRampToValueAtTime(
+                    0.001, 
+                    audioCtx.currentTime + 0.2
+                );
+                spinOsc.stop(audioCtx.currentTime + 0.2);
+            }, 800);
             break;
-        case 'wrong':
-            oscillator.type = 'sawtooth';
-            oscillator.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
-            oscillator.frequency.exponentialRampToValueAtTime(110, audioCtx.currentTime + 0.3);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+            
+        case 'reelStop':
+            // Soft click sound
+            const clickOsc = audioCtx.createOscillator();
+            const clickGain = audioCtx.createGain();
+            clickOsc.connect(clickGain);
+            clickGain.connect(audioCtx.destination);
+            
+            clickOsc.type = 'sine';
+            clickOsc.frequency.setValueAtTime(800, audioCtx.currentTime);
+            clickOsc.frequency.exponentialRampToValueAtTime(400, audioCtx.currentTime + 0.1);
+            clickGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            clickGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+            
+            clickOsc.start();
+            clickOsc.stop(audioCtx.currentTime + 0.1);
             break;
-        case 'celebrate':
-            oscillator.type = 'triangle';
-            oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime); // E5
-            oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            
+        case 'win':
+            // Happy chime sound
+            const winOsc1 = audioCtx.createOscillator();
+            const winOsc2 = audioCtx.createOscillator();
+            const winGain = audioCtx.createGain();
+            
+            winOsc1.connect(winGain);
+            winOsc2.connect(winGain);
+            winGain.connect(audioCtx.destination);
+            
+            winOsc1.type = 'triangle';
+            winOsc2.type = 'triangle';
+            
+            winOsc1.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+            winOsc2.frequency.setValueAtTime(784, audioCtx.currentTime); // G5
+            
+            winOsc1.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.3); // C6
+            winOsc2.frequency.exponentialRampToValueAtTime(1568, audioCtx.currentTime + 0.3); // G6
+            
+            winGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            winGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+            
+            winOsc1.start();
+            winOsc2.start();
+            winOsc1.stop(audioCtx.currentTime + 0.5);
+            winOsc2.stop(audioCtx.currentTime + 0.5);
             break;
-    case 'activate':
-        oscillator.type = 'sine';
-        oscillator.frequency.setValueAtTime(784, audioCtx.currentTime); // G5
-        oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2); // C6
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
-        break;
+            
+        case 'lose':
+            // Gentle descending tone
+            const loseOsc = audioCtx.createOscillator();
+            const loseGain = audioCtx.createGain();
+            loseOsc.connect(loseGain);
+            loseGain.connect(audioCtx.destination);
+            
+            loseOsc.type = 'sine';
+            loseOsc.frequency.setValueAtTime(440, audioCtx.currentTime); // A4
+            loseOsc.frequency.exponentialRampToValueAtTime(220, audioCtx.currentTime + 0.5); // A3
+            
+            loseGain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+            loseGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+            
+            loseOsc.start();
+            loseOsc.stop(audioCtx.currentTime + 0.5);
+            break;
+            
+        case 'activate':
+            // Pleasant ascending tone
+            const actOsc = audioCtx.createOscillator();
+            const actGain = audioCtx.createGain();
+            actOsc.connect(actGain);
+            actGain.connect(audioCtx.destination);
+            
+            actOsc.type = 'sine';
+            actOsc.frequency.setValueAtTime(440, audioCtx.currentTime); // A4
+            actOsc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.2); // A5
+            
+            actGain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+            actGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+            
+            actOsc.start();
+            actOsc.stop(audioCtx.currentTime + 0.3);
+            break;
+            
+        case 'coin':
+            // Coin collect sound
+            const coinOsc1 = audioCtx.createOscillator();
+            const coinOsc2 = audioCtx.createOscillator();
+            const coinGain = audioCtx.createGain();
+            
+            coinOsc1.connect(coinGain);
+            coinOsc2.connect(coinGain);
+            coinGain.connect(audioCtx.destination);
+            
+            coinOsc1.type = 'triangle';
+            coinOsc2.type = 'triangle';
+            
+            coinOsc1.frequency.setValueAtTime(1568, audioCtx.currentTime); // G6
+            coinOsc2.frequency.setValueAtTime(2093, audioCtx.currentTime); // C7
+            
+            coinGain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+            coinGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+            
+            coinOsc1.start();
+            coinOsc2.start();
+            coinOsc1.stop(audioCtx.currentTime + 0.2);
+            coinOsc2.stop(audioCtx.currentTime + 0.2);
+            break;
     }
-    
-    oscillator.start();
-    oscillator.stop(audioCtx.currentTime + 0.5);
 }
         
         // Update score display
