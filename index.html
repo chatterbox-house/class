@@ -119,6 +119,21 @@
         .fruit-toggle.on {
             background-color: var(--success);
         }
+.reel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.fruit-name {
+    font-size: 1.2rem;
+    height: 30px;
+    text-align: center;
+    color: var(--primary);
+    font-weight: bold;
+    min-width: 100px;
+}
         
 .reading-content {
     display: flex;
@@ -663,18 +678,158 @@ function initTranslationElements() {
         let fruitGameActive = false;
         let shouldAdvanceAfterGame = false;
         
-        const categories = [
-            { name: 'Fruits', items: ['🍎', '🍊', '🍇', '🍋', '🍉', '🍓', '🍒', '🍑', '🍍', '🥝'] },
-            { name: 'Vegetables', items: ['🥕', '🥦', '🍅', '🥒', '🌽', '🍆', '🥬', '🧅', '🧄', '🥔'] },
-            { name: 'Nature', items: ['🌲', '🌵', '🌊', '⛰️', '🌋', '🏝️', '🌅', '🌈', '❄️', '🌪️'] },
-            { name: 'Animals', items: ['🐶', '🐱', '🦁', '🐯', '🦊', '🐻', '🐼', '🐨', '🐵', '🦄'] },
-            { name: 'Food', items: ['🍕', '🍔', '🌭', '🍟', '🍣', '🍩', '🍪', '🍿', '🍦', '🍫'] },
-            { name: 'Sports', items: ['⚽', '🏀', '🏈', '⚾', '🎾', '🏐', '🎱', '🏓', '🏸', '🥊'] },
-            { name: 'Vehicles', items: ['🚗', '🚕', '🚙', '🚌', '🚑', '🚒', '🚜', '🚲', '🛵', '✈️'] },
-            { name: 'Household', items: ['🛏️', '🛋️', '🚪', '🪑', '🛁', '🚿', '🧻', '🧹', '🧴', '🔪'] },
-            { name: 'Clothing', items: ['👕', '👖', '🧥', '👗', '👔', '👚', '👟', '🧦', '🧤', '🎩'] },
-            { name: 'Electronics', items: ['📱', '💻', '🖥️', '🖨️', '📷', '🎥', '📺', '🎮', '⌚', '🔌'] }
-        ];
+const categories = [
+    { 
+        name: 'Fruits', 
+        items: [
+            {emoji: '🍎', name: 'Apple'}, 
+            {emoji: '🍊', name: 'Orange'},
+            {emoji: '🍇', name: 'Grapes'},
+            {emoji: '🍋', name: 'Lemon'},
+            {emoji: '🍉', name: 'Watermelon'},
+            {emoji: '🍓', name: 'Strawberry'},
+            {emoji: '🍒', name: 'Cherry'},
+            {emoji: '🍑', name: 'Peach'},
+            {emoji: '🍍', name: 'Pineapple'},
+            {emoji: '🥝', name: 'Kiwi'}
+        ]
+    },
+    { 
+        name: 'Vegetables', 
+        items: [
+            {emoji: '🥕', name: 'Carrot'},
+            {emoji: '🥦', name: 'Broccoli'},
+            {emoji: '🍅', name: 'Tomato'},
+            {emoji: '🥒', name: 'Cucumber'},
+            {emoji: '🌽', name: 'Corn'},
+            {emoji: '🍆', name: 'Eggplant'},
+            {emoji: '🥬', name: 'Lettuce'},
+            {emoji: '🧅', name: 'Onion'},
+            {emoji: '🧄', name: 'Garlic'},
+            {emoji: '🥔', name: 'Potato'}
+        ]
+    },
+    { 
+        name: 'Nature', 
+        items: [
+            {emoji: '🌲', name: 'Tree'},
+            {emoji: '🌵', name: 'Cactus'},
+            {emoji: '🌊', name: 'Wave'},
+            {emoji: '⛰️', name: 'Mountain'},
+            {emoji: '🌋', name: 'Volcano'},
+            {emoji: '🏝️', name: 'Island'},
+            {emoji: '🌅', name: 'Sunrise'},
+            {emoji: '🌈', name: 'Rainbow'},
+            {emoji: '❄️', name: 'Snowflake'},
+            {emoji: '🌪️', name: 'Tornado'}
+        ]
+    },
+    { 
+        name: 'Animals', 
+        items: [
+            {emoji: '🐶', name: 'Dog'},
+            {emoji: '🐱', name: 'Cat'},
+            {emoji: '🦁', name: 'Lion'},
+            {emoji: '🐯', name: 'Tiger'},
+            {emoji: '🦊', name: 'Fox'},
+            {emoji: '🐻', name: 'Bear'},
+            {emoji: '🐼', name: 'Panda'},
+            {emoji: '🐨', name: 'Koala'},
+            {emoji: '🐵', name: 'Monkey'},
+            {emoji: '🦄', name: 'Unicorn'}
+        ]
+    },
+    { 
+        name: 'Food', 
+        items: [
+            {emoji: '🍕', name: 'Pizza'},
+            {emoji: '🍔', name: 'Hamburger'},
+            {emoji: '🌭', name: 'Hotdog'},
+            {emoji: '🍟', name: 'French Fries'},
+            {emoji: '🍣', name: 'Sushi'},
+            {emoji: '🍩', name: 'Donut'},
+            {emoji: '🍪', name: 'Cookie'},
+            {emoji: '🍿', name: 'Popcorn'},
+            {emoji: '🍦', name: 'Ice Cream'},
+            {emoji: '🍫', name: 'Chocolate'}
+        ]
+    },
+    { 
+        name: 'Sports', 
+        items: [
+            {emoji: '⚽', name: 'Soccer Ball'},
+            {emoji: '🏀', name: 'Basketball'},
+            {emoji: '🏈', name: 'Football'},
+            {emoji: '⚾', name: 'Baseball'},
+            {emoji: '🎾', name: 'Tennis'},
+            {emoji: '🏐', name: 'Volleyball'},
+            {emoji: '🎱', name: 'Pool Ball'},
+            {emoji: '🏓', name: 'Ping Pong'},
+            {emoji: '🏸', name: 'Badminton'},
+            {emoji: '🥊', name: 'Boxing'}
+        ]
+    },
+    { 
+        name: 'Vehicles', 
+        items: [
+            {emoji: '🚗', name: 'Car'},
+            {emoji: '🚕', name: 'Taxi'},
+            {emoji: '🚙', name: 'SUV'},
+            {emoji: '🚌', name: 'Bus'},
+            {emoji: '🚑', name: 'Ambulance'},
+            {emoji: '🚒', name: 'Fire Truck'},
+            {emoji: '🚜', name: 'Tractor'},
+            {emoji: '🚲', name: 'Bicycle'},
+            {emoji: '🛵', name: 'Scooter'},
+            {emoji: '✈️', name: 'Airplane'}
+        ]
+    },
+    { 
+        name: 'Household', 
+        items: [
+            {emoji: '🛏️', name: 'Bed'},
+            {emoji: '🛋️', name: 'Couch'},
+            {emoji: '🚪', name: 'Door'},
+            {emoji: '🪑', name: 'Chair'},
+            {emoji: '🛁', name: 'Bathtub'},
+            {emoji: '🚿', name: 'Shower'},
+            {emoji: '🧻', name: 'Toilet Paper'},
+            {emoji: '🧹', name: 'Broom'},
+            {emoji: '🧴', name: 'Lotion'},
+            {emoji: '🔪', name: 'Kitchen Knife'}
+        ]
+    },
+    { 
+        name: 'Clothing', 
+        items: [
+            {emoji: '👕', name: 'T-Shirt'},
+            {emoji: '👖', name: 'Jeans'},
+            {emoji: '🧥', name: 'Coat'},
+            {emoji: '👗', name: 'Dress'},
+            {emoji: '👔', name: 'Necktie'},
+            {emoji: '👚', name: 'Blouse'},
+            {emoji: '👟', name: 'Sneakers'},
+            {emoji: '🧦', name: 'Socks'},
+            {emoji: '🧤', name: 'Gloves'},
+            {emoji: '🎩', name: 'Top Hat'}
+        ]
+    },
+    { 
+        name: 'Electronics', 
+        items: [
+            {emoji: '📱', name: 'Smartphone'},
+            {emoji: '💻', name: 'Laptop'},
+            {emoji: '🖥️', name: 'Desktop Computer'},
+            {emoji: '🖨️', name: 'Printer'},
+            {emoji: '📷', name: 'Camera'},
+            {emoji: '🎥', name: 'Video Camera'},
+            {emoji: '📺', name: 'Television'},
+            {emoji: '🎮', name: 'Game Controller'},
+            {emoji: '⌚', name: 'Watch'},
+            {emoji: '🔌', name: 'Plug'}
+        ]
+    }
+];
 
         // Lessons data (will be loaded from x.js and other class files)
         let lessonsData = {};
@@ -1271,18 +1426,27 @@ function getWordAtPoint(element, x, y) {
             // Create game container
             const gameContainer = document.createElement('div');
             gameContainer.className = 'fruit-game-container';
-            gameContainer.innerHTML = `
-                <div class="fruit-game">
-                    <h2>Fruit Machine!</h2>
-                    <div class="fruit-reels">
-                        <div class="fruit-reel" id="reel1">🍎</div>
-                        <div class="fruit-reel" id="reel2">🍊</div>
-                        <div class="fruit-reel" id="reel3">🍇</div>
-                    </div>
-                    <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
-                    <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
-                </div>
-            `;
+gameContainer.innerHTML = `
+    <div class="fruit-game">
+        <h2>Fruit Machine!</h2>
+        <div class="fruit-reels">
+            <div class="reel-container">
+                <div class="fruit-reel" id="reel1">🍎</div>
+                <div class="fruit-name" id="name1"></div>
+            </div>
+            <div class="reel-container">
+                <div class="fruit-reel" id="reel2">🍊</div>
+                <div class="fruit-name" id="name2"></div>
+            </div>
+            <div class="reel-container">
+                <div class="fruit-reel" id="reel3">🍇</div>
+                <div class="fruit-name" id="name3"></div>
+            </div>
+        </div>
+        <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
+        <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
+    </div>
+`;
             
             document.body.appendChild(gameContainer);
             
@@ -1339,9 +1503,11 @@ function getWordAtPoint(element, x, y) {
             const shouldMatch = Math.random() < 0.33;
             let matchingItem = '';
             
-            if (shouldMatch) {
-                matchingItem = items[Math.floor(Math.random() * items.length)];
-            }
+if (shouldMatch) {
+    matchingItem = items[Math.floor(Math.random() * items.length)];
+    // Update the matchingItem to be the full object (not just emoji)
+    matchingItem = items.find(item => item.emoji === matchingItem.emoji) || matchingItem;
+}
             
             // Spin each reel with delays between them
             spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
@@ -1395,34 +1561,52 @@ function getWordAtPoint(element, x, y) {
         }
         
         // Helper function to spin a single reel
-        function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
-            setTimeout(() => {
-                let spins = 0;
-                const spinInterval = setInterval(() => {
-                    // For the first few spins, show random items
-                    if (spins < 10) {
-                        reel.textContent = items[Math.floor(Math.random() * items.length)];
-                    } 
-                    // Then slow down to the final result
-                    else if (spins < 15) {
-                        if (spins % 2 === 0) {
-                            reel.textContent = items[Math.floor(Math.random() * items.length)];
-                        }
-                    } 
-                    // Final result
-                    else {
-                        clearInterval(spinInterval);
-                        if (shouldMatch) {
-                            reel.textContent = matchingItem;
-                        } else {
-                            reel.textContent = items[Math.floor(Math.random() * items.length)];
-                        }
-                        if (callback) callback();
-                    }
-                    spins++;
-                }, 100);
-            }, delay);
-        }
+function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
+    const reelNumber = reel.id.replace('reel', '');
+    const nameElement = document.getElementById(`name${reelNumber}`);
+    
+    setTimeout(() => {
+        let spins = 0;
+        const spinInterval = setInterval(() => {
+            // For the first few spins, show random items
+            if (spins < 10) {
+                const randomItem = items[Math.floor(Math.random() * items.length)];
+                reel.textContent = randomItem.emoji;
+                nameElement.textContent = '';
+            } 
+            // Then slow down to the final result
+            else if (spins < 15) {
+                if (spins % 2 === 0) {
+                    const randomItem = items[Math.floor(Math.random() * items.length)];
+                    reel.textContent = randomItem.emoji;
+                    nameElement.textContent = '';
+                }
+            } 
+            // Final result
+            else {
+                clearInterval(spinInterval);
+                let finalItem;
+                if (shouldMatch) {
+                    finalItem = matchingItem;
+                } else {
+                    finalItem = items[Math.floor(Math.random() * items.length)];
+                }
+                reel.textContent = finalItem.emoji;
+                nameElement.textContent = finalItem.name;
+                
+                // Speak the name
+                if (window.speechSynthesis) {
+                    const utterance = new SpeechSynthesisUtterance(finalItem.name);
+                    utterance.rate = 0.9;
+                    window.speechSynthesis.speak(utterance);
+                }
+                
+                if (callback) callback();
+            }
+            spins++;
+        }, 100);
+    }, delay);
+}
         
         // Confetti effect for wins
         function createConfetti() {
