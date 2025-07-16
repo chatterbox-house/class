@@ -27,30 +27,35 @@
             font-family: 'Poppins', sans-serif;
         }
         
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
-            font-size: 24px;
-            background-image: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 90%);
-        }
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    font-size: 24px;
+    background-image: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 90%);
+    overflow: hidden;
+    position: fixed;
+    margin: 0;
+}
         
-        .container {
-            width: 95%;
-            max-width: 1200px;
-            text-align: center;
-            background-color: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 30px;
-            position: relative;
-            overflow: hidden;
-        }
+.container {
+    width: 95%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    max-height: 95vh;
+}
         
         .container::before {
             content: '';
@@ -407,12 +412,7 @@
             <div id="fileNameDisplay"></div>
         </div>
         
-        <div class="content-area">
-            <div id="initialMessage">
-                <p>Please select a class to begin</p>
-            </div>
-            
-            <div id="readingMode" style="display: none;">
+<div class="content-area" style="display: none;" id="readingMode">
                 <div class="sentence-container">
                     <div style="display: flex; align-items: center; justify-content: center;">
                         <div id="sentenceDisplay" class="sentence"></div>
@@ -466,8 +466,7 @@
         const mainContainer = document.getElementById('mainContainer');
         const exitBtn = document.getElementById('exitBtn');
         const classButtons = document.querySelectorAll('.class-btn');
-        const initialMessage = document.getElementById('initialMessage');
-        const readingMode = document.getElementById('readingMode');
+const readingMode = document.getElementById('readingMode');
         const sentenceDisplay = document.getElementById('sentenceDisplay');
         const japaneseDisplay = document.getElementById('japaneseDisplay');
         const progressBar = document.getElementById('progressBar');
