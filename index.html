@@ -27,35 +27,35 @@
             font-family: 'Poppins', sans-serif;
         }
         
-body {
-    background-color: var(--bg);
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    padding: 20px;
-    font-size: 24px;
-    background-image: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 90%);
-    overflow: hidden;
-    position: fixed;
-    margin: 0;
-}
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            padding: 20px;
+            font-size: 24px;
+            background-image: radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, rgba(72, 149, 239, 0.1) 90%);
+            overflow: hidden;
+            position: fixed;
+            margin: 0;
+        }
         
-.container {
-    width: 95%;
-    max-width: 1200px;
-    text-align: center;
-    background-color: var(--card-bg);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 30px;
-    position: relative;
-    overflow: hidden;
-    max-height: 95vh;
-}
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            text-align: center;
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            max-height: 95vh;
+        }
         
         .container::before {
             content: '';
@@ -67,6 +67,167 @@ body {
             background: linear-gradient(90deg, var(--primary), var(--accent), var(--warning));
         }
         
+        /* NEW READING MODE STYLES */
+.reading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    z-index: 100;
+    overflow: hidden;
+    padding: 15px;
+    box-sizing: border-box;
+}
+        
+        .reading-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+        }
+        
+        .exit-reading {
+            background-color: var(--warning);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .fruit-toggle {
+            background-color: var(--warning);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .fruit-toggle.on {
+            background-color: var(--success);
+        }
+        
+.reading-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 180px); /* Account for header and footer */
+    padding: 0 20px;
+    overflow: hidden;
+}
+        
+.sentence-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px 20px; /* More side padding */
+    width: 100%;
+    overflow: hidden;
+    min-height: 0;
+    box-sizing: border-box;
+    max-height: 50vh; /* Prevent overlap with header/footer */
+}
+        
+        .sentence-row:first-child {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+.sentence-display {
+    font-size: 5vw;
+    line-height: 1.4;
+    text-align: center;
+    word-break: break-word;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    white-space: normal;
+    min-height: 0;
+    flex: 1;
+    max-height: 100%; /* Ensures text never exceeds container */
+    text-overflow: ellipsis; /* Fallback for extremely long text */
+}
+        
+        .play-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+.reading-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background-color: var(--card-bg);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+        
+.nav-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+    position: relative;
+    z-index: 20;
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.nav-btn:active {
+    transform: scale(0.98);
+}
+        
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Original styles (keep for other parts of the app) */
         .logo {
             font-size: 2.5rem;
             font-weight: 700;
@@ -159,116 +320,6 @@ body {
             justify-content: center;
             align-items: center;
             border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .sentence-container {
-            margin-bottom: 40px;
-            width: 100%;
-        }
-        
-        .sentence {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            line-height: 1.5;
-            color: var(--text);
-            max-width: 100%;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
-            padding: 0 20px;
-            text-align: center;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-        }
-        
-        .japanese {
-            color: var(--secondary);
-            margin-top: 20px;
-            font-size: 2rem;
-            max-width: 100%;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            hyphens: auto;
-            padding: 0 20px;
-            text-align: center;
-            font-size: clamp(1.2rem, 3vw, 2rem);
-        }
-        
-        .progress-container {
-            width: 100%;
-            background-color: #e9ecef;
-            border-radius: 10px;
-            margin: 30px 0;
-            height: 15px;
-            overflow: hidden;
-        }
-        
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), var(--primary));
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-        
-        .controls {
-            display: flex;
-            gap: 30px;
-            margin-top: auto;
-            padding-top: 20px;
-            position: sticky;
-            bottom: 0;
-            background-color: var(--card-bg);
-            z-index: 10;
-            width: 100%;
-            justify-content: center;
-        }
-        
-        .nav-btn {
-            font-size: 1.5rem;
-            padding: 20px 35px;
-            min-width: 200px;
-        }
-        
-        .fullscreen-mode {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--card-bg);
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-        }
-        
-        .exit-btn {
-            position: absolute;
-            top: 30px;
-            right: 30px;
-            background-color: var(--warning);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 101;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-            min-width: 200px;
-            min-height: 70px;
-        }
-        
-        .exit-btn:hover, .exit-btn:focus {
-            transform: scale(1.05);
-            background-color: #e5177a;
-        }
-        
-        *:focus {
-            outline: 4px solid var(--accent);
-            transform: scale(1.05);
-            box-shadow: 0 0 0 4px var(--accent);
         }
         
         #initialMessage {
@@ -375,11 +426,15 @@ body {
                 top: 100%;
             }
         }
+@media (max-width: 800px) {
+    .sentence-display {
+        font-size: 32px !important; /* Minimum readable size */
+    }
+}
+
     </style>
 </head>
 <body>
-    <button id="exitBtn" class="exit-btn" style="display: none;">Exit</button>
-    
     <div class="container" id="mainContainer">
         <div class="logo">
             <span class="logo-icon">💬</span>
@@ -412,25 +467,33 @@ body {
             <div id="fileNameDisplay"></div>
         </div>
         
-<div class="content-area" style="display: none;" id="readingMode">
-                <div class="sentence-container">
-                    <div style="display: flex; align-items: center; justify-content: center;">
-                        <div id="sentenceDisplay" class="sentence"></div>
-                        <button id="playBtn" class="btn" style="margin-left: 20px; background: var(--primary); width: 80px; height: 80px; border-radius: 50%; font-size: 2rem;">▶</button>
-                    </div>
-                    <div id="japaneseDisplay" class="japanese"></div>
-                </div>
-                
-                <div class="progress-container">
-                    <div id="progressBar" class="progress-bar"></div>
-                </div>
-                
-                <div class="controls">
-                    <button id="prevBtn" class="btn nav-btn">Previous</button>
-                    <button id="fruitToggle" class="btn nav-btn fruit-toggle" style="background-color: var(--warning);">🎰 Fruit Game OFF</button>
-                    <button id="nextBtn" class="btn nav-btn">Next</button>
-                </div>
+        <div class="content-area" style="display: none;" id="readingMode">
+            <p id="initialMessage">Select a class and story to begin</p>
+        </div>
+    </div>
+
+    <!-- UPDATED READING MODE TEMPLATE WITH ROWS INSTEAD OF COLUMNS -->
+    <div class="reading-container" id="readingModeContainer" style="display: none;">
+        <div class="reading-header">
+            <button id="fruitToggle" class="fruit-toggle">🎰 Fruit Game OFF</button>
+            <button id="exitReading" class="exit-reading">X</button>
+        </div>
+        
+        <div class="reading-content">
+            <div class="sentence-row">
+                <div id="englishSentence" class="sentence-display"></div>
+                <button id="playEnglish" class="play-btn">▶</button>
             </div>
+            
+            <div class="sentence-row">
+                <div id="japaneseSentence" class="sentence-display"></div>
+                <button id="playJapanese" class="play-btn">▶</button>
+            </div>
+        </div>
+        
+        <div class="reading-footer">
+            <button id="prevSentence" class="nav-btn">←</button>
+            <button id="nextSentence" class="nav-btn">→</button>
         </div>
     </div>
 
@@ -464,31 +527,25 @@ body {
         
         // DOM elements
         const mainContainer = document.getElementById('mainContainer');
-        const exitBtn = document.getElementById('exitBtn');
+        const readingModeContainer = document.getElementById('readingModeContainer');
+        const englishSentence = document.getElementById('englishSentence');
+        const japaneseSentence = document.getElementById('japaneseSentence');
+        const prevSentenceBtn = document.getElementById('prevSentence');
+        const nextSentenceBtn = document.getElementById('nextSentence');
+        const playEnglishBtn = document.getElementById('playEnglish');
+        const playJapaneseBtn = document.getElementById('playJapanese');
+        const exitReadingBtn = document.getElementById('exitReading');
+        const fruitToggleBtn = document.getElementById('fruitToggle');
         const classButtons = document.querySelectorAll('.class-btn');
-const readingMode = document.getElementById('readingMode');
-        const sentenceDisplay = document.getElementById('sentenceDisplay');
-        const japaneseDisplay = document.getElementById('japaneseDisplay');
-        const progressBar = document.getElementById('progressBar');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const playBtn = document.getElementById('playBtn');
         const fileInput = document.getElementById('lessonFile');
         const loadFileBtn = document.getElementById('loadFileBtn');
         const fileNameDisplay = document.getElementById('fileNameDisplay');
-        const fruitToggle = document.getElementById('fruitToggle');
         const storySelectorContainer = document.getElementById('storySelectorContainer');
         const fileUpload = document.getElementById('fileUpload');
+        const storySelector = document.getElementById('storySelector');
         
         // Initialize the app
         function init() {
-            window.addEventListener('resize', () => {
-                if (sentences.length > 0) {
-                    const container = document.getElementById('contentContainer') || document;
-                    adjustTextSize(container);
-                }
-            });
-
             // Set up event listeners
             classButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -497,13 +554,14 @@ const readingMode = document.getElementById('readingMode');
                 });
             });
             
-            prevBtn.addEventListener('click', showPreviousSentence);
-            nextBtn.addEventListener('click', showNextSentence);
-            playBtn.addEventListener('click', playCurrentSentence);
-            exitBtn.addEventListener('click', exitFullscreen);
+            prevSentenceBtn.addEventListener('click', showPreviousSentence);
+            nextSentenceBtn.addEventListener('click', showNextSentence);
+            playEnglishBtn.addEventListener('click', () => playSentence('english'));
+            playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
+            exitReadingBtn.addEventListener('click', exitReadingMode);
             fileInput.addEventListener('change', handleFileSelect);
             loadFileBtn.addEventListener('click', loadSelectedFile);
-            fruitToggle.addEventListener('click', toggleFruitGame);
+            fruitToggleBtn.addEventListener('click', toggleFruitGame);
             
             // Set up keyboard navigation for TV remote
             document.addEventListener('keydown', handleRemoteInput);
@@ -590,42 +648,10 @@ const readingMode = document.getElementById('readingMode');
             });
         }
         
-        // Adjust text size to fit container
-        function adjustTextSize(container) {
-            const sentenceElement = container.querySelector('#sentenceDisplay');
-            const japaneseElement = container.querySelector('#japaneseDisplay');
-            
-            // Reset to default sizes first
-            sentenceElement.style.fontSize = '';
-            japaneseElement.style.fontSize = '';
-            
-            // Function to check if element is overflowing
-            function isOverflowing(el) {
-                return el.scrollHeight > el.clientHeight || el.scrollWidth > el.clientWidth;
-            }
-            
-            // Adjust English sentence
-            let fontSize = window.getComputedStyle(sentenceElement).fontSize;
-            let currentSize = parseFloat(fontSize);
-            
-            while (isOverflowing(sentenceElement) && currentSize > 20) {
-                currentSize -= 2;
-                sentenceElement.style.fontSize = `${currentSize}px`;
-            }
-            
-            // Adjust Japanese sentence
-            fontSize = window.getComputedStyle(japaneseElement).fontSize;
-            currentSize = parseFloat(fontSize);
-            
-            while (isOverflowing(japaneseElement) && currentSize > 16) {
-                currentSize -= 2;
-                japaneseElement.style.fontSize = `${currentSize}px`;
-            }
-        }
+
         
         // Populate story selector for the selected class
         function populateStorySelector(cls) {
-            const storySelector = document.getElementById('storySelector');
             storySelector.innerHTML = '';
             
             if (lessonsData[cls]) {
@@ -654,56 +680,27 @@ const readingMode = document.getElementById('readingMode');
                 storySelector.onchange = function() {
                     currentStory = this.value;
                     if (currentStory) {
-                        enterContentMode(cls);
+                        enterReadingMode(cls);
                     }
                 };
             }
         }
         
-        // Enter fullscreen content mode
-        function enterContentMode(cls) {
-            // Hide main container and show exit button
+        // Enter reading mode
+        function enterReadingMode(cls) {
+            // Hide main container and show reading container
             mainContainer.style.display = 'none';
-            exitBtn.style.display = 'block';
+            readingModeContainer.style.display = 'flex';
             
-            // Create fullscreen content container
-            const contentContainer = document.createElement('div');
-            contentContainer.className = 'fullscreen-mode';
-            contentContainer.id = 'contentContainer';
-            document.body.appendChild(contentContainer);
-            
-            // Clone the reading content
-            const clonedContent = readingMode.cloneNode(true);
-            clonedContent.style.display = 'block';
-            contentContainer.appendChild(clonedContent);
-            
-            // Initialize the content
+            // Load the content
             loadTextContent(cls);
-            
-            // Set up event listeners for the cloned elements
-            const containerPrevBtn = contentContainer.querySelector('#prevBtn');
-            const containerNextBtn = contentContainer.querySelector('#nextBtn');
-            const containerPlayBtn = contentContainer.querySelector('#playBtn');
-            const containerFruitToggleBtn = contentContainer.querySelector('#fruitToggle');
-            
-            containerPrevBtn.addEventListener('click', showPreviousSentence);
-            containerNextBtn.addEventListener('click', showNextSentence);
-            containerPlayBtn.addEventListener('click', playCurrentSentence);
-            containerFruitToggleBtn.addEventListener('click', toggleFruitGame);
-            
-            // Update the fruit toggle button state
-            updateFruitButtonState();
         }
         
-        // Exit fullscreen mode
-        function exitFullscreen() {
-            // Remove content container
-            const contentContainer = document.getElementById('contentContainer');
-            if (contentContainer) contentContainer.remove();
-            
-            // Show main container and hide exit button
+        // Exit reading mode
+        function exitReadingMode() {
+            // Show main container and hide reading container
             mainContainer.style.display = 'block';
-            exitBtn.style.display = 'none';
+            readingModeContainer.style.display = 'none';
             
             // Stop any speech
             stopSpeech();
@@ -722,15 +719,15 @@ const readingMode = document.getElementById('readingMode');
                 sentences = parseStoryFile(lessonsData[cls][currentStory]);
                 if (sentences.length > 0) {
                     currentSentenceIndex = 0;
-                    displayCurrentSentence(true);
+                    displayCurrentSentence();
                     console.log(`Loaded ${sentences.length} sentences for class ${cls}, story ${currentStory}`);
                 } else {
                     alert(`No valid sentences found for class ${cls}, story ${currentStory}`);
-                    exitFullscreen();
+                    exitReadingMode();
                 }
             } else {
                 alert(`Story data not found for class ${cls}, story ${currentStory}`);
-                exitFullscreen();
+                exitReadingMode();
             }
         }
         
@@ -760,93 +757,97 @@ const readingMode = document.getElementById('readingMode');
             
             return result;
         }
-        
-        // Display current sentence
-        function displayCurrentSentence(isFullscreen = false) {
-const container = isFullscreen ? document.getElementById('contentContainer') : document;
-            
-            const currentSentenceDisplay = container.querySelector('#sentenceDisplay');
-            const currentJapaneseDisplay = container.querySelector('#japaneseDisplay');
-            const currentProgressBar = container.querySelector('#progressBar');
-            const currentPrevBtn = container.querySelector('#prevBtn');
-            const currentNextBtn = container.querySelector('#nextBtn');
-            
-            if (!sentences || sentences.length === 0) {
-                currentSentenceDisplay.textContent = "No sentences loaded";
-                currentJapaneseDisplay.textContent = "";
-                return;
+ function ensureTextVisibility() {
+    const rows = document.querySelectorAll('.sentence-row');
+    rows.forEach(row => {
+        const display = row.querySelector('.sentence-display');
+        if (display.scrollHeight > display.clientHeight) {
+            // Reduce font size until text fits
+            let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
+            while (display.scrollHeight > display.clientHeight && fontSize > 24) {
+                fontSize -= 1;
+                display.style.fontSize = `${fontSize}px`;
             }
-            
-            const sentence = sentences[currentSentenceIndex];
-            
-            currentSentenceDisplay.textContent = `${sentence.number}. ${sentence.english}`;
-            currentJapaneseDisplay.textContent = `${sentence.number}. ${sentence.japanese}`;
-            
-            // Update progress
-            currentProgressBar.style.width = `${(currentSentenceIndex + 1) / sentences.length * 100}%`;
-            
-            // Update button states
-            if (currentPrevBtn) currentPrevBtn.disabled = currentSentenceIndex <= 0;
-            if (currentNextBtn) currentNextBtn.disabled = currentSentenceIndex >= sentences.length - 1;
-            
-            // Adjust text size if needed
-            setTimeout(() => {
-                adjustTextSize(container);
-            }, 50);
         }
+    });
+}
+       
+// Display current sentence
+function displayCurrentSentence() {
+    if (!sentences || sentences.length === 0) {
+        englishSentence.textContent = "No sentences loaded";
+        japaneseSentence.textContent = "";
+        return;
+    }
+
+    const sentence = sentences[currentSentenceIndex];
+    
+    // Remove emoji from display if it's at the start of the sentence
+    let englishText = sentence.english;
+    const emojiRegex = /^(\p{Emoji_Presentation}|\p{Extended_Pictographic})/u;
+    if (emojiRegex.test(englishText)) {
+        // Find the first emoji character
+        const emojiMatch = englishText.match(emojiRegex);
+        if (emojiMatch && emojiMatch[0]) {
+            englishText = englishText.substring(emojiMatch[0].length).trim();
+        }
+    }
+    
+    englishSentence.textContent = `${sentence.number}. ${englishText}`;
+    japaneseSentence.textContent = `${sentence.number}. ${sentence.japanese}`;
+    
+    // Update button states
+    prevSentenceBtn.disabled = currentSentenceIndex <= 0;
+    nextSentenceBtn.disabled = currentSentenceIndex >= sentences.length - 1;
+setTimeout(ensureTextVisibility, 50);
+
+}
         
-        // Play current sentence audio
-        function playCurrentSentence() {
-            if (sentences.length === 0 || fruitGameActive) return;
-            
-            const container = document.getElementById('contentContainer') || document;
-            const currentSentenceDisplay = container.querySelector('#sentenceDisplay');
-            const text = currentSentenceDisplay.textContent.replace(/^\d+\.\s/, '');
-            
-            // Stop any current speech and game sounds before starting new one
-            stopSpeech();
-            if (window.AudioContext) {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                audioCtx.close();
-            }
-            
-            // Add slight delay to ensure speech is properly initialized
-            setTimeout(() => {
-                speakSentence(text);
-            }, 100);
-        }
+// Play sentence audio
+function playSentence(type) {
+    if (sentences.length === 0 || fruitGameActive) return;
+    
+    const sentence = sentences[currentSentenceIndex];
+    let text = type === 'english' ? sentence.english : sentence.japanese;
+    const lang = type === 'english' ? 'en-US' : 'ja-JP';
+    
+    // Remove emoji from text to be spoken using the same regex
+    const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
+    text = text.replace(emojiRegex, '').trim();
+    
+    // Stop any current speech and game sounds before starting new one
+    stopSpeech();
+    if (window.AudioContext) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx.close();
+    }
+    
+    // Add slight delay to ensure speech is properly initialized
+    setTimeout(() => {
+        speakSentence(text, lang);
+    }, 100);
+}
         
         // Text-to-speech function
-        function speakSentence(text) {
-            // Don't read if it's an emoji
-            if (/[\u{1F300}-\u{1F9FF}]/u.test(text)) {
-                return;
-            }
-            
+        function speakSentence(text, lang) {
             if ('speechSynthesis' in window) {
                 stopSpeech();
                 
                 // Create new utterance
                 const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'en-US';
+                utterance.lang = lang;
                 
-                // Remove any emoji descriptions from the text
-                utterance.text = text.replace(/[\u{1F300}-\u{1F9FF}]/u, '').trim();
-                
-                // Set language and voice properties
-                utterance.lang = 'en-US';
+                // Set voice properties
                 utterance.rate = 0.9;
                 utterance.pitch = 1;
                 utterance.volume = 1;
                 
-                // Try to find an American English voice
+                // Try to find an appropriate voice
                 const voices = window.speechSynthesis.getVoices();
-                const usVoice = voices.find(voice => 
-                    voice.lang === 'en-US' && voice.name.includes('US')
-                );
+                const voice = voices.find(v => v.lang === lang);
                 
-                if (usVoice) {
-                    utterance.voice = usVoice;
+                if (voice) {
+                    utterance.voice = voice;
                 }
                 
                 // Speak the utterance
@@ -891,8 +892,7 @@ const container = isFullscreen ? document.getElementById('contentContainer') : d
                 currentSentenceIndex = 0; // Loop to beginning
             }
             
-            displayCurrentSentence(true);
-            playCurrentSentence();
+            displayCurrentSentence();
         }
         
         function showPreviousSentence() {
@@ -905,17 +905,13 @@ const container = isFullscreen ? document.getElementById('contentContainer') : d
                 currentSentenceIndex = sentences.length - 1; // Loop to end
             }
             
-            displayCurrentSentence(true);
-            playCurrentSentence();
+            displayCurrentSentence();
         }
         
         // Fruit game functions
         function updateFruitButtonState() {
-            const buttons = document.querySelectorAll('.fruit-toggle');
-            buttons.forEach(button => {
-                button.textContent = fruitGameEnabled ? '🎰 Fruit Game ON' : '🎰 Fruit Game OFF';
-                button.style.backgroundColor = fruitGameEnabled ? 'var(--success)' : 'var(--warning)';
-            });
+            fruitToggleBtn.textContent = fruitGameEnabled ? '🎰 Fruit Game ON' : '🎰 Fruit Game OFF';
+            fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
         }
         
         function toggleFruitGame() {
@@ -983,8 +979,7 @@ const container = isFullscreen ? document.getElementById('contentContainer') : d
                     shouldAdvanceAfterGame = false;
                 } else {
                     // Otherwise just refresh current sentence
-                    displayCurrentSentence(true);
-                    playCurrentSentence();
+                    displayCurrentSentence();
                 }
             }, 500);
         }
@@ -1068,34 +1063,34 @@ const container = isFullscreen ? document.getElementById('contentContainer') : d
         }
         
         // Helper function to spin a single reel
-function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
-    setTimeout(() => {
-        let spins = 0;
-        const spinInterval = setInterval(() => {
-            // For the first few spins, show random items
-            if (spins < 10) {
-                reel.textContent = items[Math.floor(Math.random() * items.length)];
-            } 
-            // Then slow down to the final result
-            else if (spins < 15) {
-                if (spins % 2 === 0) {
-                    reel.textContent = items[Math.floor(Math.random() * items.length)];
-                }
-            } 
-            // Final result
-            else {
-                clearInterval(spinInterval);
-                if (shouldMatch) {
-                    reel.textContent = matchingItem;
-                } else {
-                    reel.textContent = items[Math.floor(Math.random() * items.length)];
-                }
-                if (callback) callback();
-            }
-            spins++;
-        }, 100);
-    }, delay);
-}
+        function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
+            setTimeout(() => {
+                let spins = 0;
+                const spinInterval = setInterval(() => {
+                    // For the first few spins, show random items
+                    if (spins < 10) {
+                        reel.textContent = items[Math.floor(Math.random() * items.length)];
+                    } 
+                    // Then slow down to the final result
+                    else if (spins < 15) {
+                        if (spins % 2 === 0) {
+                            reel.textContent = items[Math.floor(Math.random() * items.length)];
+                        }
+                    } 
+                    // Final result
+                    else {
+                        clearInterval(spinInterval);
+                        if (shouldMatch) {
+                            reel.textContent = matchingItem;
+                        } else {
+                            reel.textContent = items[Math.floor(Math.random() * items.length)];
+                        }
+                        if (callback) callback();
+                    }
+                    spins++;
+                }, 100);
+            }, delay);
+        }
         
         // Confetti effect for wins
         function createConfetti() {
@@ -1163,7 +1158,7 @@ function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
                 if (sentences.length > 0) {
                     currentSentenceIndex = 0;
                     displayCurrentSentence();
-                    enterContentMode('uploaded');
+                    enterReadingMode('uploaded');
                 } else {
                     alert("No valid sentences found in the file!");
                 }
@@ -1190,7 +1185,7 @@ function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
                     e.preventDefault();
                     break;
                 case 'ArrowLeft':
-                    if (activeElement === prevBtn || (activeElement.classList.contains('nav-btn') && activeElement.textContent.includes('Previous'))) {
+                    if (activeElement === prevSentenceBtn) {
                         showPreviousSentence();
                     } else {
                         navigateFocus('left');
@@ -1198,7 +1193,7 @@ function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
                     e.preventDefault();
                     break;
                 case 'ArrowRight':
-                    if (activeElement === nextBtn || (activeElement.classList.contains('nav-btn') && activeElement.textContent.includes('Next'))) {
+                    if (activeElement === nextSentenceBtn) {
                         showNextSentence();
                     } else {
                         navigateFocus('right');
@@ -1211,7 +1206,7 @@ function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
                     }
                     break;
                 case 'Backspace':
-                    exitFullscreen();
+                    exitReadingMode();
                     break;
             }
         }
