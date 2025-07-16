@@ -444,6 +444,53 @@
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary);
 }
+/* Fruit game styles */
+.fruit-game-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fruit-game {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 600px;
+}
+
+.fruit-game h2 {
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.fruit-reels {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.fruit-reel {
+    font-size: 5rem;
+    background-color: white;
+    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
         }
     </style>
 </head>
@@ -505,10 +552,11 @@
                     <div id="progressBar" class="progress-bar"></div>
                 </div>
                 
-                <div class="controls">
-                    <button id="prevBtn" class="btn nav-btn">Previous</button>
-                    <button id="nextBtn" class="btn nav-btn">Next</button>
-                </div>
+<div class="controls">
+    <button id="prevBtn" class="btn nav-btn">Previous</button>
+    <button id="fruitToggle" class="btn nav-btn fruit-toggle" style="background-color: var(--warning);">🎰 Fruit Game OFF</button>
+    <button id="nextBtn" class="btn nav-btn">Next</button>
+</div>
             </div>
             
             <div id="matchingGame" class="game-area">
@@ -525,7 +573,20 @@
         // Global variables
         let currentMode = null;
         let currentClass = null;
-        let currentCategory = 'concrete';
+// Fruit game state variables
+let fruitGameEnabled = false;
+let fruitGameActive = false;
+
+// Initialize the fruit game button
+function initFruitGameButton() {
+    const button = document.getElementById('fruitToggle');
+    if (button) {
+        updateFruitButtonState();
+        button.addEventListener('click', toggleFruitGame);
+    }
+}
+
+let currentCategory = 'concrete';
         let sentences = [];
         let currentSentenceIndex = 0;
         let matchedPairs = 0;
@@ -583,7 +644,8 @@ window.addEventListener('resize', () => {
             concreteBtn.addEventListener('click', () => setCategory('concrete'));
             abstractBtn.addEventListener('click', () => setCategory('abstract'));
             prevBtn.addEventListener('click', showPreviousSentence);
-            nextBtn.addEventListener('click', showNextSentence);
+nextBtn.addEventListener('click', showNextSentence);
+initFruitGameButton(); // Initialize the fruit game button
             playBtn.addEventListener('click', playCurrentSentence);
             exitBtn.addEventListener('click', exitFullscreen);
             fileInput.addEventListener('change', handleFileSelect);
@@ -800,43 +862,50 @@ function populateStorySelector(cls) {
         }
         
         // Enter fullscreen content mode
-        function enterContentMode(cls) {
-            currentClass = cls;
-            
-            // Hide main container and show exit button
-            mainContainer.style.display = 'none';
-            exitBtn.style.display = 'block';
-            
-            // Create fullscreen content container
-            const contentContainer = document.createElement('div');
-            contentContainer.className = 'fullscreen-mode';
-            contentContainer.id = 'contentContainer';
-            document.body.appendChild(contentContainer);
-            
-            // Clone the relevant content
-            const contentToClone = currentMode === 'reading' ? readingMode : matchingGame;
-            const clonedContent = contentToClone.cloneNode(true);
-            clonedContent.style.display = 'block';
-            contentContainer.appendChild(clonedContent);
-            
-            // Initialize the content - USING loadTextContent INSTEAD OF loadTextFile
-            if (currentMode === 'reading') {
-                loadTextContent(currentClass);  // This is the corrected function name
-            } else {
-                setupMatchingGame(currentClass);
-            }
-            
-            // Set up event listeners for the cloned elements
-            if (currentMode === 'reading') {
-                const containerPrevBtn = contentContainer.querySelector('#prevBtn');
-                const containerNextBtn = contentContainer.querySelector('#nextBtn');
-                const containerPlayBtn = contentContainer.querySelector('#playBtn');
-                
-                containerPrevBtn.addEventListener('click', showPreviousSentence);
-                containerNextBtn.addEventListener('click', showNextSentence);
-                containerPlayBtn.addEventListener('click', playCurrentSentence);
-            }
+function enterContentMode(cls) {
+    currentClass = cls;
+    
+    // Hide main container and show exit button
+    mainContainer.style.display = 'none';
+    exitBtn.style.display = 'block';
+    
+    // Create fullscreen content container
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'fullscreen-mode';
+    contentContainer.id = 'contentContainer';
+    document.body.appendChild(contentContainer);
+    
+    // Clone the relevant content
+    const contentToClone = currentMode === 'reading' ? readingMode : matchingGame;
+    const clonedContent = contentToClone.cloneNode(true);
+    clonedContent.style.display = 'block';
+    contentContainer.appendChild(clonedContent);
+    
+    // Initialize the content - USING loadTextContent INSTEAD OF loadTextFile
+    if (currentMode === 'reading') {
+        loadTextContent(currentClass);  // This is the corrected function name
+    } else {
+        setupMatchingGame(currentClass);
+    }
+    
+    // Set up event listeners for the cloned elements
+    if (currentMode === 'reading') {
+        const containerPrevBtn = contentContainer.querySelector('#prevBtn');
+        const containerNextBtn = contentContainer.querySelector('#nextBtn');
+        const containerPlayBtn = contentContainer.querySelector('#playBtn');
+        const containerFruitToggleBtn = contentContainer.querySelector('#fruitToggle');
+        
+        containerPrevBtn.addEventListener('click', showPreviousSentence);
+        containerNextBtn.addEventListener('click', showNextSentence);
+        containerPlayBtn.addEventListener('click', playCurrentSentence);
+        if (containerFruitToggleBtn) {
+            containerFruitToggleBtn.addEventListener('click', toggleFruitGame);
         }
+    }
+
+    // Update the fruit toggle button state
+    updateFruitButtonState();
+}  // <-- This is the missing closing brace
         
         // Exit fullscreen mode
         function exitFullscreen() {
@@ -999,8 +1068,13 @@ function speakSentence(text) {
         
         // Navigation functions
         function showNextSentence() {
-            stopSpeech();
-            if (sentences.length === 0) return;
+    stopSpeech();
+    if (sentences.length === 0) return;
+    
+    // Show fruit game if enabled
+    if (fruitGameEnabled) {
+        showFruitGame();
+    }
             
             if (currentSentenceIndex < sentences.length - 1) {
                 currentSentenceIndex++;
@@ -1026,7 +1100,156 @@ function speakSentence(text) {
             playCurrentSentence();
         }
         
-   
+// Fruit game functions
+function updateFruitButtonState() {
+    const buttons = document.querySelectorAll('.fruit-toggle');
+    buttons.forEach(button => {
+        button.textContent = fruitGameEnabled ? '🎰 Fruit Game ON' : '🎰 Fruit Game OFF';
+        button.style.backgroundColor = fruitGameEnabled ? 'var(--success)' : 'var(--warning)';
+    });
+}
+function toggleFruitGame() {
+    fruitGameEnabled = !fruitGameEnabled;
+    updateFruitButtonState();
+    
+    if (fruitGameEnabled) {
+        playSound('activate');
+        if (navigator.vibrate) navigator.vibrate(50);
+    }
+    
+    console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
+}
+function showFruitGame() {
+    if (!fruitGameEnabled || fruitGameActive) {
+        console.log('Fruit game not shown - enabled:', fruitGameEnabled, 'active:', fruitGameActive);
+        return;
+    }
+    
+    // Create game container
+    const gameContainer = document.createElement('div');
+    gameContainer.className = 'fruit-game-container';
+    gameContainer.innerHTML = `
+        <div class="fruit-game">
+            <h2>Fruit Machine!</h2>
+            <div class="fruit-reels">
+                <div class="fruit-reel" id="reel1">🍎</div>
+                <div class="fruit-reel" id="reel2">🍊</div>
+                <div class="fruit-reel" id="reel3">🍇</div>
+            </div>
+            <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
+        </div>
+    `;
+    
+    document.body.appendChild(gameContainer);
+    
+    // Spin the reels
+    spinReels();
+    
+    // Exit button
+    document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
+}
+
+function hideFruitGame() {
+    const game = document.querySelector('.fruit-game-container');
+    if (game) game.remove();
+    fruitGameActive = false;
+}
+
+function spinReels() {
+    const fruits = ['🍎', '🍊', '🍇', '🍋', '🍉', '🍓', '🍒'];
+    const reels = [
+        document.getElementById('reel1'),
+        document.getElementById('reel2'),
+        document.getElementById('reel3')
+    ];
+    
+    // Play spinning sound
+    playSound('spin');
+    
+    // Determine if we should have a match (1 in 3 chance)
+    const shouldMatch = Math.random() < 0.33;
+    let matchingFruit = '';
+    
+    if (shouldMatch) {
+        matchingFruit = fruits[Math.floor(Math.random() * fruits.length)];
+    }
+    
+    // Spin each reel
+    reels.forEach((reel, index) => {
+        let spins = 0;
+        const spinInterval = setInterval(() => {
+            // For the first few spins, show random fruits
+            if (spins < 10) {
+                reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+            } 
+            // Then slow down to the final result
+            else if (spins < 15) {
+                if (index % 2 === 0) {
+                    reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+                }
+            } 
+            // Final result
+            else {
+                clearInterval(spinInterval);
+                if (shouldMatch) {
+                    reel.textContent = matchingFruit;
+                } else {
+                    reel.textContent = fruits[Math.floor(Math.random() * fruits.length)];
+                }
+                
+                // Check for win on last reel
+                if (index === 2) {
+                    setTimeout(() => {
+                        if (shouldMatch && reels[0].textContent === reels[1].textContent && reels[1].textContent === reels[2].textContent) {
+                            playSound('win');
+                            setTimeout(hideFruitGame, 2000);
+                        } else {
+                            playSound('lose');
+                            setTimeout(hideFruitGame, 1000);
+                        }
+                    }, 300);
+                }
+            }
+            spins++;
+        }, 100);
+    });
+}
+
+// Add to playSound function
+function playSound(type) {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let oscillator = audioCtx.createOscillator();
+    let gainNode = audioCtx.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    switch(type) {
+        // ... existing cases ...
+        case 'spin':
+            oscillator.type = 'sawtooth';
+            oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
+            oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.3);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            break;
+        case 'win':
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+            oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+            oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            break;
+        case 'lose':
+            oscillator.type = 'square';
+            oscillator.frequency.setValueAtTime(220, audioCtx.currentTime); // A3
+            oscillator.frequency.exponentialRampToValueAtTime(110, audioCtx.currentTime + 0.5);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+            break;
+    }
+    
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.5);
+}  
  
 // New matching game implementation
 function setupMatchingGame(cls) {
@@ -1178,6 +1401,12 @@ function playSound(type) {
             oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2);
             gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
             break;
+    case 'activate':
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(784, audioCtx.currentTime); // G5
+        oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2); // C6
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+        break;
     }
     
     oscillator.start();
