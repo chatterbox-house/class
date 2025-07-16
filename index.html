@@ -590,6 +590,7 @@
 // Fruit game state variables
 let fruitGameEnabled = false;
 let fruitGameActive = false;
+let shouldAdvanceAfterGame = false; // <-- Add this line
 
 // Initialize the fruit game button
 function initFruitGameButton() {
@@ -1047,14 +1048,18 @@ function displayCurrentSentence(isFullscreen = false) {
         
         // Play current sentence audio
 function playCurrentSentence() {
-    if (sentences.length === 0) return;
+    if (sentences.length === 0 || fruitGameActive) return;
     
     const container = document.getElementById('contentContainer') || document;
     const currentSentenceDisplay = container.querySelector('#sentenceDisplay');
     const text = currentSentenceDisplay.textContent.replace(/^\d+\.\s/, '');
     
-    // Stop any current speech before starting new one
+    // Stop any current speech and game sounds before starting new one
     stopSpeech();
+    if (window.AudioContext) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx.close();
+    }
     
     // Add slight delay to ensure speech is properly initialized
     setTimeout(() => {
@@ -1064,11 +1069,20 @@ function playCurrentSentence() {
         
         // Text-to-speech function
 function speakSentence(text) {
+    // Don't read if it's an emoji
+    if (/[\u{1F300}-\u{1F9FF}]/u.test(text)) {
+        return;
+    }
+    
     if ('speechSynthesis' in window) {
         stopSpeech();
         
         // Create new utterance
         const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        
+        // Remove any emoji descriptions from the text
+        utterance.text = text.replace(/[\u{1F300}-\u{1F9FF}]/u, '').trim();
         
         // Set language and voice properties
         utterance.lang = 'en-US';
@@ -1106,25 +1120,56 @@ function speakSentence(text) {
         }
         
         // Navigation functions
-        function showNextSentence() {
+
+function showNextSentence() {
     stopSpeech();
-    if (sentences.length === 0) return;
+    if (sentences.length === 0 || fruitGameActive) return;
     
-    // Show fruit game if enabled
+    // Show fruit game if enabled, but mark that we want to advance after
     if (fruitGameEnabled) {
+        shouldAdvanceAfterGame = true;
         showFruitGame();
+        return;
     }
             
-            if (currentSentenceIndex < sentences.length - 1) {
-                currentSentenceIndex++;
-            } else {
-                currentSentenceIndex = 0; // Loop to beginning
-            }
-            
+    // Normal advance to next sentence
+    advanceToNextSentence();
+}
+
+function advanceToNextSentence() {
+    if (currentSentenceIndex < sentences.length - 1) {
+        currentSentenceIndex++;
+    } else {
+        currentSentenceIndex = 0; // Loop to beginning
+    }
+    
+    displayCurrentSentence(true);
+    playCurrentSentence();
+}
+
+function hideFruitGame() {
+    const game = document.querySelector('.fruit-game-container');
+    if (game) game.remove();
+    fruitGameActive = false;
+    
+    // Stop any game sounds
+    if (window.AudioContext) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx.close();
+    }
+    
+    setTimeout(() => {
+        if (shouldAdvanceAfterGame) {
+            // Only advance if Next was pressed before game started
+            advanceToNextSentence();
+            shouldAdvanceAfterGame = false;
+        } else {
+            // Otherwise just refresh current sentence
             displayCurrentSentence(true);
             playCurrentSentence();
         }
-        
+    }, 500);
+}       
         function showPreviousSentence() {
             stopSpeech();
             if (sentences.length === 0) return;
@@ -1164,6 +1209,10 @@ function showFruitGame() {
         return;
     }
     
+    // Stop any current speech
+    stopSpeech();
+    fruitGameActive = true;
+    
     // Create game container
     const gameContainer = document.createElement('div');
     gameContainer.className = 'fruit-game-container';
@@ -1187,12 +1236,6 @@ function showFruitGame() {
     
     // Exit button
     document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
-}
-
-function hideFruitGame() {
-    const game = document.querySelector('.fruit-game-container');
-    if (game) game.remove();
-    fruitGameActive = false;
 }
 
 function spinReels() {
@@ -1358,9 +1401,11 @@ function setupMatchingGame(cls) {
         emojiBtn.className = 'emoji-btn';
         emojiBtn.innerHTML = word.emoji;
         emojiBtn.dataset.word = word.word;
-        emojiBtn.addEventListener('click', () => {
-            speakSentence(word.word);
-        });
+emojiBtn.addEventListener('click', () => {
+    if (!fruitGameActive) {
+        speakSentence(word.word);
+    }
+});
         emojiColumn.appendChild(emojiBtn);
     });
 
