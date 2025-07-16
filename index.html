@@ -1009,19 +1009,34 @@ function closeTranslationPopupHandler() {
 
 // Fetch translation from a free API
 function fetchTranslation(text, lang) {
-    const direction = lang === 'en' ? 'en-ja' : 'ja-en';
-    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${direction}`;
+    // Correct format is "en|ja" (with pipe character, not dash)
+    const langPair = lang === 'en' ? 'en|ja' : 'ja|en';
     
-    // Using a CORS proxy to avoid CORS issues
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    // Encode the text and language pair properly
+    const encodedText = encodeURIComponent(text);
+    const encodedLangPair = encodeURIComponent(langPair);
+    
+    // Build the API URL
+    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${encodedLangPair}`;
+    
+    // Use a reliable CORS proxy
+    const proxyUrl = 'https://corsproxy.io/?';
     
     fetch(proxyUrl + apiUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.responseData && data.responseData.translatedText) {
                 translationResult.textContent = data.responseData.translatedText;
             } else {
                 translationResult.textContent = "Translation not available";
+                if (data.responseStatus) {
+                    console.error('API Error:', data.responseStatus);
+                }
             }
         })
         .catch(error => {
