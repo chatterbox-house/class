@@ -491,6 +491,20 @@
     justify-content: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        top: 100%;
+    }
+}
         }
     </style>
 </head>
@@ -585,7 +599,32 @@ function initFruitGameButton() {
         button.addEventListener('click', toggleFruitGame);
     }
 }
-
+// Confetti effect for wins
+function createConfetti() {
+    const container = document.querySelector('.fruit-game-container');
+    if (!container) return;
+    
+    for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'absolute';
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+        confetti.style.borderRadius = '50%';
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.top = '-10px';
+        confetti.style.opacity = '0.8';
+        confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+        confetti.style.animation = `confetti-fall ${2 + Math.random() * 3}s linear forwards`;
+        
+        container.appendChild(confetti);
+        
+        // Remove confetti after animation
+        setTimeout(() => {
+            confetti.remove();
+        }, 5000);
+    }
+}
 let currentCategory = 'concrete';
         let sentences = [];
         let currentSentenceIndex = 0;
@@ -1130,14 +1169,15 @@ function showFruitGame() {
     gameContainer.className = 'fruit-game-container';
     gameContainer.innerHTML = `
         <div class="fruit-game">
-            <h2>Fruit Machine!</h2>
-            <div class="fruit-reels">
-                <div class="fruit-reel" id="reel1">🍎</div>
-                <div class="fruit-reel" id="reel2">🍊</div>
-                <div class="fruit-reel" id="reel3">🍇</div>
-            </div>
-            <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
-        </div>
+    <h2>Fruit Machine!</h2>
+    <div class="fruit-reels">
+        <div class="fruit-reel" id="reel1">🍎</div>
+        <div class="fruit-reel" id="reel2">🍊</div>
+        <div class="fruit-reel" id="reel3">🍇</div>
+    </div>
+    <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
+    <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
+</div>
     `;
     
     document.body.appendChild(gameContainer);
@@ -1198,17 +1238,44 @@ function spinReels() {
                 }
                 
                 // Check for win on last reel
-                if (index === 2) {
-                    setTimeout(() => {
-                        if (shouldMatch && reels[0].textContent === reels[1].textContent && reels[1].textContent === reels[2].textContent) {
-                            playSound('win');
-                            setTimeout(hideFruitGame, 2000);
-                        } else {
-                            playSound('lose');
-                            setTimeout(hideFruitGame, 1000);
-                        }
-                    }, 300);
-                }
+if (index === 2) {
+    setTimeout(() => {
+        const resultDisplay = document.getElementById('fruitResult');
+        if (shouldMatch && reels[0].textContent === reels[1].textContent && reels[1].textContent === reels[2].textContent) {
+            // Win condition
+            playSound('win');
+            resultDisplay.textContent = '🎉 WINNER! 🎉';
+            resultDisplay.style.color = 'var(--success)';
+            resultDisplay.style.fontWeight = 'bold';
+            
+            // Celebration animation
+            reels.forEach(reel => {
+                reel.style.transform = 'scale(1.2)';
+                reel.style.transition = 'all 0.3s';
+                reel.style.boxShadow = '0 0 20px gold';
+            });
+            
+            // Confetti effect
+            setTimeout(() => {
+                createConfetti();
+            }, 500);
+            
+            setTimeout(hideFruitGame, 3000);
+        } else {
+            // Lose condition
+            playSound('lose');
+            resultDisplay.textContent = 'Try again!';
+            resultDisplay.style.color = 'var(--warning)';
+            
+            // Shake animation
+            reels.forEach(reel => {
+                reel.style.animation = 'shake 0.5s';
+            });
+            
+            setTimeout(hideFruitGame, 2000);
+        }
+    }, 300);
+}
             }
             spins++;
         }, 100);
