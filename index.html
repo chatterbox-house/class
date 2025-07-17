@@ -362,14 +362,15 @@
             min-width: 100px;
         }
         
-        .reading-content {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: calc(100% - 180px); /* Account for header and footer */
-            padding: 0 20px;
-            overflow: hidden;
-        }
+.reading-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 120px); /* Reduced to account for smaller footer */
+    padding: 0 20px;
+    overflow: hidden;
+    margin-bottom: 60px; /* Space for fixed footer */
+}
         
         .sentence-row {
             flex: 1;
@@ -439,40 +440,45 @@
     text-overflow: ellipsis;
 }
         
-        .reading-footer {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-            background-color: var(--card-bg);
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
-        }
+.reading-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: var(--card-bg);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+    height: 60px; /* Reduced height */
+}
         
         body.dark-mode .reading-footer {
             background-color: var(--dark-card);
             box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
         }
         
-        .nav-btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            font-size: 2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.2s;
-            position: relative;
-            z-index: 20;
-        }
+.nav-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    width: 50px; /* Reduced size */
+    height: 50px; /* Reduced size */
+    border-radius: 50%;
+    font-size: 1.2rem; /* Smaller font */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+    position: relative;
+    z-index: 20;
+    margin: 0 10px; /* Added some spacing */
+}
 
         .nav-btn:hover {
             transform: scale(1.05);
@@ -777,6 +783,22 @@ body.dark-mode .fruit-reel {
                 font-size: 1rem;
             }
         }
+@media (min-width: 1280px) {
+    .nav-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .reading-footer {
+        height: 70px;
+    }
+    
+    .reading-content {
+        height: calc(100% - 130px);
+        margin-bottom: 70px;
+    }
+}
     </style>
 </head>
 <body>
