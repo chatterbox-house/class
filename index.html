@@ -676,9 +676,9 @@ body.dark-mode .fruit-game {
         }
         
 .fruit-reel {
-    font-size: 4rem;
-    width: 100px;
-    height: 100px;
+    font-size: 8rem;  /* Increased from 4rem */
+    width: 150px;     /* Increased from 100px */
+    height: 150px;    /* Increased from 100px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -731,11 +731,11 @@ body.dark-mode .fruit-reel {
                 margin-bottom: 20px;
             }
             
-            .fruit-reel {
-                font-size: 3rem;
-                width: 80px;
-                height: 80px;
-            }
+    .fruit-reel {
+        font-size: 5rem;  /* Increased from 3rem */
+        width: 120px;     /* Increased from 80px */
+        height: 120px;    /* Increased from 80px */
+    }
         }
         @media (max-width: 768px) {
             .container {
@@ -1180,43 +1180,53 @@ body.dark-mode .fruit-reel {
             
             // Add slight delay to ensure speech is properly initialized
             setTimeout(() => {
-                speakSentence(text, lang);
+                speakSentence(text, lang === 'en' ? 'en-US' : 'ja-JP');
             }, 100);
         }
         
         // Text-to-speech function
-        function speakSentence(text, lang) {
-            if ('speechSynthesis' in window) {
-                stopSpeech();
-                
-                // Create new utterance
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = lang;
-                
-                // Set voice properties
-                utterance.rate = 0.9;
-                utterance.pitch = 1;
-                utterance.volume = 1;
-                
-                // Try to find an appropriate voice
-                const voices = window.speechSynthesis.getVoices();
-                const voice = voices.find(v => v.lang === lang);
-                
-                if (voice) {
-                    utterance.voice = voice;
-                }
-                
-                // Speak the utterance
-                window.speechSynthesis.speak(utterance);
-                
-                // Error handling
-                utterance.onerror = function(event) {
-                    console.error('SpeechSynthesis error:', event);
-                };
-            } else {
-                console.warn('Speech synthesis not supported');
-            }
+function speakSentence(text, lang) {
+    if ('speechSynthesis' in window) {
+        stopSpeech();
+        
+        // Create new utterance
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        
+        // Set voice properties
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+        
+        // Try to find an appropriate voice
+        const voices = window.speechSynthesis.getVoices();
+        let voice;
+        
+        if (lang === 'en-US') {
+            // Prefer American English voices
+            voice = voices.find(v => v.lang === 'en-US' && v.name.includes('US')) || 
+                    voices.find(v => v.lang === 'en-US') || 
+                    voices.find(v => v.lang.startsWith('en-'));
+        } else {
+            // For Japanese, just find any Japanese voice
+            voice = voices.find(v => v.lang === lang);
         }
+        
+        if (voice) {
+            utterance.voice = voice;
+        }
+        
+        // Speak the utterance
+        window.speechSynthesis.speak(utterance);
+        
+        // Error handling
+        utterance.onerror = function(event) {
+            console.error('SpeechSynthesis error:', event);
+        };
+    } else {
+        console.warn('Speech synthesis not supported');
+    }
+}
         
         // Stop speech
         function stopSpeech() {
