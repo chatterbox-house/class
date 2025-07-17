@@ -787,14 +787,14 @@ body.dark-mode .fruit-reel {
         
         <div class="controls-row">
             <div class="dropdown">
-                <select id="classSelector">
-                    <option value="">Select Class</option>
-                    <option value="C">C Class</option>
-                    <option value="X">X Class</option>
-                    <option value="HighSchool">High School</option>
-                    <option value="Adult">Adult</option>
+<select id="classSelector">
+    <option value="">Select Class</option>
+    <option value="C">C Class</option>
+    <option value="X">X Class</option>
+    <option value="HighSchool">High School</option>
+    <option value="Adult">Adult</option>
     <option value="Eiken5">Eiken 5</option>
-                </select>
+</select>
             </div>
             
             <div class="dropdown">
@@ -864,11 +864,12 @@ body.dark-mode .fruit-reel {
 </div>
     
     <!-- Load external scripts -->
-    <script src="vocab.js"></script>
-    <script src="x.js"></script>
-    <script src="c.js"></script>
-    <script src="adult.js"></script>
+<script src="vocab.js"></script>
+<script src="x.js"></script>
+<script src="c.js"></script>
+<script src="adult.js"></script>
 <script src="QA5.js"></script>
+<script src="easyquestions.js"></script>
 
     <script>
         // Global variables
@@ -1033,6 +1034,16 @@ body.dark-mode .fruit-reel {
                 lessonsData['Eiken5'] = qa5;
                 console.log('Eiken 5 class data loaded');
             }
+ // Load High School data
+            if (typeof easyquestions !== 'undefined') {
+                lessonsData['HighSchool'] = {
+                    'easyquestions': easyquestions.questions,
+                    // Add more high school categories here later
+                    // 'mediumquestions': mediumquestions.questions,
+                    // 'debate': debate.questions
+                };
+                console.log('High School data loaded');
+            }
                     
                     if (Object.keys(lessonsData).length > 0) {
                         resolve();
@@ -1050,10 +1061,17 @@ body.dark-mode .fruit-reel {
         // Populate story selector for the selected class
 function populateStorySelector(cls) {
     storySelector.innerHTML = '<option value="">Select Story</option>';
-    
+
     if (lessonsData[cls]) {
+        // Special handling for High School
+        if (cls === 'HighSchool') {
+            const option = document.createElement('option');
+            option.value = 'easyquestions';
+            option.textContent = 'Easy Questions';
+            storySelector.appendChild(option);
+        }
         // Special handling for Eiken 5
-        if (cls === 'Eiken5') {
+        else if (cls === 'Eiken5') {
             const option = document.createElement('option');
             option.value = 'questions';
             option.textContent = 'Questions';
