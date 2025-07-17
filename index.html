@@ -793,6 +793,7 @@ body.dark-mode .fruit-reel {
                     <option value="X">X Class</option>
                     <option value="HighSchool">High School</option>
                     <option value="Adult">Adult</option>
+    <option value="Eiken5">Eiken 5</option>
                 </select>
             </div>
             
@@ -867,6 +868,7 @@ body.dark-mode .fruit-reel {
     <script src="x.js"></script>
     <script src="c.js"></script>
     <script src="adult.js"></script>
+<script src="QA5.js"></script>
 
     <script>
         // Global variables
@@ -944,6 +946,8 @@ body.dark-mode .fruit-reel {
             });
         }
         
+
+
         function toggleNightMode() {
             isNightMode = !isNightMode;
             document.body.classList.toggle('dark-mode', isNightMode);
@@ -1024,6 +1028,11 @@ body.dark-mode .fruit-reel {
                         lessonsData['Adult'] = adult;
                         console.log('Adult class data loaded');
                     }
+ // Load Eiken 5 data
+            if (typeof qa5 !== 'undefined') {
+                lessonsData['Eiken5'] = qa5;
+                console.log('Eiken 5 class data loaded');
+            }
                     
                     if (Object.keys(lessonsData).length > 0) {
                         resolve();
@@ -1039,23 +1048,31 @@ body.dark-mode .fruit-reel {
         }
         
         // Populate story selector for the selected class
-        function populateStorySelector(cls) {
-            storySelector.innerHTML = '<option value="">Select Story</option>';
-            
-            if (lessonsData[cls]) {
-                // Add story options
-                Object.keys(lessonsData[cls]).forEach(storyKey => {
-                    const option = document.createElement('option');
-                    option.value = storyKey;
-                    option.textContent = `Story ${storyKey.replace('story', '')}`;
-                    storySelector.appendChild(option);
-                });
-                
-                // Enable the selector
-                storySelector.disabled = false;
-                storySelector.focus();
-            }
+function populateStorySelector(cls) {
+    storySelector.innerHTML = '<option value="">Select Story</option>';
+    
+    if (lessonsData[cls]) {
+        // Special handling for Eiken 5
+        if (cls === 'Eiken5') {
+            const option = document.createElement('option');
+            option.value = 'questions';
+            option.textContent = 'Questions';
+            storySelector.appendChild(option);
+        } 
+        else {
+            // Existing story options for other classes
+            Object.keys(lessonsData[cls]).forEach(storyKey => {
+                const option = document.createElement('option');
+                option.value = storyKey;
+                option.textContent = `Story ${storyKey.replace('story', '')}`;
+                storySelector.appendChild(option);
+            });
         }
+        
+        storySelector.disabled = false;
+        storySelector.focus();
+    }
+}
         
         // Enter reading mode
         function enterReadingMode(cls) {
@@ -1086,22 +1103,32 @@ body.dark-mode .fruit-reel {
         }
         
         // Load text content for reading mode
-        function loadTextContent(cls) {
-            if (lessonsData[cls] && currentStory && lessonsData[cls][currentStory]) {
-                sentences = parseStoryFile(lessonsData[cls][currentStory]);
-                if (sentences.length > 0) {
-                    currentSentenceIndex = 0;
-                    displayCurrentSentence();
-                    console.log(`Loaded ${sentences.length} sentences for class ${cls}, story ${currentStory}`);
-                } else {
-                    alert(`No valid sentences found for class ${cls}, story ${currentStory}`);
-                    exitReadingMode();
-                }
-            } else {
-                alert(`Story data not found for class ${cls}, story ${currentStory}`);
-                exitReadingMode();
-            }
+function loadTextContent(cls) {
+    if (lessonsData[cls] && currentStory && lessonsData[cls][currentStory]) {
+        let content = lessonsData[cls][currentStory];
+        
+        // For Eiken5, randomize the questions
+        if (cls === 'Eiken5') {
+            const parsed = parseStoryFile(content);
+            sentences = shuffleArray(parsed);
+        } 
+        else {
+            sentences = parseStoryFile(content);
         }
+        
+        if (sentences.length > 0) {
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
+            console.log(`Loaded ${sentences.length} ${cls === 'Eiken5' ? 'questions' : 'sentences'} for class ${cls}`);
+        } else {
+            alert(`No valid ${cls === 'Eiken5' ? 'questions' : 'sentences'} found`);
+            exitReadingMode();
+        }
+    } else {
+        alert(`Data not found for class ${cls}`);
+        exitReadingMode();
+    }
+}
         
         // Parse story file content
         function parseStoryFile(text) {
@@ -1174,7 +1201,13 @@ body.dark-mode .fruit-reel {
             nextSentenceBtn.disabled = currentSentenceIndex >= sentences.length - 1;
             setTimeout(ensureTextVisibility, 50);
         }
-        
+    function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}    
         // Play sentence audio
 function playSentence(type) {
     if (sentences.length === 0 || fruitGameActive) return;
