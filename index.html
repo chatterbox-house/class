@@ -488,20 +488,6 @@
             cursor: not-allowed;
         }
 
-        /* Highlight Styles */
-        .highlighted-text {
-            background-color: rgba(255, 235, 59, 0.3);
-            border-radius: 3px;
-            padding: 0;
-            display: inline;
-            box-decoration-break: clone;
-            -webkit-box-decoration-break: clone;
-        }
-
-        body.dark-mode .highlighted-text {
-            background-color: rgba(255, 235, 59, 0.5);
-        }
-
         /* Translation Popup Styles */
         .translation-popup {
             position: fixed;
@@ -1470,17 +1456,16 @@ function initTranslationElements() {
     translationLang = '';
     return true;
 }
-        
+
 // Show translation popup
 function showTranslationPopup(text, lang) {
     // Validate input
     const trimmedText = text.trim();
     if (!trimmedText || trimmedText.length < 1 || trimmedText.toLowerCase() === 'translate') {
-        closeTranslationPopupHandler();
         return;
     }
     
-    // Close any existing popup first
+    // Reset previous state
     closeTranslationPopupHandler();
     
     // Set new translation data
@@ -1499,6 +1484,23 @@ function showTranslationPopup(text, lang) {
         targetLabel.textContent = 'English:';
     }
     
+    // Highlight the selected text
+    try {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            const range = selection.getRangeAt(0);
+            const span = document.createElement('span');
+            span.className = 'highlighted-text';
+            span.style.backgroundColor = 'rgba(255, 255, 0, 0.3)';
+            range.surroundContents(span);
+        }
+    } catch (e) {
+        console.error('Error highlighting text:', e);
+    }
+    
+    // Update UI with original text
+    translationOriginal.textContent = selectedText;
+    translationResult.textContent = "Loading translation...";    
     // Update UI with original text
     translationOriginal.textContent = selectedText;
     translationResult.textContent = "Loading translation...";
@@ -1524,24 +1526,36 @@ function showTranslationPopup(text, lang) {
     prevBtn.addEventListener('click', closeOnNav);
 }
 
-        // Close translation popup and clean up highlights
-        function closeTranslationPopupHandler() {
-            if (!translationPopup || !translationOverlay) return;
-            
-            translationPopup.classList.remove('active');
-            translationOverlay.classList.remove('active');
-            stopSpeech();
-            
-            // Remove all highlights and restore original text
-            document.querySelectorAll('.highlighted-text').forEach(el => {
-                const parent = el.parentNode;
-                while (el.firstChild) {
-                    parent.insertBefore(el.firstChild, el);
-                }
-                parent.removeChild(el);
-                parent.normalize(); // Combine adjacent text nodes
-            });
+function closeTranslationPopupHandler() {
+    if (!translationPopup || !translationOverlay) return;
+    
+    translationPopup.classList.remove('active');
+    translationOverlay.classList.remove('active');
+    stopSpeech();
+    
+    // Clear the translation fields
+    translationOriginal.textContent = '';
+    translationResult.textContent = '';
+    
+    // Reset selection state
+    if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+    }
+    
+    // Remove all highlights and restore original text
+    document.querySelectorAll('.highlighted-text').forEach(el => {
+        const parent = el.parentNode;
+        while (el.firstChild) {
+            parent.insertBefore(el.firstChild, el);
         }
+        parent.removeChild(el);
+        parent.normalize(); // Combine adjacent text nodes
+    });
+    
+    // Reset translation variables
+    selectedText = '';
+    translationLang = '';
+}
 
 // Fetch translation from a free API
 function fetchTranslation(text, lang) {
@@ -1641,95 +1655,83 @@ function trySimpleDictionaryLookup(text, lang) {
         translationResult.textContent = "Translation not found";
     }
 }
-
-// Handle text selection
-function handleTextSelection() {
-    const selection = window.getSelection();
-    const selectedText = selection.toString().trim();
-    
-    // Don't proceed if no text selected, selection is too short, or is the word "translate"
-    if (!selectedText || selectedText.length < 1 || selectedText.toLowerCase() === 'translate') {
-        closeTranslationPopupHandler();
-        return;
-    }
-    
-    try {
-        if (selection.rangeCount > 0) {
-            const range = selection.getRangeAt(0);
-            const container = range.commonAncestorContainer;
-            
-            // Check if selection is within our target elements
-            const isEnglish = englishSentence.contains(container);
-            const isJapanese = japaneseSentence.contains(container);
-            if (!isEnglish && !isJapanese) {
-                closeTranslationPopupHandler();
-                return;
-            }
-            
-            // Skip if selection is collapsed (no actual text)
-            if (range.collapsed) {
-                closeTranslationPopupHandler();
-                return;
-            }
-            
-            // Clear previous highlights and popup
-            closeTranslationPopupHandler();
-            
-            // Create highlight span
-            const span = document.createElement('span');
-            span.className = 'highlighted-text';
-            
-            // Surround the content
+ // Handle text selection - CORRECTED VERSION
+        function handleTextSelection() {
             try {
-                range.surroundContents(span);
-                // Show translation popup only if we successfully highlighted
+                const selection = window.getSelection();
+                if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+                    return;
+                }
+
+                const selectedText = selection.toString().trim();
+                if (!selectedText || selectedText.length < 1 || selectedText.toLowerCase() === 'translate') {
+                    return;
+                }
+
+                const range = selection.getRangeAt(0);
+                const container = range.commonAncestorContainer;
+
+                // Check if selection is within our target elements
+                const isEnglish = englishSentence.contains(container);
+                const isJapanese = japaneseSentence.contains(container);
+                if (!isEnglish && !isJapanese) {
+                    closeTranslationPopupHandler();
+                    return;
+                }
+
+                // Skip if selection is collapsed (no actual text)
+                if (range.collapsed) {
+                    closeTranslationPopupHandler();
+                    return;
+                }
+
+                // Show translation immediately for the selected text
                 showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
-            } catch (e) {
-                console.warn('Could not highlight selection:', e);
-                // Don't show translation if highlighting failed
-                closeTranslationPopupHandler();
+            } catch (error) {
+                console.error('Error in text selection handling:', error);
             }
         }
-    } catch (e) {
-        console.error('Error handling selection:', e);
-        closeTranslationPopupHandler();
+        
+function initTranslationEvents() {
+    // Initialize translation elements first
+    if (!initTranslationElements()) return;
+
+    // Click event for single words
+    englishSentence.addEventListener('click', handleEnglishClick);
+    japaneseSentence.addEventListener('click', handleJapaneseClick);
+    
+    // Selection event for phrases
+    document.addEventListener('mouseup', handleTextSelection);
+    
+    // Close popup events
+    closeTranslationPopup.addEventListener('click', closeTranslationPopupHandler);
+    translationOverlay.addEventListener('click', closeTranslationPopupHandler);
+    
+    // TTS button
+    translationTts.addEventListener('click', () => {
+        if (selectedText && translationLang) {
+            speakSentence(selectedText, translationLang === 'en' ? 'en-US' : 'ja-JP');
+        }
+    });
+}
+
+function handleEnglishClick(e) {
+    if (e.target === englishSentence) {
+        const word = getWordAtPoint(englishSentence, e.clientX, e.clientY);
+        if (word) {
+            showTranslationPopup(word, 'en');
+        }
     }
 }
-        
-        // Initialize text selection events
-        function initTranslationEvents() {
-            // Initialize translation elements first
-            if (!initTranslationElements()) return;
-            
-            // Click event for single words
-            englishSentence.addEventListener('click', (e) => {
-                if (e.target === englishSentence) {
-                    const word = getWordAtPoint(englishSentence, e.clientX, e.clientY);
-                    if (word) showTranslationPopup(word, 'en');
-                }
-            });
-            
-            japaneseSentence.addEventListener('click', (e) => {
-                if (e.target === japaneseSentence) {
-                    const word = getWordAtPoint(japaneseSentence, e.clientX, e.clientY);
-                    if (word) showTranslationPopup(word, 'ja');
-                }
-            });
-            
-            // Selection event for phrases
-            document.addEventListener('mouseup', handleTextSelection);
-            
-            // Close popup events
-            closeTranslationPopup.addEventListener('click', closeTranslationPopupHandler);
-            translationOverlay.addEventListener('click', closeTranslationPopupHandler);
-            
-            // TTS button
-            translationTts.addEventListener('click', () => {
-                if (selectedText && translationLang) {
-                    speakSentence(selectedText, translationLang === 'en' ? 'en-US' : 'ja-JP');
-                }
-            });
+
+function handleJapaneseClick(e) {
+    if (e.target === japaneseSentence) {
+        const word = getWordAtPoint(japaneseSentence, e.clientX, e.clientY);
+        if (word) {
+            showTranslationPopup(word, 'ja');
         }
+    }
+}
 
         // Helper function to get word at specific coordinates
         function getWordAtPoint(element, x, y) {
