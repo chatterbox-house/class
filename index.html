@@ -1190,149 +1190,109 @@ body.dark-mode .fruit-reel {
         }
         
         // Play sentence audio
-        function playSentence(type) {
-            if (sentences.length === 0 || fruitGameActive) return;
-            
-            const sentence = sentences[currentSentenceIndex];
-            let text = type === 'english' ? sentence.english : sentence.japanese;
-            const lang = type === 'english' ? 'en-US' : 'ja-JP';
-            
-            // Remove emoji from text to be spoken using the same regex
-            const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
-            text = text.replace(emojiRegex, '').trim();
-            
-            // Stop any current speech and game sounds before starting new one
-            stopSpeech();
-            if (window.AudioContext) {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                audioCtx.close();
-            }
-            
-            // Add slight delay to ensure speech is properly initialized
-            setTimeout(() => {
-                speakSentence(text, lang === 'en' ? 'en-US' : 'ja-JP');
-            }, 100);
-        }
-        
+function playSentence(type) {
+    if (sentences.length === 0 || fruitGameActive) return;
+    
+    const sentence = sentences[currentSentenceIndex];
+    let text = type === 'english' ? sentence.english : sentence.japanese;
+    const lang = type === 'english' ? 'en-US' : 'ja-JP';  // Ensure correct language codes
+    
+    // Remove emoji from text to be spoken
+    const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
+    text = text.replace(emojiRegex, '').trim();
+    
+    // Stop any current speech and sounds
+    stopSpeech();
+    
+    // Speak the sentence
+    speakSentence(text, lang);
+}
+ function stopSpeech() {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
+}    
+   
         // Text-to-speech function
-
 function speakSentence(text, lang) {
     if (!('speechSynthesis' in window)) {
-        console.warn('Speech synthesis not supported by this browser');
+        console.warn('Speech synthesis not supported');
         return;
     }
 
     // Stop any current speech
     stopSpeech();
 
-    // Ensure voices are loaded with a retry mechanism
-    let retryCount = 0;
-    const maxRetries = 3;
-    const voices = window.speechSynthesis.getVoices();
+    // Create new utterance
+    const utterance = new SpeechSynthesisUtterance(text);
+    
+    // Set language and voice properties
+    utterance.lang = lang;
+    utterance.rate = 0.9;
+    utterance.pitch = 1;
+    utterance.volume = 1;
 
-    function trySpeak() {
-        if (voices.length === 0 && retryCount < maxRetries) {
-            console.log(`Voices not loaded, retry ${retryCount + 1}/${maxRetries}...`);
-            retryCount++;
-            setTimeout(() => {
-                window.speechSynthesis.getVoices(); // Trigger voice loading
-                trySpeak();
-            }, 500);
-            return;
-        }
-
-        if (voices.length === 0) {
-            console.error('No voices available after retries');
-            alert('No text-to-speech voices available. Please check your browser settings.');
-            return;
-        }
-
-        // Log available voices for debugging
-        console.log('Available voices:', voices.map(v => `${v.name} (${v.lang})`));
-
-        // Create new utterance
-        const utterance = new SpeechSynthesisUtterance(text);
+    // Function to actually speak once voices are loaded
+    const speakWithVoice = () => {
+        const voices = window.speechSynthesis.getVoices();
         
-        // Set language explicitly
-        utterance.lang = lang; // Use passed lang ('en-US' or 'ja-JP') directly
-        
-        // Voice properties
-        utterance.rate = 0.9;
-        utterance.pitch = 1;
-        utterance.volume = 1;
-
         // Find the appropriate voice
         let voice;
         if (lang === 'en-US') {
-            // Prioritize en-US, then en-GB, then any English
-            voice = voices.find(v => v.lang === 'en-US') || 
-                    voices.find(v => v.lang === 'en-GB') || 
-                    voices.find(v => v.lang.startsWith('en'));
-        } else {
-            // For Japanese, find ja-JP or any Japanese voice
-            voice = voices.find(v => v.lang === 'ja-JP' || v.lang.startsWith('ja'));
+            // First try to find a US English voice
+            voice = voices.find(v => 
+                v.lang === 'en-US' && 
+                v.name.includes('English')
+            );
+
+            // If not found, try any English voice
+            if (!voice) {
+                voice = voices.find(v => 
+                    v.lang.startsWith('en-')
+                );
+            }
+        } else if (lang === 'ja-JP') {
+            // For Japanese, find any Japanese voice
+            voice = voices.find(v => 
+                v.lang === 'ja-JP' || 
+                v.lang.startsWith('ja')
+            );
         }
 
         if (voice) {
             utterance.voice = voice;
-            console.log(`Using voice: ${voice.name} (${voice.lang}) for language: ${lang}`);
+            console.log('Using voice:', voice.name, 'for language:', lang);
         } else {
-            console.warn(`No suitable voice found for ${lang}, using default`);
-            // Fallback to utterance.lang without specific voice
+            console.warn('No specific voice found for', lang, 'using default');
         }
 
-        // Enhanced error handling
+        // Error handling
         utterance.onerror = function(event) {
-            console.error('SpeechSynthesis error:', event.error, event.message);
-            if (event.error === 'not-allowed' || event.error === 'interrupted') {
-                stopSpeech();
-                setTimeout(() => window.speechSynthesis.speak(utterance), 100);
-            } else {
-                alert(`Error playing audio: ${event.error}. Please try again or check browser TTS settings.`);
-            }
+            console.error('SpeechSynthesis error:', event);
         };
 
-        utterance.onend = function() {
-            console.log('Speech finished');
-        };
+        // Speak immediately
+        window.speechSynthesis.speak(utterance);
+    };
 
-        // Speak
-        try {
-            window.speechSynthesis.speak(utterance);
-        } catch (error) {
-            console.error('Failed to start speech:', error);
-            alert('Failed to start speech. Please ensure TTS is enabled in your browser.');
-        }
-    }
-
-    // Initial attempt to speak
-    trySpeak();
-
-    // Set up voiceschanged handler (only once)
+    // Check if voices are loaded
+    const voices = window.speechSynthesis.getVoices();
     if (voices.length === 0) {
-        window.speechSynthesis.onvoiceschanged = function() {
-            console.log('Voices loaded');
-            window.speechSynthesis.onvoiceschanged = null; // Prevent multiple triggers
-            trySpeak();
-        };
+        console.log('Waiting for voices to load...');
+        window.speechSynthesis.onvoiceschanged = speakWithVoice;
+    } else {
+        speakWithVoice();
     }
-}     
-        // Stop speech
-        function stopSpeech() {
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.cancel();
-            }
-        }
-        
+}
 function listVoices() {
     const voices = window.speechSynthesis.getVoices();
     console.log("Available voices:");
     voices.forEach(voice => {
-        console.log(`- ${voice.name} (${voice.lang})`);
+        console.log(`- ${voice.name} (${voice.lang}) ${voice.default ? '[DEFAULT]' : ''}`);
     });
 }
 
-// Run this after page load
+// Run after page load
 setTimeout(listVoices, 1000);
         // Navigation functions
 function showNextSentence() {
