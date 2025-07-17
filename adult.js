@@ -85,5 +85,140 @@ Should governments be required to fully disclose information about executions?
 日本は、死刑制度の将来的な廃止を視野に入れた、より深い議論を行うべきです。
 
 Do you think Japan should abolish the death penalty? Why or why not?
-日本は死刑を廃止すべきだと思いますか？その理由は？`
+日本は死刑を廃止すべきだと思いますか？その理由は？`,
+
+    story2: `✈️ Have you ever traveled to another country?
+  他の国に旅行したことがありますか？
+
+🍖 Have you ever tried a really strange food?
+   本当に変わった食べ物を試したことがありますか？
+
+🪂 Have you ever gone bungee jumping?
+   バンジージャンプをしたことがありますか？
+
+🌟 Have you ever met a celebrity?
+   有名人に会ったことがありますか？
+
+📚 Have you ever stayed up all night studying?
+   一晩中勉強したことがありますか？
+
+🚗 Have you ever been in a car accident?
+   交通事故にあったことがありますか？
+
+🏆 Have you ever won a competition?
+   コンペで勝ったことがありますか？
+
+🗺️ Have you ever gotten lost in a foreign city?
+   外国の街で迷ったことがありますか？
+
+😳 Have you ever done something embarrassing in public?
+   公共の場で恥ずかしいことをしたことがありますか？
+
+🎻 Have you ever learned a musical instrument?
+   楽器を習ったことがありますか？
+
+🦴 Have you ever broken a bone?
+   骨を折ったことがありますか？
+
+🍳 Have you ever cooked a meal for your family?
+   家族のために食事を作ったことがありますか？
+
+⛺ Have you ever gone camping?
+   キャンプに行ったことがありますか？
+
+🤥 Have you ever told a lie to avoid getting into trouble?
+   トラブルを避けるために嘘をついたことがありますか？
+
+📅 Have you ever forgotten an important event or appointment?
+   重要なイベントや約束を忘れたことがありますか？
+
+🎤 Have you ever sung karaoke in front of a large group?
+   大勢の前でカラオケを歌ったことがありますか？
+
+🏍️ Have you ever ridden a motorcycle?
+   バイクに乗ったことがありますか？
+
+💼 Have you ever worked a part-time job?
+   アルバイトをしたことがありますか？
+
+🗣️ Have you ever given a presentation in English?
+   英語でプレゼンテーションをしたことがありますか？
+
+🚄 Have you ever missed a flight or train?
+   飛行機や電車に乗り遅れたことがありますか？
+
+💭 Have you ever had a really strange dream?
+   本当に変な夢を見たことがありますか？
+
+🌙 Have you ever gone without sleep for more than 24 hours?
+   24時間以上眠らなかったことがありますか？
+
+🤢 Have you ever eaten something you regret?
+   食べたことを後悔したものがありますか？
+
+🎢 Have you ever been on a roller coaster?
+   ローラーコースターに乗ったことがありますか？
+
+📖 Have you ever read an entire book in one day?
+   一日で本を一冊読んだことがありますか？
+
+❤️ Have you ever done something kind for a stranger?
+   知らない人に親切なことをしたことがありますか？
+
+👻 Have you ever been scared by a horror movie?
+   ホラー映画に怖がったことがありますか？
+
+🏨 Have you ever stayed in a 5-star hotel?
+   5つ星ホテルに泊まったことがありますか？
+
+🎨 Have you ever dyed your hair a different color?
+   髪の色を染めたことがありますか？
+
+🏛️ Have you ever visited a famous landmark?
+   有名な名所を訪れたことがありますか？
+
+🎯 Have you ever done a hobby or activity for more than 5 years?
+   5年以上続けた趣味や活動がありますか？
+
+🌠 Have you ever seen a shooting star?
+   流れ星を見たことがありますか？
+
+🤲 Have you ever volunteered for a good cause?
+   良い目的のためにボランティアをしたことがありますか？
+
+🎵 Have you ever been to a concert or music festival?
+   コンサートや音楽フェスに行ったことがありますか？
+
+🚨 Have you ever helped someone in an emergency?
+   緊急事態で誰かを助けたことがありますか？
+
+🏥 Have you ever stayed in a hospital overnight?
+   一晩病院に泊まったことがありますか？
+
+⚽ Have you ever seen a live sports event?
+   生のスポーツイベントを見たことがありますか？
+
+🐕 Have you ever had a pet?
+   ペットを飼ったことがありますか？
+
+🗣️ Have you ever tried to learn a new language?
+   新しい言語を学ぼうとしたことがありますか？
+
+🎂 Have you ever forgotten someone's birthday?
+   誰かの誕生日を忘れたことがありますか？
+
+🐠 Have you ever gone scuba diving or snorkeling?
+   スキューバダイビングやシュノーケリングをしたことがありますか？
+
+🚪 Have you ever quit a job or project halfway through?
+   途中で仕事やプロジェクトを辞めたことがありますか？
+
+🌃 Have you ever stayed awake all night for fun?
+   楽しむために一晩中起きていたことがありますか？
+
+☀️ Have you ever gotten a really bad sunburn?
+   ひどい日焼けをしたことがありますか？
+
+💡 Have you ever tried something and failed but learned from it?
+   何かを試して失敗したことがあるが、そこから学んだことがありますか？`
 };
