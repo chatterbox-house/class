@@ -655,6 +655,11 @@
         let sentences = [];
         let currentSentenceIndex = 0;
 
+// Translation state variables
+let translationPopup, translationOverlay, closeTranslationPopup;
+let translationOriginal, translationResult, translationTts;
+let selectedText = '';
+let translationLang = '';
 
 // Initialize translation elements
 function initTranslationElements() {
@@ -670,6 +675,10 @@ function initTranslationElements() {
         console.error('One or more translation elements not found');
         return false;
     }
+    
+    // Reset state
+    selectedText = '';
+    translationLang = '';
     return true;
 }
         
@@ -1182,7 +1191,16 @@ function playSentence(type) {
         }
 // Show translation popup
 function showTranslationPopup(text, lang) {
-    selectedText = text.trim();
+    // Don't translate if text is empty or just "translate"
+    const trimmedText = text.trim();
+    if (!trimmedText || trimmedText.toLowerCase() === 'translate') {
+        return;
+    }
+    
+    // Close any existing popup first
+    closeTranslationPopupHandler();
+    
+    selectedText = trimmedText;
     translationLang = lang;
     
     translationOriginal.textContent = selectedText;
@@ -1251,66 +1269,52 @@ function fetchTranslation(text, lang) {
         });
 }
 
+
+
+
 // Handle text selection
 function handleTextSelection() {
     const selection = window.getSelection();
-    if (!selection.toString().trim()) return;
+    const selectedText = selection.toString().trim();
     
-    // Clear previous highlights
-    closeTranslationPopupHandler();
+    // Don't proceed if no text selected or selection is outside our target elements
+    if (!selectedText || selectedText.toLowerCase() === 'translate') return;
     
     try {
-        // Highlight the selected text
         if (selection.rangeCount > 0) {
             const range = selection.getRangeAt(0);
-            
-            // Only proceed if the selection is within our target elements
             const container = range.commonAncestorContainer;
-            if (!englishSentence.contains(container) && !japaneseSentence.contains(container)) {
-                return;
-            }
+            
+            // Check if selection is within our target elements
+            const isEnglish = englishSentence.contains(container);
+            const isJapanese = japaneseSentence.contains(container);
+            if (!isEnglish && !isJapanese) return;
+            
+            // Clear previous highlights and popup
+            closeTranslationPopupHandler();
             
             // Create highlight span
             const span = document.createElement('span');
             span.className = 'highlighted-text';
             
-            // Special handling for selections that cross node boundaries
-            if (range.collapsed) {
-                return;
-            }
+            // Skip if selection is collapsed (no actual text)
+            if (range.collapsed) return;
             
             // Surround the content
-            range.surroundContents(span);
-            
-            // Determine which language was selected
-            let lang = '';
-            if (englishSentence.contains(container)) {
-                lang = 'en';
-            } else if (japaneseSentence.contains(container)) {
-                lang = 'ja';
+            try {
+                range.surroundContents(span);
+            } catch (e) {
+                console.warn('Could not highlight selection:', e);
+                // If highlighting fails, we'll still show the translation
             }
             
-            if (lang) {
-                showTranslationPopup(selection.toString(), lang);
-            }
+            // Show translation popup
+            showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
         }
     } catch (e) {
-        console.error('Error highlighting selection:', e);
-        // If highlighting fails, just show the translation without highlight
-        const container = selection.anchorNode.parentElement;
-        let lang = '';
-        if (englishSentence.contains(container)) {
-            lang = 'en';
-        } else if (japaneseSentence.contains(container)) {
-            lang = 'ja';
-        }
-        
-        if (lang) {
-            showTranslationPopup(selection.toString(), lang);
-        }
+        console.error('Error handling selection:', e);
     }
 }
-
 // Initialize text selection events
 function initTranslationEvents() {
     // Initialize translation elements first
@@ -1357,20 +1361,22 @@ function getWordAtPoint(element, x, y) {
 }
         
         // Navigation functions
-        function showNextSentence() {
-            stopSpeech();
-            if (sentences.length === 0 || fruitGameActive) return;
+function showNextSentence() {
+    stopSpeech();
+    closeTranslationPopupHandler(); // Close any open translation popup
+    
+    if (sentences.length === 0 || fruitGameActive) return;
+    
+    // Show fruit game if enabled, but mark that we want to advance after
+    if (fruitGameEnabled) {
+        shouldAdvanceAfterGame = true;
+        showFruitGame();
+        return;
+    }
             
-            // Show fruit game if enabled, but mark that we want to advance after
-            if (fruitGameEnabled) {
-                shouldAdvanceAfterGame = true;
-                showFruitGame();
-                return;
-            }
-                    
-            // Normal advance to next sentence
-            advanceToNextSentence();
-        }
+    // Normal advance to next sentence
+    advanceToNextSentence();
+}
         
         function advanceToNextSentence() {
             if (currentSentenceIndex < sentences.length - 1) {
@@ -1382,18 +1388,20 @@ function getWordAtPoint(element, x, y) {
             displayCurrentSentence();
         }
         
-        function showPreviousSentence() {
-            stopSpeech();
-            if (sentences.length === 0) return;
-            
-            if (currentSentenceIndex > 0) {
-                currentSentenceIndex--;
-            } else {
-                currentSentenceIndex = sentences.length - 1; // Loop to end
-            }
-            
-            displayCurrentSentence();
-        }
+function showPreviousSentence() {
+    stopSpeech();
+    closeTranslationPopupHandler(); // Close any open translation popup
+    
+    if (sentences.length === 0) return;
+    
+    if (currentSentenceIndex > 0) {
+        currentSentenceIndex--;
+    } else {
+        currentSentenceIndex = sentences.length - 1; // Loop to end
+    }
+    
+    displayCurrentSentence();
+}
         
         // Fruit game functions
         function updateFruitButtonState() {
