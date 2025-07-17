@@ -517,6 +517,16 @@
             background-color: var(--dark-card);
             color: var(--dark-text);
         }
+.language-label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+body.dark-mode .language-label {
+    color: var(--accent);
+}
 
         .translation-original {
             font-size: 2.5rem !important;
@@ -818,19 +828,23 @@ body.dark-mode .fruit-reel {
 
     <!-- Translation Popup -->
     <div class="translation-overlay" id="translationOverlay"></div>
-    <div class="translation-popup" id="translationPopup">
-        <div class="translation-popup-header">
-            <h3>TRANSLATION</h3>
-            <button class="translation-popup-close" id="closeTranslationPopup">×</button>
-        </div>
-        <div class="translation-content">
-            <div class="translation-original" id="translationOriginal"></div>
-            <div class="translation-result" id="translationResult"></div>
-            <button class="translation-tts" id="translationTts">
-                <span>🔊 PLAY SOUND</span>
-            </button>
-        </div>
+<div class="translation-popup" id="translationPopup">
+    <div class="translation-popup-header">
+        <h3>TRANSLATION</h3>
+        <button class="translation-popup-close" id="closeTranslationPopup">×</button>
     </div>
+    <div class="translation-content">
+        <div class="language-label" id="sourceLanguageLabel">English:</div>
+        <div class="translation-original" id="translationOriginal"></div>
+        
+        <div class="language-label" id="targetLanguageLabel">Japanese:</div>
+        <div class="translation-result" id="translationResult"></div>
+        
+        <button class="translation-tts" id="translationTts">
+            <span>🔊 PLAY SOUND</span>
+        </button>
+    </div>
+</div>
     
     <!-- Load external scripts -->
     <script src="vocab.js"></script>
@@ -1390,18 +1404,33 @@ function initTranslationElements() {
         
 // Show translation popup
 function showTranslationPopup(text, lang) {
-    // Don't translate if text is empty or just "translate"
+    // Validate input
     const trimmedText = text.trim();
-    if (!trimmedText || trimmedText.toLowerCase() === 'translate') {
+    if (!trimmedText || trimmedText.length < 1 || trimmedText.toLowerCase() === 'translate') {
+        closeTranslationPopupHandler();
         return;
     }
     
     // Close any existing popup first
     closeTranslationPopupHandler();
     
+    // Set new translation data
     selectedText = trimmedText;
     translationLang = lang;
     
+    // Update UI labels based on translation direction
+    const sourceLabel = document.getElementById('sourceLanguageLabel');
+    const targetLabel = document.getElementById('targetLanguageLabel');
+    
+    if (lang === 'en') {
+        sourceLabel.textContent = 'English:';
+        targetLabel.textContent = 'Japanese:';
+    } else {
+        sourceLabel.textContent = 'Japanese:';
+        targetLabel.textContent = 'English:';
+    }
+    
+    // Update UI with original text
     translationOriginal.textContent = selectedText;
     translationResult.textContent = "Loading translation...";
     
@@ -1409,8 +1438,21 @@ function showTranslationPopup(text, lang) {
     translationPopup.classList.add('active');
     translationOverlay.classList.add('active');
     
-    // Fetch translation (using a free CORS proxy)
+    // Fetch translation
     fetchTranslation(selectedText, lang);
+    
+    // Add event listener to close popup when clicking Next button
+    const nextBtn = document.getElementById('nextSentence');
+    const prevBtn = document.getElementById('prevSentence');
+    
+    const closeOnNav = () => {
+        closeTranslationPopupHandler();
+        nextBtn.removeEventListener('click', closeOnNav);
+        prevBtn.removeEventListener('click', closeOnNav);
+    };
+    
+    nextBtn.addEventListener('click', closeOnNav);
+    prevBtn.addEventListener('click', closeOnNav);
 }
 
         // Close translation popup and clean up highlights
@@ -1432,51 +1474,115 @@ function showTranslationPopup(text, lang) {
             });
         }
 
-        // Fetch translation from a free API
-        function fetchTranslation(text, lang) {
-            // Correct format is "en|ja" (with pipe character, not dash)
-            const langPair = lang === 'en' ? 'en|ja' : 'ja|en';
+// Fetch translation from a free API
+function fetchTranslation(text, lang) {
+    // Correct format is "en|ja" (with pipe character, not dash)
+    const langPair = lang === 'en' ? 'en|ja' : 'ja|en';
+    
+    // Encode the text and language pair properly
+    const encodedText = encodeURIComponent(text);
+    const encodedLangPair = encodeURIComponent(langPair);
+    
+    // Build the API URL
+    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${encodedLangPair}`;
+    
+    // Use a reliable CORS proxy
+    const proxyUrl = 'https://corsproxy.io/?';
+    
+    fetch(proxyUrl + apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.responseData && data.responseData.translatedText) {
+                // Clean the translated text
+                let translatedText = data.responseData.translatedText;
+                
+                // Remove unwanted characters and formatting
+                translatedText = translatedText
+                    .replace(/[#*_~`^]/g, '') // Remove special formatting chars
+                    .replace(/\{.*?\}/g, '')   // Remove {tags}
+                    .replace(/\[.*?\]/g, '')   // Remove [tags]
+                    .replace(/\(.*?\)/g, '')   // Remove (tags)
+                    .replace(/\d+/g, '')       // Remove numbers
+                    .trim();
+                
+                // If the result is empty after cleaning, show an error
+                if (!translatedText) {
+                    throw new Error('Translation returned empty after cleaning');
+                }
+                
+                translationResult.textContent = translatedText;
+            } else {
+                throw new Error('No translation data received');
+            }
+        })
+        .catch(error => {
+            console.error('Translation error:', error);
+            translationResult.textContent = "Unable to get translation";
             
-            // Encode the text and language pair properly
-            const encodedText = encodeURIComponent(text);
-            const encodedLangPair = encodeURIComponent(langPair);
-            
-            // Build the API URL
-            const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${encodedLangPair}`;
-            
-            // Use a reliable CORS proxy
-            const proxyUrl = 'https://corsproxy.io/?';
-            
-            fetch(proxyUrl + apiUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    if (data.responseData && data.responseData.translatedText) {
-                        translationResult.textContent = data.responseData.translatedText;
-                    } else {
-                        translationResult.textContent = "Translation not available";
-                        if (data.responseStatus) {
-                            console.error('API Error:', data.responseStatus);
-                        }
-                    }
-                })
-                .catch(error => {
-                    console.error('Translation error:', error);
-                    translationResult.textContent = "Translation error - try again";
-                });
+            // Try a fallback method for simple words
+            if (text.length < 20) {
+                trySimpleDictionaryLookup(text, lang);
+            }
+        });
+}
+
+// Simple dictionary lookup for common words
+function trySimpleDictionaryLookup(text, lang) {
+    // Convert to lowercase for matching
+    const word = text.toLowerCase();
+    
+    // English to Japanese dictionary
+    const enToJaDict = {
+        'shows': '番組',
+        'show': '見せる',
+        'hello': 'こんにちは',
+        'goodbye': 'さようなら',
+        'thank you': 'ありがとう',
+        'please': 'お願いします'
+        // Add more common words as needed
+    };
+    
+    // Japanese to English dictionary
+    const jaToEnDict = {
+        'こんにちは': 'hello',
+        'ありがとう': 'thank you',
+        'お願いします': 'please',
+        '番組': 'show',
+        '見せる': 'show'
+        // Add more common words as needed
+    };
+    
+    // Try to find a match
+    const dict = lang === 'en' ? enToJaDict : jaToEnDict;
+    if (dict[word]) {
+        translationResult.textContent = dict[word];
+    } else {
+        // If no match found, try partial matches
+        for (const [key, value] of Object.entries(dict)) {
+            if (word.includes(key)) {
+                translationResult.textContent = value;
+                return;
+            }
         }
+        translationResult.textContent = "Translation not found";
+    }
+}
 
 // Handle text selection
 function handleTextSelection() {
     const selection = window.getSelection();
     const selectedText = selection.toString().trim();
     
-    // Don't proceed if no text selected or selection is outside our target elements
-    if (!selectedText || selectedText.toLowerCase() === 'translate') return;
+    // Don't proceed if no text selected, selection is too short, or is the word "translate"
+    if (!selectedText || selectedText.length < 1 || selectedText.toLowerCase() === 'translate') {
+        closeTranslationPopupHandler();
+        return;
+    }
     
     try {
         if (selection.rangeCount > 0) {
@@ -1486,7 +1592,16 @@ function handleTextSelection() {
             // Check if selection is within our target elements
             const isEnglish = englishSentence.contains(container);
             const isJapanese = japaneseSentence.contains(container);
-            if (!isEnglish && !isJapanese) return;
+            if (!isEnglish && !isJapanese) {
+                closeTranslationPopupHandler();
+                return;
+            }
+            
+            // Skip if selection is collapsed (no actual text)
+            if (range.collapsed) {
+                closeTranslationPopupHandler();
+                return;
+            }
             
             // Clear previous highlights and popup
             closeTranslationPopupHandler();
@@ -1495,22 +1610,20 @@ function handleTextSelection() {
             const span = document.createElement('span');
             span.className = 'highlighted-text';
             
-            // Skip if selection is collapsed (no actual text)
-            if (range.collapsed) return;
-            
             // Surround the content
             try {
                 range.surroundContents(span);
+                // Show translation popup only if we successfully highlighted
+                showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
             } catch (e) {
                 console.warn('Could not highlight selection:', e);
-                // If highlighting fails, we'll still show the translation
+                // Don't show translation if highlighting failed
+                closeTranslationPopupHandler();
             }
-            
-            // Show translation popup
-            showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
         }
     } catch (e) {
         console.error('Error handling selection:', e);
+        closeTranslationPopupHandler();
     }
 }
         
@@ -1775,28 +1888,31 @@ function handleTextSelection() {
             document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
         }
         
-        function hideFruitGame() {
-            const game = document.querySelector('.fruit-game-container');
-            if (game) game.remove();
-            fruitGameActive = false;
-            
-            // Stop any game sounds
-            if (window.AudioContext) {
-                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                audioCtx.close();
-            }
-            
-            setTimeout(() => {
-                if (shouldAdvanceAfterGame) {
-                    // Only advance if Next was pressed before game started
-                    advanceToNextSentence();
-                    shouldAdvanceAfterGame = false;
-                } else {
-                    // Otherwise just refresh current sentence
-                    displayCurrentSentence();
-                }
-            }, 500);
+function hideFruitGame() {
+    const game = document.querySelector('.fruit-game-container');
+    if (game) game.remove();
+    fruitGameActive = false;
+    
+    // Stop any game sounds
+    if (window.AudioContext) {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        audioCtx.close();
+    }
+    
+    // Ensure translation popup is closed
+    closeTranslationPopupHandler();
+    
+    setTimeout(() => {
+        if (shouldAdvanceAfterGame) {
+            // Only advance if Next was pressed before game started
+            advanceToNextSentence();
+            shouldAdvanceAfterGame = false;
+        } else {
+            // Otherwise just refresh current sentence
+            displayCurrentSentence();
         }
+    }, 500);
+}
         
         function spinReels() {
             // Select a random category for this spin
