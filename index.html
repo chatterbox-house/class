@@ -1314,35 +1314,36 @@ updatePageCounter();
         }
         
         // Display current sentence
-        function displayCurrentSentence() {
-            if (!sentences || sentences.length === 0) {
-                englishSentence.textContent = "No sentences loaded";
-                japaneseSentence.textContent = "";
-                return;
-            }
+function displayCurrentSentence() {
+    if (!sentences || sentences.length === 0) {
+        englishSentence.textContent = "No sentences loaded";
+        japaneseSentence.textContent = "";
+        return;
+    }
 
-            const sentence = sentences[currentSentenceIndex];
-            
-            // Remove emoji from display if it's at the start of the sentence
-            let englishText = sentence.english;
-            const emojiRegex = /^(\p{Emoji_Presentation}|\p{Extended_Pictographic})/u;
-            if (emojiRegex.test(englishText)) {
-                // Find the first emoji character
-                const emojiMatch = englishText.match(emojiRegex);
-                if (emojiMatch && emojiMatch[0]) {
-                    englishText = englishText.substring(emojiMatch[0].length).trim();
-                }
-            }
-            
-            englishSentence.textContent = `${sentence.number}. ${englishText}`;
-            japaneseSentence.textContent = `${sentence.number}. ${sentence.japanese}`;
-            
-            // Update button states
-            prevSentenceBtn.disabled = currentSentenceIndex <= 0;
-            nextSentenceBtn.disabled = currentSentenceIndex >= sentences.length - 1;
-            setTimeout(ensureTextVisibility, 50);
-updatePageCounter(); 
+    const sentence = sentences[currentSentenceIndex];
+    
+    // Remove emoji from display if it's at the start of the sentence
+    let englishText = sentence.english;
+    const emojiRegex = /^(\p{Emoji_Presentation}|\p{Extended_Pictographic})/u;
+    if (emojiRegex.test(englishText)) {
+        // Find the first emoji character
+        const emojiMatch = englishText.match(emojiRegex);
+        if (emojiMatch && emojiMatch[0]) {
+            englishText = englishText.substring(emojiMatch[0].length).trim();
         }
+    }
+    
+    englishSentence.textContent = `${sentence.number}. ${englishText}`;
+    japaneseSentence.textContent = `${sentence.number}. ${sentence.japanese}`;
+    
+    // Update button states - Never disable navigation buttons
+    prevSentenceBtn.disabled = false;
+    nextSentenceBtn.disabled = false;
+    setTimeout(ensureTextVisibility, 50);
+    updatePageCounter(); 
+}
+
     function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -1458,21 +1459,29 @@ setTimeout(listVoices, 1000);
         // Navigation functions
 function showNextSentence() {
     stopSpeech();
-    closeTranslationPopupHandler(); // Close any open translation popup
+    closeTranslationPopupHandler();
     
     if (sentences.length === 0 || fruitGameActive) return;
     
-    // Show fruit game if enabled, but mark that we want to advance after
+    const isLastPage = currentSentenceIndex >= sentences.length - 1;
+    
+    // Always allow fruit game if enabled
     if (fruitGameEnabled) {
-        shouldAdvanceAfterGame = true;
+        shouldAdvanceAfterGame = true; // Always set to true - we'll handle last page in hideFruitGame
         showFruitGame();
         return;
     }
-            
-    // Normal advance to next sentence
+    
+    // Handle last page case (only when fruit game is off)
+    if (isLastPage) {
+        currentSentenceIndex = 0; // Loop to beginning
+        displayCurrentSentence();
+        return;
+    }
+    
+    // Normal case - go to next sentence
     advanceToNextSentence();
 }
-        
         function advanceToNextSentence() {
             if (currentSentenceIndex < sentences.length - 1) {
                 currentSentenceIndex++;
@@ -2108,13 +2117,17 @@ function hideFruitGame() {
     
     setTimeout(() => {
         if (shouldAdvanceAfterGame) {
-            // Only advance if Next was pressed before game started
-            advanceToNextSentence();
+            const isLastPage = currentSentenceIndex >= sentences.length - 1;
+            if (isLastPage) {
+                // If we're on last page, loop back to first page
+                currentSentenceIndex = 0;
+            } else {
+                // Otherwise just go to next page
+                advanceToNextSentence();
+            }
             shouldAdvanceAfterGame = false;
-        } else {
-            // Otherwise just refresh current sentence
-            displayCurrentSentence();
         }
+        displayCurrentSentence(); // Always refresh display
     }, 500);
 }
         
