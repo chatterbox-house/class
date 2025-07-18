@@ -1211,16 +1211,16 @@ function populateStorySelector(cls) {
         }
         // Special handling for Eiken 3
         else if (cls === 'Eiken3') {
-            // Option 1: Yuki's Adventure
+            // Option 1: Questions
             const option1 = document.createElement('option');
-            option1.value = 'yukis_adventure';
-            option1.textContent = '1. Yuki\'s Adventure';
+            option1.value = 'questions';
+            option1.textContent = '1. Questions';
             storySelector.appendChild(option1);
             
-            // Option 2: Questions
+            // Option 2: Yuki's Adventure
             const option2 = document.createElement('option');
-            option2.value = 'questions';
-            option2.textContent = '2. Questions';
+            option2.value = 'yukis_adventure';
+            option2.textContent = '2. Yuki\'s Adventure';
             storySelector.appendChild(option2);
         }
         // Special handling for Eiken 5
