@@ -928,6 +928,7 @@ body.dark-mode .fruit-reel {
     <option value="X">X Class</option>
     <option value="HighSchool">High School</option>
     <option value="Adult">Adult</option>
+    <option value="Eiken3">Eiken 3</option>
     <option value="Eiken5">Eiken 5</option>
 </select>
             </div>
@@ -996,6 +997,8 @@ body.dark-mode .fruit-reel {
 <script src="c.js"></script>
 <script src="adult.js"></script>
 <script src="QA5.js"></script>
+<script src="eiken3.js"></script>
+<script src="eiken3questions.js"></script>
 <script src="easyquestions.js"></script>
 <script src="gettingtoknow.js"></script>
 
@@ -1152,6 +1155,14 @@ function handleStorySelect() {
                         lessonsData['Adult'] = adult;
                         console.log('Adult class data loaded');
                     }
+                    // Load Eiken 3 data
+                    if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
+                        lessonsData['Eiken3'] = {
+                            'yukis_adventure': eiken3.yukis_adventure,
+                            'questions': eiken3questions.questions
+                        };
+                        console.log('Eiken 3 class data loaded');
+                    }
  // Load Eiken 5 data
             if (typeof qa5 !== 'undefined') {
                 lessonsData['Eiken5'] = qa5;
@@ -1196,6 +1207,20 @@ function populateStorySelector(cls) {
             const option2 = document.createElement('option');
             option2.value = 'easyquestions2';
             option2.textContent = '2. Easy Questions';
+            storySelector.appendChild(option2);
+        }
+        // Special handling for Eiken 3
+        else if (cls === 'Eiken3') {
+            // Option 1: Yuki's Adventure
+            const option1 = document.createElement('option');
+            option1.value = 'yukis_adventure';
+            option1.textContent = '1. Yuki\'s Adventure';
+            storySelector.appendChild(option1);
+            
+            // Option 2: Questions
+            const option2 = document.createElement('option');
+            option2.value = 'questions';
+            option2.textContent = '2. Questions';
             storySelector.appendChild(option2);
         }
         // Special handling for Eiken 5
