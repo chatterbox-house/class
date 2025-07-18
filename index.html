@@ -317,6 +317,19 @@
     align-items: center;
     position: relative;
 }
+.page-counter {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+body.dark-mode .page-counter {
+    color: var(--dark-text-light);
+}
 
 .exit-reading {
     position: absolute;
@@ -879,9 +892,10 @@ body.dark-mode .fruit-reel {
 
     <!-- READING MODE CONTAINER -->
     <div class="reading-container" id="readingModeContainer" style="display: none;">
-        <div class="reading-header">
-            <button id="exitReading" class="exit-reading">X</button>
-        </div>
+<div class="reading-header">
+    <div class="page-counter">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></div>
+    <button id="exitReading" class="exit-reading">X</button>
+</div>
         
         <div class="reading-content">
 <div class="sentence-row">
@@ -1006,7 +1020,12 @@ body.dark-mode .fruit-reel {
             });
         }
         
-
+function updatePageCounter() {
+    if (!sentences || sentences.length === 0) return;
+    
+    document.getElementById('currentPage').textContent = currentSentenceIndex + 1;
+    document.getElementById('totalPages').textContent = sentences.length;
+}
 
         function toggleNightMode() {
             isNightMode = !isNightMode;
@@ -1188,6 +1207,7 @@ function loadTextContent(cls) {
         
         if (sentences.length > 0) {
             currentSentenceIndex = 0;
+updatePageCounter(); 
             displayCurrentSentence();
             console.log(`Loaded ${sentences.length} ${cls === 'Eiken5' ? 'questions' : 'sentences'} for class ${cls}`);
         } else {
@@ -1270,6 +1290,7 @@ function loadTextContent(cls) {
             prevSentenceBtn.disabled = currentSentenceIndex <= 0;
             nextSentenceBtn.disabled = currentSentenceIndex >= sentences.length - 1;
             setTimeout(ensureTextVisibility, 50);
+updatePageCounter(); 
         }
     function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -1409,6 +1430,7 @@ function showNextSentence() {
             }
             
             displayCurrentSentence();
+ updatePageCounter();
         }
         
 function showPreviousSentence() {
@@ -1424,6 +1446,7 @@ function showPreviousSentence() {
     }
     
     displayCurrentSentence();
+ updatePageCounter(); 
 }
        
         
