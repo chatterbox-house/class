@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -870,15 +871,6 @@ body.dark-mode .fruit-reel {
             </div>
         </div>
         
-        <div class="file-upload-row">
-            <div class="file-input-container">
-                <input type="file" id="lessonFile" accept=".txt" style="display: none;">
-                <label for="lessonFile" class="file-input-label">Choose File</label>
-                <div id="fileNameDisplay"></div>
-            </div>
-            
-            <button id="loadFileBtn" class="btn" disabled>Load Selected File</button>
-        </div>
     </div>
 
     <!-- READING MODE CONTAINER -->
@@ -964,9 +956,7 @@ body.dark-mode .fruit-reel {
         const fruitToggleBtn = document.getElementById('fruitToggle');
         const classSelector = document.getElementById('classSelector');
         const storySelector = document.getElementById('storySelector');
-        const fileInput = document.getElementById('lessonFile');
-        const loadFileBtn = document.getElementById('loadFileBtn');
-        const fileNameDisplay = document.getElementById('fileNameDisplay');
+
         const nightModeToggle = document.getElementById('nightModeToggle');
         
         // Initialize the app
@@ -974,8 +964,7 @@ body.dark-mode .fruit-reel {
             // Set up event listeners
             classSelector.addEventListener('change', handleClassSelect);
             storySelector.addEventListener('change', handleStorySelect);
-            fileInput.addEventListener('change', handleFileSelect);
-            loadFileBtn.addEventListener('click', loadSelectedFile);
+
             nightModeToggle.addEventListener('click', toggleNightMode);
             prevSentenceBtn.addEventListener('click', showPreviousSentence);
             nextSentenceBtn.addEventListener('click', showNextSentence);
@@ -1036,21 +1025,14 @@ body.dark-mode .fruit-reel {
             }
         }
         
-        function handleStorySelect() {
-            currentStory = this.value;
-            loadFileBtn.disabled = !!currentStory;
-            
-            if (currentStory) {
-                enterReadingMode(currentClass);
-            }
-        }
+function handleStorySelect() {
+    currentStory = this.value;
+    
+    if (currentStory) {
+        enterReadingMode(currentClass);
+    }
+}
         
-        function handleFileSelect(e) {
-            if (e.target.files.length > 0) {
-                fileNameDisplay.textContent = `Selected: ${e.target.files[0].name}`;
-                loadFileBtn.disabled = false;
-            }
-        }
         
         // Load all external data files
         function loadExternalData() {
@@ -1439,51 +1421,7 @@ function showPreviousSentence() {
     
     displayCurrentSentence();
 }
-        
-        // Load selected file
-        function loadSelectedFile() {
-            if (fileInput.files.length === 0) {
-                alert("Please select a file first!");
-                return;
-            }
-            
-            const file = fileInput.files[0];
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                const text = e.target.result;
-                sentences = [];
-                
-                // Simple parsing - each pair of lines is English then Japanese
-                const lines = text.split('\n')
-                    .map(line => line.trim())
-                    .filter(line => line.length > 0);
-                
-                for (let i = 0; i < lines.length; i += 2) {
-                    if (i + 1 < lines.length) {
-                        sentences.push({
-                            english: lines[i],
-                            japanese: lines[i+1],
-                            number: (i/2) + 1
-                        });
-                    }
-                }
-                
-                if (sentences.length > 0) {
-                    currentSentenceIndex = 0;
-                    displayCurrentSentence();
-                    enterReadingMode('uploaded');
-                } else {
-                    alert("No valid sentences found in the file!");
-                }
-            };
-            
-            reader.onerror = function() {
-                alert("Error reading file. Please try another file.");
-            };
-            
-            reader.readAsText(file);
-        }
+       
         
         // Handle TV remote input
         function handleRemoteInput(e) {
