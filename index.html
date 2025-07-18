@@ -997,6 +997,7 @@ body.dark-mode .fruit-reel {
 <script src="adult.js"></script>
 <script src="QA5.js"></script>
 <script src="easyquestions.js"></script>
+<script src="gettingtoknow.js"></script>
 
     <script>
         // Global variables
@@ -1156,13 +1157,11 @@ function handleStorySelect() {
                 lessonsData['Eiken5'] = qa5;
                 console.log('Eiken 5 class data loaded');
             }
- // Load High School data
-            if (typeof easyquestions !== 'undefined') {
+            // Load High School data
+            if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
                 lessonsData['HighSchool'] = {
-                    'easyquestions': easyquestions.questions,
-                    // Add more high school categories here later
-                    // 'mediumquestions': mediumquestions.questions,
-                    // 'debate': debate.questions
+                    'gettingtoknow': gettingtoknow.questions,
+                    'easyquestions2': easyquestions2.questions
                 };
                 console.log('High School data loaded');
             }
@@ -1187,10 +1186,17 @@ function populateStorySelector(cls) {
     if (lessonsData[cls]) {
         // Special handling for High School
         if (cls === 'HighSchool') {
-            const option = document.createElement('option');
-            option.value = 'easyquestions';
-            option.textContent = 'Easy Questions';
-            storySelector.appendChild(option);
+            // Option 1: Getting to Know You
+            const option1 = document.createElement('option');
+            option1.value = 'gettingtoknow';
+            option1.textContent = '1. Getting to Know You';
+            storySelector.appendChild(option1);
+            
+            // Option 2: Easy Questions (renamed from just "Easy Questions")
+            const option2 = document.createElement('option');
+            option2.value = 'easyquestions2';
+            option2.textContent = '2. Easy Questions';
+            storySelector.appendChild(option2);
         }
         // Special handling for Eiken 5
         else if (cls === 'Eiken5') {
