@@ -57,18 +57,19 @@
             color: var(--dark-text);
         }
         
-        .container {
-            width: 95%;
-            max-width: 800px;
-            text-align: center;
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 40px 30px;
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
+.container {
+    width: 95%;
+    max-width: 1200px; /* Increased from 800px */
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 60px 40px; /* Increased padding */
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    font-size: 1.2rem; /* Base font size increase */
+}
         
         body.dark-mode .container {
             background-color: var(--dark-card);
@@ -859,6 +860,56 @@ body.dark-mode .fruit-reel {
     .reading-content {
         height: calc(100% - 130px);
         margin-bottom: 70px;
+    }
+}
+/* Main container - only affects home screen */
+#mainContainer.container {
+    width: 95%;
+    max-width: 1200px; /* Increased from 800px */
+    padding: 60px 40px; /* Increased padding */
+    font-size: 1.2rem; /* Base font size increase */
+}
+
+/* Only target header in main container */
+#mainContainer .header {
+    font-size: 4rem; /* Increased from 2.2rem */
+    margin-bottom: 50px; /* Increased from 30px */
+}
+
+/* Only target dropdowns in main container */
+#mainContainer .controls-row {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    margin-bottom: 25px;
+    gap: 30px; /* Increased gap */
+}
+
+#mainContainer select {
+    padding: 25px 30px; /* Increased from 15px 20px */
+    font-size: 1.8rem; /* Increased from 1rem */
+    border-width: 3px; /* Thicker border */
+}
+
+#mainContainer .dropdown:after {
+    font-size: 1.5rem; /* Increased from 0.8rem */
+    right: 30px; /* Adjusted position */
+}
+
+/* Larger screens adjustment */
+@media (min-width: 1024px) {
+    #mainContainer .header {
+        font-size: 5rem;
+        margin-bottom: 60px;
+    }
+    
+    #mainContainer select {
+        padding: 30px 35px;
+        font-size: 2rem;
+    }
+    
+    #mainContainer .dropdown:after {
+        font-size: 2rem;
+        right: 35px;
     }
 }
     </style>
