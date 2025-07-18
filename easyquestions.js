@@ -1,8 +1,8 @@
 // easyquestions.js
-var easyquestions = {
+var easyquestions2 = {  // Changed from easyquestions to easyquestions2
     questions: `#QUESTIONS  
 🌞 What makes your mornings enjoyable?  
-朝が楽しくなることは？  
+朝が楽しくなることは？   
 ☕ How do you like your coffee or tea?  
 コーヒーや紅茶の好みは？  
 📱 What app do you use every day?  
