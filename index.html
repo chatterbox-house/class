@@ -929,6 +929,7 @@ body.dark-mode .fruit-reel {
     <option value="HighSchool">High School</option>
     <option value="Adult">Adult</option>
     <option value="Eiken5">Eiken 5</option>
+    <option value="Spanish">Spanish</option>  <!-- NEW OPTION -->
 </select>
             </div>
             
@@ -997,6 +998,8 @@ body.dark-mode .fruit-reel {
 <script src="adult.js"></script>
 <script src="QA5.js"></script>
 <script src="easyquestions.js"></script>
+<script src="spanishquestions.js"></script>
+<script src="spanishstories.js"></script>
 
     <script>
         // Global variables
@@ -1131,55 +1134,62 @@ function handleStorySelect() {
         }
         
         // Load lessons data from various class files
-        function loadLessonsData() {
-            return new Promise((resolve, reject) => {
-                try {
-                    // Load X class data
-                    if (typeof x !== 'undefined') {
-                        lessonsData['X'] = x;
-                        console.log('X class data loaded');
-                    }
-                    
-                    // Load C class data
-                    if (typeof c !== 'undefined') {
-                        lessonsData['C'] = c;
-                        console.log('C class data loaded');
-                    }
-                    
-                    // Load Adult class data
-                    if (typeof adult !== 'undefined') {
-                        lessonsData['Adult'] = adult;
-                        console.log('Adult class data loaded');
-                    }
- // Load Eiken 5 data
+function loadLessonsData() {
+    return new Promise((resolve, reject) => {
+        try {
+            // Load X class data
+            if (typeof x !== 'undefined') {
+                lessonsData['X'] = x;
+                console.log('X class data loaded');
+            }
+            
+            // Load C class data
+            if (typeof c !== 'undefined') {
+                lessonsData['C'] = c;
+                console.log('C class data loaded');
+            }
+            
+            // Load Adult class data
+            if (typeof adult !== 'undefined') {
+                lessonsData['Adult'] = adult;
+                console.log('Adult class data loaded');
+            }
+            
+            // Load Eiken 5 data
             if (typeof qa5 !== 'undefined') {
                 lessonsData['Eiken5'] = qa5;
                 console.log('Eiken 5 class data loaded');
             }
- // Load High School data
+            
+            // Load High School data
             if (typeof easyquestions !== 'undefined') {
                 lessonsData['HighSchool'] = {
                     'easyquestions': easyquestions.questions,
-                    // Add more high school categories here later
-                    // 'mediumquestions': mediumquestions.questions,
-                    // 'debate': debate.questions
                 };
                 console.log('High School data loaded');
             }
-                    
-                    if (Object.keys(lessonsData).length > 0) {
-                        resolve();
-                    } else {
-                        const error = 'No lesson data found. Please ensure at least one class file is loaded.';
-                        console.error(error);
-                        reject(error);
-                    }
-                } catch (e) {
-                    reject(e);
-                }
-            });
+            
+            // Load Spanish data
+if (typeof spanishquestions !== 'undefined' && typeof spanishstories !== 'undefined') {
+                lessonsData['Spanish'] = {
+                    'questions': spanishquestions.questions,
+                    'stories': spanishstories.stories  // Changed from concatenated stories
+                };
+                console.log('Spanish data loaded');
+            }
+
+            if (Object.keys(lessonsData).length > 0) {
+                resolve();
+            } else {
+                const error = 'No lesson data found.';
+                console.error(error);
+                reject(error);
+            }
+        } catch (e) {
+            reject(e);
         }
-        
+    });
+}      
         // Populate story selector for the selected class
 function populateStorySelector(cls) {
     storySelector.innerHTML = '<option value="">Select Story</option>';
@@ -1199,6 +1209,18 @@ function populateStorySelector(cls) {
             option.textContent = 'Questions';
             storySelector.appendChild(option);
         } 
+        // Special handling for Spanish
+        else if (cls === 'Spanish') {
+            const questionsOption = document.createElement('option');
+            questionsOption.value = 'questions';
+            questionsOption.textContent = 'Questions';
+            storySelector.appendChild(questionsOption);
+            
+            const storiesOption = document.createElement('option');
+            storiesOption.value = 'stories';
+            storiesOption.textContent = 'Stories';
+            storySelector.appendChild(storiesOption);
+        }
         else {
             // Existing story options for other classes
             Object.keys(lessonsData[cls]).forEach(storyKey => {
@@ -1247,56 +1269,52 @@ function loadTextContent(cls) {
     if (lessonsData[cls] && currentStory && lessonsData[cls][currentStory]) {
         let content = lessonsData[cls][currentStory];
         
-        // For Eiken5, randomize the questions
-        if (cls === 'Eiken5') {
-            const parsed = parseStoryFile(content);
-            sentences = shuffleArray(parsed);
-        } 
-        else {
-            sentences = parseStoryFile(content);
-        }
+        // Parse the content
+        sentences = parseStoryFile(content);
         
         if (sentences.length > 0) {
             currentSentenceIndex = 0;
-updatePageCounter(); 
+            updatePageCounter();
             displayCurrentSentence();
-            console.log(`Loaded ${sentences.length} ${cls === 'Eiken5' ? 'questions' : 'sentences'} for class ${cls}`);
+            console.log(`Loaded ${sentences.length} sentences for ${cls}`);
         } else {
-            alert(`No valid ${cls === 'Eiken5' ? 'questions' : 'sentences'} found`);
+            console.error('No valid sentences found in:', content);
+            alert(`No valid sentences found. Please check the content format.`);
             exitReadingMode();
         }
     } else {
-        alert(`Data not found for class ${cls}`);
+        alert(`Data not found for ${cls}/${currentStory}`);
         exitReadingMode();
     }
 }
         
         // Parse story file content
-        function parseStoryFile(text) {
-            const lines = text.split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0 && !line.startsWith('#'));
-            
-            const result = [];
-            let englishLine = null;
-            
-            for (const line of lines) {
-                if (/[a-zA-Z]/.test(line)) {
-                    // English line
-                    englishLine = line;
-                } else if (englishLine) {
-                    // Japanese line (following an English line)
-                    result.push({
-                        english: englishLine,
-                        japanese: line,
-                        number: result.length + 1
-                    });
-                    englishLine = null;
-                }
-            }
-            
-            return result;
+// Updated parseStoryFile function
+function parseStoryFile(text) {
+    const lines = text.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !line.startsWith('#') && !line.startsWith('##'));
+    
+    const result = [];
+    let spanishLine = null;
+    
+    for (const line of lines) {
+        // Check if line is Spanish (contains ¿ or á, é, í, ó, ú)
+        if (/[¿áéíóú]/.test(line)) {
+            spanishLine = line;
+        } else if (spanishLine) {
+            // This must be the English translation
+            result.push({
+                spanish: spanishLine,
+                english: line,
+                number: result.length + 1
+            });
+            spanishLine = null;
         }
+    }
+    
+    return result;
+}
         
         function ensureTextVisibility() {
             const rows = document.querySelectorAll('.sentence-row');
@@ -1323,50 +1341,51 @@ function displayCurrentSentence() {
 
     const sentence = sentences[currentSentenceIndex];
     
-    // Remove emoji from display if it's at the start of the sentence
-    let englishText = sentence.english;
-    const emojiRegex = /^(\p{Emoji_Presentation}|\p{Extended_Pictographic})/u;
-    if (emojiRegex.test(englishText)) {
-        // Find the first emoji character
-        const emojiMatch = englishText.match(emojiRegex);
-        if (emojiMatch && emojiMatch[0]) {
-            englishText = englishText.substring(emojiMatch[0].length).trim();
-        }
+    // For Spanish class, show Spanish on TOP (using englishSentence element)
+    if (currentClass === 'Spanish') {
+        englishSentence.textContent = `${sentence.number}. ${sentence.spanish}`;
+        japaneseSentence.textContent = `${sentence.number}. ${sentence.english}`;
+    } else {
+        // Original behavior for other classes
+        englishSentence.textContent = `${sentence.number}. ${sentence.english}`;
+        japaneseSentence.textContent = `${sentence.number}. ${sentence.japanese}`;
     }
     
-    englishSentence.textContent = `${sentence.number}. ${englishText}`;
-    japaneseSentence.textContent = `${sentence.number}. ${sentence.japanese}`;
-    
-    // Update button states - Never disable navigation buttons
-    prevSentenceBtn.disabled = false;
-    nextSentenceBtn.disabled = false;
+    updatePageCounter();
     setTimeout(ensureTextVisibility, 50);
-    updatePageCounter(); 
 }
 
-    function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}    
-        // Play sentence audio
 function playSentence(type) {
     if (sentences.length === 0 || fruitGameActive) return;
     
     const sentence = sentences[currentSentenceIndex];
-    let text = type === 'english' ? sentence.english : sentence.japanese;
-    const lang = type === 'english' ? 'en-US' : 'ja-JP';  // Ensure correct language codes
+    let text, lang;
+    let forceVoice = null;  // Declare forceVoice at function scope
+    
+    // For Spanish class
+    if (currentClass === 'Spanish') {
+        if (type === 'english') {
+            // Play SPANISH original (top box) with Spanish voice
+            text = sentence.spanish;
+            lang = 'es-ES';
+        } else {
+            // Play ENGLISH translation (bottom box) with British English voice
+            text = sentence.english;
+            lang = 'en-GB'; // Changed to British English
+            forceVoice = 'en-GB'; // Force British English voice
+        }
+    } 
+    // Original behavior for other classes
+    else {
+        text = type === 'english' ? sentence.english : sentence.japanese;
+        lang = type === 'english' ? 'en-US' : 'ja-JP';
+    }
     
     // Remove emoji from text to be spoken
     const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
     text = text.replace(emojiRegex, '').trim();
     
-    // Stop any current speech and sounds
     stopSpeech();
-    
-    // Speak the sentence
     speakSentence(text, lang);
 }
  function stopSpeech() {
@@ -1377,35 +1396,53 @@ function playSentence(type) {
    
         // Text-to-speech function
 function speakSentence(text, lang) {
-    if (!('speechSynthesis' in window)) {
-        console.warn('Speech synthesis not supported');
-        return;
-    }
+    if (!('speechSynthesis' in window)) return;
 
-    // Stop any current speech
     stopSpeech();
 
-    // Create new utterance
     const utterance = new SpeechSynthesisUtterance(text);
     
-    // Set language and voice properties
-    utterance.lang = lang;
-    utterance.rate = 0.9;
-    utterance.pitch = 1;
-    utterance.volume = 1;
+    // Updated language handling
+    if (currentClass === 'Spanish') {
+        utterance.lang = 'es-ES'; // Spanish voice
+        utterance.rate = 0.9;
+    } else if (lang === 'en-US') {
+        utterance.lang = 'en-US';
+        utterance.rate = 0.9;
+    } else {
+        utterance.lang = 'ja-JP';
+        utterance.rate = 0.9;
+    }
 
-    // Function to actually speak once voices are loaded
-    const speakWithVoice = () => {
-        const voices = window.speechSynthesis.getVoices();
+const speakWithVoice = () => {
+    const voices = window.speechSynthesis.getVoices();
+    let voice;
+    
+    // Handle forced voice first (for British English in Spanish mode)
+    if (lang === 'en-GB' && currentClass === 'Spanish') {
+        // Force British English voice for Spanish translations
+        voice = voices.find(v => v.lang === 'en-GB');
+        if (voice) {
+            utterance.voice = voice;
+            window.speechSynthesis.speak(utterance);
+            return;
+        }
+    }
+    
+    // Special handling for Spanish
+    if (currentClass === 'Spanish') {
+        voice = voices.find(v => v.lang.startsWith('es'));
+        if (!voice) {
+            console.warn('No Spanish voice found, using default');
+        }
+    } else if (lang === 'en-US' || lang === 'en-GB') {
+        // Try to find exact match first
+        voice = voices.find(v => v.lang === lang);
         
-        // Find the appropriate voice
-        let voice;
-        if (lang === 'en-US') {
-            // First try to find a US English voice
-            voice = voices.find(v => 
-                v.lang === 'en-US' && 
-                v.name.includes('English')
-            );
+        // Fallback to any English voice
+        if (!voice) {
+            voice = voices.find(v => v.lang.startsWith('en'));
+        }
 
             // If not found, try any English voice
             if (!voice) {
@@ -1601,22 +1638,20 @@ function initTranslationElements() {
 
 // Show translation popup
 function showTranslationPopup(text, lang) {
-    // Validate input
-    const trimmedText = text.trim();
-    if (!trimmedText || trimmedText.length < 1 || trimmedText.toLowerCase() === 'translate') {
-        return;
+    // Determine source and target languages
+    let sourceLang, targetLang;
+    
+    if (currentClass === 'Spanish') {
+        sourceLang = lang === 'spanish' ? 'Spanish' : 'English';
+        targetLang = lang === 'spanish' ? 'English' : 'Spanish';
+    } else {
+        sourceLang = lang === 'en' ? 'English' : 'Japanese';
+        targetLang = lang === 'en' ? 'Japanese' : 'English';
     }
     
-    // Reset previous state
-    closeTranslationPopupHandler();
-    
-    // Set new translation data
-    selectedText = trimmedText;
-    translationLang = lang;
-    
-    // Update UI labels based on translation direction
-    const sourceLabel = document.getElementById('sourceLanguageLabel');
-    const targetLabel = document.getElementById('targetLanguageLabel');
+    // Update UI labels
+    document.getElementById('sourceLanguageLabel').textContent = sourceLang + ':';
+    document.getElementById('targetLanguageLabel').textContent = targetLang + ':';
     
     if (lang === 'en') {
         sourceLabel.textContent = 'English:';
