@@ -461,6 +461,9 @@ body.dark-mode .page-counter {
     flex: 1;
     max-height: 100%;
     text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
 }
         
 .reading-footer {
@@ -509,6 +512,39 @@ body.dark-mode .page-counter {
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(0,0,0,0.3);
         }
+.font-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.font-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+}
+
+.font-btn:hover {
+    background-color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+body.dark-mode .font-btn {
+    background-color: var(--accent);
+}
+
+body.dark-mode .font-btn:hover {
+    background-color: var(--primary-light);
+}
 
         .nav-btn:active {
             transform: scale(0.98);
@@ -966,6 +1002,10 @@ body.dark-mode .fruit-reel {
         
 <div class="reading-footer">
     <button id="prevSentence" class="nav-btn">←</button>
+    <div class="font-controls">
+        <button id="decreaseFont" class="font-btn">A-</button>
+        <button id="increaseFont" class="font-btn">A+</button>
+    </div>
     <button id="fruitToggle" class="fruit-toggle">🎰 Fruit Game OFF</button>
     <button id="nextSentence" class="nav-btn">→</button>
 </div>
@@ -1013,6 +1053,10 @@ body.dark-mode .fruit-reel {
         let fruitGameActive = false;
         let shouldAdvanceAfterGame = false;
         let isNightMode = false;
+// Font size control variables
+let currentFontSize = 5; // vw units by default
+const minFontSize = 2; // vw
+const maxFontSize = 8; // vw
 
         // Lessons data (will be loaded from x.js and other class files)
         let lessonsData = {};
@@ -1037,6 +1081,15 @@ body.dark-mode .fruit-reel {
         function init() {
             // Set up event listeners
             classSelector.addEventListener('change', handleClassSelect);
+    // Font size controls
+    document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
+    document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
+    
+    // Load saved font size
+    const savedFontSize = parseFloat(localStorage.getItem('fontSize'));
+    if (savedFontSize && !isNaN(savedFontSize)) {
+        currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, savedFontSize));
+    }
             storySelector.addEventListener('change', handleStorySelect);
 
             nightModeToggle.addEventListener('click', toggleNightMode);
@@ -1076,6 +1129,27 @@ body.dark-mode .fruit-reel {
             });
         }
         
+function increaseFontSize() {
+    if (currentFontSize < maxFontSize) {
+        currentFontSize += 0.5;
+        applyFontSize();
+    }
+}
+
+function decreaseFontSize() {
+    if (currentFontSize > minFontSize) {
+        currentFontSize -= 0.5;
+        applyFontSize();
+    }
+}
+
+function applyFontSize() {
+    const displays = document.querySelectorAll('.sentence-display');
+    displays.forEach(display => {
+        display.style.fontSize = `${currentFontSize}vw`;
+    });
+    localStorage.setItem('fontSize', currentFontSize);
+}
 function updatePageCounter() {
     if (!sentences || sentences.length === 0) return;
     
@@ -1338,20 +1412,33 @@ function parseStoryFile(text) {
     return result;
 }
         
-        function ensureTextVisibility() {
-            const rows = document.querySelectorAll('.sentence-row');
-            rows.forEach(row => {
-                const display = row.querySelector('.sentence-display');
-                if (display.scrollHeight > display.clientHeight) {
-                    // Reduce font size until text fits
-                    let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
-                    while (display.scrollHeight > display.clientHeight && fontSize > 24) {
-                        fontSize -= 1;
-                        display.style.fontSize = `${fontSize}px`;
-                    }
-                }
-            });
+function ensureTextVisibility() {
+    const rows = document.querySelectorAll('.sentence-row');
+    rows.forEach(row => {
+        const display = row.querySelector('.sentence-display');
+        if (!display) return;
+        
+        // Reset to default size first
+        display.style.fontSize = '';
+        
+        // Check if text overflows
+        if (display.scrollHeight > display.clientHeight || display.scrollWidth > display.clientWidth) {
+            // Get current computed font size
+            let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
+            
+            // Reduce font size until text fits or minimum size reached
+            while ((display.scrollHeight > display.clientHeight || 
+                   display.scrollWidth > display.clientWidth) && 
+                   fontSize > 12) { // Minimum font size of 12px
+                fontSize -= 1;
+                display.style.fontSize = `${fontSize}px`;
+                
+                // Force reflow to get updated dimensions
+                void display.offsetHeight;
+            }
         }
+    });
+}
         
         // Display current sentence
 function displayCurrentSentence() {
@@ -1367,10 +1454,19 @@ function displayCurrentSentence() {
     englishSentence.textContent = sentence.english;
     japaneseSentence.textContent = sentence.japanese;
     
+    // Reset font sizes before checking
+    englishSentence.style.fontSize = '';
+    japaneseSentence.style.fontSize = '';
+    
     // Update button states
     prevSentenceBtn.disabled = false;
     nextSentenceBtn.disabled = false;
-    setTimeout(ensureTextVisibility, 50);
+    
+    // Immediately check and adjust text size
+    ensureTextVisibility();
+    // Apply current font size
+    applyFontSize();
+    
     updatePageCounter();
 }
 
