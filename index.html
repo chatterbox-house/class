@@ -1032,10 +1032,10 @@ body.dark-mode .fruit-reel {
 </div>
     
     <!-- Load external scripts -->
+<script src="adult.js"></script>
 <script src="vocab.js"></script>
 <script src="x.js"></script>
 <script src="c.js"></script>
-<script src="adult.js"></script>
 <script src="QA5.js"></script>
 <script src="eiken5story.js"></script>
 <script src="eiken3.js"></script>
@@ -1225,11 +1225,12 @@ function loadLessonsData() {
                 console.log('C class data loaded');
             }
             
-            // Load Adult class data
-            if (typeof adult !== 'undefined') {
-                lessonsData['Adult'] = adult;
-                console.log('Adult class data loaded');
-            }
+// Load Adult class data
+if (typeof adult !== 'undefined') {
+    lessonsData['Adult'] = adult;
+    console.log('Adult stories loaded:', adult.stories.length);
+    console.log('First story title:', adult.stories[0].title);
+}
             
             // Load Eiken 3 data
             if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
@@ -1276,50 +1277,17 @@ function populateStorySelector(cls) {
     storySelector.innerHTML = '<option value="">Select Story</option>';
 
     if (lessonsData[cls]) {
-        // Special handling for High School
-        if (cls === 'HighSchool') {
-            // Option 1: Getting to Know You
-            const option1 = document.createElement('option');
-            option1.value = 'gettingtoknow';
-            option1.textContent = '1. Getting to Know You';
-            storySelector.appendChild(option1);
-            
-            // Option 2: Easy Questions (renamed from just "Easy Questions")
-            const option2 = document.createElement('option');
-            option2.value = 'easyquestions2';
-            option2.textContent = '2. Easy Questions';
-            storySelector.appendChild(option2);
-        }
-        // Special handling for Eiken 3
-        else if (cls === 'Eiken3') {
-            // Option 1: Questions
-            const option1 = document.createElement('option');
-            option1.value = 'questions';
-            option1.textContent = '1. Questions';
-            storySelector.appendChild(option1);
-            
-            // Option 2: Yuki's Adventure
-            const option2 = document.createElement('option');
-            option2.value = 'yukis_adventure';
-            option2.textContent = '2. Yuki\'s Adventure';
-            storySelector.appendChild(option2);
-        }
-        // Special handling for Eiken 5
-        else if (cls === 'Eiken5') {
-            // Option 1: Questions
-            const option1 = document.createElement('option');
-            option1.value = 'questions';
-            option1.textContent = '1. Questions';
-            storySelector.appendChild(option1);
-            
-            // Option 2: Saki's Park Day
-            const option2 = document.createElement('option');
-            option2.value = 'sakis_park_day';
-            option2.textContent = '2. Saki\'s Park Day';
-            storySelector.appendChild(option2);
+        // New format (array of stories)
+        if (lessonsData[cls].stories) {
+            lessonsData[cls].stories.forEach((story, index) => {
+                const option = document.createElement('option');
+                option.value = index; // Use array index as value
+                option.textContent = `${index + 1}. ${story.title}`;
+                storySelector.appendChild(option);
+            });
         } 
+        // Old format (story1, story2, etc.)
         else {
-            // Existing story options for other classes
             Object.keys(lessonsData[cls]).forEach(storyKey => {
                 const option = document.createElement('option');
                 option.value = storyKey;
@@ -1363,54 +1331,95 @@ function populateStorySelector(cls) {
         
         // Load text content for reading mode
 function loadTextContent(cls) {
-    if (lessonsData[cls] && currentStory && lessonsData[cls][currentStory]) {
-        let content = lessonsData[cls][currentStory];
-        
-        // Parse the content (no randomization for any class)
-        sentences = parseStoryFile(content);
-        
-        if (sentences.length > 0) {
-            currentSentenceIndex = 0;
-            updatePageCounter(); 
-            displayCurrentSentence();
-            console.log(`Loaded ${sentences.length} sentences for class ${cls}`);
-        } else {
-            alert(`No valid sentences found`);
-            exitReadingMode();
-        }
-    } else {
+    console.log('Loading content for:', cls, 'Story:', currentStory); // Debug line
+    
+    if (!lessonsData[cls]) {
+        console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
         alert(`Data not found for class ${cls}`);
         exitReadingMode();
+        return;
     }
-}
-        
-        // Parse story file content
-function parseStoryFile(text) {
-    const lines = text.split('\n')
-        .map(line => line.trim())
-        .filter(line => line.length > 0 && !line.startsWith('#'));
-    
-    const result = [];
-    let englishLine = null;
-    
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        // Check if line contains English characters or emoji
-        if (/[a-zA-Z]|\p{Emoji_Presentation}/u.test(line)) {
-            englishLine = line;
-        } else if (englishLine) {
-            result.push({
-                english: englishLine,
-                japanese: line,
-                number: result.length + 1
-            });
-            englishLine = null;
+
+    let content;
+    if (lessonsData[cls].stories) {  // New format
+        const storyIndex = parseInt(currentStory);
+        if (isNaN(storyIndex)) {  // FIXED: Added missing parenthesis
+            console.error('Invalid story index:', currentStory);
+            alert('Invalid story selection');
+            exitReadingMode();
+            return;
         }
+        content = lessonsData[cls].stories[storyIndex].content;
+    } else if (lessonsData[cls][currentStory]) {  // Old format
+        content = lessonsData[cls][currentStory];
+    } else {
+        console.error('Story not found:', currentStory, 'in class:', cls);
+        alert(`Story not found in ${cls} class`);
+        exitReadingMode();
+        return;
     }
-    
-    return result;
-}
+
+    sentences = parseStoryFile(content);
+    if (sentences.length > 0) {
+        currentSentenceIndex = 0;
+        displayCurrentSentence();
+    } else {
+        alert('No valid sentences found in this story');
+        exitReadingMode();
+    }
+}     
+        function parseStoryFile(text) {
+            // Handle both string (old) and object (new) formats
+            const content = typeof text === 'object' ? text.content : text;
+            
+            const lines = content.split('\n')
+                .map(line => line.trim())
+                .filter(line => line.length > 0 && !line.startsWith('#'));
+            
+            const result = [];
+            let currentEnglish = null;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i];
+                
+                // FIXED: Better detection of English lines
+                const isEnglish = /[a-zA-Z]/.test(line) || 
+                                 /[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
+                
+                if (isEnglish) {
+                    // If we have a pending English line, push it with empty Japanese
+                    if (currentEnglish) {
+                        result.push({
+                            english: currentEnglish,
+                            japanese: "",
+                            number: result.length + 1
+                        });
+                    }
+                    currentEnglish = line;
+                } else {
+                    // This is a Japanese line - pair it with current English
+                    if (currentEnglish) {
+                        result.push({
+                            english: currentEnglish,
+                            japanese: line,
+                            number: result.length + 1
+                        });
+                        currentEnglish = null;
+                    }
+                }
+            }
+            
+            // Push any remaining English line
+            if (currentEnglish) {
+                result.push({
+                    english: currentEnglish,
+                    japanese: "",
+                    number: result.length + 1
+                });
+            }
+            
+            return result;
+        }
         
 function ensureTextVisibility() {
     const rows = document.querySelectorAll('.sentence-row');
