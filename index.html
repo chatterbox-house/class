@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -355,18 +354,25 @@ body.dark-mode .page-counter {
 .fruit-toggle {
     background-color: var(--warning);
     color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    border: 2px solid var(--warning);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    flex-shrink: 0; /* Prevent button from growing */
-    margin: 0 5px; /* Add some horizontal spacing */
+    box-shadow: none;
+    flex-shrink: 0;
+    margin: 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .fruit-toggle.on {
-    background-color: var(--success);
+    background-color: var(--warning);
+    border-color: var(--success);
+    box-shadow: 0 0 10px var(--success);
 }
         
         .reel-container {
@@ -479,8 +485,14 @@ body.dark-mode .page-counter {
     background-color: var(--card-bg);
     box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     transition: background-color 0.3s;
-    height: 60px; /* Reduced height */
-    gap: 10px; /* Add space between items */
+    height: 60px;
+    gap: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.reading-footer::-webkit-scrollbar {
+    display: none;
 }
         
         body.dark-mode .reading-footer {
@@ -489,14 +501,14 @@ body.dark-mode .page-counter {
         }
         
 .nav-btn {
-    flex-shrink: 0; /* Prevent buttons from growing */
+    flex-shrink: 0;
     background-color: var(--primary);
     color: white;
     border: none;
-    width: 50px; /* Reduced size */
-    height: 50px; /* Reduced size */
+    min-width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 1.2rem; /* Smaller font */
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -505,7 +517,7 @@ body.dark-mode .page-counter {
     transition: all 0.2s;
     position: relative;
     z-index: 20;
-    margin: 0 10px; /* Added some spacing */
+    margin: 0 5px;
 }
 
         .nav-btn:hover {
@@ -521,16 +533,17 @@ body.dark-mode .page-counter {
     background-color: var(--primary);
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
+    min-width: 35px;
+    height: 35px;
     border-radius: 50%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: all 0.2s;
+    flex-shrink: 0;
 }
 
 .font-btn:hover {
@@ -555,13 +568,15 @@ body.dark-mode .font-btn:hover {
     background-color: var(--primary);
     color: white;
     border: none;
-    width: 50px;
-    height: 40px;
+    min-width: 40px;
+    height: 35px;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
+    flex-shrink: 0;
+    padding: 0 5px;
 }
 
 .display-btn.active {
@@ -995,6 +1010,41 @@ body.dark-mode .fruit-reel {
         right: 35px;
     }
 }
+@media (max-width: 480px) {
+    .reading-footer {
+        height: 50px;
+        padding: 5px;
+    }
+    
+    .nav-btn {
+        min-width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+        margin: 0 3px;
+    }
+    
+    .font-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .display-btn {
+        min-width: 35px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+    
+    .fruit-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    
+    .reading-content {
+        margin-bottom: 50px;
+    }
+}
     </style>
 </head>
 <body>
@@ -1116,26 +1166,44 @@ let displayMode = 'both'; // 'english', 'japanese', or 'both'
 // Lessons data (will be loaded from x.js and other class files)
 let lessonsData = {};
         
-        // DOM elements
-        const mainContainer = document.getElementById('mainContainer');
-        const readingModeContainer = document.getElementById('readingModeContainer');
-        const englishSentence = document.getElementById('englishSentence');
-        const japaneseSentence = document.getElementById('japaneseSentence');
-        const prevSentenceBtn = document.getElementById('prevSentence');
-        const nextSentenceBtn = document.getElementById('nextSentence');
-        const playEnglishBtn = document.getElementById('playEnglish');
-        const playJapaneseBtn = document.getElementById('playJapanese');
-        const exitReadingBtn = document.getElementById('exitReading');
-        const fruitToggleBtn = document.getElementById('fruitToggle');
-        const classSelector = document.getElementById('classSelector');
-        const storySelector = document.getElementById('storySelector');
+// DOM elements
+let mainContainer, readingModeContainer, englishSentence, japaneseSentence;
+let prevSentenceBtn, nextSentenceBtn, playEnglishBtn, playJapaneseBtn;
+let exitReadingBtn, fruitToggleBtn, classSelector, storySelector;
 
-        const nightModeToggle = document.getElementById('nightModeToggle');
+function initElements() {
+    mainContainer = document.getElementById('mainContainer');
+    readingModeContainer = document.getElementById('readingModeContainer');
+    englishSentence = document.getElementById('englishSentence');
+    japaneseSentence = document.getElementById('japaneseSentence');
+    prevSentenceBtn = document.getElementById('prevSentence');
+    nextSentenceBtn = document.getElementById('nextSentence');
+    playEnglishBtn = document.getElementById('playEnglish');
+    playJapaneseBtn = document.getElementById('playJapanese');
+    exitReadingBtn = document.getElementById('exitReading');
+    fruitToggleBtn = document.getElementById('fruitToggle');
+    classSelector = document.getElementById('classSelector');
+    storySelector = document.getElementById('storySelector');
+const nightModeToggle = document.getElementById('nightModeToggle');
+
+    // Verify critical elements exist
+    if (!englishSentence || !japaneseSentence) {
+        console.error('Critical elements not found');
+        return false;
+    }
+    return true;
+}
         
         // Initialize the app
-        function init() {
-            // Set up event listeners
-            classSelector.addEventListener('change', handleClassSelect);
+function init() {
+    // Initialize elements first
+    if (!initElements()) {
+        alert('Failed to initialize page elements');
+        return;
+    }
+
+    // Set up event listeners
+    if (classSelector) classSelector.addEventListener('change', handleClassSelect);
 // Font size controls
 document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
 document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
@@ -1163,7 +1231,10 @@ storySelector.addEventListener('change', handleStorySelect);
 
             // Initialize translation elements
             initTranslationElements();
-
+// Load fruit game state
+const savedFruitGameState = localStorage.getItem('fruitGameEnabled');
+fruitGameEnabled = savedFruitGameState === 'true';
+updateFruitButtonState();
             // Set up keyboard navigation for TV remote
             document.addEventListener('keydown', handleRemoteInput);
             
@@ -1224,13 +1295,17 @@ function setDisplayMode(mode) {
 }
 
 function applyDisplayMode() {
-    // Only proceed if we're in reading mode
-    if (readingModeContainer.style.display !== 'flex') {
+    // Only proceed if we're in reading mode and elements exist
+    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
         return;
     }
 
     // Get all sentence rows
     const sentenceRows = document.querySelectorAll('.sentence-row');
+    if (!sentenceRows || sentenceRows.length === 0) {
+        console.error('No sentence rows found');
+        return;
+    }
     
     // If no rows found, check if we should wait for them
     if (sentenceRows.length === 0) {
@@ -1302,8 +1377,11 @@ function applyDisplayMode() {
 function updatePageCounter() {
     if (!sentences || sentences.length === 0) return;
     
-    document.getElementById('currentPage').textContent = currentSentenceIndex + 1;
-    document.getElementById('totalPages').textContent = sentences.length;
+    const currentPageEl = document.getElementById('currentPage');
+    const totalPagesEl = document.getElementById('totalPages');
+    
+    if (currentPageEl) currentPageEl.textContent = currentSentenceIndex + 1;
+    if (totalPagesEl) totalPagesEl.textContent = sentences.length;
 }
 
         function toggleNightMode() {
@@ -1457,8 +1535,8 @@ function enterReadingMode(cls) {
         applyDisplayMode.retryCount = 0;
     }   
  // Hide main container and show reading container
-    mainContainer.style.display = 'none';
-    readingModeContainer.style.display = 'flex';
+if (mainContainer) mainContainer.style.display = 'none';
+if (readingModeContainer) readingModeContainer.style.display = 'flex';
     
     // Initialize translation events
     initTranslationEvents();
@@ -1502,7 +1580,13 @@ function loadTextContent(cls) {
             exitReadingMode();
             return;
         }
-        content = lessonsData[cls].stories[storyIndex].content;
+        content = lessonsData[cls]?.stories?.[storyIndex]?.content;
+if (!content) {
+    console.error('Content not found for story:', storyIndex, 'in class:', cls);
+    alert(`Content not found for selected story`);
+    exitReadingMode();
+    return;
+}
     } else if (lessonsData[cls][currentStory]) {  // Old format
         content = lessonsData[cls][currentStory];
     } else {
@@ -1528,7 +1612,7 @@ if (sentences.length > 0) {
 }     
 function parseStoryFile(text) {
     // Handle both string (old) and object (new) formats
-    const content = typeof text === 'object' ? text.content : text;
+    const content = text && typeof text === 'object' ? text.content : text || '';
     
     const lines = content.split('\n')
         .map(line => line.trim())
@@ -1616,6 +1700,19 @@ function ensureTextVisibility() {
         
         // Display current sentence
 function displayCurrentSentence() {
+    // Safely check if we're in reading mode and elements exist
+    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+        return;
+    }
+
+    // Verify critical elements exist
+    englishSentence = document.getElementById('englishSentence');
+    japaneseSentence = document.getElementById('japaneseSentence');
+    if (!englishSentence || !japaneseSentence) {
+        console.error('Sentence display elements not found');
+        return;
+    }
+
     if (!sentences || sentences.length === 0) {
         englishSentence.textContent = "No sentences loaded";
         japaneseSentence.textContent = "";
@@ -1625,8 +1722,8 @@ function displayCurrentSentence() {
     const sentence = sentences[currentSentenceIndex];
     
     // Display with emoji but without number prefix
-    englishSentence.textContent = sentence.english;
-    japaneseSentence.textContent = sentence.japanese;
+    if (sentence.english) englishSentence.textContent = sentence.english;
+    if (sentence.japanese) japaneseSentence.textContent = sentence.japanese;
     
     // Reset font sizes before checking
     englishSentence.style.fontSize = '';
@@ -2363,22 +2460,53 @@ function handleJapaneseClick(e) {
 ];
 
         // Fruit game functions
-        function updateFruitButtonState() {
-            fruitToggleBtn.textContent = fruitGameEnabled ? '🎰 Fruit Game ON' : '🎰 Fruit Game OFF';
-            fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
-        }
+function updateFruitButtonState() {
+    // Use different colored apples for on/off states
+    if (fruitGameEnabled) {
+        fruitToggleBtn.innerHTML = '🍏'; // Green apple when ON
+        fruitToggleBtn.style.color = 'var(--success)'; // Bright green
+    } else {
+        fruitToggleBtn.innerHTML = '🍎'; // Red apple when OFF
+        fruitToggleBtn.style.color = 'var(--warning)'; // Bright red
+    }
+    
+    fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
+    fruitToggleBtn.title = fruitGameEnabled ? 'Fruit Game is ON' : 'Fruit Game is OFF';
+    
+    // Keep the existing shadow and border effects
+    if (fruitGameEnabled) {
+        fruitToggleBtn.style.boxShadow = '0 0 10px var(--success)';
+        fruitToggleBtn.style.border = '2px solid var(--success)';
+    } else {
+        fruitToggleBtn.style.boxShadow = 'none';
+        fruitToggleBtn.style.border = '2px solid var(--warning)';
+    }
+}
         
-        function toggleFruitGame() {
-            fruitGameEnabled = !fruitGameEnabled;
-            updateFruitButtonState();
-            
-            if (fruitGameEnabled) {
-                playSound('activate');
-                if (navigator.vibrate) navigator.vibrate(50);
-            }
-            
-            console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
+function toggleFruitGame() {
+    // Only allow toggling when in reading mode
+    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+        return;
+    }
+
+    fruitGameEnabled = !fruitGameEnabled;
+    updateFruitButtonState();
+    
+    // Play sound only when turning ON
+    if (fruitGameEnabled) {
+        playSound('activate');
+        if (navigator.vibrate) navigator.vibrate(50);
+    } else {
+        // When turning OFF, ensure any active game is closed
+        if (fruitGameActive) {
+            hideFruitGame();
         }
+    }
+    
+    // Save state to localStorage
+    localStorage.setItem('fruitGameEnabled', fruitGameEnabled);
+    console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
+}
         
         function showFruitGame() {
             if (!fruitGameEnabled || fruitGameActive) {
@@ -2425,8 +2553,12 @@ function handleJapaneseClick(e) {
         }
         
 function hideFruitGame() {
+    // Safely remove game container if it exists
     const game = document.querySelector('.fruit-game-container');
-    if (game) game.remove();
+    if (game && game.parentNode) {
+        game.parentNode.removeChild(game);
+    }
+    
     fruitGameActive = false;
     
     // Stop any game sounds
@@ -2438,19 +2570,18 @@ function hideFruitGame() {
     // Ensure translation popup is closed
     closeTranslationPopupHandler();
     
+    // Only proceed if we're in reading mode
+    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+        return;
+    }
+    
     setTimeout(() => {
         if (shouldAdvanceAfterGame) {
             const isLastPage = currentSentenceIndex >= sentences.length - 1;
-            if (isLastPage) {
-                // If we're on last page, loop back to first page
-                currentSentenceIndex = 0;
-            } else {
-                // Otherwise just go to next page
-                advanceToNextSentence();
-            }
+            currentSentenceIndex = isLastPage ? 0 : currentSentenceIndex + 1;
             shouldAdvanceAfterGame = false;
         }
-        displayCurrentSentence(); // Always refresh display
+        displayCurrentSentence(); // Refresh display
     }, 500);
 }
         
