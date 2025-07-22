@@ -545,6 +545,38 @@ body.dark-mode .font-btn {
 body.dark-mode .font-btn:hover {
     background-color: var(--primary-light);
 }
+.display-toggle {
+    display: flex;
+    gap: 5px;
+    margin: 0 10px;
+}
+
+.display-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.display-btn.active {
+    background-color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .display-btn {
+    background-color: var(--secondary);
+}
+
+body.dark-mode .display-btn.active {
+    background-color: var(--accent);
+}
 
         .nav-btn:active {
             transform: scale(0.98);
@@ -719,7 +751,22 @@ body.dark-mode .language-label {
         padding: 10px 15px !important;
     }
 }
-        
+.sentence-row.full-height {
+    flex: 1 1 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+}
+
+.sentence-display.full-height {
+    font-size: 8vw !important;
+    line-height: 1.2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 20px !important;
+}        
         /* Fruit Game Styles */
         .fruit-game-container {
             position: fixed;
@@ -1006,6 +1053,11 @@ body.dark-mode .fruit-reel {
         <button id="decreaseFont" class="font-btn">A-</button>
         <button id="increaseFont" class="font-btn">A+</button>
     </div>
+<div class="display-toggle">
+    <button id="displayEnglish" class="display-btn active">EN</button>
+    <button id="displayJapanese" class="display-btn">JP</button>
+    <button id="displayBoth" class="display-btn">BOTH</button>
+</div>
     <button id="fruitToggle" class="fruit-toggle">🎰 Fruit Game OFF</button>
     <button id="nextSentence" class="nav-btn">→</button>
 </div>
@@ -1058,8 +1110,11 @@ let currentFontSize = 5; // vw units by default
 const minFontSize = 2; // vw
 const maxFontSize = 8; // vw
 
-        // Lessons data (will be loaded from x.js and other class files)
-        let lessonsData = {};
+// Display mode control
+let displayMode = 'both'; // 'english', 'japanese', or 'both'
+
+// Lessons data (will be loaded from x.js and other class files)
+let lessonsData = {};
         
         // DOM elements
         const mainContainer = document.getElementById('mainContainer');
@@ -1081,16 +1136,22 @@ const maxFontSize = 8; // vw
         function init() {
             // Set up event listeners
             classSelector.addEventListener('change', handleClassSelect);
-    // Font size controls
-    document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
-    document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
-    
-    // Load saved font size
-    const savedFontSize = parseFloat(localStorage.getItem('fontSize'));
-    if (savedFontSize && !isNaN(savedFontSize)) {
-        currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, savedFontSize));
-    }
-            storySelector.addEventListener('change', handleStorySelect);
+// Font size controls
+document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
+document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
+
+// Load saved font size
+const savedFontSize = parseFloat(localStorage.getItem('fontSize'));
+if (savedFontSize && !isNaN(savedFontSize)) {
+    currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, savedFontSize));
+}
+
+// Display mode controls
+document.getElementById('displayEnglish').addEventListener('click', () => setDisplayMode('english'));
+document.getElementById('displayJapanese').addEventListener('click', () => setDisplayMode('japanese'));
+document.getElementById('displayBoth').addEventListener('click', () => setDisplayMode('both'));
+
+storySelector.addEventListener('change', handleStorySelect);
 
             nightModeToggle.addEventListener('click', toggleNightMode);
             prevSentenceBtn.addEventListener('click', showPreviousSentence);
@@ -1149,6 +1210,94 @@ function applyFontSize() {
         display.style.fontSize = `${currentFontSize}vw`;
     });
     localStorage.setItem('fontSize', currentFontSize);
+}
+function setDisplayMode(mode) {
+    displayMode = mode;
+    localStorage.setItem('displayMode', mode);
+    
+    // Update button states
+    document.getElementById('displayEnglish').classList.toggle('active', mode === 'english');
+    document.getElementById('displayJapanese').classList.toggle('active', mode === 'japanese');
+    document.getElementById('displayBoth').classList.toggle('active', mode === 'both');
+    
+    applyDisplayMode();
+}
+
+function applyDisplayMode() {
+    // Only proceed if we're in reading mode
+    if (readingModeContainer.style.display !== 'flex') {
+        return;
+    }
+
+    // Get all sentence rows
+    const sentenceRows = document.querySelectorAll('.sentence-row');
+    
+    // If no rows found, check if we should wait for them
+    if (sentenceRows.length === 0) {
+        // First check if we're even supposed to have these elements
+        if (!sentences || sentences.length === 0) {
+            console.warn('No sentences loaded - cannot apply display mode');
+            return;
+        }
+        
+        // If this is the first attempt, wait a short time and try once more
+        if (typeof applyDisplayMode.waiting === 'undefined') {
+            applyDisplayMode.waiting = true;
+            setTimeout(() => {
+                applyDisplayMode.waiting = false;
+                applyDisplayMode();
+            }, 300); // Wait 300ms for elements to render
+            return;
+        }
+        
+        // If we already waited and still no elements, give up
+        console.error('Failed to find sentence rows after waiting');
+        return;
+    }
+
+    // Reset waiting flag
+    applyDisplayMode.waiting = false;
+
+    // Get the rows we need (first is English, second is Japanese)
+    const englishRow = sentenceRows[0];
+    const japaneseRow = sentenceRows[1] || sentenceRows[0]; // Fallback to first row if only one exists
+    
+    // Get display elements
+    const englishDisplay = englishRow.querySelector('.sentence-display');
+    const japaneseDisplay = japaneseRow.querySelector('.sentence-display');
+    
+    // Reset all classes first
+    englishRow.classList.remove('full-height');
+    japaneseRow.classList.remove('full-height');
+    if (englishDisplay) englishDisplay.classList.remove('full-height');
+    if (japaneseDisplay) japaneseDisplay.classList.remove('full-height');
+    
+    // Reset both rows to default state
+    englishRow.style.display = 'flex';
+    japaneseRow.style.display = 'flex';
+    englishRow.style.flex = '1';
+    japaneseRow.style.flex = '1';
+    
+    // Apply the selected mode
+    switch(displayMode) {
+        case 'english':
+            japaneseRow.style.display = 'none';
+            englishRow.classList.add('full-height');
+            if (englishDisplay) englishDisplay.classList.add('full-height');
+            break;
+            
+        case 'japanese':
+            englishRow.style.display = 'none';
+            japaneseRow.classList.add('full-height');
+            if (japaneseDisplay) japaneseDisplay.classList.add('full-height');
+            break;
+            
+        case 'both':
+            // Both already set to display:flex above
+            break;
+    }
+    
+    ensureTextVisibility();
 }
 function updatePageCounter() {
     if (!sentences || sentences.length === 0) return;
@@ -1302,17 +1451,21 @@ function populateStorySelector(cls) {
 }
         
         // Enter reading mode
-        function enterReadingMode(cls) {
-            // Hide main container and show reading container
-            mainContainer.style.display = 'none';
-            readingModeContainer.style.display = 'flex';
-            
-            // Initialize translation events
-            initTranslationEvents();
-            
-            // Load the content
-            loadTextContent(cls);
-        }
+function enterReadingMode(cls) {
+    // Reset the retry counter
+    if (typeof applyDisplayMode.retryCount !== 'undefined') {
+        applyDisplayMode.retryCount = 0;
+    }   
+ // Hide main container and show reading container
+    mainContainer.style.display = 'none';
+    readingModeContainer.style.display = 'flex';
+    
+    // Initialize translation events
+    initTranslationEvents();
+    
+    // Load the content - display mode will be applied after content loads
+    loadTextContent(cls);
+}
         
         // Exit reading mode
         function exitReadingMode() {
@@ -1331,8 +1484,8 @@ function populateStorySelector(cls) {
         
         // Load text content for reading mode
 function loadTextContent(cls) {
-    console.log('Loading content for:', cls, 'Story:', currentStory); // Debug line
-    
+    console.log('Loading content for:', cls, 'Story:', currentStory);
+
     if (!lessonsData[cls]) {
         console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
         alert(`Data not found for class ${cls}`);
@@ -1343,7 +1496,7 @@ function loadTextContent(cls) {
     let content;
     if (lessonsData[cls].stories) {  // New format
         const storyIndex = parseInt(currentStory);
-        if (isNaN(storyIndex)) {  // FIXED: Added missing parenthesis
+        if (isNaN(storyIndex)) {
             console.error('Invalid story index:', currentStory);
             alert('Invalid story selection');
             exitReadingMode();
@@ -1360,56 +1513,39 @@ function loadTextContent(cls) {
     }
 
     sentences = parseStoryFile(content);
-    if (sentences.length > 0) {
-        currentSentenceIndex = 0;
-        displayCurrentSentence();
-    } else {
+if (sentences.length > 0) {
+    currentSentenceIndex = 0;
+    displayCurrentSentence();
+    // Apply display mode after a short delay to ensure DOM is ready
+    setTimeout(() => {
+        applyDisplayMode();
+        ensureTextVisibility();
+    }, 100);
+} else {
         alert('No valid sentences found in this story');
         exitReadingMode();
     }
 }     
-        function parseStoryFile(text) {
-            // Handle both string (old) and object (new) formats
-            const content = typeof text === 'object' ? text.content : text;
-            
-            const lines = content.split('\n')
-                .map(line => line.trim())
-                .filter(line => line.length > 0 && !line.startsWith('#'));
-            
-            const result = [];
-            let currentEnglish = null;
-            
-            for (let i = 0; i < lines.length; i++) {
-                const line = lines[i];
-                
-                // FIXED: Better detection of English lines
-                const isEnglish = /[a-zA-Z]/.test(line) || 
-                                 /[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
-                
-                if (isEnglish) {
-                    // If we have a pending English line, push it with empty Japanese
-                    if (currentEnglish) {
-                        result.push({
-                            english: currentEnglish,
-                            japanese: "",
-                            number: result.length + 1
-                        });
-                    }
-                    currentEnglish = line;
-                } else {
-                    // This is a Japanese line - pair it with current English
-                    if (currentEnglish) {
-                        result.push({
-                            english: currentEnglish,
-                            japanese: line,
-                            number: result.length + 1
-                        });
-                        currentEnglish = null;
-                    }
-                }
-            }
-            
-            // Push any remaining English line
+function parseStoryFile(text) {
+    // Handle both string (old) and object (new) formats
+    const content = typeof text === 'object' ? text.content : text;
+    
+    const lines = content.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !line.startsWith('#'));
+    
+    const result = [];
+    let currentEnglish = null;
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        // Check if line contains English characters or starts with emoji
+        const isEnglish = /[a-zA-Z]/.test(line) || 
+                         /^[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
+        
+        if (isEnglish) {
+            // If we have a pending English line, push it with empty Japanese
             if (currentEnglish) {
                 result.push({
                     english: currentEnglish,
@@ -1417,9 +1553,38 @@ function loadTextContent(cls) {
                     number: result.length + 1
                 });
             }
-            
-            return result;
+            currentEnglish = line;
+        } else {
+            // This is a Japanese line - pair it with current English
+            if (currentEnglish) {
+                result.push({
+                    english: currentEnglish,
+                    japanese: line,
+                    number: result.length + 1
+                });
+                currentEnglish = null;
+            } else {
+                // If no current English, this is a standalone Japanese line
+                result.push({
+                    english: "",
+                    japanese: line,
+                    number: result.length + 1
+                });
+            }
         }
+    }
+    
+    // Push any remaining English line
+    if (currentEnglish) {
+        result.push({
+            english: currentEnglish,
+            japanese: "",
+            number: result.length + 1
+        });
+    }
+    
+    return result;
+}
         
 function ensureTextVisibility() {
     const rows = document.querySelectorAll('.sentence-row');
@@ -1475,11 +1640,14 @@ function displayCurrentSentence() {
     ensureTextVisibility();
     // Apply current font size
     applyFontSize();
-    
-    updatePageCounter();
-}
 
-    function shuffleArray(array) {
+    // Apply current display mode
+    applyDisplayMode();
+
+    updatePageCounter();
+} // <-- THIS WAS MISSING
+
+function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
@@ -1733,6 +1901,21 @@ function initTranslationElements() {
     translationLang = '';
     return true;
 }
+// Load saved display mode
+const savedDisplayMode = localStorage.getItem('displayMode');
+if (savedDisplayMode && ['english', 'japanese', 'both'].includes(savedDisplayMode)) {
+    displayMode = savedDisplayMode;
+} else {
+    displayMode = 'both'; // default
+}
+
+// Initialize button states (but don't apply display mode yet)
+document.getElementById('displayEnglish').classList.toggle('active', displayMode === 'english');
+document.getElementById('displayJapanese').classList.toggle('active', displayMode === 'japanese');
+document.getElementById('displayBoth').classList.toggle('active', displayMode === 'both');
+
+// Note: We don't call applyDisplayMode() here anymore
+// It will be called automatically when entering reading mode
 
 // Show translation popup
 function showTranslationPopup(text, lang) {
