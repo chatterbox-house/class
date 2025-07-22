@@ -232,7 +232,7 @@ Do you think Japan should abolish the death penalty? Why or why not?
 {
     title: "LDP Election Loss Analysis",
     content: `📉 The Liberal Democratic Party (LDP) has once again been dealt a resounding "no" from voters in Japan.
-自由民主党（LDP）は再び有権者からの明確な「ノー」を突きつけられました。
+自由民主党は再び有権者からの明確な「ノー」を突きつけられました。
 
 😤 Have you ever felt disappointed with politicians? What happened?
 政治家に失望したことはありますか？どんなことがありましたか？
