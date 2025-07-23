@@ -2681,10 +2681,19 @@ if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
 }
 
 if (typeof eiken4 !== 'undefined') {
-    lessonsData['Eiken4'] = {
-        'yukis_big_challenge': eiken4.yukis_big_challenge
-    };
-    console.log('Eiken 4 class data loaded');
+    lessonsData['Eiken4'] = {};
+    let storyCount = 1;
+    
+    // Convert each story in eiken4 to numbered entries
+    for (const [key, content] of Object.entries(eiken4)) {
+        lessonsData['Eiken4'][key] = {
+            title: `Story ${storyCount}`,
+            content: content
+        };
+        storyCount++;
+    }
+    
+    console.log('Eiken 4 class data loaded with', storyCount-1, 'stories');
 }
  if (typeof eikenpre2 !== 'undefined') {
                 lessonsData['EikenPre2'] = eikenpre2;
