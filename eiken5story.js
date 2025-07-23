@@ -1,6 +1,153 @@
 // eiken5story.js
 var eiken5story = {
-    'sakis_park_day': `🌳 Saki lives near a big park.
+    // Story 1 - Eiken 5 Story
+    'story_1': {
+        title: "Eiken 5 Story",
+        content: `🌱 This is Yuki.
+これはユキです。
+🍓 She is a student.
+彼女は学生です。
+🏫 She goes to school every day.
+彼女は毎日学校に行きます。
+🚌 She goes to school by bus.
+彼女はバスで学校に行きます。
+🎒 She has a red bag.
+彼女は赤いかばんを持っています。
+🍎 Do you have a school bag?
+あなたは学校のかばんを持っていますか？
+📗 Yuki likes English.
+ユキは英語が好きです。
+📝 She studies English every day.
+彼女は毎日英語を勉強します。
+📖 What does she use?
+彼女は何を使いますか？
+📘 She uses a book and a pencil.
+彼女は本とえんぴつを使います。
+
+🌟 Yuki wants to pass EIKEN 5.
+ユキは英検5級に合格したいです。
+🔤 EIKEN 5 is a test.
+英検5級はテストです。
+❓ What is in the test?
+テストには何がありますか？
+👂 There is listening.
+リスニングがあります。
+📚 There is reading.
+リーディングがあります。
+✍️ There are questions.
+質問があります。
+
+📎 In EIKEN 5, we learn many words.
+英検5級では、たくさんの単語を学びます。
+👧 We talk about people.
+人について話します。
+👨‍👩‍👧‍👦 We talk about family.
+家族について話します。
+🍎🍞 We talk about food.
+食べ物について話します。
+🐕🐈 We talk about animals.
+動物について話します。
+🎨 We talk about colors and things.
+色や物について話します。
+❓ What color do you like?
+何色が好きですか？
+💙 I like blue.
+私は青が好きです。
+
+🔡 In EIKEN 5, we use "be" verbs.
+英検5級では「be」動詞を使います。
+😊 I am happy.
+私はうれしいです。
+😴 He is sleepy.
+彼は眠いです。
+🎂 She is ten years old.
+彼女は10さいです。
+📍 We are at school.
+私たちは学校にいます。
+💬 Are you a student?
+あなたは学生ですか？
+🗣 Yes, I am. / No, I'm not.
+はい、そうです。／いいえ、ちがいます。
+
+🧭 We also use action verbs.
+動詞も使います。
+🏃 I run.
+私は走ります。
+🎨 You draw.
+あなたは絵をかきます。
+📞 He calls his friend.
+彼は友だちに電話します。
+🧹 She cleans the room.
+彼女は部屋をそうじします。
+🐶 We play with the dog.
+私たちは犬とあそびます。
+
+🔑 We ask questions, too.
+質問もします。
+👀 What is this?
+これは何ですか？
+🏡 Where is my cat?
+私のねこはどこですか？
+🕘 When is lunch?
+昼ごはんはいつですか？
+👩 Who is she?
+彼女はだれですか？
+🎈 How old are you?
+あなたは何さいですか？
+
+📦 We learn prepositions, too.
+前置詞も学びます。
+📦 The box is on the table.
+箱はテーブルの上にあります。
+🐱 The cat is under the chair.
+ねこはイスの下にいます。
+📕 The book is in the bag.
+本はかばんの中にあります。
+👟 My shoes are next to the door.
+くつはドアのよこにあります。
+🪑 Is the pen on the chair?
+ペンはイスの上にありますか？
+
+🤝 We learn "can" to talk about ability.
+「can」を使って、できることを話します。
+🏊 I can swim.
+私はおよげます。
+🎹 He can play the piano.
+彼はピアノをひけます。
+🚫 She can't ride a bike.
+彼女はじてんしゃに乗れません。
+🐵 Can monkeys talk?
+サルは話せますか？
+😄 No, they can't!
+いいえ、できません！
+
+📅 Every day, Yuki studies a little.
+ユキは毎日少しずつ勉強します。
+📖 She reads a story.
+彼女は物語を読みます。
+🎧 She listens to English.
+彼女は英語を聞きます。
+✍️ She writes easy sentences.
+彼女は簡単な文を書きます。
+👂 She listens carefully.
+彼女はよく聞きます。
+
+🎉 On test day, she is ready.
+テストの日、彼女はじゅんびができています。
+😃 She is not afraid.
+彼女はこわくありません。
+👍 She can do it!
+彼女はできます！
+🗣 Good luck, Yuki!
+がんばって、ユキ！
+❓ Can you try too?
+あなたもやってみますか？`
+    },
+    
+    // Story 2 - Saki's Park Day
+    'story_2': {
+        title: "Saki's Park Day",
+        content: `🌳 Saki lives near a big park.
 咲は大きな公園の近くに住んでいる。
 🍎 Do you live near a park?
 公園の近くに住んでいますか？
@@ -120,4 +267,5 @@ var eiken5story = {
 彼女は次の日も幸せだ。
 🏫 Are you happy in the morning?
 朝、幸せですか？`
+    }
 };
