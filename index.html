@@ -1080,11 +1080,16 @@
     <option value="Eiken5">Eiken 5</option>
     <option value="Eiken4">Eiken 4</option>
     <option value="Eiken3">Eiken 3</option>
+    <option value="EikenPre2">Eiken Pre-2</option> 
+    <option value="EikenPre2Plus">Eiken Pre-2 Plus</option>
+    <option value="Eiken2">Eiken 2</option>
+    <option value="EikenPre1">Eiken Pre-1</option>
+    <option value="Eiken1">Eiken 1</option>
     <option value="C">C Class</option>
     <option value="X">X Class</option>
     <option value="HighSchool">High School</option>
     <option value="Adult">Adult</option>
-</select>
+</select>>
             </div>
             
             <div class="dropdown">
@@ -1166,6 +1171,11 @@
 <script src="eiken4.js"></script>
 <script src="easyquestions.js"></script>
 <script src="gettingtoknow.js"></script>
+<script src="eikenpre2.js"></script>
+<script src="eikenpre2plus.js"></script>
+<script src="eiken2.js"></script>
+<script src="eikenpre1.js"></script>
+<script src="eiken1.js"></script>
 
 <script>
     // ====================
@@ -1347,16 +1357,18 @@ function populateStorySelector(cls) {
             // For classes with individual story properties (like Eiken5)
             let storyCount = 1;
             for (const [storyKey, storyContent] of Object.entries(lessonsData[cls])) {
-                if (storyKey !== 'questions') { // Skip questions
+                // Skip if it's not a story (like 'questions')
+                if (storyKey === 'questions') {
                     const option = document.createElement('option');
                     option.value = storyKey;
-                    
-                    // Create a readable title from the story key
-                    const readableTitle = storyKey
-                        .replace(/_/g, ' ')
-                        .replace(/\b\w/g, l => l.toUpperCase());
-                    
-                    option.textContent = `${storyCount}. ${readableTitle}`;
+                    option.textContent = `${storyCount}. QA Questions`;
+                    storySelector.appendChild(option);
+                    storyCount++;
+                } else if (typeof storyContent === 'object' && storyContent.content) {
+                    const option = document.createElement('option');
+                    option.value = storyKey;
+                    const title = storyContent.title || `Story ${storyCount}`;
+                    option.textContent = `${storyCount}. ${title}`;
                     storySelector.appendChild(option);
                     storyCount++;
                 }
@@ -1412,7 +1424,11 @@ function loadTextContent(cls) {
         content = lessonsData[cls]?.stories?.[storyIndex]?.content;
     } else {
         // Handle classes with individual story properties (like Eiken5)
-        content = lessonsData[cls][currentStory];
+        if (currentStory === 'questions') {
+            content = lessonsData[cls][currentStory];
+        } else {
+            content = lessonsData[cls][currentStory]?.content || lessonsData[cls][currentStory];
+        }
     }
 
     if (!content) {
@@ -2624,13 +2640,44 @@ function loadLessonsData() {
                 console.log('Adult stories loaded:', adult.stories.length);
                 console.log('First story title:', adult.stories[0].title);
             }
+if (typeof eiken1 !== 'undefined') {
+    lessonsData['Eiken1'] = eiken1;
+    console.log('Eiken 1 class data loaded with', Object.keys(eiken1).length, 'stories');
+}
+if (typeof eikenpre1 !== 'undefined') {
+    lessonsData['EikenPre1'] = eikenpre1;
+    console.log('Eiken Pre-1 class data loaded with', Object.keys(eikenpre1).length, 'stories');
+}
+            if (typeof eiken2 !== 'undefined') {
+                lessonsData['Eiken2'] = eiken2;
+                console.log('Eiken 2 class data loaded with', Object.keys(eiken2).length, 'stories');
+            }
+if (typeof eikenpre2plus !== 'undefined') {
+    lessonsData['EikenPre2Plus'] = eikenpre2plus;
+    console.log('Eiken Pre-2 Plus class data loaded with', Object.keys(eikenpre2plus).length, 'stories');
+}
             
-           if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
-    lessonsData['Eiken3'] = {
-        'yukis_adventure': eiken3.yukis_adventure,
-        'questions': eiken3questions.questions
+if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
+    // Start with the questions as the first item
+    const storiesObj = {
+        'questions': {
+            title: 'Questions',
+            content: eiken3questions.questions
+        }
     };
-    console.log('Eiken 3 class data loaded');
+
+    // Then add the stories after
+    let storyCount = 1;
+    for (const [key, story] of Object.entries(eiken3)) {
+        storiesObj[key] = {
+            title: `Story ${storyCount}`,
+            content: story
+        };
+        storyCount++;
+    }
+    
+    lessonsData['Eiken3'] = storiesObj;
+    console.log('Eiken 3 class data loaded with', Object.keys(storiesObj).length, 'items');
 }
 
 if (typeof eiken4 !== 'undefined') {
@@ -2639,6 +2686,10 @@ if (typeof eiken4 !== 'undefined') {
     };
     console.log('Eiken 4 class data loaded');
 }
+ if (typeof eikenpre2 !== 'undefined') {
+                lessonsData['EikenPre2'] = eikenpre2;
+                console.log('Eiken Pre-2 class data loaded with', Object.keys(eikenpre2).length, 'stories');
+            }
             
             if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
                 // Handle the object structure of eiken5story
