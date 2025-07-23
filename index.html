@@ -1077,12 +1077,13 @@
             <div class="dropdown">
 <select id="classSelector">
     <option value="">Select Class</option>
+    <option value="Eiken5">Eiken 5</option>
+    <option value="Eiken4">Eiken 4</option>
+    <option value="Eiken3">Eiken 3</option>
     <option value="C">C Class</option>
     <option value="X">X Class</option>
     <option value="HighSchool">High School</option>
     <option value="Adult">Adult</option>
-    <option value="Eiken3">Eiken 3</option>
-    <option value="Eiken5">Eiken 5</option>
 </select>
             </div>
             
@@ -1162,6 +1163,7 @@
 <script src="eiken5story.js"></script>
 <script src="eiken3.js"></script>
 <script src="eiken3questions.js"></script>
+<script src="eiken4.js"></script>
 <script src="easyquestions.js"></script>
 <script src="gettingtoknow.js"></script>
 
@@ -1329,30 +1331,42 @@ const maxFontSize = 8; // vw/rem units
         }
     }
 
-    function populateStorySelector(cls) {
-        storySelector.innerHTML = '<option value="">Select Story</option>';
+function populateStorySelector(cls) {
+    storySelector.innerHTML = '<option value="">Select Story</option>';
 
-        if (lessonsData[cls]) {
-            if (lessonsData[cls].stories) {
-                lessonsData[cls].stories.forEach((story, index) => {
-                    const option = document.createElement('option');
-                    option.value = index;
-                    option.textContent = `${index + 1}. ${story.title}`;
-                    storySelector.appendChild(option);
-                });
-            } else {
-                Object.keys(lessonsData[cls]).forEach(storyKey => {
+    if (lessonsData[cls]) {
+        if (lessonsData[cls].stories) {
+            // For classes with the stories array structure (like Adult)
+            lessonsData[cls].stories.forEach((story, index) => {
+                const option = document.createElement('option');
+                option.value = index;
+                option.textContent = `${index + 1}. ${story.title}`;
+                storySelector.appendChild(option);
+            });
+        } else {
+            // For classes with individual story properties (like Eiken5)
+            let storyCount = 1;
+            for (const [storyKey, storyContent] of Object.entries(lessonsData[cls])) {
+                if (storyKey !== 'questions') { // Skip questions
                     const option = document.createElement('option');
                     option.value = storyKey;
-                    option.textContent = `Story ${storyKey.replace('story', '')}`;
+                    
+                    // Create a readable title from the story key
+                    const readableTitle = storyKey
+                        .replace(/_/g, ' ')
+                        .replace(/\b\w/g, l => l.toUpperCase());
+                    
+                    option.textContent = `${storyCount}. ${readableTitle}`;
                     storySelector.appendChild(option);
-                });
+                    storyCount++;
+                }
             }
-            
-            storySelector.disabled = false;
-            storySelector.focus();
         }
+        
+        storySelector.disabled = false;
+        storySelector.focus();
     }
+}
 
     // ====================
     // READING MODE FUNCTIONS
@@ -1375,54 +1389,52 @@ const maxFontSize = 8; // vw/rem units
         }, 100);
     }
 
-    function loadTextContent(cls) {
-        console.log('Loading content for:', cls, 'Story:', currentStory);
+function loadTextContent(cls) {
+    console.log('Loading content for:', cls, 'Story:', currentStory);
 
-        if (!lessonsData[cls]) {
-            console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
-            alert(`Data not found for class ${cls}`);
-            exitReadingMode();
-            return;
-        }
-
-        let content;
-        if (lessonsData[cls].stories) {
-            const storyIndex = parseInt(currentStory);
-            if (isNaN(storyIndex)) {
-                console.error('Invalid story index:', currentStory);
-                alert('Invalid story selection');
-                exitReadingMode();
-                return;
-            }
-            content = lessonsData[cls]?.stories?.[storyIndex]?.content;
-            if (!content) {
-                console.error('Content not found for story:', storyIndex, 'in class:', cls);
-                alert(`Content not found for selected story`);
-                exitReadingMode();
-                return;
-            }
-        } else if (lessonsData[cls][currentStory]) {
-            content = lessonsData[cls][currentStory];
-        } else {
-            console.error('Story not found:', currentStory, 'in class:', cls);
-            alert(`Story not found in ${cls} class`);
-            exitReadingMode();
-            return;
-        }
-
-        sentences = parseStoryFile(content);
-        if (sentences.length > 0) {
-            currentSentenceIndex = 0;
-            displayCurrentSentence();
-            setTimeout(() => {
-                applyDisplayMode();
-                ensureTextVisibility();
-            }, 100);
-        } else {
-            alert('No valid sentences found in this story');
-            exitReadingMode();
-        }
+    if (!lessonsData[cls]) {
+        console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
+        alert(`Data not found for class ${cls}`);
+        exitReadingMode();
+        return;
     }
+
+    let content;
+    if (lessonsData[cls].stories) {
+        // Handle classes with stories array (like Adult)
+        const storyIndex = parseInt(currentStory);
+        if (isNaN(storyIndex)) {
+            console.error('Invalid story index:', currentStory);
+            alert('Invalid story selection');
+            exitReadingMode();
+            return;
+        }
+        content = lessonsData[cls]?.stories?.[storyIndex]?.content;
+    } else {
+        // Handle classes with individual story properties (like Eiken5)
+        content = lessonsData[cls][currentStory];
+    }
+
+    if (!content) {
+        console.error('Content not found for story:', currentStory, 'in class:', cls);
+        alert(`Content not found for selected story`);
+        exitReadingMode();
+        return;
+    }
+
+    sentences = parseStoryFile(content);
+    if (sentences.length > 0) {
+        currentSentenceIndex = 0;
+        displayCurrentSentence();
+        setTimeout(() => {
+            applyDisplayMode();
+            ensureTextVisibility();
+        }, 100);
+    } else {
+        alert('No valid sentences found in this story');
+        exitReadingMode();
+    }
+}
 
     function parseStoryFile(text) {
         const content = text && typeof text === 'object' ? text.content : text || '';
@@ -2594,62 +2606,82 @@ function applyFontSize() {
             }
         });
     }
-
-    function loadLessonsData() {
-        return new Promise((resolve, reject) => {
-            try {
-                if (typeof x !== 'undefined') {
-                    lessonsData['X'] = x;
-                    console.log('X class data loaded');
-                }
-                
-                if (typeof c !== 'undefined') {
-                    lessonsData['C'] = c;
-                    console.log('C class data loaded');
-                }
-                
-                if (typeof adult !== 'undefined') {
-                    lessonsData['Adult'] = adult;
-                    console.log('Adult stories loaded:', adult.stories.length);
-                    console.log('First story title:', adult.stories[0].title);
-                }
-                
-                if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
-                    lessonsData['Eiken3'] = {
-                        'yukis_adventure': eiken3.yukis_adventure,
-                        'questions': eiken3questions.questions
-                    };
-                    console.log('Eiken 3 class data loaded');
-                }
-                
-                if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
-                    lessonsData['Eiken5'] = {
-                        'questions': qa5.questions,
-                        'sakis_park_day': eiken5story.sakis_park_day
-                    };
-                    console.log('Eiken 5 class data loaded');
-                }
-                
-                if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
-                    lessonsData['HighSchool'] = {
-                        'gettingtoknow': gettingtoknow.questions,
-                        'easyquestions2': easyquestions2.questions
-                    };
-                    console.log('High School data loaded');
-                }
-                
-                if (Object.keys(lessonsData).length > 0) {
-                    resolve();
-                } else {
-                    const error = 'No lesson data found. Please ensure at least one class file is loaded.';
-                    console.error(error);
-                    reject(error);
-                }
-            } catch (e) {
-                reject(e);
+function loadLessonsData() {
+    return new Promise((resolve, reject) => {
+        try {
+            if (typeof x !== 'undefined') {
+                lessonsData['X'] = x;
+                console.log('X class data loaded');
             }
-        });
-    }
+            
+            if (typeof c !== 'undefined') {
+                lessonsData['C'] = c;
+                console.log('C class data loaded');
+            }
+            
+            if (typeof adult !== 'undefined') {
+                lessonsData['Adult'] = adult;
+                console.log('Adult stories loaded:', adult.stories.length);
+                console.log('First story title:', adult.stories[0].title);
+            }
+            
+           if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
+    lessonsData['Eiken3'] = {
+        'yukis_adventure': eiken3.yukis_adventure,
+        'questions': eiken3questions.questions
+    };
+    console.log('Eiken 3 class data loaded');
+}
+
+if (typeof eiken4 !== 'undefined') {
+    lessonsData['Eiken4'] = {
+        'yukis_big_challenge': eiken4.yukis_big_challenge
+    };
+    console.log('Eiken 4 class data loaded');
+}
+            
+            if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
+                // Handle the object structure of eiken5story
+                const storiesObj = {};
+                let storyCount = 1;
+                
+                // Convert the object to numbered stories
+                for (const [key, story] of Object.entries(eiken5story)) {
+                    storiesObj[`story_${storyCount}`] = {
+                        title: story.title || `Story ${storyCount}`,
+                        content: story.content
+                    };
+                    storyCount++;
+                }
+                
+                lessonsData['Eiken5'] = {
+                    'questions': qa5.questions,
+                    ...storiesObj
+                };
+                console.log('Eiken 5 class data loaded with', Object.keys(storiesObj).length, 'stories');
+            }
+            
+            if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
+                lessonsData['HighSchool'] = {
+                    'gettingtoknow': gettingtoknow.questions,
+                    'easyquestions2': easyquestions2.questions
+                };
+                console.log('High School data loaded');
+            }
+            
+            if (Object.keys(lessonsData).length > 0) {
+                resolve();
+            } else {
+                const error = 'No lesson data found. Please ensure at least one class file is loaded.';
+                console.error(error);
+                reject(error);
+            }
+        } catch (e) {
+            console.error('Error loading lesson data:', e);
+            reject(e);
+        }
+    });
+}
 
     // ====================
     // UTILITY FUNCTIONS
