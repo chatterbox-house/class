@@ -2625,15 +2625,31 @@ function applyFontSize() {
 function loadLessonsData() {
     return new Promise((resolve, reject) => {
         try {
-            if (typeof x !== 'undefined') {
-                lessonsData['X'] = x;
-                console.log('X class data loaded');
-            }
-            
-            if (typeof c !== 'undefined') {
-                lessonsData['C'] = c;
-                console.log('C class data loaded');
-            }
+if (typeof x !== 'undefined') {
+    // Convert the x object to the expected format
+    const xStories = {};
+    Object.keys(x).forEach((key, index) => {
+        xStories[key] = {
+            title: `Story ${index + 1}`,
+            content: x[key]
+        };
+    });
+    lessonsData['X'] = xStories;
+    console.log('X class data loaded with', Object.keys(xStories).length, 'stories');
+}
+
+if (typeof c !== 'undefined') {
+    // Convert the c object to the expected format
+    const cStories = {};
+    Object.keys(c).forEach((key, index) => {
+        cStories[key] = {
+            title: `Story ${index + 1}`,
+            content: c[key]
+        };
+    });
+    lessonsData['C'] = cStories;
+    console.log('C class data loaded with', Object.keys(cStories).length, 'stories');
+}
             
             if (typeof adult !== 'undefined') {
                 lessonsData['Adult'] = adult;
