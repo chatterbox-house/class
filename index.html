@@ -774,7 +774,7 @@ body.dark-mode .language-label {
 }
 
 .sentence-display.full-height {
-    font-size: 8vw !important;
+    /* Remove font-size from here - it will be controlled by JS */
     line-height: 1.2 !important;
     display: flex !important;
     align-items: center !important;
@@ -1276,11 +1276,33 @@ function decreaseFontSize() {
 }
 
 function applyFontSize() {
-    const displays = document.querySelectorAll('.sentence-display');
-    displays.forEach(display => {
-        display.style.fontSize = `${currentFontSize}vw`;
-    });
+    const englishDisplay = document.getElementById('englishSentence');
+    const japaneseDisplay = document.getElementById('japaneseSentence');
+    
+    // Clear any inline styles first
+    if (englishDisplay) englishDisplay.style.fontSize = '';
+    if (japaneseDisplay) japaneseDisplay.style.fontSize = '';
+    
+    // Force reflow to ensure styles are cleared
+    void englishDisplay?.offsetHeight;
+    void japaneseDisplay?.offsetHeight;
+    
+    // Apply new size based on display mode
+    const size = `${currentFontSize}vw`;
+    
+    if (displayMode === 'english' && englishDisplay) {
+        englishDisplay.style.fontSize = size;
+    } 
+    else if (displayMode === 'japanese' && japaneseDisplay) {
+        japaneseDisplay.style.fontSize = size;
+    }
+    else {
+        if (englishDisplay) englishDisplay.style.fontSize = size;
+        if (japaneseDisplay) japaneseDisplay.style.fontSize = size;
+    }
+    
     localStorage.setItem('fontSize', currentFontSize);
+    ensureTextVisibility();
 }
 function setDisplayMode(mode) {
     displayMode = mode;
@@ -1292,6 +1314,12 @@ function setDisplayMode(mode) {
     document.getElementById('displayBoth').classList.toggle('active', mode === 'both');
     
     applyDisplayMode();
+    
+    // Force font size update after a small delay to ensure DOM is ready
+    setTimeout(() => {
+        applyFontSize();
+        ensureTextVisibility();
+    }, 50);
 }
 
 function applyDisplayMode() {
@@ -1671,28 +1699,32 @@ function parseStoryFile(text) {
 }
         
 function ensureTextVisibility() {
-    const rows = document.querySelectorAll('.sentence-row');
-    rows.forEach(row => {
-        const display = row.querySelector('.sentence-display');
-        if (!display) return;
-        
-        // Reset to default size first
-        display.style.fontSize = '';
+    const activeDisplays = [];
+    
+    if (displayMode === 'english' || displayMode === 'both') {
+        const englishDisplay = document.getElementById('englishSentence');
+        if (englishDisplay) activeDisplays.push(englishDisplay);
+    }
+    
+    if (displayMode === 'japanese' || displayMode === 'both') {
+        const japaneseDisplay = document.getElementById('japaneseSentence');
+        if (japaneseDisplay) activeDisplays.push(japaneseDisplay);
+    }
+    
+    activeDisplays.forEach(display => {
+        // Reset to JS-controlled size first
+        display.style.fontSize = `${currentFontSize}vw`;
         
         // Check if text overflows
         if (display.scrollHeight > display.clientHeight || display.scrollWidth > display.clientWidth) {
-            // Get current computed font size
-            let fontSize = parseFloat(window.getComputedStyle(display).fontSize);
-            
-            // Reduce font size until text fits or minimum size reached
+            // Gradually reduce size until it fits
+            let fontSize = currentFontSize;
             while ((display.scrollHeight > display.clientHeight || 
                    display.scrollWidth > display.clientWidth) && 
-                   fontSize > 12) { // Minimum font size of 12px
-                fontSize -= 1;
-                display.style.fontSize = `${fontSize}px`;
-                
-                // Force reflow to get updated dimensions
-                void display.offsetHeight;
+                   fontSize > 2) { // Minimum of 2vw
+                fontSize -= 0.5;
+                display.style.fontSize = `${fontSize}vw`;
+                void display.offsetHeight; // Force reflow
             }
         }
     });
