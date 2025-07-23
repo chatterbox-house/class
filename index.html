@@ -861,10 +861,10 @@
     /* ============ */
     /* RESPONSIVE DESIGN */
     /* ============ */
-    @media (max-width: 800px) {
-        .sentence-display {
-            font-size: 32px !important;
-        }
+@media (max-width: 800px) {
+    .sentence-display {
+        font-size: 32px; /* Removed !important */
+    }
 
         .controls-row, .file-upload-row {
             flex-direction: column;
@@ -896,30 +896,42 @@
         }
     }
 
-    @media (max-width: 768px) {
-        .sentence-row {
-            flex-direction: row;
-            align-items: center;
-            padding: 5px;
-        }
+@media (max-width: 768px) {
+    .sentence-row {
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+    }
 
-        .play-btn {
-            width: 32px;
-            height: 32px;
-            font-size: 0.8rem;
-            margin-right: 8px;
-        }
+    .play-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8rem;
+        margin-right: 8px;
+    }
 
-        .sentence-display {
-            font-size: 1.5rem !important;
-            padding: 5px;
-            line-height: 1.4;
-            min-height: 60px;
-        }
+@media (max-width: 768px) {
+    .sentence-display {
+        font-size: 1.5rem; /* Removed !important */
+        padding: 5px;
+        line-height: 1.4;
+        min-height: 60px;
+    }
+}
 
-        .sentence-row {
-            min-height: 80px;
-        }
+    .sentence-row {
+        min-height: 80px;
+    }
+    .font-btn {
+        min-width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .reading-footer {
+        padding: 10px 5px;
+        gap: 5px;
+    }
 
         .container {
             padding: 30px 20px;
@@ -1166,8 +1178,9 @@
     let shouldAdvanceAfterGame = false;
     let isNightMode = false;
     let currentFontSize = 5; // vw units by default
-    const minFontSize = 2; // vw
-    const maxFontSize = 8; // vw
+// At the top of your script where variables are declared
+const minFontSize = 2; // vw/rem units
+const maxFontSize = 8; // vw/rem units
     let displayMode = 'both'; // 'english', 'japanese', or 'both'
     let lessonsData = {};
     let selectedText = '';
@@ -1594,46 +1607,65 @@
         ensureTextVisibility();
     }
 
-    function increaseFontSize() {
-        if (currentFontSize < maxFontSize) {
-            currentFontSize += 0.5;
-            applyFontSize();
-        }
+function increaseFontSize() {
+    if (currentFontSize < maxFontSize) {
+        currentFontSize += (window.innerWidth <= 768 ? 0.2 : 0.5);
+        applyFontSize();
     }
+}
 
-    function decreaseFontSize() {
-        if (currentFontSize > minFontSize) {
-            currentFontSize -= 0.5;
-            applyFontSize();
-        }
+function decreaseFontSize() {
+    if (currentFontSize > minFontSize) {
+        currentFontSize -= (window.innerWidth <= 768 ? 0.2 : 0.5);
+        applyFontSize();
     }
+}
 
-    function applyFontSize() {
-        const englishDisplay = document.getElementById('englishSentence');
-        const japaneseDisplay = document.getElementById('japaneseSentence');
-        
-        if (englishDisplay) englishDisplay.style.fontSize = '';
-        if (japaneseDisplay) japaneseDisplay.style.fontSize = '';
-        
-        void englishDisplay?.offsetHeight;
-        void japaneseDisplay?.offsetHeight;
-        
-        const size = `${currentFontSize}vw`;
-        
-        if (displayMode === 'english' && englishDisplay) {
-            englishDisplay.style.fontSize = size;
-        } 
-        else if (displayMode === 'japanese' && japaneseDisplay) {
-            japaneseDisplay.style.fontSize = size;
-        }
-        else {
-            if (englishDisplay) englishDisplay.style.fontSize = size;
-            if (japaneseDisplay) japaneseDisplay.style.fontSize = size;
-        }
-        
-        localStorage.setItem('fontSize', currentFontSize);
-        ensureTextVisibility();
+function applyFontSize() {
+    const englishDisplay = document.getElementById('englishSentence');
+    const japaneseDisplay = document.getElementById('japaneseSentence');
+    
+    // First completely reset any font size styles
+    if (englishDisplay) {
+        englishDisplay.style.fontSize = '';
+        englishDisplay.style.removeProperty('font-size');
     }
+    if (japaneseDisplay) {
+        japaneseDisplay.style.fontSize = '';
+        japaneseDisplay.style.removeProperty('font-size');
+    }
+    
+    // Force reflow
+    void englishDisplay?.offsetHeight;
+    void japaneseDisplay?.offsetHeight;
+    
+    // Calculate size based on device
+    let size;
+    if (window.innerWidth <= 768) {
+        // For mobile, use rem units that scale with root font size
+        const baseSize = 1.5; // Default mobile size in rem
+        const scaleFactor = currentFontSize / 5; // 5 is default vw size
+        size = `${baseSize * scaleFactor}rem`;
+    } else {
+        // For desktop, use vw units
+        size = `${currentFontSize}vw`;
+    }
+    
+    // Apply the new size
+    if (displayMode === 'english' && englishDisplay) {
+        englishDisplay.style.fontSize = size;
+    } 
+    else if (displayMode === 'japanese' && japaneseDisplay) {
+        japaneseDisplay.style.fontSize = size;
+    }
+    else {
+        if (englishDisplay) englishDisplay.style.fontSize = size;
+        if (japaneseDisplay) japaneseDisplay.style.fontSize = size;
+    }
+    
+    localStorage.setItem('fontSize', currentFontSize);
+    ensureTextVisibility();
+}
 
     function ensureTextVisibility() {
         const activeDisplays = [];
