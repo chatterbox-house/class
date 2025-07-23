@@ -1153,1725 +1153,1555 @@
 <script src="easyquestions.js"></script>
 <script src="gettingtoknow.js"></script>
 
-    <script>
-        // Global variables
-        let currentClass = null;
-        let currentStory = null;
-        let sentences = [];
-        let currentSentenceIndex = 0;
-        let fruitGameEnabled = false;
-        let fruitGameActive = false;
-        let shouldAdvanceAfterGame = false;
-        let isNightMode = false;
-// Font size control variables
-let currentFontSize = 5; // vw units by default
-const minFontSize = 2; // vw
-const maxFontSize = 8; // vw
+<script>
+    // ====================
+    // GLOBAL VARIABLES
+    // ====================
+    let currentClass = null;
+    let currentStory = null;
+    let sentences = [];
+    let currentSentenceIndex = 0;
+    let fruitGameEnabled = false;
+    let fruitGameActive = false;
+    let shouldAdvanceAfterGame = false;
+    let isNightMode = false;
+    let currentFontSize = 5; // vw units by default
+    const minFontSize = 2; // vw
+    const maxFontSize = 8; // vw
+    let displayMode = 'both'; // 'english', 'japanese', or 'both'
+    let lessonsData = {};
+    let selectedText = '';
+    let translationLang = '';
 
-// Display mode control
-let displayMode = 'both'; // 'english', 'japanese', or 'both'
+    // DOM elements
+    let mainContainer, readingModeContainer, englishSentence, japaneseSentence;
+    let prevSentenceBtn, nextSentenceBtn, playEnglishBtn, playJapaneseBtn;
+    let exitReadingBtn, fruitToggleBtn, classSelector, storySelector;
+    let translationPopup, translationOverlay, closeTranslationPopup;
+    let translationOriginal, translationResult, translationTts;
 
-// Lessons data (will be loaded from x.js and other class files)
-let lessonsData = {};
-        
-// DOM elements
-let mainContainer, readingModeContainer, englishSentence, japaneseSentence;
-let prevSentenceBtn, nextSentenceBtn, playEnglishBtn, playJapaneseBtn;
-let exitReadingBtn, fruitToggleBtn, classSelector, storySelector;
+    // ====================
+    // INITIALIZATION
+    // ====================
+    function initElements() {
+        mainContainer = document.getElementById('mainContainer');
+        readingModeContainer = document.getElementById('readingModeContainer');
+        englishSentence = document.getElementById('englishSentence');
+        japaneseSentence = document.getElementById('japaneseSentence');
+        prevSentenceBtn = document.getElementById('prevSentence');
+        nextSentenceBtn = document.getElementById('nextSentence');
+        playEnglishBtn = document.getElementById('playEnglish');
+        playJapaneseBtn = document.getElementById('playJapanese');
+        exitReadingBtn = document.getElementById('exitReading');
+        fruitToggleBtn = document.getElementById('fruitToggle');
+        classSelector = document.getElementById('classSelector');
+        storySelector = document.getElementById('storySelector');
+        const nightModeToggle = document.getElementById('nightModeToggle');
 
-function initElements() {
-    mainContainer = document.getElementById('mainContainer');
-    readingModeContainer = document.getElementById('readingModeContainer');
-    englishSentence = document.getElementById('englishSentence');
-    japaneseSentence = document.getElementById('japaneseSentence');
-    prevSentenceBtn = document.getElementById('prevSentence');
-    nextSentenceBtn = document.getElementById('nextSentence');
-    playEnglishBtn = document.getElementById('playEnglish');
-    playJapaneseBtn = document.getElementById('playJapanese');
-    exitReadingBtn = document.getElementById('exitReading');
-    fruitToggleBtn = document.getElementById('fruitToggle');
-    classSelector = document.getElementById('classSelector');
-    storySelector = document.getElementById('storySelector');
-const nightModeToggle = document.getElementById('nightModeToggle');
-
-    // Verify critical elements exist
-    if (!englishSentence || !japaneseSentence) {
-        console.error('Critical elements not found');
-        return false;
-    }
-    return true;
-}
-        
-        // Initialize the app
-function init() {
-    // Initialize elements first
-    if (!initElements()) {
-        alert('Failed to initialize page elements');
-        return;
-    }
-
-    // Set up event listeners
-    if (classSelector) classSelector.addEventListener('change', handleClassSelect);
-// Font size controls
-document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
-document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
-
-// Load saved font size
-const savedFontSize = parseFloat(localStorage.getItem('fontSize'));
-if (savedFontSize && !isNaN(savedFontSize)) {
-    currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, savedFontSize));
-}
-
-// Display mode controls
-document.getElementById('displayEnglish').addEventListener('click', () => setDisplayMode('english'));
-document.getElementById('displayJapanese').addEventListener('click', () => setDisplayMode('japanese'));
-document.getElementById('displayBoth').addEventListener('click', () => setDisplayMode('both'));
-
-storySelector.addEventListener('change', handleStorySelect);
-
-            nightModeToggle.addEventListener('click', toggleNightMode);
-            prevSentenceBtn.addEventListener('click', showPreviousSentence);
-            nextSentenceBtn.addEventListener('click', showNextSentence);
-            playEnglishBtn.addEventListener('click', () => playSentence('english'));
-            playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
-            exitReadingBtn.addEventListener('click', exitReadingMode);
-            fruitToggleBtn.addEventListener('click', toggleFruitGame);
-
-            // Initialize translation elements
-            initTranslationElements();
-// Load fruit game state
-const savedFruitGameState = localStorage.getItem('fruitGameEnabled');
-fruitGameEnabled = savedFruitGameState === 'true';
-updateFruitButtonState();
-            // Set up keyboard navigation for TV remote
-            document.addEventListener('keydown', handleRemoteInput);
-            
-            // Load voices when they become available
-            if ('speechSynthesis' in window) {
-                window.speechSynthesis.onvoiceschanged = function() {
-                    console.log('Voices loaded');
-                };
-                
-                // Some browsers need this to load voices
-                if (window.speechSynthesis.getVoices().length === 0) {
-                    window.speechSynthesis.getVoices();
-                }
-            }
-            
-            // Load external data
-            loadExternalData().then(() => {
-                console.log('All external data loaded');
-                // Focus the class selector
-                classSelector.focus();
-            }).catch(error => {
-                console.error('Error loading external data:', error);
-                alert('Error loading required data files. Please check the console for details.');
-            });
+        if (!englishSentence || !japaneseSentence) {
+            console.error('Critical elements not found');
+            return false;
         }
-        
-function increaseFontSize() {
-    if (currentFontSize < maxFontSize) {
-        currentFontSize += 0.5;
-        applyFontSize();
-    }
-}
-
-function decreaseFontSize() {
-    if (currentFontSize > minFontSize) {
-        currentFontSize -= 0.5;
-        applyFontSize();
-    }
-}
-
-function applyFontSize() {
-    const englishDisplay = document.getElementById('englishSentence');
-    const japaneseDisplay = document.getElementById('japaneseSentence');
-    
-    // Clear any inline styles first
-    if (englishDisplay) englishDisplay.style.fontSize = '';
-    if (japaneseDisplay) japaneseDisplay.style.fontSize = '';
-    
-    // Force reflow to ensure styles are cleared
-    void englishDisplay?.offsetHeight;
-    void japaneseDisplay?.offsetHeight;
-    
-    // Apply new size based on display mode
-    const size = `${currentFontSize}vw`;
-    
-    if (displayMode === 'english' && englishDisplay) {
-        englishDisplay.style.fontSize = size;
-    } 
-    else if (displayMode === 'japanese' && japaneseDisplay) {
-        japaneseDisplay.style.fontSize = size;
-    }
-    else {
-        if (englishDisplay) englishDisplay.style.fontSize = size;
-        if (japaneseDisplay) japaneseDisplay.style.fontSize = size;
-    }
-    
-    localStorage.setItem('fontSize', currentFontSize);
-    ensureTextVisibility();
-}
-function setDisplayMode(mode) {
-    displayMode = mode;
-    localStorage.setItem('displayMode', mode);
-    
-    // Update button states
-    document.getElementById('displayEnglish').classList.toggle('active', mode === 'english');
-    document.getElementById('displayJapanese').classList.toggle('active', mode === 'japanese');
-    document.getElementById('displayBoth').classList.toggle('active', mode === 'both');
-    
-    applyDisplayMode();
-    
-    // Force font size update after a small delay to ensure DOM is ready
-    setTimeout(() => {
-        applyFontSize();
-        ensureTextVisibility();
-    }, 50);
-}
-
-function applyDisplayMode() {
-    // Only proceed if we're in reading mode and elements exist
-    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
-        return;
+        return true;
     }
 
-    // Get all sentence rows
-    const sentenceRows = document.querySelectorAll('.sentence-row');
-    if (!sentenceRows || sentenceRows.length === 0) {
-        console.error('No sentence rows found');
-        return;
-    }
-    
-    // If no rows found, check if we should wait for them
-    if (sentenceRows.length === 0) {
-        // First check if we're even supposed to have these elements
-        if (!sentences || sentences.length === 0) {
-            console.warn('No sentences loaded - cannot apply display mode');
+    function init() {
+        if (!initElements()) {
+            alert('Failed to initialize page elements');
             return;
         }
-        
-        // If this is the first attempt, wait a short time and try once more
-        if (typeof applyDisplayMode.waiting === 'undefined') {
-            applyDisplayMode.waiting = true;
-            setTimeout(() => {
-                applyDisplayMode.waiting = false;
-                applyDisplayMode();
-            }, 300); // Wait 300ms for elements to render
-            return;
-        }
-        
-        // If we already waited and still no elements, give up
-        console.error('Failed to find sentence rows after waiting');
-        return;
+
+        setupEventListeners();
+        loadSavedPreferences();
+        loadExternalData().then(() => {
+            console.log('All external data loaded');
+            classSelector.focus();
+        }).catch(error => {
+            console.error('Error loading external data:', error);
+            alert('Error loading required data files. Please check the console for details.');
+        });
     }
 
-    // Reset waiting flag
-    applyDisplayMode.waiting = false;
+    function setupEventListeners() {
+        // Class and story selection
+        if (classSelector) classSelector.addEventListener('change', handleClassSelect);
+        storySelector.addEventListener('change', handleStorySelect);
 
-    // Get the rows we need (first is English, second is Japanese)
-    const englishRow = sentenceRows[0];
-    const japaneseRow = sentenceRows[1] || sentenceRows[0]; // Fallback to first row if only one exists
-    
-    // Get display elements
-    const englishDisplay = englishRow.querySelector('.sentence-display');
-    const japaneseDisplay = japaneseRow.querySelector('.sentence-display');
-    
-    // Reset all classes first
-    englishRow.classList.remove('full-height');
-    japaneseRow.classList.remove('full-height');
-    if (englishDisplay) englishDisplay.classList.remove('full-height');
-    if (japaneseDisplay) japaneseDisplay.classList.remove('full-height');
-    
-    // Reset both rows to default state
-    englishRow.style.display = 'flex';
-    japaneseRow.style.display = 'flex';
-    englishRow.style.flex = '1';
-    japaneseRow.style.flex = '1';
-    
-    // Apply the selected mode
-    switch(displayMode) {
-        case 'english':
-            japaneseRow.style.display = 'none';
-            englishRow.classList.add('full-height');
-            if (englishDisplay) englishDisplay.classList.add('full-height');
-            break;
-            
-        case 'japanese':
-            englishRow.style.display = 'none';
-            japaneseRow.classList.add('full-height');
-            if (japaneseDisplay) japaneseDisplay.classList.add('full-height');
-            break;
-            
-        case 'both':
-            // Both already set to display:flex above
-            break;
-    }
-    
-    ensureTextVisibility();
-}
-function updatePageCounter() {
-    if (!sentences || sentences.length === 0) return;
-    
-    const currentPageEl = document.getElementById('currentPage');
-    const totalPagesEl = document.getElementById('totalPages');
-    
-    if (currentPageEl) currentPageEl.textContent = currentSentenceIndex + 1;
-    if (totalPagesEl) totalPagesEl.textContent = sentences.length;
-}
+        // Font controls
+        document.getElementById('increaseFont').addEventListener('click', increaseFontSize);
+        document.getElementById('decreaseFont').addEventListener('click', decreaseFontSize);
 
-        function toggleNightMode() {
-            isNightMode = !isNightMode;
-            document.body.classList.toggle('dark-mode', isNightMode);
-            nightModeToggle.textContent = isNightMode ? '☀️' : '🌙';
+        // Display mode controls
+        document.getElementById('displayEnglish').addEventListener('click', () => setDisplayMode('english'));
+        document.getElementById('displayJapanese').addEventListener('click', () => setDisplayMode('japanese'));
+        document.getElementById('displayBoth').addEventListener('click', () => setDisplayMode('both'));
+
+        // Reading mode navigation
+        prevSentenceBtn.addEventListener('click', showPreviousSentence);
+        nextSentenceBtn.addEventListener('click', showNextSentence);
+        playEnglishBtn.addEventListener('click', () => playSentence('english'));
+        playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
+        exitReadingBtn.addEventListener('click', exitReadingMode);
+        fruitToggleBtn.addEventListener('click', toggleFruitGame);
+
+        // Night mode toggle
+        document.getElementById('nightModeToggle').addEventListener('click', toggleNightMode);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', handleRemoteInput);
+
+        // Initialize speech synthesis
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = function() {
+                console.log('Voices loaded');
+            };
             
-            // Save preference to localStorage
-            localStorage.setItem('nightMode', isNightMode);
+            if (window.speechSynthesis.getVoices().length === 0) {
+                window.speechSynthesis.getVoices();
+            }
         }
+    }
+
+    function loadSavedPreferences() {
+        // Night mode
+        const savedNightMode = localStorage.getItem('nightMode') === 'true';
+        if (savedNightMode) {
+            isNightMode = true;
+            document.body.classList.add('dark-mode');
+            document.getElementById('nightModeToggle').textContent = '☀️';
+        }
+
+        // Font size
+        const savedFontSize = parseFloat(localStorage.getItem('fontSize'));
+        if (savedFontSize && !isNaN(savedFontSize)) {
+            currentFontSize = Math.max(minFontSize, Math.min(maxFontSize, savedFontSize));
+        }
+
+        // Display mode
+        const savedDisplayMode = localStorage.getItem('displayMode');
+        if (savedDisplayMode && ['english', 'japanese', 'both'].includes(savedDisplayMode)) {
+            displayMode = savedDisplayMode;
+        }
+
+        // Fruit game state
+        const savedFruitGameState = localStorage.getItem('fruitGameEnabled');
+        fruitGameEnabled = savedFruitGameState === 'true';
+        updateFruitButtonState();
+
+        // Initialize button states
+        document.getElementById('displayEnglish').classList.toggle('active', displayMode === 'english');
+        document.getElementById('displayJapanese').classList.toggle('active', displayMode === 'japanese');
+        document.getElementById('displayBoth').classList.toggle('active', displayMode === 'both');
+    }
+
+    // ====================
+    // CLASS & STORY MANAGEMENT
+    // ====================
+    function handleClassSelect() {
+        currentClass = this.value;
+        storySelector.disabled = !currentClass;
         
-        function handleClassSelect() {
-            currentClass = this.value;
-            storySelector.disabled = !currentClass;
-            
-            if (currentClass) {
-                populateStorySelector(currentClass);
+        if (currentClass) {
+            populateStorySelector(currentClass);
+        } else {
+            storySelector.innerHTML = '<option value="">Select Story</option>';
+            storySelector.disabled = true;
+        }
+    }
+
+    function handleStorySelect() {
+        currentStory = this.value;
+        if (currentStory) {
+            enterReadingMode(currentClass);
+        }
+    }
+
+    function populateStorySelector(cls) {
+        storySelector.innerHTML = '<option value="">Select Story</option>';
+
+        if (lessonsData[cls]) {
+            if (lessonsData[cls].stories) {
+                lessonsData[cls].stories.forEach((story, index) => {
+                    const option = document.createElement('option');
+                    option.value = index;
+                    option.textContent = `${index + 1}. ${story.title}`;
+                    storySelector.appendChild(option);
+                });
             } else {
-                storySelector.innerHTML = '<option value="">Select Story</option>';
-                storySelector.disabled = true;
+                Object.keys(lessonsData[cls]).forEach(storyKey => {
+                    const option = document.createElement('option');
+                    option.value = storyKey;
+                    option.textContent = `Story ${storyKey.replace('story', '')}`;
+                    storySelector.appendChild(option);
+                });
             }
+            
+            storySelector.disabled = false;
+            storySelector.focus();
         }
-        
-function handleStorySelect() {
-    currentStory = this.value;
-    
-    if (currentStory) {
-        enterReadingMode(currentClass);
-    }
-}
-        
-        
-        // Load all external data files
-        function loadExternalData() {
-            return Promise.all([
-                loadVocabData(),
-                loadLessonsData()
-            ]);
-        }
-        
-        // Load vocabulary data from vocab.js
-        function loadVocabData() {
-            return new Promise((resolve, reject) => {
-                if (typeof vocab !== 'undefined') {
-                    console.log('Vocabulary data loaded');
-                    resolve();
-                } else {
-                    const error = 'Vocabulary data not found. Please ensure vocab.js is loaded.';
-                    console.error(error);
-                    reject(error);
-                }
-            });
-        }
-        
-        // Load lessons data from various class files
-function loadLessonsData() {
-    return new Promise((resolve, reject) => {
-        try {
-            // Load X class data
-            if (typeof x !== 'undefined') {
-                lessonsData['X'] = x;
-                console.log('X class data loaded');
-            }
-            
-            // Load C class data
-            if (typeof c !== 'undefined') {
-                lessonsData['C'] = c;
-                console.log('C class data loaded');
-            }
-            
-// Load Adult class data
-if (typeof adult !== 'undefined') {
-    lessonsData['Adult'] = adult;
-    console.log('Adult stories loaded:', adult.stories.length);
-    console.log('First story title:', adult.stories[0].title);
-}
-            
-            // Load Eiken 3 data
-            if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
-                lessonsData['Eiken3'] = {
-                    'yukis_adventure': eiken3.yukis_adventure,
-                    'questions': eiken3questions.questions
-                };
-                console.log('Eiken 3 class data loaded');
-            }
-            
-            // Load Eiken 5 data
-            if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
-                lessonsData['Eiken5'] = {
-                    'questions': qa5.questions,
-                    'sakis_park_day': eiken5story.sakis_park_day
-                };
-                console.log('Eiken 5 class data loaded');
-            }
-            
-            // Load High School data
-            if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
-                lessonsData['HighSchool'] = {
-                    'gettingtoknow': gettingtoknow.questions,
-                    'easyquestions2': easyquestions2.questions
-                };
-                console.log('High School data loaded');
-            }
-            
-            if (Object.keys(lessonsData).length > 0) {
-                resolve();
-            } else {
-                const error = 'No lesson data found. Please ensure at least one class file is loaded.';
-                console.error(error);
-                reject(error);
-            }
-        } catch (e) {
-            reject(e);
-        }
-    });
-}
-        
-        // Populate story selector for the selected class
-function populateStorySelector(cls) {
-    storySelector.innerHTML = '<option value="">Select Story</option>';
-
-    if (lessonsData[cls]) {
-        // New format (array of stories)
-        if (lessonsData[cls].stories) {
-            lessonsData[cls].stories.forEach((story, index) => {
-                const option = document.createElement('option');
-                option.value = index; // Use array index as value
-                option.textContent = `${index + 1}. ${story.title}`;
-                storySelector.appendChild(option);
-            });
-        } 
-        // Old format (story1, story2, etc.)
-        else {
-            Object.keys(lessonsData[cls]).forEach(storyKey => {
-                const option = document.createElement('option');
-                option.value = storyKey;
-                option.textContent = `Story ${storyKey.replace('story', '')}`;
-                storySelector.appendChild(option);
-            });
-        }
-        
-        storySelector.disabled = false;
-        storySelector.focus();
-    }
-}
-        
-        // Enter reading mode
-function enterReadingMode(cls) {
-    // Reset the retry counter
-    if (typeof applyDisplayMode.retryCount !== 'undefined') {
-        applyDisplayMode.retryCount = 0;
-    }   
- // Hide main container and show reading container
-if (mainContainer) mainContainer.style.display = 'none';
-if (readingModeContainer) readingModeContainer.style.display = 'flex';
-    
-    // Initialize translation events
-    initTranslationEvents();
-    
-    // Load the content - display mode will be applied after content loads
-    loadTextContent(cls);
-}
-        
-        // Exit reading mode
-        function exitReadingMode() {
-            // Show main container and hide reading container
-            mainContainer.style.display = 'block';
-            readingModeContainer.style.display = 'none';
-            
-            // Stop any speech
-            stopSpeech();
-            
-            // Focus the class selector
-            setTimeout(() => {
-                classSelector.focus();
-            }, 100);
-        }
-        
-        // Load text content for reading mode
-function loadTextContent(cls) {
-    console.log('Loading content for:', cls, 'Story:', currentStory);
-
-    if (!lessonsData[cls]) {
-        console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
-        alert(`Data not found for class ${cls}`);
-        exitReadingMode();
-        return;
     }
 
-    let content;
-    if (lessonsData[cls].stories) {  // New format
-        const storyIndex = parseInt(currentStory);
-        if (isNaN(storyIndex)) {
-            console.error('Invalid story index:', currentStory);
-            alert('Invalid story selection');
+    // ====================
+    // READING MODE FUNCTIONS
+    // ====================
+    function enterReadingMode(cls) {
+        if (mainContainer) mainContainer.style.display = 'none';
+        if (readingModeContainer) readingModeContainer.style.display = 'flex';
+        
+        initTranslationEvents();
+        loadTextContent(cls);
+    }
+
+    function exitReadingMode() {
+        mainContainer.style.display = 'block';
+        readingModeContainer.style.display = 'none';
+        stopSpeech();
+        
+        setTimeout(() => {
+            classSelector.focus();
+        }, 100);
+    }
+
+    function loadTextContent(cls) {
+        console.log('Loading content for:', cls, 'Story:', currentStory);
+
+        if (!lessonsData[cls]) {
+            console.error('Class not found:', cls, 'Available classes:', Object.keys(lessonsData));
+            alert(`Data not found for class ${cls}`);
             exitReadingMode();
             return;
         }
-        content = lessonsData[cls]?.stories?.[storyIndex]?.content;
-if (!content) {
-    console.error('Content not found for story:', storyIndex, 'in class:', cls);
-    alert(`Content not found for selected story`);
-    exitReadingMode();
-    return;
-}
-    } else if (lessonsData[cls][currentStory]) {  // Old format
-        content = lessonsData[cls][currentStory];
-    } else {
-        console.error('Story not found:', currentStory, 'in class:', cls);
-        alert(`Story not found in ${cls} class`);
-        exitReadingMode();
-        return;
-    }
 
-    sentences = parseStoryFile(content);
-if (sentences.length > 0) {
-    currentSentenceIndex = 0;
-    displayCurrentSentence();
-    // Apply display mode after a short delay to ensure DOM is ready
-    setTimeout(() => {
-        applyDisplayMode();
-        ensureTextVisibility();
-    }, 100);
-} else {
-        alert('No valid sentences found in this story');
-        exitReadingMode();
-    }
-}     
-function parseStoryFile(text) {
-    // Handle both string (old) and object (new) formats
-    const content = text && typeof text === 'object' ? text.content : text || '';
-    
-    const lines = content.split('\n')
-        .map(line => line.trim())
-        .filter(line => line.length > 0 && !line.startsWith('#'));
-    
-    const result = [];
-    let currentEnglish = null;
-    
-    for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        // Check if line contains English characters or starts with emoji
-        const isEnglish = /[a-zA-Z]/.test(line) || 
-                         /^[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
-        
-        if (isEnglish) {
-            // If we have a pending English line, push it with empty Japanese
-            if (currentEnglish) {
-                result.push({
-                    english: currentEnglish,
-                    japanese: "",
-                    number: result.length + 1
-                });
+        let content;
+        if (lessonsData[cls].stories) {
+            const storyIndex = parseInt(currentStory);
+            if (isNaN(storyIndex)) {
+                console.error('Invalid story index:', currentStory);
+                alert('Invalid story selection');
+                exitReadingMode();
+                return;
             }
-            currentEnglish = line;
+            content = lessonsData[cls]?.stories?.[storyIndex]?.content;
+            if (!content) {
+                console.error('Content not found for story:', storyIndex, 'in class:', cls);
+                alert(`Content not found for selected story`);
+                exitReadingMode();
+                return;
+            }
+        } else if (lessonsData[cls][currentStory]) {
+            content = lessonsData[cls][currentStory];
         } else {
-            // This is a Japanese line - pair it with current English
-            if (currentEnglish) {
-                result.push({
-                    english: currentEnglish,
-                    japanese: line,
-                    number: result.length + 1
-                });
-                currentEnglish = null;
-            } else {
-                // If no current English, this is a standalone Japanese line
-                result.push({
-                    english: "",
-                    japanese: line,
-                    number: result.length + 1
-                });
-            }
-        }
-    }
-    
-    // Push any remaining English line
-    if (currentEnglish) {
-        result.push({
-            english: currentEnglish,
-            japanese: "",
-            number: result.length + 1
-        });
-    }
-    
-    return result;
-}
-        
-function ensureTextVisibility() {
-    const activeDisplays = [];
-    
-    if (displayMode === 'english' || displayMode === 'both') {
-        const englishDisplay = document.getElementById('englishSentence');
-        if (englishDisplay) activeDisplays.push(englishDisplay);
-    }
-    
-    if (displayMode === 'japanese' || displayMode === 'both') {
-        const japaneseDisplay = document.getElementById('japaneseSentence');
-        if (japaneseDisplay) activeDisplays.push(japaneseDisplay);
-    }
-    
-    activeDisplays.forEach(display => {
-        // Reset to JS-controlled size first
-        display.style.fontSize = `${currentFontSize}vw`;
-        
-        // Check if text overflows
-        if (display.scrollHeight > display.clientHeight || display.scrollWidth > display.clientWidth) {
-            // Gradually reduce size until it fits
-            let fontSize = currentFontSize;
-            while ((display.scrollHeight > display.clientHeight || 
-                   display.scrollWidth > display.clientWidth) && 
-                   fontSize > 2) { // Minimum of 2vw
-                fontSize -= 0.5;
-                display.style.fontSize = `${fontSize}vw`;
-                void display.offsetHeight; // Force reflow
-            }
-        }
-    });
-}
-        
-        // Display current sentence
-function displayCurrentSentence() {
-    // Safely check if we're in reading mode and elements exist
-    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
-        return;
-    }
-
-    // Verify critical elements exist
-    englishSentence = document.getElementById('englishSentence');
-    japaneseSentence = document.getElementById('japaneseSentence');
-    if (!englishSentence || !japaneseSentence) {
-        console.error('Sentence display elements not found');
-        return;
-    }
-
-    if (!sentences || sentences.length === 0) {
-        englishSentence.textContent = "No sentences loaded";
-        japaneseSentence.textContent = "";
-        return;
-    }
-
-    const sentence = sentences[currentSentenceIndex];
-    
-    // Display with emoji but without number prefix
-    if (sentence.english) englishSentence.textContent = sentence.english;
-    if (sentence.japanese) japaneseSentence.textContent = sentence.japanese;
-    
-    // Reset font sizes before checking
-    englishSentence.style.fontSize = '';
-    japaneseSentence.style.fontSize = '';
-    
-    // Update button states
-    prevSentenceBtn.disabled = false;
-    nextSentenceBtn.disabled = false;
-    
-    // Immediately check and adjust text size
-    ensureTextVisibility();
-    // Apply current font size
-    applyFontSize();
-
-    // Apply current display mode
-    applyDisplayMode();
-
-    updatePageCounter();
-} // <-- THIS WAS MISSING
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}    
-        // Play sentence audio
-function playSentence(type) {
-    if (sentences.length === 0 || fruitGameActive) return;
-    
-    const sentence = sentences[currentSentenceIndex];
-    let text = type === 'english' ? sentence.english : sentence.japanese;
-    const lang = type === 'english' ? 'en-US' : 'ja-JP';
-    
-    // Remove emoji from text to be spoken while keeping them visible
-    const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
-    text = text.replace(emojiRegex, '').trim();
-    
-    // Stop any current speech and sounds
-    stopSpeech();
-    
-    // Speak the cleaned sentence
-    speakSentence(text, lang);
-}
- function stopSpeech() {
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-    }
-}    
-   
-        // Text-to-speech function
-function speakSentence(text, lang) {
-    if (!('speechSynthesis' in window)) {
-        console.warn('Speech synthesis not supported');
-        return;
-    }
-
-    // Stop any current speech
-    stopSpeech();
-
-    // Create new utterance
-    const utterance = new SpeechSynthesisUtterance(text);
-    
-    // Set language and voice properties
-    utterance.lang = lang;
-    utterance.rate = 0.9;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    // Function to actually speak once voices are loaded
-    const speakWithVoice = () => {
-        const voices = window.speechSynthesis.getVoices();
-        
-        // Find the appropriate voice
-        let voice;
-        if (lang === 'en-US') {
-            // First try to find a US English voice
-            voice = voices.find(v => 
-                v.lang === 'en-US' && 
-                v.name.includes('English')
-            );
-
-            // If not found, try any English voice
-            if (!voice) {
-                voice = voices.find(v => 
-                    v.lang.startsWith('en-')
-                );
-            }
-        } else if (lang === 'ja-JP') {
-            // For Japanese, find any Japanese voice
-            voice = voices.find(v => 
-                v.lang === 'ja-JP' || 
-                v.lang.startsWith('ja')
-            );
+            console.error('Story not found:', currentStory, 'in class:', cls);
+            alert(`Story not found in ${cls} class`);
+            exitReadingMode();
+            return;
         }
 
-        if (voice) {
-            utterance.voice = voice;
-            console.log('Using voice:', voice.name, 'for language:', lang);
-        } else {
-            console.warn('No specific voice found for', lang, 'using default');
-        }
-
-        // Error handling
-        utterance.onerror = function(event) {
-            console.error('SpeechSynthesis error:', event);
-        };
-
-        // Speak immediately
-        window.speechSynthesis.speak(utterance);
-    };
-
-    // Check if voices are loaded
-    const voices = window.speechSynthesis.getVoices();
-    if (voices.length === 0) {
-        console.log('Waiting for voices to load...');
-        window.speechSynthesis.onvoiceschanged = speakWithVoice;
-    } else {
-        speakWithVoice();
-    }
-}
-function listVoices() {
-    const voices = window.speechSynthesis.getVoices();
-    console.log("Available voices:");
-    voices.forEach(voice => {
-        console.log(`- ${voice.name} (${voice.lang}) ${voice.default ? '[DEFAULT]' : ''}`);
-    });
-}
-
-// Run after page load
-setTimeout(listVoices, 1000);
-        // Navigation functions
-function showNextSentence() {
-    stopSpeech();
-    closeTranslationPopupHandler();
-    
-    if (sentences.length === 0 || fruitGameActive) return;
-    
-    const isLastPage = currentSentenceIndex >= sentences.length - 1;
-    
-    // Always allow fruit game if enabled
-    if (fruitGameEnabled) {
-        shouldAdvanceAfterGame = true; // Always set to true - we'll handle last page in hideFruitGame
-        showFruitGame();
-        return;
-    }
-    
-    // Handle last page case (only when fruit game is off)
-    if (isLastPage) {
-        currentSentenceIndex = 0; // Loop to beginning
-        displayCurrentSentence();
-        return;
-    }
-    
-    // Normal case - go to next sentence
-    advanceToNextSentence();
-}
-        function advanceToNextSentence() {
-            if (currentSentenceIndex < sentences.length - 1) {
-                currentSentenceIndex++;
-            } else {
-                currentSentenceIndex = 0; // Loop to beginning
-            }
-            
+        sentences = parseStoryFile(content);
+        if (sentences.length > 0) {
+            currentSentenceIndex = 0;
             displayCurrentSentence();
- updatePageCounter();
+            setTimeout(() => {
+                applyDisplayMode();
+                ensureTextVisibility();
+            }, 100);
+        } else {
+            alert('No valid sentences found in this story');
+            exitReadingMode();
         }
+    }
+
+    function parseStoryFile(text) {
+        const content = text && typeof text === 'object' ? text.content : text || '';
+        const lines = content.split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0 && !line.startsWith('#'));
         
-function showPreviousSentence() {
-    stopSpeech();
-    closeTranslationPopupHandler(); // Close any open translation popup
-    
-    if (sentences.length === 0) return;
-    
-    if (currentSentenceIndex > 0) {
-        currentSentenceIndex--;
-    } else {
-        currentSentenceIndex = sentences.length - 1; // Loop to end
-    }
-    
-    displayCurrentSentence();
- updatePageCounter(); 
-}
-       
+        const result = [];
+        let currentEnglish = null;
         
-        // Handle TV remote input
-        function handleRemoteInput(e) {
-            const activeElement = document.activeElement;
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const isEnglish = /[a-zA-Z]/.test(line) || 
+                             /^[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
             
-            switch(e.key) {
-                case 'ArrowUp':
-                    navigateFocus('up');
-                    e.preventDefault();
-                    break;
-                case 'ArrowDown':
-                    navigateFocus('down');
-                    e.preventDefault();
-                    break;
-                case 'ArrowLeft':
-                    if (activeElement === prevSentenceBtn) {
-                        showPreviousSentence();
-                    } else {
-                        navigateFocus('left');
-                    }
-                    e.preventDefault();
-                    break;
-                case 'ArrowRight':
-                    if (activeElement === nextSentenceBtn) {
-                        showNextSentence();
-                    } else {
-                        navigateFocus('right');
-                    }
-                    e.preventDefault();
-                    break;
-                case 'Enter':
-                    if (activeElement) {
-                        activeElement.click();
-                    }
-                    break;
-                case 'Backspace':
-                    exitReadingMode();
-                    break;
-            }
-        }
-        
-        // Navigate focus between elements
-        function navigateFocus(direction) {
-            const focusable = Array.from(document.querySelectorAll('button, select, [tabindex="0"]'));
-            const currentIndex = focusable.indexOf(document.activeElement);
-            
-            if (currentIndex === -1) {
-                if (focusable.length > 0) focusable[0].focus();
-                return;
-            }
-            
-            let nextIndex = currentIndex;
-            
-            // Simple navigation - can be enhanced for grid layouts
-            if (direction === 'up' || direction === 'left') {
-                nextIndex = Math.max(0, currentIndex - 1);
-            } else {
-                nextIndex = Math.min(focusable.length - 1, currentIndex + 1);
-            }
-            
-            focusable[nextIndex].focus();
-        }
-        
-// Translation state variables
-let translationPopup, translationOverlay, closeTranslationPopup;
-let translationOriginal, translationResult, translationTts;
-let selectedText = '';
-let translationLang = '';
-
-// Initialize translation elements
-function initTranslationElements() {
-    translationPopup = document.getElementById('translationPopup');
-    translationOverlay = document.getElementById('translationOverlay');
-    closeTranslationPopup = document.getElementById('closeTranslationPopup');
-    translationOriginal = document.getElementById('translationOriginal');
-    translationResult = document.getElementById('translationResult');
-    translationTts = document.getElementById('translationTts');
-    
-    if (!translationPopup || !translationOverlay || !closeTranslationPopup || 
-        !translationOriginal || !translationResult || !translationTts) {
-        console.error('One or more translation elements not found');
-        return false;
-    }
-    
-    // Reset state
-    selectedText = '';
-    translationLang = '';
-    return true;
-}
-// Load saved display mode
-const savedDisplayMode = localStorage.getItem('displayMode');
-if (savedDisplayMode && ['english', 'japanese', 'both'].includes(savedDisplayMode)) {
-    displayMode = savedDisplayMode;
-} else {
-    displayMode = 'both'; // default
-}
-
-// Initialize button states (but don't apply display mode yet)
-document.getElementById('displayEnglish').classList.toggle('active', displayMode === 'english');
-document.getElementById('displayJapanese').classList.toggle('active', displayMode === 'japanese');
-document.getElementById('displayBoth').classList.toggle('active', displayMode === 'both');
-
-// Note: We don't call applyDisplayMode() here anymore
-// It will be called automatically when entering reading mode
-
-// Show translation popup
-function showTranslationPopup(text, lang) {
-    // Validate input
-    const trimmedText = text.trim();
-    if (!trimmedText || trimmedText.length < 1 || trimmedText.toLowerCase() === 'translate') {
-        return;
-    }
-    
-    // Reset previous state
-    closeTranslationPopupHandler();
-    
-    // Set new translation data
-    selectedText = trimmedText;
-    translationLang = lang;
-    
-    // Update UI labels based on translation direction
-    const sourceLabel = document.getElementById('sourceLanguageLabel');
-    const targetLabel = document.getElementById('targetLanguageLabel');
-    
-    if (lang === 'en') {
-        sourceLabel.textContent = 'English:';
-        targetLabel.textContent = 'Japanese:';
-    } else {
-        sourceLabel.textContent = 'Japanese:';
-        targetLabel.textContent = 'English:';
-    }
-    
-    // Highlight the selected text
-    try {
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0) {
-            const range = selection.getRangeAt(0);
-            const span = document.createElement('span');
-            span.className = 'highlighted-text';
-            span.style.backgroundColor = 'rgba(255, 255, 0, 0.3)';
-            range.surroundContents(span);
-        }
-    } catch (e) {
-        console.error('Error highlighting text:', e);
-    }
-    
-    // Update UI with original text
-    translationOriginal.textContent = selectedText;
-    translationResult.textContent = "Loading translation...";    
-    // Update UI with original text
-    translationOriginal.textContent = selectedText;
-    translationResult.textContent = "Loading translation...";
-    
-    // Show popup
-    translationPopup.classList.add('active');
-    translationOverlay.classList.add('active');
-    
-    // Fetch translation
-    fetchTranslation(selectedText, lang);
-    
-    // Add event listener to close popup when clicking Next button
-    const nextBtn = document.getElementById('nextSentence');
-    const prevBtn = document.getElementById('prevSentence');
-    
-    const closeOnNav = () => {
-        closeTranslationPopupHandler();
-        nextBtn.removeEventListener('click', closeOnNav);
-        prevBtn.removeEventListener('click', closeOnNav);
-    };
-    
-    nextBtn.addEventListener('click', closeOnNav);
-    prevBtn.addEventListener('click', closeOnNav);
-}
-
-function closeTranslationPopupHandler() {
-    if (!translationPopup || !translationOverlay) return;
-    
-    translationPopup.classList.remove('active');
-    translationOverlay.classList.remove('active');
-    stopSpeech();
-    
-    // Clear the translation fields
-    translationOriginal.textContent = '';
-    translationResult.textContent = '';
-    
-    // Reset selection state
-    if (window.getSelection) {
-        window.getSelection().removeAllRanges();
-    }
-    
-    // Remove all highlights and restore original text
-    document.querySelectorAll('.highlighted-text').forEach(el => {
-        const parent = el.parentNode;
-        while (el.firstChild) {
-            parent.insertBefore(el.firstChild, el);
-        }
-        parent.removeChild(el);
-        parent.normalize(); // Combine adjacent text nodes
-    });
-    
-    // Reset translation variables
-    selectedText = '';
-    translationLang = '';
-}
-
-// Fetch translation from a free API
-function fetchTranslation(text, lang) {
-    // Correct format is "en|ja" (with pipe character, not dash)
-    const langPair = lang === 'en' ? 'en|ja' : 'ja|en';
-    
-    // Encode the text and language pair properly
-    const encodedText = encodeURIComponent(text);
-    const encodedLangPair = encodeURIComponent(langPair);
-    
-    // Build the API URL
-    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${encodedLangPair}`;
-    
-    // Use a reliable CORS proxy
-    const proxyUrl = 'https://corsproxy.io/?';
-    
-    fetch(proxyUrl + apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.responseData && data.responseData.translatedText) {
-                // Clean the translated text
-                let translatedText = data.responseData.translatedText;
-                
-                // Remove unwanted characters and formatting
-                translatedText = translatedText
-                    .replace(/[#*_~`^]/g, '') // Remove special formatting chars
-                    .replace(/\{.*?\}/g, '')   // Remove {tags}
-                    .replace(/\[.*?\]/g, '')   // Remove [tags]
-                    .replace(/\(.*?\)/g, '')   // Remove (tags)
-                    .replace(/\d+/g, '')       // Remove numbers
-                    .trim();
-                
-                // If the result is empty after cleaning, show an error
-                if (!translatedText) {
-                    throw new Error('Translation returned empty after cleaning');
-                }
-                
-                translationResult.textContent = translatedText;
-            } else {
-                throw new Error('No translation data received');
-            }
-        })
-        .catch(error => {
-            console.error('Translation error:', error);
-            translationResult.textContent = "Unable to get translation";
-            
-            // Try a fallback method for simple words
-            if (text.length < 20) {
-                trySimpleDictionaryLookup(text, lang);
-            }
-        });
-}
-
-// Simple dictionary lookup for common words
-function trySimpleDictionaryLookup(text, lang) {
-    // Convert to lowercase for matching
-    const word = text.toLowerCase();
-    
-    // English to Japanese dictionary
-    const enToJaDict = {
-        'shows': '番組',
-        'show': '見せる',
-        'hello': 'こんにちは',
-        'goodbye': 'さようなら',
-        'thank you': 'ありがとう',
-        'please': 'お願いします'
-        // Add more common words as needed
-    };
-    
-    // Japanese to English dictionary
-    const jaToEnDict = {
-        'こんにちは': 'hello',
-        'ありがとう': 'thank you',
-        'お願いします': 'please',
-        '番組': 'show',
-        '見せる': 'show'
-        // Add more common words as needed
-    };
-    
-    // Try to find a match
-    const dict = lang === 'en' ? enToJaDict : jaToEnDict;
-    if (dict[word]) {
-        translationResult.textContent = dict[word];
-    } else {
-        // If no match found, try partial matches
-        for (const [key, value] of Object.entries(dict)) {
-            if (word.includes(key)) {
-                translationResult.textContent = value;
-                return;
-            }
-        }
-        translationResult.textContent = "Translation not found";
-    }
-}
- // Handle text selection - CORRECTED VERSION
-        function handleTextSelection() {
-            try {
-                const selection = window.getSelection();
-                if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
-                    return;
-                }
-
-                const selectedText = selection.toString().trim();
-                if (!selectedText || selectedText.length < 1 || selectedText.toLowerCase() === 'translate') {
-                    return;
-                }
-
-                const range = selection.getRangeAt(0);
-                const container = range.commonAncestorContainer;
-
-                // Check if selection is within our target elements
-                const isEnglish = englishSentence.contains(container);
-                const isJapanese = japaneseSentence.contains(container);
-                if (!isEnglish && !isJapanese) {
-                    closeTranslationPopupHandler();
-                    return;
-                }
-
-                // Skip if selection is collapsed (no actual text)
-                if (range.collapsed) {
-                    closeTranslationPopupHandler();
-                    return;
-                }
-
-                // Show translation immediately for the selected text
-                showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
-            } catch (error) {
-                console.error('Error in text selection handling:', error);
-            }
-        }
-        
-function initTranslationEvents() {
-    // Initialize translation elements first
-    if (!initTranslationElements()) return;
-
-    // Click event for single words
-    englishSentence.addEventListener('click', handleEnglishClick);
-    japaneseSentence.addEventListener('click', handleJapaneseClick);
-    
-    // Selection event for phrases
-    document.addEventListener('mouseup', handleTextSelection);
-    
-    // Close popup events
-    closeTranslationPopup.addEventListener('click', closeTranslationPopupHandler);
-    translationOverlay.addEventListener('click', closeTranslationPopupHandler);
-    
-    // TTS button
-    translationTts.addEventListener('click', () => {
-        if (selectedText && translationLang) {
-            speakSentence(selectedText, translationLang === 'en' ? 'en-US' : 'ja-JP');
-        }
-    });
-}
-
-function handleEnglishClick(e) {
-    if (e.target === englishSentence) {
-        const word = getWordAtPoint(englishSentence, e.clientX, e.clientY);
-        if (word) {
-            showTranslationPopup(word, 'en');
-        }
-    }
-}
-
-function handleJapaneseClick(e) {
-    if (e.target === japaneseSentence) {
-        const word = getWordAtPoint(japaneseSentence, e.clientX, e.clientY);
-        if (word) {
-            showTranslationPopup(word, 'ja');
-        }
-    }
-}
-
-        // Helper function to get word at specific coordinates
-        function getWordAtPoint(element, x, y) {
-            const range = document.caretRangeFromPoint(x, y);
-            if (!range) return null;
-            
-            range.expand('word');
-            const word = range.toString().trim();
-            return word || null;
-        }
-        
-        // Fruit game categories
-        const categories = [
-    // VERB CATEGORIES (3 groups)
-    { 
-        name: 'Basic Actions', 
-        items: [
-            {emoji: '🏃', name: 'run'}, 
-            {emoji: '🚶', name: 'walk'},
-            {emoji: '🛌', name: 'sleep'},
-            {emoji: '🍽️', name: 'eat'},
-            {emoji: '🚿', name: 'wash'},
-            {emoji: '📚', name: 'study'},
-            {emoji: '🎸', name: 'play'},
-            {emoji: '📖', name: 'read'},
-            {emoji: '✍️', name: 'write'},
-            {emoji: '🎤', name: 'sing'}
-        ]
-    },
-    { 
-        name: 'Daily Activities', 
-        items: [
-            {emoji: '🛒', name: 'shop'}, 
-            {emoji: '🚴', name: 'ride'},
-            {emoji: '🏊', name: 'swim'},
-            {emoji: '🚗', name: 'drive'},
-            {emoji: '🧹', name: 'clean'},
-            {emoji: '🍳', name: 'cook'},
-            {emoji: '💃', name: 'dance'},
-            {emoji: '🚲', name: 'cycle'},
-            {emoji: '🎮', name: 'game'},
-            {emoji: '🎭', name: 'act'}
-        ]
-    },
-    { 
-        name: 'Movement Verbs', 
-        items: [
-            {emoji: '🏃‍♂️', name: 'jog'}, 
-            {emoji: '🧗', name: 'climb'},
-            {emoji: '🤸', name: 'jump'},
-            {emoji: '🤾', name: 'throw'},
-            {emoji: '🏌️', name: 'golf'},
-            {emoji: '🏄', name: 'surf'},
-            {emoji: '⛷️', name: 'ski'},
-            {emoji: '🤽', name: 'dive'},
-            {emoji: '🚣', name: 'row'},
-            {emoji: '🛹', name: 'skate'}
-        ]
-    },
-
-    // ADJECTIVE CATEGORIES (3 groups)
-    { 
-        name: 'Basic Descriptions', 
-        items: [
-            {emoji: '🌞', name: 'sunny'}, 
-            {emoji: '❄️', name: 'cold'},
-            {emoji: '🔥', name: 'hot'},
-            {emoji: '💧', name: 'wet'},
-            {emoji: '🌈', name: 'colorful'},
-            {emoji: '⚡', name: 'fast'},
-            {emoji: '🐌', name: 'slow'},
-            {emoji: '🐘', name: 'big'},
-            {emoji: '🐜', name: 'small'},
-            {emoji: '❤️', name: 'happy'}
-        ]
-    },
-    { 
-        name: 'Personality Traits', 
-        items: [
-            {emoji: '😊', name: 'friendly'}, 
-            {emoji: '🧠', name: 'smart'},
-            {emoji: '💪', name: 'strong'},
-            {emoji: '🦸', name: 'brave'},
-            {emoji: '🤗', name: 'kind'},
-            {emoji: '🤓', name: 'clever'},
-            {emoji: '😴', name: 'sleepy'},
-            {emoji: '🤡', name: 'silly'},
-            {emoji: '👑', name: 'proud'},
-            {emoji: '🧐', name: 'curious'}
-        ]
-    },
-    { 
-        name: 'Sensory Words', 
-        items: [
-            {emoji: '🍯', name: 'sweet'}, 
-            {emoji: '🍋', name: 'sour'},
-            {emoji: '🧂', name: 'salty'},
-            {emoji: '☕', name: 'bitter'},
-            {emoji: '🦔', name: 'rough'},
-            {emoji: '🪶', name: 'soft'},
-            {emoji: '🔊', name: 'loud'},
-            {emoji: '🔇', name: 'quiet'},
-            {emoji: '💡', name: 'bright'},
-            {emoji: '🌑', name: 'dark'}
-        ]
-    },
-
-    // NOUN CATEGORIES (4 groups)
-    { 
-        name: 'Everyday Objects', 
-        items: [
-            {emoji: '📖', name: 'a book'},
-            {emoji: '✏️', name: 'a pencil'},
-            {emoji: '💻', name: 'a computer'},
-            {emoji: '📱', name: 'a phone'},
-            {emoji: '⌚', name: 'a watch'},
-            {emoji: '🔑', name: 'a key'},
-            {emoji: '💡', name: 'a light'},
-            {emoji: '🧸', name: 'a toy'},
-            {emoji: '🧦', name: 'socks'},
-            {emoji: '👓', name: 'glasses'}
-        ]
-    },
-    { 
-        name: 'Animals', 
-        items: [
-            {emoji: '🐶', name: 'a dog'},
-            {emoji: '🐱', name: 'a cat'},
-            {emoji: '🐰', name: 'a rabbit'},
-            {emoji: '🦊', name: 'a fox'},
-            {emoji: '🐻', name: 'a bear'},
-            {emoji: '🦁', name: 'a lion'},
-            {emoji: '🐯', name: 'a tiger'},
-            {emoji: '🦄', name: 'a unicorn'},
-            {emoji: '🐧', name: 'a penguin'},
-            {emoji: '🦉', name: 'an owl'}
-        ]
-    },
-    { 
-        name: 'Food & Drink', 
-        items: [
-            {emoji: '🍎', name: 'an apple'}, 
-            {emoji: '🍌', name: 'a banana'},
-            {emoji: '🍕', name: 'a pizza'},
-            {emoji: '🍔', name: 'a burger'},
-            {emoji: '🍜', name: 'noodles'},
-            {emoji: '🍦', name: 'ice cream'},
-            {emoji: '🍩', name: 'a donut'},
-            {emoji: '☕', name: 'coffee'},
-            {emoji: '🍵', name: 'tea'},
-            {emoji: '🥤', name: 'a drink'}
-        ]
-    },
-    { 
-        name: 'Places', 
-        items: [
-            {emoji: '🏠', name: 'a house'},
-            {emoji: '🏫', name: 'a school'},
-            {emoji: '🏥', name: 'a hospital'},
-            {emoji: '🏖️', name: 'a beach'},
-            {emoji: '🏞️', name: 'a park'},
-            {emoji: '🏪', name: 'a store'},
-            {emoji: '🏟️', name: 'a stadium'},
-            {emoji: '⛪', name: 'a church'},
-            {emoji: '🏰', name: 'a castle'},
-            {emoji: '🌋', name: 'a volcano'}
-        ]
-    }
-];
-
-        // Fruit game functions
-function updateFruitButtonState() {
-    // Use different colored apples for on/off states
-    if (fruitGameEnabled) {
-        fruitToggleBtn.innerHTML = '🍏'; // Green apple when ON
-        fruitToggleBtn.style.color = 'var(--success)'; // Bright green
-    } else {
-        fruitToggleBtn.innerHTML = '🍎'; // Red apple when OFF
-        fruitToggleBtn.style.color = 'var(--warning)'; // Bright red
-    }
-    
-    fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
-    fruitToggleBtn.title = fruitGameEnabled ? 'Fruit Game is ON' : 'Fruit Game is OFF';
-    
-    // Keep the existing shadow and border effects
-    if (fruitGameEnabled) {
-        fruitToggleBtn.style.boxShadow = '0 0 10px var(--success)';
-        fruitToggleBtn.style.border = '2px solid var(--success)';
-    } else {
-        fruitToggleBtn.style.boxShadow = 'none';
-        fruitToggleBtn.style.border = '2px solid var(--warning)';
-    }
-}
-        
-function toggleFruitGame() {
-    // Only allow toggling when in reading mode
-    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
-        return;
-    }
-
-    fruitGameEnabled = !fruitGameEnabled;
-    updateFruitButtonState();
-    
-    // Play sound only when turning ON
-    if (fruitGameEnabled) {
-        playSound('activate');
-        if (navigator.vibrate) navigator.vibrate(50);
-    } else {
-        // When turning OFF, ensure any active game is closed
-        if (fruitGameActive) {
-            hideFruitGame();
-        }
-    }
-    
-    // Save state to localStorage
-    localStorage.setItem('fruitGameEnabled', fruitGameEnabled);
-    console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
-}
-        
-        function showFruitGame() {
-            if (!fruitGameEnabled || fruitGameActive) {
-                console.log('Fruit game not shown - enabled:', fruitGameEnabled, 'active:', fruitGameActive);
-                return;
-            }
-            
-            // Stop any current speech
-            stopSpeech();
-            fruitGameActive = true;
-            
-            // Create game container
-            const gameContainer = document.createElement('div');
-            gameContainer.className = 'fruit-game-container';
-            gameContainer.innerHTML = `
-                <div class="fruit-game">
-                    <h2>Fruit Machine!</h2>
-                    <div class="fruit-reels">
-                        <div class="reel-container">
-                            <div class="fruit-reel" id="reel1">🍎</div>
-                            <div class="fruit-name" id="name1"></div>
-                        </div>
-                        <div class="reel-container">
-                            <div class="fruit-reel" id="reel2">🍊</div>
-                            <div class="fruit-name" id="name2"></div>
-                        </div>
-                        <div class="reel-container">
-                            <div class="fruit-reel" id="reel3">🍇</div>
-                            <div class="fruit-name" id="name3"></div>
-                        </div>
-                    </div>
-                    <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
-                    <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
-                </div>
-            `;
-            
-            document.body.appendChild(gameContainer);
-            
-            // Spin the reels
-            spinReels();
-            
-            // Exit button
-            document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
-        }
-        
-function hideFruitGame() {
-    // Safely remove game container if it exists
-    const game = document.querySelector('.fruit-game-container');
-    if (game && game.parentNode) {
-        game.parentNode.removeChild(game);
-    }
-    
-    fruitGameActive = false;
-    
-    // Stop any game sounds
-    if (window.AudioContext) {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        audioCtx.close();
-    }
-    
-    // Ensure translation popup is closed
-    closeTranslationPopupHandler();
-    
-    // Only proceed if we're in reading mode
-    if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
-        return;
-    }
-    
-    setTimeout(() => {
-        if (shouldAdvanceAfterGame) {
-            const isLastPage = currentSentenceIndex >= sentences.length - 1;
-            currentSentenceIndex = isLastPage ? 0 : currentSentenceIndex + 1;
-            shouldAdvanceAfterGame = false;
-        }
-        displayCurrentSentence(); // Refresh display
-    }, 500);
-}
-        
-        function spinReels() {
-            // Select a random category for this spin
-            const currentCategory = categories[Math.floor(Math.random() * categories.length)];
-            const items = currentCategory.items;
-            
-            const reels = [
-                document.getElementById('reel1'),
-                document.getElementById('reel2'),
-                document.getElementById('reel3')
-            ];
-            const resultDisplay = document.getElementById('fruitResult');
-            
-            // Reset display
-            resultDisplay.textContent = '';
-            resultDisplay.style.color = '';
-            
-            // Play spinning sound
-            playSound('spin');
-            
-            // Determine if we should have a match (1 in 3 chance)
-            const shouldMatch = Math.random() < 0.33;
-            let matchingItem = '';
-            
-            if (shouldMatch) {
-                matchingItem = items[Math.floor(Math.random() * items.length)];
-                // Update the matchingItem to be the full object (not just emoji)
-                matchingItem = items.find(item => item.emoji === matchingItem.emoji) || matchingItem;
-            }
-            
-            // Spin each reel with delays between them
-            spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
-                playSound('reelStop');
-                spinReel(reels[1], 300, items, matchingItem, shouldMatch, () => {
-                    playSound('reelStop');
-                    spinReel(reels[2], 300, items, matchingItem, shouldMatch, () => {
-                        playSound('reelStop');
-                        
-                        // Check for win after last reel stops
-                        setTimeout(() => {
-                            if (shouldMatch && reels[0].textContent === reels[1].textContent && 
-                                reels[1].textContent === reels[2].textContent) {
-                                // Win condition
-                                playSound('win');
-                                playSound('coin');
-                                resultDisplay.textContent = '🎉 WINNER! 🎉';
-                                resultDisplay.style.color = 'var(--success)';
-                                resultDisplay.style.fontWeight = 'bold';
-                                
-                                // Celebration animation
-                                reels.forEach(reel => {
-                                    reel.style.transform = 'scale(1.2)';
-                                    reel.style.transition = 'all 0.3s';
-                                    reel.style.boxShadow = '0 0 20px gold';
-                                });
-                                
-                                // Confetti effect
-                                setTimeout(() => {
-                                    createConfetti();
-                                }, 500);
-                                
-                                setTimeout(hideFruitGame, 3000);
-                            } else {
-                                // Lose condition
-                                playSound('lose');
-                                resultDisplay.textContent = 'Try again!';
-                                resultDisplay.style.color = 'var(--warning)';
-                                
-                                // Shake animation
-                                reels.forEach(reel => {
-                                    reel.style.animation = 'shake 0.5s';
-                                });
-                                
-                                setTimeout(hideFruitGame, 2000);
-                            }
-                        }, 300);
+            if (isEnglish) {
+                if (currentEnglish) {
+                    result.push({
+                        english: currentEnglish,
+                        japanese: "",
+                        number: result.length + 1
                     });
-                });
+                }
+                currentEnglish = line;
+            } else {
+                if (currentEnglish) {
+                    result.push({
+                        english: currentEnglish,
+                        japanese: line,
+                        number: result.length + 1
+                    });
+                    currentEnglish = null;
+                } else {
+                    result.push({
+                        english: "",
+                        japanese: line,
+                        number: result.length + 1
+                    });
+                }
+            }
+        }
+        
+        if (currentEnglish) {
+            result.push({
+                english: currentEnglish,
+                japanese: "",
+                number: result.length + 1
             });
         }
         
-        // Helper function to spin a single reel
-        function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
-            const reelNumber = reel.id.replace('reel', '');
-            const nameElement = document.getElementById(`name${reelNumber}`);
+        return result;
+    }
+
+    function displayCurrentSentence() {
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+            return;
+        }
+
+        englishSentence = document.getElementById('englishSentence');
+        japaneseSentence = document.getElementById('japaneseSentence');
+        if (!englishSentence || !japaneseSentence) {
+            console.error('Sentence display elements not found');
+            return;
+        }
+
+        if (!sentences || sentences.length === 0) {
+            englishSentence.textContent = "No sentences loaded";
+            japaneseSentence.textContent = "";
+            return;
+        }
+
+        const sentence = sentences[currentSentenceIndex];
+        
+        if (sentence.english) englishSentence.textContent = sentence.english;
+        if (sentence.japanese) japaneseSentence.textContent = sentence.japanese;
+        
+        englishSentence.style.fontSize = '';
+        japaneseSentence.style.fontSize = '';
+        
+        prevSentenceBtn.disabled = false;
+        nextSentenceBtn.disabled = false;
+        
+        ensureTextVisibility();
+        applyFontSize();
+        applyDisplayMode();
+        updatePageCounter();
+    }
+
+    function updatePageCounter() {
+        if (!sentences || sentences.length === 0) return;
+        
+        const currentPageEl = document.getElementById('currentPage');
+        const totalPagesEl = document.getElementById('totalPages');
+        
+        if (currentPageEl) currentPageEl.textContent = currentSentenceIndex + 1;
+        if (totalPagesEl) totalPagesEl.textContent = sentences.length;
+    }
+
+    // ====================
+    // TEXT DISPLAY & FORMATTING
+    // ====================
+    function setDisplayMode(mode) {
+        displayMode = mode;
+        localStorage.setItem('displayMode', mode);
+        
+        document.getElementById('displayEnglish').classList.toggle('active', mode === 'english');
+        document.getElementById('displayJapanese').classList.toggle('active', mode === 'japanese');
+        document.getElementById('displayBoth').classList.toggle('active', mode === 'both');
+        
+        applyDisplayMode();
+        
+        setTimeout(() => {
+            applyFontSize();
+            ensureTextVisibility();
+        }, 50);
+    }
+
+    function applyDisplayMode() {
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+            return;
+        }
+
+        const sentenceRows = document.querySelectorAll('.sentence-row');
+        if (!sentenceRows || sentenceRows.length === 0) {
+            console.error('No sentence rows found');
+            return;
+        }
+        
+        if (sentenceRows.length === 0) {
+            if (!sentences || sentences.length === 0) {
+                console.warn('No sentences loaded - cannot apply display mode');
+                return;
+            }
             
-            setTimeout(() => {
-                let spins = 0;
-                const spinInterval = setInterval(() => {
-                    // For the first few spins, show random items
-                    if (spins < 10) {
+            if (typeof applyDisplayMode.waiting === 'undefined') {
+                applyDisplayMode.waiting = true;
+                setTimeout(() => {
+                    applyDisplayMode.waiting = false;
+                    applyDisplayMode();
+                }, 300);
+                return;
+            }
+            
+            console.error('Failed to find sentence rows after waiting');
+            return;
+        }
+
+        applyDisplayMode.waiting = false;
+
+        const englishRow = sentenceRows[0];
+        const japaneseRow = sentenceRows[1] || sentenceRows[0];
+        const englishDisplay = englishRow.querySelector('.sentence-display');
+        const japaneseDisplay = japaneseRow.querySelector('.sentence-display');
+        
+        englishRow.classList.remove('full-height');
+        japaneseRow.classList.remove('full-height');
+        if (englishDisplay) englishDisplay.classList.remove('full-height');
+        if (japaneseDisplay) japaneseDisplay.classList.remove('full-height');
+        
+        englishRow.style.display = 'flex';
+        japaneseRow.style.display = 'flex';
+        englishRow.style.flex = '1';
+        japaneseRow.style.flex = '1';
+        
+        switch(displayMode) {
+            case 'english':
+                japaneseRow.style.display = 'none';
+                englishRow.classList.add('full-height');
+                if (englishDisplay) englishDisplay.classList.add('full-height');
+                break;
+                
+            case 'japanese':
+                englishRow.style.display = 'none';
+                japaneseRow.classList.add('full-height');
+                if (japaneseDisplay) japaneseDisplay.classList.add('full-height');
+                break;
+                
+            case 'both':
+                break;
+        }
+        
+        ensureTextVisibility();
+    }
+
+    function increaseFontSize() {
+        if (currentFontSize < maxFontSize) {
+            currentFontSize += 0.5;
+            applyFontSize();
+        }
+    }
+
+    function decreaseFontSize() {
+        if (currentFontSize > minFontSize) {
+            currentFontSize -= 0.5;
+            applyFontSize();
+        }
+    }
+
+    function applyFontSize() {
+        const englishDisplay = document.getElementById('englishSentence');
+        const japaneseDisplay = document.getElementById('japaneseSentence');
+        
+        if (englishDisplay) englishDisplay.style.fontSize = '';
+        if (japaneseDisplay) japaneseDisplay.style.fontSize = '';
+        
+        void englishDisplay?.offsetHeight;
+        void japaneseDisplay?.offsetHeight;
+        
+        const size = `${currentFontSize}vw`;
+        
+        if (displayMode === 'english' && englishDisplay) {
+            englishDisplay.style.fontSize = size;
+        } 
+        else if (displayMode === 'japanese' && japaneseDisplay) {
+            japaneseDisplay.style.fontSize = size;
+        }
+        else {
+            if (englishDisplay) englishDisplay.style.fontSize = size;
+            if (japaneseDisplay) japaneseDisplay.style.fontSize = size;
+        }
+        
+        localStorage.setItem('fontSize', currentFontSize);
+        ensureTextVisibility();
+    }
+
+    function ensureTextVisibility() {
+        const activeDisplays = [];
+        
+        if (displayMode === 'english' || displayMode === 'both') {
+            const englishDisplay = document.getElementById('englishSentence');
+            if (englishDisplay) activeDisplays.push(englishDisplay);
+        }
+        
+        if (displayMode === 'japanese' || displayMode === 'both') {
+            const japaneseDisplay = document.getElementById('japaneseSentence');
+            if (japaneseDisplay) activeDisplays.push(japaneseDisplay);
+        }
+        
+        activeDisplays.forEach(display => {
+            display.style.fontSize = `${currentFontSize}vw`;
+            
+            if (display.scrollHeight > display.clientHeight || display.scrollWidth > display.clientWidth) {
+                let fontSize = currentFontSize;
+                while ((display.scrollHeight > display.clientHeight || 
+                       display.scrollWidth > display.clientWidth) && 
+                       fontSize > 2) {
+                    fontSize -= 0.5;
+                    display.style.fontSize = `${fontSize}vw`;
+                    void display.offsetHeight;
+                }
+            }
+        });
+    }
+
+    // ====================
+    // NAVIGATION
+    // ====================
+    function showNextSentence() {
+        stopSpeech();
+        closeTranslationPopupHandler();
+        
+        if (sentences.length === 0 || fruitGameActive) return;
+        
+        const isLastPage = currentSentenceIndex >= sentences.length - 1;
+        
+        if (fruitGameEnabled) {
+            shouldAdvanceAfterGame = true;
+            showFruitGame();
+            return;
+        }
+        
+        if (isLastPage) {
+            currentSentenceIndex = 0;
+            displayCurrentSentence();
+            return;
+        }
+        
+        advanceToNextSentence();
+    }
+
+    function advanceToNextSentence() {
+        if (currentSentenceIndex < sentences.length - 1) {
+            currentSentenceIndex++;
+        } else {
+            currentSentenceIndex = 0;
+        }
+        
+        displayCurrentSentence();
+        updatePageCounter();
+    }
+
+    function showPreviousSentence() {
+        stopSpeech();
+        closeTranslationPopupHandler();
+        
+        if (sentences.length === 0) return;
+        
+        if (currentSentenceIndex > 0) {
+            currentSentenceIndex--;
+        } else {
+            currentSentenceIndex = sentences.length - 1;
+        }
+        
+        displayCurrentSentence();
+        updatePageCounter();
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // ====================
+    // SPEECH SYNTHESIS
+    // ====================
+    function playSentence(type) {
+        if (sentences.length === 0 || fruitGameActive) return;
+        
+        const sentence = sentences[currentSentenceIndex];
+        let text = type === 'english' ? sentence.english : sentence.japanese;
+        const lang = type === 'english' ? 'en-US' : 'ja-JP';
+        
+        const emojiRegex = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;
+        text = text.replace(emojiRegex, '').trim();
+        
+        stopSpeech();
+        speakSentence(text, lang);
+    }
+
+    function stopSpeech() {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+        }
+    }
+
+    function speakSentence(text, lang) {
+        if (!('speechSynthesis' in window)) {
+            console.warn('Speech synthesis not supported');
+            return;
+        }
+
+        stopSpeech();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+
+        const speakWithVoice = () => {
+            const voices = window.speechSynthesis.getVoices();
+            let voice;
+            
+            if (lang === 'en-US') {
+                voice = voices.find(v => 
+                    v.lang === 'en-US' && 
+                    v.name.includes('English')
+                );
+
+                if (!voice) {
+                    voice = voices.find(v => 
+                        v.lang.startsWith('en-')
+                    );
+                }
+            } else if (lang === 'ja-JP') {
+                voice = voices.find(v => 
+                    v.lang === 'ja-JP' || 
+                    v.lang.startsWith('ja')
+                );
+            }
+
+            if (voice) {
+                utterance.voice = voice;
+                console.log('Using voice:', voice.name, 'for language:', lang);
+            } else {
+                console.warn('No specific voice found for', lang, 'using default');
+            }
+
+            utterance.onerror = function(event) {
+                console.error('SpeechSynthesis error:', event);
+            };
+
+            window.speechSynthesis.speak(utterance);
+        };
+
+        const voices = window.speechSynthesis.getVoices();
+        if (voices.length === 0) {
+            console.log('Waiting for voices to load...');
+            window.speechSynthesis.onvoiceschanged = speakWithVoice;
+        } else {
+            speakWithVoice();
+        }
+    }
+
+    function listVoices() {
+        const voices = window.speechSynthesis.getVoices();
+        console.log("Available voices:");
+        voices.forEach(voice => {
+            console.log(`- ${voice.name} (${voice.lang}) ${voice.default ? '[DEFAULT]' : ''}`);
+        });
+    }
+
+    // ====================
+    // TRANSLATION SYSTEM
+    // ====================
+    function initTranslationElements() {
+        translationPopup = document.getElementById('translationPopup');
+        translationOverlay = document.getElementById('translationOverlay');
+        closeTranslationPopup = document.getElementById('closeTranslationPopup');
+        translationOriginal = document.getElementById('translationOriginal');
+        translationResult = document.getElementById('translationResult');
+        translationTts = document.getElementById('translationTts');
+        
+        if (!translationPopup || !translationOverlay || !closeTranslationPopup || 
+            !translationOriginal || !translationResult || !translationTts) {
+            console.error('One or more translation elements not found');
+            return false;
+        }
+        
+        selectedText = '';
+        translationLang = '';
+        return true;
+    }
+
+    function initTranslationEvents() {
+        if (!initTranslationElements()) return;
+
+        englishSentence.addEventListener('click', handleEnglishClick);
+        japaneseSentence.addEventListener('click', handleJapaneseClick);
+        document.addEventListener('mouseup', handleTextSelection);
+        closeTranslationPopup.addEventListener('click', closeTranslationPopupHandler);
+        translationOverlay.addEventListener('click', closeTranslationPopupHandler);
+        translationTts.addEventListener('click', () => {
+            if (selectedText && translationLang) {
+                speakSentence(selectedText, translationLang === 'en' ? 'en-US' : 'ja-JP');
+            }
+        });
+    }
+
+    function showTranslationPopup(text, lang) {
+        const trimmedText = text.trim();
+        if (!trimmedText || trimmedText.length < 1 || trimmedText.toLowerCase() === 'translate') {
+            return;
+        }
+        
+        closeTranslationPopupHandler();
+        selectedText = trimmedText;
+        translationLang = lang;
+        
+        const sourceLabel = document.getElementById('sourceLanguageLabel');
+        const targetLabel = document.getElementById('targetLanguageLabel');
+        
+        if (lang === 'en') {
+            sourceLabel.textContent = 'English:';
+            targetLabel.textContent = 'Japanese:';
+        } else {
+            sourceLabel.textContent = 'Japanese:';
+            targetLabel.textContent = 'English:';
+        }
+        
+        try {
+            const selection = window.getSelection();
+            if (selection.rangeCount > 0) {
+                const range = selection.getRangeAt(0);
+                const span = document.createElement('span');
+                span.className = 'highlighted-text';
+                span.style.backgroundColor = 'rgba(255, 255, 0, 0.3)';
+                range.surroundContents(span);
+            }
+        } catch (e) {
+            console.error('Error highlighting text:', e);
+        }
+        
+        translationOriginal.textContent = selectedText;
+        translationResult.textContent = "Loading translation...";    
+        translationPopup.classList.add('active');
+        translationOverlay.classList.add('active');
+        
+        fetchTranslation(selectedText, lang);
+        
+        const nextBtn = document.getElementById('nextSentence');
+        const prevBtn = document.getElementById('prevSentence');
+        
+        const closeOnNav = () => {
+            closeTranslationPopupHandler();
+            nextBtn.removeEventListener('click', closeOnNav);
+            prevBtn.removeEventListener('click', closeOnNav);
+        };
+        
+        nextBtn.addEventListener('click', closeOnNav);
+        prevBtn.addEventListener('click', closeOnNav);
+    }
+
+    function closeTranslationPopupHandler() {
+        if (!translationPopup || !translationOverlay) return;
+        
+        translationPopup.classList.remove('active');
+        translationOverlay.classList.remove('active');
+        stopSpeech();
+        translationOriginal.textContent = '';
+        translationResult.textContent = '';
+        
+        if (window.getSelection) {
+            window.getSelection().removeAllRanges();
+        }
+        
+        document.querySelectorAll('.highlighted-text').forEach(el => {
+            const parent = el.parentNode;
+            while (el.firstChild) {
+                parent.insertBefore(el.firstChild, el);
+            }
+            parent.removeChild(el);
+            parent.normalize();
+        });
+        
+        selectedText = '';
+        translationLang = '';
+    }
+
+    function fetchTranslation(text, lang) {
+        const langPair = lang === 'en' ? 'en|ja' : 'ja|en';
+        const encodedText = encodeURIComponent(text);
+        const encodedLangPair = encodeURIComponent(langPair);
+        const apiUrl = `https://api.mymemory.translated.net/get?q=${encodedText}&langpair=${encodedLangPair}`;
+        const proxyUrl = 'https://corsproxy.io/?';
+        
+        fetch(proxyUrl + apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.responseData && data.responseData.translatedText) {
+                    let translatedText = data.responseData.translatedText;
+                    translatedText = translatedText
+                        .replace(/[#*_~`^]/g, '')
+                        .replace(/\{.*?\}/g, '')
+                        .replace(/\[.*?\]/g, '')
+                        .replace(/\(.*?\)/g, '')
+                        .replace(/\d+/g, '')
+                        .trim();
+                    
+                    if (!translatedText) {
+                        throw new Error('Translation returned empty after cleaning');
+                    }
+                    
+                    translationResult.textContent = translatedText;
+                } else {
+                    throw new Error('No translation data received');
+                }
+            })
+            .catch(error => {
+                console.error('Translation error:', error);
+                translationResult.textContent = "Unable to get translation";
+                
+                if (text.length < 20) {
+                    trySimpleDictionaryLookup(text, lang);
+                }
+            });
+    }
+
+    function trySimpleDictionaryLookup(text, lang) {
+        const word = text.toLowerCase();
+        const enToJaDict = {
+            'shows': '番組',
+            'show': '見せる',
+            'hello': 'こんにちは',
+            'goodbye': 'さようなら',
+            'thank you': 'ありがとう',
+            'please': 'お願いします'
+        };
+        
+        const jaToEnDict = {
+            'こんにちは': 'hello',
+            'ありがとう': 'thank you',
+            'お願いします': 'please',
+            '番組': 'show',
+            '見せる': 'show'
+        };
+        
+        const dict = lang === 'en' ? enToJaDict : jaToEnDict;
+        if (dict[word]) {
+            translationResult.textContent = dict[word];
+        } else {
+            for (const [key, value] of Object.entries(dict)) {
+                if (word.includes(key)) {
+                    translationResult.textContent = value;
+                    return;
+                }
+            }
+            translationResult.textContent = "Translation not found";
+        }
+    }
+
+    function handleTextSelection() {
+        try {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+                return;
+            }
+
+            const selectedText = selection.toString().trim();
+            if (!selectedText || selectedText.length < 1 || selectedText.toLowerCase() === 'translate') {
+                return;
+            }
+
+            const range = selection.getRangeAt(0);
+            const container = range.commonAncestorContainer;
+            const isEnglish = englishSentence.contains(container);
+            const isJapanese = japaneseSentence.contains(container);
+            if (!isEnglish && !isJapanese) {
+                closeTranslationPopupHandler();
+                return;
+            }
+
+            if (range.collapsed) {
+                closeTranslationPopupHandler();
+                return;
+            }
+
+            showTranslationPopup(selectedText, isEnglish ? 'en' : 'ja');
+        } catch (error) {
+            console.error('Error in text selection handling:', error);
+        }
+    }
+
+    function handleEnglishClick(e) {
+        if (e.target === englishSentence) {
+            const word = getWordAtPoint(englishSentence, e.clientX, e.clientY);
+            if (word) {
+                showTranslationPopup(word, 'en');
+            }
+        }
+    }
+
+    function handleJapaneseClick(e) {
+        if (e.target === japaneseSentence) {
+            const word = getWordAtPoint(japaneseSentence, e.clientX, e.clientY);
+            if (word) {
+                showTranslationPopup(word, 'ja');
+            }
+        }
+    }
+
+    function getWordAtPoint(element, x, y) {
+        const range = document.caretRangeFromPoint(x, y);
+        if (!range) return null;
+        
+        range.expand('word');
+        const word = range.toString().trim();
+        return word || null;
+    }
+
+    // ====================
+    // FRUIT GAME
+    // ====================
+    const categories = [
+        { 
+            name: 'Basic Actions', 
+            items: [
+                {emoji: '🏃', name: 'run'}, 
+                {emoji: '🚶', name: 'walk'},
+                {emoji: '🛌', name: 'sleep'},
+                {emoji: '🍽️', name: 'eat'},
+                {emoji: '🚿', name: 'wash'},
+                {emoji: '📚', name: 'study'},
+                {emoji: '🎸', name: 'play'},
+                {emoji: '📖', name: 'read'},
+                {emoji: '✍️', name: 'write'},
+                {emoji: '🎤', name: 'sing'}
+            ]
+        },
+        { 
+            name: 'Daily Activities', 
+            items: [
+                {emoji: '🛒', name: 'shop'}, 
+                {emoji: '🚴', name: 'ride'},
+                {emoji: '🏊', name: 'swim'},
+                {emoji: '🚗', name: 'drive'},
+                {emoji: '🧹', name: 'clean'},
+                {emoji: '🍳', name: 'cook'},
+                {emoji: '💃', name: 'dance'},
+                {emoji: '🚲', name: 'cycle'},
+                {emoji: '🎮', name: 'game'},
+                {emoji: '🎭', name: 'act'}
+            ]
+        },
+        { 
+            name: 'Movement Verbs', 
+            items: [
+                {emoji: '🏃‍♂️', name: 'jog'}, 
+                {emoji: '🧗', name: 'climb'},
+                {emoji: '🤸', name: 'jump'},
+                {emoji: '🤾', name: 'throw'},
+                {emoji: '🏌️', name: 'golf'},
+                {emoji: '🏄', name: 'surf'},
+                {emoji: '⛷️', name: 'ski'},
+                {emoji: '🤽', name: 'dive'},
+                {emoji: '🚣', name: 'row'},
+                {emoji: '🛹', name: 'skate'}
+            ]
+        },
+        { 
+            name: 'Basic Descriptions', 
+            items: [
+                {emoji: '🌞', name: 'sunny'}, 
+                {emoji: '❄️', name: 'cold'},
+                {emoji: '🔥', name: 'hot'},
+                {emoji: '💧', name: 'wet'},
+                {emoji: '🌈', name: 'colorful'},
+                {emoji: '⚡', name: 'fast'},
+                {emoji: '🐌', name: 'slow'},
+                {emoji: '🐘', name: 'big'},
+                {emoji: '🐜', name: 'small'},
+                {emoji: '❤️', name: 'happy'}
+            ]
+        },
+        { 
+            name: 'Personality Traits', 
+            items: [
+                {emoji: '😊', name: 'friendly'}, 
+                {emoji: '🧠', name: 'smart'},
+                {emoji: '💪', name: 'strong'},
+                {emoji: '🦸', name: 'brave'},
+                {emoji: '🤗', name: 'kind'},
+                {emoji: '🤓', name: 'clever'},
+                {emoji: '😴', name: 'sleepy'},
+                {emoji: '🤡', name: 'silly'},
+                {emoji: '👑', name: 'proud'},
+                {emoji: '🧐', name: 'curious'}
+            ]
+        },
+        { 
+            name: 'Sensory Words', 
+            items: [
+                {emoji: '🍯', name: 'sweet'}, 
+                {emoji: '🍋', name: 'sour'},
+                {emoji: '🧂', name: 'salty'},
+                {emoji: '☕', name: 'bitter'},
+                {emoji: '🦔', name: 'rough'},
+                {emoji: '🪶', name: 'soft'},
+                {emoji: '🔊', name: 'loud'},
+                {emoji: '🔇', name: 'quiet'},
+                {emoji: '💡', name: 'bright'},
+                {emoji: '🌑', name: 'dark'}
+            ]
+        },
+        { 
+            name: 'Everyday Objects', 
+            items: [
+                {emoji: '📖', name: 'a book'},
+                {emoji: '✏️', name: 'a pencil'},
+                {emoji: '💻', name: 'a computer'},
+                {emoji: '📱', name: 'a phone'},
+                {emoji: '⌚', name: 'a watch'},
+                {emoji: '🔑', name: 'a key'},
+                {emoji: '💡', name: 'a light'},
+                {emoji: '🧸', name: 'a toy'},
+                {emoji: '🧦', name: 'socks'},
+                {emoji: '👓', name: 'glasses'}
+            ]
+        },
+        { 
+            name: 'Animals', 
+            items: [
+                {emoji: '🐶', name: 'a dog'},
+                {emoji: '🐱', name: 'a cat'},
+                {emoji: '🐰', name: 'a rabbit'},
+                {emoji: '🦊', name: 'a fox'},
+                {emoji: '🐻', name: 'a bear'},
+                {emoji: '🦁', name: 'a lion'},
+                {emoji: '🐯', name: 'a tiger'},
+                {emoji: '🦄', name: 'a unicorn'},
+                {emoji: '🐧', name: 'a penguin'},
+                {emoji: '🦉', name: 'an owl'}
+            ]
+        },
+        { 
+            name: 'Food & Drink', 
+            items: [
+                {emoji: '🍎', name: 'an apple'}, 
+                {emoji: '🍌', name: 'a banana'},
+                {emoji: '🍕', name: 'a pizza'},
+                {emoji: '🍔', name: 'a burger'},
+                {emoji: '🍜', name: 'noodles'},
+                {emoji: '🍦', name: 'ice cream'},
+                {emoji: '🍩', name: 'a donut'},
+                {emoji: '☕', name: 'coffee'},
+                {emoji: '🍵', name: 'tea'},
+                {emoji: '🥤', name: 'a drink'}
+            ]
+        },
+        { 
+            name: 'Places', 
+            items: [
+                {emoji: '🏠', name: 'a house'},
+                {emoji: '🏫', name: 'a school'},
+                {emoji: '🏥', name: 'a hospital'},
+                {emoji: '🏖️', name: 'a beach'},
+                {emoji: '🏞️', name: 'a park'},
+                {emoji: '🏪', name: 'a store'},
+                {emoji: '🏟️', name: 'a stadium'},
+                {emoji: '⛪', name: 'a church'},
+                {emoji: '🏰', name: 'a castle'},
+                {emoji: '🌋', name: 'a volcano'}
+            ]
+        }
+    ];
+
+    function updateFruitButtonState() {
+        if (fruitGameEnabled) {
+            fruitToggleBtn.innerHTML = '🍏';
+            fruitToggleBtn.style.color = 'var(--success)';
+        } else {
+            fruitToggleBtn.innerHTML = '🍎';
+            fruitToggleBtn.style.color = 'var(--warning)';
+        }
+        
+        fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
+        fruitToggleBtn.title = fruitGameEnabled ? 'Fruit Game is ON' : 'Fruit Game is OFF';
+        
+        if (fruitGameEnabled) {
+            fruitToggleBtn.style.boxShadow = '0 0 10px var(--success)';
+            fruitToggleBtn.style.border = '2px solid var(--success)';
+        } else {
+            fruitToggleBtn.style.boxShadow = 'none';
+            fruitToggleBtn.style.border = '2px solid var(--warning)';
+        }
+    }
+    
+    function toggleFruitGame() {
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+            return;
+        }
+
+        fruitGameEnabled = !fruitGameEnabled;
+        updateFruitButtonState();
+        
+        if (fruitGameEnabled) {
+            playSound('activate');
+            if (navigator.vibrate) navigator.vibrate(50);
+        } else {
+            if (fruitGameActive) {
+                hideFruitGame();
+            }
+        }
+        
+        localStorage.setItem('fruitGameEnabled', fruitGameEnabled);
+        console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
+    }
+    
+    function showFruitGame() {
+        if (!fruitGameEnabled || fruitGameActive) {
+            console.log('Fruit game not shown - enabled:', fruitGameEnabled, 'active:', fruitGameActive);
+            return;
+        }
+        
+        stopSpeech();
+        fruitGameActive = true;
+        
+        const gameContainer = document.createElement('div');
+        gameContainer.className = 'fruit-game-container';
+        gameContainer.innerHTML = `
+            <div class="fruit-game">
+                <h2>Fruit Machine!</h2>
+                <div class="fruit-reels">
+                    <div class="reel-container">
+                        <div class="fruit-reel" id="reel1">🍎</div>
+                        <div class="fruit-name" id="name1"></div>
+                    </div>
+                    <div class="reel-container">
+                        <div class="fruit-reel" id="reel2">🍊</div>
+                        <div class="fruit-name" id="name2"></div>
+                    </div>
+                    <div class="reel-container">
+                        <div class="fruit-reel" id="reel3">🍇</div>
+                        <div class="fruit-name" id="name3"></div>
+                    </div>
+                </div>
+                <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
+                <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
+            </div>
+        `;
+        
+        document.body.appendChild(gameContainer);
+        spinReels();
+        document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
+    }
+
+    function hideFruitGame() {
+        const game = document.querySelector('.fruit-game-container');
+        if (game && game.parentNode) {
+            game.parentNode.removeChild(game);
+        }
+        
+        fruitGameActive = false;
+        
+        if (window.AudioContext) {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            audioCtx.close();
+        }
+        
+        closeTranslationPopupHandler();
+        
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+            return;
+        }
+        
+        setTimeout(() => {
+            if (shouldAdvanceAfterGame) {
+                const isLastPage = currentSentenceIndex >= sentences.length - 1;
+                currentSentenceIndex = isLastPage ? 0 : currentSentenceIndex + 1;
+                shouldAdvanceAfterGame = false;
+            }
+            displayCurrentSentence();
+        }, 500);
+    }
+    
+    function spinReels() {
+        const currentCategory = categories[Math.floor(Math.random() * categories.length)];
+        const items = currentCategory.items;
+        const reels = [
+            document.getElementById('reel1'),
+            document.getElementById('reel2'),
+            document.getElementById('reel3')
+        ];
+        const resultDisplay = document.getElementById('fruitResult');
+        
+        resultDisplay.textContent = '';
+        resultDisplay.style.color = '';
+        playSound('spin');
+        
+        const shouldMatch = Math.random() < 0.33;
+        let matchingItem = '';
+        
+        if (shouldMatch) {
+            matchingItem = items[Math.floor(Math.random() * items.length)];
+            matchingItem = items.find(item => item.emoji === matchingItem.emoji) || matchingItem;
+        }
+        
+        spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
+            playSound('reelStop');
+            spinReel(reels[1], 300, items, matchingItem, shouldMatch, () => {
+                playSound('reelStop');
+                spinReel(reels[2], 300, items, matchingItem, shouldMatch, () => {
+                    playSound('reelStop');
+                    
+                    setTimeout(() => {
+                        if (shouldMatch && reels[0].textContent === reels[1].textContent && 
+                            reels[1].textContent === reels[2].textContent) {
+                            playSound('win');
+                            playSound('coin');
+                            resultDisplay.textContent = '🎉 WINNER! 🎉';
+                            resultDisplay.style.color = 'var(--success)';
+                            resultDisplay.style.fontWeight = 'bold';
+                            
+                            reels.forEach(reel => {
+                                reel.style.transform = 'scale(1.2)';
+                                reel.style.transition = 'all 0.3s';
+                                reel.style.boxShadow = '0 0 20px gold';
+                            });
+                            
+                            setTimeout(() => {
+                                createConfetti();
+                            }, 500);
+                            
+                            setTimeout(hideFruitGame, 3000);
+                        } else {
+                            playSound('lose');
+                            resultDisplay.textContent = 'Try again!';
+                            resultDisplay.style.color = 'var(--warning)';
+                            
+                            reels.forEach(reel => {
+                                reel.style.animation = 'shake 0.5s';
+                            });
+                            
+                            setTimeout(hideFruitGame, 2000);
+                        }
+                    }, 300);
+                });
+            });
+        });
+    }
+
+    function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
+        const reelNumber = reel.id.replace('reel', '');
+        const nameElement = document.getElementById(`name${reelNumber}`);
+        
+        setTimeout(() => {
+            let spins = 0;
+            const spinInterval = setInterval(() => {
+                if (spins < 10) {
+                    const randomItem = items[Math.floor(Math.random() * items.length)];
+                    reel.textContent = randomItem.emoji;
+                    nameElement.textContent = '';
+                } 
+                else if (spins < 15) {
+                    if (spins % 2 === 0) {
                         const randomItem = items[Math.floor(Math.random() * items.length)];
                         reel.textContent = randomItem.emoji;
                         nameElement.textContent = '';
-                    } 
-                    // Then slow down to the final result
-                    else if (spins < 15) {
-                        if (spins % 2 === 0) {
-                            const randomItem = items[Math.floor(Math.random() * items.length)];
-                            reel.textContent = randomItem.emoji;
-                            nameElement.textContent = '';
-                        }
-                    } 
-                    // Final result
-                    else {
-                        clearInterval(spinInterval);
-                        let finalItem;
-                        if (shouldMatch) {
-                            finalItem = matchingItem;
-                        } else {
-                            finalItem = items[Math.floor(Math.random() * items.length)];
-                        }
-                        reel.textContent = finalItem.emoji;
-                        nameElement.textContent = finalItem.name;
-                        
-                        // Speak the name
-                        if (window.speechSynthesis) {
-                            const utterance = new SpeechSynthesisUtterance(finalItem.name);
-                            utterance.rate = 0.9;
-                            window.speechSynthesis.speak(utterance);
-                        }
-                        
-                        if (callback) callback();
                     }
-                    spins++;
-                }, 100);
-            }, delay);
-        }
-        
-        // Confetti effect for wins
-        function createConfetti() {
-            const container = document.querySelector('.fruit-game-container');
-            if (!container) return;
-            
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.style.position = 'absolute';
-                confetti.style.width = '10px';
-                confetti.style.height = '10px';
-                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                confetti.style.borderRadius = '50%';
-                confetti.style.left = `${Math.random() * 100}%`;
-                confetti.style.top = '-10px';
-                confetti.style.opacity = '0.8';
-                confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-                confetti.style.animation = `confetti-fall ${2 + Math.random() * 3}s linear forwards`;
-                
-                container.appendChild(confetti);
-                
-                // Remove confetti after animation
-                setTimeout(() => {
-                    confetti.remove();
-                }, 5000);
-            }
-        }
-        
-        // Play sound effects
-        function playSound(type) {
-            if (!window.AudioContext) return;
-            
-            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            let oscillator = audioCtx.createOscillator();
-            let gainNode = audioCtx.createGain();
-            
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            
-            // Different sounds for different events
-            switch(type) {
-                case 'spin':
-                    // Continuous spinning sound
-                    oscillator.type = 'sawtooth';
-                    oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
-                    oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
-                    gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.8);
-                    break;
+                } 
+                else {
+                    clearInterval(spinInterval);
+                    let finalItem;
+                    if (shouldMatch) {
+                        finalItem = matchingItem;
+                    } else {
+                        finalItem = items[Math.floor(Math.random() * items.length)];
+                    }
+                    reel.textContent = finalItem.emoji;
+                    nameElement.textContent = finalItem.name;
                     
-                case 'reelStop':
-                    // Short click when a reel stops
-                    oscillator.type = 'square';
-                    oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime);
-                    gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.1);
-                    break;
+                    if (window.speechSynthesis) {
+                        const utterance = new SpeechSynthesisUtterance(finalItem.name);
+                        utterance.rate = 0.9;
+                        window.speechSynthesis.speak(utterance);
+                    }
                     
-                case 'win':
-                    // Winning fanfare
-                    oscillator.type = 'sine';
-                    oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
-                    oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
-                    oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2); // G5
-                    oscillator.frequency.setValueAtTime(1046.5, audioCtx.currentTime + 0.3); // C6
-                    gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.5);
-                    break;
-                    
-                case 'lose':
-                    // Sad trombone
-                    oscillator.type = 'square';
-                    oscillator.frequency.setValueAtTime(349.23, audioCtx.currentTime); // F4
-                    oscillator.frequency.exponentialRampToValueAtTime(261.63, audioCtx.currentTime + 0.5); // C4
-                    gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.6);
-                    break;
-                    
-                case 'activate':
-                    oscillator.type = 'sine';
-                    oscillator.frequency.setValueAtTime(784, audioCtx.currentTime); // G5
-                    oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2); // C6
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.3);
-                    break;
-                    
-                case 'coin':
-                    // Coin sound for wins
-                    oscillator.type = 'triangle';
-                    oscillator.frequency.setValueAtTime(988, audioCtx.currentTime); // B5
-                    oscillator.frequency.exponentialRampToValueAtTime(1318, audioCtx.currentTime + 0.1); // E6
-                    gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
-                    oscillator.start();
-                    oscillator.stop(audioCtx.currentTime + 0.2);
-                    break;
-            }
-        }
+                    if (callback) callback();
+                }
+                spins++;
+            }, 100);
+        }, delay);
+    }
 
-        // Initialize the app when the page loads
-        window.addEventListener('DOMContentLoaded', function() {
-            // Check for saved night mode preference
-            const savedNightMode = localStorage.getItem('nightMode') === 'true';
-            if (savedNightMode) {
-                isNightMode = true;
-                document.body.classList.add('dark-mode');
-                nightModeToggle.textContent = '☀️';
-            }
+    function createConfetti() {
+        const container = document.querySelector('.fruit-game-container');
+        if (!container) return;
+        
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'absolute';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.borderRadius = '50%';
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.top = '-10px';
+            confetti.style.opacity = '0.8';
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            confetti.style.animation = `confetti-fall ${2 + Math.random() * 3}s linear forwards`;
             
-            init();
+            container.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+    }
+
+    function playSound(type) {
+        if (!window.AudioContext) return;
+        
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let oscillator = audioCtx.createOscillator();
+        let gainNode = audioCtx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        switch(type) {
+            case 'spin':
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.8);
+                break;
+                
+            case 'reelStop':
+                oscillator.type = 'square';
+                oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime);
+                gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.1);
+                break;
+                
+            case 'win':
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
+                oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2);
+                oscillator.frequency.setValueAtTime(1046.5, audioCtx.currentTime + 0.3);
+                gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.5);
+                break;
+                
+            case 'lose':
+                oscillator.type = 'square';
+                oscillator.frequency.setValueAtTime(349.23, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(261.63, audioCtx.currentTime + 0.5);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.6);
+                break;
+                
+            case 'activate':
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(784, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.3);
+                break;
+                
+            case 'coin':
+                oscillator.type = 'triangle';
+                oscillator.frequency.setValueAtTime(988, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(1318, audioCtx.currentTime + 0.1);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.2);
+                break;
+        }
+    }
+
+    // ====================
+    // DATA LOADING
+    // ====================
+    function loadExternalData() {
+        return Promise.all([
+            loadVocabData(),
+            loadLessonsData()
+        ]);
+    }
+
+    function loadVocabData() {
+        return new Promise((resolve, reject) => {
+            if (typeof vocab !== 'undefined') {
+                console.log('Vocabulary data loaded');
+                resolve();
+            } else {
+                const error = 'Vocabulary data not found. Please ensure vocab.js is loaded.';
+                console.error(error);
+                reject(error);
+            }
         });
-    </script>
+    }
+
+    function loadLessonsData() {
+        return new Promise((resolve, reject) => {
+            try {
+                if (typeof x !== 'undefined') {
+                    lessonsData['X'] = x;
+                    console.log('X class data loaded');
+                }
+                
+                if (typeof c !== 'undefined') {
+                    lessonsData['C'] = c;
+                    console.log('C class data loaded');
+                }
+                
+                if (typeof adult !== 'undefined') {
+                    lessonsData['Adult'] = adult;
+                    console.log('Adult stories loaded:', adult.stories.length);
+                    console.log('First story title:', adult.stories[0].title);
+                }
+                
+                if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
+                    lessonsData['Eiken3'] = {
+                        'yukis_adventure': eiken3.yukis_adventure,
+                        'questions': eiken3questions.questions
+                    };
+                    console.log('Eiken 3 class data loaded');
+                }
+                
+                if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
+                    lessonsData['Eiken5'] = {
+                        'questions': qa5.questions,
+                        'sakis_park_day': eiken5story.sakis_park_day
+                    };
+                    console.log('Eiken 5 class data loaded');
+                }
+                
+                if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
+                    lessonsData['HighSchool'] = {
+                        'gettingtoknow': gettingtoknow.questions,
+                        'easyquestions2': easyquestions2.questions
+                    };
+                    console.log('High School data loaded');
+                }
+                
+                if (Object.keys(lessonsData).length > 0) {
+                    resolve();
+                } else {
+                    const error = 'No lesson data found. Please ensure at least one class file is loaded.';
+                    console.error(error);
+                    reject(error);
+                }
+            } catch (e) {
+                reject(e);
+            }
+        });
+    }
+
+    // ====================
+    // UTILITY FUNCTIONS
+    // ====================
+    function toggleNightMode() {
+        isNightMode = !isNightMode;
+        document.body.classList.toggle('dark-mode', isNightMode);
+        document.getElementById('nightModeToggle').textContent = isNightMode ? '☀️' : '🌙';
+        localStorage.setItem('nightMode', isNightMode);
+    }
+
+    function handleRemoteInput(e) {
+        const activeElement = document.activeElement;
+        
+        switch(e.key) {
+            case 'ArrowUp':
+                navigateFocus('up');
+                e.preventDefault();
+                break;
+            case 'ArrowDown':
+                navigateFocus('down');
+                e.preventDefault();
+                break;
+            case 'ArrowLeft':
+                if (activeElement === prevSentenceBtn) {
+                    showPreviousSentence();
+                } else {
+                    navigateFocus('left');
+                }
+                e.preventDefault();
+                break;
+            case 'ArrowRight':
+                if (activeElement === nextSentenceBtn) {
+                    showNextSentence();
+                } else {
+                    navigateFocus('right');
+                }
+                e.preventDefault();
+                break;
+            case 'Enter':
+                if (activeElement) {
+                    activeElement.click();
+                }
+                break;
+            case 'Backspace':
+                exitReadingMode();
+                break;
+        }
+    }
+
+    function navigateFocus(direction) {
+        const focusable = Array.from(document.querySelectorAll('button, select, [tabindex="0"]'));
+        const currentIndex = focusable.indexOf(document.activeElement);
+        
+        if (currentIndex === -1) {
+            if (focusable.length > 0) focusable[0].focus();
+            return;
+        }
+        
+        let nextIndex = currentIndex;
+        
+        if (direction === 'up' || direction === 'left') {
+            nextIndex = Math.max(0, currentIndex - 1);
+        } else {
+            nextIndex = Math.min(focusable.length - 1, currentIndex + 1);
+        }
+        
+        focusable[nextIndex].focus();
+    }
+
+    // ====================
+    // INITIALIZATION
+    // ====================
+    window.addEventListener('DOMContentLoaded', function() {
+        const savedNightMode = localStorage.getItem('nightMode') === 'true';
+        if (savedNightMode) {
+            isNightMode = true;
+            document.body.classList.add('dark-mode');
+            document.getElementById('nightModeToggle').textContent = '☀️';
+        }
+        
+        init();
+        setTimeout(listVoices, 1000);
+    });
+</script>   
 </body>
 </html>
