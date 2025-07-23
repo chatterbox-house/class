@@ -1010,6 +1010,56 @@ body.dark-mode .fruit-reel {
         right: 35px;
     }
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Main container adjustments */
+    #mainContainer.container {
+        padding: 30px 20px;
+    }
+    
+    /* Header adjustments */
+    #mainContainer .header {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Dropdown adjustments */
+    #mainContainer select {
+        padding: 15px 20px;
+        font-size: 1.2rem;
+    }
+    
+    #mainContainer .dropdown:after {
+        font-size: 1rem;
+        right: 20px;
+    }
+    
+    /* Controls row adjustments */
+    #mainContainer .controls-row {
+        gap: 15px;
+    }
+}
+
+/* Very small mobile adjustments */
+@media (max-width: 480px) {
+    /* Header adjustments */
+    #mainContainer .header {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Dropdown adjustments */
+    #mainContainer select {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    
+    #mainContainer .dropdown:after {
+        font-size: 0.8rem;
+        right: 15px;
+    }
+}
 @media (max-width: 480px) {
     .reading-footer {
         height: 50px;
