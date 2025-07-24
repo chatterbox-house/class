@@ -350,29 +350,26 @@
         color: var(--dark-text-light);
     }
 
-.exit-reading {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 15px;
-    background-color: var(--warning);
-    color: white;
-    border: none;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 10;
-}
+    .exit-reading {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15px;
+        background-color: var(--warning);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 10;
+    }
 
-.exit-reading:focus {
-    box-shadow: 0 0 15px 5px var(--warning);
-}
     .reading-content {
         display: flex;
         flex-direction: column;
@@ -1067,54 +1064,6 @@
             margin-bottom: 50px;
         }
     }
-/* Add this to your existing button styles */
-.btn, .nav-btn, .font-btn, .display-btn, .fruit-toggle {
-    min-width: 60px;
-    min-height: 60px;
-    margin: 10px;
-}
-
-/* Make buttons glow when focused */
-.btn:focus, .nav-btn:focus, .font-btn:focus, 
-.display-btn:focus, .fruit-toggle:focus {
-    outline: none;
-    box-shadow: 0 0 10px 5px var(--accent);
-}
-
-/* Make dropdowns easier to navigate */
-select:focus {
-    box-shadow: 0 0 10px 5px var(--accent);
-}
-/* TV-specific styles */
-@media (hover: none) and (pointer: coarse) {
-    /* Make everything bigger for TV viewing */
-    body {
-        font-size: 24px;
-    }
-    
-    /* Make buttons even bigger */
-    .btn, .nav-btn, .font-btn, .display-btn, .fruit-toggle {
-        min-width: 80px;
-        min-height: 80px;
-        font-size: 1.5rem;
-    }
-    
-    /* Increase spacing between items */
-    .controls-row, .file-upload-row {
-        gap: 30px;
-    }
-    
-    /* Make select dropdowns easier to see */
-    select {
-        padding: 25px 30px;
-        font-size: 1.5rem;
-    }
-    
-    /* Make sure focus is always visible */
-    *:focus {
-        outline: 4px solid var(--accent) !important;
-    }
-}
 </style>
 
 </head>
@@ -1281,43 +1230,22 @@ const maxFontSize = 8; // vw/rem units
         return true;
     }
 
-function init() {
-    if (!initElements()) {
-        alert('Failed to initialize page elements');
-        return;
-    }
+    function init() {
+        if (!initElements()) {
+            alert('Failed to initialize page elements');
+            return;
+        }
 
-    setupEventListeners();
-    loadSavedPreferences();
-    loadExternalData().then(() => {
-        console.log('All external data loaded');
-        classSelector.focus();
-    }).catch(error => {
-        console.error('Error loading external data:', error);
-        alert('Error loading required data files. Please check the console for details.');
-    });
-    
-    // Set up better focus management for TV
-    document.addEventListener('focusin', function(e) {
-        if (e.target && typeof e.target.scrollIntoView === 'function') {
-            e.target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-        }
-    });
-    
-    document.addEventListener('keydown', function(e) {
-        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter'].includes(e.key)) {
-            if (!document.activeElement || document.activeElement === document.body) {
-                const focusable = document.querySelectorAll('button, select, [tabindex="0"]');
-                if (focusable.length > 0) {
-                    focusable[0].focus();
-                }
-            }
-        }
-    });
-}
+        setupEventListeners();
+        loadSavedPreferences();
+        loadExternalData().then(() => {
+            console.log('All external data loaded');
+            classSelector.focus();
+        }).catch(error => {
+            console.error('Error loading external data:', error);
+            alert('Error loading required data files. Please check the console for details.');
+        });
+    }
 
     function setupEventListeners() {
         // Class and story selection
@@ -2783,79 +2711,44 @@ function loadLessonsData() {
         localStorage.setItem('nightMode', isNightMode);
     }
 
-function handleRemoteInput(e) {
-    const activeElement = document.activeElement;
-    
-    // Check if we're in reading mode
-    const inReadingMode = readingModeContainer.style.display === 'flex';
-    
-    switch(e.key) {
-        case 'ArrowUp':
-            if (inReadingMode) {
-                increaseFontSize();
-            } else {
+    function handleRemoteInput(e) {
+        const activeElement = document.activeElement;
+        
+        switch(e.key) {
+            case 'ArrowUp':
                 navigateFocus('up');
-            }
-            e.preventDefault();
-            break;
-            
-        case 'ArrowDown':
-            if (inReadingMode) {
-                decreaseFontSize();
-            } else {
+                e.preventDefault();
+                break;
+            case 'ArrowDown':
                 navigateFocus('down');
-            }
-            e.preventDefault();
-            break;
-            
-        case 'ArrowLeft':
-            if (inReadingMode) {
-                showPreviousSentence();
-            } else {
-                navigateFocus('left');
-            }
-            e.preventDefault();
-            break;
-            
-        case 'ArrowRight':
-            if (inReadingMode) {
-                showNextSentence();
-            } else {
-                navigateFocus('right');
-            }
-            e.preventDefault();
-            break;
-            
-        case 'Enter':
-            if (activeElement) {
-                activeElement.click();
-            } else if (inReadingMode) {
-                // Toggle between English/Japanese/Both display modes
-                if (displayMode === 'english') setDisplayMode('japanese');
-                else if (displayMode === 'japanese') setDisplayMode('both');
-                else setDisplayMode('english');
-            }
-            break;
-            
-        case 'Backspace':
-        case 'Escape':
-            if (inReadingMode) {
-                exitReadingMode();
-            }
-            break;
-            
-        case 'MediaPlayPause':
-            // Play current sentence when play/pause button is pressed
-            if (inReadingMode) {
-                if (displayMode === 'english' || displayMode === 'both') {
-                    playSentence('english');
+                e.preventDefault();
+                break;
+            case 'ArrowLeft':
+                if (activeElement === prevSentenceBtn) {
+                    showPreviousSentence();
                 } else {
-                    playSentence('japanese');
+                    navigateFocus('left');
                 }
-            }
-            break;
+                e.preventDefault();
+                break;
+            case 'ArrowRight':
+                if (activeElement === nextSentenceBtn) {
+                    showNextSentence();
+                } else {
+                    navigateFocus('right');
+                }
+                e.preventDefault();
+                break;
+            case 'Enter':
+                if (activeElement) {
+                    activeElement.click();
+                }
+                break;
+            case 'Backspace':
+                exitReadingMode();
+                break;
+        }
     }
-}
 
     function navigateFocus(direction) {
         const focusable = Array.from(document.querySelectorAll('button, select, [tabindex="0"]'));
