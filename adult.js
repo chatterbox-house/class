@@ -1,7 +1,7 @@
 var adult = {
     stories: [
         {
- title: "Death Penalty Debate",  // Add a descriptive title
+            title: "Death Penalty Debate",
             content: `⚖️ The death penalty, Japan's ultimate punishment, has been carried out in the country for the first time in two years and 11 months.
 日本での究極の刑罰である死刑が、2年11カ月ぶりに執行されました。
 
@@ -88,12 +88,11 @@ Should governments be required to fully disclose information about executions?
 日本は、死刑制度の将来的な廃止を視野に入れた、より深い議論を行うべきです。
 
 Do you think Japan should abolish the death penalty? Why or why not?
-日本は死刑を廃止すべきだと思いますか？その理由は？`,
-
-},
+日本は死刑を廃止すべきだと思いますか？その理由は？`
+        },
         {
             title: "Have You Ever Questions",
-                        content: `✈️ Have you ever traveled to another country?
+            content: `✈️ Have you ever traveled to another country?
   他の国に旅行したことがありますか？
 
 🍖 Have you ever tried a really strange food?
@@ -227,11 +226,10 @@ Do you think Japan should abolish the death penalty? Why or why not?
 
 💡 Have you ever tried something and failed but learned from it?
    何かを試して失敗したことがあるが、そこから学んだことがありますか？`
-
-},
-{
-    title: "LDP Election Loss Analysis",
-    content: `📉 The Liberal Democratic Party (LDP) has once again been dealt a resounding "no" from voters in Japan.
+        },
+        {
+            title: "LDP Election Loss Analysis",
+            content: `📉 The Liberal Democratic Party (LDP) has once again been dealt a resounding "no" from voters in Japan.
 自由民主党は再び有権者からの明確な「ノー」を突きつけられました。
 
 😤 Have you ever felt disappointed with politicians? What happened?
@@ -486,6 +484,99 @@ Do you think Japan should abolish the death penalty? Why or why not?
 
 🌟 What's one concrete thing politicians could do tomorrow to regain trust?
 信頼を取り戻すために政治家が明日からできる具体的なことは何ですか？`
-}
-]
+        },
+        {
+            title: "Hypothetical Questions",
+            content: `1. What would you do if you won 100 million yen in the lottery?  
+   宝くじで1億円当たったらどうしますか？
+2. What would you do if you woke up with the ability to speak 10 languages fluently?  
+   目覚めたら10か国語を流暢に話せるようになっていたらどうしますか？
+3. What would you do if you lost your wallet in a foreign country?  
+   外国で財布をなくしたらどうしますか？
+4. What would you do if you could travel to any time in history?  
+   どの時代にもタイムトラベルできるとしたら、どうしますか？
+5. What would you do if you suddenly became famous on social media?  
+   突然ソーシャルメディアで有名になったらどうしますか？
+6. What would you do if you found a suitcase full of money?  
+   お金でいっぱいのスーツケースを見つけたらどうしますか？
+7. What would you do if you were invited to dinner with a celebrity?  
+   有名人とディナーに招待されたらどうしますか？
+8. What would you do if you were offered your dream job, but it was in a remote country?  
+   夢の仕事が見つかったが、それが遠い国だったらどうしますか？
+9. What would you do if you had one day to live as a different person?  
+   別の人として1日だけ生きることができるとしたら、どうしますか？
+10. What would you do if you could only eat one food for the rest of your life?  
+    残りの人生で1つの食べ物しか食べられないとしたら、何を選びますか？
+11. What would you do if you had to live without your smartphone for a month?  
+    スマートフォンなしで1か月過ごさなければならないとしたらどうしますか？
+12. What would you do if you found out your best friend was keeping a big secret from you?  
+    親友が大きな秘密を隠していたことがわかったらどうしますか？
+13. What would you do if you were given the chance to go to space?  
+    宇宙に行けるチャンスをもらったらどうしますか？
+14. What would you do if you accidentally sent an embarrassing message to the wrong person?  
+    間違って恥ずかしいメッセージを違う人に送ってしまったらどうしますか？
+15. What would you do if you had the power to read minds for a day?  
+    1日だけ人の心を読める力を持ったらどうしますか？
+16. What would you do if you had to survive on a deserted island for a week?  
+    無人島で1週間生き延びなければならないとしたら、どうしますか？
+17. What would you do if you met your favorite musician or band in person?  
+    お気に入りのミュージシャンやバンドに直接会えたらどうしますか？
+18. What would you do if you could be invisible for a day?  
+    1日だけ透明人間になれるとしたら、どうしますか？
+19. What would you do if you found out you were allergic to your favorite food?  
+    自分が好きな食べ物にアレルギーがあるとわかったらどうしますか？
+20. What would you do if you woke up and everyone had forgotten who you were?  
+    目覚めたら全員があなたのことを忘れていたらどうしますか？
+21. What would you do if you could switch lives with someone for a week?  
+    誰かと1週間だけ人生を入れ替えられるとしたら、どうしますか？
+22. What would you do if you accidentally broke something very valuable?  
+    とても高価なものをうっかり壊してしまったらどうしますか？
+23. What would you do if you had to choose between saving 10 strangers or 1 loved one?  
+    10人の知らない人と1人の愛する人を救う選択を迫られたら、どうしますか？
+24. What would you do if you could only watch one TV show for the rest of your life?  
+    残りの人生で1つのテレビ番組しか見られないとしたら、何を選びますか？
+25. What would you do if you woke up in a world where everyone spoke a different language?  
+    全員が違う言語を話す世界で目覚めたらどうしますか？
+26. What would you do if you were offered a free world tour, but you had to go alone?  
+    無料の世界一周旅行を提供されたが、一人で行かなければならないとしたら、どうしますか？
+27. What would you do if you could live anywhere in the world?  
+    世界のどこにでも住めるとしたら、どこに住みますか？
+28. What would you do if you found out you could stop aging at any age?  
+    いつでも年を取るのを止められるとしたら、何歳で止めますか？
+29. What would you do if you had to stay awake for 48 hours straight?  
+    48時間眠れずに過ごさなければならないとしたら、どうしますか？
+30. What would you do if you could bring back one extinct animal?  
+    絶滅した動物を1つ復活させられるとしたら、どの動物を選びますか？
+31. What would you do if you could live as your favorite movie character for a day?  
+    お気に入りの映画キャラクターとして1日だけ生きられるとしたら、どうしますか？
+32. What would you do if you had to give a speech in front of 1,000 people tomorrow?  
+    明日1,000人の前でスピーチをしなければならないとしたら、どうしますか？
+33. What would you do if you could change one thing about yourself?  
+    自分自身の1つのことを変えられるとしたら、何を変えますか？
+34. What would you do if you were stuck in an elevator for 6 hours?  
+    6時間エレベーターに閉じ込められたらどうしますか？
+35. What would you do if you had the power to make everyone happy?  
+    みんなを幸せにする力を持っていたら、どうしますか？
+36. What would you do if you could control the weather for a week?  
+    1週間天気をコントロールできるとしたら、どうしますか？
+37. What would you do if you were asked to be the leader of a new country?  
+    新しい国のリーダーになるよう頼まれたら、どうしますか？
+38. What would you do if you had to give up your favorite hobby forever?  
+    一番好きな趣味を永久にあきらめなければならないとしたら、どうしますか？
+39. What would you do if you could only communicate through text messages for a year?  
+    1年間テキストメッセージだけでしかコミュニケーションできないとしたら、どうしますか？
+40. What would you do if you found out you had a long-lost twin?  
+    長い間失われていた双子がいるとわかったら、どうしますか？
+41. What would you do if you had the power to see the future?  
+    未来を見る力があったら、どうしますか？
+42. What would you do if you had to live in the past for the rest of your life?  
+    残りの人生を過去で生きなければならないとしたら、どうしますか？
+43. What would you do if you could change one historical event?  
+    歴史上の出来事を1つだけ変えられるとしたら、何を変えますか？
+44. What would you do if you could never return to your home country?  
+    自分の国に二度と帰れないとしたら、どうしますか？
+45. What would you do if you could erase one bad memory?  
+    悪い思い出を1つ消せるとしたら、何を消しますか？`
+        }
+    ]
 };
