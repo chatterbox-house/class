@@ -1344,42 +1344,33 @@ const maxFontSize = 8; // vw/rem units
 function populateStorySelector(cls) {
     storySelector.innerHTML = '<option value="">Select Story</option>';
 
-    if (lessonsData[cls]) {
-        if (lessonsData[cls].stories) {
-            // For classes with the stories array structure (like Adult)
-            lessonsData[cls].stories.forEach((story, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = `${index + 1}. ${story.title}`;
-                storySelector.appendChild(option);
-            });
-        } else {
-            // For classes with individual story properties (like Eiken5)
-            let storyCount = 1;
-            for (const [storyKey, storyContent] of Object.entries(lessonsData[cls])) {
-                // Skip if it's not a story (like 'questions')
-                if (storyKey === 'questions') {
-                    const option = document.createElement('option');
-                    option.value = storyKey;
-                    option.textContent = `${storyCount}. QA Questions`;
-                    storySelector.appendChild(option);
-                    storyCount++;
-                } else if (typeof storyContent === 'object' && storyContent.content) {
-                    const option = document.createElement('option');
-                    option.value = storyKey;
-                    const title = storyContent.title || `Story ${storyCount}`;
-                    option.textContent = `${storyCount}. ${title}`;
-                    storySelector.appendChild(option);
-                    storyCount++;
-                }
-            }
-        }
-        
-        storySelector.disabled = false;
-        storySelector.focus();
-    }
-}
+    if (!lessonsData[cls]) return;
 
+    let optionIndex = 0;
+    
+    // Add questions first if they exist
+    if (lessonsData[cls].questions) {
+        const option = document.createElement('option');
+        option.value = 'questions';
+        option.textContent = `${optionIndex + 1}. QA Questions`;
+        storySelector.appendChild(option);
+        optionIndex++;
+    }
+
+    // Add stories
+    if (lessonsData[cls].stories) {
+        lessonsData[cls].stories.forEach((story, index) => {
+            const option = document.createElement('option');
+            option.value = optionIndex;
+            option.textContent = `${optionIndex + 1}. ${story.title}`;
+            storySelector.appendChild(option);
+            optionIndex++;
+        });
+    }
+
+    storySelector.disabled = false;
+    storySelector.focus();
+}
     // ====================
     // READING MODE FUNCTIONS
     // ====================
@@ -1412,23 +1403,24 @@ function loadTextContent(cls) {
     }
 
     let content;
-    if (lessonsData[cls].stories) {
-        // Handle classes with stories array (like Adult)
+    if (currentStory === 'questions') {
+        content = lessonsData[cls].questions;
+    } else {
         const storyIndex = parseInt(currentStory);
-        if (isNaN(storyIndex)) {
+        if (isNaN(storyIndex) || !lessonsData[cls].stories || !lessonsData[cls].stories[storyIndex]) {
             console.error('Invalid story index:', currentStory);
             alert('Invalid story selection');
             exitReadingMode();
             return;
         }
-        content = lessonsData[cls]?.stories?.[storyIndex]?.content;
-    } else {
-        // Handle classes with individual story properties (like Eiken5)
-        if (currentStory === 'questions') {
-            content = lessonsData[cls][currentStory];
-        } else {
-            content = lessonsData[cls][currentStory]?.content || lessonsData[cls][currentStory];
-        }
+        content = lessonsData[cls].stories[storyIndex].content;
+    }
+
+    if (!content) {
+        console.error('Content not found for story:', currentStory, 'in class:', cls);
+        alert(`Content not found for selected story`);
+        exitReadingMode();
+        return;
     }
 
     if (!content) {
@@ -2625,132 +2617,82 @@ function applyFontSize() {
 function loadLessonsData() {
     return new Promise((resolve, reject) => {
         try {
-if (typeof x !== 'undefined') {
-    // Convert the x object to the expected format
-    const xStories = {};
-    Object.keys(x).forEach((key, index) => {
-        xStories[key] = {
-            title: `Story ${index + 1}`,
-            content: x[key]
-        };
-    });
-    lessonsData['X'] = xStories;
-    console.log('X class data loaded with', Object.keys(xStories).length, 'stories');
-}
-
-if (typeof c !== 'undefined') {
-    // Convert the c object to the expected format
-    const cStories = {};
-    Object.keys(c).forEach((key, index) => {
-        cStories[key] = {
-            title: `Story ${index + 1}`,
-            content: c[key]
-        };
-    });
-    lessonsData['C'] = cStories;
-    console.log('C class data loaded with', Object.keys(cStories).length, 'stories');
-}
-            
-            if (typeof adult !== 'undefined') {
-                lessonsData['Adult'] = adult;
-                console.log('Adult stories loaded:', adult.stories.length);
-                console.log('First story title:', adult.stories[0].title);
-            }
-if (typeof eiken1 !== 'undefined') {
-    lessonsData['Eiken1'] = eiken1;
-    console.log('Eiken 1 class data loaded with', Object.keys(eiken1).length, 'stories');
-}
-if (typeof eikenpre1 !== 'undefined') {
-    lessonsData['EikenPre1'] = eikenpre1;
-    console.log('Eiken Pre-1 class data loaded with', Object.keys(eikenpre1).length, 'stories');
-}
-            if (typeof eiken2 !== 'undefined') {
-                lessonsData['Eiken2'] = eiken2;
-                console.log('Eiken 2 class data loaded with', Object.keys(eiken2).length, 'stories');
-            }
-if (typeof eikenpre2plus !== 'undefined') {
-    lessonsData['EikenPre2Plus'] = eikenpre2plus;
-    console.log('Eiken Pre-2 Plus class data loaded with', Object.keys(eikenpre2plus).length, 'stories');
-}
-            
-if (typeof eiken3 !== 'undefined' && typeof eiken3questions !== 'undefined') {
-    // Start with the questions as the first item
-    const storiesObj = {
-        'questions': {
-            title: 'Questions',
-            content: eiken3questions.questions
-        }
-    };
-
-    // Then add the stories after
-    let storyCount = 1;
-    for (const [key, story] of Object.entries(eiken3)) {
-        storiesObj[key] = {
-            title: `Story ${storyCount}`,
-            content: story
-        };
-        storyCount++;
-    }
-    
-    lessonsData['Eiken3'] = storiesObj;
-    console.log('Eiken 3 class data loaded with', Object.keys(storiesObj).length, 'items');
-}
-
-if (typeof eiken4 !== 'undefined') {
-    lessonsData['Eiken4'] = {};
-    let storyCount = 1;
-    
-    // Convert each story in eiken4 to numbered entries
-    for (const [key, content] of Object.entries(eiken4)) {
-        lessonsData['Eiken4'][key] = {
-            title: `Story ${storyCount}`,
-            content: content
-        };
-        storyCount++;
-    }
-    
-    console.log('Eiken 4 class data loaded with', storyCount-1, 'stories');
-}
- if (typeof eikenpre2 !== 'undefined') {
-                lessonsData['EikenPre2'] = eikenpre2;
-                console.log('Eiken Pre-2 class data loaded with', Object.keys(eikenpre2).length, 'stories');
-            }
-            
-            if (typeof qa5 !== 'undefined' && typeof eiken5story !== 'undefined') {
-                // Handle the object structure of eiken5story
-                const storiesObj = {};
-                let storyCount = 1;
-                
-                // Convert the object to numbered stories
-                for (const [key, story] of Object.entries(eiken5story)) {
-                    storiesObj[`story_${storyCount}`] = {
-                        title: story.title || `Story ${storyCount}`,
+            // Standard format for all classes
+            const classData = {
+                'Adult': adult,
+                'X': x,
+                'C': c,
+                'Eiken1': eiken1,
+                'EikenPre1': eikenpre1,
+                'Eiken2': eiken2,
+                'EikenPre2': eikenpre2,
+                'EikenPre2Plus': eikenpre2plus,
+                'Eiken3': { 
+                    stories: Object.values(eiken3).map((content, i) => ({
+                        title: `Story ${i+1}`,
+                        content: content
+                    })),
+                    questions: eiken3questions.questions
+                },
+                'Eiken4': Object.values(eiken4).map((content, i) => ({
+                    title: `Story ${i+1}`,
+                    content: content
+                })),
+                'Eiken5': {
+                    stories: Object.values(eiken5story).map(story => ({
+                        title: story.title,
                         content: story.content
+                    })),
+                    questions: qa5.questions
+                },
+                'HighSchool': {
+                    stories: [
+                        {
+                            title: 'Getting to Know You',
+                            content: gettingtoknow.questions
+                        },
+                        {
+                            title: 'Easy Questions',
+                            content: easyquestions2.questions
+                        }
+                    ]
+                }
+            };
+
+            // Process each class to ensure consistent structure
+            Object.entries(classData).forEach(([className, data]) => {
+                if (!data) return; // Skip if data not loaded
+                
+                if (Array.isArray(data)) {
+                    // For classes that are just arrays of content
+                    lessonsData[className] = {
+                        stories: data.map((content, i) => ({
+                            title: `Story ${i+1}`,
+                            content: content
+                        }))
                     };
-                    storyCount++;
+                } else if (data.stories || data.questions) {
+                    // For classes that already have the right structure
+                    lessonsData[className] = data;
+                } else {
+                    // For simple objects with content
+                    lessonsData[className] = {
+                        stories: Object.entries(data).map(([key, content]) => ({
+                            title: key.replace(/_/g, ' '),
+                            content: content
+                        }))
+                    };
                 }
                 
-                lessonsData['Eiken5'] = {
-                    'questions': qa5.questions,
-                    ...storiesObj
-                };
-                console.log('Eiken 5 class data loaded with', Object.keys(storiesObj).length, 'stories');
-            }
-            
-            if (typeof gettingtoknow !== 'undefined' && typeof easyquestions2 !== 'undefined') {
-                lessonsData['HighSchool'] = {
-                    'gettingtoknow': gettingtoknow.questions,
-                    'easyquestions2': easyquestions2.questions
-                };
-                console.log('High School data loaded');
-            }
-            
+                console.log(`${className} loaded with`, 
+                    lessonsData[className].stories?.length || 0, 'stories and',
+                    lessonsData[className].questions ? 'questions' : 'no questions');
+            });
+
             if (Object.keys(lessonsData).length > 0) {
                 resolve();
             } else {
-                const error = 'No lesson data found. Please ensure at least one class file is loaded.';
-                console.error(error);
-                reject(error);
+                reject('No lesson data found');
             }
         } catch (e) {
             console.error('Error loading lesson data:', e);
