@@ -98,8 +98,8 @@
 
   /* News Ticker styling */
 .news-ticker {
-  height: 3vh;
-  min-height: 20px; /* Ensure it's visible even on small screens */
+  height: 5vh; /* Increased from 3vh */
+  min-height: 30px; /* Increased from 20px */
   background: #222;
   color: #fff;
   overflow: hidden;
@@ -115,10 +115,10 @@ body.light-mode .news-ticker {
 .ticker-content {
   position: absolute;
   white-space: nowrap;
-  line-height: 3vh;
+  line-height: 5vh; /* Increased from 3vh */
   font-family: var(--body-font);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2rem; /* Increased from 1.2rem */
   will-change: transform;
   left: 100%;
   top: 0;
@@ -933,7 +933,6 @@ function init() {
   updateFontSize();
   fetchTemperatures();
 }
-
     // Load settings from localStorage
     function loadSettings() {
       const savedMode = localStorage.getItem('darkMode');
@@ -1160,44 +1159,45 @@ function processTickerHeadlines(items, source) {
       }, 10);
     }
     // Ticker functionality
-    function initTicker() {
-      updateTicker();
-      setInterval(updateTicker, config.tickerUpdateInterval);
-      animateTicker();
-    }
+function initTicker() {
+  updateTickerWithAllHeadlines();
+  setInterval(updateTickerWithAllHeadlines, config.tickerUpdateInterval);
+  animateTicker();
+}
 
-    function updateTicker() {
-      if (state.headlines.length === 0) return;
-      
-      // Create ticker items from all headlines, ensuring no repeats until all have shown
-      const shuffledHeadlines = [...state.headlines];
-      for (let i = shuffledHeadlines.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffledHeadlines[i], shuffledHeadlines[j]] = [shuffledHeadlines[j], shuffledHeadlines[i]];
-      }
-      
-      const tickerContent = document.querySelector('.ticker-content');
-      tickerContent.innerHTML = '';
-      
-      shuffledHeadlines.forEach(headline => {
-        const tickerItem = document.createElement('div');
-        tickerItem.className = 'ticker-item';
-        
-        const sourceSpan = document.createElement('span');
-        sourceSpan.className = 'ticker-source';
-        sourceSpan.textContent = `[${state.currentSource}]`;
-        
-        const textSpan = document.createElement('span');
-        textSpan.textContent = headline.title;
-        
-        tickerItem.appendChild(sourceSpan);
-        tickerItem.appendChild(textSpan);
-        tickerContent.appendChild(tickerItem);
-      });
-      
-      // Reset position
-      tickerContent.style.left = '100%';
-    }
+function updateTickerWithAllHeadlines() {
+  if (state.allHeadlines.length === 0) return;
+  
+  const tickerContent = document.querySelector('.ticker-content');
+  if (!tickerContent) return;
+  
+  // Take up to 100 random headlines from all sources
+  const shuffled = [...state.allHeadlines]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, 100);
+  
+  tickerContent.innerHTML = '';
+  
+  shuffled.forEach(headline => {
+    const tickerItem = document.createElement('div');
+    tickerItem.className = 'ticker-item';
+    
+    const sourceSpan = document.createElement('span');
+    sourceSpan.className = 'ticker-source';
+    sourceSpan.textContent = `[${headline.source}]`;
+    
+    const textSpan = document.createElement('span');
+    textSpan.textContent = headline.title;
+    
+    tickerItem.appendChild(sourceSpan);
+    tickerItem.appendChild(textSpan);
+    tickerContent.appendChild(tickerItem);
+  });
+  
+  // Reset animation
+  tickerContent.style.left = '100%';
+  animateTicker();
+}
 
 function animateTicker() {
   const tickerContent = document.querySelector('.ticker-content');
@@ -1283,27 +1283,28 @@ function updateClock() {
   elements.date.textContent = `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year}`;
 }
 
-    // News functionality
-    function loadHeadlines() {
-      const feedConfig = config.rssFeeds[state.currentSource];
-      if (!feedConfig) {
-        console.error('No RSS feed config found for source:', state.currentSource);
-        return;
-      }
-      
-      // Clear existing headlines and show loading message
-      state.headlines = [];
-      elements.englishContent.innerHTML = '<div class="headline">Loading headlines...</div>';
-      elements.japaneseContent.innerHTML = '<div class="headline">ヘッドラインを読み込み中...</div>';
-      
-      if (feedConfig.type === 'direct') {
-        // Use direct parsing for problematic feeds
-        fetchDirectFeed(feedConfig.directUrl || feedConfig.url);
-      } else {
-        // Use API for other feeds
-        fetchApiFeed(feedConfig.url);
-      }
-    }
+function loadHeadlines() {
+  const feedConfig = config.rssFeeds[state.currentSource];
+  if (!feedConfig) {
+    console.error('No RSS feed config found for source:', state.currentSource);
+    return;
+  }
+  
+  // Clear existing headlines and show loading message
+  state.headlines = [];
+  elements.englishContent.innerHTML = '<div class="headline">Loading headlines...</div>';
+  elements.japaneseContent.innerHTML = '<div class="headline">ヘッドラインを読み込み中...</div>';
+  
+  if (feedConfig.type === 'direct') {
+    // Use direct parsing for problematic feeds
+    fetchDirectFeed(feedConfig.directUrl || feedConfig.url);
+  } else {
+    // Use API for other feeds
+    fetchApiFeed(feedConfig.url);
+  }
+  
+  // Don't update ticker here - it will be updated independently
+}
 
     function fetchApiFeed(url) {
       const cacheKey = `rss_${url}`;
