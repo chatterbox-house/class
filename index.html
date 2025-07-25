@@ -565,6 +565,9 @@ body.light-mode .temp-ticker {
   font-weight: bold;
   margin-right: 0.5rem;
 }
+.temp-weather {
+  margin-left: 0.3rem;
+}
 </style>
 </head>
 <body>
@@ -807,6 +810,25 @@ let state = {
         modalFontSizeDisplay: document.getElementById('modal-font-size-display'),
   headlineCounter: document.getElementById('headline-counter')
     };
+
+// Add this weather condition to emoji mapping at the top of your script
+const weatherEmojiMap = {
+  'sunny': '☀️',
+  'clear': '☀️',
+  'cloudy': '☁️',
+  'partly cloudy': '⛅',
+  'rain': '🌧️',
+  'light rain': '🌧️',
+  'heavy rain': '🌧️',
+  'thunder': '⛈️',
+  'snow': '❄️',
+  'light snow': '❄️',
+  'heavy snow': '❄️',
+  'fog': '🌫️',
+  'mist': '🌫️',
+  'windy': '🌬️'
+};
+
 async function fetchTemperatures() {
   try {
     const now = Date.now();
@@ -835,32 +857,50 @@ async function fetchTemperatures() {
         const data = await response.json();
         const temp = data.forecasts[0].temperature.min?.celsius || 
                      data.forecasts[0].temperature.max?.celsius || '--';
+        const condition = data.forecasts[0].telop.toLowerCase() || 'unknown';
         
-        const result = {city: city.name, temp: temp, region: 'Japan'};
+        const result = {
+          city: city.name, 
+          temp: temp, 
+          condition: condition,
+          region: 'Japan'
+        };
         state.rssCache[cityCacheKey] = {
           data: result,
           timestamp: now
         };
         return result;
       } catch (e) {
-        return {city: city.name, temp: '--', region: 'Japan'};
+        return {
+          city: city.name, 
+          temp: '--', 
+          condition: 'unknown',
+          region: 'Japan'
+        };
       }
     }));
     
-    // 2. NEW WeatherAPI implementation
+    // 2. WeatherAPI implementation
     const worldTemps = await Promise.all(config.worldCities.map(async city => {
       try {
         const response = await fetch(
           `https://api.weatherapi.com/v1/current.json?key=${config.weatherAPIKey}&q=${city.id}`
         );
         const data = await response.json();
+        const condition = data.current.condition.text.toLowerCase() || 'unknown';
         return {
           city: city.name,
           temp: data.current.temp_c,
+          condition: condition,
           region: 'World'
         };
       } catch (e) {
-        return {city: city.name, temp: '--', region: 'World'};
+        return {
+          city: city.name, 
+          temp: '--', 
+          condition: 'unknown',
+          region: 'World'
+        };
       }
     }));
     
@@ -887,11 +927,21 @@ function updateTempTicker() {
     citySpan.className = 'temp-city';
     citySpan.textContent = `${item.city}:`;
     
-    const tempSpan = document.createElement('span');
-    tempSpan.textContent = `${item.temp}°C`;
+    // Get appropriate emoji for weather condition
+    let emoji = '🌤️'; // default emoji
+    for (const [key, value] of Object.entries(weatherEmojiMap)) {
+      if (item.condition.includes(key)) {
+        emoji = value;
+        break;
+      }
+    }
+    
+    const weatherSpan = document.createElement('span');
+    weatherSpan.className = 'temp-weather';
+    weatherSpan.textContent = `${emoji} ${item.temp}°C`;
     
     tempItem.appendChild(citySpan);
-    tempItem.appendChild(tempSpan);
+    tempItem.appendChild(weatherSpan);
     tickerContent.appendChild(tempItem);
   });
   
