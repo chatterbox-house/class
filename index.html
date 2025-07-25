@@ -524,32 +524,30 @@ body.light-mode .news-ticker {
   body.light-mode .headline-counter {
     color: var(--light-text);
   }
-/* Temperature Ticker Styles */
+/* Weather Ticker Styles - now matches news ticker */
 .temp-ticker {
-  font-size: 1.5rem; /* Larger font for visibility */
-  height: 4vh; /* Slightly taller */
-  background: #222; /* Darker background */
+  height: 5vh;
+  background: #222;
   color: #fff;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid #555;
-  border-bottom: 1px solid #555;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
 }
 
 body.light-mode .temp-ticker {
-  background: #e0e0e0;
-  color: #333;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  background: #f0f0f0;
+  color: #222;
+  border-bottom: 1px solid #aaa;
 }
 
 .temp-ticker-content {
   position: absolute;
   white-space: nowrap;
-  line-height: 3vh;
+  line-height: 5vh;
   font-family: var(--body-font);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2rem;
   will-change: transform;
   left: 100%;
   top: 0;
@@ -565,8 +563,10 @@ body.light-mode .temp-ticker {
   font-weight: bold;
   margin-right: 0.5rem;
 }
+
 .temp-weather {
   margin-left: 0.3rem;
+  font-size: 1.8rem; /* Slightly larger emoji */
 }
 </style>
 </head>
@@ -586,10 +586,10 @@ body.light-mode .temp-ticker {
 </div>
   </header>
 
-  <!-- News Ticker -->
-  <div class="news-ticker">
-    <div class="ticker-content"></div>
-  </div>
+<!-- Weather Ticker -->
+<div class="temp-ticker">
+  <div class="temp-ticker-content"></div>
+</div>
 
   <!-- Main Newspaper Content -->
   <div class="content-container">
@@ -613,9 +613,9 @@ body.light-mode .temp-ticker {
       </div>
     </div>
   </div>
-<!-- Temperature Ticker -->
-<div class="temp-ticker">
-  <div class="temp-ticker-content"></div>
+<!-- News Ticker -->
+<div class="news-ticker">
+  <div class="ticker-content"></div>
 </div>
 
   <!-- Newspaper Footer with Controls -->
@@ -954,7 +954,7 @@ function animateTempTicker() {
   
   const tickerWidth = tickerContent.scrollWidth;
   const containerWidth = document.querySelector('.temp-ticker').offsetWidth;
-  const duration = (tickerWidth + containerWidth) / 50 * 1000;
+  const duration = (tickerWidth + containerWidth) / config.tickerSpeed * 1000;
   
   tickerContent.style.transition = 'none';
   tickerContent.style.transform = `translateX(${containerWidth}px)`;
