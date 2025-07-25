@@ -953,7 +953,8 @@ function updateClock() {
     }
 
 function processHeadlines(items) {
-  state.headlines = items.slice(0, config.maxHeadlines);
+  // Reverse the array to show newest first
+  state.headlines = items.slice(0, config.maxHeadlines).reverse();
   state.currentIndex = 0;
   elements.headlineCounter.textContent = `1/${state.headlines.length}`;
   displayCurrentHeadline();
