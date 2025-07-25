@@ -1052,6 +1052,10 @@ function loadAllFeeds() {
       loadFeedForTicker(source);
     }
   });
+
+  // Initialize the ticker with an empty array
+  state.allHeadlines = [];
+  initTicker();
 }
 
 function loadFeedForTicker(source) {
@@ -1402,8 +1406,7 @@ function processHeadlines(items) {
     source: state.currentSource
   })));
 
-  // Update ticker with ALL headlines from ALL sources
-  updateTickerWithAllHeadlines();
+  // REMOVED the ticker update from here - it will be handled by the independent ticker interval
 }
 
 function updateTickerWithAllHeadlines() {
