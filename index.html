@@ -464,6 +464,18 @@
     button:focus {
       transform: scale(1.05);
     }
+.headline-counter {
+  margin-left: 1rem;
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+  color: white;
+  min-width: 60px;
+  text-align: center;
+}
+
+body.light-mode .headline-counter {
+  color: var(--light-text);
+}
   </style>
 </head>
 <body>
@@ -475,11 +487,12 @@
       <div id="date">2023-01-01</div>
       <div id="weather">Osaka: --°C</div>
     </div>
-    <div class="header-controls">
-      <button id="pause-btn" class="nav-btn" tabindex="1">⏸ Pause</button>
-      <button id="next-btn" class="nav-btn" tabindex="2">⏭ Next</button>
-      <button id="source-btn" tabindex="3">BBC</button>
-    </div>
+<div class="header-controls">
+  <button id="pause-btn" class="nav-btn" tabindex="1">⏸ Pause</button>
+  <button id="next-btn" class="nav-btn" tabindex="2">⏭ Next</button>
+  <button id="source-btn" tabindex="3">BBC</button>
+  <div id="headline-counter" class="headline-counter">0/0</div>
+</div>
   </header>
 
   <!-- Main Newspaper Content -->
@@ -628,7 +641,8 @@ rssFeeds: {
       modalFontDecrease: document.getElementById('modal-font-decrease'),
       modalFontReset: document.getElementById('modal-font-reset'),
       modalFontIncrease: document.getElementById('modal-font-increase'),
-      modalFontSizeDisplay: document.getElementById('modal-font-size-display')
+        modalFontSizeDisplay: document.getElementById('modal-font-size-display'),
+  headlineCounter: document.getElementById('headline-counter')
     };
 
     // Initialize the app
@@ -939,17 +953,21 @@ rssFeeds: {
       }
     }
 
-    function processHeadlines(items) {
-      state.headlines = items.slice(0, config.maxHeadlines);
-      state.currentIndex = 0;
-      displayCurrentHeadline();
-      startRotation();
-    }
+function processHeadlines(items) {
+  state.headlines = items.slice(0, config.maxHeadlines);
+  state.currentIndex = 0;
+  elements.headlineCounter.textContent = `1/${state.headlines.length}`;
+  displayCurrentHeadline();
+  startRotation();
+}
 
-    function displayCurrentHeadline() {
-      if (state.headlines.length === 0) return;
-      
-      const headline = state.headlines[state.currentIndex];
+function displayCurrentHeadline() {
+  if (state.headlines.length === 0) return;
+  
+  // Update counter display
+  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length}`;
+  
+  const headline = state.headlines[state.currentIndex];
       const displayText = headline.title || "No title available";
       
       // Create HTML for the headline with publication date
@@ -1072,19 +1090,21 @@ rssFeeds: {
       }
     }
 
-    function showNextHeadline() {
-      if (state.headlines.length === 0) return;
-      
-      state.currentIndex = (state.currentIndex + 1) % state.headlines.length;
-      displayCurrentHeadline();
-    }
+function showNextHeadline() {
+  if (state.headlines.length === 0) return;
+  
+  state.currentIndex = (state.currentIndex + 1) % state.headlines.length;
+  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length}`;
+  displayCurrentHeadline();
+}
     
-    function showPrevHeadline() {
-      if (state.headlines.length === 0) return;
-      
-      state.currentIndex = (state.currentIndex - 1 + state.headlines.length) % state.headlines.length;
-      displayCurrentHeadline();
-    }
+function showPrevHeadline() {
+  if (state.headlines.length === 0) return;
+  
+  state.currentIndex = (state.currentIndex - 1 + state.headlines.length) % state.headlines.length;
+  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length}`;
+  displayCurrentHeadline();
+}
 
     function togglePause() {
       state.isPaused = !state.isPaused;
@@ -1202,7 +1222,7 @@ rssFeeds: {
       elements.articleSentence.textContent = currentSentence;
       
       // Update progress indicator
-      elements.articleProgress.textContent = `Sentence ${currentIndex + 1} of ${state.modalState.sentences.length}`;
+elements.articleProgress.textContent = `Article ${state.currentIndex + 1}/${state.headlines.length} • Sentence ${currentIndex + 1}/${state.modalState.sentences.length}`;
       
       // Check if we have a cached translation
       const cachedTranslation = getCachedTranslation(currentSentence);
