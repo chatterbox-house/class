@@ -573,7 +573,6 @@ body.light-mode .temp-ticker {
     <div class="header-info">
       <div id="clock">00:00:00</div>
       <div id="date">2023-01-01</div>
-      <div id="weather">Osaka: --°C</div>
     </div>
 <div class="header-controls">
   <button id="pause-btn" class="nav-btn" tabindex="1">⏸ Pause</button>
@@ -746,15 +745,15 @@ const config = {
     {id: "Berlin", name: "Berlin"},
     {id: "Rome", name: "Rome"}
   ],
-
   // MyMemory Translation API
   translationAPI: 'https://api.mymemory.translated.net/get'
 };
 
-    // App State
+// App State
 let state = {
   currentSource: 'BBC',
   headlines: [],
+  allHeadlines: [], // Add this line
   currentIndex: 0,
   isPaused: false,
   rotationTimer: null,
@@ -779,7 +778,6 @@ let state = {
     const elements = {
       clock: document.getElementById('clock'),
       date: document.getElementById('date'),
-      weather: document.getElementById('weather'),
       englishContent: document.getElementById('english-content'),
       japaneseContent: document.getElementById('japanese-content'),
       pauseBtn: document.getElementById('pause-btn'),
@@ -900,13 +898,12 @@ function init() {
   loadSettings();
   initEventListeners();
   startClock();
-  fetchWeather();
   initTicker();
-  loadAllFeeds();
+  loadAllFeeds(); // Changed from loadHeadlines()
   updateModeToggle();
   updateSourceButton();
   updateFontSize();
-  fetchTemperatures(); // Add this line
+  fetchTemperatures();
 }
 
     // Load settings from localStorage
@@ -1045,7 +1042,6 @@ function fetchApiFeedForTicker(url, source) {
       console.error(`Failed to load ${source} headlines:`, error);
     });
 }
-
 function fetchDirectFeedForTicker(url, source) {
   fetch(url)
     .then(response => {
@@ -1077,7 +1073,7 @@ function processTickerHeadlines(items, source) {
     source: source
   }));
   
-  allHeadlines = [...allHeadlines, ...newHeadlines];
+  state.allHeadlines = [...state.allHeadlines, ...newHeadlines];
   
   // Update ticker with all available headlines
   updateTickerWithAllHeadlines();
@@ -1243,31 +1239,6 @@ function updateClock() {
   elements.date.textContent = `${day < 10 ? '0' + day : day}/${month < 10 ? '0' + month : month}/${year}`;
 }
 
-    // Weather functionality
-// In the fetchWeather function, replace with:
-function fetchWeather() {
-  fetch('https://weather.tsukumijima.net/api/forecast/city/270000')
-    .then(response => {
-      if (!response.ok) throw new Error('Weather API error');
-      return response.json();
-    })
-    .then(data => {
-      if (data.forecasts && data.forecasts[0]) {
-        // Get current temperature if available, otherwise use today's max
-        const temp = data.forecasts[0].temperature.min?.celsius || 
-                     data.forecasts[0].temperature.max?.celsius || '--';
-        elements.weather.textContent = `Osaka: ${temp}°C (Now)`;
-      }
-    })
-    .catch(error => {
-      console.error('Failed to fetch weather:', error);
-      elements.weather.textContent = 'Osaka: --°C';
-    })
-    .finally(() => {
-      state.weatherTimer = setTimeout(fetchWeather, 20 * 60 * 1000); // Update every 20 mins
-    });
-}
-
     // News functionality
     function loadHeadlines() {
       const feedConfig = config.rssFeeds[state.currentSource];
@@ -1367,7 +1338,7 @@ function processHeadlines(items) {
   startRotation();
 
   // Add these headlines to our global collection
-  allHeadlines = allHeadlines.concat(newHeadlines.map(h => ({
+  state.allHeadlines = state.allHeadlines.concat(newHeadlines.map(h => ({
     ...h,
     source: state.currentSource
   })));
@@ -1377,13 +1348,13 @@ function processHeadlines(items) {
 }
 
 function updateTickerWithAllHeadlines() {
-  if (allHeadlines.length === 0) return;
+  if (state.allHeadlines.length === 0) return;
   
   const tickerContent = document.querySelector('.ticker-content');
   tickerContent.innerHTML = '';
   
   // Take up to 100 random headlines from all sources
-  const shuffled = [...allHeadlines]
+  const shuffled = [...state.allHeadlines]
     .sort(() => 0.5 - Math.random())
     .slice(0, 100);
   
