@@ -571,10 +571,30 @@ body.light-mode .headline-counter {
       minFontSize: 1.5, // rem
       maxFontSize: 5.0, // rem
       fontSizeStep: 0.5, // rem
-// RSS Feeds - only BBC and Guardian as requested
+// RSS Feeds configuration
 rssFeeds: {
-  'BBC': {
+  'BBC TOP': {
+    url: 'http://feeds.bbci.co.uk/news/rss.xml',
+    type: 'api'
+  },
+  'BBC WORLD': {
     url: 'http://feeds.bbci.co.uk/news/world/rss.xml',
+    type: 'api'
+  },
+  'BBC SPORTS': {
+    url: 'http://feeds.bbci.co.uk/sport/rss.xml',
+    type: 'api'
+  },
+  'NPR World': {
+    url: 'https://feeds.npr.org/1004/rss.xml',
+    type: 'api'
+  },
+  'NPR Top': {
+    url: 'https://feeds.npr.org/1001/rss.xml',
+    type: 'api'
+  },
+  'NYT World': {
+    url: 'https://www.nytimes.com/svc/collections/v1/publish/www.nytimes.com/section/world/rss.xml',
     type: 'api'
   },
   'Guardian': {
