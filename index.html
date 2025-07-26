@@ -390,7 +390,7 @@ body.light-mode .news-ticker {
     font-size: var(--article-font-size);
   }
   
-  .article-translation {
+.article-translation {
     width: 90%;
     text-align: center;
     color: #aaa;
@@ -401,7 +401,39 @@ body.light-mode .news-ticker {
     overflow: auto;
     max-height: 40vh;
     font-size: var(--article-font-size);
-  }
+}
+
+.article-read-more {
+    width: 90%;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: var(--article-font-size);
+}
+
+.article-read-more a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.article-read-more a:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+body.light-mode .article-read-more a {
+    color: var(--accent-blue);
+}
+
+body.light-mode .article-read-more a:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
   
   body.light-mode .article-translation {
     color: #666;
@@ -648,10 +680,11 @@ body.light-mode .temp-ticker {
     <div class="modal-container">
       <div class="article-view" id="article-display">
         <div class="article-sentence-container">
-          <div class="article-sentence" id="article-sentence"></div>
-          <div class="article-translation" id="article-translation"></div>
-          <div class="article-progress" id="article-progress"></div>
-        </div>
+    <div class="article-sentence" id="article-sentence"></div>
+    <div class="article-translation" id="article-translation"></div>
+    <div class="article-read-more" id="article-read-more"></div>
+    <div class="article-progress" id="article-progress"></div>
+</div>
         <div class="article-nav">
           <button id="prev-sentence-btn" tabindex="11">← Previous</button>
           <button id="next-sentence-btn" tabindex="13">Next →</button>
@@ -782,34 +815,35 @@ let state = {
 };
 
     // DOM Elements
-    const elements = {
-      clock: document.getElementById('clock'),
-      date: document.getElementById('date'),
-      englishContent: document.getElementById('english-content'),
-      japaneseContent: document.getElementById('japanese-content'),
-      pauseBtn: document.getElementById('pause-btn'),
-      nextBtn: document.getElementById('next-btn'),
-      sourceBtn: document.getElementById('source-btn'),
-      articleModal: document.getElementById('article-modal'),
-      articleDisplay: document.getElementById('article-display'),
-      articleSentence: document.getElementById('article-sentence'),
-      articleTranslation: document.getElementById('article-translation'),
-      articleProgress: document.getElementById('article-progress'),
-      prevSentenceBtn: document.getElementById('prev-sentence-btn'),
-      nextSentenceBtn: document.getElementById('next-sentence-btn'),
-      closeModalBtn: document.getElementById('close-modal-btn'),
-      toggleButtons: document.querySelectorAll('.toggle-btn'),
-      modeToggle: document.getElementById('mode-toggle'),
-      fontDecrease: document.getElementById('font-decrease'),
-      fontReset: document.getElementById('font-reset'),
-      fontIncrease: document.getElementById('font-increase'),
-      fontSizeDisplay: document.getElementById('font-size-display'),
-      modalFontDecrease: document.getElementById('modal-font-decrease'),
-      modalFontReset: document.getElementById('modal-font-reset'),
-      modalFontIncrease: document.getElementById('modal-font-increase'),
-        modalFontSizeDisplay: document.getElementById('modal-font-size-display'),
+const elements = {
+  clock: document.getElementById('clock'),
+  date: document.getElementById('date'),
+  englishContent: document.getElementById('english-content'),
+  japaneseContent: document.getElementById('japanese-content'),
+  pauseBtn: document.getElementById('pause-btn'),
+  nextBtn: document.getElementById('next-btn'),
+  sourceBtn: document.getElementById('source-btn'),
+  articleModal: document.getElementById('article-modal'),
+  articleDisplay: document.getElementById('article-display'),
+  articleSentence: document.getElementById('article-sentence'),
+  articleTranslation: document.getElementById('article-translation'),
+  articleReadMore: document.getElementById('article-read-more'),
+  articleProgress: document.getElementById('article-progress'),
+  prevSentenceBtn: document.getElementById('prev-sentence-btn'),
+  nextSentenceBtn: document.getElementById('next-sentence-btn'),
+  closeModalBtn: document.getElementById('close-modal-btn'),
+  toggleButtons: document.querySelectorAll('.toggle-btn'),
+  modeToggle: document.getElementById('mode-toggle'),
+  fontDecrease: document.getElementById('font-decrease'),
+  fontReset: document.getElementById('font-reset'),
+  fontIncrease: document.getElementById('font-increase'),
+  fontSizeDisplay: document.getElementById('font-size-display'),
+  modalFontDecrease: document.getElementById('modal-font-decrease'),
+  modalFontReset: document.getElementById('modal-font-reset'),
+  modalFontIncrease: document.getElementById('modal-font-increase'),
+  modalFontSizeDisplay: document.getElementById('modal-font-size-display'),
   headlineCounter: document.getElementById('headline-counter')
-    };
+};
 
 // Add this weather condition to emoji mapping at the top of your script
 const weatherEmojiMap = {
@@ -1751,46 +1785,54 @@ function showPrevHeadline() {
       return sentences.length > 0 ? sentences : [cleanText];
     }
 
-    function displayCurrentSentence() {
-      if (!state.modalState.isOpen || !state.modalState.sentences) return;
-      
-      const currentIndex = state.modalState.currentSentenceIndex;
-      const currentSentence = state.modalState.sentences[currentIndex];
-      
-      // Display the current sentence
-      elements.articleSentence.textContent = currentSentence;
-      
-      // Update progress indicator
-elements.articleProgress.textContent = `Article ${state.currentIndex + 1}/${state.headlines.length} • Sentence ${currentIndex + 1}/${state.modalState.sentences.length}`;
-      
-      // Check if we have a cached translation
-      const cachedTranslation = getCachedTranslation(currentSentence);
-      if (cachedTranslation) {
+function displayCurrentSentence() {
+    if (!state.modalState.isOpen || !state.modalState.sentences) return;
+    
+    const currentIndex = state.modalState.currentSentenceIndex;
+    const currentSentence = state.modalState.sentences[currentIndex];
+    const article = state.modalState.currentArticle;
+    
+    // Display the current sentence
+    elements.articleSentence.textContent = currentSentence;
+    
+    // Update progress indicator
+    elements.articleProgress.textContent = `Article ${state.currentIndex + 1}/${state.headlines.length} • Sentence ${currentIndex + 1}/${state.modalState.sentences.length}`;
+    
+    // Show "Read more" link only on last sentence
+    if (currentIndex === state.modalState.sentences.length - 1 && article.link) {
+        elements.articleReadMore.innerHTML = `<a href="${article.link}" target="_blank">Read full article →</a>`;
+    } else {
+        elements.articleReadMore.innerHTML = '';
+    }
+    
+    // Check if we have a cached translation
+    const cachedTranslation = getCachedTranslation(currentSentence);
+    if (cachedTranslation) {
         elements.articleTranslation.textContent = cachedTranslation;
         state.modalState.translations[currentIndex] = cachedTranslation;
-      } else {
+    } else {
         elements.articleTranslation.textContent = '翻訳中...';
         // Fetch translation if we don't have it
         translateText(currentSentence)
-          .then(translation => {
-            state.modalState.translations[currentIndex] = translation;
-            // Only update if we're still on the same sentence
-            if (state.modalState.currentSentenceIndex === currentIndex) {
-              elements.articleTranslation.textContent = translation;
-            }
-            cacheTranslation(currentSentence, translation);
-          })
-          .catch(error => {
-            console.error('Sentence translation failed:', error);
-            state.modalState.translations[currentIndex] = simpleTranslate(currentSentence);
-            if (state.modalState.currentSentenceIndex === currentIndex) {
-              elements.articleTranslation.textContent = state.modalState.translations[currentIndex];
-            }
-          });
-      }
-      
-      updateSentenceNavigation();
+            .then(translation => {
+                state.modalState.translations[currentIndex] = translation;
+                // Only update if we're still on the same sentence
+                if (state.modalState.currentSentenceIndex === currentIndex) {
+                    elements.articleTranslation.textContent = translation;
+                }
+                cacheTranslation(currentSentence, translation);
+            })
+            .catch(error => {
+                console.error('Sentence translation failed:', error);
+                state.modalState.translations[currentIndex] = simpleTranslate(currentSentence);
+                if (state.modalState.currentSentenceIndex === currentIndex) {
+                    elements.articleTranslation.textContent = state.modalState.translations[currentIndex];
+                }
+            });
     }
+    
+    updateSentenceNavigation();
+}
 
     function showNextSentence() {
       if (!state.modalState.sentences) return;
