@@ -1913,6 +1913,7 @@ function updateTickerWithAllHeadlines() {
   animateTicker();
 }
 
+// Replace the existing displayCurrentHeadline function with this improved version
 function displayCurrentHeadline() {
   if (state.headlines.length === 0) return;
   
@@ -1941,24 +1942,22 @@ function displayCurrentHeadline() {
   elements.englishContent.innerHTML = englishHTML;
   elements.englishContent.classList.add('fade-in');
   
-  // Check cache first
-  const cachedTranslation = getCachedTranslation(displayText);
-  if (cachedTranslation) {
-    elements.japaneseContent.innerHTML = `<div class="headline">${cachedTranslation}</div>`;
-    if (headline.pubDate) {
-      elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
-    }
-    elements.japaneseContent.classList.add('fade-in');
-  } else {
-    // Show simple translation immediately
-    elements.japaneseContent.innerHTML = `<div class="headline">${simpleTranslate(displayText)}</div>`;
-    if (headline.pubDate) {
-      elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
-    }
+  // Always show simple translation immediately
+  const simpleTrans = simpleTranslate(displayText);
+  elements.japaneseContent.innerHTML = `<div class="headline">${simpleTrans}</div>`;
+  if (headline.pubDate) {
+    elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
+  }
+  
+  // Only attempt full translation if the simple one isn't good enough
+  if (simpleTrans.includes('簡易翻訳') || simpleTrans.includes('翻訳不可')) {
     elements.japaneseContent.classList.add('dimmed');
     
     // Start lazy loading the full translation
     lazyLoadTranslation(displayText, headline);
+  } else {
+    // If simple translation was good, use that
+    cacheTranslation(displayText, simpleTrans);
   }
   
   setTimeout(() => {
@@ -1969,35 +1968,52 @@ function displayCurrentHeadline() {
 }
 
 // New function for lazy loading translations
+// Replace the existing lazyLoadTranslation function with this improved version
 function lazyLoadTranslation(text, headline) {
   // Only translate if the headline is still visible after a delay
   setTimeout(() => {
     // Check if we're still showing the same headline
     const currentHeadline = state.headlines[state.currentIndex];
-    if (currentHeadline && currentHeadline.title === text) {
-      translateText(text)
-        .then(translation => {
-          // Double-check we're still on the same headline
-          const checkHeadline = state.headlines[state.currentIndex];
-          if (checkHeadline && checkHeadline.title === text) {
-            elements.japaneseContent.innerHTML = `<div class="headline">${translation}</div>`;
-            if (headline.pubDate) {
-              elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
-            }
-            elements.japaneseContent.classList.add('fade-in');
-            cacheTranslation(text, translation);
-            
-            // Remove fade-in after animation completes
-            setTimeout(() => {
-              elements.japaneseContent.classList.remove('fade-in');
-            }, 500);
-          }
-        })
-        .catch(error => {
-          console.error('Translation failed:', error);
-          // Keep the simple translation we already showed
-        });
+    if (!currentHeadline || currentHeadline.title !== text) return;
+    
+    // Check if we've hit API limits recently
+    const lastFailTime = localStorage.getItem('lastTranslationFail');
+    if (lastFailTime && Date.now() - parseInt(lastFailTime) < 3600000) { // 1 hour
+      console.log('Skipping translation due to recent API limits');
+      return;
     }
+    
+    translateText(text)
+      .then(translation => {
+        // Double-check we're still on the same headline
+        const checkHeadline = state.headlines[state.currentIndex];
+        if (!checkHeadline || checkHeadline.title !== text) return;
+        
+        // Only update if the translation is better than what we have
+        const currentTrans = elements.japaneseContent.querySelector('.headline').textContent;
+        if (translation && !translation.includes('翻訳不可') && 
+            (currentTrans.includes('簡易翻訳') || currentTrans.includes('翻訳不可'))) {
+          elements.japaneseContent.innerHTML = `<div class="headline">${translation}</div>`;
+          if (headline.pubDate) {
+            elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
+          }
+          elements.japaneseContent.classList.add('fade-in');
+          cacheTranslation(text, translation);
+          
+          // Remove fade-in after animation completes
+          setTimeout(() => {
+            elements.japaneseContent.classList.remove('fade-in');
+          }, 500);
+        }
+      })
+      .catch(error => {
+        console.error('Translation failed:', error);
+        // If it's an API limit error, remember this
+        if (error.message.includes('API limit') || error.message.includes('429')) {
+          localStorage.setItem('lastTranslationFail', Date.now().toString());
+        }
+        // Keep the simple translation we already showed
+      });
   }, 2000); // 2 second delay before attempting translation
 }
     
@@ -2034,39 +2050,80 @@ function formatDate(date, inJapanese = false) {
     }
 
     // Simple fallback translation for demo purposes
-    function simpleTranslate(text) {
-      const mockTranslations = {
-        "COVID": "コロナウイルス",
-        "election": "選挙",
-        "news": "ニュース",
-        "update": "更新",
-        "breaking": "速報",
-        "war": "戦争",
-        "peace": "平和",
-        "economy": "経済",
-        "market": "市場",
-        "report": "報告",
-        "Japan": "日本",
-        "China": "中国",
-        "U.S.": "アメリカ",
-        "UK": "イギリス",
-        "Russia": "ロシア",
-        "Guardian": "ガーディアン",
-        "BBC": "英国放送協会",
-        "says": "述べています",
-        "announces": "発表しました",
-        "reports": "報道しています"
-      };
-      
-      // Replace known words
-      let result = text;
-      Object.keys(mockTranslations).forEach(word => {
-        const regex = new RegExp(word, 'gi');
-        result = result.replace(regex, mockTranslations[word]);
-      });
-      
-      return result !== text ? result + " (簡易翻訳)" : "翻訳不可";
-    }
+// Replace the existing simpleTranslate function with this improved version
+function simpleTranslate(text) {
+  const mockTranslations = {
+    // Common news terms
+    "COVID": "コロナウイルス",
+    "election": "選挙",
+    "news": "ニュース",
+    "update": "更新",
+    "breaking": "速報",
+    "war": "戦争",
+    "peace": "平和",
+    "economy": "経済",
+    "market": "市場",
+    "report": "報告",
+    "government": "政府",
+    "president": "大統領",
+    "prime minister": "首相",
+    
+    // Countries
+    "Japan": "日本",
+    "China": "中国",
+    "U.S.": "アメリカ",
+    "United States": "アメリカ合衆国",
+    "UK": "イギリス",
+    "Russia": "ロシア",
+    "South Korea": "韓国",
+    
+    // News sources
+    "Guardian": "ガーディアン",
+    "BBC": "英国放送協会",
+    "Reuters": "ロイター通信",
+    "Associated Press": "AP通信",
+    
+    // Common verbs
+    "says": "述べています",
+    "announces": "発表しました",
+    "reports": "報道しています",
+    "confirms": "確認しました",
+    "denies": "否定しました",
+    "warns": "警告しました",
+    
+    // Time references
+    "today": "本日",
+    "yesterday": "昨日",
+    "tomorrow": "明日",
+    "this week": "今週",
+    "last week": "先週",
+    "next week": "来週",
+    
+    // Common phrases
+    "according to": "によると",
+    "in response to": "への対応として",
+    "due to": "のため",
+    "as a result": "結果として"
+  };
+  
+  // Replace known phrases first (longer matches take priority)
+  let result = text;
+  const sortedKeys = Object.keys(mockTranslations)
+    .sort((a, b) => b.length - a.length);
+    
+  sortedKeys.forEach(phrase => {
+    const regex = new RegExp(phrase, 'gi');
+    result = result.replace(regex, mockTranslations[phrase]);
+  });
+  
+  // If we made any translations, mark it as simple
+  if (result !== text) {
+    return result + " (簡易翻訳)";
+  }
+  
+  // If no translations, return a generic message
+  return "翻訳不可 - 完全な翻訳は記事内で利用可能";
+}
 
     function startRotation() {
       if (state.rotationTimer) clearInterval(state.rotationTimer);
@@ -2114,37 +2171,70 @@ function showPrevHeadline() {
     }
 
     // Translation functionality using MyMemory API
-    async function translateText(text) {
-      // Skip empty or very short text
-      if (!text || text.length < 3) return '翻訳不可';
-      
-      // First check cache
-      const cached = getCachedTranslation(text);
-      if (cached) return cached;
-      
-      try {
-        // Limit text length to avoid API errors
-        const textToTranslate = text.length > 500 ? text.substring(0, 500) : text;
-        
-        const response = await fetch(`${config.translationAPI}?q=${encodeURIComponent(textToTranslate)}&langpair=en|ja`);
-        
-        if (!response.ok) {
-          throw new Error(`API responded with ${response.status}`);
-        }
-        
-        const data = await response.json();
-        
-        if (data.responseStatus !== 200 || !data.responseData) {
-          throw new Error('Translation API error: ' + (data.responseDetails || 'Unknown error'));
-        }
-        
-        return data.responseData.translatedText || '翻訳不可';
-      } catch (error) {
-        console.error('Translation API error:', error);
-        // Fall back to simple translation
-        return simpleTranslate(text);
-      }
+// Replace the existing translateText function with this new version
+async function translateText(text) {
+  // Skip empty or very short text
+  if (!text || text.length < 3) return '翻訳不可';
+  
+  // First check cache
+  const cached = getCachedTranslation(text);
+  if (cached) return cached;
+  
+  try {
+    // Limit text length to avoid API errors
+    const textToTranslate = text.length > 500 ? text.substring(0, 500) : text;
+    
+    const response = await fetch(`${config.translationAPI}?q=${encodeURIComponent(textToTranslate)}&langpair=en|ja`);
+    
+    if (!response.ok) {
+      throw new Error(`API responded with ${response.status}`);
     }
+    
+    const data = await response.json();
+    
+    if (data.responseStatus !== 200 || !data.responseData) {
+      throw new Error('Translation API error: ' + (data.responseDetails || 'Unknown error'));
+    }
+    
+    let translation = data.responseData.translatedText;
+    
+    // Clean up the translation if it contains mixed languages
+    if (translation) {
+      // Remove any remaining English text in brackets
+      translation = translation.replace(/\([^)]*\)/g, '');
+      // Remove any remaining English words (3+ letters)
+      translation = translation.replace(/\b[a-zA-Z]{3,}\b/g, '');
+      // Trim whitespace
+      translation = translation.trim();
+    }
+    
+    return translation || fallbackTranslate(text);
+  } catch (error) {
+    console.error('Translation API error:', error);
+    // Fall back to our improved simple translation
+    return fallbackTranslate(text);
+  }
+}
+
+// Add this new fallbackTranslate function after the translateText function
+function fallbackTranslate(text) {
+  // First try to clean up the text for better results
+  const cleanText = text
+    .replace(/['"`]/g, '') // Remove quotes
+    .replace(/\(.*?\)/g, '') // Remove parentheses content
+    .replace(/\[.*?\]/g, '') // Remove bracket content
+    .replace(/\bhttps?:\/\/\S+/gi, '') // Remove URLs
+    .replace(/\b\d+\b/g, '') // Remove standalone numbers
+    .replace(/\s+/g, ' ') // Collapse whitespace
+    .trim();
+    
+  // If the cleaned text is very different, use that instead
+  if (cleanText.length > 5 && cleanText.length < text.length * 0.8) {
+    return simpleTranslate(cleanText);
+  }
+  
+  return simpleTranslate(text);
+}
 
     function cacheTranslation(original, translation) {
       if (!original || !translation) return;
