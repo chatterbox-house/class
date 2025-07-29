@@ -1488,57 +1488,76 @@ function loadTextContent(cls) {
     }
 }
 
-    function parseStoryFile(text) {
-        const content = text && typeof text === 'object' ? text.content : text || '';
-        const lines = content.split('\n')
-            .map(line => line.trim())
-            .filter(line => line.length > 0 && !line.startsWith('#'));
+function parseStoryFile(text) {
+    const content = text && typeof text === 'object' ? text.content : text || '';
+    const lines = content.split('\n')
+        .map(line => line.trim())
+        .filter(line => line.length > 0 && !line.startsWith('#'));
+    
+    const result = [];
+    let currentEnglish = null;
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        // More accurate language detection:
+        // 1. If line starts with special characters/emojis, treat as English
+        // 2. If line has more Japanese characters than English, treat as Japanese
+        // 3. Otherwise treat as English
+        const isEnglish = /^[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line) ||
+                         (countJapaneseChars(line) < countEnglishChars(line));
         
-        const result = [];
-        let currentEnglish = null;
-        
-        for (let i = 0; i < lines.length; i++) {
-            const line = lines[i];
-            const isEnglish = /[a-zA-Z]/.test(line) || 
-                             /^[→🕰️📉📊🛑🗣️🌊🗳️🆕🤝📉📛🔍💡⚖️🤷🏛️🔄💼💰⏳👵👴🚫🗺️🚫😔📉✌️🌟📈💵🇯🇵🌏🧑🤝🧑🌎🇺🇸🏭🇪🇺🛂✋📱⚠️🛒💊📉👷❤️🧠✊🧩🌪️🌍🤲🚦🌟]/.test(line);
-            
-            if (isEnglish) {
-                if (currentEnglish) {
-                    result.push({
-                        english: currentEnglish,
-                        japanese: "",
-                        number: result.length + 1
-                    });
-                }
-                currentEnglish = line;
+        if (isEnglish) {
+            if (currentEnglish) {
+                result.push({
+                    english: currentEnglish,
+                    japanese: "",
+                    number: result.length + 1
+                });
+            }
+            currentEnglish = line;
+        } else {
+            if (currentEnglish) {
+                result.push({
+                    english: currentEnglish,
+                    japanese: line,
+                    number: result.length + 1
+                });
+                currentEnglish = null;
             } else {
-                if (currentEnglish) {
-                    result.push({
-                        english: currentEnglish,
-                        japanese: line,
-                        number: result.length + 1
-                    });
-                    currentEnglish = null;
-                } else {
-                    result.push({
-                        english: "",
-                        japanese: line,
-                        number: result.length + 1
-                    });
-                }
+                result.push({
+                    english: "",
+                    japanese: line,
+                    number: result.length + 1
+                });
             }
         }
-        
-        if (currentEnglish) {
-            result.push({
-                english: currentEnglish,
-                japanese: "",
-                number: result.length + 1
-            });
-        }
-        
-        return result;
     }
+    
+    if (currentEnglish) {
+        result.push({
+            english: currentEnglish,
+            japanese: "",
+            number: result.length + 1
+        });
+    }
+    
+    return result;
+}
+
+// Helper functions for language detection
+function countJapaneseChars(str) {
+    // Count Japanese characters (hiragana, katakana, kanji)
+    const japaneseRegex = /[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\uFF65-\uFF9F]/g;
+    const matches = str.match(japaneseRegex);
+    return matches ? matches.length : 0;
+}
+
+function countEnglishChars(str) {
+    // Count English letters
+    const englishRegex = /[a-zA-Z]/g;
+    const matches = str.match(englishRegex);
+    return matches ? matches.length : 0;
+}
 
     function displayCurrentSentence() {
         if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
