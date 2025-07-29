@@ -1921,64 +1921,85 @@ function displayCurrentHeadline() {
   const headline = state.headlines[state.currentIndex];
   const displayText = headline.title || "No title available";
   
-      
-      // Create HTML for the headline with publication date
-      let englishHTML = `<div class="headline">${displayText}`;
-      
-      // Add breaking news badge if published in last 3 years (for demo purposes)
-      if (headline.pubDate) {
-        const threeYearsAgo = new Date();
-        threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
-        
-        if (headline.pubDate > threeYearsAgo) {
-          englishHTML += `<span class="breaking-badge">Breaking</span>`;
-        }
-        
-        const formattedDate = formatDate(headline.pubDate);
-        englishHTML += `<div class="pub-date">${formattedDate}</div>`;
-      }
-      
-      englishHTML += `</div>`;
-      
-      elements.englishContent.innerHTML = englishHTML;
-      elements.englishContent.classList.add('fade-in');
-      
-      // Check cache first
-      const cachedTranslation = getCachedTranslation(displayText);
-      if (cachedTranslation) {
-        elements.japaneseContent.innerHTML = `<div class="headline">${cachedTranslation}</div>`;
-        if (headline.pubDate) {
-          elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
-        }
-        elements.japaneseContent.classList.add('fade-in');
-      } else {
-        elements.japaneseContent.innerHTML = '<div class="headline">翻訳中...</div>';
-        translateText(displayText)
-          .then(translation => {
+  // Create HTML for the headline with publication date
+  let englishHTML = `<div class="headline">${displayText}`;
+  
+  if (headline.pubDate) {
+    const threeYearsAgo = new Date();
+    threeYearsAgo.setFullYear(threeYearsAgo.getFullYear() - 3);
+    
+    if (headline.pubDate > threeYearsAgo) {
+      englishHTML += `<span class="breaking-badge">Breaking</span>`;
+    }
+    
+    const formattedDate = formatDate(headline.pubDate);
+    englishHTML += `<div class="pub-date">${formattedDate}</div>`;
+  }
+  
+  englishHTML += `</div>`;
+  
+  elements.englishContent.innerHTML = englishHTML;
+  elements.englishContent.classList.add('fade-in');
+  
+  // Check cache first
+  const cachedTranslation = getCachedTranslation(displayText);
+  if (cachedTranslation) {
+    elements.japaneseContent.innerHTML = `<div class="headline">${cachedTranslation}</div>`;
+    if (headline.pubDate) {
+      elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
+    }
+    elements.japaneseContent.classList.add('fade-in');
+  } else {
+    // Show simple translation immediately
+    elements.japaneseContent.innerHTML = `<div class="headline">${simpleTranslate(displayText)}</div>`;
+    if (headline.pubDate) {
+      elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
+    }
+    elements.japaneseContent.classList.add('dimmed');
+    
+    // Start lazy loading the full translation
+    lazyLoadTranslation(displayText, headline);
+  }
+  
+  setTimeout(() => {
+    elements.englishContent.classList.remove('fade-in');
+    elements.japaneseContent.classList.remove('fade-in');
+    elements.japaneseContent.classList.remove('dimmed');
+  }, 500);
+}
+
+// New function for lazy loading translations
+function lazyLoadTranslation(text, headline) {
+  // Only translate if the headline is still visible after a delay
+  setTimeout(() => {
+    // Check if we're still showing the same headline
+    const currentHeadline = state.headlines[state.currentIndex];
+    if (currentHeadline && currentHeadline.title === text) {
+      translateText(text)
+        .then(translation => {
+          // Double-check we're still on the same headline
+          const checkHeadline = state.headlines[state.currentIndex];
+          if (checkHeadline && checkHeadline.title === text) {
             elements.japaneseContent.innerHTML = `<div class="headline">${translation}</div>`;
             if (headline.pubDate) {
               elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
             }
             elements.japaneseContent.classList.add('fade-in');
-            cacheTranslation(displayText, translation);
-          })
-          .catch(error => {
-            console.error('Translation failed:', error);
-            elements.japaneseContent.innerHTML = `<div class="headline">${simpleTranslate(displayText)}</div>`;
-            if (headline.pubDate) {
-              elements.japaneseContent.innerHTML += `<div class="pub-date">${formatDate(headline.pubDate, true)}</div>`;
-            }
-            elements.japaneseContent.classList.add('dimmed');
-          });
-      }
-      
-      // Remove animation class after it completes
-      setTimeout(() => {
-        elements.englishContent.classList.remove('fade-in');
-        elements.japaneseContent.classList.remove('fade-in');
-        elements.japaneseContent.classList.remove('dimmed');
-      }, 500);
+            cacheTranslation(text, translation);
+            
+            // Remove fade-in after animation completes
+            setTimeout(() => {
+              elements.japaneseContent.classList.remove('fade-in');
+            }, 500);
+          }
+        })
+        .catch(error => {
+          console.error('Translation failed:', error);
+          // Keep the simple translation we already showed
+        });
     }
+  }, 2000); // 2 second delay before attempting translation
+}
     
 function formatDate(date, inJapanese = false) {
   if (!date) return '';
