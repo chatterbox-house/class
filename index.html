@@ -730,10 +730,17 @@ fontSizeStep: 0.5, // rem
       type: 'onThisDay',
       // We'll handle this specially in the code
     },
-    'Japan Today': {
+'Japan Today': {
   url: 'https://japantoday.com/feed',
-  type: 'corsProxy',  // We'll add this new type
-  proxyUrl: 'https://cors-anywhere.herokuapp.com/'  // Public CORS proxy
+  type: 'multiProxy',
+proxies: [
+  'https://api.codetabs.com/v1/proxy/?quest=',
+  'https://corsproxy.io/?',
+  'https://proxy.cors.sh/',
+  'https://api.allorigins.win/get?url=',
+  'https://cors-anywhere.herokuapp.com/'
+],
+  directUrl: 'https://japantoday.com/feed/atom' // Try Atom feed instead
 },
 'Google News Japan': {
   url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en',
@@ -1035,56 +1042,77 @@ function init() {
   initEventListeners();
   startClock();
   initTicker();
-  loadAllFeeds(); // Changed from loadHeadlines()
+  
+  // Check if we should prioritize Japan Today (9am-8pm Japan time)
+  const now = new Date();
+  const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+  const hours = japanTime.getHours();
+  
+  if (hours >= 9 && hours < 20 && state.currentSource !== 'Japan Today') {
+    state.currentSource = 'Japan Today';
+    updateSourceButton();
+  }
+  
+  loadAllFeeds();
   updateModeToggle();
   updateSourceButton();
   updateFontSize();
   fetchTemperatures();
-}
-    // Load settings from localStorage
-    function loadSettings() {
-      const savedMode = localStorage.getItem('darkMode');
-      if (savedMode !== null) {
-        state.darkMode = savedMode === 'true';
-        document.body.classList.toggle('light-mode', !state.darkMode);
-      }
+}    // Load settings from localStorage
+function loadSettings() {
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode !== null) {
+    state.darkMode = savedMode === 'true';
+    document.body.classList.toggle('light-mode', !state.darkMode);
+  }
 
-      const savedRssCache = localStorage.getItem('rssCache');
-      if (savedRssCache) {
-        try {
-          state.rssCache = JSON.parse(savedRssCache);
-          // Clean expired cache entries
-          const now = Date.now();
-          Object.keys(state.rssCache).forEach(key => {
-            if (state.rssCache[key].expiry && state.rssCache[key].expiry < now) {
-              delete state.rssCache[key];
-            }
-          });
-        } catch (e) {
-          console.error('Failed to parse RSS cache', e);
+  const savedRssCache = localStorage.getItem('rssCache');
+  if (savedRssCache) {
+    try {
+      state.rssCache = JSON.parse(savedRssCache);
+      // Clean expired cache entries
+      const now = Date.now();
+      Object.keys(state.rssCache).forEach(key => {
+        if (state.rssCache[key].expiry && state.rssCache[key].expiry < now) {
+          delete state.rssCache[key];
         }
-      }
-      
-      const savedCache = localStorage.getItem('translationCache');
-      if (savedCache) {
-        try {
-          state.translationCache = JSON.parse(savedCache);
-          // Clean up expired cache entries
-          const now = Date.now();
-          Object.keys(state.translationCache).forEach(key => {
-            if (state.translationCache[key].expiry < now) {
-              delete state.translationCache[key];
-            }
-          });
-        } catch (e) {
-          console.error('Failed to parse translation cache', e);
+      });
+    } catch (e) {
+      console.error('Failed to parse RSS cache', e);
+    }
+  }
+  
+  const savedCache = localStorage.getItem('translationCache');
+  if (savedCache) {
+    try {
+      state.translationCache = JSON.parse(savedCache);
+      // Clean up expired cache entries
+      const now = Date.now();
+      Object.keys(state.translationCache).forEach(key => {
+        if (state.translationCache[key].expiry < now) {
+          delete state.translationCache[key];
         }
-      }
-      
-      const savedSource = localStorage.getItem('currentSource');
-      if (savedSource && config.rssFeeds[savedSource]) {
-        state.currentSource = savedSource;
-      }
+      });
+    } catch (e) {
+      console.error('Failed to parse translation cache', e);
+    }
+  }
+  
+  const savedSource = localStorage.getItem('currentSource');
+  if (savedSource && config.rssFeeds[savedSource]) {
+    state.currentSource = savedSource;
+  } else {
+    // Set Japan Today as default between 9am-8pm Japan time
+    const now = new Date();
+    const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+    const hours = japanTime.getHours();
+    
+    if (hours >= 9 && hours < 20) { // 9am-8pm JST
+      state.currentSource = 'Japan Today';
+    } else {
+      state.currentSource = 'BBC TOP';
+    }
+  }
       
       const savedFontSize = localStorage.getItem('fontSize');
       if (savedFontSize) {
@@ -1171,19 +1199,21 @@ function loadFeedForTicker(source) {
   const feedConfig = config.rssFeeds[source];
   if (!feedConfig) return;
 
-  const url = feedConfig.type === 'direct' ? 
-    (feedConfig.directUrl || feedConfig.url) : 
-    feedConfig.url;
-
-  if (feedConfig.type === 'direct') {
-    fetchDirectFeedForTicker(url, source);
+  if (feedConfig.type === 'multiProxy') {
+    fetchWithMultiProxy(feedConfig.url, source, feedConfig.proxies)
+      .then(data => processFeedData(data, source))
+      .catch(error => {
+        console.error(`All proxies failed for ${source}, trying direct:`, error);
+        fetchDirectFeedForTicker(feedConfig.directUrl, source);
+      });
+  } else if (feedConfig.type === 'direct') {
+    fetchDirectFeedForTicker(feedConfig.directUrl || feedConfig.url, source);
   } else if (feedConfig.type === 'corsProxy') {
-    fetchWithCorsProxy(url, source, feedConfig.proxyUrl);
+    fetchWithCorsProxy(feedConfig.url, source, feedConfig.proxyUrl);
   } else {
-    fetchApiFeedForTicker(url, source);
+    fetchApiFeedForTicker(feedConfig.url, source);
   }
-}
-function fetchApiFeedForTicker(url, source) {
+}function fetchApiFeedForTicker(url, source) {
   const proxyUrl = config.rssParserAPI + encodeURIComponent(url);
   
   fetch(proxyUrl)
@@ -1253,6 +1283,116 @@ function fetchWithCorsProxy(url, source, proxyUrl) {
       // Fall back to direct fetch (might still fail due to CORS)
       fetchDirectFeedForTicker(url, source);
     });
+}
+async function fetchWithMultiProxy(url, source, proxies) {
+  // Try direct fetch first if it's likely to work
+  try {
+    const directResponse = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`);
+    if (directResponse.ok) {
+      const data = await directResponse.json();
+      if (data.contents) {
+        return new DOMParser().parseFromString(data.contents, "text/xml");
+      }
+    }
+  } catch (directError) {
+    console.log('Direct proxy failed, trying others...');
+  }
+
+  // Try other proxies
+  for (const proxy of proxies) {
+    try {
+      let proxyUrl;
+      if (proxy.includes('?')) {
+        proxyUrl = `${proxy}${encodeURIComponent(url)}`;
+      } else {
+        proxyUrl = `${proxy}${url}`;
+      }
+      
+      const response = await fetch(proxyUrl);
+      
+      if (!response.ok) throw new Error(`Proxy failed with status ${response.status}`);
+      
+      let data;
+      if (proxy.includes('allorigins.win')) {
+        data = await response.json();
+        if (data.contents) {
+          return new DOMParser().parseFromString(data.contents, "text/xml");
+        }
+      } else {
+        const text = await response.text();
+        return new DOMParser().parseFromString(text, "text/xml");
+      }
+    } catch (error) {
+      console.log(`Proxy ${proxy} failed:`, error.message);
+      continue;
+    }
+  }
+  
+  // Final fallback - try to parse as JSON if possible
+  try {
+    const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}`);
+    const jsonData = await response.json();
+    if (jsonData.items) {
+      // Create a mock XML document
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString('<rss><channel></channel></rss>', 'text/xml');
+      const channel = xmlDoc.querySelector('channel');
+      
+      jsonData.items.forEach(item => {
+        const itemElement = xmlDoc.createElement('item');
+        itemElement.innerHTML = `
+          <title>${item.title || ''}</title>
+          <link>${item.link || ''}</link>
+          <pubDate>${item.pubDate || new Date().toUTCString()}</pubDate>
+        `;
+        channel.appendChild(itemElement);
+      });
+      
+      return xmlDoc;
+    }
+  } catch (finalError) {
+    console.error('All methods failed:', finalError);
+    throw new Error('All proxies and fallbacks failed for ' + url);
+  }
+}
+function processFeedData(data, source) {
+  try {
+    const items = data.querySelectorAll("item");
+    const headlines = Array.from(items).map(item => ({
+      title: item.querySelector("title")?.textContent || "No title",
+      link: item.querySelector("link")?.textContent || "#",
+      pubDate: parsePubDate(item.querySelector("pubDate")?.textContent || ""),
+      source: source
+    }));
+    
+    if (headlines.length) {
+      processTickerHeadlines(headlines, source);
+    } else {
+      console.warn('No headlines found in feed, using fallback');
+      useFallbackHeadlines(source);
+    }
+  } catch (error) {
+    console.error('Error processing feed:', error);
+    useFallbackHeadlines(source);
+  }
+}
+
+function useFallbackHeadlines(source) {
+  const fallbackHeadlines = [
+    {
+      title: `Latest news from ${source}`,
+      link: '#',
+      pubDate: new Date(),
+      source: source
+    },
+    {
+      title: `Check back soon for updates from ${source}`,
+      link: '#',
+      pubDate: new Date(),
+      source: source
+    }
+  ];
+  processTickerHeadlines(fallbackHeadlines, source);
 }
 function processTickerHeadlines(items, source) {
   // Add these headlines to our global collection
@@ -1390,16 +1530,16 @@ function animateTicker() {
   tickerContent.addEventListener('transitionend', restartAnimation);
 }
     // Cycle through news sources
-    function cycleNewsSource() {
-      const sources = Object.keys(config.rssFeeds);
-      const currentIndex = sources.indexOf(state.currentSource);
-      const nextIndex = (currentIndex + 1) % sources.length;
-      state.currentSource = sources[nextIndex];
-      
-      updateSourceButton();
-      localStorage.setItem('currentSource', state.currentSource);
-      loadHeadlines();
-    }
+function cycleNewsSource() {
+  const sources = Object.keys(config.rssFeeds);
+  const currentIndex = sources.indexOf(state.currentSource);
+  const nextIndex = (currentIndex + 1) % sources.length;
+  state.currentSource = sources[nextIndex];
+  
+  updateSourceButton();
+  localStorage.setItem('currentSource', state.currentSource);
+  loadHeadlines();
+}
 
     function updateSourceButton() {
       elements.sourceBtn.textContent = state.currentSource;
@@ -1547,42 +1687,67 @@ async function fetchOnThisDayEvents() {
   }
 }
 function fetchDirectFeed(url) {
-  // Special case for Japan Today - use CORS proxy
-  if (url.includes('japantoday.com')) {
-    fetchWithCorsProxy(url, state.currentSource, 'https://cors-anywhere.herokuapp.com/');
-    return;
+  const feedConfig = config.rssFeeds[state.currentSource];
+  
+  if (feedConfig?.type === 'multiProxy') {
+    fetchWithMultiProxy(url, state.currentSource, feedConfig.proxies)
+      .then(data => {
+        const items = data.querySelectorAll("item");
+        const headlines = Array.from(items).map(item => ({
+          title: item.querySelector("title")?.textContent || "No title",
+          description: item.querySelector("description")?.textContent || "",
+          content: item.querySelector("content\\:encoded")?.textContent || 
+                   item.querySelector("description")?.textContent || "",
+          link: item.querySelector("link")?.textContent || "#",
+          pubDate: parsePubDate(item.querySelector("pubDate")?.textContent || "")
+        }));
+        
+        if (headlines.length) {
+          processHeadlines(headlines);
+        } else {
+          throw new Error('No headlines found in feed');
+        }
+      })
+      .catch(error => {
+        console.error('All proxies failed, trying direct:', error);
+        fetchDirectFeedFallback(url);
+      });
+  } else {
+    fetchDirectFeedFallback(url);
   }
+}
 
+function fetchDirectFeedFallback(url) {
   fetch(url)
     .then(response => {
       if (!response.ok) throw new Error('Direct RSS fetch failed');
       return response.text();
     })
-        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
-        .then(data => {
-          const items = data.querySelectorAll("item");
-          const headlines = Array.from(items).map(item => ({
-            title: item.querySelector("title")?.textContent || "No title",
-            description: item.querySelector("description")?.textContent || "",
-            content: item.querySelector("content\\:encoded")?.textContent || 
-                     item.querySelector("description")?.textContent || "",
-            link: item.querySelector("link")?.textContent || "#",
-            pubDate: parsePubDate(item.querySelector("pubDate")?.textContent || "")
-          }));
-          
-          if (headlines.length) {
-            processHeadlines(headlines);
-          } else {
-            throw new Error('No headlines found in direct feed');
-          }
-        })
-        .catch(error => {
-          console.error('Failed to load headlines directly:', error);
-          elements.englishContent.innerHTML = '<div class="headline">Failed to load headlines. Trying again...</div>';
-          elements.japaneseContent.innerHTML = '<div class="headline">ヘッドラインの読み込みに失敗しました。再試行中...</div>';
-          setTimeout(loadHeadlines, 5000);
-        });
-    }
+    .then(str => new DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+      const items = data.querySelectorAll("item");
+      const headlines = Array.from(items).map(item => ({
+        title: item.querySelector("title")?.textContent || "No title",
+        description: item.querySelector("description")?.textContent || "",
+        content: item.querySelector("content\\:encoded")?.textContent || 
+                 item.querySelector("description")?.textContent || "",
+        link: item.querySelector("link")?.textContent || "#",
+        pubDate: parsePubDate(item.querySelector("pubDate")?.textContent || "")
+      }));
+      
+      if (headlines.length) {
+        processHeadlines(headlines);
+      } else {
+        throw new Error('No headlines found in direct feed');
+      }
+    })
+    .catch(error => {
+      console.error('Failed to load headlines directly:', error);
+      elements.englishContent.innerHTML = '<div class="headline">Failed to load headlines. Trying again...</div>';
+      elements.japaneseContent.innerHTML = '<div class="headline">ヘッドラインの読み込みに失敗しました。再試行中...</div>';
+      setTimeout(loadHeadlines, 5000);
+    });
+}
     
     function parsePubDate(dateStr) {
       if (!dateStr) return null;
