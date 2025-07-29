@@ -212,6 +212,16 @@ body.light-mode .news-ticker {
     text-transform: uppercase;
     font-weight: bold;
   }
+.news-ticker .breaking-badge {
+  display: inline-block;
+  background: var(--accent-red);
+  color: white;
+  font-size: 0.6em;
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
   /* Footer styling */
   footer {
@@ -715,7 +725,16 @@ fontSizeStep: 0.5, // rem
   // RSS Feeds configuration
   rssCacheTTL: 3600000, // 1 hour cache for RSS feeds
   rssFeeds: {
-    'BBC TOP': {
+    'Japan Today': {
+  url: 'https://japantoday.com/feed',
+  type: 'corsProxy',  // We'll add this new type
+  proxyUrl: 'https://cors-anywhere.herokuapp.com/'  // Public CORS proxy
+},
+'Google News Japan': {
+  url: 'https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U0FtVnVHZ0pWVXlnQVAB?hl=en-US&gl=US&ceid=US:en',
+  type: 'api'
+},
+'BBC TOP': {
       url: 'http://feeds.bbci.co.uk/news/rss.xml?limit=100',
       type: 'api'
     },
@@ -747,7 +766,7 @@ fontSizeStep: 0.5, // rem
       url: 'https://feeds.nbcnews.com/nbcnews/public/news?limit=100',
       type: 'api'
     }
-  },
+},
 
   // City lists for weather
   japanCities: [
@@ -1141,7 +1160,6 @@ function loadAllFeeds() {
   state.allHeadlines = [];
   initTicker();
 }
-
 function loadFeedForTicker(source) {
   const feedConfig = config.rssFeeds[source];
   if (!feedConfig) return;
@@ -1152,6 +1170,8 @@ function loadFeedForTicker(source) {
 
   if (feedConfig.type === 'direct') {
     fetchDirectFeedForTicker(url, source);
+  } else if (feedConfig.type === 'corsProxy') {
+    fetchWithCorsProxy(url, source, feedConfig.proxyUrl);
   } else {
     fetchApiFeedForTicker(url, source);
   }
@@ -1194,7 +1214,37 @@ function fetchDirectFeedForTicker(url, source) {
       }
     })
     .catch(error => {
-      console.error(`Failed to load ${source} headlines directly:`, error);
+      console.error(`Failed to load ${source} headlines directly, trying API:`, error);
+      // Fall back to API method
+      fetchApiFeedForTicker(url, source);
+    });
+}
+function fetchWithCorsProxy(url, source, proxyUrl) {
+  const proxyFullUrl = proxyUrl + url;
+  
+  fetch(proxyFullUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('CORS proxy fetch failed');
+      return response.text();
+    })
+    .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+      const items = data.querySelectorAll("item");
+      const headlines = Array.from(items).map(item => ({
+        title: item.querySelector("title")?.textContent || "No title",
+        link: item.querySelector("link")?.textContent || "#",
+        pubDate: parsePubDate(item.querySelector("pubDate")?.textContent || ""),
+        source: source
+      }));
+      
+      if (headlines.length) {
+        processTickerHeadlines(headlines, source);
+      }
+    })
+    .catch(error => {
+      console.error(`Failed to load ${source} headlines via CORS proxy:`, error);
+      // Fall back to direct fetch (might still fail due to CORS)
+      fetchDirectFeedForTicker(url, source);
     });
 }
 function processTickerHeadlines(items, source) {
@@ -1259,14 +1309,19 @@ function updateTickerWithAllHeadlines() {
   const tickerContent = document.querySelector('.ticker-content');
   if (!tickerContent) return;
   
-  // Take up to 100 random headlines from all sources
-  const shuffled = [...state.allHeadlines]
-    .sort(() => 0.5 - Math.random())
-    .slice(0, 100);
+  // Sort headlines by publication date (newest first)
+  const sortedHeadlines = [...state.allHeadlines].sort((a, b) => {
+    const dateA = a.pubDate ? new Date(a.pubDate).getTime() : 0;
+    const dateB = b.pubDate ? new Date(b.pubDate).getTime() : 0;
+    return dateB - dateA;
+  });
+  
+  // Take the latest 5 headlines
+  const latestHeadlines = sortedHeadlines.slice(0, 5);
   
   tickerContent.innerHTML = '';
   
-  shuffled.forEach(headline => {
+  latestHeadlines.forEach(headline => {
     const tickerItem = document.createElement('div');
     tickerItem.className = 'ticker-item';
     
@@ -1275,8 +1330,20 @@ function updateTickerWithAllHeadlines() {
     sourceSpan.textContent = `[${headline.source}]`;
     
     const textSpan = document.createElement('span');
-    textSpan.textContent = headline.title;
     
+    // Check if the news is breaking (published in last hour)
+    const isBreaking = headline.pubDate && 
+      (Date.now() - new Date(headline.pubDate).getTime()) < 3600000; // 1 hour in ms
+    
+    if (isBreaking) {
+      const breakingSpan = document.createElement('span');
+      breakingSpan.className = 'breaking-badge';
+      breakingSpan.textContent = 'Breaking';
+      breakingSpan.style.marginRight = '0.5rem';
+      textSpan.appendChild(breakingSpan);
+    }
+    
+    textSpan.appendChild(document.createTextNode(headline.title));
     tickerItem.appendChild(sourceSpan);
     tickerItem.appendChild(textSpan);
     tickerContent.appendChild(tickerItem);
@@ -1286,7 +1353,6 @@ function updateTickerWithAllHeadlines() {
   tickerContent.style.left = '100%';
   animateTicker();
 }
-
 function animateTicker() {
   const tickerContent = document.querySelector('.ticker-content');
   if (!tickerContent) return;
@@ -1372,6 +1438,11 @@ function updateClock() {
 }
 
 function loadHeadlines() {
+  // Default to BBC TOP if current source is invalid
+  if (!config.rssFeeds[state.currentSource]) {
+    state.currentSource = 'BBC TOP';
+  }
+  
   const feedConfig = config.rssFeeds[state.currentSource];
   if (!feedConfig) {
     console.error('No RSS feed config found for source:', state.currentSource);
@@ -1430,12 +1501,18 @@ function loadHeadlines() {
         });
     }
 
-    function fetchDirectFeed(url) {
-      fetch(url)
-        .then(response => {
-          if (!response.ok) throw new Error('Direct RSS fetch failed');
-          return response.text();
-        })
+function fetchDirectFeed(url) {
+  // Special case for Japan Today - use CORS proxy
+  if (url.includes('japantoday.com')) {
+    fetchWithCorsProxy(url, state.currentSource, 'https://cors-anywhere.herokuapp.com/');
+    return;
+  }
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw new Error('Direct RSS fetch failed');
+      return response.text();
+    })
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
           const items = data.querySelectorAll("item");
