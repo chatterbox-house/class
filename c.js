@@ -427,5 +427,93 @@ var c = {
 ❤️ Do you love your family?
 かぞくをあいしていますか？
 🧸 Who do you play with at home?
-いえでだれとあそびますか？`
+いえでだれとあそびますか？`,
+
+story9: `#STORY
+🦁 Tony sees a big lion.
+トニーは大きなライオンを見ます。
+🐵 Jay waves at the monkeys.
+ジェイはサルたちに手をふります。
+🐘 Tony points at an elephant.
+トニーはゾウを指さします。
+🐧 Jay laughs at the funny penguins.
+ジェイはおもしろいペンギンたちを見てわらいます。
+🐍 Tony jumps when he sees a snake.
+トニーはヘビを見てびっくりしてジャンプします。
+🦒 Jay says, "Look! A tall giraffe!"
+ジェイは「見て！たかいキリンだよ！」といいます。
+🦓 They both watch the zebras run.
+ふたりはしまうまがはしるのを見ます。
+🍌 Tony eats a banana.
+トニーはバナナを食べます。
+🥤 Jay drinks orange juice.
+ジェイはオレンジジュースを飲みます。
+🚌 They ride the bus home.
+ふたりはバスにのってかえります。
+
+#QUESTIONS
+🦁 Do you like lions?
+ライオンがすきですか？
+🐵 Can you wave like Jay?
+ジェイみたいに手をふれますか？
+🐘 What do you think of elephants?
+ゾウについてどう思いますか？
+🐧 Do you think penguins are funny?
+ペンギンはおもしろいと思いますか？
+🐍 Are you scared of snakes?
+ヘビがこわいですか？
+🦒 What animals are tall?
+せのたかいどうぶつはなんですか？
+🦓 Can zebras run fast?
+しまうまははやくはしれますか？
+🍌 What fruit do you eat at the zoo?
+どうぶつえんでどんなくだものを食べますか？
+🥤 What do you like to drink?
+なにを飲むのがすきですか？
+🚌 Do you like riding buses?
+バスにのるのがすきですか？`,
+
+story10: `#STORY
+🌧️ It rains and Tony looks out the window.
+あめがふって、トニーはまどのそとを見ます。
+☔ Jay holds an umbrella.
+ジェイはかさを持ちます。
+👢 Tony wears his rain boots.
+トニーはレインブーツをはきます。
+💦 They jump in puddles together.
+ふたりはいっしょにみずたまりではねます。
+🐸 Jay sees a frog.
+ジェイはカエルを見ます。
+😆 Tony laughs and points at it.
+トニーはわらって、それを指さします。
+🏠 They go back inside.
+ふたりは家の中にもどります。
+🍪 Jay eats a cookie.
+ジェイはクッキーを食べます。
+☕ Tony drinks warm milk.
+トニーはあたたかいミルクを飲みます。
+📖 They read a book together.
+ふたりで本を読みます。
+
+#QUESTIONS
+🌧️ Do you like rainy days?
+あめの日はすきですか？
+☔ Do you have an umbrella?
+かさを持っていますか？
+👢 Do you wear rain boots?
+レインブーツをはきますか？
+💦 Do you jump in puddles?
+みずたまりではねますか？
+🐸 Have you seen a frog before?
+カエルを見たことがありますか？
+😆 Do you laugh when you see animals?
+どうぶつを見るとわらいますか？
+🏠 What do you do when you go back inside?
+家に入ったらなにをしますか？
+🍪 What snack do you like?
+どんなおやつがすきですか？
+☕ Do you drink warm drinks in winter?
+ふゆにあたたかい飲みものを飲みますか？
+📖 Do you read books at home?
+家で本を読みますか？`
 };
