@@ -1480,7 +1480,7 @@ function processHeadlines(items) {
   const newHeadlines = items.slice(0, config.maxHeadlines).reverse();
   state.headlines = newHeadlines;
   state.currentIndex = 0;
-  elements.headlineCounter.textContent = `1/${state.headlines.length}`;
+  updateHeadlineCounter();
   displayCurrentHeadline();
   startRotation();
 
@@ -1537,11 +1537,11 @@ function updateTickerWithAllHeadlines() {
 function displayCurrentHeadline() {
   if (state.headlines.length === 0) return;
   
-  // Update counter display
-  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length}`;
+  updateHeadlineCounter();
   
   const headline = state.headlines[state.currentIndex];
-      const displayText = headline.title || "No title available";
+  const displayText = headline.title || "No title available";
+  
       
       // Create HTML for the headline with publication date
       let englishHTML = `<div class="headline">${displayText}`;
@@ -1666,9 +1666,20 @@ function displayCurrentHeadline() {
 function showNextHeadline() {
   if (state.headlines.length === 0) return;
   
-  state.currentIndex = (state.currentIndex + 1) % state.headlines.length;
-  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length}`;
+  // Check if we've reached the end of current headlines
+  if (state.currentIndex >= state.headlines.length - 1) {
+    // Switch to next source
+    cycleNewsSource();
+    return;
+  }
+  
+  state.currentIndex = state.currentIndex + 1;
+  updateHeadlineCounter();
   displayCurrentHeadline();
+}
+
+function updateHeadlineCounter() {
+  elements.headlineCounter.textContent = `${state.currentIndex + 1}/${state.headlines.length} (${state.currentSource})`;
 }
     
 function showPrevHeadline() {
