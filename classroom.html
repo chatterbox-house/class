@@ -1436,16 +1436,29 @@ function loadTextContent(cls) {
     let content;
     if (currentStory === 'questions') {
         content = lessonsData[cls].questions;
-    } else {
-        const storyIndex = parseInt(currentStory);
-        if (isNaN(storyIndex) || !lessonsData[cls].stories || !lessonsData[cls].stories[storyIndex]) {
-            console.error('Invalid story index:', currentStory);
-            alert('Invalid story selection');
-            exitReadingMode();
-            return;
-        }
-        content = lessonsData[cls].stories[storyIndex].content;
+} else {
+    const selectorIndex = parseInt(currentStory);
+    if (isNaN(selectorIndex)) {
+        console.error('Invalid story index:', currentStory);
+        alert('Invalid story selection');
+        exitReadingMode();
+        return;
     }
+
+    // Adjust index based on questions presence
+    let storyIndex = selectorIndex;
+    if (lessonsData[cls].questions) {
+        storyIndex = selectorIndex - 1;
+    }
+
+    if (storyIndex < 0 || !lessonsData[cls].stories || !lessonsData[cls].stories[storyIndex]) {
+        console.error('Invalid story index:', storyIndex, 'for class:', cls, 'Selector index:', selectorIndex);
+        alert('Invalid story selection');
+        exitReadingMode();
+        return;
+    }
+    content = lessonsData[cls].stories[storyIndex].content;
+}
 
     if (!content) {
         console.error('Content not found for story:', currentStory, 'in class:', cls);
@@ -2658,24 +2671,27 @@ function loadLessonsData() {
                 'Eiken2': eiken2,
                 'EikenPre2': eikenpre2,
                 'EikenPre2Plus': eikenpre2plus,
-                'Eiken3': { 
-                    stories: Object.values(eiken3).map((content, i) => ({
-                        title: `Story ${i+1}`,
-                        content: content
-                    })),
-                    questions: eiken3questions.questions
-                },
+'Eiken3': { 
+    stories: [
+        {
+            title: "Yuki's English Journey",
+            content: eiken3.story_1
+        }
+    ],
+    questions: eiken3questions.questions
+},
                 'Eiken4': Object.values(eiken4).map((content, i) => ({
                     title: `Story ${i+1}`,
                     content: content
                 })),
-                'Eiken5': {
-                    stories: Object.values(eiken5story).map(story => ({
-                        title: story.title,
-                        content: story.content
-                    })),
-                    questions: qa5.questions
-                },
+// In loadLessonsData function
+'Eiken5': {
+    stories: window.eiken5story ? window.eiken5story.map(story => ({
+        title: story.title,
+        content: story.content
+    })) : [],
+    questions: window.qa5 ? window.qa5.questions : []
+},
                 'HighSchool': {
                     stories: [
                         {
