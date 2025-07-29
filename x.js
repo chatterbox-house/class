@@ -369,5 +369,85 @@ var x = {
 😆 Do you think Tony is forgetful?
 トニーは忘れっぽいと思いますか？
 😎 Do you want glasses just for fashion?
-ファッションのためにメガネをかけたいですか？`
+ファッションのためにメガネをかけたいですか？`,
+
+    story9: `#STORY
+🚃 Jay was late and his train had already left.
+ジェイは遅れて、電車はもう出発してしまっていました。
+😖 He ran to the ticket gate, but it was too late.
+彼は改札に走りましたが、遅すぎました。
+📱 He called Tony.
+彼はトニーに電話をかけました。
+🏃‍♂️ Tony came to help him.
+トニーが助けに来てくれました。
+🗺️ "Let’s find another way," said Tony.
+「別の方法を探そう」とトニーが言いました。
+🚌 They took a bus together.
+2人は一緒にバスに乗りました。
+🌆 They arrived at the eikaiwa just in time.
+英会話教室にちょうど間に合いました。
+😅 Jay said, "Thanks! You're fast like a ninja!"
+ジェイは「ありがとう！君は忍者みたいに速いね！」と言いました。
+🤓 Tony smiled. "Ninjas don't use buses!"
+トニーは笑いました。「忍者はバス使わないよ！」
+
+#QUESTIONS
+⏰ Have you ever missed a train?
+電車に乗り遅れたことがありますか？
+🚃 What time does your train usually leave?
+あなたの電車はいつ出発しますか？
+🤔 What do you do if you're late?
+遅れたらどうしますか？
+📱 Do you call your friends when you're in trouble?
+困ったときに友達に電話しますか？
+🚌 Do you take the bus often?
+よくバスに乗りますか？
+🚶 Would you walk or wait for the next train?
+次の電車を待ちますか？歩きますか？
+🗺️ Can you find new places easily?
+新しい場所を簡単に見つけられますか？
+😆 Was Tony like a ninja or not?
+トニーは忍者みたいでしたか？
+🚦 Do you like trains or buses more?
+電車とバス、どちらが好きですか？`,
+
+story10: `#STORY
+📦 Tony found a big box outside his door.
+トニーはドアの外に大きな箱を見つけました。
+👀 He opened it carefully.
+彼はそれを注意深く開けました。
+🎁 Inside, there was a wrapped present.
+中には包装されたプレゼントが入っていました。
+🎉 "Is it my birthday?" he asked.
+「僕の誕生日かな？」と彼は尋ねました。
+😆 Jay came running up the stairs.
+ジェイが階段を駆け上って来ました。
+🎂 "Happy birthday!" Jay shouted.
+「誕生日おめでとう！」とジェイが叫びました。
+🍰 Inside was a cake with Tony's name.
+中にはトニーの名前が書かれたケーキがありました。
+📸 Jay took a photo of Tony’s happy face.
+ジェイはトニーのうれしそうな顔の写真を撮りました。
+🥹 Tony said, "This is the best cake ever!"
+トニーは「これは今までで一番のケーキだ！」と言いました。
+
+#QUESTIONS
+🎁 Have you ever gotten a surprise present?
+サプライズプレゼントをもらったことがありますか？
+📦 What would you do if you found a big box?
+大きな箱を見つけたらどうしますか？
+🎂 When is your birthday?
+あなたの誕生日はいつですか？
+🧁 What kind of cake do you like?
+どんなケーキが好きですか？
+📸 Do you take photos of special days?
+特別な日の写真を撮りますか？
+📦 Have you ever opened a mystery box?
+謎の箱を開けたことがありますか？
+🗣️ Do you usually shout when you're happy?
+うれしい時に叫びますか？
+😋 Would you share your cake with a friend?
+ケーキを友達と分けますか？
+🥇 What’s the best cake you’ve ever had?
+今までで一番おいしかったケーキは何ですか？`
 };
