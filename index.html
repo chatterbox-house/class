@@ -1213,11 +1213,15 @@ function loadFeedForTicker(source) {
   } else {
     fetchApiFeedForTicker(feedConfig.url, source);
   }
-}function fetchApiFeedForTicker(url, source) {
+}
+function fetchApiFeedForTicker(url, source) {
+  if (!url) {
+    console.error('URL is undefined for source:', source);
+    return;
+  }
   const proxyUrl = config.rssParserAPI + encodeURIComponent(url);
   
-  fetch(proxyUrl)
-    .then(response => {
+  fetch(proxyUrl)    .then(response => {
       if (!response.ok) throw new Error('RSS fetch failed');
       return response.json();
     })
@@ -1228,6 +1232,14 @@ function loadFeedForTicker(source) {
     })
     .catch(error => {
       console.error(`Failed to load ${source} headlines:`, error);
+      // Add fallback headlines
+      const fallbackHeadlines = [{
+        title: `Latest news from ${source}`,
+        link: '#',
+        pubDate: new Date(),
+        source: source
+      }];
+      processTickerHeadlines(fallbackHeadlines, source);
     });
 }
 function fetchDirectFeedForTicker(url, source) {
@@ -1608,6 +1620,22 @@ async function loadHeadlines() {
   elements.englishContent.innerHTML = '<div class="headline">Loading headlines...</div>';
   elements.japaneseContent.innerHTML = '<div class="headline">ヘッドラインを読み込み中...</div>';
   
+  // Set timeout for feed loading
+  const loadTimeout = setTimeout(() => {
+    if (state.headlines.length === 0) {
+      elements.englishContent.innerHTML = '<div class="headline">News feed loading slowly...</div>';
+      elements.japaneseContent.innerHTML = '<div class="headline">ニュースフィードの読み込みに時間がかかっています</div>';
+    }
+  }, 5000);
+  
+  // Clear timeout when headlines load
+  if (feedConfig.type === 'onThisDay') {
+    const events = await fetchOnThisDayEvents();
+    clearTimeout(loadTimeout);
+    processHeadlines(events);
+    return;
+  }
+  
   if (feedConfig.type === 'direct') {
     // Use direct parsing for problematic feeds
     fetchDirectFeed(feedConfig.directUrl || feedConfig.url);
@@ -1684,6 +1712,69 @@ async function fetchOnThisDayEvents() {
       link: '#',
       pubDate: new Date()
     }];
+  }
+}
+async function fetchWikipediaArticle(title) {
+  try {
+    // First try to get the mobile version with CORS proxy
+    const mobileUrl = `https://en.wikipedia.org/api/rest_v1/page/mobile-sections/${encodeURIComponent(title)}`;
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(mobileUrl)}`;
+    const response = await fetch(proxyUrl);
+    
+    if (!response.ok) throw new Error('Wikipedia API failed');
+    
+    const data = await response.json();
+    if (!data.contents) throw new Error('No contents in response');
+    
+    // Parse the JSON contents
+    const mobileData = JSON.parse(data.contents);
+    
+    // Extract the lead section and remaining sections
+    let articleText = '';
+    if (data.lead && data.lead.sections && data.lead.sections.length > 0) {
+      articleText = data.lead.sections[0].text;
+    }
+    
+    // Add remaining sections
+    if (data.remaining && data.remaining.sections && data.remaining.sections.length > 0) {
+      data.remaining.sections.forEach(section => {
+        articleText += '\n\n' + section.text;
+      });
+    }
+    
+    // Clean up the HTML tags
+    articleText = articleText.replace(/<[^>]*>/g, '');
+    
+    return {
+      title: title,
+      content: articleText,
+      link: `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`
+    };
+  } catch (error) {
+    console.error('Failed to fetch Wikipedia article:', error);
+    // Fallback to simpler API
+    try {
+      const simpleUrl = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro=true&explaintext=true&format=json&titles=${encodeURIComponent(title)}&origin=*`;
+      const response = await fetch(simpleUrl);
+      const data = await response.json();
+      
+      const pages = data.query.pages;
+      const pageId = Object.keys(pages)[0];
+      const page = pages[pageId];
+      
+      return {
+        title: page.title,
+        content: page.extract || 'No content available',
+        link: `https://en.wikipedia.org/wiki/${encodeURIComponent(page.title)}`
+      };
+    } catch (fallbackError) {
+      console.error('Fallback Wikipedia API failed:', fallbackError);
+      return {
+        title: title,
+        content: 'Failed to load Wikipedia article',
+        link: `https://en.wikipedia.org/wiki/${encodeURIComponent(title)}`
+      };
+    }
   }
 }
 function fetchDirectFeed(url) {
@@ -2061,88 +2152,149 @@ function showPrevHeadline() {
     }
 
     // Article Modal functionality
-    function openCurrentArticle() {
-      if (state.headlines.length === 0) return;
-      
-      const headline = state.headlines[state.currentIndex];
-      state.modalState.currentArticle = headline;
-      state.modalState.currentSentenceIndex = 0;
-      state.modalState.isOpen = true;
-      
-      // Extract sentences from content or description
-      const content = headline.content || headline.description || headline.title;
-      state.modalState.sentences = extractSentences(content);
-      state.modalState.translations = Array(state.modalState.sentences.length).fill(null);
-      
-      elements.articleModal.classList.add('active');
-      elements.closeModalBtn.focus();
-      
-      // Display the first sentence
-      displayCurrentSentence();
-    }
-
-    function extractSentences(text) {
-      // Simple sentence splitting that handles common cases
-      if (!text) return [];
-      
-      // First clean any HTML tags
-      const cleanText = text.replace(/<[^>]*>/g, ' ');
-      
-      // Split on sentence boundaries
-      const sentences = cleanText.split(/(?<=[.!?])\s+/)
-        .map(s => s.trim())
-        .filter(s => s.length > 0);
-      
-      return sentences.length > 0 ? sentences : [cleanText];
-    }
+function openCurrentArticle() {
+  if (state.headlines.length === 0) return;
+  
+  const headline = state.headlines[state.currentIndex];
+  
+  // Check if this is a Wikipedia link
+  const isWikipediaLink = headline.link && headline.link.includes('wikipedia.org/wiki/');
+  
+  if (isWikipediaLink) {
+    // Extract the article title from the URL
+    const title = decodeURIComponent(headline.link.split('/wiki/')[1].split('#')[0].replace(/_/g, ' '));
+    
+    // Show loading message
+    state.modalState.isOpen = true;
+    state.modalState.currentArticle = headline;
+    state.modalState.currentSentenceIndex = 0;
+    elements.articleModal.classList.add('active');
+    elements.articleSentence.textContent = `Loading Wikipedia: ${title}...`;
+    elements.articleTranslation.textContent = '記事を読み込み中...';
+    elements.articleReadMore.innerHTML = '';
+    elements.closeModalBtn.focus();
+    
+    // Fetch the Wikipedia article
+    fetchWikipediaArticle(title)
+      .then(article => {
+        state.modalState.currentArticle = {
+          ...headline,
+          title: article.title,
+          content: article.content,
+          link: article.link
+        };
+        
+        // Extract sentences from the content
+        state.modalState.sentences = extractSentences(article.content);
+        state.modalState.translations = Array(state.modalState.sentences.length).fill(null);
+        
+        // Display the first sentence
+        displayCurrentSentence();
+      })
+      .catch(error => {
+        console.error('Failed to load Wikipedia article:', error);
+        elements.articleSentence.textContent = `Failed to load Wikipedia article: ${title}`;
+        elements.articleTranslation.textContent = 'Wikipedia記事の読み込みに失敗しました';
+      });
+  } else {
+    // Regular article processing
+    state.modalState.currentArticle = headline;
+    state.modalState.currentSentenceIndex = 0;
+    state.modalState.isOpen = true;
+    
+    // Extract sentences from content or description
+    const content = headline.content || headline.description || headline.title;
+    state.modalState.sentences = extractSentences(content);
+    state.modalState.translations = Array(state.modalState.sentences.length).fill(null);
+    
+    elements.articleModal.classList.add('active');
+    elements.closeModalBtn.focus();
+    
+    // Display the first sentence
+    displayCurrentSentence();
+  }
+}
+function extractSentences(text) {
+  // Simple sentence splitting that handles common cases
+  if (!text) return [];
+  
+  // First clean any HTML tags and special characters
+  const cleanText = text.replace(/<[^>]*>/g, ' ')
+                        .replace(/\[\d+\]/g, '') // Remove Wikipedia citations [1]
+                        .replace(/\s+/g, ' ')
+                        .trim();
+  
+  // Split on sentence boundaries but keep common abbreviations intact
+  const sentences = cleanText.split(/(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=[.!?])\s+/)
+    .map(s => s.trim())
+    .filter(s => s.length > 0);
+  
+  // If we didn't get good splits, try splitting on newlines
+  if (sentences.length <= 1) {
+    return cleanText.split('\n')
+      .map(s => s.trim())
+      .filter(s => s.length > 0);
+  }
+  
+  return sentences.length > 0 ? sentences : [cleanText];
+}
 
 function displayCurrentSentence() {
-    if (!state.modalState.isOpen || !state.modalState.sentences) return;
-    
-    const currentIndex = state.modalState.currentSentenceIndex;
-    const currentSentence = state.modalState.sentences[currentIndex];
-    const article = state.modalState.currentArticle;
-    
-    // Display the current sentence
-    elements.articleSentence.textContent = currentSentence;
-    
-    // Update progress indicator
-    elements.articleProgress.textContent = `Article ${state.currentIndex + 1}/${state.headlines.length} • Sentence ${currentIndex + 1}/${state.modalState.sentences.length}`;
-    
-    // Show "Read more" link only on last sentence
-    if (currentIndex === state.modalState.sentences.length - 1 && article.link) {
-        elements.articleReadMore.innerHTML = `<a href="${article.link}" target="_blank">Read full article →</a>`;
-    } else {
-        elements.articleReadMore.innerHTML = '';
-    }
-    
-    // Check if we have a cached translation
-    const cachedTranslation = getCachedTranslation(currentSentence);
-    if (cachedTranslation) {
-        elements.articleTranslation.textContent = cachedTranslation;
-        state.modalState.translations[currentIndex] = cachedTranslation;
-    } else {
-        elements.articleTranslation.textContent = '翻訳中...';
-        // Fetch translation if we don't have it
-        translateText(currentSentence)
-            .then(translation => {
-                state.modalState.translations[currentIndex] = translation;
-                // Only update if we're still on the same sentence
-                if (state.modalState.currentSentenceIndex === currentIndex) {
-                    elements.articleTranslation.textContent = translation;
-                }
-                cacheTranslation(currentSentence, translation);
-            })
-            .catch(error => {
-                console.error('Sentence translation failed:', error);
-                state.modalState.translations[currentIndex] = simpleTranslate(currentSentence);
-                if (state.modalState.currentSentenceIndex === currentIndex) {
-                    elements.articleTranslation.textContent = state.modalState.translations[currentIndex];
-                }
-            });
-    }
-    
-    updateSentenceNavigation();
+  if (!state.modalState.isOpen || !state.modalState.sentences) return;
+  
+  const currentIndex = state.modalState.currentSentenceIndex;
+  const currentSentence = state.modalState.sentences[currentIndex];
+  const article = state.modalState.currentArticle;
+  
+  // Display the current sentence (limit length for very long sentences)
+  const displaySentence = currentSentence.length > 500 
+    ? currentSentence.substring(0, 500) + '...' 
+    : currentSentence;
+  elements.articleSentence.textContent = displaySentence;
+  
+  // Update progress indicator
+  const sourceName = article.link && article.link.includes('wikipedia.org') 
+    ? 'Wikipedia' 
+    : state.currentSource;
+  elements.articleProgress.textContent = `${sourceName} • Sentence ${currentIndex + 1}/${state.modalState.sentences.length}`;
+  
+  // Show "Read more" link only on last sentence
+  if (currentIndex === state.modalState.sentences.length - 1 && article.link) {
+    const linkText = article.link.includes('wikipedia.org') 
+      ? 'Read full Wikipedia article →' 
+      : 'Read full article →';
+    elements.articleReadMore.innerHTML = `<a href="${article.link}" target="_blank">${linkText}</a>`;
+  } else {
+    elements.articleReadMore.innerHTML = '';
+  }
+  
+  // Check if we have a cached translation
+  const cachedTranslation = getCachedTranslation(currentSentence);
+  if (cachedTranslation) {
+    elements.articleTranslation.textContent = cachedTranslation;
+    state.modalState.translations[currentIndex] = cachedTranslation;
+  } else {
+    elements.articleTranslation.textContent = '翻訳中...';
+    // Fetch translation if we don't have it
+    translateText(currentSentence)
+      .then(translation => {
+        state.modalState.translations[currentIndex] = translation;
+        // Only update if we're still on the same sentence
+        if (state.modalState.currentSentenceIndex === currentIndex) {
+          elements.articleTranslation.textContent = translation;
+        }
+        cacheTranslation(currentSentence, translation);
+      })
+      .catch(error => {
+        console.error('Sentence translation failed:', error);
+        state.modalState.translations[currentIndex] = simpleTranslate(currentSentence);
+        if (state.modalState.currentSentenceIndex === currentIndex) {
+          elements.articleTranslation.textContent = state.modalState.translations[currentIndex];
+        }
+      });
+  }
+  
+  updateSentenceNavigation();
 }
 
     function showNextSentence() {
