@@ -622,8 +622,9 @@ body.light-mode .temp-ticker {
     </div>
 <div class="header-controls">
   <button id="pause-btn" class="nav-btn" tabindex="1">⏸ Pause</button>
-  <button id="next-btn" class="nav-btn" tabindex="2">⏭ Next</button>
-  <button id="source-btn" tabindex="3">BBC</button>
+  <button id="prev-btn" class="nav-btn" tabindex="2">⏮ Previous</button>
+  <button id="next-btn" class="nav-btn" tabindex="3">⏭ Next</button>
+  <button id="source-btn" tabindex="4">BBC</button>
   <div id="headline-counter" class="headline-counter">0/0</div>
 </div>
   </header>
@@ -641,8 +642,8 @@ body.light-mode .temp-ticker {
         <div class="headline">Loading headlines...</div>
       </div>
       <div class="container-controls">
-        <button class="toggle-btn" data-target="english-container" tabindex="4">Hide</button>
-      </div>
+  <!-- Empty div - buttons removed -->
+</div>
     </div>
     
     <!-- Bottom container (Japanese translation) -->
@@ -651,8 +652,8 @@ body.light-mode .temp-ticker {
         <div class="headline">翻訳を読み込み中...</div>
       </div>
       <div class="container-controls">
-        <button class="toggle-btn" data-target="japanese-container" tabindex="5">Hide</button>
-      </div>
+  <!-- Empty div - buttons removed -->
+</div>
     </div>
   </div>
 <!-- News Ticker -->
@@ -1095,7 +1096,9 @@ function init() {
     // Initialize event listeners
     function initEventListeners() {
       elements.pauseBtn.addEventListener('click', togglePause);
-      elements.nextBtn.addEventListener('click', showNextHeadline);
+      elements.prevBtn = document.getElementById('prev-btn'); // Add this line to elements object
+elements.nextBtn.addEventListener('click', showNextHeadline);
+elements.prevBtn.addEventListener('click', showPrevHeadline); // Add this line
       elements.sourceBtn.addEventListener('click', cycleNewsSource);
       elements.closeModalBtn.addEventListener('click', closeModal);
       elements.prevSentenceBtn.addEventListener('click', showPrevSentence);
