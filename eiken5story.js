@@ -1,7 +1,7 @@
 // eiken5story.js
-var eiken5story = {
+var eiken5story = [
     // Story 1 - Eiken 5 Story
-    'story_1': {
+    {
         title: "Eiken 5 Story",
         content: `🌱 This is Yuki.
 これはユキです。
@@ -144,8 +144,8 @@ var eiken5story = {
 あなたもやってみますか？`
     },
     
-    // Story 2 - Saki's Park Day
-    'story_2': {
+ // Story 2 - Saki's Park Day
+    {
         title: "Saki's Park Day",
         content: `🌳 Saki lives near a big park.
 咲は大きな公園の近くに住んでいる。
@@ -268,4 +268,4 @@ var eiken5story = {
 🏫 Are you happy in the morning?
 朝、幸せですか？`
     }
-};
+];
