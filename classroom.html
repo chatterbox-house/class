@@ -2699,10 +2699,17 @@ function loadLessonsData() {
     ],
     questions: eiken3questions.questions
 },
-                'Eiken4': Object.values(eiken4).map((content, i) => ({
-                    title: `Story ${i+1}`,
-                    content: content
-                })),
+            'Eiken4': {
+    stories: Array.isArray(eiken4) ? 
+        eiken4.map(story => ({
+            title: story.title,
+            content: story.content
+        })) : 
+        Object.values(eiken4).map(story => ({
+            title: story.title,
+            content: story.content
+        }))
+},
 // In loadLessonsData function
 'Eiken5': {
     stories: window.eiken5story ? window.eiken5story.map(story => ({
