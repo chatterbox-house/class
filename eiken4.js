@@ -1078,5 +1078,1085 @@ const eiken4 = [
 あなたは明日どんな映画を見るつもりですか？  
 😄 Why are movie nights fun for you?  
 なぜ映画の夜はあなたにとって楽しいですか？`
-    }
+    },
+
+// Story 25 - A Day in the Garden
+{
+    title: "25. A Day in the Garden",
+    content: `🌱 Emma works in her garden.  
+エマは庭で働きます。  
+🌸 She plants colorful flowers.  
+彼女は色とりどりの花を植えます。  
+💦 Emma waters the plants carefully.  
+エマは植物に丁寧に水をやります。  
+🌳 She sits under a big tree.  
+彼女は大きな木の下に座ります。  
+😊 Emma likes gardening.  
+エマはガーデニングが好きです。  
+🍎 She eats an apple in the garden.  
+彼女は庭でりんごを食べます。  
+🧤 Emma wears gloves to work.  
+エマは働くために手袋をはめます。  
+🌱 She will plant more flowers tomorrow.  
+彼女は明日、もっと花を植えるつもりです。  
+😄 Gardening makes Emma happy.  
+ガーデニングはエマを幸せにします。  
+🌸 She planted roses last week.  
+彼女は先週、バラを植えました。  
+🌱 Do you work in a garden?  
+あなたは庭で働きますか？  
+🌸 Do you plant flowers?  
+あなたは花を植えますか？  
+💦 Do you water plants?  
+あなたは植物に水をやりますか？  
+🌳 Do you sit under trees?  
+あなたは木の下に座りますか？  
+😊 Do you like gardening?  
+あなたはガーデニングが好きですか？  
+🍎 What do you eat in the garden?  
+あなたは庭で何を食べますか？  
+🧤 What do you wear to garden?  
+あなたはガーデニングに何を着ますか？  
+🌱 What will you plant tomorrow?  
+あなたは明日何を植えるつもりですか？  
+😄 Why does gardening make you happy?  
+なぜガーデニングはあなたを幸せにしますか？  
+🌸 What flowers did you plant last week?  
+あなたは先週どんな花を植えましたか？`
+},
+
+// Story 26 - A Shopping Trip
+{
+    title: "26. A Shopping Trip",
+    content: `🛍️ Yuki goes shopping with her mom.  
+ユキはママと買い物に行きます。  
+🏬 They visit a big store.  
+彼らは大きな店を訪れます。  
+🍎 Yuki picks apples and oranges.  
+ユキはりんごとオレンジを選びます。  
+🛒 Her mom puts bread in the cart.  
+彼女のママはパンカートに入れます。  
+💸 They pay at the cashier.  
+彼らはレジで支払います。  
+😊 Yuki likes shopping trips.  
+ユキは買い物の旅が好きです。  
+🛍️ She carries a shopping bag.  
+彼女は買い物袋を持ちます。  
+🚶 They walk home together.  
+彼らはいっしょに家に歩いて帰ります。  
+🍎 Yuki will eat an orange later.  
+ユキは後でオレンジを食べるつもりです。  
+😄 Shopping is fun for Yuki.  
+ユキにとって買い物は楽しいです。  
+🛍️ Do you go shopping with your mom?  
+あなたはママと買い物に行きますか？  
+🏬 Do you visit big stores?  
+あなたは大きな店を訪れますか？  
+🍎 Do you pick apples at stores?  
+あなたは店でりんごを選びますか？  
+🛒 Do you put food in a cart?  
+あなたはカートに食べ物を入れますか？  
+😊 Do you like shopping trips?  
+あなたは買い物の旅が好きですか？  
+💸 Who pays at the cashier?  
+レジで誰が支払いますか？  
+🛍️ What do you carry after shopping?  
+あなたは買い物の後何を持ちますか？  
+🚶 Where do you walk after shopping?  
+あなたは買い物の後どこを歩きますか？  
+🍎 What will you eat later?  
+あなたは後で何を食べるつもりですか？  
+😄 Why is shopping fun for you?  
+なぜ買い物はあなたにとって楽しいですか？`
+},
+
+// Story 27 - A Bike Ride
+{
+    title: "27. A Bike Ride",
+    content: `🚴 Tom rides his bicycle in the park.  
+トムは公園で自転車に乗ります。  
+🌳 He sees tall trees around him.  
+彼は周りに高い木を見ます。  
+😄 Tom rides fast and laughs.  
+トムは速く乗って笑います。  
+🛤️ He follows a long path.  
+彼は長い道をたどります。  
+🍎 Tom stops to eat an apple.  
+トムはりんごを食べるために止まります。  
+😊 He likes bike rides.  
+彼は自転車に乗るのが好きです。  
+👨‍👩‍👧 Tom rides with his family.  
+トムは家族と一緒に乗ります。  
+🚴 He will ride again tomorrow.  
+彼は明日また乗るつもりです。  
+🌳 The park is beautiful.  
+公園は美しいです。  
+😄 Bike rides are fun for Tom.  
+トムにとって自転車に乗るのは楽しいです。  
+🚴 Do you ride a bicycle in the park?  
+あなたは公園で自転車に乗りますか？  
+🌳 Do you see trees when you ride?  
+あなたは乗るときに木を見ますか？  
+😄 Do you laugh when you ride fast?  
+あなたは速く乗るとき笑いますか？  
+🛤️ Do you follow paths in the park?  
+あなたは公園の道をたどりますか？  
+😊 Do you like bike rides?  
+あなたは自転車に乗るのが好きですか？  
+🍎 What do you eat when you stop?  
+あなたは止まるとき何を食べますか？  
+👨‍👩‍👧 Who do you ride with?  
+あなたは誰と一緒に乗りますか？  
+🚴 When will you ride again?  
+あなたはいつまた乗るつもりですか？  
+🌳 What is beautiful in the park?  
+公園で何が美しいですか？  
+😄 Why are bike rides fun for you?  
+なぜ自転車に乗るのはあなたにとって楽しいですか？`
+},
+
+// Story 28 - A Day at School
+{
+    title: "28. A Day at School",
+    content: `🏫 Hana goes to school every day.  
+ハナは毎日学校に行きます。  
+📚 She studies math and science.  
+彼女は数学と科学を勉強します。  
+✏️ Hana writes in her notebook.  
+ハナはノートに書きます。  
+🍱 She eats lunch with friends.  
+彼女は友達と昼食を食べます。  
+⚽ Hana plays soccer after school.  
+ハナは放課後にサッカーをします。  
+😊 She likes her school days.  
+彼女は学校の日が好きです。  
+👩‍🏫 Her teacher is kind.  
+彼女の先生は優しいです。  
+📖 Hana reads a book in class.  
+ハナは授業で本を読みます。  
+🏫 She will study English tomorrow.  
+彼女は明日、英語を勉強するつもりです。  
+😄 School is fun for Hana.  
+ハナにとって学校は楽しいです。  
+🏫 Do you go to school every day?  
+あなたは毎日学校に行きますか？  
+📚 Do you study math at school?  
+あなたは学校で数学を勉強しますか？  
+✏️ Do you write in a notebook?  
+あなたはノートに書きますか？  
+🍱 Do you eat lunch with friends?  
+あなたは友達と昼食を食べますか？  
+😊 Do you like school days?  
+あなたは学校の日が好きですか？  
+⚽ What do you play after school?  
+あなたは放課後に何をしますか？  
+👩‍🏫 Is your teacher kind?  
+あなたの先生は優しいですか？  
+📖 What do you read in class?  
+あなたは授業で何を読みますか？  
+🏫 What will you study tomorrow?  
+あなたは明日何を勉強するつもりですか？  
+😄 Why is school fun for you?  
+なぜ学校はあなたにとって楽しいですか？`
+},
+
+// Story 29 - A Visit to the Park
+{
+    title: "29. A Visit to the Park",
+    content: `🌳 Sophie visits the park on Sunday.  
+ソフィーは日曜日に公園を訪れます。  
+🪁 She flies a kite with her brother.  
+彼女は弟と凧を飛ばします。  
+😄 Sophie laughs and runs.  
+ソフィーは笑って走ります。  
+🌳 She sits under a shady tree.  
+彼女は日陰の木の下に座ります。  
+🍎 Sophie eats an apple.  
+ソフィーはりんごを食べます。  
+😊 She likes park visits.  
+彼女は公園を訪れるのが好きです。  
+⚽ Sophie plays soccer with friends.  
+ソフィーは友達とサッカーをします。  
+📸 She takes pictures of the park.  
+彼女は公園の写真を撮ります。  
+🌳 She will visit the park again tomorrow.  
+彼女は明日また公園を訪れるつもりです。  
+😄 The park is fun for Sophie.  
+ソフィーにとって公園は楽しいです。  
+🌳 Do you visit the park on Sunday?  
+あなたは日曜日に公園を訪れますか？  
+🪁 Do you fly a kite with family?  
+あなたは家族と凧を飛ばしますか？  
+😄 Do you laugh when you run?  
+あなたは走るとき笑いますか？  
+⚽ Do you play soccer in the park?  
+あなたは公園でサッカーをしますか？  
+😊 Do you like park visits?  
+あなたは公園を訪れるのが好きですか？  
+🍎 What do you eat in the park?  
+あなたは公園で何を食べますか？  
+📸 What pictures do you take in the park?  
+あなたは公園でどんな写真を撮りますか？  
+🌳 When will you visit the park again?  
+あなたはいつまた公園を訪れるつもりですか？  
+😄 Why is the park fun for you?  
+なぜ公園はあなたにとって楽しいですか？  
+🌳 What do you do under trees?  
+あなたは木の下で何をしますか？`
+},
+
+// Story 30 - A Rainy Afternoon
+{
+    title: "30. A Rainy Afternoon",
+    content: `☔ It rains all afternoon.  
+午後は一日中雨が降ります。  
+🏠 Riku stays at home.  
+リクは家にいます。  
+📺 He watches a movie on TV.  
+彼はテレビで映画を見ます。  
+🎲 Riku plays a game with his sister.  
+リクは妹とゲームをします。  
+🍵 His mom makes hot tea.  
+彼のママは熱いお茶を作ります。  
+😊 Riku likes rainy afternoons.  
+リクは雨の午後が好きです。  
+📖 He reads a comic book.  
+彼は漫画の本を読みます。  
+😺 His cat sleeps by the window.  
+彼の猫は窓のそばで寝ます。  
+☔ Riku will go outside tomorrow.  
+リクは明日、外に出るつもりです。  
+😄 Rainy days are fun for Riku.  
+リクにとって雨の日は楽しいです。  
+☔ Does it rain in the afternoon?  
+午後に雨が降りますか？  
+🏠 Do you stay at home when it rains?  
+雨が降るとき家にいますか？  
+📺 Do you watch movies on TV?  
+あなたはテレビで映画を見ますか？  
+🎲 Do you play games with family?  
+あなたは家族とゲームをしますか？  
+😊 Do you like rainy afternoons?  
+あなたは雨の午後が好きですか？  
+🍵 What hot drinks do you like?  
+あなたはどんな熱い飲み物が好きですか？  
+📖 What do you read on rainy days?  
+あなたは雨の日に何を読みますか？  
+😺 Where does your pet sleep?  
+あなたのペットはどこで寝ますか？  
+☔ When will you go outside?  
+あなたはいつ外に出るつもりですか？  
+😄 Why are rainy days fun for you?  
+なぜ雨の日はあなたにとって楽しいですか？`
+},
+
+// Story 31 - A Day with Dad
+{
+    title: "31. A Day with Dad",
+    content: `👨‍👦 Liam spends a day with his dad.  
+リアムはお父さんと一日を過ごします。  
+🎣 They go fishing at the lake.  
+彼らは湖で釣りに行きます。  
+😄 Liam catches a small fish.  
+リアムは小さな魚を釣ります。  
+🍎 They eat apples by the lake.  
+彼らは湖のそばでりんごを食べます。  
+🚶 Liam and Dad walk around the lake.  
+リアムとお父さんは湖の周りを歩きます。  
+😊 Liam likes fishing with Dad.  
+リアムはお父さんと釣りをするのが好きです。  
+📸 They take pictures together.  
+彼らはいっしょに写真を撮ります。  
+🎣 Liam will fish again next week.  
+リアムは来週また釣りをするつもりです。  
+🌳 The lake is beautiful.  
+湖は美しいです。  
+😄 Days with Dad are fun for Liam.  
+リアムにとってお父さんとの日は楽しいです。  
+👨‍👦 Do you spend days with your dad?  
+あなたはお父さんと一日を過ごしますか？  
+🎣 Do you go fishing at lakes?  
+あなたは湖で釣りに行きますか？  
+🍎 Do you eat apples by lakes?  
+あなたは湖のそばでりんごを食べますか？  
+🚶 Do you walk around lakes?  
+あなたは湖の周りを歩きますか？  
+😊 Do you like fishing?  
+あなたは釣りが好きですか？  
+😄 Why are days with Dad fun?  
+なぜお父さんとの日はあなたにとって楽しいですか？  
+📸 What pictures do you take with Dad?  
+あなたはお父さんとどんな写真を撮りますか？  
+🎣 When will you fish again?  
+あなたはいつまた釣りをするつもりですか？  
+🌳 What is beautiful near you?  
+あなたの近くで何が美しいですか？  
+🍎 What do you eat by the lake?  
+あなたは湖のそばで何を食べますか？`
+},
+
+// Story 32 - A Library Day
+{
+    title: "32. A Library Day",
+    content: `📚 Aiko visits the library after school.  
+アイコは放課後に図書館を訪れます。  
+📖 She borrows a mystery book.  
+彼女はミステリーの本を借ります。  
+🪑 Aiko sits at a quiet table.  
+アイコは静かなテーブルに座ります。  
+✍️ She writes notes about the story.  
+彼女は物語についてノートに書きます。  
+😊 Aiko likes reading books.  
+アイコは本を読むのが好きです。  
+👩‍🏫 The librarian helps Aiko.  
+司書はアイコを助けます。  
+📚 Aiko reads for one hour.  
+アイコは1時間読みます。  
+🏠 She will read at home tomorrow.  
+彼女は明日、家で読むつもりです。  
+😄 The library is Aiko’s favorite place.  
+図書館はアイコのお気に入りの場所です。  
+📖 Aiko finished a book yesterday.  
+アイコは昨日、本を読み終えました。  
+📚 Do you visit the library after school?  
+あなたは放課後に図書館を訪れますか？  
+📖 Do you borrow mystery books?  
+あなたはミステリーの本を借りますか？  
+🪑 Do you sit at quiet tables?  
+あなたは静かなテーブルに座りますか？  
+😊 Do you like reading books?  
+あなたは本を読むのが好きですか？  
+👩‍🏫 Does the librarian help you?  
+司書はあなたを助けますか？  
+✍️ What do you write in your notes?  
+あなたはノートに何を書きますか？  
+📚 How long do you read at the library?  
+あなたは図書館でどのくらい読みますか？  
+🏠 When will you read at home?  
+あなたは家でいつ読みますか？  
+😄 Why is the library your favorite place?  
+なぜ図書館はあなたのお気に入りの場所ですか？  
+📖 What book did you finish yesterday?  
+あなたは昨日どんな本を読み終えましたか？`
+},
+
+// Story 33 - A Soccer Game
+{
+    title: "33. A Soccer Game",
+    content: `⚽ James plays soccer with friends.  
+ジェームズは友達とサッカーをします。  
+🏟️ They play on a big field.  
+彼らは大きなフィールドで遊びます。  
+😄 James kicks the ball hard.  
+ジェームズはボールを強く蹴ります。  
+🏆 His team wins the game.  
+彼のチームは試合に勝ちます。  
+🍎 James eats an apple after playing.  
+ジェームズは遊んだ後りんごを食べます。  
+😊 He likes soccer games.  
+彼はサッカーの試合が好きです。  
+👨‍🏫 The coach says, “Good job!”  
+コーチは「よくやった！」と言います。  
+⚽ James will practice tomorrow.  
+ジェームズは明日、練習するつもりです。  
+😄 Soccer is fun for James.  
+ジェームズにとってサッカーは楽しいです。  
+🏟️ They played soccer last week.  
+彼らは先週サッカーをしました。  
+⚽ Do you play soccer with friends?  
+あなたは友達とサッカーをしますか？  
+🏟️ Do you play on a big field?  
+あなたは大きなフィールドで遊びますか？  
+🏆 Does your team win games?  
+あなたのチームは試合に勝ちますか？  
+🍎 Do you eat fruit after playing?  
+あなたは遊んだ後に果物を食べますか？  
+😊 Do you like soccer games?  
+あなたはサッカーの試合が好きですか？  
+😄 Why is soccer fun for you?  
+なぜサッカーはあなたにとって楽しいですか？  
+👨‍🏫 Who says “Good job” to you?  
+誰があなたに「よくやった！」と言いますか？  
+⚽ When will you practice soccer?  
+あなたはいつサッカーを練習するつもりですか？  
+🏟️ Where do you play soccer?  
+あなたはどこでサッカーをしますか？  
+😄 What did you play last week?  
+あなたは先週何をしましたか？`
+},
+
+// Story 34 - A Family Dinner
+{
+    title: "34. A Family Dinner",
+    content: `🍽️ Sota eats dinner with his family.  
+ソウタは家族と夕食を食べます。  
+🍲 They cook soup together.  
+彼らはいっしょにスープを料理します。  
+🥗 Sota makes a salad.  
+ソウタはサラダを作ります。  
+😄 Everyone talks and laughs.  
+みんなは話して笑います。  
+🥄 Sota sets the table carefully.  
+ソウタは丁寧にテーブルを準備します。  
+😊 He likes family dinners.  
+彼は家族の夕食が好きです。  
+🍎 They eat fruit for dessert.  
+彼らはデザートに果物を食べます。  
+🍽️ Sota will help cook tomorrow.  
+ソウタは明日、料理を手伝うつもりです。  
+😄 Dinners are fun for Sota.  
+ソウタにとって夕食は楽しいです。  
+🍲 His family ate pasta yesterday.  
+彼の家族は昨日、パスタを食べました。  
+🍽️ Do you eat dinner with your family?  
+あなたは家族と夕食を食べますか？  
+🍲 Do you cook soup at home?  
+あなたは家でスープを料理しますか？  
+🥗 Do you make salads?  
+あなたはサラダを作りますか？  
+🥄 Do you set the table?  
+あなたはテーブルを準備しますか？  
+😊 Do you like family dinners?  
+あなたは家族の夕食が好きですか？  
+😄 What do you talk about at dinner?  
+あなたは夕食で何を話しますか？  
+🍎 What do you eat for dessert?  
+あなたはデザートに何を食べますか？  
+🍽️ What will you cook tomorrow?  
+あなたは明日何を料理するつもりですか？  
+😄 Why are dinners fun for you?  
+なぜ夕食はあなたにとって楽しいですか？  
+🍲 What did your family eat yesterday?  
+あなたの家族は昨日何を食べましたか？`
+},
+
+// Story 35 - A Walk in the Forest
+{
+    title: "35. A Walk in the Forest",
+    content: `🌲 Mia walks in a forest with her dad.  
+ミアはお父さんと森を歩きます。  
+🐦 She sees birds in the trees.  
+彼女は木に鳥を見ます。  
+😄 Mia laughs at a funny squirrel.  
+ミアは面白いリスで笑います。  
+🌳 She sits on a big rock.  
+彼女は大きな岩に座ります。  
+🍎 Mia eats an apple during the walk.  
+ミアは歩いている間りんごを食べます。  
+😊 She likes forest walks.  
+彼女は森の散歩が好きです。  
+📸 Mia takes pictures of flowers.  
+ミアは花の写真を撮ります。  
+🌲 She will walk again next week.  
+彼女は来週また歩くつもりです。  
+😄 The forest is beautiful.  
+森は美しいです。  
+🐦 Mia saw a deer yesterday.  
+ミアは昨日、鹿を見ました。  
+🌲 Do you walk in a forest?  
+あなたは森を歩きますか？  
+🐦 Do you see birds in trees?  
+あなたは木に鳥を見ますか？  
+🌳 Do you sit on rocks?  
+あなたは岩に座りますか？  
+🍎 Do you eat apples on walks?  
+あなたは散歩中にりんごを食べますか？  
+😊 Do you like forest walks?  
+あなたは森の散歩が好きですか？  
+😄 What makes you laugh in forests?  
+森で何があなたを笑わせますか？  
+📸 What pictures do you take in forests?  
+あなたは森でどんな写真を撮りますか？  
+🌲 When will you walk again?  
+あなたはいつまた歩くつもりですか？  
+😄 Why is the forest beautiful?  
+なぜ森はあなたにとって美しいですか？  
+🐦 What animals did you see yesterday?  
+あなたは昨日どんな動物を見ましたか？`
+},
+
+// Story 36 - A Music Concert
+{
+    title: "36. A Music Concert",
+    content: `🎶 Ryo goes to a music concert.  
+リョウは音楽コンサートに行きます。  
+🎤 He listens to singers on stage.  
+彼はステージで歌手を聴きます。  
+😄 Ryo claps and cheers loudly.  
+リョウは大きく拍手して応援します。  
+🎸 The band plays fun music.  
+バンドは楽しい音楽を演奏します。  
+😊 Ryo likes concerts.  
+リョウはコンサートが好きです。  
+📸 He takes pictures of the stage.  
+彼はステージの写真を撮ります。  
+🎶 Ryo sings with the crowd.  
+リョウは観客と一緒に歌います。  
+🏠 He will go home late tonight.  
+彼は今夜遅く家に帰るつもりです。  
+😄 Concerts are exciting for Ryo.  
+リョウにとってコンサートはわくわくします。  
+🎤 He saw a concert last month.  
+彼は先月、コンサートを見ました。  
+🎶 Do you go to music concerts?  
+あなたは音楽コンサートに行きますか？  
+🎤 Do you listen to singers?  
+あなたは歌手を聴きますか？  
+😄 Do you clap at concerts?  
+あなたはコンサートで拍手しますか？  
+🎸 Do you like fun music?  
+あなたは楽しい音楽が好きですか？  
+😊 Do you like concerts?  
+あなたはコンサートが好きですか？  
+📸 What pictures do you take at concerts?  
+あなたはコンサートでどんな写真を撮りますか？  
+🎶 What do you sing with crowds?  
+あなたは観客と何を歌いますか？  
+🏠 When will you go home tonight?  
+あなたは今夜いつ家に帰るつもりですか？  
+😄 Why are concerts exciting for you?  
+なぜコンサートはあなたにとってわくわくしますか？  
+🎤 What did you see last month?  
+あなたは先月何を見ましたか？`
+},
+
+// Story 37 - A Day at the Aquarium
+{
+    title: "37. A Day at the Aquarium",
+    content: `🐠 Lily visits the aquarium with her mom.  
+リリーはママと水族館を訪れます。  
+🐟 She sees colorful fish.  
+彼女は色とりどりの魚を見ます。  
+😄 Lily laughs at a funny seal.  
+リリーは面白いアシカで笑います。  
+📸 She takes pictures of the fish.  
+彼女は魚の写真を撮ります。  
+😊 Lily likes the aquarium.  
+リリーは水族館が好きです。  
+🐬 She watches dolphins swim fast.  
+彼女はイルカが速く泳ぐのを見ます。  
+🍎 Lily eats an apple outside.  
+リリーは外でりんごを食べます。  
+🏠 She will go home in the afternoon.  
+彼女は午後に家に帰るつもりです。  
+😄 The aquarium is fun for Lily.  
+リリーにとって水族館は楽しいです。  
+🐠 She saw sharks last week.  
+彼女は先週、サメを見ました。  
+🐠 Do you visit the aquarium?  
+あなたは水族館を訪れますか？  
+🐟 Do you see colorful fish?  
+あなたは色とりどりの魚を見ますか？  
+😄 Do you laugh at seals?  
+あなたはアシカで笑いますか？  
+🐬 Do you watch dolphins swim?  
+あなたはイルカが泳ぐのを見ますか？  
+😊 Do you like the aquarium?  
+あなたは水族館が好きですか？  
+📸 What pictures do you take at the aquarium?  
+あなたは水族館でどんな写真を撮りますか？  
+🍎 What do you eat outside the aquarium?  
+あなたは水族館の外で何を食べますか？  
+🏠 When will you go home?  
+あなたはいつ家に帰るつもりですか？  
+😄 Why is the aquarium fun for you?  
+なぜ水族館はあなたにとって楽しいですか？  
+🐠 What did you see last week?  
+あなたは先週何を見ましたか？`
+},
+
+// Story 38 - A Homework Day
+{
+    title: "38. A Homework Day",
+    content: `📝 Kenta does homework at home.  
+ケンタは家で宿題をします。  
+✍️ He writes answers in his notebook.  
+彼はノートに答えを書きます。  
+📚 Kenta studies English and math.  
+ケンタは英語と数学を勉強します。  
+😊 He likes doing homework.  
+彼は宿題をするのが好きです。  
+🖥️ Kenta uses a computer sometimes.  
+ケンタは時々コンピュータを使います。  
+👨‍🏫 His teacher gives fun homework.  
+彼の先生は楽しい宿題を出します。  
+🕒 Kenta finishes before dinner.  
+ケンタは夕食前に終わらせます。  
+📝 He will study science tomorrow.  
+彼は明日、科学を勉強するつもりです。  
+😄 Homework is easy for Kenta.  
+ケンタにとって宿題は簡単です。  
+📚 He studied history yesterday.  
+彼は昨日、歴史を勉強しました。  
+📝 Do you do homework at home?  
+あなたは家で宿題をしますか？  
+✍️ Do you write in a notebook?  
+あなたはノートに書きますか？  
+📚 Do you study English?  
+あなたは英語を勉強しますか？  
+🖥️ Do you use a computer for homework?  
+あなたは宿題にコンピュータを使いますか？  
+😊 Do you like doing homework?  
+あなたは宿題をするのが好きですか？  
+👨‍🏫 What homework does your teacher give?  
+あなたの先生はどんな宿題を出しますか？  
+🕒 When do you finish homework?  
+あなたはいつ宿題を終わらせますか？  
+📝 What will you study tomorrow?  
+あなたは明日何を勉強するつもりですか？  
+😄 Why is homework easy for you?  
+なぜ宿題はあなたにとって簡単ですか？  
+📚 What did you study yesterday?  
+あなたは昨日何を勉強しましたか？`
+},
+
+// Story 39 - A Day at the Farm
+{
+    title: "39. A Day at the Farm",
+    content: `🚜 Sara visits a farm with her class.  
+サラはクラスと一緒に農場を訪れます。  
+🐄 She sees cows and chickens.  
+彼女は牛とニワトリを見ます。  
+🥕 Sara picks carrots from the ground.  
+サラは地面からニンジンを取ります。  
+😄 She laughs at a funny pig.  
+彼女は面白いブタで笑います。  
+😊 Sara likes the farm.  
+サラは農場が好きです。  
+🍎 She eats an apple at lunch.  
+彼女は昼食にりんごを食べます。  
+🚶 Sara walks around the farm.  
+サラは農場を歩き回ります。  
+🐑 She feeds a sheep carefully.  
+彼女は羊に丁寧にエサをやります。  
+🚜 Sara will visit the farm again next month.  
+サラは来月また農場を訪れるつもりです。  
+😄 The farm is fun for Sara.  
+サラにとって農場は楽しいです。  
+🚜 Do you visit farms with your class?  
+あなたはクラスと一緒に農場を訪れますか？  
+🐄 Do you see cows at farms?  
+あなたは農場で牛を見ますか？  
+🥕 Do you pick carrots?  
+あなたはニンジンを取りますか？  
+😄 Do you laugh at pigs?  
+あなたはブタで笑いますか？  
+😊 Do you like farms?  
+あなたは農場が好きですか？  
+🍎 What do you eat at farms?  
+あなたは農場で何を食べますか？  
+🚶 Where do you walk at farms?  
+あなたは農場でどこを歩きますか？  
+🐑 What animals do you feed?  
+あなたはどんな動物にエサをやりますか？  
+🚜 When will you visit a farm again?  
+あなたはいつまた農場を訪れるつもりですか？  
+😄 Why is the farm fun for you?  
+なぜ農場はあなたにとって楽しいですか？`
+},
+
+// Story 40 - A Snowy Day
+{
+    title: "40. A Snowy Day",
+    content: `❄️ Oliver plays in the snow.  
+オリバーは雪で遊びます。  
+⛄ He builds a big snowman.  
+彼は大きな雪だるまを作ります。  
+🧣 Oliver wears a warm scarf.  
+オリバーは暖かいマフラーをします。  
+😄 He laughs with his friends.  
+彼は友達と笑います。  
+☕ Oliver drinks hot cocoa at home.  
+オリバーは家でホットココアを飲みます。  
+😊 He likes snowy days.  
+彼は雪の日が好きです。  
+🧤 Oliver puts on gloves.  
+オリバーは手袋をはめます。  
+📖 He reads by the heater.  
+彼はヒーターのそばで読みます。  
+⛄ He will play in the snow tomorrow.  
+彼は明日、雪で遊ぶつもりです。  
+😄 Snow is fun for Oliver.  
+オリバーにとって雪は楽しいです。  
+❄️ Do you play in the snow?  
+あなたは雪で遊びますか？  
+⛄ Do you build snowmen?  
+あなたは雪だるまを作りますか？  
+🧣 Do you wear a scarf in winter?  
+あなたは冬にマフラーをしますか？  
+🧤 Do you put on gloves?  
+あなたは手袋をはめますか？  
+😊 Do you like snowy days?  
+あなたは雪の日が好きですか？  
+😄 Who do you laugh with in the snow?  
+あなたは雪で誰と笑いますか？  
+☕ What do you drink on snowy days?  
+あなたは雪の日に何を飲みますか？  
+📖 What do you read by the heater?  
+あなたはヒーターのそばで何を読みますか？  
+⛄ What will you do in the snow tomorrow?  
+あなたは明日雪で何をするつもりですか？  
+😄 Why is snow fun for you?  
+なぜ雪はあなたにとって楽しいですか？`
+},
+
+// Story 41 - A Day at the Museum
+{
+    title: "41. A Day at the Museum",
+    content: `🏛️ Yumi visits a museum with her class.  
+ユミはクラスと一緒に博物館を訪れます。  
+🖼️ She sees old paintings.  
+彼女は古い絵画を見ます。  
+😄 Yumi laughs at a funny statue.  
+ユミは面白い彫像で笑います。  
+📸 She takes pictures of exhibits.  
+彼女は展示物の写真を撮ります。  
+😊 Yumi likes the museum.  
+ユミは博物館が好きです。  
+👨‍🏫 A guide talks about history.  
+ガイドは歴史について話します。  
+🚶 Yumi walks through big rooms.  
+ユミは大きな部屋を歩きます。  
+📖 She reads about old artifacts.  
+彼女は古い工芸品について読みます。  
+🏛️ Yumi will visit another museum next month.  
+ユミは来月、別の博物館を訪れるつもりです。  
+😄 Museums are fun for Yumi.  
+ユミにとって博物館は楽しいです。  
+🏛️ Do you visit museums with your class?  
+あなたはクラスと一緒に博物館を訪れますか？  
+🖼️ Do you see paintings in museums?  
+あなたは博物館で絵画を見ますか？  
+📸 Do you take pictures of exhibits?  
+あなたは展示物の写真を撮りますか？  
+😊 Do you like museums?  
+あなたは博物館が好きですか？  
+👨‍🏫 Does a guide talk to you?  
+ガイドはあなたに話しますか？  
+😄 What makes you laugh in museums?  
+博物館で何があなたを笑わせますか？  
+🚶 Where do you walk in museums?  
+あなたは博物館でどこを歩きますか？  
+📖 What do you read about in museums?  
+あなたは博物館で何について読みますか？  
+🏛️ When will you visit a museum again?  
+あなたはいつまた博物館を訪れるつもりですか？  
+😄 Why are museums fun for you?  
+なぜ博物館はあなたにとって楽しいですか？`
+},
+
+// Story 42 - A Baking Day
+{
+    title: "42. A Baking Day",
+    content: `🍪 Noah bakes with his mom.  
+ノアはママと一緒に焼きます。  
+🥣 They mix flour and sugar.  
+彼らは小麦粉と砂糖を混ぜます。  
+😄 Noah laughs when flour spills.  
+ノアは小麦粉がこぼれると笑います。  
+🍰 They bake a chocolate cake.  
+彼らはチョコレートケーキを焼きます。  
+😊 Noah likes baking.  
+ノアは焼くのが好きです。  
+🥄 He puts icing on the cake.  
+彼はケーキにアイシングを塗ります。  
+🍽️ The family eats the cake.  
+家族はケーキを食べます。  
+🍪 Noah will bake cookies tomorrow.  
+ノアは明日、クッキーを焼くつもりです。  
+😄 Baking is fun for Noah.  
+ノアにとって焼くのは楽しいです。  
+🍰 He baked bread last week.  
+彼は先週、パンを焼きました。  
+🍪 Do you bake with your mom?  
+あなたはママと一緒に焼きますか？  
+🥣 Do you mix flour and sugar?  
+あなたは小麦粉と砂糖を混ぜますか？  
+🍰 Do you bake cakes?  
+あなたはケーキを焼きますか？  
+🥄 Do you put icing on cakes?  
+あなたはケーキにアイシングを塗りますか？  
+😊 Do you like baking?  
+あなたは焼くのが好きですか？  
+😄 What makes you laugh when baking?  
+焼くとき何があなたを笑わせますか？  
+🍽️ Who eats your baked food?  
+誰があなたの焼いた食べ物を食べますか？  
+🍪 What will you bake tomorrow?  
+あなたは明日何を焼くつもりですか？  
+😄 Why is baking fun for you?  
+なぜ焼くのはあなたにとって楽しいですか？  
+🍰 What did you bake last week?  
+あなたは先週何を焼きましたか？`
+},
+
+// Story 43 - A School Trip
+{
+    title: "43. A School Trip",
+    content: `🚌 Miki goes on a school trip.  
+ミキは学校の遠足に行きます。  
+🏞️ She visits a big park.  
+彼女は大きな公園を訪れます。  
+😄 Miki laughs with her friends.  
+ミキは友達と笑います。  
+📸 She takes pictures of trees.  
+彼女は木の写真を撮ります。  
+🍎 Miki eats an apple at lunch.  
+ミキは昼食にりんごを食べます。  
+😊 She likes school trips.  
+彼女は学校の遠足が好きです。  
+🚶 Miki walks with her teacher.  
+ミキは先生と歩きます。  
+🏞️ The park has a small lake.  
+公園には小さな湖があります。  
+🚌 Miki will ride the bus home.  
+ミキはバスで家に帰るつもりです。  
+😄 School trips are fun for Miki.  
+ミキにとって学校の遠足は楽しいです。  
+🚌 Do you go on school trips?  
+あなたは学校の遠足に行きますか？  
+🏞️ Do you visit parks on trips?  
+あなたは遠足で公園を訪れますか？  
+📸 Do you take pictures of trees?  
+あなたは木の写真を撮りますか？  
+🍎 Do you eat apples at lunch?  
+あなたは昼食にりんごを食べますか？  
+😊 Do you like school trips?  
+あなたは学校の遠足が好きですか？  
+😄 Who do you laugh with on trips?  
+あなたは遠足で誰と笑いますか？  
+🚶 Who do you walk with on trips?  
+あなたは遠足で誰と歩きますか？  
+🏞️ What do you see in parks?  
+あなたは公園で何を見ますか？  
+🚌 When will you ride the bus?  
+あなたはいつバスに乗るつもりですか？  
+😄 Why are school trips fun for you?  
+なぜ学校の遠足はあなたにとって楽しいですか？`
+},
+
+// Story 44 - A Pet Cat
+{
+    title: "44. A Pet Cat",
+    content: `😺 Aiko has a small cat.  
+アイコは小さな猫を飼っています。  
+🧶 She plays with her cat.  
+彼女は猫と遊びます。  
+😄 Aiko laughs when the cat jumps.  
+アイコは猫がジャンプすると笑います。  
+🐟 She feeds her cat fish.  
+彼女は猫に魚をやります。  
+😊 Aiko likes her pet cat.  
+アイコはペットの猫が好きです。  
+🛏️ The cat sleeps on a soft bed.  
+猫は柔らかいベッドで寝ます。  
+📸 Aiko takes pictures of her cat.  
+アイコは猫の写真を撮ります。  
+😺 She will buy cat food tomorrow.  
+彼女は明日、猫のエサを買うつもりです。  
+😄 Cats are fun for Aiko.  
+アイコにとって猫は楽しいです。  
+🐟 Her cat ate chicken yesterday.  
+彼女の猫は昨日、チキンを食べました。  
+😺 Do you have a pet cat?  
+あなたはペットの猫を飼っていますか？  
+🧶 Do you play with your cat?  
+あなたは猫と遊びますか？  
+🐟 Do you feed your cat fish?  
+あなたは猫に魚をやりますか？  
+🛏️ Does your cat sleep on a bed?  
+あなたの猫はベッドで寝ますか？  
+😊 Do you like your pet cat?  
+あなたはペットの猫が好きですか？  
+😄 What makes you laugh about your cat?  
+あなたの猫について何があなたを笑わせますか？  
+📸 What pictures do you take of your cat?  
+あなたは猫のどんな写真を撮りますか？  
+😺 What will you buy for your cat?  
+あなたは猫のために何を買うつもりですか？  
+😄 Why are cats fun for you?  
+なぜ猫はあなたにとって楽しいですか？  
+🐟 What did your cat eat yesterday?  
+あなたの猫は昨日何を食べましたか？`
+},
+
+// Story 45 - A Day at the Pool
+{
+    title: "45. A Day at the Pool",
+    content: `🏊 Leo swims in the pool.  
+レオはプールで泳ぎます。  
+🌞 The sun shines brightly.  
+太陽は明るく輝きます。  
+😄 Leo laughs with his friends.  
+レオは友達と笑います。  
+🏊 He dives into the water.  
+彼は水に飛び込みます。  
+🍉 Leo eats watermelon after swimming.  
+レオは泳いだ後スイカを食べます。  
+😊 He likes pool days.  
+彼はプールの日が好きです。  
+🛟 Leo uses a float in the pool.  
+レオはプールで浮き輪を使います。  
+🏊 He will swim again tomorrow.  
+彼は明日また泳ぐつもりです。  
+😄 The pool is fun for Leo.  
+レオにとってプールは楽しいです。  
+🌞 He swam in the pool yesterday.  
+彼は昨日、プールで泳ぎました。  
+🏊 Do you swim in the pool?  
+あなたはプールで泳ぎますか？  
+🌞 Does the sun shine when you swim?  
+あなたが泳ぐとき太陽は輝きますか？  
+🛟 Do you use a float in the pool?  
+あなたはプールで浮き輪を使いますか？  
+🍉 Do you eat watermelon after swimming?  
+あなたは泳いだ後スイカを食べますか？  
+😊 Do you like pool days?  
+あなたはプールの日が好きですか？  
+😄 Who do you laugh with at the pool?  
+あなたはプールで誰と笑いますか？  
+🏊 What do you do in the water?  
+あなたは水の中で何をしますか？  
+😄 Why is the pool fun for you?  
+なぜプールはあなたにとって楽しいですか？  
+🏊 When will you swim again?  
+あなたはいつまた泳ぐつもりですか？  
+🌞 What did you do yesterday?  
+あなたは昨日何をしましたか？`
+},
+
+// Story 46 - A Craft Day
+{
+    title: "46. A Craft Day",
+    content: `✂️ Emma makes crafts at home.  
+エマは家で工作を作ります。  
+📜 She cuts colorful paper.  
+彼女は色とりどりの紙を切ります。  
+😄 Emma laughs when glue sticks.  
+エマは糊がくっつくと笑います。  
+🎨 She paints a small box.  
+彼女は小さな箱を塗ります。  
+😊 Emma likes making crafts.  
+エマは工作を作るのが好きです。  
+📦 She gives the box to her mom.  
+彼女は箱をママにあげます。  
+✂️ Emma uses scissors carefully.  
+エマはハサミを丁寧に使います。  
+🎨 She will paint another box tomorrow.  
+彼女は明日、別の箱を塗るつもりです。  
+😄 Crafts are fun for Emma.  
+エマにとって工作は楽しいです。  
+📜 She made a card last week.  
+彼女は先週、カードを作りました。  
+✂️ Do you make crafts at home?  
+あなたは家で工作を作りますか？  
+📜 Do you cut colorful paper?  
+あなたは色とりどりの紙を切りますか？  
+🎨 Do you paint boxes?  
+あなたは箱を塗りますか？  
+📦 Do you give crafts to your mom?  
+あなたは工作をママにあげますか？  
+😊 Do you like making crafts?  
+あなたは工作を作るのが好きですか？  
+😄 What makes you laugh when crafting?  
+工作するとき何があなたを笑わせますか？  
+✂️ What do you use carefully?  
+あなたは何を丁寧に使いますか？  
+🎨 What will you paint tomorrow?  
+あなたは明日何を塗るつもりですか？  
+😄 Why are crafts fun for you?  
+なぜ工作はあなたにとって楽しいですか？  
+📜 What did you make last week?  
+あなたは先週何を作りましたか？`
+},
+
+// Story 47 - A Visit to the City
+{
+    title: "47. A Visit to the City",
+    content: `🌆 Kaito visits the city with his dad.  
+カイトはお父さんと市内を訪れます。  
+🏬 He sees tall buildings.  
+彼は高いビルを見ます。  
+😄 Kaito laughs at a street performer.  
+カイトはストリートパフォーマーで笑います。  
+🚶 He walks on busy streets.  
+彼は忙しい通りを歩きます。  
+🍦 Kaito eats ice cream.  
+カイトはアイスクリームを食べます。  
+😊 He likes city visits.  
+彼は市内を訪れるのが好きです。  
+📸 Kaito takes pictures of shops.  
+カイトは店の写真を撮ります。  
+🌆 He will visit the city again next week.  
+彼は来週また市内を訪れるつもりです。  
+😄 The city is exciting for Kaito.  
+カイトにとって市内はわくわくします。  
+🏬 He saw a big mall yesterday.  
+彼は昨日、大きなモールを見ました。  
+🌆 Do you visit the city with your dad?  
+あなたはお父さんと市内を訪れますか？  
+🏬 Do you see tall buildings?  
+あなたは高いビルを見ますか？  
+🍦 Do you eat ice cream in the city?  
+あなたは市内でアイスクリームを食べますか？  
+🚶 Do you walk on busy streets?  
+あなたは忙しい通りを歩きますか？  
+😊 Do you like city visits?  
+あなたは市内を訪れるのが好きですか？  
+😄 What makes you laugh in the city?  
+市内で何があなたを笑わせますか？  
+📸 What pictures do you take in the city?  
+あなたは市内でどんな写真を撮りますか？  
+🌆 When will you visit the city again?  
+あなたはいつまた市内を訪れるつもりですか？  
+😄 Why is the city exciting for you?  
+なぜ市内はあなたにとってわくわくしますか？  
+🏬 What did you see yesterday?  
+あなたは昨日何を見ましたか？`
+},
+
+// Story 48 - A Day with a New Friend
+{
+    title: "48. A Day with a New Friend",
+    content: `👋 Sophie meets a new friend at school.  
+ソフィーは学校で新しい友達に会います。  
+😄 They talk in the classroom.  
+彼らは教室で話します。  
+🌳 They sit under a tree at lunch.  
+彼らは昼食時に木の下に座ります。  
+🍎 Sophie shares an apple with her friend.  
+ソフィーは友達とりんごを分け合います。  
+⚽ They play soccer after school.  
+彼らは放課後にサッカーをします。  
+😊 Sophie likes her new friend.  
+ソフィーは新しい友達が好きです。  
+📸 They take pictures together.  
+彼らはいっしょに写真を撮ります。  
+👋 Sophie will meet her friend tomorrow.  
+ソフィーは明日、友達に会うつもりです。  
+😄 Friends are fun for Sophie.  
+ソフィーにとって友達は楽しいです。  
+🌳 They played in the park yesterday.  
+彼らは昨日、公園で遊びました。  
+👋 Do you meet new friends at school?  
+あなたは学校で新しい友達に会いますか？  
+😄 Do you talk in the classroom?  
+あなたは教室で話しますか？  
+🌳 Do you sit under trees at lunch?  
+あなたは昼食時に木の下に座りますか？  
+🍎 Do you share apples with friends?  
+あなたは友達とりんごを分け合いますか？  
+⚽ Do you play soccer after school?  
+あなたは放課後にサッカーをしますか？  
+😊 Who do you like at school?  
+あなたは学校で誰が好きですか？  
+📸 What pictures do you take with friends?  
+あなたは友達とどんな写真を撮りますか？  
+👋 When will you meet your friend?  
+あなたはいつ友達に会うつもりですか？  
+😄 Why are friends fun for you?  
+なぜ友達はあなたにとって楽しいですか？  
+🌳 Where did you play yesterday?  
+あなたは昨日どこで遊びましたか？`
+}
 ];
