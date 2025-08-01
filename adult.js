@@ -577,6 +577,109 @@ Do you think Japan should abolish the death penalty? Why or why not?
     自分の国に二度と帰れないとしたら、どうしますか？
 45. What would you do if you could erase one bad memory?  
     悪い思い出を1つ消せるとしたら、何を消しますか？`
-        }
+        },
+        {
+            title: "How Many or How Much?",
+            content: `1. How much time do you spend on your hobbies every week?  
+   毎週、趣味にどれくらいの時間を費やしていますか？
+2. How many different countries have you visited?  
+   訪れたことのある国はいくつありますか？
+3. How much money would you need to feel financially secure?  
+   経済的に安心するためには、どれくらいのお金が必要だと思いますか？
+4. How many friends do you see regularly?  
+   定期的に会う友達は何人いますか？
+5. How much sleep do you get each night?  
+   毎晩どれくらいの睡眠をとっていますか？
+6. How many books do you read in a year?  
+   一年に何冊本を読みますか？
+7. How much time do you think is ideal for a lunch break?  
+   昼休みには理想的にどれくらいの時間が必要だと思いますか？
+8. How many pets have you had in your life?  
+   今までに何匹ペットを飼ったことがありますか？
+9. How much water do you drink each day?  
+   毎日どれくらいの水を飲んでいますか？
+10. How many concerts have you been to?  
+   コンサートには何回行ったことがありますか？
+11. How much do you think technology affects our daily lives?  
+   テクノロジーが私たちの日常生活にどれくらい影響していると思いますか？
+12. How many languages would you like to learn?  
+   学びたい言語はいくつありますか？
+13. How much do you enjoy being outdoors?  
+   屋外で過ごすのはどれくらい好きですか？
+14. How many movies do you watch in a month?  
+   一か月に何本映画を見ますか？
+15. How much money would you spend on a dream vacation?  
+   夢のような休暇にどれくらいのお金を使いたいですか？
+16. How many new things have you tried this year?  
+   今年は新しいことをいくつ試しましたか？
+17. How much influence do your friends have on your decisions?  
+   友達があなたの決断にどれくらい影響を与えていると思いますか？
+18. How many family members live near you?  
+   近くに住んでいる家族は何人いますか？
+19. How much do you enjoy spicy food?  
+   辛い食べ物はどれくらい好きですか？
+20. How many pairs of shoes do you own?  
+   靴を何足持っていますか？
+21. How much effort do you put into learning new skills?  
+   新しいスキルを学ぶためにどれくらいの努力をしていますか？
+22. How many people do you know from other countries?  
+   他の国から来た知り合いは何人いますか？
+23. How much do you like rainy weather?  
+   雨の日がどれくらい好きですか？
+24. How many hours do you spend on your phone daily?  
+   毎日どれくらいの時間をスマートフォンに費やしていますか？
+25. How much interest do you have in learning about history?  
+   歴史について学ぶことにどれくらい興味がありますか？
+26. How many meals do you cook in a week?  
+   週に何回料理をしますか？
+27. How much confidence do you have in public speaking?  
+   人前で話すことにどれくらい自信がありますか？
+28. How many different jobs have you had so far?  
+   今までに何種類の仕事をしましたか？
+29. How much would you say you enjoy meeting new people?  
+   新しい人に会うことをどれくらい楽しんでいますか？
+30. How many hours a week do you exercise?  
+   一週間に何時間運動していますか？
+31. How much do you think family influences your personality?  
+   家族があなたの性格にどれくらい影響を与えていると思いますか？
+32. How many songs do you listen to in a day?  
+   一日に何曲くらい音楽を聴きますか？
+33. How much attention do you pay to current events?  
+   時事問題にどれくらい関心を持っていますか？
+34. How many times a month do you go to restaurants?  
+   一か月に何回くらいレストランに行きますか？
+35. How much would you enjoy living in a foreign country?  
+   外国での生活をどれくらい楽しめると思いますか？
+36. How many devices do you own?  
+   所持しているデバイスはいくつありますか？
+37. How much do you care about fashion?  
+   ファッションにどれくらい関心がありますか？
+38. How many hours a day do you spend commuting?  
+   通勤にどれくらいの時間を費やしていますか？
+39. How much would you spend on a memorable night out?  
+   思い出に残る夜の外出にどれくらいのお金を使いたいですか？
+40. How many different sports have you tried?  
+   いくつのスポーツをやったことがありますか？
+41. How much do you value a good night’s sleep?  
+   良い睡眠をどれくらい大切にしていますか？
+42. How many items do you usually carry in your bag?  
+   普段、鞄にいくつの物を入れていますか？
+43. How much do you think luck influences success?  
+   成功に運がどれくらい影響していると思いますか？
+44. How many relatives do you keep in touch with?  
+   連絡を取り合っている親戚は何人いますか？
+45. How much time would you spend each day on a new hobby?  
+   新しい趣味に一日どれくらいの時間を使いますか？
+46. How many places have you traveled to in your own country?  
+   自国で旅行した場所はいくつありますか？
+47. How much do you enjoy solving puzzles or brain games?  
+   パズルや脳トレをするのはどれくらい好きですか？
+48. How many classes or courses have you taken outside of school?  
+   学校以外で受講した授業やコースはいくつありますか？
+49. How much time do you spend daydreaming each day?  
+   毎日、どれくらいの時間を空想に費やしていますか？
+50. How many things do you look forward to right now?  
+   今、楽しみにしていることはいくつありますか？`
+     }
     ]
 };
