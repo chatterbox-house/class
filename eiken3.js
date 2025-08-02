@@ -3,7 +3,7 @@ var eiken3 = [
     // Story 1 - School Festival
     {
         title: "1. School Festival",
-        content: `🎉 The school festival starts on Saturday.    
+        content: `🎉 The school festival starts on Saturday.  
 学校祭は土曜日に始まります。  
 🏫 Students decorate their classrooms with colorful paper.  
 生徒たちは教室を色とりどりの紙で飾ります。  
@@ -23,32 +23,32 @@ var eiken3 = [
 祭りは一年で最もわくわくするイベントです。  
 🎉 I will help at the festival tomorrow.  
 私は明日、祭りで手伝うつもりです。  
-🎉 Do you go to school festivals?  
-あなたは学校祭に行きますか？  
-🏫 Do students decorate classrooms?  
-生徒たちは教室を飾りますか？  
-🍡 Do they sell food at stalls?  
-彼らは屋台で食べ物を売りますか？  
-🎤 Does a band play music?  
-バンドは音楽を演奏しますか？  
-😄 Do people laugh at festivals?  
-人々は祭りで笑いますか？  
-👗 What do some students wear?  
-何人かの生徒は何を着ますか？  
-📸 What do they do with friends?  
-彼らは友達と何をしますか？  
-🏆 What wins a prize?  
-何が賞を獲得しますか？  
-😊 Why is the festival exciting?  
-なぜ祭りはわくわくしますか？  
-🎉 What will you do tomorrow?  
-あなたは明日何をするつもりですか？`
-},
+🎉 What festivals do you enjoy attending?  
+どんな祭りに参加するのが好きですか？  
+🏫 How would you decorate a classroom for an event?  
+イベントのために教室をどうやって飾りますか？  
+🍡 What food do you like to eat at festivals?  
+祭りでどんな食べ物を食べるのが好きですか？  
+🎤 Do you like watching live music performances?  
+ライブ音楽のパフォーマンスを見るのは好きですか？  
+😄 What makes you laugh at events?  
+イベントで何があなたを笑わせますか？  
+👗 Have you ever worn a traditional costume?  
+伝統的な衣装を着たことがありますか？  
+📸 Do you enjoy taking photos with friends?  
+友達と写真を撮るのは好きですか？  
+🏆 What kind of prize would you like to win?  
+どんな賞を獲得したいですか？  
+😊 What makes an event exciting for you?  
+あなたにとってイベントをわくわくさせるものは何ですか？  
+🎉 Do you like helping at school events?  
+学校のイベントで手伝うのは好きですか？`
+    },
 
-// Lesson 2 - A Trip to Osaka
-{
-    title: "2. A Trip to Osaka",
-    content: `🚅 Taro took a train to Osaka last weekend.  
+    // Story 2 - A Trip to Osaka
+    {
+        title: "2. A Trip to Osaka",
+        content: `🚅 Taro took a train to Osaka last weekend.  
 太郎は先週末、大阪に電車で行きました。  
 🏯 He visited a big castle with his friends.  
 彼は友達と大きな城を訪れました。  
@@ -68,32 +68,32 @@ var eiken3 = [
 彼はまた大阪を訪れたいです。  
 🚅 If I have time, I will go too.  
 私も時間があれば行きます。  
-🚅 Did Taro take a train to Osaka?  
-太郎は大阪に電車で行きましたか？  
-🏯 Did he visit a castle?  
-彼は城を訪れましたか？  
-🍜 Did they eat ramen?  
-彼らはラーメンを食べましたか？  
-📸 Did Taro take pictures?  
-太郎は写真を撮りましたか？  
-😄 Did he enjoy shopping?  
-彼は買い物を楽しみましたか？  
-👘 What were some people wearing?  
-何人かの人は何を着ていましたか？  
-🍣 What did Taro try for dinner?  
-太郎は夕食に何を試しましたか？  
-🌆 What was brighter than his town?  
-何が彼の町より明るかったです？  
-😊 Why does he want to visit again?  
-なぜ彼はまた訪れたいですか？  
-🚅 What will you do if you have time?  
-時間があれば何をしますか？`
-},
+🚅 Do you enjoy traveling by train?  
+電車で旅行するのは好きですか？  
+🏯 What famous places do you want to visit?  
+どんな有名な場所を訪れたいですか？  
+🍜 Have you ever eaten ramen at a shop?  
+店でラーメンを食べたことがありますか？  
+📸 What do you like to take pictures of when traveling?  
+旅行中に何を撮るのが好きですか？  
+😄 Do you enjoy shopping at markets?  
+市場で買い物するのは好きですか？  
+👘 Would you wear a yukata to an event?  
+イベントで浴衣を着ますか？  
+🍣 What new food would you like to try?  
+どんな新しい食べ物を試したいですか？  
+🌆 Do you like bright city lights?  
+明るい街の明かりは好きですか？  
+😊 What city would you visit again?  
+どの都市をまた訪れたいですか？  
+🚅 What do you do when you have free time?  
+暇なときに何をしますか？`
+    },
 
-// Lesson 3 - My Favorite Sport
-{
-    title: "3. My Favorite Sport",
-    content: `⚽ Soccer is my favorite sport.  
+    // Story 3 - My Favorite Sport
+    {
+        title: "3. My Favorite Sport",
+        content: `⚽ Soccer is my favorite sport.  
 サッカーは私のお気に入りのスポーツです。  
 🏃 I run faster when I play.  
 私はプレーするときに速く走ります。  
@@ -113,32 +113,32 @@ var eiken3 = [
 コーチは昨日、新しいスキルを教えてくれました。  
 😊 Soccer is the best sport for me.  
 サッカーは私にとって最高のスポーツです。  
-⚽ Is soccer your favorite sport?  
-サッカーはあなたのお気に入りのスポーツですか？  
-🏃 Do you run faster when you play?  
-あなたはプレーするときに速く走りますか？  
-😄 Did your team win a game?  
-あなたのチームは試合に勝ちましたか？  
-🥅 Can you kick the ball hard?  
-あなたはボールを強く蹴れますか？  
-😊 Does playing soccer make you happy?  
-サッカーをすることはあなたを幸せにしますか？  
-⚽ What will happen if you practice?  
-練習すれば何が起こりますか？  
-🏃 Who runs the fastest on your team?  
-誰がチームで一番速く走りますか？  
-😄 What will you do next month?  
-あなたは来月何をするつもりですか？  
-🥅 What did the coach teach yesterday?  
-コーチは昨日何を教えてくれましたか？  
-😊 Why is soccer the best sport for you?  
-なぜサッカーはあなたにとって最高ですか？`
-},
+⚽ What is your favorite sport to play?  
+好きなスポーツは何ですか？  
+🏃 Do you like running fast?  
+速く走るのは好きですか？  
+😄 Have you ever won a game?  
+試合に勝ったことがありますか？  
+🥅 Can you kick a ball well?  
+ボールを上手に蹴れますか？  
+😊 What activity makes you happy?  
+どんな活動があなたを幸せにしますか？  
+⚽ Do you practice to get better at something?  
+何かで上達するために練習しますか？  
+🏃 Who is the fastest person you know?  
+あなたが知っている一番速い人は誰ですか？  
+😄 What sport would you like to try in a tournament?  
+トーナメントでどんなスポーツを試したいですか？  
+🥅 What new skill have you learned recently?  
+最近どんな新しいスキルを学びましたか？  
+😊 Why do you like your favorite sport?  
+なぜそのスポーツが好きですか？`
+    },
 
-// Lesson 4 - A Day at the Park
-{
-    title: "4. A Day at the Park",
-    content: `🌳 Hana went to the park with her family.  
+    // Story 4 - A Day at the Park
+    {
+        title: "4. A Day at the Park",
+        content: `🌳 Hana went to the park with her family.  
 花は家族と公園に行きました。  
 ☀️ The weather was sunnier than yesterday.  
 天気は昨日より晴れていました。  
@@ -158,32 +158,32 @@ var eiken3 = [
 花は次回、カイトを持って行くつもりです。  
 😄 She had fun yesterday.  
 彼女は昨日、楽しかったです。  
-🌳 Did Hana go to the park?  
-花は公園に行きましたか？  
-☀️ Was the weather sunny?  
-天気は晴れていましたか？  
-🛝 Did they play on swings?  
-彼らはブランコで遊びましたか？  
-🍙 Did Hana eat a rice ball?  
-花はおにぎりを食べましたか？  
-😄 Did her brother laugh?  
-彼女の弟は笑いましたか？  
-🐦 What did they see in the sky?  
-彼らは空で何を見ましたか？  
-🌳 What will they do if it’s nice tomorrow?  
-明日天気が良ければ何をしますか？  
-☀️ Why is the park relaxing?  
-なぜ公園はリラックスできますか？  
-🛝 What will Hana bring next time?  
-花は次回何を持って行くつもりですか？  
-😄 What did she do yesterday?  
-彼女は昨日何をしましたか？`
-},
+🌳 Do you like going to parks?  
+公園に行くのは好きですか？  
+☀️ What do you do on sunny days?  
+晴れた日は何をしますか？  
+🛝 Have you played on swings or slides?  
+ブランコや滑り台で遊んだことがありますか？  
+🍙 What food do you eat for lunch outdoors?  
+屋外でどんな昼食を食べますか？  
+😄 Who makes you laugh a lot?  
+誰があなたをたくさん笑わせますか？  
+🐦 Do you enjoy watching birds?  
+鳥を見るのは好きですか？  
+🌳 What would you do at a park?  
+公園で何をしますか？  
+☀️ Is a park more relaxing than home for you?  
+公園は家よりリラックスできますか？  
+🛝 What would you bring to a park?  
+公園に何を持って行きますか？  
+😄 What fun things did you do recently?  
+最近どんな楽しいことをしましたか？`
+    },
 
-// Lesson 5 - Cleaning My Room
-{
-    title: "5. Cleaning My Room",
-    content: `🧹 My room was cleaned by me yesterday.  
+    // Story 5 - Cleaning My Room
+    {
+        title: "5. Cleaning My Room",
+        content: `🧹 My room was cleaned by me yesterday.  
 私の部屋は昨日、私によって掃除されました。  
 🗑️ I threw away old papers.  
 私は古い紙を捨てました。  
@@ -203,32 +203,32 @@ var eiken3 = [
 私の妹も部屋を掃除しました。  
 😊 I like my clean room now.  
 私は今、きれいな部屋が好きです。  
-🧹 Was your room cleaned yesterday?  
-あなたの部屋は昨日掃除されましたか？  
-🗑️ Did you throw away papers?  
-あなたは紙を捨てましたか？  
-🛏️ Did you make your bed?  
-あなたはベッドを整えましたか？  
-😊 Does a clean room feel better?  
-きれいな部屋は気持ちいいですか？  
-🧹 What happens if you clean often?  
-頻繁に掃除すれば何が起こりますか？  
-🗑️ Who helped you with the trash?  
-誰がゴミを出すのを手伝いましたか？  
-🛏️ What will you organize tomorrow?  
-あなたは明日何を整理するつもりですか？  
-😄 Why is cleaning fun?  
-なぜ掃除は楽しいですか？  
-🧹 Did your sister clean too?  
-あなたの妹も掃除しましたか？  
-😊 Why do you like your room now?  
-なぜあなたは今部屋が好きですか？`
-},
+🧹 Do you clean your room often?  
+部屋をよく掃除しますか？  
+🗑️ What things do you throw away?  
+どんなものを捨てますか？  
+🛏️ Do you make your bed every day?  
+毎日ベッドを整えますか？  
+😊 Does a clean space feel good to you?  
+きれいな空間は気持ちいいですか？  
+🧹 Who helps you clean at home?  
+家で掃除を手伝ってくれるのは誰ですか？  
+🗑️ What will you organize next?  
+次に何を整理しますか？  
+🛏️ Is cleaning fun for you?  
+掃除は楽しいですか？  
+😄 Have you cleaned something recently?  
+最近何か掃除しましたか？  
+🧹 Does your family clean together?  
+家族で一緒に掃除しますか？  
+😊 What do you like about a clean room?  
+きれいな部屋の何が好きですか？`
+    },
 
-// Lesson 6 - A Visit to the Dentist
-{
-    title: "6. A Visit to the Dentist",
-    content: `🦷 I went to the dentist last Monday.  
+    // Story 6 - A Visit to the Dentist
+    {
+        title: "6. A Visit to the Dentist",
+        content: `🦷 I went to the dentist last Monday.  
 私は先週の月曜日に歯医者に行きました。  
 👩‍⚕️ She checked my teeth carefully.  
 彼女は私の歯を丁寧にチェックしました。  
@@ -248,32 +248,32 @@ var eiken3 = [
 私は昨日、2回歯を磨きました。  
 😊 Healthy teeth make me happy.  
 健康な歯は私を幸せにします。  
-🦷 Did you go to the dentist?  
-あなたは歯医者に行きましたか？  
-👩‍⚕️ Did she check your teeth?  
-彼女はあなたの歯をチェックしましたか？  
-😄 Were your teeth clean?  
-あなたの歯はきれいでしたか？  
-🪥 Did she give you a toothbrush?  
-彼女はあなたに歯ブラシをくれましたか？  
-😊 Was the dentist nice?  
-歯医者は優しかったですか？  
-🦷 What won’t happen if you brush well?  
-よく磨けば何が起こりませんか？  
-👩‍⚕️ When will you go back?  
-あなたはいつ行き直すつもりですか？  
-😄 Why was the visit quick?  
-なぜその訪問は早かったですか？  
-🪥 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do healthy teeth make you happy?  
-なぜ健康な歯はあなたを幸せにしますか？`
-},
+🦷 Do you visit the dentist regularly?  
+定期的に歯医者に行きますか？  
+👩‍⚕️ Do you like kind doctors?  
+優しい医者は好きですか？  
+😄 Are clean teeth important to you?  
+きれいな歯は大切ですか？  
+🪥 How often do you brush your teeth?  
+どのくらいの頻度で歯を磨きますか？  
+😊 What makes you feel healthy?  
+何があなたを健康に感じさせますか？  
+🦷 How do you avoid cavities?  
+虫歯をどうやって防ぎますか？  
+👩‍⚕️ When do you plan to see a dentist next?  
+次に歯医者にいつ行く予定ですか？  
+😄 Do you like quick visits to places?  
+短い訪問は好きですか？  
+🪥 Have you gotten a new toothbrush recently?  
+最近新しい歯ブラシをもらいましたか？  
+😊 Why do healthy habits make you happy?  
+健康な習慣はなぜあなたを幸せにしますか？`
+    },
 
-// Lesson 7 - Making Lunch
-{
-    title: "7. Making Lunch",
-    content: `🍳 First, I washed the vegetables.  
+    // Story 7 - Making Lunch
+    {
+        title: "7. Making Lunch",
+        content: `🍳 First, I washed the vegetables.  
 最初に、私は野菜を洗いました。  
 🥪 Then, I made a sandwich with ham.  
 次に、私はハムでサンドイッチを作りました。  
@@ -293,32 +293,32 @@ var eiken3 = [
 私は昨日、母から料理を学びました。  
 😊 I like making my own food.  
 私は自分で食べ物を作るのが好きです。  
-🍳 Did you wash the vegetables?  
-あなたは野菜を洗いましたか？  
-🥪 Did you make a sandwich?  
-あなたはサンドイッチを作りましたか？  
-😄 Did it taste good?  
-それは美味しかったですか？  
-🍅 Did you cut tomatoes?  
-あなたはトマトを切りましたか？  
-😊 Is cooking fun on weekends?  
-料理は週末に楽しいですか？  
-🍳 What will you do if you have time?  
-時間があれば何をしますか？  
-🥪 Who ate the biggest sandwich?  
-誰が一番大きなサンドイッチを食べましたか？  
-🍅 What will you make tomorrow?  
-あなたは明日何を作るつもりですか？  
-😄 Who taught you cooking yesterday?  
-昨日誰があなたに料理を教えましたか？  
-😊 Why do you like making food?  
-なぜあなたは食べ物を作るのが好きですか？`
-},
+🍳 Do you like to cook food?  
+料理するのは好きですか？  
+🥪 What kind of sandwich do you make?  
+どんなサンドイッチを作りますか？  
+😄 Is homemade food tasty for you?  
+手作りの食べ物はおいしいですか？  
+🍅 What vegetables do you use in cooking?  
+料理にどんな野菜を使いますか？  
+😊 Is cooking fun on weekends for you?  
+週末に料理するのは楽しいですか？  
+🍳 What would you cook if you had time?  
+時間があれば何を料理しますか？  
+🥪 Who likes to eat your food?  
+あなたの食べ物を誰が好きですか？  
+🍅 What dish will you make next?  
+次にどんな料理を作りますか？  
+😄 Who taught you to cook?  
+誰があなたに料理を教えてくれましたか？  
+😊 Why do you enjoy making food?  
+なぜ食べ物を作るのが好きですか？`
+    },
 
-// Lesson 8 - A Track Meet
-{
-    title: "8. A Track Meet",
-    content: `🏃 I joined a track meet last Saturday.  
+    // Story 8 - A Track Meet
+    {
+        title: "8. A Track Meet",
+        content: `🏃 I joined a track meet last Saturday.  
 私は先週の土曜日に陸上競技会に参加しました。  
 🏅 I ran the fastest in my group.  
 私はグループで一番速く走りました。  
@@ -338,32 +338,32 @@ var eiken3 = [
 私の妹もメダルを獲得しました。  
 😊 I love running.  
 私は走るのが大好きです。  
-🏃 Did you join a track meet?  
-あなたは陸上競技会に参加しましたか？  
-🏅 Did you run the fastest?  
-あなたは一番速く走りましたか？  
-😄 Did your friends cheer?  
-あなたの友達は応援しましたか？  
-🏆 Did your team win medals?  
-あなたのチームはメダルを獲得しましたか？  
-😊 Was the track meet exciting?  
-陸上競技会はわくわくしましたか？  
-🏃 What can you do if you train?  
-トレーニングすれば何ができますか？  
-🏅 What will you do next year?  
-あなたは来年何をするつもりですか？  
-😄 What was the best part?  
-一番良かったのは何ですか？  
-🏆 Who else won a medal?  
-他に誰がメダルを獲得しましたか？  
-😊 Why do you love running?  
-なぜあなたは走るのが好きですか？`
-},
+🏃 Have you ever joined a race?  
+レースに参加したことがありますか？  
+🏅 Do you like winning prizes?  
+賞を獲得するのは好きですか？  
+😄 Do your friends cheer for you?  
+友達はあなたを応援しますか？  
+🏆 What kind of medals would you want to win?  
+どんなメダルを獲得したいですか？  
+😊 Are sports events exciting for you?  
+スポーツイベントはわくわくしますか？  
+🏃 Do you train for sports?  
+スポーツのためにトレーニングしますか？  
+🏅 What event would you join next?  
+次にどんなイベントに参加しますか？  
+😄 What is your favorite part of a race?  
+レースの好きな部分は何ですか？  
+🏆 Has someone in your family won a prize?  
+家族の誰かが賞を獲得したことがありますか？  
+😊 Why do you enjoy running?  
+なぜ走るのが好きですか？`
+    },
 
-// Lesson 9 - A Family Picnic
-{
-    title: "9. A Family Picnic",
-    content: `🌞 My family had a picnic last Sunday.  
+    // Story 9 - A Family Picnic
+    {
+        title: "9. A Family Picnic",
+        content: `🌞 My family had a picnic last Sunday.  
 私の家族は先週の日曜日にピクニックをしました。  
 🥪 We ate sandwiches and fruit.  
 私たちはサンドイッチと果物を食べました。  
@@ -383,32 +383,32 @@ var eiken3 = [
 私たちは昨日、リスを見ました。  
 😊 I love family time.  
 私は家族の時間が大好きです。  
-🌞 Did your family have a picnic?  
-あなたの家族はピクニックをしましたか？  
-🥪 Did you eat sandwiches?  
-あなたはサンドイッチを食べましたか？  
-😄 Did your dad play games?  
-あなたの父はゲームをしましたか？  
-🌳 Was the park green?  
-公園は緑でしたか？  
-😊 Are picnics relaxing?  
+🌞 Do you enjoy picnics with family?  
+家族とピクニックするのは好きですか？  
+🥪 What foods do you bring to picnics?  
+ピクニックにどんな食べ物を持って行きますか？  
+😄 Do you play games with your family?  
+家族とゲームをしますか？  
+🌳 Do you like green parks?  
+緑の公園は好きですか？  
+😊 Are picnics relaxing for you?  
 ピクニックはリラックスできますか？  
-🌞 What will you do if it’s sunny?  
-晴れていれば何をしますか？  
-🥪 What will you pack tomorrow?  
-あなたは明日何を詰めるつもりですか？  
-😄 What did your mom make?  
-あなたの母は何を作りましたか？  
-🌳 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love family time?  
-なぜあなたは家族の時間が好きですか？`
-},
+🌞 What do you do on sunny days?  
+晴れた日は何をしますか？  
+🥪 What snacks would you pack for a picnic?  
+ピクニックにどんなお菓子を詰めますか？  
+😄 What drinks do you like to make?  
+どんな飲み物を作るのが好きですか？  
+🌳 Have you seen animals in a park?  
+公園で動物を見たことがありますか？  
+😊 Why is family time important to you?  
+なぜ家族の時間が大切ですか？`
+    },
 
-// Lesson 10 - A Day at the Mall
-{
-    title: "10. A Day at the Mall",
-    content: `🏬 I am shopping at the mall today.  
+    // Story 10 - A Day at the Mall
+    {
+        title: "10. A Day at the Mall",
+        content: `🏬 I am shopping at the mall today.  
 私は今日、モールで買い物をしています。  
 👕 People are buying clothes and shoes.  
 人々は服と靴を買っています。  
@@ -428,32 +428,32 @@ var eiken3 = [
 私は昨日、アイスクリームを食べました。  
 😊 Shopping is exciting.  
 買い物はわくわくします。  
-🏬 Are you shopping at the mall?  
-あなたはモールで買い物をしていますか？  
-👕 Are people buying clothes?  
-人々は服を買っていますか？  
-😄 Are the stores busy?  
-店は忙しいですか？  
-🍔 Do you eat at the food court?  
-あなたはフードコートで食べますか？  
-😊 Is the mall fun?  
-モールは楽しいですか？  
-🏬 What will you buy if you have money?  
-お金があれば何を買いますか？  
-👕 What will you look for tomorrow?  
-あなたは明日何を探すつもりですか？  
-😄 What did your friend find?  
-あなたの友達は何を見つけましたか？  
-🍔 What did you eat yesterday?  
-あなたは昨日何を食べましたか？  
-😊 Why is shopping exciting?  
-なぜ買い物はわくわくしますか？`
-},
+🏬 Do you like shopping at malls?  
+モールで買い物するのは好きですか？  
+👕 What clothes do you like to buy?  
+どんな服を買うのが好きですか？  
+😄 Are busy stores fun for you?  
+忙しい店は楽しいですか？  
+🍔 What do you eat at food courts?  
+フードコートで何を食べますか？  
+😊 Why is the mall a fun place for you?  
+モールはなぜ楽しい場所ですか？  
+🏬 What would you buy with extra money?  
+余分なお金で何を買いますか？  
+👕 What item will you shop for next?  
+次に何を買いに行きますか？  
+😄 Have you found a good deal recently?  
+最近良いお買い得品を見つけましたか？  
+🍔 Do you like eating ice cream?  
+アイスクリームを食べるのは好きですか？  
+😊 What makes shopping exciting for you?  
+買い物で何がわくわくしますか？`
+    },
 
-// Lesson 11 - A Dance Recital
-{
-    title: "11. A Dance Recital",
-    content: `💃 I was dancing at a recital last night.  
+    // Story 11 - A Dance Recital
+    {
+        title: "11. A Dance Recital",
+        content: `💃 I was dancing at a recital last night.  
 私は昨夜、リサイタルで踊っていました。  
 🎶 The music was playing loudly.  
 音楽は大きな音で流れていました。  
@@ -473,32 +473,32 @@ var eiken3 = [
 私の友達は昨日、衣装を作りました。  
 😊 I love dancing on stage.  
 私はステージで踊るのが大好きです。  
-💃 Were you dancing at a recital?  
-あなたはリサイタルで踊っていましたか？  
-🎶 Was the music loud?  
-音楽は大きな音でしたか？  
-😄 Was your family clapping?  
-あなたの家族は拍手をしていましたか？  
-👗 Did you wear a costume?  
-あなたは衣装を着ましたか？  
-😊 Is dancing fun?  
-ダンスは楽しいですか？  
-💃 What will happen if you practice?  
-練習すれば何が起こりますか？  
-🎶 What will you join next year?  
-あなたは来年何に参加するつもりですか？  
-😄 Why was the recital the best?  
-なぜリサイタルは最高でしたか？  
-👗 What did your friend do yesterday?  
-あなたの友達は昨日何をしましたか？  
-😊 Why do you love dancing?  
-なぜあなたは踊るのが好きですか？`
-},
+💃 Do you like to dance?  
+ダンスするのは好きですか？  
+🎶 Do you enjoy loud music?  
+大きな音楽は好きですか？  
+😄 Does your family cheer for you?  
+家族はあなたを応援しますか？  
+👗 Have you worn a special costume?  
+特別な衣装を着たことがありますか？  
+😊 Is dancing more fun than other activities?  
+ダンスは他の活動より楽しいですか？  
+💃 What would you practice to get better?  
+上達するために何を練習しますか？  
+🎶 Would you join a dance club?  
+ダンスクラブに参加しますか？  
+😄 What makes a show exciting for you?  
+ショーをわくわくさせるものは何ですか？  
+👗 Have you ever made something to wear?  
+着るものを作ったことがありますか？  
+😊 Why do you like performing on stage?  
+なぜステージでパフォーマンスするのが好きですか？`
+    },
 
-// Lesson 12 - A Day at the Farm
-{
-    title: "12. A Day at the Farm",
-    content: `🐄 The cow that mooed was very big.  
+    // Story 12 - A Day at the Farm
+    {
+        title: "12. A Day at the Farm",
+        content: `🐄 The cow that mooed was very big.  
 鳴いた牛はとても大きかったです。  
 🌾 I helped the farmer plant seeds.  
 私は農家が種を植えるのを手伝いました。  
@@ -518,32 +518,32 @@ var eiken3 = [
 私は昨日、リンゴを食べました。  
 😊 Farms are interesting.  
 農場は面白いです。  
-🐄 Was the cow big?  
-牛は大きかったですか？  
-🌾 Did you help the farmer?  
-あなたは農家を手伝いましたか？  
-😄 Were the chickens noisy?  
-ニワトリはうるさかったですか？  
-🥕 Did you pick carrots?  
-あなたはニンジンを摘みましたか？  
-😊 Is the farm quiet?  
-農場は静かですか？  
-🐄 What will you do if you visit again?  
-また訪れれば何をしますか？  
-🌾 Who will you tell about the farm?  
-あなたは誰に農場について話すつもりですか？  
-😄 Why was the farmer friendly?  
-なぜ農家は親切でしたか？  
-🥕 What did you eat yesterday?  
-あなたは昨日何を食べましたか？  
-😊 Why are farms interesting?  
-なぜ農場は面白いですか？`
-},
+🐄 Do you like seeing farm animals?  
+農場の動物を見るのは好きですか？  
+🌾 Have you ever planted seeds?  
+種を植えたことがありますか？  
+😄 Are chickens noisy to you?  
+ニワトリはうるさいと思いますか？  
+🥕 What vegetables do you like to eat?  
+どんな野菜を食べるのが好きですか？  
+😊 Is a farm a quiet place for you?  
+農場は静かな場所ですか？  
+🐄 What animals would you feed?  
+どんな動物にエサをあげたいですか？  
+🌾 Who would you tell about a farm visit?  
+農場訪問について誰に話したいですか？  
+😄 Do you like meeting friendly people?  
+親切な人に会うのは好きですか？  
+🥕 What fruit did you eat recently?  
+最近どんな果物を食べましたか？  
+😊 Why are farms interesting to you?  
+農場はなぜ面白いですか？`
+    },
 
-// Lesson 13 - A Surprise Party
-{
-    title: "13. A Surprise Party",
-    content: `🎉 I can plan a surprise party for my friend.  
+    // Story 13 - A Surprise Party
+    {
+        title: "13. A Surprise Party",
+        content: `🎉 I can plan a surprise party for my friend.  
 私は友達のためにサプライズパーティーを計画できます。  
 🎂 We should bake a big cake.  
 私たちは大きなケーキを焼くべきです。  
@@ -563,32 +563,32 @@ var eiken3 = [
 私は昨日、本を買いました。  
 😊 Parties are fun to plan.  
 パーティーは計画するのが楽しいです。  
-🎉 Can you plan a party?  
-あなたはパーティーを計画できますか？  
-🎂 Should you bake a cake?  
-あなたはケーキを焼くべきですか？  
-😄 Will everyone shout “Surprise”?  
-みんなは「サプライズ！」と叫びますか？  
-🎁 Are the gifts exciting?  
-プレゼントはわくわくしますか？  
-😊 Will your friend be happy?  
-あなたの友達は幸せになりますか？  
-🎉 What won’t she know if it’s a secret?  
-秘密にすれば彼女は何を知りませんか？  
-🎂 What will you decorate tomorrow?  
-あなたは明日何を飾るつもりですか？  
-😄 Why will the party be the best?  
-なぜパーティーは最高ですか？  
-🎁 What did you buy yesterday?  
-あなたは昨日何を買いましたか？  
-😊 Why are parties fun to plan?  
-なぜパーティーは計画するのが楽しいですか？`
-},
+🎉 Have you ever planned a party?  
+パーティーを計画したことがありますか？  
+🎂 Do you like baking cakes?  
+ケーキを焼くのは好きですか？  
+😄 Would you shout “Surprise” at a party?  
+パーティーで「サプライズ！」と叫びますか？  
+🎁 What gifts do you like to give?  
+どんなプレゼントを贈るのが好きですか？  
+😊 Does making friends happy feel good?  
+友達を幸せにするのは気持ちいいですか？  
+🎉 Do you like keeping secrets?  
+秘密を守るのは好きですか？  
+🎂 How would you decorate for a party?  
+パーティーのためにどうやって飾りますか？  
+😄 What makes a party exciting for you?  
+パーティーをわくわくさせるものは何ですか？  
+🎁 What did you buy for someone recently?  
+最近誰かに何を買いましたか？  
+😊 Why is planning a party fun?  
+パーティーの計画はなぜ楽しいですか？`
+    },
 
-// Lesson 14 - A Snowy Day
-{
-    title: "14. A Snowy Day",
-    content: `❄️ It’s snowing heavily outside.  
+    // Story 14 - A Snowy Day
+    {
+        title: "14. A Snowy Day",
+        content: `❄️ It’s snowing heavily outside.  
 外は雪が激しく降っています。  
 🏠 I must stay inside today.  
 私は今日、中にいなければなりません。  
@@ -608,32 +608,32 @@ var eiken3 = [
 私は雪が降るのを見るのが好きです。  
 ☕ My mom made soup last night.  
 私の母は昨夜、スープを作りました。  
-❄️ Is it snowing outside?  
-外は雪が降っていますか？  
-🏠 Must you stay inside?  
-あなたは中にいなければなりませんか？  
-⛄ Can you build a snowman?  
-あなたは雪だるまを作れますか？  
-😊 Are snowy days cold?  
+❄️ Do you like snowy weather?  
+雪の天気は好きですか？  
+🏠 Where do you stay on cold days?  
+寒い日はどこにいますか？  
+⛄ Have you ever made a snowman?  
+雪だるまを作ったことがありますか？  
+😊 Are snowy days cold for you?  
 雪の日は寒いですか？  
-☕ Will you drink hot tea?  
-あなたは熱いお茶を飲むつもりですか？  
-❄️ What might happen if it snows more?  
-もっと降れば何が起こるかもしれませんか？  
-🏠 What is the warmest place now?  
-今、一番暖かい場所は何ですか？  
-⛄ What did you make yesterday?  
-あなたは昨日何を作りましたか？  
-😊 Why do you like watching snow?  
-なぜあなたは雪を見るのが好きですか？  
-☕ What did your mom make last night?  
-あなたの母は昨夜何を作りましたか？`
-},
+☕ What hot drinks do you like?  
+どんな熱い飲み物が好きですか？  
+❄️ Would you like school to close for snow?  
+雪で学校が休みになるのが好きですか？  
+🏠 What is a warm place you enjoy?  
+好きな暖かい場所はどこですか？  
+⛄ What fun things do you do in snow?  
+雪の中でどんな楽しいことをしますか？  
+😊 Do you enjoy watching snow fall?  
+雪が降るのを見るのは好きですか？  
+☕ Has someone made soup for you?  
+誰かがあなたにスープを作ってくれましたか？`
+    },
 
-// Lesson 15 - A Group Project
-{
-    title: "15. A Group Project",
-    content: `📝 My class is doing a group project.  
+    // Story 15 - A Group Project
+    {
+        title: "15. A Group Project",
+        content: `📝 My class is doing a group project.  
 私のクラスはグループプロジェクトをしています。  
 ✂️ We are making a poster about animals.  
 私たちは動物についてのポスターを作っています。  
@@ -653,32 +653,32 @@ var eiken3 = [
 私は昨日、ライオンについて読みました。  
 😊 Projects teach us a lot.  
 プロジェクトは私たちにたくさん教えます。  
-📝 Is your class doing a project?  
-あなたのクラスはプロジェクトをしていますか？  
-✂️ Are you making a poster?  
-あなたはポスターを作っていますか？  
-😄 Is your part easy?  
-あなたの部分は簡単ですか？  
-📚 Do you use books?  
-あなたは本を使いますか？  
-😊 Is working together fun?  
-一緒に働くことは楽しいですか？  
-📝 What will you do if you finish early?  
-早く終われば何をしますか？  
-✂️ What will you draw tomorrow?  
-あなたは明日何を描くつもりですか？  
-😄 Why will your poster be colorful?  
-なぜあなたのポスターはカラフルですか？  
-📚 What did you read about yesterday?  
-あなたは昨日何について読みましたか？  
-😊 What do projects teach you?  
-プロジェクトはあなたに何を教えますか？`
-},
+📝 Do you work on group projects?  
+グループプロジェクトに取り組みますか？  
+✂️ Have you made a poster before?  
+ポスターを作ったことがありますか？  
+😄 Do you like easy tasks?  
+簡単なタスクは好きですか？  
+📚 Do you use books for schoolwork?  
+宿題に本を使いますか？  
+😊 Is working with others fun for you?  
+他人と働くのは楽しいですか？  
+📝 What would you do with extra time?  
+余分な時間で何をしますか？  
+✂️ What would you draw on a poster?  
+ポスターに何を描きますか？  
+😄 Do you like colorful things?  
+カラフルなものが好きですか？  
+📚 What animals have you read about?  
+どんな動物について読みましたか？  
+😊 What do you learn from projects?  
+プロジェクトから何を学びますか？`
+    },
 
-// Lesson 16 - A Day with My Cousin
-{
-    title: "16. A Day with My Cousin",
-    content: `👧 I visited my cousin Yuka last weekend.  
+    // Story 16 - A Day with My Cousin
+    {
+        title: "16. A Day with My Cousin",
+        content: `👧 I visited my cousin Yuka last weekend.  
 私は先週末、いとこのユカを訪れました。  
 🎮 We played video games together.  
 私たちは一緒にビデオゲームをしました。  
@@ -698,32 +698,32 @@ var eiken3 = [
 私たちは昨日、映画を見ました。  
 😊 Cousins are like best friends.  
 従妹は親友のようです。  
-👧 Did you visit your cousin?  
-あなたはいとこを訪れましたか？  
-🎮 Did you play video games?  
-あなたはビデオゲームをしましたか？  
-😄 Did she laugh loudly?  
-彼女は大声で笑いましたか？  
-🍕 Did you order pizza?  
-あなたはピザを注文しましたか？  
-😊 Is spending time with her the best?  
-彼女と過ごす時間は最高ですか？  
-👧 What will you do if you’re free?  
-暇なら何をしますか？  
-🎮 What will you bring next time?  
-あなたは次回何を持って行くつもりですか？  
-😄 Why is Yuka funny?  
-なぜユカは面白いのですか？  
-🍕 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why are cousins like best friends?  
-なぜ従妹は親友のようですか？`
-},
+👧 Do you spend time with cousins?  
+いとこと時間を過ごしますか？  
+🎮 Do you enjoy playing video games?  
+ビデオゲームをするのは好きですか？  
+😄 Who makes you laugh a lot?  
+誰があなたをたくさん笑わせますか？  
+🍕 What kind of pizza do you like?  
+どんなピザが好きですか？  
+😊 Is spending time with family fun?  
+家族と過ごすのは楽しいですか？  
+👧 Who would you visit if you’re free?  
+暇なら誰を訪ねますか？  
+🎮 What games do you want to play?  
+どんなゲームをしたいですか？  
+😄 Do you have a funny relative?  
+面白い親戚がいますか？  
+🍕 Have you watched a movie recently?  
+最近映画を見ましたか？  
+😊 Why are cousins special to you?  
+いとこはなぜ特別ですか？`
+    },
 
-// Lesson 17 - A Fishing Trip
-{
-    title: "17. A Fishing Trip",
-    content: `🎣 We went fishing by the lake.  
+    // Story 17 - A Fishing Trip
+    {
+        title: "17. A Fishing Trip",
+        content: `🎣 We went fishing by the lake.  
 私たちは湖で釣りに行きました。  
 🐟 I caught a fish bigger than my hand.  
 私は手より大きな魚を釣りました。  
@@ -743,32 +743,32 @@ var eiken3 = [
 私は昨日、アヒルを見ました。  
 😊 I love fishing with my dad.  
 私は父と釣りをするのが大好きです。  
-🎣 Did you go fishing?  
-あなたは釣りに行きましたか？  
-🐟 Did you catch a big fish?  
-あなたは大きな魚を釣りましたか？  
-😄 Did your dad cheer?  
-あなたの父は応援しましたか？  
-🌊 Was the water calm?  
-水は穏やかでしたか？  
-😊 Is fishing relaxing?  
-釣りはリラックスできますか？  
-🎣 What will you do if you go again?  
-また行けば何をしますか？  
-🐟 What will you cook tomorrow?  
-あなたは明日何を作るつもりですか？  
-😄 Why was the trip the best?  
-なぜその旅行は最高でしたか？  
-🌊 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love fishing with your dad?  
-なぜあなたは父と釣りをするのが好きですか？`
-},
+🎣 Have you ever gone fishing?  
+釣りに行ったことがありますか？  
+🐟 What kind of fish would you like to catch?  
+どんな魚を釣りたいですか？  
+😄 Does someone cheer for you?  
+誰かがあなたを応援しますか？  
+🌊 Do you prefer calm water or waves?  
+穏やかな水と波、どちらが好きですか？  
+😊 Is fishing a relaxing activity for you?  
+釣りはリラックスできる活動ですか？  
+🎣 What would you do on a fishing trip?  
+釣り旅行で何をしますか？  
+🐟 What would you cook for dinner?  
+夕食に何を料理しますか？  
+😄 What adventure do you enjoy?  
+どんな冒険が好きですか？  
+🌊 Have you seen animals near water?  
+水の近くで動物を見たことがありますか？  
+😊 Why do you like spending time with family?  
+家族と過ごすのはなぜ好きですか？`
+    },
 
-// Lesson 18 - A Day at the Bookstore
-{
-    title: "18. A Day at the Bookstore",
-    content: `📚 I went to the bookstore after school.  
+    // Story 18 - A Day at the Bookstore
+    {
+        title: "18. A Day at the Bookstore",
+        content: `📚 I went to the bookstore after school.  
 私は放課後、本屋に行きました。  
 📖 I found a book about space.  
 私は宇宙についての本を見つけました。  
@@ -788,32 +788,32 @@ var eiken3 = [
 私は昨日、お金を貯めました。  
 😊 I love books.  
 私は本が大好きです。  
-📚 Did you go to the bookstore?  
-あなたは本屋に行きましたか？  
-📖 Did you find a book?  
-あなたは本を見つけましたか？  
-😄 Was the store quiet?  
-店は静かでしたか？  
-💰 Did you buy a book?  
-あなたは本を買いましたか？  
-😊 Is reading fun?  
-読書は楽しいですか？  
-📚 What will you do if you have time?  
-時間があれば何をしますか？  
-📖 What will you buy next week?  
-あなたは来週何を買うつもりですか？  
-😄 Why is the bookstore the best?  
-なぜ本屋は最高ですか？  
-💰 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love books?  
-なぜあなたは本が好きですか？`
-},
+📚 Do you visit bookstores often?  
+本屋によく行きますか？  
+📖 What kind of books do you like?  
+どんな本が好きですか？  
+😄 Is a quiet store relaxing for you?  
+静かな店はリラックスできますか？  
+💰 Do you look for cheap items when shopping?  
+買い物で安いものを探しますか？  
+😊 Is reading more fun than watching TV?  
+読書はテレビより楽しいですか？  
+📚 What do you do when you have free time?  
+暇なときに何をしますか？  
+📖 What book would you buy next?  
+次にどんな本を買いますか？  
+😄 Why do you like bookstores?  
+本屋はなぜ好きですか？  
+💰 Have you saved money recently?  
+最近お金を貯めましたか？  
+😊 What do you love about books?  
+本の何が好きですか？`
+    },
 
-// Lesson 19 - A Pet Cat
-{
-    title: "19. A Pet Cat",
-    content: `🐱 My cat is the softest pet I know.  
+    // Story 19 - A Pet Cat
+    {
+        title: "19. A Pet Cat",
+        content: `🐱 My cat is the softest pet I know.  
 私の猫は私が知る中で一番柔らかいペットです。  
 🥛 I give her milk every morning.  
 私は毎朝、彼女にミルクをあげます。  
@@ -833,32 +833,32 @@ var eiken3 = [
 彼女は昨日、大きな音でゴロゴロ言いました。  
 😊 I love my cat so much.  
 私は猫がとても大好きです。  
-🐱 Is your cat soft?  
-あなたの猫は柔らかいですか？  
-🥛 Do you give her milk?  
-あなたは彼女にミルクをあげますか？  
-😄 Does she run fast?  
-彼女は速く走りますか？  
-🛏️ Does she sleep on your bed?  
-彼女はあなたのベッドで寝ますか？  
-😊 Is taking care of her easy?  
-彼女の世話は簡単ですか？  
-🐱 What will you give her if she’s good?  
-彼女が良い子なら何をあげますか？  
-🥛 What will you buy tomorrow?  
-あなたは明日何を買うつもりですか？  
-😄 Why is she the cutest?  
-なぜ彼女は一番可愛いのですか？  
-🛏️ What did she do yesterday?  
-彼女は昨日何をしましたか？  
-😊 Why do you love your cat?  
-なぜあなたは猫が好きですか？`
-},
+🐱 Do you have a pet cat?  
+猫を飼っていますか？  
+🥛 What do you feed your pets?  
+ペットに何をあげますか？  
+😄 Are fast animals fun to watch?  
+速い動物を見るのは楽しいですか？  
+🛏️ Where do your pets sleep?  
+ペットはどこで寝ますか？  
+😊 Is taking care of pets easy for you?  
+ペットの世話は簡単ですか？  
+🐱 What treats do you give animals?  
+動物にどんなおやつをあげますか？  
+🥛 What would you buy for a pet?  
+ペットに何を買いますか？  
+😄 Do you think cats are cute?  
+猫は可愛いと思いますか？  
+🛏️ Have you heard a pet make sounds?  
+ペットが音を出すのを聞いたことがありますか？  
+😊 Why do you love pets?  
+ペットをなぜ愛していますか？`
+    },
 
-// Lesson 20 - A School Talent Show
-{
-    title: "20. A School Talent Show",
-    content: `🎤 I sang in the talent show yesterday.  
+    // Story 20 - A School Talent Show
+    {
+        title: "20. A School Talent Show",
+        content: `🎤 I sang in the talent show yesterday.  
 私は昨日、タレントショーで歌いました。  
 🎸 My friend played the guitar.  
 私の友達はギターを弾きました。  
@@ -878,32 +878,32 @@ var eiken3 = [
 私の妹は昨年勝ちました。  
 😊 I love talent shows.  
 私はタレントショーが大好きです。  
-🎤 Did you sing in the talent show?  
-あなたはタレントショーで歌いましたか？  
-🎸 Did your friend play the guitar?  
-あなたの友達はギターを弾きましたか？  
-😄 Did the audience clap?  
-観客は拍手しましたか？  
-🏆 Did you win an award?  
-あなたは賞を獲得しましたか？  
-😊 Is performing exciting?  
-パフォーマンスすることはわくわくしますか？  
-🎤 What will you do if you join again?  
-また参加すれば何をしますか？  
-🎸 What will you practice tomorrow?  
-あなたは明日何を練習するつもりですか？  
-😄 Why was the show the best?  
-なぜショーは一番でしたか？  
-🏆 Who won last year?  
-昨年誰が勝ちましたか？  
-😊 Why do you love talent shows?  
-なぜあなたはタレントショーが好きですか？`
-},
+🎤 Have you ever sung in a show?  
+ショーで歌ったことがありますか？  
+🎸 Do you play any instruments?  
+楽器を演奏しますか？  
+😄 Do you like when people clap for you?  
+人があなたに拍手するのは好きですか？  
+🏆 What award would you like to win?  
+どんな賞を獲得したいですか？  
+😊 Is performing exciting for you?  
+パフォーマンスするのはわくわくしますか？  
+🎤 What would you do in a talent show?  
+タレントショーで何をしますか？  
+🎸 What would you practice for a performance?  
+パフォーマンスのために何を練習しますか？  
+😄 What event do you enjoy most?  
+一番好きなイベントは何ですか？  
+🏆 Has someone you know won an award?  
+知っている人が賞を獲得したことがありますか？  
+😊 Why do you like talent shows?  
+タレントショーはなぜ好きですか？`
+    },
 
-// Lesson 21 - A Day at the Pool
-{
-    title: "21. A Day at the Pool",
-    content: `🏊 I swam at the pool with friends.  
+    // Story 21 - A Day at the Pool
+    {
+        title: "21. A Day at the Pool",
+        content: `🏊 I swam at the pool with friends.  
 私は友達とプールで泳ぎました。  
 🌞 The sun was hotter than yesterday.  
 太陽は昨日より暑かったです。  
@@ -923,32 +923,32 @@ var eiken3 = [
 私は昨日、仰向けに浮かびました。  
 😊 I love pool days.  
 私はプールの日が大好きです。  
-🏊 Did you swim at the pool?  
-あなたはプールで泳ぎましたか？  
-🌞 Was the sun hot?  
-太陽は暑かったですか？  
-😄 Did you jump into the water?  
-あなたは水に飛び込みましたか？  
-🏊‍♂️ Can you swim fast?  
-あなたは速く泳げますか？  
-😊 Is the pool cool in summer?  
-プールは夏に涼しいですか？  
-🏊 What will you do if it’s warm?  
-暖かければ何をしますか？  
-🌞 What will you bring tomorrow?  
-あなたは明日何を持って行くつもりですか？  
-😄 Why is swimming fun?  
-なぜ水泳は楽しいのですか？  
-🏊‍♂️ What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love pool days?  
-なぜあなたはプールの日が好きですか？`
-},
+🏊 Do you like swimming with friends?  
+友達と泳ぐのは好きですか？  
+🌞 Do you enjoy hot summer days?  
+暑い夏の日は好きですか？  
+😄 Have you jumped into a pool?  
+プールに飛び込んだことがありますか？  
+🏊‍♂️ Can you swim well?  
+泳ぐのは得意ですか？  
+😊 Is a pool a fun place in summer?  
+夏にプールは楽しい場所ですか？  
+🏊 What would you do on a warm day?  
+暖かい日は何をしますか？  
+🌞 What would you bring to a pool?  
+プールに何を持って行きますか？  
+😄 Why is swimming fun for you?  
+水泳はなぜ楽しいですか？  
+🏊‍♂️ What swimming tricks do you know?  
+どんな泳ぎの技を知っていますか？  
+😊 What do you love about pool days?  
+プールの日の何が好きですか？`
+    },
 
-// Lesson 22 - A Visit to an Art Gallery
-{
-    title: "22. A Visit to an Art Gallery",
-    content: `🎨 I visited an art gallery with my class.  
+    // Story 22 - A Visit to an Art Gallery
+    {
+        title: "22. A Visit to an Art Gallery",
+        content: `🎨 I visited an art gallery with my class.  
 私はクラスと美術館を訪れました。  
 🖼️ We saw paintings older than my house.  
 私たちは私の家より古い絵を見ました。  
@@ -968,32 +968,32 @@ var eiken3 = [
 私は昨日、彫刻を見ました。  
 😊 I love art galleries.  
 私は美術館が大好きです。  
-🎨 Did you visit an art gallery?  
-あなたは美術館を訪れましたか？  
-🖼️ Were the paintings old?  
-絵は古かったですか？  
-😄 Did the guide explain clearly?  
-ガイドははっきり説明しましたか？  
-📸 Did you take pictures?  
-あなたは写真を撮りましたか？  
-😊 Was the gallery quiet?  
-美術館は静かでしたか？  
-🎨 What will you do if you go again?  
-また行けば何をしますか？  
-🖼️ Who will you show your photos to?  
-あなたは誰に写真を見せるつもりですか？  
-😄 Why is art beautiful?  
-なぜアートは美しいのですか？  
-📸 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love art galleries?  
-なぜあなたは美術館が好きですか？`
-},
+🎨 Do you enjoy visiting art galleries?  
+美術館を訪れるのは好きですか？  
+🖼️ What kind of paintings do you like?  
+どんな絵が好きですか？  
+😄 Do you like learning about art?  
+アートについて学ぶのは好きですか？  
+📸 Do you take photos of things you like?  
+好きなものの写真を撮りますか？  
+😊 Are quiet places relaxing for you?  
+静かな場所はリラックスできますか？  
+🎨 Would you like to draw something?  
+何か描きたいですか？  
+🖼️ Who do you share photos with?  
+写真を誰と共有しますか？  
+😄 Why is art beautiful to you?  
+アートはなぜ美しいですか？  
+📸 Have you seen sculptures before?  
+彫刻を見たことがありますか？  
+😊 What do you love about art galleries?  
+美術館の何が好きですか？`
+    },
 
-// Lesson 23 - A Day in the Mountains
-{
-    title: "23. A Day in the Mountains",
-    content: `⛰️ We hiked in the mountains last weekend.  
+    // Story 23 - A Day in the Mountains
+    {
+        title: "23. A Day in the Mountains",
+        content: `⛰️ We hiked in the mountains last weekend.  
 私たちは先週末、山でハイキングしました。  
 🌲 The trees were taller than buildings.  
 木は建物より高かったです。  
@@ -1013,32 +1013,32 @@ var eiken3 = [
 私は昨日、川を見ました。  
 😊 I love mountain trips.  
 私は山の旅行が大好きです。  
-⛰️ Did you hike in the mountains?  
-あなたは山でハイキングしましたか？  
-🌲 Were the trees tall?  
-木は高かったですか？  
-😄 Did your brother climb fast?  
-あなたの弟は速く登りましたか？  
-🏞️ Was the view pretty?  
-景色はきれいでしたか？  
-😊 Is hiking tiring but fun?  
+⛰️ Do you like hiking in mountains?  
+山でハイキングするのは好きですか？  
+🌲 Are tall trees beautiful to you?  
+高い木は美しいですか？  
+😄 Do you enjoy climbing with others?  
+他人と登るのは楽しいですか？  
+🏞️ What views do you find pretty?  
+どんな景色がきれいだと思いますか？  
+😊 Is hiking tiring but fun for you?  
 ハイキングは疲れるけど楽しいですか？  
-⛰️ What will you do if it’s clear?  
-晴れていれば何をしますか？  
-🌲 What will you take next time?  
-あなたは次回何を持って行くつもりですか？  
-😄 Why was the air fresh?  
-なぜ空気は新鮮でしたか？  
-🏞️ What did you see yesterday?  
-あなたは昨日何を見ましたか？  
+⛰️ What would you do on a clear day?  
+晴れた日は何をしますか？  
+🌲 What would you bring on a hike?  
+ハイキングに何を持って行きますか？  
+😄 Do you like fresh air?  
+新鮮な空気は好きですか？  
+🏞️ Have you seen a river recently?  
+最近川を見ましたか？  
 😊 Why do you love mountain trips?  
-なぜあなたは山の旅行が好きですか？`
-},
+山の旅行はなぜ好きですか？`
+    },
 
-// Lesson 24 - A New Neighbor
-{
-    title: "24. A New Neighbor",
-    content: `🏡 A new neighbor moved in next door.  
+    // Story 24 - A New Neighbor
+    {
+        title: "24. A New Neighbor",
+        content: `🏡 A new neighbor moved in next door.  
 新しい近所の人隣に引っ越してきました。  
 👋 I said hello to him yesterday.  
 私は昨日、彼にこんにちはと言いました。  
@@ -1058,32 +1058,32 @@ var eiken3 = [
 彼は昨日、丁寧に感謝しました。  
 😊 New neighbors are exciting.  
 新しい近所の人たちはわくわくします。  
-🏡 Did a new neighbor move in?  
-新しい近所の人引っ越してきましたか？  
-👋 Did you say hello?  
-あなたはこんにちはと言いましたか？  
-😄 Did he smile?  
-彼は微笑みましたか？  
-🍪 Did you give him cookies?  
-あなたは彼にクッキーをあげましたか？  
-😊 Is he friendly?  
-彼は友好的ですか？  
-🏡 What will you do if he needs help?  
-彼が助けを必要とすれば何をしますか？  
-👋 When will you visit him again?  
-あなたはいつまた彼を訪ねるつもりですか？  
-😄 Why does he have a loud laugh?  
-なぜ彼は大きな笑い声を持っていますか？  
-🍪 What did he do yesterday?  
-彼は昨日何をしましたか？  
+🏡 Do you know your neighbors?  
+近所の人を知っていますか？  
+👋 Do you greet new people?  
+新しい人に挨拶しますか？  
+😄 Do you like when people smile at you?  
+人があなたに微笑むのは好きですか？  
+🍪 Have you given food to someone?  
+誰かに食べ物をあげたことがありますか？  
+😊 Are friendly people nice to meet?  
+友好的な人に会うのはいいですか？  
+🏡 Would you help a neighbor?  
+近所の人を助けますか？  
+👋 Who would you visit nearby?  
+近くの誰を訪ねますか？  
+😄 What makes you laugh loudly?  
+何があなたを大声で笑わせますか？  
+🍪 Has someone thanked you recently?  
+最近誰かに感謝されましたか？  
 😊 Why are new neighbors exciting?  
-なぜ新しい近所の人たちはわくわくしますか？`
-}, 
+新しい近所の人たちはなぜわくわくしますか？`
+    },
 
-// Story 25 - A Science Fair
-{
-    title: "25. A Science Fair",
-    content: `🔬 The science fair was held at school last Friday.  
+    // Story 25 - A Science Fair
+    {
+        title: "25. A Science Fair",
+        content: `🔬 The science fair was held at school last Friday.  
 科学フェアは先週の金曜日に学校で開催されました。  
 🧪 Students presented their experiments to the judges.  
 生徒たちは審査員に実験を発表しました。  
@@ -1103,32 +1103,32 @@ var eiken3 = [
 私の友達も賞を獲得しました。  
 😊 I love science experiments.  
 私は科学実験が大好きです。  
-🔬 Was the science fair held at school?  
-科学フェアは学校で開催されましたか？  
-🧪 Did students present experiments?  
-生徒たちは実験を発表しましたか？  
-😄 Was your project interesting?  
-あなたのプロジェクトは面白かったですか？  
-🏆 Did you win a prize?  
-あなたは賞を獲得しましたか？  
-😊 Is science exciting for you?  
-科学はあなたにとってわくわくしますか？  
-🔬 What can you do if you work hard?  
-一生懸命働けば何ができますか？  
-🧪 What will you start tomorrow?  
-あなたは明日何を始めるつもりですか？  
-😄 Why was the fair the best event?  
-なぜフェアは最高のイベントでしたか？  
-🏆 Who else won a prize?  
-他に誰が賞を獲得しましたか？  
-😊 Why do you love science experiments?  
-なぜあなたは科学実験が好きですか？`
-},
+🔬 Do you enjoy science fairs?  
+科学フェアは好きですか？  
+🧪 Have you done a science experiment?  
+科学実験をしたことがありますか？  
+😄 Are creative projects fun for you?  
+創造的なプロジェクトは楽しいですか？  
+🏆 What prize would you like to win?  
+どんな賞を獲得したいですか？  
+😊 Is science an exciting subject for you?  
+科学はわくわくする科目ですか？  
+🔬 Would you join a big science event?  
+大きな科学イベントに参加しますか？  
+🧪 What project would you start?  
+どんなプロジェクトを始めますか？  
+😄 What event do you find the best?  
+一番好きなイベントは何ですか？  
+🏆 Do you know someone who won a prize?  
+賞を獲得した人を知っていますか？  
+😊 Why do you like science experiments?  
+科学実験はなぜ好きですか？`
+    },
 
-// Story 26 - A Holiday in Kyoto
-{
-    title: "26. A Holiday in Kyoto",
-    content: `🏯 My family visited Kyoto during the holidays.  
+    // Story 26 - A Holiday in Kyoto
+    {
+        title: "26. A Holiday in Kyoto",
+        content: `🏯 My family visited Kyoto during the holidays.  
 私の家族は休暇中に京都を訪れました。  
 🍵 We drank matcha tea at a traditional shop.  
 私たちは伝統的な店で抹茶を飲みました。  
@@ -1148,32 +1148,32 @@ var eiken3 = [
 私は昨日、芸者を見ました。  
 😊 I love Japanese culture.  
 私は日本文化が大好きです。  
-🏯 Did your family visit Kyoto?  
-あなたの家族は京都を訪れましたか？  
-🍵 Did you drink matcha tea?  
-あなたは抹茶を飲みましたか？  
-😄 Were the temples beautiful?  
-寺は美しかったですか？  
-🎋 Did you buy a souvenir?  
-あなたはお土産を買いましたか？  
-😊 Is Kyoto peaceful?  
-京都は平和ですか？  
-🏯 What will you do if you have time?  
-時間があれば何をしますか？  
-🍵 What will you try to make tomorrow?  
-あなたは明日何を作ってみるつもりですか？  
-😄 Why was the holiday relaxing?  
-なぜ休暇はリラックスできましたか？  
-🎋 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love Japanese culture?  
-なぜあなたは日本文化が好きですか？`
-},
+🏯 Do you like visiting cultural places?  
+文化的な場所を訪れるのは好きですか？  
+🍵 Have you tried matcha tea?  
+抹茶を飲んだことがありますか？  
+😄 Are temples beautiful to you?  
+寺は美しいと思いますか？  
+🎋 What souvenirs do you buy on trips?  
+旅行でどんなお土産を買いますか？  
+😊 Is a peaceful city nice to visit?  
+平和な都市を訪れるのはいいですか？  
+🏯 Where would you go if you had time?  
+時間があればどこに行きますか？  
+🍵 What would you make at home?  
+家で何を作りますか？  
+😄 What makes a holiday relaxing for you?  
+休暇をリラックスさせるものは何ですか？  
+🎋 Have you seen something special on a trip?  
+旅行で特別なものを見ましたか？  
+😊 Why do you like Japanese culture?  
+日本文化はなぜ好きですか？`
+    },
 
-// Story 27 - A New Smartphone
-{
-    title: "27. A New Smartphone",
-    content: `📱 I got a new smartphone for my birthday.  
+    // Story 27 - A New Smartphone
+    {
+        title: "27. A New Smartphone",
+        content: `📱 I got a new smartphone for my birthday.  
 私は誕生日に新しいスマートフォンをもらいました。  
 📸 It takes better pictures than my old one.  
 それは私の古いものより良い写真を撮ります。  
@@ -1193,32 +1193,32 @@ var eiken3 = [
 私は昨日、それをフル充電しました。  
 😊 I love my new smartphone.  
 私は新しいスマートフォンが大好きです。  
-📱 Did you get a new smartphone?  
-あなたは新しいスマートフォンをもらいましたか？  
-📸 Does it take better pictures?  
-それは良い写真を撮りますか？  
-😄 Can you play games faster?  
-あなたはゲームをより速くプレイできますか？  
-🔋 Does the battery last longer?  
-バッテリーは長持ちしますか？  
-😊 Is technology useful?  
-テクノロジーは役立ちますか？  
-📱 What can you do if you learn more?  
-もっと学べば何ができますか？  
-📸 What will you do tomorrow?  
-あなたは明日何をするつもりですか？  
-😄 Why is the phone the best gift?  
-なぜその電話は最高の贈り物ですか？  
-🔋 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love your smartphone?  
-なぜあなたはスマートフォンが好きですか？`
-},
+📱 Do you have a smartphone?  
+スマートフォンを持っていますか？  
+📸 Do you like taking pictures?  
+写真を撮るのは好きですか？  
+😄 Are fast games fun to play?  
+速いゲームは楽しいですか？  
+🔋 Is a long battery life important to you?  
+長いバッテリー寿命は大切ですか？  
+😊 Is technology useful in your life?  
+テクノロジーはあなたの生活で役立ちますか？  
+📱 What do you want to learn about technology?  
+テクノロジーについて何を学びたいですか？  
+📸 Where do you take photos?  
+どこで写真を撮りますか？  
+😄 What was your favorite gift?  
+一番好きな贈り物は何でしたか？  
+🔋 Do you charge your devices often?  
+デバイスをよく充電しますか？  
+😊 Why do you like smartphones?  
+スマートフォンはなぜ好きですか？`
+    },
 
-// Story 28 - A Cooking Class
-{
-    title: "28. A Cooking Class",
-    content: `🍳 I took a cooking class last Saturday.  
+    // Story 28 - A Cooking Class
+    {
+        title: "28. A Cooking Class",
+        content: `🍳 I took a cooking class last Saturday.  
 私は先週の土曜日に料理教室に参加しました。  
 👩‍🍳 The chef taught us how to make sushi.  
 シェフは私たちに寿司の作り方を教えてくれました。  
@@ -1238,32 +1238,32 @@ var eiken3 = [
 私は昨日、店で米を買いました。  
 😊 I love learning new recipes.  
 私は新しいレシピを学ぶのが大好きです。  
-🍳 Did you take a cooking class?  
-あなたは料理教室に参加しましたか？  
-👩‍🍳 Did the chef teach you sushi?  
-シェフはあなたに寿司を教えてくれましたか？  
-😄 Was your sushi tasty?  
-あなたの寿司は美味しかったですか？  
-🍚 Did you use fresh ingredients?  
-あなたは新鮮な材料を使いましたか？  
-😊 Is cooking creative?  
-料理はクリエイティブですか？  
-🍳 What can you do if you practice?  
-練習すれば何ができますか？  
-👩‍🍳 What will you try making tomorrow?  
-あなたは明日何を作ってみるつもりですか？  
-😄 Why was the class fun?  
-なぜそのクラスは楽しかったですか？  
-🍚 What did you buy yesterday?  
-あなたは昨日何を買いましたか？  
-😊 Why do you love learning recipes?  
-なぜあなたはレシピを学ぶのが好きですか？`
-},
+🍳 Have you taken a cooking class?  
+料理教室に参加したことがありますか？  
+👩‍🍳 Do you like learning from chefs?  
+シェフから学ぶのは好きですか？  
+😄 Is homemade food tasty to you?  
+手作りの食べ物はおいしいですか？  
+🍚 Do you use fresh ingredients?  
+新鮮な材料を使いますか？  
+😊 Is cooking a creative activity for you?  
+料理はクリエイティブな活動ですか？  
+🍳 Who would you cook for?  
+誰のために料理しますか？  
+👩‍🍳 What food would you try making?  
+どんな食べ物を作ってみますか？  
+😄 What class was fun for you?  
+どんなクラスが楽しかったですか？  
+🍚 What did you buy for cooking recently?  
+最近料理のために何を買いましたか？  
+😊 Why do you like learning recipes?  
+レシピを学ぶのはなぜ好きですか？`
+    },
 
-// Story 29 - A Day at the Beach
-{
-    title: "29. A Day at the Beach",
-    content: `🏖️ We went to the beach last summer.  
+    // Story 29 - A Day at the Beach
+    {
+        title: "29. A Day at the Beach",
+        content: `🏖️ We went to the beach last summer.  
 私たちは去年の夏にビーチに行きました。  
 🌊 The waves were bigger than usual.  
 波は普段より大きかったです。  
@@ -1283,32 +1283,32 @@ var eiken3 = [
 私は昨日、ヒトデを見つけました。  
 😊 I love beach trips.  
 私はビーチ旅行が大好きです。  
-🏖️ Did you go to the beach?  
-あなたはビーチに行きましたか？  
-🌊 Were the waves big?  
-波は大きかったですか？  
-😄 Did you build a sandcastle?  
-あなたは砂の城を建てましたか？  
-🐚 Did you collect shells?  
-あなたは貝殻を集めましたか？  
-😊 Is the beach relaxing?  
+🏖️ Do you enjoy going to the beach?  
+ビーチに行くのは好きですか？  
+🌊 Do you like big waves?  
+大きな波は好きですか？  
+😄 Have you built a sandcastle?  
+砂の城を建てたことがありますか？  
+🐚 Do you collect shells?  
+貝殻を集めますか？  
+😊 Is the beach relaxing for you?  
 ビーチはリラックスできますか？  
-🏖️ What will you do if it’s sunny?  
-晴れていれば何をしますか？  
-🌊 What will you do tomorrow?  
-あなたは明日何をするつもりですか？  
-😄 Why was the day enjoyable?  
-なぜその日は楽しかったですか？  
-🐚 What did you find yesterday?  
-あなたは昨日何を見つけましたか？  
+🏖️ What would you do on a sunny beach day?  
+晴れたビーチで何をしますか？  
+🌊 Would you swim in the ocean?  
+海で泳ぎますか？  
+😄 What makes a beach day fun?  
+ビーチの日を楽しくするのは何ですか？  
+🐚 Have you found something special at the beach?  
+ビーチで特別なものを見つけましたか？  
 😊 Why do you love beach trips?  
-なぜあなたはビーチ旅行が好きですか？`
-},
+ビーチ旅行はなぜ好きですか？`
+    },
 
-// Story 30 - A New Hobby
-{
-    title: "30. A New Hobby",
-    content: `🎨 I started painting as a new hobby.  
+    // Story 30 - A New Hobby
+    {
+        title: "30. A New Hobby",
+        content: `🎨 I started painting as a new hobby.  
 私は新しい趣味として絵を描き始めました。  
 🖌️ My paintings are more colorful than before.  
 私の絵は以前よりカラフルです。  
@@ -1328,32 +1328,32 @@ var eiken3 = [
 私は先週、新しいブラシを買いました。  
 😊 I love expressing myself through art.  
 私はアートを通じて自分を表現するのが好きです。  
-🎨 Did you start a new hobby?  
-あなたは新しい趣味を始めましたか？  
-🖌️ Are your paintings colorful?  
-あなたの絵はカラフルですか？  
+🎨 Have you started a new hobby?  
+新しい趣味を始めましたか？  
+🖌️ Do you like colorful paintings?  
+カラフルな絵は好きですか？  
 😄 Can you draw well?  
-あなたは上手く描けますか？  
-🎨 Is the art class inspiring?  
+絵を上手に描けますか？  
+🎨 Are art classes inspiring to you?  
 アートクラスは刺激的ですか？  
-😊 Is painting calming?  
-絵を描くことは落ち着きますか？  
-🖌️ What will happen if you keep practicing?  
-練習を続けると何が起こりますか？  
-🎨 What will you paint tomorrow?  
-あなたは明日何を描くつもりですか？  
-😄 What did your teacher do yesterday?  
-先生は昨日何をしましたか？  
-🖌️ What did you buy last week?  
-あなたは先週何を買いましたか？  
-😊 Why do you love painting?  
-なぜあなたは絵を描くのが好きですか？`
-},
+😊 Is painting calming for you?  
+絵を描くのは落ち着きますか？  
+🖌️ What would you practice to get better?  
+上達するために何を練習しますか？  
+🎨 What would you paint?  
+何を描きますか？  
+😄 Has a teacher praised you recently?  
+最近先生に褒められましたか？  
+🖌️ What art supplies have you bought?  
+どんなアート用品を買いましたか？  
+😊 Why do you like creating art?  
+アートを作るのはなぜ好きですか？`
+    },
 
-// Story 31 - A Visit to the Zoo
-{
-    title: "31. A Visit to the Zoo",
-    content: `🐘 I visited the zoo with my family.  
+    // Story 31 - A Visit to the Zoo
+    {
+        title: "31. A Visit to the Zoo",
+        content: `🐘 I visited the zoo with my family.  
 私は家族と動物園を訪れました。  
 🦁 The lions were louder than the monkeys.  
 ライオンはサルよりうるさかったです。  
@@ -1373,32 +1373,32 @@ var eiken3 = [
 私は昨日、子象を見ました。  
 😊 I love learning about animals.  
 私は動物について学ぶのが大好きです。  
-🐘 Did you visit the zoo?  
-あなたは動物園を訪れましたか？  
-🦁 Were the lions loud?  
-ライオンはうるさかったですか？  
-😄 Did you feed the giraffes?  
-あなたはキリンに餌をあげましたか？  
-🐒 Were the monkeys funny?  
-サルは面白かったですか？  
-😊 Is the zoo educational?  
-動物園は教育的ですか？  
-🐘 What will you do if you go again?  
-また行けば何をしますか？  
-🦁 What will you take pictures of tomorrow?  
-あなたは明日何の写真を撮るつもりですか？  
-😄 Why was the visit exciting?  
-なぜその訪問はわくわくしましたか？  
-🐒 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love learning about animals?  
-なぜあなたは動物について学ぶのが好きですか？`
-},
+🐘 Do you like visiting zoos?  
+動物園に行くのは好きですか？  
+🦁 What animals make loud noises?  
+どんな動物が大きな音を出しますか？  
+😄 Have you fed animals at a zoo?  
+動物園で動物にエサをあげたことがありますか？  
+🐒 Which animals are funny to you?  
+どの動物が面白いですか？  
+😊 Is learning about animals fun?  
+動物について学ぶのは楽しいですか？  
+🐘 What animals would you see at a zoo?  
+動物園でどんな動物を見たいですか？  
+🦁 Would you take pictures of animals?  
+動物の写真を撮りますか？  
+😄 What makes a zoo visit exciting?  
+動物園の訪問をわくわくさせるものは何ですか？  
+🐒 Have you seen a baby animal?  
+子動物を見たことがありますか？  
+😊 Why do you like learning about animals?  
+動物について学ぶのはなぜ好きですか？`
+    },
 
-// Story 32 - A Day at the Library
-{
-    title: "32. A Day at the Library",
-    content: `📚 I spent the afternoon at the library.  
+    // Story 32 - A Day at the Library
+    {
+        title: "32. A Day at the Library",
+        content: `📚 I spent the afternoon at the library.  
 私は午後を図書館で過ごしました。  
 📖 I read a book about Japanese history.  
 私は日本史についての本を読みました。  
@@ -1418,32 +1418,32 @@ var eiken3 = [
 私は昨日、侍について学びました。  
 😊 I love spending time with books.  
 私は本と過ごす時間が大好きです。  
-📚 Did you spend time at the library?  
-あなたは図書館で時間を過ごしましたか？  
-📖 Did you read a book?  
-あなたは本を読みましたか？  
-😄 Was the library quiet?  
-図書館は静かでしたか？  
-🔍 Did you find interesting facts?  
-あなたは面白い事実を見つけましたか？  
-😊 Is reading peaceful?  
-読書は平和ですか？  
-📚 What will you do if you have time?  
-時間があれば何をしますか？  
-📖 What will you do tomorrow?  
-あなたは明日何をするつもりですか？  
-😄 Why is the library the best place?  
-なぜ図書館は最高の場所ですか？  
-🔍 What did you learn yesterday?  
-あなたは昨日何を学びましたか？  
+📚 Do you visit libraries often?  
+図書館によく行きますか？  
+📖 What books do you enjoy reading?  
+どんな本を読むのが好きですか？  
+😄 Is a quiet place good for you?  
+静かな場所はいいですか？  
+🔍 What interesting facts do you know?  
+どんな面白い事実を知っていますか？  
+😊 Is reading a peaceful activity?  
+読書は平和な活動ですか？  
+📚 What books would you borrow?  
+どんな本を借りたいですか？  
+📖 Do you study for tests?  
+テストのために勉強しますか？  
+😄 Why is a library good for focusing?  
+図書館はなぜ集中にいいですか？  
+🔍 What did you learn about recently?  
+最近何を学びましたか？  
 😊 Why do you love books?  
-なぜあなたは本が好きですか？`
-},
+本はなぜ好きですか？`
+    },
 
-// Story 33 - A Music Lesson
-{
-    title: "33. A Music Lesson",
-    content: `🎹 I had a piano lesson yesterday.  
+    // Story 33 - A Music Lesson
+    {
+        title: "33. A Music Lesson",
+        content: `🎹 I had a piano lesson yesterday.  
 私は昨日、ピアノのレッスンを受けました。  
 🎼 The teacher played a beautiful song.  
 先生は美しい曲を弾きました。  
@@ -1463,32 +1463,32 @@ var eiken3 = [
 私は昨日、クラシック音楽を聴きました。  
 😊 I love playing the piano.  
 私はピアノを弾くのが大好きです。  
-🎹 Did you have a piano lesson?  
-あなたはピアノのレッスンを受けましたか？  
-🎼 Did the teacher play a song?  
-先生は曲を弾きましたか？  
-😄 Did you practice hard?  
-あなたは一生懸命練習しましたか？  
-🎶 Were your notes clear?  
-あなたの音ははっきりしていましたか？  
-😊 Is music soothing?  
-音楽は心を和ませますか？  
-🎹 What will you do if you keep practicing?  
-練習を続けると何をしますか？  
-🎼 What will you learn tomorrow?  
-あなたは明日何を学ぶつもりですか？  
-😄 Why was the lesson productive?  
-なぜそのレッスンは生産的でしたか？  
-🎶 What did you listen to yesterday?  
-あなたは昨日何を聴きましたか？  
-😊 Why do you love playing the piano?  
-なぜあなたはピアノを弾くのが好きですか？`
-},
+🎹 Have you taken music lessons?  
+音楽のレッスンを受けたことがありますか？  
+🎼 Do you like beautiful songs?  
+美しい曲は好きですか？  
+😄 Do you practice hard for something?  
+何かで一生懸命練習しますか？  
+🎶 Is music clear and pleasant to you?  
+音楽ははっきりして楽しいですか？  
+😊 Does music calm you down?  
+音楽はあなたを落ち着かせますか？  
+🎹 Would you like to play in a concert?  
+コンサートで演奏したいですか？  
+🎼 What new song would you learn?  
+どんな新しい曲を学びたいですか？  
+😄 What makes a lesson productive for you?  
+レッスンを生産的にするのは何ですか？  
+🎶 What music did you listen to recently?  
+最近どんな音楽を聴きましたか？  
+😊 Why do you like playing music?  
+音楽を演奏するのはなぜ好きですか？`
+    },
 
-// Story 34 - A Day with My Grandparents
-{
-    title: "34. A Day with My Grandparents",
-    content: `👵 I visited my grandparents last weekend.  
+    // Story 34 - A Day with My Grandparents
+    {
+        title: "34. A Day with My Grandparents",
+        content: `👵 I visited my grandparents last weekend.  
 私は先週末、祖父母を訪れました。  
 🍵 We drank tea and talked about old times.  
 私たちはお茶を飲み、昔の話をしました。  
@@ -1508,32 +1508,32 @@ var eiken3 = [
 私は昨日、彼らが花を植えるのを手伝いました。  
 😊 I love my grandparents.  
 私は祖父母が大好きです。  
-👵 Did you visit your grandparents?  
-あなたは祖父母を訪れましたか？  
-🍵 Did you drink tea?  
-あなたはお茶を飲みましたか？  
-😄 Were your grandma’s stories funny?  
-あなたの祖母の話は面白かったですか？  
-🌳 Did you walk in the garden?  
-あなたは庭を歩きましたか？  
-😊 Is spending time with them precious?  
-彼らと過ごす時間は貴重ですか？  
-👵 What will you do if you’re free?  
-暇なら何をしますか？  
-🍵 What will you bring next time?  
-あなたは次回何を持って行くつもりですか？  
-😄 What did your grandpa tell?  
-あなたの祖父は何を言いましたか？  
-🌳 What did you help them do yesterday?  
-あなたは昨日、彼らを何を手伝いましたか？  
+👵 Do you spend time with grandparents?  
+祖父母と時間を過ごしますか？  
+🍵 Do you like drinking tea?  
+お茶を飲むのは好きですか？  
+😄 What funny stories do you hear?  
+どんな面白い話を聞きますか？  
+🌳 Do you enjoy walking in gardens?  
+庭を歩くのは好きですか？  
+😊 Is family time precious to you?  
+家族の時間は貴重ですか？  
+👵 Who would you visit if you’re free?  
+暇なら誰を訪ねますか？  
+🍵 What would you bring to a visit?  
+訪問に何を持って行きますか？  
+😄 Do you like hearing jokes?  
+ジョークを聞くのは好きですか？  
+🌳 Have you helped plant flowers?  
+花を植えるのを手伝ったことがありますか？  
 😊 Why do you love your grandparents?  
-なぜあなたは祖父母が好きですか？`
-},
+祖父母はなぜ好きですか？`
+    },
 
-// Story 35 - A School Play
-{
-    title: "35. A School Play",
-    content: `🎭 I acted in a school play last month.  
+    // Story 35 - A School Play
+    {
+        title: "35. A School Play",
+        content: `🎭 I acted in a school play last month.  
 私は先月、学校の劇で演じました。  
 👗 I wore a costume that was too big.  
 私は大きすぎる衣装を着ました。  
@@ -1553,32 +1553,31 @@ var eiken3 = [
 私は昨日、映画を見ました。  
 😊 I love being on stage.  
 私はステージに立つのが大好きです。  
-🎭 Did you act in a school play?  
-あなたは学校の劇で演じましたか？  
-👗 Was your costume big?  
-あなたの衣装は大きかったですか？  
-😄 Did the audience laugh?  
-観客は笑いましたか？  
-🎬 Was your role important?  
-あなたの役割は重要でしたか？  
-😊 Is acting thrilling?  
-演技はスリリングですか？  
-🎭 What can you do if you audition?  
-オーディションを受ければ何ができますか？  
-👗 What will you practice tomorrow?  
-あなたは明日何を練習するつもりですか？  
-😄 Why was the play memorable?  
-なぜその劇は思い出に残りましたか？  
-🎬 What did you watch yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love being on stage?  
-なぜあなたはステージに立つのが好きですか？`
-},
-
-// Story 36 - A Day at the Amusement Park
-{
-    title: "36. A Day at the Amusement Park",
-    content: `🎢 I went to an amusement park with friends.  
+🎭 Have you acted in a play?  
+劇で演じたことがありますか？  
+👗 Do you like wearing costumes?  
+衣装を着るのは好きですか？  
+😄 Does an audience laughing feel good?  
+観客が笑うのは気持ちいいですか？  
+🎬 Would you want an important role?  
+重要な役割をしたいですか？  
+😊 Is acting exciting for you?  
+演技はわくわくしますか？  
+🎭 Would you audition for a play?  
+劇のオーディションを受けますか？  
+👗 What would you practice for a performance?  
+パフォーマンスのために何を練習しますか？  
+😄 What event was memorable for you?  
+どんなイベントが思い出に残りますか？  
+🎬 Do you watch movies often?  
+映画をよく見ますか？  
+😊 Why do you like being on stage?  
+ステージに立つのはなぜ好きですか？`
+    },
+    // Story 36 - A Day at the Amusement Park
+    {
+        title: "36. A Day at the Amusement Park",
+        content: `🎢 I went to an amusement park with friends.  
 私は友達と遊園地に行きました。  
 🎡 The Ferris wheel was taller than I expected.  
 観覧車は思っていたより高かったです。  
@@ -1598,565 +1597,565 @@ var eiken3 = [
 私は昨日、お土産を買いました。  
 😊 I love amusement parks.  
 私は遊園地が大好きです。  
-🎢 Did you go to an amusement park?  
-あなたは遊園地に行きましたか？  
-🎡 Was the Ferris wheel tall?  
-観覧車は高かったですか？  
-😄 Did you ride a roller coaster?  
-あなたはローラーコースターに乗りましたか？  
-🍿 Did you eat cotton candy?  
-あなたは綿菓子を食べましたか？  
-😊 Is the park entertaining?  
-その公園は楽しいですか？  
-🎢 What will you do if you go again?  
-また行けば何をしますか？  
-🎡 What will you take pictures of tomorrow?  
-あなたは明日何を写真に撮るつもりですか？  
-😄 Why was the day adventurous?  
-なぜその日は冒険的でしたか？  
-🍿 What did you buy yesterday?  
-あなたは昨日何を買いましたか？  
+🎢 Do you enjoy going to amusement parks?  
+遊園地に行くのは好きですか？  
+🎡 Have you ever ridden a Ferris wheel?  
+観覧車に乗ったことがありますか？  
+😄 Are fast rides exciting for you?  
+速い乗り物はわくわくしますか？  
+🍿 What snacks do you like at amusement parks?  
+遊園地でどんなお菓子が好きですか？  
+😊 What makes a place entertaining for you?  
+どんな場所が楽しいですか？  
+🎢 What rides would you try at a park?  
+遊園地でどんな乗り物に挑戦しますか？  
+🎡 What views do you like to photograph?  
+どんな景色を写真に撮りたいですか？  
+😄 What makes a day adventurous for you?  
+どんな日が冒険的ですか？  
+🍿 Have you bought a souvenir recently?  
+最近お土産を買いましたか？  
 😊 Why do you love amusement parks?  
-なぜあなたは遊園地が好きですか？`
-},
+遊園地はなぜ好きですか？`
+    },
 
-// Story 37 - A Volunteer Day
-{
-    title: "37. A Volunteer Day",
-    content: `🤝 I volunteered at a local shelter last week.  
-私は先週、地元のシェルターでボランティアをしました。  
-🧹 We cleaned the rooms and organized supplies.  
-私たちは部屋を掃除し、備品を整理しました。  
-😄 The staff thanked us more warmly than expected.  
-スタッフは予想より温かく感謝してくれました。  
-🐕 I played with the dogs, who were friendlier than cats.  
-私は猫より友好的な犬と遊びました。  
-😊 Helping others is the most rewarding feeling.  
-他人を助けることは最もやりがいのある気持ちです。  
-🤝 If I have time, I will volunteer again.  
-時間があれば、私はまたボランティアをします。  
-🧹 I will help at the food bank tomorrow.  
-私は明日、フードバンクで手伝うつもりです。  
-😄 The day was the most fulfilling one.  
-その日は最も充実した日でした。  
-🐕 I adopted a puppy yesterday.  
-私は昨日、子犬を養子にしました。  
-😊 I love making a difference.  
-私は変化をもたらすのが大好きです。  
-🤝 Did you volunteer at a shelter?  
-あなたはシェルターでボランティアをしましたか？  
-🧹 Did you clean and organize?  
-あなたは掃除と整理をしましたか？  
-😄 Did the staff thank you?  
-スタッフはあなたに感謝しましたか？  
-🐕 Were the dogs friendly?  
-犬は友好的でしたか？  
-😊 Is helping others rewarding?  
-他人を助けることはやりがいがありますか？  
-🤝 What will you do if you have time?  
-時間があれば何をしますか？  
-🧹 Where will you help tomorrow?  
-あなたは明日どこで手伝うつもりですか？  
-😄 Why was the day fulfilling?  
-なぜその日は充実していましたか？  
-🐕 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love making a difference?  
-なぜあなたは変化をもたらすのが好きですか？`
-},
-
-// Story 38 - A Day at the Museum
-{
-    title: "38. A Day at the Museum",
-    content: `🏛️ I visited a history museum with my class.  
-私はクラスと歴史博物館を訪れました。  
-🗿 The statues were older than I thought.  
-彫像は思っていたより古かったです。  
-😄 The guide told us interesting stories.  
-ガイドは私たちに面白い話をしました。  
-📸 I took pictures of the ancient artifacts.  
-私は古代の工芸品の写真を撮りました。  
-😊 The museum is the most educational place.  
-博物館は最も教育的な場所です。  
-🏛️ If I go again, I will see the new exhibit.  
-また行けば、私は新しい展示を見ます。  
-🗿 I will write a report about it tomorrow.  
-私は明日、それについてレポートを書くつもりです。  
-😄 The visit was the most informative one.  
-その訪問は最も有益なものでした。  
-📸 I saw a mummy yesterday.  
-私は昨日、ミイラを見ました。  
-😊 I love learning about history.  
-私は歴史を学ぶのが大好きです。  
-🏛️ Did you visit a museum?  
-あなたは博物館を訪れましたか？  
-🗿 Were the statues old?  
-彫像は古かったですか？  
-😄 Did the guide tell stories?  
-ガイドは話をしましたか？  
-📸 Did you take pictures?  
-あなたは写真を撮りましたか？  
-😊 Is the museum educational?  
-博物館は教育的ですか？  
-🏛️ What will you do if you go again?  
-また行けば何をしますか？  
-🗿 What will you write about tomorrow?  
-あなたは明日何について書くつもりですか？  
-😄 Why was the visit informative?  
-なぜその訪問は有益でしたか？  
-📸 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love history?  
-なぜあなたは歴史が好きですか？`
-},
-
-// Story 39 - A Camping Trip
-{
-    title: "39. A Camping Trip",
-    content: `⛺ We went camping in the mountains.  
-私たちは山でキャンプをしました。  
-🔥 The campfire was warmer than I expected.  
-キャンプファイヤーは思っていたより暖かかったです。  
-😄 We told ghost stories at night.  
-私たちは夜に幽霊の話をしました。  
-🌲 The forest was quieter than the city.  
-森は街より静かでした。  
-😊 Camping is the most adventurous activity.  
-キャンプは最も冒険的な活動です。  
-⛺ If it’s clear, I will go camping again.  
-晴れていれば、私はまたキャンプに行きます。  
-🔥 I will bring marshmallows next time.  
-私は次回、マシュマロを持って行くつもりです。  
+    // Story 37 - A Camping Trip
+    {
+        title: "37. A Camping Trip",
+        content: `🏕️ My family went camping last weekend.  
+私の家族は先週末、キャンプに行きました。  
+🔥 We made a fire and roasted marshmallows.  
+私たちは火をおこし、マシュマロを焼きました。  
+😄 The stars were brighter than in the city.  
+星は街より明るかったです。  
+⛺ The tent was bigger than I thought.  
+テントは思っていたより大きかったです。  
+😊 Camping is the most relaxing adventure.  
+キャンプは最もリラックスできる冒険です。  
+🏕️ If it’s warm, I will camp again.  
+暖かければ、私はまたキャンプします。  
+🔥 I will cook breakfast outdoors tomorrow.  
+私は明日、屋外で朝食を作るつもりです。  
 😄 The trip was the most memorable one.  
 その旅行は最も思い出に残るものでした。  
-🌲 I saw a deer yesterday.  
-私は昨日、鹿を見ました。  
+⛺ I saw an owl yesterday.  
+私は昨日、フクロウを見ました。  
 😊 I love being in nature.  
 私は自然の中にいるのが大好きです。  
-⛺ Did you go camping?  
-あなたはキャンプをしましたか？  
-🔥 Was the campfire warm?  
-キャンプファイヤーは暖かかったですか？  
-😄 Did you tell stories?  
-あなたは話をしましたか？  
-🌲 Was the forest quiet?  
-森は静かでしたか？  
-😊 Is camping adventurous?  
-キャンプは冒険的ですか？  
-⛺ What will you do if it’s clear?  
-晴れていれば何をしますか？  
-🔥 What will you bring next time?  
-あなたは次回何を持って行くつもりですか？  
-😄 Why was the trip memorable?  
-なぜその旅行は思い出に残りましたか？  
-🌲 What did you see yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love nature?  
-なぜあなたは自然が好きですか？`
-},
+🏕️ Have you ever gone camping?  
+キャンプに行ったことがありますか？  
+🔥 Do you like roasting food over a fire?  
+火で食べ物を焼くのは好きですか？  
+😄 Are stars beautiful to you at night?  
+夜の星は美しいですか？  
+⛺ Would you sleep in a tent?  
+テントで寝ますか？  
+😊 Is camping relaxing for you?  
+キャンプはリラックスできますか？  
+🏕️ What would you do on a camping trip?  
+キャンプ旅行で何をしますか？  
+🔥 What food would you cook outdoors?  
+屋外でどんな食べ物を作りますか？  
+😄 What makes a trip memorable for you?  
+どんな旅行が思い出に残りますか？  
+⛺ Have you seen animals in the wild?  
+野生の動物を見たことがありますか？  
+😊 Why do you enjoy being in nature?  
+自然の中にいるのはなぜ好きですか？`
+    },
 
-// Story 40 - A Day at the Aquarium
-{
-    title: "40. A Day at the Aquarium",
-    content: `🐠 I visited the aquarium with my family.  
-私は家族と水族館を訪れました。  
-🦈 The sharks were scarier than the fish.  
-サメは魚より怖かったです。  
-😄 I watched the dolphin show.  
-私はイルカのショーを見ました。  
-🐙 The octopus was the most fascinating creature.  
-タコは最も魅力的な生き物でした。  
-😊 The aquarium is the most amazing place.  
-水族館は最も素晴らしい場所です。  
+    // Story 38 - A School Club
+    {
+        title: "38. A School Club",
+        content: `🎨 I joined an art club at school.  
+私は学校でアートクラブに参加しました。  
+✂️ We made crafts with colorful paper.  
+私たちは色とりどりの紙で工作を作りました。  
+😄 My project was prettier than last time.  
+私のプロジェクトは前回よりきれいでした。  
+🖌️ I painted a picture of a flower.  
+私は花の絵を描きました。  
+😊 The club is the most creative place.  
+クラブは最もクリエイティブな場所です。  
+🎨 If I attend regularly, I will improve.  
+定期的に参加すれば、私は上達します。  
+✂️ I will make a card tomorrow.  
+私は明日、カードを作るつもりです。  
+😄 The meetings are the most fun after school.  
+その会合は放課後で一番楽しいです。  
+🖌️ I shared my art yesterday.  
+私は昨日、私のアートを共有しました。  
+😊 I love being in the art club.  
+私はアートクラブにいるのが大好きです。  
+🎨 Do you belong to a school club?  
+学校のクラブに所属していますか？  
+✂️ Have you made crafts with paper?  
+紙で工作を作ったことがありますか？  
+😄 Do you like creating pretty things?  
+きれいなものを作るのは好きですか？  
+🖌️ What would you paint in an art club?  
+アートクラブで何を描きますか？  
+😊 Are creative activities fun for you?  
+クリエイティブな活動は楽しいですか？  
+🎨 What would you do to improve a skill?  
+スキルを上達させるために何をしますか？  
+✂️ What kind of card would you make?  
+どんなカードを作りますか？  
+😄 What do you enjoy doing after school?  
+放課後に何をするのが好きですか？  
+🖌️ Have you shared something you made?  
+作ったものを共有したことがありますか？  
+😊 Why do you like clubs?  
+クラブはなぜ好きですか？`
+    },
+
+    // Story 39 - A Visit to a Museum
+    {
+        title: "39. A Visit to a Museum",
+        content: `🏛️ I went to a history museum with my class.  
+私はクラスと歴史博物館に行きました。  
+🗿 We saw artifacts older than my grandparents.  
+私たちは祖父母より古い遺物を見ました。  
+😄 The guide told stories funnier than my teacher’s.  
+ガイドは先生より面白い話をしました。  
+📸 I took pictures of a dinosaur skeleton.  
+私は恐竜の骨格の写真を撮りました。  
+😊 Museums are the most interesting places.  
+博物館は最も面白い場所です。  
+🏛️ If I go again, I will learn more.  
+また行けば、私はもっと学びます。  
+🗿 I will tell my family about it tomorrow.  
+私は明日、家族にそれについて話すつもりです。  
+😄 The visit was the most educational one.  
+その訪問は最も教育的でした。  
+📸 I saw a mummy yesterday.  
+私は昨日、ミイラを見ました。  
+😊 I love exploring history.  
+私は歴史を探るのが大好きです。  
+🏛️ Do you like visiting museums?  
+博物館に行くのは好きですか？  
+🗿 What old things interest you?  
+どんな古いものが興味深いですか？  
+😄 Do you enjoy funny stories from guides?  
+ガイドの面白い話は好きですか？  
+📸 Would you take pictures in a museum?  
+博物館で写真を撮りますか？  
+😊 Are museums interesting to you?  
+博物館は面白いですか？  
+🏛️ What would you learn at a museum?  
+博物館で何を学びたいですか？  
+🗿 Who would you tell about a museum visit?  
+博物館の訪問について誰に話したいですか？  
+😄 What makes a visit educational for you?  
+どんな訪問が教育的ですか？  
+📸 Have you seen something unique recently?  
+最近ユニークなものを見ましたか？  
+😊 Why do you like exploring history?  
+歴史を探るのはなぜ好きですか？`
+    },
+
+    // Story 40 - A Day with My Dog
+    {
+        title: "40. A Day with My Dog",
+        content: `🐶 My dog ran faster than me in the park.  
+私の犬は公園で私より速く走りました。  
+🦴 I gave him a bone as a treat.  
+私は彼におやつとして骨をあげました。  
+😄 He barked louder than usual.  
+彼はいつもより大声で吠えました。  
+🚶 We walked longer than yesterday.  
+私たちは昨日より長く歩きました。  
+😊 Playing with my dog is the most joyful thing.  
+犬と遊ぶことは最も楽しいことです。  
+🐶 If it’s sunny, I will play again.  
+晴れていれば、私はまた遊びます。  
+🦴 I will buy a new toy tomorrow.  
+私は明日、新しいおもちゃを買うつもりです。  
+😄 The day was the most active one.  
+その日は最も活動的な日でした。  
+🚶 I brushed his fur yesterday.  
+私は昨日、彼の毛をブラシしました。  
+😊 I love my dog so much.  
+私は犬がとても大好きです。  
+🐶 Do you have a pet dog?  
+犬を飼っていますか？  
+🦴 What treats do you give your pets?  
+ペットにどんなおやつをあげますか？  
+😄 Do you like when animals are loud?  
+動物がうるさいのは好きですか？  
+🚶 Do you enjoy long walks?  
+長い散歩は好きですか？  
+😊 Is playing with pets joyful for you?  
+ペットと遊ぶのは楽しいですか？  
+🐶 What would you do on a sunny day with a pet?  
+晴れた日にペットと何をしますか？  
+🦴 What toy would you buy for a pet?  
+ペットにどんなおもちゃを買いますか？  
+😄 What makes a day active for you?  
+どんな日が活動的ですか？  
+🚶 Have you taken care of a pet recently?  
+最近ペットの世話をしましたか？  
+😊 Why do you love pets?  
+ペットをなぜ愛していますか？`
+    },
+
+    // Story 41 - A Birthday Party
+    {
+        title: "41. A Birthday Party",
+        content: `🎉 I went to my friend’s birthday party.  
+私は友達の誕生日パーティーに行きました。  
+🎂 The cake was sweeter than candy.  
+ケーキはキャンディーより甘かったです。  
+😄 We played games louder than usual.  
+私たちはいつもより大声でゲームをしました。  
+🎁 I gave her the prettiest gift.  
+私は彼女に一番きれいなプレゼントをあげました。  
+😊 Parties are the most exciting events.  
+パーティーは最もわくわくするイベントです。  
+🎉 If I’m invited, I will go again.  
+招待されれば、私はまた行きます。  
+🎂 I will bake cookies tomorrow.  
+私は明日、クッキーを焼くつもりです。  
+😄 The party was the most fun this month.  
+そのパーティーは今月で一番楽しかったです。  
+🎁 I made a card yesterday.  
+私は昨日、カードを作りました。  
+😊 I love celebrating birthdays.  
+私は誕生日を祝うのが大好きです。  
+🎉 Do you enjoy birthday parties?  
+誕生日パーティーは好きですか？  
+🎂 What kind of cake do you like?  
+どんなケーキが好きですか？  
+😄 Do you play loud games at parties?  
+パーティーでうるさいゲームをしますか？  
+🎁 What gifts do you give to friends?  
+友達にどんなプレゼントをあげますか？  
+😊 Are parties exciting for you?  
+パーティーはわくわくしますか？  
+🎉 Would you go to a friend’s party?  
+友達のパーティーに行きますか？  
+🎂 What would you bake for a party?  
+パーティーのために何を焼きますか？  
+😄 What makes a party fun for you?  
+パーティーを楽しくするのは何ですか？  
+🎁 Have you made a card for someone?  
+誰かにカードを作ったことがありますか？  
+😊 Why do you like celebrating birthdays?  
+誕生日を祝うのはなぜ好きですか？`
+    },
+
+    // Story 42 - A Day at the Aquarium
+    {
+        title: "42. A Day at the Aquarium",
+        content: `🐠 I visited the aquarium with my parents.  
+私は両親と水族館を訪れました。  
+🐬 The dolphins swam faster than the fish.  
+イルカは魚より速く泳ぎました。  
+😄 The shark tank was scarier than I thought.  
+サメの水槽は思っていたより怖かったです。  
+📸 I took pictures of colorful corals.  
+私は色とりどりのサンゴの写真を撮りました。  
+😊 The aquarium is the most calming place.  
+水族館は最も落ち着く場所です。  
 🐠 If I go again, I will see the jellyfish.  
 また行けば、私はクラゲを見ます。  
-🦈 I will learn more about marine life tomorrow.  
-私は明日、海洋生物についてもっと学ぶつもりです。  
-😄 The visit was the most educational one.  
-その訪問は最も教育的なものでした。  
-🐙 I touched a starfish yesterday.  
-私は昨日、ヒトデに触れました。  
-😊 I love sea animals.  
-私は海の動物が大好きです。  
-🐠 Did you visit the aquarium?  
-あなたは水族館を訪れましたか？  
-🦈 Were the sharks scary?  
-サメは怖かったですか？  
-😄 Did you watch the dolphin show?  
-あなたはイルカのショーを見ましたか？  
-🐙 Was the octopus fascinating?  
-タコは魅力的でしたか？  
-😊 Is the aquarium amazing?  
-水族館は素晴らしいですか？  
-🐠 What will you do if you go again?  
-また行けば何をしますか？  
-🦈 What will you learn tomorrow?  
-あなたは明日何を学ぶつもりですか？  
-😄 Why was the visit educational?  
-なぜその訪問は教育的でしたか？  
-🐙 What did you touch yesterday?  
-あなたは昨日何に触れましたか？  
-😊 Why do you love sea animals?  
-なぜあなたは海の動物が好きですか？`
-},
+🐬 I will tell my friends about it tomorrow.  
+私は明日、友達にそれについて話すつもりです。  
+😄 The visit was the most amazing one.  
+その訪問は最も素晴らしいものでした。  
+📸 I saw a sea turtle yesterday.  
+私は昨日、ウミガメを見ました。  
+😊 I love watching sea animals.  
+私は海の動物を見るのが大好きです。  
+🐠 Do you like visiting aquariums?  
+水族館に行くのは好きですか？  
+🐬 What sea animals do you find fast?  
+どんな海の動物が速いと思いますか？  
+😄 Are big fish tanks exciting or scary?  
+大きな水槽はわくわくしますか、怖いですか？  
+📸 Do you take pictures of nature?  
+自然の写真を撮りますか？  
+😊 Is an aquarium calming for you?  
+水族館は落ち着きますか？  
+🐠 What sea creatures would you see?  
+どんな海の生き物を見たいですか？  
+🐬 Who would you tell about a fun visit?  
+楽しい訪問について誰に話したいですか？  
+😄 What makes a visit amazing for you?  
+どんな訪問が素晴らしいですか？  
+📸 Have you seen a sea animal recently?  
+最近海の動物を見ましたか？  
+😊 Why do you like watching sea animals?  
+海の動物を見るのはなぜ好きですか？`
+    },
 
-// Story 41 - A Day at the Market
-{
-    title: "41. A Day at the Market",
-    content: `🛒 I went to the market with my mom.  
-私は母と市場に行きました。  
-🍎 We bought fresher fruits than last time.  
-私たちは前回より新鮮な果物を買いました。  
-😄 The vendors were friendlier than expected.  
-売り手は思っていたより友好的でした。  
-🥕 I chose the biggest carrots.  
-私は一番大きなニンジンを選びました。  
-😊 The market is the most lively place.  
-市場は最も活気のある場所です。  
-🛒 If I go again, I will buy vegetables.  
-また行けば、私は野菜を買います。  
-🍎 I will make a fruit salad tomorrow.  
-私は明日、フルーツサラダを作るつもりです。  
+    // Story 43 - A Sports Day
+    {
+        title: "43. A Sports Day",
+        content: `🏃 My school held a sports day last week.  
+私の学校は先週、運動会を開催しました。  
+🏅 I ran in the relay race.  
+私はリレーレースで走りました。  
+😄 My team cheered louder than the others.  
+私のチームは他のチームより大声で応援しました。  
+🥇 We won the most medals in our class.  
+私たちのクラスは最も多くのメダルを獲得しました。  
+😊 Sports day is the most energetic event.  
+運動会は最もエネルギッシュなイベントです。  
+🏃 If I train, I can run faster.  
+トレーニングすれば、私はもっと速く走れます。  
+🏅 I will join the race again next year.  
+私は来年、またレースに参加するつもりです。  
+😄 The day was the most competitive one.  
+その日は最も競争的な日でした。  
+🥇 My friend got a gold medal yesterday.  
+私の友達は昨日、金メダルを獲得しました。  
+😊 I love sports day.  
+私は運動会が大好きです。  
+🏃 Do you enjoy school sports days?  
+学校の運動会は好きですか？  
+🏅 Have you run in a race?  
+レースで走ったことがありますか？  
+😄 Do you cheer loudly for your team?  
+チームを大声で応援しますか？  
+🥇 What medals would you like to win?  
+どんなメダルを獲得したいですか？  
+😊 Are energetic events fun for you?  
+エネルギッシュなイベントは楽しいですか？  
+🏃 What would you train for?  
+何のためにトレーニングしますか？  
+🏅 Would you join a race?  
+レースに参加しますか？  
+😄 What makes a day competitive for you?  
+どんな日が競争的ですか？  
+🥇 Do you know someone who won a medal?  
+メダルを獲得した人を知っていますか？  
+😊 Why do you like sports days?  
+運動会はなぜ好きですか？`
+    },
+
+    // Story 44 - A Day Helping at Home
+    {
+        title: "44. A Day Helping at Home",
+        content: `🧹 I helped my mom clean the house.  
+私は母が家を掃除するのを手伝いました。  
+🍽️ I washed dishes cleaner than usual.  
+私はいつもよりきれいに皿を洗いました。  
+😄 My dad thanked me louder than ever.  
+私の父はこれまでより大声で感謝しました。  
+🧼 I scrubbed the floor harder than yesterday.  
+私は昨日より強く床をこすりました。  
+😊 Helping is the most rewarding task.  
+手伝うことは最もやりがいのある仕事です。  
+🧹 If I help again, I will organize my room.  
+また手伝えば、私は部屋を整理します。  
+🍽️ I will cook dinner tomorrow.  
+私は明日、夕食を作るつもりです。  
 😄 The day was the most productive one.  
 その日は最も生産的な日でした。  
-🥕 I ate a peach yesterday.  
-私は昨日、桃を食べました。  
-😊 I love shopping at markets.  
-私は市場で買い物をするのが大好きです。  
-🛒 Did you go to the market?  
-あなたは市場に行きましたか？  
-🍎 Did you buy fresh fruits?  
-あなたは新鮮な果物を買いましたか？  
-😄 Were the vendors friendly?  
-売り手は友好的でしたか？  
-🥕 Did you choose big carrots?  
-あなたは大きなニンジンを選びましたか？  
-😊 Is the market lively?  
-市場は活気がありますか？  
-🛒 What will you buy if you go again?  
-また行けば何を買いますか？  
-🍎 What will you make tomorrow?  
-あなたは明日何を作るつもりですか？  
-😄 Why was the day productive?  
-なぜその日は生産的でしたか？  
-🥕 What did you eat yesterday?  
-あなたは昨日何を食べましたか？  
-😊 Why do you love markets?  
-なぜあなたは市場が好きですか？`
-},
+🧼 I dusted the shelves yesterday.  
+私は昨日、棚のほこりを払いました。  
+😊 I love helping my family.  
+私は家族を助けるのが大好きです。  
+🧹 Do you help clean at home?  
+家で掃除を手伝いますか？  
+🍽️ Do you wash dishes often?  
+皿をよく洗いますか？  
+😄 Do you like being thanked?  
+感謝されるのは好きですか？  
+🧼 What cleaning tasks do you do?  
+どんな掃除をしますか？  
+😊 Is helping others rewarding for you?  
+他人を助けるのはやりがいがありますか？  
+🧹 What would you organize at home?  
+家で何を整理しますか？  
+🍽️ Would you cook a meal for your family?  
+家族のために食事を作りますか？  
+😄 What makes a day productive for you?  
+どんな日が生産的ですか？  
+🧼 Have you cleaned something recently?  
+最近何かを掃除しましたか？  
+😊 Why do you like helping your family?  
+家族を助けるのはなぜ好きですか？`
+    },
 
-// Story 42 - A Day at the Gym
-{
-    title: "42. A Day at the Gym",
-    content: `🏋️ I exercised at the gym yesterday.  
-私は昨日、ジムで運動しました。  
-🏃‍♂️ I ran faster on the treadmill than last week.  
-私は先週よりトレッドミルで速く走りました。  
-😄 The trainer gave me better tips.  
-トレーナーは私により良いヒントをくれました。  
-🏋️‍♀️ I lifted heavier weights.  
-私はより重いウェイトを持ち上げました。  
-😊 The gym is the most motivating place.  
-ジムは最もやる気を起こさせる場所です。  
-🏋️ If I keep going, I will get stronger.  
-続けると、私は強くなります。  
-🏃‍♂️ I will try yoga tomorrow.  
-私は明日、ヨガを試すつもりです。  
-😄 The session was the most intense one.  
-そのセッションは最も激しいものでした。  
-🏋️‍♀️ I stretched after the workout yesterday.  
-私は昨日、ワークアウトの後にストレッチしました。  
-😊 I love staying fit.  
-私は健康を保つのが大好きです。  
-🏋️ Did you exercise at the gym?  
-あなたはジムで運動しましたか？  
-🏃‍♂️ Did you run fast?  
-あなたは速く走りましたか？  
-😄 Did the trainer give tips?  
-トレーナーはヒントをくれましたか？  
-🏋️‍♀️ Did you lift heavy weights?  
-あなたは重いウェイトを持ち上げましたか？  
-😊 Is the gym motivating?  
-ジムはやる気を起こさせますか？  
-🏋️ What will happen if you keep going?  
-続けると何が起こりますか？  
-🏃‍♂️ What will you try tomorrow?  
-あなたは明日何を試すつもりですか？  
-😄 Why was the session intense?  
-なぜそのセッションは激しかったですか？  
-🏋️‍♀️ What did you do after the workout?  
-あなたはワークアウトの後何をしましたか？  
-😊 Why do you love staying fit?  
-なぜあなたは健康を保つのが好きですか？`
-},
+    // Story 45 - A School Field Trip
+    {
+        title: "45. A School Field Trip",
+        content: `🚌 My class went on a field trip to a farm.  
+私のクラスは農場に遠足に行きました。  
+🐄 We saw cows bigger than cars.  
+私たちは車より大きな牛を見ました。  
+😄 The farmer explained things funnier than my teacher.  
+農家は先生より面白く説明しました。  
+🍎 I picked apples sweeter than candy.  
+私はキャンディーより甘いリンゴを摘みました。  
+😊 Field trips are the most exciting school events.  
+遠足は学校で最もわくわくするイベントです。  
+🚌 If we go again, I will bring a camera.  
+また行けば、私はカメラを持って行きます。  
+🐄 I will tell my parents about it tomorrow.  
+私は明日、両親にそれについて話すつもりです。  
+😄 The trip was the most adventurous one.  
+その旅行は最も冒険的なものでした。  
+🍎 I ate an apple yesterday.  
+私は昨日、リンゴを食べました。  
+😊 I love school field trips.  
+私は学校の遠足が大好きです。  
+🚌 Do you enjoy school field trips?  
+学校の遠足は好きですか？  
+🐄 What farm animals do you like?  
+どんな農場の動物が好きですか？  
+😄 Do you like funny explanations?  
+面白い説明は好きですか？  
+🍎 What fruits do you pick or eat?  
+どんな果物を摘んだり食べたりしますか？  
+😊 Are field trips exciting for you?  
+遠足はわくわくしますか？  
+🚌 What would you bring on a field trip?  
+遠足に何を持って行きますか？  
+🐄 Who would you tell about a fun trip?  
+楽しい旅行について誰に話したいですか？  
+😄 What makes a trip adventurous for you?  
+どんな旅行が冒険的ですか？  
+🍎 Have you eaten a fresh fruit recently?  
+最近新鮮な果物を食べましたか？  
+😊 Why do you like school field trips?  
+学校の遠足はなぜ好きですか？`
+    },
 
-// Story 43 - A Day at the Theater
-{
-    title: "43. A Day at the Theater",
-    content: `🎭 I watched a play at the theater.  
-私は劇場で劇を見ました。  
-🎬 The actors were more talented than I expected.  
-俳優たちは思っていたより才能がありました。  
-😄 The story was funnier than the movie.  
-話は映画より面白かったです。  
-👏 I clapped the loudest at the end.  
-私は最後に一番大きな拍手をしました。  
-😊 The theater is the most magical place.  
-劇場は最も魔法のような場所です。  
-🎭 If I go again, I will see a musical.  
-また行けば、私はミュージカルを見ます。  
-🎬 I will invite my friend tomorrow.  
-私は明日、友達を招待するつもりです。  
-😄 The performance was the most captivating one.  
-そのパフォーマンスは最も魅了するものでした。  
-👏 I met the lead actor yesterday.  
-私は昨日、主演俳優に会いました。  
-😊 I love live performances.  
-私はライブパフォーマンスが大好きです。  
-🎭 Did you watch a play?  
-あなたは劇を見ましたか？  
-🎬 Were the actors talented?  
-俳優たちは才能がありましたか？  
-😄 Was the story funny?  
-話は面白かったですか？  
-👏 Did you clap loudly?  
-あなたは大きな拍手をしましたか？  
-😊 Is the theater magical?  
-劇場は魔法のようですか？  
-🎭 What will you see if you go again?  
-また行けば何を見ますか？  
-🎬 Who will you invite tomorrow?  
-あなたは明日誰を招待するつもりですか？  
-😄 Why was the performance captivating?  
-なぜそのパフォーマンスは魅了しましたか？  
-👏 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love live performances?  
-なぜあなたはライブパフォーマンスが好きですか？`
-},
+    // Story 46 - A Day Baking Cookies
+    {
+        title: "46. A Day Baking Cookies",
+        content: `🍪 I baked cookies with my sister yesterday.  
+私は昨日、妹とクッキーを焼きました。  
+🥄 The dough was stickier than I expected.  
+生地は思っていたよりべたべたでした。  
+😄 We laughed louder than usual.  
+私たちはいつもより大声で笑いました。  
+🍫 The chocolate chips were sweeter than sugar.  
+チョコレートチップは砂糖より甘かったです。  
+😊 Baking is the most delicious hobby.  
+焼くことは最も美味しい趣味です。  
+🍪 If I bake again, I will make more.  
+また焼けば、私はもっと作ります。  
+🥄 I will try a new recipe tomorrow.  
+私は明日、新しいレシピを試すつもりです。  
+😄 The day was the most fun in the kitchen.  
+その日はキッチンで一番楽しかったです。  
+🍫 I ate a cookie yesterday.  
+私は昨日、クッキーを食べました。  
+😊 I love baking with my family.  
+私は家族と焼くのが大好きです。  
+🍪 Do you like baking cookies?  
+クッキーを焼くのは好きですか？  
+🥄 Have you worked with sticky dough?  
+べたべたした生地を扱ったことがありますか？  
+😄 Do you laugh a lot when cooking?  
+料理中にたくさん笑いますか？  
+🍫 Do you like chocolate in desserts?  
+デザートにチョコレートは好きですか？  
+😊 Is baking a delicious activity for you?  
+焼くことは美味しい活動ですか？  
+🍪 What would you bake next?  
+次に何を焼きますか？  
+🥄 What new recipe would you try?  
+どんな新しいレシピを試しますか？  
+😄 What makes a kitchen day fun?  
+キッチンでの日を楽しくするのは何ですか？  
+🍫 Have you eaten a dessert recently?  
+最近デザートを食べましたか？  
+😊 Why do you like baking with family?  
+家族と焼くのはなぜ好きですか？`
+    },
 
-// Story 44 - A Day at the Farm
-{
-    title: "44. A Day at the Farm",
-    content: `🚜 I visited a farm with my classmates.  
-私はクラスメートと農場を訪れました。  
-🐄 The cows were bigger than I thought.  
-牛は思っていたより大きかったです。  
-😄 We milked the cows carefully.  
-私たちは牛の乳を注意深く搾りました。  
-🍓 I picked the ripest strawberries.  
-私は最も熟したイチゴを摘みました。  
-😊 The farm is the most peaceful place.  
-農場は最も平和な場所です。  
-🚜 If I go again, I will ride a tractor.  
-また行けば、私はトラクターに乗ります。  
-🐄 I will feed the chickens tomorrow.  
-私は明日、ニワトリに餌をやるつもりです。  
-😄 The day was the most educational one.  
-その日は最も教育的な日でした。  
-🍓 I ate fresh corn yesterday.  
-私は昨日、新鮮なトウモロコシを食べました。  
-😊 I love farm life.  
-私は農場生活が大好きです。  
-🚜 Did you visit a farm?  
-あなたは農場を訪れましたか？  
-🐄 Were the cows big?  
-牛は大きかったですか？  
-😄 Did you milk the cows?  
-あなたは牛の乳を搾りましたか？  
-🍓 Did you pick strawberries?  
-あなたはイチゴを摘みましたか？  
-😊 Is the farm peaceful?  
-農場は平和ですか？  
-🚜 What will you do if you go again?  
-また行けば何をしますか？  
-🐄 What will you do tomorrow?  
-あなたは明日何をするつもりですか？  
-😄 Why was the day educational?  
-なぜその日は教育的でしたか？  
-🍓 What did you eat yesterday?  
-あなたは昨日何を食べましたか？  
-😊 Why do you love farm life?  
-なぜあなたは農場生活が好きですか？`
-},
-
-// Story 45 - A Day at the Planetarium
-{
-    title: "45. A Day at the Planetarium",
-    content: `🌌 I went to the planetarium with my science class.  
-私は科学のクラスとプラネタリウムに行きました。  
-⭐ The stars looked brighter than in the city.  
-星は街より明るく見えました。  
-😄 We learned about the solar system.  
-私たちは太陽系について学びました。  
-🌠 I saw a shooting star on the screen.  
-私はスクリーンで流れ星を見ました。  
-😊 The planetarium is the most fascinating place.  
-プラネタリウムは最も魅力的な場所です。  
-🌌 If I go again, I will watch a different show.  
-また行けば、私は別のショーを見ます。  
-⭐ I will study astronomy tomorrow.  
-私は明日、天文学を勉強するつもりです。  
-😄 The visit was the most inspiring one.  
-その訪問は最も刺激的なものでした。  
-🌠 I wished upon a star yesterday.  
-私は昨日、星に願いをかけました。  
-😊 I love learning about space.  
-私は宇宙について学ぶのが大好きです。  
-🌌 Did you go to the planetarium?  
-あなたはプラネタリウムに行きましたか？  
-⭐ Were the stars bright?  
-星は明るかったですか？  
-😄 Did you learn about the solar system?  
-あなたは太陽系について学びましたか？  
-🌠 Did you see a shooting star?  
-あなたは流れ星を見ましたか？  
-😊 Is the planetarium fascinating?  
-プラネタリウムは魅力的ですか？  
-🌌 What will you do if you go again?  
-また行けば何をしますか？  
-⭐ What will you study tomorrow?  
-あなたは明日何を勉強するつもりですか？  
-😄 Why was the visit inspiring?  
-なぜその訪問は刺激的でしたか？  
-🌠 What did you do yesterday?  
-あなたは昨日何をしましたか？  
-😊 Why do you love space?  
-なぜあなたは宇宙が好きですか？`
-},
-
-// Story 46 - A Day at the Festival
-{
-    title: "46. A Day at the Festival",
-    content: `🎆 I attended a summer festival with my friends.  
-私は友達と夏祭りに参加しました。  
-🍧 We ate shaved ice to cool down.  
-私たちはかき氷を食べて涼みました。  
-😄 The fireworks were louder than last year.  
-花火は昨年よりうるさかったです。  
-🎯 I won a prize at the game booth.  
-私はゲームブースで賞品を獲得しました。  
-😊 Festivals are the most vibrant events.  
+    // Story 47 - A Day at the Festival
+    {
+        title: "47. A Day at the Festival",
+        content: `🎉 The town festival was held last weekend.  
+町の祭りは先週末に開催されました。  
+🎶 The music was louder than last year.  
+音楽は昨年より大きかったです。  
+😄 I danced with my friends in the street.  
+私は友達と通りで踊りました。  
+🍡 I ate the tastiest festival food.  
+私は一番美味しい祭りの食べ物を食べました。  
+😊 Festivals are the most lively events.  
 祭りは最も活気のあるイベントです。  
-🎆 If it’s held again, I will go.  
-また開催されれば、私は行きます。  
-🍧 I will try cotton candy tomorrow.  
-私は明日、綿菓子を試すつもりです。  
-😄 The night was the most magical one.  
-その夜は最も魔法のような夜でした。  
-🎯 I played darts yesterday.  
-私は昨日、ダーツをしました。  
-😊 I love festival atmospheres.  
-私は祭りの雰囲気が大好きです。  
-🎆 Did you attend a festival?  
-あなたは祭りに参加しましたか？  
-🍧 Did you eat shaved ice?  
-あなたはかき氷を食べましたか？  
-😄 Were the fireworks loud?  
-花火はうるさかったですか？  
-🎯 Did you win a prize?  
-あなたは賞品を獲得しましたか？  
-😊 Are festivals vibrant?  
+🎉 If it happens again, I will join.  
+また開催されれば、私は参加します。  
+🎶 I will wear a yukata tomorrow.  
+私は明日、浴衣を着るつもりです。  
+😄 The day was the most colorful one.  
+その日は最もカラフルな日でした。  
+🍡 I watched fireworks yesterday.  
+私は昨日、花火を見ました。  
+😊 I love town festivals.  
+私は町の祭りが大好きです。  
+🎉 Do you go to town festivals?  
+町の祭りに行きますか？  
+🎶 Do you like loud festival music?  
+大きな祭りの音楽は好きですか？  
+😄 Have you danced with friends?  
+友達と踊ったことがありますか？  
+🍡 What festival foods do you enjoy?  
+どんな祭りの食べ物が好きですか？  
+😊 Are festivals lively for you?  
 祭りは活気がありますか？  
-🎆 What will you do if it’s held again?  
-また開催されれば何をしますか？  
-🍧 What will you try tomorrow?  
-あなたは明日何を試すつもりですか？  
-😄 Why was the night magical?  
-なぜその夜は魔法のようでしたか？  
-🎯 What did you play yesterday?  
-あなたは昨日何をしましたか？  
+🎉 Would you join a festival again?  
+また祭りに参加しますか？  
+🎶 Would you wear a special outfit to a festival?  
+祭りに特別な服を着ますか？  
+😄 What makes a day colorful for you?  
+どんな日がカラフルですか？  
+🍡 Have you watched fireworks recently?  
+最近花火を見ましたか？  
 😊 Why do you love festivals?  
-なぜあなたは祭りが好きですか？`
-},
+祭りはなぜ好きですか？`
+    },
 
-// Story 47 - A Day at the Concert
-{
-    title: "47. A Day at the Concert",
-    content: `🎤 I went to a concert with my sister.  
-私は妹とコンサートに行きました。  
-🎸 The band played louder than on the album.  
-バンドはアルバムより大きく演奏しました。  
-😄 We sang along to every song.  
-私たちはすべての曲に合わせて歌いました。  
-🎶 The music was the most energetic I’ve heard.  
-音楽は私が聞いた中で最もエネルギッシュでした。  
-😊 Concerts are the most thrilling experiences.  
-コンサートは最もスリリングな経験です。  
-🎤 If there’s another concert, I will attend.  
-またコンサートがあれば、私は参加します。  
-🎸 I will learn to play guitar tomorrow.  
-私は明日、ギターを弾くことを学ぶつもりです。  
-😄 The night was the most unforgettable one.  
-その夜は最も忘れられない夜でした。  
-🎶 I bought a CD yesterday.  
-私は昨日、CDを買いました。  
-😊 I love live music.  
-私はライブミュージックが大好きです。  
-🎤 Did you go to a concert?  
-あなたはコンサートに行きましたか？  
-🎸 Did the band play loudly?  
-バンドは大きく演奏しましたか？  
-😄 Did you sing along?  
-あなたは歌に合わせて歌いましたか？  
-🎶 Was the music energetic?  
-音楽はエネルギッシュでしたか？  
-😊 Are concerts thrilling?  
-コンサートはスリリングですか？  
-🎤 What will you do if there’s another concert?  
-またコンサートがあれば何をしますか？  
-🎸 What will you learn tomorrow?  
-あなたは明日何を学ぶつもりですか？  
-😄 Why was the night unforgettable?  
-なぜその夜は忘れられませんでしたか？  
-🎶 What did you buy yesterday?  
-あなたは昨日何を買いましたか？  
-😊 Why do you love live music?  
-なぜあなたはライブミュージックが好きですか？`
-},
-
-// Story 48 - A Day at the Science Museum
-{
-    title: "48. A Day at the Science Museum",
-    content: `🔭 I visited the science museum with my dad.  
-私は父と科学博物館を訪れました。  
-🧬 We saw exhibits about DNA and genetics.  
-私たちはDNAと遺伝学についての展示を見ました。  
-😄 The interactive displays were more fun than reading.  
-インタラクティブな展示は読むより楽しかったです。  
-🚀 I pretended to be an astronaut in the simulator.  
-私はシミュレーターで宇宙飛行士のふりをしました。  
-😊 The museum is the most inspiring place.  
-博物館は最も刺激的な場所です。  
-🔭 If I go again, I will explore the planetarium.  
-また行けば、私はプラネタリウムを探検します。  
-🧬 I will research more about space tomorrow.  
-私は明日、宇宙についてもっと研究するつもりです。  
-😄 The day was the most enlightening one.  
-その日は最も啓発的な日でした。  
-🚀 I watched a documentary yesterday.  
-私は昨日、ドキュメンタリーを見ました。  
-😊 I love science and discovery.  
-私は科学と発見が大好きです。  
-🔭 Did you visit the science museum?  
-あなたは科学博物館を訪れましたか？  
-🧬 Did you see exhibits about DNA?  
-あなたはDNAについての展示を見ましたか？  
-😄 Were the displays fun?  
-展示は楽しかったですか？  
-🚀 Did you pretend to be an astronaut?  
-あなたは宇宙飛行士のふりをしましたか？  
-😊 Is the museum inspiring?  
-博物館は刺激的ですか？  
-🔭 What will you do if you go again?  
-また行けば何をしますか？  
-🧬 What will you research tomorrow?  
-あなたは明日何を研究するつもりですか？  
-😄 Why was the day enlightening?  
-なぜその日は啓発的でしたか？  
-🚀 What did you watch yesterday?  
-あなたは昨日何を見ましたか？  
-😊 Why do you love science?  
-なぜあなたは科学が好きですか？`
-},
+    // Story 48 - A Day Learning to Skate
+    {
+        title: "48. A Day Learning to Skate",
+        content: `⛸️ I learned to skate at the rink yesterday.  
+私は昨日、スケートリンクでスケートを学びました。  
+🏒 My friend skated faster than me.  
+私の友達は私より速く滑りました。  
+😄 I fell but laughed louder than anyone.  
+私は転びましたが、誰よりも大声で笑いました。  
+❄️ The ice was colder than I expected.  
+氷は思っていたより冷たかったです。  
+😊 Skating is the most thrilling sport.  
+スケートは最もスリリングなスポーツです。  
+⛸️ If I practice, I can skate better.  
+練習すれば、私はもっと上手に滑れます。  
+🏒 I will try hockey next week.  
+私は来週、ホッケーを試すつもりです。  
+😄 The day was the most exciting one.  
+その日は最もわくわくする日でした。  
+❄️ I wore a warm jacket yesterday.  
+私は昨日、暖かいジャケットを着ました。  
+😊 I love skating with friends.  
+私は友達とスケートするのが大好きです。  
+⛸️ Have you tried ice skating?  
+アイススケートを試したことがありますか？  
+🏒 Do you like fast sports?  
+速いスポーツは好きですか？  
+😄 Do you laugh when you fall?  
+転んだときに笑いますか？  
+❄️ Do you enjoy cold places?  
+寒い場所は好きですか？  
+😊 Is skating thrilling for you?  
+スケートはスリリングですか？  
+⛸️ What would you practice to get better?  
+上達するために何を練習しますか？  
+🏒 Would you try a new sport like hockey?  
+ホッケーのような新しいスポーツを試しますか？  
+😄 What makes a day exciting for you?  
+どんな日がわくわくしますか？  
+❄️ Have you worn warm clothes recently?  
+最近暖かい服を着ましたか？  
+😊 Why do you like skating with friends?  
+友達とスケートするのはなぜ好きですか？`
+    }
 ];
