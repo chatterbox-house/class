@@ -1078,5 +1078,1084 @@ const eikenpre2plus = [
 最後にどこで勉強しましたか？  
 📝 How do libraries help you?  
 図書館はどうやってあなたを助けますか？`
+    },
+    // Story 25 - A School Debate
+    {
+        title: "25. A School Debate",
+        content: `🗣️ I joined a school debate last Friday.  
+私は先週の金曜日、学校の討論に参加しました。  
+📢 The topic, which was about technology, was exciting.  
+テクノロジーについてのトピックは興奮しました。  
+😄 I had practiced arguments before the event.  
+私はイベントの前に、議論を練習していました。  
+🗳️ If I prepare well, I can win next time.  
+よく準備すれば、私は次回勝てます。  
+🎤 Speeches are given by students confidently.  
+スピーチは学生によって自信を持って行われます。  
+🗣️ The room, which is large, was full.  
+大きな部屋は満員でした。  
+📢 I will research more facts tomorrow.  
+私は明日、もっと事実を調べるつもりです。  
+😊 My teacher praised my clear points.  
+私の先生は私の明確なポイントを褒めました。  
+🗳️ I argued about social media yesterday.  
+私は昨日、ソーシャルメディアについて議論しました。  
+🎤 Debates improve speaking skills.  
+討論は話すスキルを向上させます。  
+🗣️ Do you join school debates?  
+学校の討論に参加しますか？  
+📢 What topics excite you?  
+どんなトピックがあなたを興奮させますか？  
+😄 Have you practiced for a debate?  
+討論のために練習したことがありますか？  
+🗳️ Would you win a debate?  
+討論に勝ちますか？  
+🎤 Do you speak confidently?  
+自信を持って話しますか？  
+🗣️ Are large rooms exciting?  
+大きな部屋は興奮しますか？  
+📢 What will you research next?  
+次に何を調べますか？  
+😊 Has a teacher praised you?  
+先生があなたを褒めましたか？  
+🗳️ What did you argue about recently?  
+最近何について議論しましたか？  
+🎤 How do debates help you?  
+討論はどうやってあなたを助けますか？`
+    },
+
+    // Story 26 - A Cultural Festival
+    {
+        title: "26. A Cultural Festival",
+        content: `🎎 My town held a cultural festival last month.  
+私の町は先月、文化祭を開催しました。  
+🥁 The music, which was traditional, was lively.  
+伝統的な音楽は活気がありました。  
+😄 I had learned a dance before the festival.  
+私は祭りの前に、ダンスを学んでいました。  
+🎭 If I join again, I can perform on stage.  
+また参加すれば、私は舞台で公演できます。  
+🏮 Costumes are worn by everyone happily.  
+衣装はみんなによって楽しく着られます。  
+🎎 The event, which is annual, attracts tourists.  
+毎年開催されるイベントは観光客を引きつけます。  
+🥁 I will play the drum next year.  
+私は来年、太鼓を演奏するつもりです。  
+😊 My friends enjoyed the food stalls.  
+私の友達は屋台の食べ物を楽しみました。  
+🎭 I wore a kimono yesterday.  
+私は昨日、着物を着ました。  
+🏮 Festivals teach us culture.  
+祭りは私たちに文化を教えます。  
+🎎 Do you go to cultural festivals?  
+文化祭に行きますか？  
+🥁 What traditional music do you like?  
+どんな伝統的な音楽が好きですか？  
+😄 Have you learned a dance?  
+ダンスを学んだことがありますか？  
+🎭 Would you perform on stage?  
+舞台で公演しますか？  
+🏮 Do people wear costumes at festivals?  
+祭りで人が衣装を着ますか？  
+🎎 Are annual events popular?  
+毎年開催されるイベントは人気ですか？  
+🥁 What will you play next?  
+次に何を演奏しますか？  
+😊 What food do you enjoy at festivals?  
+祭りでどんな食べ物を楽しみますか？  
+🎭 What did you wear recently?  
+最近何を着ましたか？  
+🏮 How do festivals teach culture?  
+祭りはどうやって文化を教えますか？`
+    },
+
+    // Story 27 - A Gardening Day
+    {
+        title: "27. A Gardening Day",
+        content: `🌱 I helped in the garden with my dad last weekend.  
+私は先週末、父と庭で手伝いました。  
+🌷 The flowers, which are colorful, grew fast.  
+カラフルな花は早く育ちました。  
+😄 I had planted seeds before this day.  
+私はこの日の前に、種を植えていました。  
+🌿 If I water daily, I can grow vegetables.  
+毎日水をやれば、私は野菜を育てられます。  
+🥕 Plants are cared for by us carefully.  
+植物は私たちによって慎重に世話されます。  
+🌱 The garden, which is small, looks nice.  
+小さな庭は素敵に見えます。  
+🌷 I will buy a new pot tomorrow.  
+私は明日、新しい鉢を買うつもりです。  
+😊 My mom admired the roses.  
+私の母はバラを称賛しました。  
+🌿 I weeded the soil yesterday.  
+私は昨日、土の雑草を取りました。  
+🥕 Gardening is relaxing.  
+ガーデニングはリラックスできます。  
+🌱 Do you help in a garden?  
+庭で手伝いますか？  
+🌷 What colorful flowers do you like?  
+どんなカラフルな花が好きですか？  
+😄 Have you planted seeds?  
+種を植えたことがありますか？  
+🌿 Would you grow vegetables?  
+野菜を育てますか？  
+🥕 Do you care for plants?  
+植物を世話しますか？  
+🌱 Are small gardens nice?  
+小さな庭は素敵ですか？  
+🌷 What will you buy for gardening?  
+ガーデニングに何を買いますか？  
+😊 Who admires your work?  
+誰があなたの仕事を称賛しますか？  
+🌿 What did you do in a garden?  
+庭で何をしましたか？  
+🥕 Why is gardening relaxing?  
+ガーデニングはなぜリラックスできますか？`
+    },
+
+    // Story 28 - A Museum Visit
+    {
+        title: "28. A Museum Visit",
+        content: `🏛️ I visited a history museum with my class last week.  
+私は先週、クラスと歴史博物館を訪れました。  
+🗿 The artifacts, which are old, were fascinating.  
+古い遺物は魅力的でした。  
+😄 I had read about history before going.  
+私は行く前に、歴史について読んでいました。  
+📸 If I return, I can take better photos.  
+戻れば、私はもっと良い写真を撮れます。  
+🎨 Exhibits are explained by guides clearly.  
+展示はガイドによって明確に説明されます。  
+🏛️ The museum, which is big, is popular.  
+大きな博物館は人気があります。  
+🗿 I will study ancient Egypt next month.  
+私は来月、古代エジプトを勉強するつもりです。  
+😊 My friend liked the paintings best.  
+私の友達は絵画が一番好きでした。  
+📸 I saw a statue yesterday.  
+私は昨日、彫像を見ました。  
+🎨 Museums teach us history.  
+博物館は私たちに歴史を教えます。  
+🏛️ Do you visit museums?  
+博物館を訪れますか？  
+🗿 What old things fascinate you?  
+どんな古いものがあなたを魅了しますか？  
+😄 Have you read about history?  
+歴史について読んだことがありますか？  
+📸 Would you take photos in a museum?  
+博物館で写真を撮りますか？  
+🎨 Are exhibits explained to you?  
+展示があなたに説明されますか？  
+🏛️ Are big museums popular?  
+大きな博物館は人気ですか？  
+🗿 What will you study next?  
+次に何を勉強しますか？  
+😊 What do your friends like?  
+友達は何が好きですか？  
+📸 What did you see recently?  
+最近何を見ましたか？  
+🎨 How do museums teach history?  
+博物館はどうやって歴史を教えますか？`
+    },
+
+    // Story 29 - A Sports Practice
+    {
+        title: "29. A Sports Practice",
+        content: `🏀 I practiced basketball with my team last Tuesday.  
+私は先週の火曜日、チームとバスケットボールを練習しました。  
+🏅 The coach, who is experienced, gave tips.  
+経験豊富なコーチがヒントをくれました。  
+😄 I had shot baskets before joining the team.  
+私はチームに参加する前に、シュートを練習していました。  
+🏆 If I train hard, I can play in the match.  
+一生懸命練習すれば、私は試合に出られます。  
+🏀 The court is used by us every week.  
+コートは私たちによって毎週使われます。  
+🏅 The gym, which is modern, is spacious.  
+モダンな体育館は広々としています。  
+😊 My teammates cheered for my shot.  
+私のチームメイトは私のシュートを応援しました。  
+🏆 I will join a tournament next month.  
+私は来月、トーナメントに参加するつもりです。  
+😄 I scored a point yesterday.  
+私は昨日、1点得点しました。  
+🏀 Sports build strength.  
+スポーツは力を築きます。  
+🏀 Do you practice sports?  
+スポーツを練習しますか？  
+🏅 Who gives you tips?  
+誰があなたにヒントをくれますか？  
+😄 Have you shot baskets?  
+バスケットをシュートしたことがありますか？  
+🏆 Would you play in a match?  
+試合に出ますか？  
+🏀 Do you use a court?  
+コートを使いますか？  
+🏅 Are modern gyms nice?  
+モダンな体育館は良いですか？  
+😊 Who cheers for you?  
+誰があなたを応援しますか？  
+🏆 What will you join next?  
+次に何に参加しますか？  
+😄 What did you score recently?  
+最近何を得点しましたか？  
+🏀 How do sports build strength?  
+スポーツはどうやって力を築きますか？`
+    },
+
+    // Story 30 - A Family Trip
+    {
+        title: "30. A Family Trip",
+        content: `🚌 My family went on a trip to Kyoto last summer.  
+私の家族は去年の夏、京都に旅行に行きました。  
+🏯 The temple, which is ancient, was beautiful.  
+古い寺は美しかったです。  
+😄 I had planned our route before leaving.  
+私は出発する前に、ルートを計画していました。  
+📸 If I visit again, I can take more photos.  
+また訪れれば、私はもっと写真を撮れます。  
+🌸 The city is loved by tourists worldwide.  
+その都市は世界中の観光客に愛されています。  
+🚌 The guide, who was kind, explained history.  
+親切なガイドが歴史を説明しました。  
+🏯 I will explore more temples next time.  
+私は次回、もっと寺を探検するつもりです。  
+😊 My sister bought a souvenir.  
+私の妹はお土産を買いました。  
+📸 I photographed a garden yesterday.  
+私は昨日、庭を撮影しました。  
+🌸 Trips create memories.  
+旅行は思い出を作ります。  
+🚌 Do you go on family trips?  
+家族旅行に行きますか？  
+🏯 What ancient places do you like?  
+どんな古い場所が好きですか？  
+😄 Have you planned a trip?  
+旅行を計画したことがありますか？  
+📸 Would you take photos on a trip?  
+旅行で写真を撮りますか？  
+🌸 Is your city loved by tourists?  
+あなたの都市は観光客に愛されていますか？  
+🚌 Who explains history to you?  
+誰があなたに歴史を説明しますか？  
+🏯 What will you explore next?  
+次に何を探検しますか？  
+😊 Who buys souvenirs?  
+誰がお土産を買いますか？  
+📸 What did you photograph last?  
+最後に何を撮影しましたか？  
+🌸 How do trips create memories?  
+旅行はどうやって思い出を作りますか？`
+    },
+
+    // Story 31 - A Writing Club
+    {
+        title: "31. A Writing Club",
+        content: `✍️ I joined a writing club at school last semester.  
+私は先学期、学校のライティングクラブに参加しました。  
+📖 The teacher, who is creative, inspires us.  
+創造的な先生は私たちを刺激します。  
+😄 I had written stories before joining.  
+私は参加する前に、物語を書いていました。  
+📝 If I write more, I can publish a story.  
+もっと書けば、私は物語を出版できます。  
+📚 Poems are shared by members weekly.  
+詩はメンバーによって毎週共有されます。  
+✍️ The club, which is small, is supportive.  
+小さなクラブは支え合っています。  
+📖 I will write a novel next year.  
+私は来年、小説を書くつもりです。  
+😊 My friends liked my short story.  
+私の友達は私の短い物語を気に入りました。  
+📝 I edited a draft yesterday.  
+私は昨日、原稿を編集しました。  
+📚 Writing improves creativity.  
+書くことは創造性を向上させます。  
+✍️ Are you in a writing club?  
+ライティングクラブに入っていますか？  
+📖 Who inspires your creativity?  
+誰があなたの創造性を刺激しますか？  
+😄 Have you written stories?  
+物語を書いたことがありますか？  
+📝 Would you publish something?  
+何か出版しますか？  
+📚 Do you share poems?  
+詩を共有しますか？  
+✍️ Are small clubs supportive?  
+小さなクラブは支え合っていますか？  
+📖 What will you write next?  
+次に何を書きますか？  
+😊 Who likes your stories?  
+誰があなたの物語を気に入りますか？  
+📝 What did you edit recently?  
+最近何を編集しましたか？  
+📚 How does writing help creativity?  
+書くことはどうやって創造性を助けますか？`
+    },
+
+    // Story 32 - A Cooking Competition
+    {
+        title: "32. A Cooking Competition",
+        content: `🍴 I entered a cooking competition last Saturday.  
+私は先週の土曜日、料理コンテストに参加しました。  
+🍳 The dish, which was spicy, impressed judges.  
+スパイシーな料理は審査員を感銘させました。  
+😄 I had practiced recipes before the event.  
+私はイベントの前に、レシピを練習していました。  
+🏆 If I win, I can get a cookbook.  
+勝てば、私は料理本を得られます。  
+🔪 Ingredients are prepared by us carefully.  
+材料は私たちによって慎重に準備されます。  
+🍴 The kitchen, which is big, was busy.  
+大きなキッチンは忙しかったです。  
+🍳 I will try baking next time.  
+私は次回、ベーキングを試すつもりです。  
+😊 My team supported me a lot.  
+私のチームは私をたくさん支えてくれました。  
+🏆 I cooked curry yesterday.  
+私は昨日、カレーを料理しました。  
+🔪 Cooking contests are exciting.  
+料理コンテストは興奮します。  
+🍴 Do you enter cooking contests?  
+料理コンテストに参加しますか？  
+🍳 What spicy foods do you like?  
+どんなスパイシーな食べ物が好きですか？  
+😄 Have you practiced recipes?  
+レシピを練習したことがありますか？  
+🏆 What would you do if you won?  
+勝ったら何をしますか？  
+🔪 Do you prepare ingredients?  
+材料を準備しますか？  
+🍴 Are big kitchens busy?  
+大きなキッチンは忙しいですか？  
+🍳 What will you cook next?  
+次に何を料理しますか？  
+😊 Who supports you in contests?  
+コンテストで誰があなたを支えますか？  
+🏆 What did you cook recently?  
+最近何を料理しましたか？  
+🔪 Why are cooking contests exciting?  
+料理コンテストはなぜ興奮しますか？`
+    },
+
+    // Story 33 - A School Play
+    {
+        title: "33. A School Play",
+        content: `🎭 I acted in a school play last month.  
+私は先月、学校の劇で演じました。  
+🎬 The script, which was funny, was easy to learn.  
+面白かった脚本は学びやすかったです。  
+😄 I had rehearsed lines before the show.  
+私はショーの前に、台詞をリハーサルしていました。  
+👏 If I perform well, I can act again.  
+うまく演じれば、私はまた演じられます。  
+🎤 Lines are spoken by us clearly.  
+台詞は私たちによって明確に話されます。  
+🎭 The stage, which is new, looked great.  
+新しいステージは素晴らしく見えました。  
+🎬 I will try directing next year.  
+私は来年、監督を試すつもりです。  
+😊 My parents clapped for me loudly.  
+私の両親は私に大声で拍手しました。  
+👏 I played a hero yesterday.  
+私は昨日、ヒーローを演じました。  
+🎤 Plays teach confidence.  
+劇は自信を教えます。  
+🎭 Do you act in school plays?  
+学校の劇で演じますか？  
+🎬 What funny scripts do you like?  
+どんな面白い脚本が好きですか？  
+😄 Have you rehearsed anything?  
+何かリハーサルしたことがありますか？  
+👏 Would you act again?  
+また演じますか？  
+🎤 Do you speak clearly?  
+明確に話しますか？  
+🎭 Are new stages exciting?  
+新しいステージは興奮しますか？  
+🎬 What will you try next?  
+次に何を試しますか？  
+😊 Who claps for you?  
+誰があなたに拍手しますか？  
+👏 What role did you play?  
+どんな役割を演じましたか？  
+🎤 How do plays teach confidence?  
+劇はどうやって自信を教えますか？`
+    },
+
+    // Story 34 - A Charity Event
+    {
+        title: "34. A Charity Event",
+        content: `🤝 I helped at a charity event last Sunday.  
+私は先週の日曜日、チャリティーイベントで手伝いました。  
+🎁 The gifts, which were donated, helped many.  
+寄付された贈り物は多くの人を助けました。  
+😄 I had volunteered before this event.  
+私はこのイベントの前に、ボランティアをしていました。  
+💝 If I join again, I can raise more funds.  
+また参加すれば、私はもっと資金を集められます。  
+🏃 The race was run by students happily.  
+レースは学生によって楽しく走られました。  
+🤝 The park, which is local, was crowded.  
+地元の公園は混雑していました。  
+🎁 I will organize an event next year.  
+私は来年、イベントを企画するつもりです。  
+😊 My teacher thanked us warmly.  
+私の先生は私たちに温かく感謝しました。  
+💝 I sold raffle tickets yesterday.  
+私は昨日、くじのチケットを売りました。  
+🏃 Charity events help communities.  
+チャリティーイベントはコミュニティを助けます。  
+🤝 Do you help at charity events?  
+チャリティーイベントで手伝いますか？  
+🎁 What donated gifts do you know?  
+どんな寄付された贈り物を知っていますか？  
+😄 Have you volunteered before?  
+以前ボランティアをしたことがありますか？  
+💝 Would you raise funds?  
+資金を集めますか？  
+🏃 Do students run races at events?  
+イベントで学生がレースを走りますか？  
+🤝 Are local parks crowded?  
+地元の公園は混雑していますか？  
+🎁 What will you organize next?  
+次に何を企画しますか？  
+😊 Who thanks you for helping?  
+誰があなたに手伝ったことに感謝しますか？  
+💝 What did you sell recently?  
+最近何を売りましたか？  
+🏃 How do charity events help?  
+チャリティーイベントはどうやって助けますか？`
+    },
+
+    // Story 35 - A Tech Fair
+    {
+        title: "35. A Tech Fair",
+        content: `💻 I attended a tech fair last weekend.  
+私は先週末、技術フェアに参加しました。  
+🤖 The robots, which were advanced, amazed me.  
+先進的なロボットは私を驚かせました。  
+😄 I had tried coding before the fair.  
+私はフェアの前に、コーディングを試していました。  
+📱 If I learn more, I can build a robot.  
+もっと学べば、私はロボットを作れます。  
+🔌 Gadgets are shown by companies proudly.  
+ガジェットは企業によって誇らしげに展示されます。  
+💻 The hall, which is huge, was exciting.  
+巨大なホールは興奮しました。  
+🤖 I will study AI next semester.  
+私は次学期、AIを勉強するつもりです。  
+😊 My friends liked the drones.  
+私の友達はドローンが好きでした。  
+📱 I saw a smartwatch yesterday.  
+私は昨日、スマートウォッチを見ました。  
+🔌 Tech fairs inspire innovation.  
+技術フェアは革新を刺激します。  
+💻 Do you attend tech fairs?  
+技術フェアに参加しますか？  
+🤖 What advanced things amaze you?  
+どんな先進的なものがあなたを驚かせますか？  
+😄 Have you tried coding?  
+コーディングを試したことがありますか？  
+📱 Would you build a robot?  
+ロボットを作りますか？  
+🔌 Are gadgets shown at fairs?  
+フェアでガジェットが展示されますか？  
+💻 Are huge halls exciting?  
+巨大なホールは興奮しますか？  
+🤖 What will you study next?  
+次に何を勉強しますか？  
+😊 What do your friends like?  
+友達は何が好きですか？  
+📱 What did you see recently?  
+最近何を見ましたか？  
+🔌 How do tech fairs inspire you?  
+技術フェアはどうやってあなたを刺激しますか？`
+    },
+
+    // Story 36 - A Bike Ride
+    {
+        title: "36. A Bike Ride",
+        content: `🚴 I went on a bike ride with friends last Sunday.  
+私は先週の日曜日、友達と自転車に乗りました。  
+🌳 The path, which is scenic, was relaxing.  
+景色の良い道はリラックスできました。  
+😄 I had ridden a bike before this trip.  
+私はこの旅行の前に、自転車に乗っていました。  
+🚵 If I practice, I can ride faster.  
+練習すれば、私はもっと速く乗れます。  
+🏞️ The park is visited by cyclists daily.  
+公園は毎日サイクリストによって訪れられます。  
+🚴 The trail, which is long, was fun.  
+長いトレイルは楽しかったです。  
+🌳 I will explore a new path tomorrow.  
+私は明日、新しい道を探検するつもりです。  
+😊 My brother joined me happily.  
+私の兄は楽しく私に加わりました。  
+🚵 I fixed my bike yesterday.  
+私は昨日、自転車を修理しました。  
+🏞️ Bike rides are refreshing.  
+自転車は爽やかです。  
+🚴 Do you go on bike rides?  
+自転車に乗りますか？  
+🌳 What scenic places do you like?  
+どんな景色の良い場所が好きですか？  
+😄 Have you ridden a bike?  
+自転車に乗ったことがありますか？  
+🚵 Would you ride faster?  
+もっと速く乗りますか？  
+🏞️ Do cyclists visit your park?  
+サイクリストがあなたの公園を訪れますか？  
+🚴 Are long trails fun?  
+長いトレイルは楽しいですか？  
+🌳 What will you explore next?  
+次に何を探検しますか？  
+😊 Who joins you for fun?  
+誰があなたに楽しく加わりますか？  
+🚵 What did you fix recently?  
+最近何を修理しましたか？  
+🏞️ Why are bike rides refreshing?  
+自転車はなぜ爽やかですか？`
+    },
+
+    // Story 37 - A Science Class
+    {
+        title: "37. A Science Class",
+        content: `🔬 I attended a science class last Monday.  
+私は先週の月曜日、科学のクラスに参加しました。  
+🧪 The experiment, which was fun, taught us a lot.  
+楽しい実験は私たちに多くを教えてくれました。  
+😄 I had studied chemistry before this class.  
+私はこのクラスの前に、化学を勉強していました。  
+⚗️ If I focus, I can do better experiments.  
+集中すれば、私はもっと良い実験ができます。  
+📚 Lessons are taught by our teacher clearly.  
+授業は私たちの先生によって明確に教えられます。  
+🔬 The lab, which is new, is exciting.  
+新しい研究室は興奮します。  
+🧪 I will try physics next semester.  
+私は次学期、物理を試すつもりです。  
+😊 My classmates helped with the project.  
+私のクラスメイトはプロジェクトを助けてくれました。  
+⚗️ I mixed chemicals yesterday.  
+私は昨日、化学物質を混ぜました。  
+📚 Science classes spark curiosity.  
+科学のクラスは好奇心を刺激します。  
+🔬 Do you attend science classes?  
+科学のクラスに参加しますか？  
+🧪 What fun experiments do you know?  
+どんな楽しい実験を知っていますか？  
+😄 Have you studied chemistry?  
+化学を勉強したことがありますか？  
+⚗️ Would you do better experiments?  
+もっと良い実験をしますか？  
+📚 Are lessons taught clearly?  
+授業は明確に教えられますか？  
+🔬 Are new labs exciting?  
+新しい研究室は興奮しますか？  
+🧪 What will you try next?  
+次に何を試しますか？  
+😊 Who helps with your projects?  
+誰があなたのプロジェクトを助けますか？  
+⚗️ What did you mix recently?  
+最近何を混ぜましたか？  
+📚 How do science classes spark curiosity?  
+科学のクラスはどうやって好奇心を刺激しますか？`
+    },
+
+    // Story 38 - A Picnic Day
+    {
+        title: "38. A Picnic Day",
+        content: `🧺 I went on a picnic with friends last weekend.  
+私は先週末、友達とピクニックに行きました。  
+🌳 The park, which is green, was peaceful.  
+緑の公園は平和でした。  
+😄 I had packed sandwiches before leaving.  
+私は出発する前に、サンドイッチを詰めていました。  
+🍎 If I plan well, I can bring more food.  
+よく計画すれば、私はもっと食べ物を持って行けます。  
+🥪 Snacks are shared by us happily.  
+スナックは私たちによって楽しく共有されます。  
+🧺 The blanket, which is soft, was comfy.  
+柔らかい毛布は快適でした。  
+🌳 I will visit the park again tomorrow.  
+私は明日、また公園を訪れるつもりです。  
+😊 My sister played games with us.  
+私の妹は私たちとゲームをしました。  
+🍎 I ate an apple yesterday.  
+私は昨日、リンゴを食べました。  
+🥪 Picnics are relaxing.  
+ピクニックはリラックスできます。  
+🧺 Do you go on picnics?  
+ピクニックに行きますか？  
+🌳 What peaceful places do you like?  
+どんな平和な場所が好きですか？  
+😄 Have you packed food for a trip?  
+旅行に食べ物を詰めたことがありますか？  
+🍎 Would you bring more food?  
+もっと食べ物を持って行きますか？  
+🥪 Do you share snacks?  
+スナックを共有しますか？  
+🧺 Are soft blankets comfy?  
+柔らかい毛布は快適ですか？  
+🌳 When will you visit a park?  
+いつ公園を訪れますか？  
+😊 Who plays games with you?  
+誰があなたとゲームをしますか？  
+🍎 What did you eat recently?  
+最近何を食べましたか？  
+🥪 Why are picnics relaxing?  
+ピクニックはなぜリラックスできますか？`
+    },
+
+    // Story 39 - A Music Lesson
+    {
+        title: "39. A Music Lesson",
+        content: `🎹 I took a piano lesson last Thursday.  
+私は先週の木曜日、ピアノのレッスンを受けました。  
+🎶 The teacher, who is patient, helps me a lot.  
+我慢強い先生は私をとても助けてくれます。  
+😄 I had practiced scales before the lesson.  
+私はレッスンの前に、スケールを練習していました。  
+🎼 If I play daily, I can perform soon.  
+毎日弾けば、私はすぐに演奏できます。  
+🎵 Songs are taught by her clearly.  
+歌は彼女によって明確に教えられます。  
+🎹 The room, which is quiet, is perfect.  
+静かな部屋は完璧です。  
+🎶 I will learn a new song tomorrow.  
+私は明日、新しい歌を学ぶつもりです。  
+😊 My mom enjoyed my practice.  
+私の母は私の練習を楽しみました。  
+🎼 I played a tune yesterday.  
+私は昨日、曲を弾きました。  
+🎵 Music lessons inspire creativity.  
+音楽のレッスンは創造性を刺激します。  
+🎹 Do you take music lessons?  
+音楽のレッスンを受けますか？  
+🎶 Who helps you learn music?  
+誰があなたに音楽を学ぶのを助けますか？  
+😄 Have you practiced scales?  
+スケールを練習したことがありますか？  
+🎼 Would you perform soon?  
+すぐに演奏しますか？  
+🎵 Are songs taught clearly?  
+歌は明確に教えられますか？  
+🎹 Are quiet rooms perfect?  
+静かな部屋は完璧ですか？  
+🎶 What will you learn next?  
+次に何を学びますか？  
+😊 Who enjoys your music?  
+誰があなたの音楽を楽しみますか？  
+🎼 What did you play recently?  
+最近何を弾きましたか？  
+🎵 How do music lessons inspire you?  
+音楽のレッスンはどうやってあなたを刺激しますか？`
+    },
+
+    // Story 40 - A Volunteer Project
+    {
+        title: "40. A Volunteer Project",
+        content: `🤝 I joined a volunteer project last month.  
+私は先月、ボランティアプロジェクトに参加しました。  
+🌍 The task, which was planting trees, was fun.  
+木を植えるタスクは楽しかったです。  
+😄 I had helped clean parks before this.  
+私はこれの前に、公園の清掃を手伝っていました。  
+🌳 If I volunteer again, I can lead a group.  
+またボランティアをすれば、私はグループをリードできます。  
+🌱 Trees are planted by us carefully.  
+木は私たちによって慎重に植えられます。  
+🤝 The park, which is local, looks better.  
+地元の公園はより良く見えます。  
+🌍 I will join a cleanup next week.  
+私は来週、清掃に参加するつもりです。  
+😊 My friends thanked me for helping.  
+私の友達は私に手伝ったことに感謝しました。  
+🌳 I dug holes yesterday.  
+私は昨日、穴を掘りました。  
+🌱 Volunteering helps nature.  
+ボランティアは自然を助けます。  
+🤝 Do you join volunteer projects?  
+ボランティアプロジェクトに参加しますか？  
+🌍 What fun tasks do you do?  
+どんな楽しいタスクをしますか？  
+😄 Have you cleaned parks?  
+公園を清掃したことがありますか？  
+🌳 Would you lead a group?  
+グループをリードしますか？  
+🌱 Do you plant trees?  
+木を植えますか？  
+🤝 Does your park look better?  
+あなたの公園はより良く見えますか？  
+🌍 What will you join next?  
+次に何に参加しますか？  
+😊 Who thanks you for volunteering?  
+誰があなたにボランティアに感謝しますか？  
+🌳 What did you do recently?  
+最近何をしましたか？  
+🌱 How does volunteering help nature?  
+ボランティアはどうやって自然を助けますか？`
+    },
+
+    // Story 41 - A School Trip
+    {
+        title: "41. A School Trip",
+        content: `🚌 My class went on a school trip last week.  
+私のクラスは先週、学校の旅行に行きました。  
+🏞️ The lake, which is clear, was stunning.  
+澄んだ湖は素晴らしかったです。  
+😄 I had packed a bag before leaving.  
+私は出発する前に、袋を詰めていました。  
+📸 If I go again, I can take better photos.  
+また行けば、私はもっと良い写真を撮れます。  
+🌲 The area is visited by students yearly.  
+そのエリアは毎年学生によって訪れられます。  
+🚌 The guide, who was funny, told stories.  
+面白いガイドは物語を話しました。  
+🏞️ I will hike there next time.  
+私は次回、そこをハイキングするつもりです。  
+😊 My friend enjoyed the boat ride.  
+私の友達はボートライドを楽しみました。  
+📸 I photographed birds yesterday.  
+私は昨日、鳥を撮影しました。  
+🌲 School trips are adventurous.  
+学校の旅行は冒険的です。  
+🚌 Do you go on school trips?  
+学校の旅行に行きますか？  
+🏞️ What stunning places do you know?  
+どんな素晴らしい場所を知っていますか？  
+😄 Have you packed for a trip?  
+旅行に詰めたことがありますか？  
+📸 Would you take better photos?  
+もっと良い写真を撮りますか？  
+🌲 Do students visit your area?  
+学生があなたのエリアを訪れますか？  
+🚌 Who tells funny stories?  
+誰が面白い物語を話しますか？  
+🏞️ What will you hike next?  
+次に何をハイキングしますか？  
+😊 What do your friends enjoy?  
+友達は何を楽しみますか？  
+📸 What did you photograph last?  
+最後に何を撮影しましたか？  
+🌲 Why are school trips adventurous?  
+学校の旅行はなぜ冒険的ですか？`
+    },
+
+    // Story 42 - A Craft Workshop
+    {
+        title: "42. A Craft Workshop",
+        content: `✂️ I joined a craft workshop last Saturday.  
+私は先週の土曜日、クラフトワークショップに参加しました。  
+🎨 The project, which was pottery, was fun.  
+陶芸のプロジェクトは楽しかったです。  
+😄 I had made bracelets before this.  
+私はこれの前に、ブレスレットを作っていました。  
+🖌️ If I practice, I can sell my crafts.  
+練習すれば、私はクラフトを売れます。  
+🎁 Pots are created by us carefully.  
+壺は私たちによって慎重に作られます。  
+✂️ The studio, which is cozy, inspired me.  
+居心地の良いスタジオは私を刺激しました。  
+🎨 I will try painting next time.  
+私は次回、絵を描くつもりです。  
+😊 My teacher liked my clay vase.  
+私の先生は私の粘土の花瓶を気に入りました。  
+🖌️ I shaped clay yesterday.  
+私は昨日、粘土を形作りました。  
+🎁 Crafts show creativity.  
+クラフトは創造性を示します。  
+✂️ Do you join craft workshops?  
+クラフトワークショップに参加しますか？  
+🎨 What fun projects do you do?  
+どんな楽しいプロジェクトをしますか？  
+😄 Have you made bracelets?  
+ブレスレットを作ったことがありますか？  
+🖌️ Would you sell crafts?  
+クラフトを売りますか？  
+🎁 Do you create things carefully?  
+物を慎重に作りますか？  
+✂️ Are cozy studios inspiring?  
+居心地の良いスタジオは刺激的ですか？  
+🎨 What will you try next?  
+次に何を試しますか？  
+😊 Who likes your crafts?  
+誰があなたのクラフトを気に入りますか？  
+🖌️ What did you shape recently?  
+最近何を形作りましたか？  
+🎁 How do crafts show creativity?  
+クラフトはどうやって創造性を示しますか？`
+    },
+
+    // Story 43 - A Movie Club
+    {
+        title: "43. A Movie Club",
+        content: `🎬 I joined a movie club at school last month.  
+私は先月、学校の映画クラブに参加しました。  
+📽️ The films, which are classic, are interesting.  
+クラシックな映画は面白いです。  
+😄 I had watched dramas before joining.  
+私は参加する前に、ドラマを見ていました。  
+🎥 If I attend regularly, I can suggest films.  
+定期的に参加すれば、私は映画を提案できます。  
+📺 Movies are discussed by us weekly.  
+映画は私たちによって毎週議論されます。  
+🎬 The room, which is small, is cozy.  
+小さな部屋は居心地が良いです。  
+📽️ I will watch a comedy tomorrow.  
+私は明日、コメディを見るつもりです。  
+😊 My friends liked my film choice.  
+私の友達は私の映画の選択を気に入りました。  
+🎥 I reviewed a movie yesterday.  
+私は昨日、映画をレビューしました。  
+📺 Movie clubs are fun.  
+映画クラブは楽しいです。  
+🎬 Are you in a movie club?  
+映画クラブに入っていますか？  
+📽️ What classic films do you like?  
+どんなクラシックな映画が好きですか？  
+😄 Have you watched dramas?  
+ドラマを見たことがありますか？  
+🎥 Would you suggest films?  
+映画を提案しますか？  
+📺 Do you discuss movies?  
+映画を議論しますか？  
+🎬 Are small rooms cozy?  
+小さな部屋は居心地が良いですか？  
+📽️ What will you watch next?  
+次に何を見ますか？  
+😊 Who likes your choices?  
+誰があなたの選択を気に入りますか？  
+🎥 What did you review recently?  
+最近何をレビューしましたか？  
+📺 Why are movie clubs fun?  
+映画クラブはなぜ楽しいですか？`
+    },
+
+    // Story 44 - A Fitness Class
+    {
+        title: "44. A Fitness Class",
+        content: `🏋️ I joined a fitness class last semester.  
+私は先学期、フィットネスクラスに参加しました。  
+💪 The trainer, who is energetic, motivates us.  
+エネルギッシュなトレーナーは私たちをやる気にさせます。  
+😄 I had exercised at home before joining.  
+私は参加する前に、家で運動していました。  
+🏃 If I train more, I can run faster.  
+もっと訓練すれば、私はもっと速く走れます。  
+🏋️ Workouts are led by her weekly.  
+ワークアウトは彼女によって毎週指導されます。  
+💪 The gym, which is modern, is spacious.  
+モダンなジムは広々としています。  
+😊 My classmates cheered my progress.  
+私のクラスメイトは私の進歩を応援しました。  
+🏃 I will try yoga next month.  
+私は来月、ヨガを試すつもりです。  
+😄 I lifted weights yesterday.  
+私は昨日、ウェイトを持ち上げました。  
+🏋️ Fitness classes build strength.  
+フィットネスクラスは力を築きます。  
+🏋️ Do you join fitness classes?  
+フィットネスクラスに参加しますか？  
+💪 Who motivates you?  
+誰があなたをやる気にさせますか？  
+😄 Have you exercised at home?  
+家で運動したことがありますか？  
+🏃 Would you run faster?  
+もっと速く走りますか？  
+🏋️ Are workouts led at your gym?  
+あなたのジムでワークアウトが指導されますか？  
+💪 Are modern gyms spacious?  
+モダンなジムは広々としていますか？  
+😊 Who cheers your progress?  
+誰があなたの進歩を応援しますか？  
+🏃 What will you try next?  
+次に何を試しますか？  
+😄 What did you lift recently?  
+最近何を持ち上げましたか？  
+🏋️ How do fitness classes build strength?  
+フィットネスクラスはどうやって力を築きますか？`
+    },
+
+    // Story 45 - A Book Club
+    {
+        title: "45. A Book Club",
+        content: `📚 I joined a book club last month.  
+私は先月、ブッククラブに参加しました。  
+📖 The novel, which was exciting, was long.  
+興奮する小説は長かったです。  
+😄 I had read mysteries before joining.  
+私は参加する前に、ミステリーを読んでいました。  
+📝 If I read more, I can discuss better.  
+もっと読めば、私はもっと良く議論できます。  
+📚 Books are chosen by members monthly.  
+本はメンバーによって毎月選ばれます。  
+📖 The club, which is small, is friendly.  
+小さなクラブは友好的です。  
+😊 My friend liked my book ideas.  
+私の友達は私の本のアイデアを気に入りました。  
+📝 I will finish a chapter tomorrow.  
+私は明日、章を終えるつもりです。  
+😄 I shared a review yesterday.  
+私は昨日、レビューを共有しました。  
+📚 Book clubs encourage reading.  
+ブッククラブは読書を奨励します。  
+📚 Are you in a book club?  
+ブッククラブに入っていますか？  
+📖 What exciting novels do you read?  
+どんな興奮する小説を読みますか？  
+😄 Have you read mysteries?  
+ミステリーを読んだことがありますか？  
+📝 Would you discuss books?  
+本を議論しますか？  
+📚 Do members choose books?  
+メンバーが本を選びますか？  
+📖 Are small clubs friendly?  
+小さなクラブは友好的ですか？  
+😊 Who likes your book ideas?  
+誰があなたの本のアイデアを気に入りますか？  
+📝 What will you finish next?  
+次に何を終えますか？  
+😄 What did you share recently?  
+最近何を共有しましたか？  
+📚 How do book clubs encourage reading?  
+ブッククラブはどうやって読書を奨励しますか？`
+    },
+
+    // Story 46 - A School Concert
+    {
+        title: "46. A School Concert",
+        content: `🎵 I performed in a school concert last Friday.  
+私は先週の金曜日、学校のコンサートで演奏しました。  
+🎤 The choir, which is talented, sang beautifully.  
+才能ある合唱団は美しく歌いました。  
+😄 I had practiced songs before the event.  
+私はイベントの前に、歌を練習していました。  
+🎶 If I sing well, I can join the solo.  
+うまく歌えば、私はソロに参加できます。  
+🎼 Music is performed by us proudly.  
+音楽は私たちによって誇らしげに演奏されます。  
+🎵 The hall, which is big, was full.  
+大きなホールは満員でした。  
+🎤 I will learn a new song tomorrow.  
+私は明日、新しい歌を学ぶつもりです。  
+😊 My parents clapped for me.  
+私の両親は私に拍手しました。  
+🎶 I sang a pop song yesterday.  
+私は昨日、ポップソングを歌いました。  
+🎼 Concerts show talent.  
+コンサートは才能を示します。  
+🎵 Do you perform in concerts?  
+コンサートで演奏しますか？  
+🎤 What talented groups do you know?  
+どんな才能あるグループを知っていますか？  
+😄 Have you practiced songs?  
+歌を練習したことがありますか？  
+🎶 Would you join a solo?  
+ソロに参加しますか？  
+🎼 Do you perform proudly?  
+誇らしげに演奏しますか？  
+🎵 Are big halls exciting?  
+大きなホールは興奮しますか？  
+🎤 What will you learn next?  
+次に何を学びますか？  
+😊 Who claps for you?  
+誰があなたに拍手しますか？  
+🎶 What did you sing recently?  
+最近何を歌いましたか？  
+🎼 How do concerts show talent?  
+コンサートはどうやって才能を示しますか？`
+    },
+
+    // Story 47 - A Hiking Club
+    {
+        title: "47. A Hiking Club",
+        content: `🥾 I joined a hiking club last semester.  
+私は先学期、ハイキングクラブに参加しました。  
+⛰️ The trails, which are scenic, are challenging.  
+景色の良いトレイルは挑戦的です。  
+😄 I had hiked mountains before joining.  
+私は参加する前に、山をハイキングしていました。  
+🌲 If I train more, I can lead a hike.  
+もっと訓練すれば、私はハイキングをリードできます。  
+🏞️ Paths are explored by us weekly.  
+道は私たちによって毎週探検されます。  
+🥾 The club, which is active, is fun.  
+活動的なクラブは楽しいです。  
+⛰️ I will climb a new peak next month.  
+私は来月、新しい頂上を登るつもりです。  
+😊 My friends enjoyed the views.  
+私の友達は景色を楽しみました。  
+🌲 I walked a trail yesterday.  
+私は昨日、トレイルを歩きました。  
+🏞️ Hiking clubs promote fitness.  
+ハイキングクラブはフィットネスを促進します。  
+🥾 Are you in a hiking club?  
+ハイキングクラブに入っていますか？  
+⛰️ What scenic trails do you know?  
+どんな景色の良いトレイルを知っていますか？  
+😄 Have you hiked mountains?  
+山をハイキングしたことがありますか？  
+🌲 Would you lead a hike?  
+ハイキングをリードしますか？  
+🏞️ Do you explore paths?  
+道を探検しますか？  
+🥾 Are active clubs fun?  
+活動的なクラブは楽しいですか？  
+⛰️ What will you climb next?  
+次に何を登りますか？  
+😊 Who enjoys views with you?  
+誰があなたと景色を楽しみますか？  
+🌲 What did you walk recently?  
+最近何を歩きましたか？  
+🏞️ How do hiking clubs promote fitness?  
+ハイキングクラブはどうやってフィットネスを促進しますか？`
+    },
+
+    // Story 48 - A Photography Club
+    {
+        title: "48. A Photography Club",
+        content: `📸 I joined a photography club last month.  
+私は先月、写真クラブに参加しました。  
+🌅 The photos, which are creative, inspire us.  
+創造的な写真は私たちを刺激します。  
+😄 I had taken pictures before joining.  
+私は参加する前に、写真を撮っていました。  
+📷 If I practice, I can win a contest.  
+練習すれば、私はコンテストに勝てます。  
+🎞️ Images are shared by members weekly.  
+画像はメンバーによって毎週共有されます。  
+📸 The club, which is small, is supportive.  
+小さなクラブは支え合っています。  
+🌅 I will photograph a festival tomorrow.  
+私は明日、祭りを撮影するつもりです。  
+😊 My teacher liked my sunset shot.  
+私の先生は私の夕日の写真を気に入りました。  
+📷 I edited a photo yesterday.  
+私は昨日、写真を編集しました。  
+🎞️ Photography clubs boost creativity.  
+写真クラブは創造性を高めます。  
+📸 Are you in a photography club?  
+写真クラブに入っていますか？  
+🌅 What creative photos do you like?  
+どんな創造的な写真が好きですか？  
+😄 Have you taken pictures?  
+写真を撮ったことがありますか？  
+📷 Would you win a contest?  
+コンテストに勝ちますか？  
+🎞️ Do you share images?  
+画像を共有しますか？  
+📸 Are small clubs supportive?  
+小さなクラブは支え合っていますか？  
+🌅 What will you photograph next?  
+次に何を撮影しますか？  
+😊 Who likes your photos?  
+誰があなたの写真を気に入りますか？  
+📷 What did you edit recently?  
+最近何を編集しましたか？  
+🎞️ How do photography clubs boost creativity?  
+写真クラブはどうやって創造性を高めますか？`
     }
 ];
