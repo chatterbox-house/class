@@ -1,5 +1,4 @@
 // eikenpre2.js - Eiken 2 Stories
-
 const eiken2 = [
     // Story 1 - A University Orientation
     {
@@ -221,4 +220,180 @@ const eiken2 = [
 💾 How do workshops encourage innovation?  
 ワークショップはどうやって革新を奨励しますか？`
     },
+    // Story 6 - A Career Fair
+    {
+        title: "6. A Career Fair",
+        content: `💼 I visited a career fair at school last week.  
+先週、学校でキャリアフェアを訪れました。  
+📋 The booths, which were informative, attracted students.  
+有益なブースは学生を引きつけました。  
+😄 I had prepared questions before attending.  
+参加する前に質問を準備していました。  
+🤝 If I network well, I might find a job.  
+うまくネットワーキングすれば、仕事が見つかるかもしれません。  
+📝 Resumes were reviewed by professionals there.  
+履歴書はそこで専門家によってレビューされました。  
+💼 The hall, which was large, was crowded.  
+大きなホールは混雑していました。  
+📋 I will apply for an internship tomorrow.  
+明日、インターンシップに応募するつもりです。  
+😊 My friend said I asked good questions.  
+友達は私が良い質問をしたと言いました。  
+🤝 I met a recruiter yesterday.  
+昨日、リクルーターに会いました。  
+📝 Career fairs open opportunities.  
+キャリアフェアは機会を開きます。  
+💼 Do you visit career fairs?  
+キャリアフェアを訪れますか？  
+📋 What informative events do you know?  
+どんな有益なイベントを知っていますか？  
+😄 Have you prepared questions for events?  
+イベントに質問を準備したことがありますか？  
+🤝 Would you network to find a job?  
+仕事を見つけるためにネットワーキングしますか？  
+📝 Are resumes reviewed at fairs?  
+フェアで履歴書がレビューされますか？  
+💼 Are large halls crowded?  
+大きなホールは混雑していますか？  
+📋 What will you apply for next?  
+次に何に応募しますか？  
+😊 Who says you ask good questions?  
+誰があなたが良い質問をすると言いますか？  
+🤝 Who did you meet recently?  
+最近誰に会いましたか？  
+📝 How do career fairs open opportunities?  
+キャリアフェアはどうやって機会を開きますか？`
+    },
+    // Story 7 - A Fitness Challenge
+    {
+        title: "7. A Fitness Challenge",
+        content: `🏋️ I joined a fitness challenge last month.  
+先月、フィットネスチャレンジに参加しました。  
+💪 The trainer, who was motivating, pushed us.  
+やる気を起こさせるトレーナーは私たちを励ましました。  
+😄 I had exercised regularly before joining.  
+参加する前に定期的に運動していました。  
+🏃 If I train hard, I might run a marathon.  
+一生懸命訓練すれば、マラソンを走れるかもしれません。  
+🏋️ Workouts were led by experts daily.  
+ワークアウトは毎日専門家によって指導されました。  
+💪 The gym, which is modern, is spacious.  
+モダンなジムは広々としています。  
+😊 My friends said I got stronger.  
+友達は私が強くなったと言いました。  
+🏃 I will try yoga next week.  
+来週、ヨガを試すつもりです。  
+😄 I lifted weights yesterday.  
+昨日、ウェイトを持ち上げました。  
+🏋️ Fitness challenges improve health.  
+フィットネスチャレンジは健康を向上させます。  
+🏋️ Do you join fitness challenges?  
+フィットネスチャレンジに参加しますか？  
+💪 What motivates you to exercise?  
+何があなたに運動をやる気にさせますか？  
+😄 Have you exercised regularly?  
+定期的に運動したことがありますか？  
+🏃 Would you run a marathon?  
+マラソンを走りますか？  
+🏋️ Are workouts led by experts?  
+ワークアウトは専門家によって指導されますか？  
+💪 Are modern gyms spacious?  
+モダンなジムは広々としていますか？  
+😊 Who says you got stronger?  
+誰があなたが強くなったと言いますか？  
+🏃 What will you try next?  
+次に何を試しますか？  
+😄 What did you do for fitness recently?  
+最近フィットネスのために何をしましたか？  
+🏋️ How do challenges improve health?  
+チャレンジはどうやって健康を向上させますか？`
+    },
+    // Story 8 - A Recycling Project
+    {
+        title: "8. A Recycling Project",
+        content: `♻️ I joined a recycling project at school last week.  
+先週、学校でリサイクルプロジェクトに参加しました。  
+🌍 The bins, which were new, were colorful.  
+新しいビンはカラフルでした。  
+😄 I had sorted trash before this project.  
+このプロジェクトの前にゴミを分別していました。  
+🗑️ If I promote recycling, I might help the planet.  
+リサイクルを推進すれば、地球を助けられるかもしれません。  
+📦 Waste was collected by students daily.  
+廃棄物は学生によって毎日集められました。  
+♻️ The school, which is eco-friendly, supports us.  
+エコフレンドリーな学校は私たちをサポートします。  
+🌍 I will teach others about recycling tomorrow.  
+明日、他人にリサイクルについて教えるつもりです。  
+😊 My teacher said it’s important.  
+先生はそれが重要だと言いました。  
+🗑️ I recycled bottles yesterday.  
+昨日、ボトルをリサイクルしました。  
+📦 Recycling projects protect the environment.  
+リサイクルプロジェクトは環境を保護します。  
+♻️ Do you join recycling projects?  
+リサイクルプロジェクトに参加しますか？  
+🌍 What colorful things do you see?  
+どんなカラフルなものを見ますか？  
+😄 Have you sorted trash?  
+ゴミを分別したことがありますか？  
+🗑️ Would you promote recycling?  
+リサイクルを推進しますか？  
+📦 Is waste collected at your school?  
+学校で廃棄物が集められますか？  
+♻️ Are eco-friendly schools supportive?  
+エコフレンドリーな学校はサポートしますか？  
+🌍 What will you teach others?  
+他人に何を教えますか？  
+😊 Who says your work is important?  
+誰があなたの仕事が重要だと言いますか？  
+🗑️ What did you recycle recently?  
+最近何をリサイクルしましたか？  
+📦 How do projects protect the environment?  
+プロジェクトはどうやって環境を保護しますか？`
+    },
+    // Story 9 - A Theater Performance
+    {
+        title: "9. A Theater Performance",
+        content: `🎭 I performed in a theater play last month.  
+先月、劇場で劇を演じました。  
+🎬 The script, which was dramatic, was challenging.  
+ドラマチックな脚本は挑戦的でした。  
+😄 I had rehearsed lines before the show.  
+ショーの前に台詞をリハーサルしていました。  
+👏 If I act well, I might get a lead role.  
+うまく演じれば、主役を得られるかもしれません。  
+🎤 Scenes were performed by us confidently.  
+シーンは私たちによって自信を持って演じられました。  
+🎭 The stage, which is large, was impressive.  
+大きなステージは印象的でした。  
+🎬 I will audition for another play next week.  
+来週、別の劇にオーディションを受けるつもりです。  
+😊 My director said I was talented.  
+監督は私が才能があると言いました。  
+👏 I memorized lines yesterday.  
+昨日、台詞を覚えました。  
+🎤 Theater builds creativity.  
+劇場は創造性を築きます。  
+🎭 Do you perform in theater plays?  
+劇場で劇を演じますか？  
+🎬 What dramatic stories do you like?  
+どんなドラマチックな物語が好きですか？  
+😄 Have you rehearsed for a performance?  
+パフォーマンスのためにリハーサルしたことがありますか？  
+👏 Would you want a lead role?  
+主役をしたいですか？  
+🎤 Are scenes performed confidently?  
+シーンは自信を持って演じられますか？  
+🎭 Are large stages impressive?  
+大きなステージは印象的ですか？  
+🎬 Will you audition for something?  
+何かでオーディションを受けますか？  
+😊 Who says you are talented?  
+誰があなたが才能があると言いますか？  
+👏 What did you memorize recently?  
+最近何を覚えましたか？  
+🎤 How does theater build creativity?  
+劇場はどうやって創造性を築きますか？`
+    }
 ];
