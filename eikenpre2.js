@@ -1,6 +1,6 @@
 // eikenpre2.js - Eiken Pre-2 Stories (modified to match eiken3.js structure)
 const eikenpre2 = [
-        // Story 1 - A Part-Time Job
+    // Story 1 - A Part-Time Job
     {
         title: "1. A Part-Time Job",
         content: `👩‍🍳 Yuki has worked at a café for a month now.  
@@ -23,26 +23,26 @@ const eikenpre2 = [
 彼女は稼いだお金で新しいバッグを買うつもりです。  
 😊 Working is a custom she now loves.  
 働くことは彼女が今好きな習慣です。  
-👩‍🍳 Has Yuki worked at a café for a month?  
-ユキはカフェで1ヶ月働いていますか？  
-☕ Who does she serve at the café?  
-彼女はカフェで誰にサービスを提供しますか？  
-💼 What did her boss praise yesterday?  
-彼女の上司は昨日何を褒めましたか？  
-😊 Why does she enjoy talking to people?  
-なぜ彼女は人と話すのを楽しんでいますか？  
-💰 What will she do if she saves enough?  
-十分に貯金すれば彼女は何をしますか？  
-👩‍🍳 Where is the café located?  
-カフェはどこにありますか？  
-☕ Had she learned to make coffee before?  
-彼女は以前にコーヒーの淹れ方を学んでいましたか？  
-😄 How does Yuki feel since getting the job?  
-ユキは仕事を得てからどう感じていますか？  
-💼 What will she buy with her earnings?  
-彼女は稼いだお金で何を買うつもりですか？  
-😊 Why does she love working now?  
-なぜ彼女は今働くのが好きですか？`
+👩‍🍳 Have you ever worked at a part-time job?  
+あなたはパートタイムの仕事をしたことがありますか？  
+☕ Do you enjoy talking to new people?  
+あなたは新しい人と話すのが好きですか？  
+💼 Has anyone ever praised your hard work?  
+誰かがあなたの努力を褒めたことがありますか？  
+😊 What do you enjoy doing more than studying?  
+あなたは勉強より何をするのが好きですか？  
+💰 If you had extra money, where would you travel?  
+お金が余ったら、どこに旅行しますか？  
+👩‍🍳 Is there a busy place near your school?  
+あなたの学校の近くに忙しい場所はありますか？  
+☕ Have you ever learned a new skill for a job?  
+仕事のために新しいスキルを学んだことがありますか？  
+😄 What makes you feel happier these days?  
+最近、あなたを幸せに感じさせるものは何ですか？  
+💼 What would you buy if you earned some money?  
+お金を稼いだら何を買いますか？  
+😊 What is a custom you enjoy in your life?  
+あなたの生活で楽しんでいる習慣は何ですか？`
     },
 
     // Story 2 - Planning a Trip
@@ -68,26 +68,26 @@ const eikenpre2 = [
 彼女の友達も博物館を提案しました。  
 😄 The trip will be an unforgettable adventure.  
 その旅行は忘れられない冒険になるでしょう。  
-✈️ Is Hana planning a trip with friends?  
-ハナは友達と旅行を計画していますか？  
-🗺️ Where have they decided to go?  
-彼らはどこに行くことに決めましたか？  
-🏯 What is famous on their list?  
-彼らのリストで何が有名ですか？  
-💰 Had she saved money before planning?  
-彼女は計画前に貯金していましたか？  
-🛏️ What will they get if they book early?  
-早く予約すれば彼らは何を受けますか？  
-✈️ Why does Hana enjoy traveling?  
-なぜハナは旅行を楽しんでいますか？  
-🗺️ How will they explore the city?  
-彼らはどうやって街を探検するつもりですか？  
-😊 What makes her excited about the trip?  
-旅行で何が彼女をわくわくさせますか？  
-🏯 What did her friend suggest?  
-彼女の友達は何を提案しましたか？  
-😄 Why will the trip be unforgettable?  
-なぜその旅行は忘れられないのですか？`
+✈️ Have you ever planned a trip with friends?  
+あなたは友達と旅行を計画したことがありますか？  
+🗺️ Where would you like to visit next month?  
+来月、どこを訪れたいですか？  
+🏯 Do you like visiting famous places?  
+有名な場所を訪れるのが好きですか？  
+💰 Have you ever saved money for something special?  
+何か特別なために貯金したことがありますか？  
+🛏️ Why is it good to book things early?  
+なぜ早く予約するのは良いのですか？  
+✈️ Do you prefer traveling or staying home?  
+旅行と家にいるの、どちらが好きですか？  
+🗺️ How do you like to explore new places?  
+新しい場所をどうやって探検するのが好きですか？  
+😊 What food are you excited to try?  
+どんな食べ物を試すのにわくわくしますか？  
+🏯 What kind of museum would you visit?  
+どんな博物館を訪れたいですか？  
+😄 What makes a trip unforgettable for you?  
+あなたにとって旅行を忘れられないものにするのは何ですか？`
     },
 
     // Story 3 - A School Club
@@ -113,26 +113,26 @@ const eikenpre2 = [
 彼の努力がスキルを向上させました。  
 😊 Taro loves being part of the team.  
 太郎はチームの一員であるのが大好きです。  
-🎾 Has Taro joined the tennis club?  
-太郎はテニスクラブに入りましたか？  
-🏃 Does he practice harder than others?  
-彼は他の人より一生懸命練習しますか？  
-😄 Who praised Taro?  
-誰が太郎を褒めましたか？  
-🎾 What had he played before tennis?  
-彼はテニスの前に何をしていましたか？  
-😊 What will he get if he wins?  
-勝てば彼は何をもらいますか？  
-🏃 How has his running changed?  
-彼の走りはどう変わりましたか？  
-🎾 How often does the club meet?  
-クラブはどのくらいの頻度で集まりますか？  
-😄 Why does he enjoy competing?  
-なぜ彼は競うのを楽しんでいますか？  
-🏃 What has improved his skills?  
-何が彼のスキルを向上させましたか？  
-😊 Why does he love the team?  
-なぜ彼はチームが好きですか？`
+🎾 Have you ever joined a school club?  
+あなたは学校のクラブに参加したことがありますか？  
+🏃 Do you practice anything regularly?  
+あなたは何か定期的に練習しますか？  
+😄 Has a teacher or coach ever praised you?  
+先生やコーチに褒められたことがありますか？  
+🎾 What sports have you played before?  
+これまでにどんなスポーツをしましたか？  
+😊 What would you do if you won a prize?  
+賞を獲得したら何をしますか？  
+🏃 Are you faster at something now than before?  
+今、以前より何かで速くなっていますか？  
+🎾 How often do you meet with friends?  
+友達とどのくらいの頻度で会いますか？  
+😄 What do you enjoy doing with friends?  
+友達と何をするのが好きですか？  
+🏃 How has effort helped you improve?  
+努力がどうやってあなたを向上させましたか？  
+😊 Why is being part of a team fun for you?  
+チームの一員であるのはなぜ楽しいですか？`
     },
 
     // Story 4 - A Family Celebration
@@ -158,26 +158,26 @@ const eikenpre2 = [
 彼は電話で写真を撮るつもりです。  
 😊 Birthdays are his favorite tradition.  
 誕生日は彼のお気に入りの伝統です。  
-🎉 Did Kenta’s family celebrate yesterday?  
-ケンタの家族は昨日祝いましたか？  
-🎂 What kind of cake was served?  
-どんなケーキが出されましたか？  
-😄 What had he done before eating?  
-彼は食べる前に何をしていましたか？  
-🎁 What did his parents give him?  
-彼の両親は何をくれましたか？  
-😊 What will he get if he behaves?  
-良い子にしていれば彼は何をもらいますか？  
-🎉 How was the party compared to last year?  
-パーティーは去年と比べてどうでしたか？  
-🎂 Has he celebrated with family before?  
-彼は以前に家族と祝いましたか？  
-😄 Who did Kenta thank?  
-ケンタは誰に感謝しましたか？  
-🎁 What will he do with his phone?  
-彼は電話で何をするつもりですか？  
-😊 Why does he love birthdays?  
-なぜ彼は誕生日が好きですか？`
+🎉 Do you enjoy family celebrations?  
+家族のお祝いは好きですか？  
+🎂 What kind of cake do you like?  
+どんなケーキが好きですか？  
+😄 Have you ever opened presents at a party?  
+パーティーでプレゼントを開けたことがありますか？  
+🎁 What gift would you like to receive?  
+どんな贈り物を受け取りたいですか？  
+😊 What would you do to get a reward?  
+報酬を得るために何をしますか？  
+🎉 Are parties at your house loud or quiet?  
+あなたの家のパーティーは騒がしいですか、静かですか？  
+🎂 How often do you celebrate with family?  
+家族とどのくらいの頻度で祝いますか？  
+😄 Who would you thank at a party?  
+パーティーで誰に感謝しますか？  
+🎁 What do you use your phone for?  
+あなたは電話を何に使いますか？  
+😊 What is your favorite tradition?  
+あなたのお気に入りの伝統は何ですか？`
     },
 
     // Story 5 - Learning a New Skill
@@ -203,26 +203,26 @@ const eikenpre2 = [
 努力は彼女をすでに良くしています。  
 😊 Painting is now her favorite hobby.  
 絵は今、彼女のお気に入りの趣味です。  
-🎨 Is Miki learning to paint?  
-ミキは絵を学んでいますか？  
-🖌️ Has she practiced more than others?  
-彼女は他の人より多く練習していますか？  
-😄 Who helps Miki?  
-誰がミキを助けますか？  
-🎨 What had she tried before painting?  
-彼女は絵を描く前に何を試していましたか？  
-😊 What will she do if she improves?  
-上達すれば彼女は何をしますか？  
-🖌️ How are her paintings now?  
-彼女の絵は今どうですか？  
-🎨 Why does she enjoy painting?  
-なぜ彼女は絵を楽しんでいますか？  
-😄 Who will she show her work to?  
-彼女は誰に作品を見せるつもりですか？  
-🖌️ What has made her better?  
-何が彼女を良くしましたか？  
-😊 Why is painting her favorite hobby?  
-なぜ絵は彼女のお気に入りの趣味ですか？`
+🎨 Have you ever learned a new skill?  
+新しいスキルを学んだことがありますか？  
+🖌️ Do you practice something regularly?  
+何か定期的に練習しますか？  
+😄 Who helps you when you learn something new?  
+新しいことを学ぶとき、誰があなたを助けますか？  
+🎨 What have you tried doing before?  
+これまでに何を試したことがありますか？  
+😊 What would you do if you improved at something?  
+何かで上達したら何をしますか？  
+🖌️ Is your work better now than before?  
+あなたの仕事は今、以前より良くなっていますか？  
+🎨 What do you enjoy creating?  
+あなたは何を作るのが好きですか？  
+😄 Who would you show your work to?  
+あなたは誰に自分の作品を見せますか？  
+🖌️ How does effort help you improve?  
+努力はどうやってあなたを向上させますか？  
+😊 What is your favorite hobby?  
+あなたのお気に入りの趣味は何ですか？`
     },
 
     // Story 6 - A Day at the Beach
@@ -248,26 +248,26 @@ const eikenpre2 = [
 彼は次回、ゴーグルを持って行くつもりです。  
 😊 Beach days are the most relaxing.  
 ビーチの日は最もリラックスできます。  
-🏖️ Did Riku go to the beach last weekend?  
-リクは先週末ビーチに行きましたか？  
-🌊 What crashed loudly?  
-何が大きな音で打ち寄せましたか？  
-😄 What had he done before building?  
-彼は作る前に何をしていましたか？  
-🏊 Does he swim faster than his brother?  
-彼は弟より速く泳ぎますか？  
-😊 What will he do if it’s sunny?  
-晴れていれば彼は何をしますか？  
-🏖️ How was the beach compared to usual?  
-ビーチは普段と比べてどうでしたか？  
-🌊 Has he enjoyed the ocean for long?  
-彼は長い間海を楽しんでいますか？  
-😄 What did he collect with friends?  
-彼は友達と何を集めましたか？  
-🏊 What will he bring next time?  
-彼は次回何を持って行くつもりですか？  
-😊 Why are beach days relaxing?  
-なぜビーチの日はリラックスできますか？`
+🏖️ Do you like going to the beach?  
+ビーチに行くのは好きですか？  
+🌊 What do you notice at the seaside?  
+海辺で何に気づきますか？  
+😄 Have you ever swum in the ocean?  
+海で泳いだことがありますか？  
+🏊 Are you good at any sports?  
+何かスポーツが得意ですか？  
+😊 What do you do when the weather is nice?  
+天気が良いとき何をしますか？  
+🏖️ Do you prefer crowded or quiet places?  
+混雑した場所と静かな場所、どちらが好きですか？  
+🌊 What have you enjoyed since you were young?  
+若い頃から何を楽しんでいますか？  
+😄 What do you like to do with friends?  
+友達と何をするのが好きですか？  
+🏊 What would you bring to the beach?  
+ビーチに何を持って行きますか？  
+😊 What makes a day relaxing for you?  
+あなたにとって一日をリラックスさせるものは何ですか？`
     },
 
     // Story 7 - Volunteering
@@ -293,26 +293,26 @@ const eikenpre2 = [
 彼女は来月、木を植えるつもりです。  
 😊 Helping others is her new passion.  
 他人を助けることは彼女の新しい情熱です。  
-🤝 Did Saki volunteer yesterday?  
-サキは昨日ボランティアをしましたか？  
-🧹 What did she pick up?  
-彼女は何を拾いましたか？  
-😄 Who thanked her?  
-誰が彼女に感謝しましたか？  
-🌳 Had she helped at events before?  
-彼女は以前に行事で手伝っていましたか？  
-😊 What will she do if she joins again?  
-また参加すれば彼女は何をしますか？  
-🤝 Why does volunteering feel better?  
-なぜボランティアは良い感じがしますか？  
-🧹 How many times has she cleaned parks?  
-彼女は何回公園を掃除しましたか？  
-😄 Why does she enjoy volunteering?  
-なぜ彼女はボランティアを楽しんでいますか？  
-🌳 What will she do next month?  
-彼女は来月何をするつもりですか？  
-😊 What is her new passion?  
-彼女の新しい情熱は何ですか？`
+🤝 Have you ever done volunteer work?  
+ボランティアをしたことがありますか？  
+🧹 What do you do to keep places clean?  
+場所をきれいに保つために何をしますか？  
+😄 Has anyone thanked you for helping?  
+誰かに助けたことで感謝されたことがありますか？  
+🌳 Have you helped at any events before?  
+何かイベントで手伝ったことがありますか？  
+😊 Who would you invite to an activity?  
+どんな活動に誰を招待しますか？  
+🤝 Do you prefer helping others or relaxing?  
+他人を助けるのとリラックスするの、どちらが好きですか？  
+🧹 How often do you clean your surroundings?  
+どのくらいの頻度で周りを掃除しますか？  
+😄 What do you enjoy doing to help others?  
+他人を助けるために何をするのが好きですか？  
+🌳 What would you like to do for the environment?  
+環境のために何をしたいですか？  
+😊 What is a new passion you have found?  
+あなたが最近見つけた情熱は何ですか？`
     },
 
     // Story 8 - A School Project
@@ -338,26 +338,26 @@ const eikenpre2 = [
 研究が彼の理解を向上させました。  
 😊 Projects are his favorite assignments.  
 プロジェクトは彼のお気に入りの課題です。  
-📝 Is Ken working on a project?  
-ケンはプロジェクトに取り組んでいますか？  
-🧪 How many times has he tested it?  
-彼は何回実験を試しましたか？  
-😄 Who gave him advice?  
-誰が彼にアドバイスをくれましたか？  
-📚 What had he done before starting?  
-彼は始める前に何をしていましたか？  
-😊 What will he do if he finishes early?  
-早く終われば彼は何をしますか？  
-🧪 How is his project compared to others?  
-彼のプロジェクトは他のものと比べてどうですか？  
-📝 Why does he enjoy projects?  
-なぜ彼はプロジェクトを楽しんでいますか？  
-😄 What will he add to his work?  
-彼は作品に何を加えるつもりですか？  
-📚 What has improved his understanding?  
-何が彼の理解を向上させましたか？  
-😊 Why does he like projects?  
-なぜ彼はプロジェクトが好きですか？`
+📝 Are you working on any projects now?  
+今、プロジェクトに取り組んでいますか？  
+🧪 Have you ever done an experiment?  
+実験をしたことがありますか？  
+😄 Who gives you advice when you need it?  
+必要なとき、誰があなたにアドバイスをくれますか？  
+📚 What do you do before starting a task?  
+タスクを始める前に何をしますか？  
+😊 What would you do if you finished early?  
+早く終わったら何をしますか？  
+🧪 What makes a project interesting to you?  
+あなたにとってプロジェクトを面白くするものは何ですか？  
+📝 What do you enjoy learning about?  
+何を学ぶのが好きですか？  
+😄 How do you present your work?  
+あなたはどのように自分の作品を発表しますか？  
+📚 How has research helped you?  
+研究はどうやってあなたを助けましたか？  
+😊 What is your favorite type of assignment?  
+あなたのお気に入りの課題の種類は何ですか？`
     },
 
     // Story 9 - A Cultural Festival
@@ -383,26 +383,26 @@ const eikenpre2 = [
 彼女は次回、民謡を学ぶつもりです。  
 😊 Festivals are her favorite events.  
 祭りは彼女のお気に入りのイベントです。  
-🎎 Did Yuna attend a festival last week?  
-ユナは先週祭りに参加しましたか？  
-👘 What did she wear?  
-彼女は何を着ましたか？  
-😄 What amazed her at the festival?  
-祭りで何が彼女を驚かせましたか？  
-🎶 Had she listened to folk music before?  
-彼女は以前に民謡を聴いていましたか？  
-😊 What will she try if she goes again?  
-また行けば彼女は何を試しますか？  
-🎎 How was the festival compared to last year?  
-祭りは去年と比べてどうでしたか？  
-👘 Has she loved culture since childhood?  
-彼女は子供の頃から文化が好きですか？  
-😄 What did she do with friends?  
-彼女は友達と何をしましたか？  
-🎶 What will she learn next time?  
-彼女は次回何を学ぶつもりですか？  
-😊 Why does she love festivals?  
-なぜ彼女は祭りが好きですか？`
+🎎 Have you ever been to a cultural festival?  
+文化祭に行ったことがありますか？  
+👘 What kind of clothes do you like to wear?  
+どんな服を着るのが好きですか？  
+😄 What traditional activities have you seen?  
+どんな伝統的な活動を見ましたか？  
+🎶 Have you listened to music from another culture?  
+他の文化の音楽を聴いたことがありますか？  
+😊 What would you try at a festival?  
+祭りで何を試したいですか？  
+🎎 Do you like busy or quiet events?  
+賑やかなイベントと静かなイベント、どちらが好きですか？  
+👘 What do you love about your culture?  
+あなたの文化の何が好きですか？  
+😄 What do you do with friends at events?  
+イベントで友達と何をしますか？  
+🎶 What kind of song would you like to learn?  
+どんな歌を学びたいですか？  
+😊 What is your favorite event to attend?  
+あなたのお気に入りのイベントは何ですか？`
     },
 
     // Story 10 - A Visit to a Museum
@@ -428,26 +428,26 @@ const eikenpre2 = [
 彼は父に写真を見せるつもりです。  
 😊 Museums teach him a lot.  
 博物館は彼にたくさん教えます。  
-🏛️ Did Haru visit a museum?  
-ハルは博物館を訪れましたか？  
-🗿 What did he see there?  
-彼はそこで何を見ましたか？  
-😄 Who explained history?  
-誰が歴史を説明しましたか？  
-📸 Had he taken photos before leaving?  
-彼は出る前に写真を撮っていましたか？  
-😊 What will he do if he returns?  
-戻れば彼は何をしますか？  
-🏛️ How was the museum compared to school?  
-博物館は学校と比べてどうでしたか？  
-🗿 Has he enjoyed history for long?  
-彼は長い間歴史を楽しんでいますか？  
-😄 What did he learn about?  
-彼は何について学びましたか？  
-📸 Who will he show his photos to?  
-彼は誰に写真を見せるつもりですか？  
-😊 What do museums teach him?  
-博物館は何を彼に教えますか？`
+🏛️ Do you enjoy visiting museums?  
+博物館を訪れるのは好きですか？  
+🗿 What old things have you seen before?  
+これまでにどんな古いものを見ましたか？  
+😄 Who makes learning fun for you?  
+誰があなたに楽しく学ばせますか？  
+📸 Have you taken photos of something special?  
+何か特別な写真を撮ったことがありますか？  
+😊 What would you do at a museum?  
+博物館で何をしますか？  
+🏛️ Do you prefer quiet or noisy places?  
+静かな場所と騒がしい場所、どちらが好きですか？  
+🗿 What subject do you enjoy studying?  
+どんな科目を勉強するのが好きですか？  
+😄 What have you learned recently?  
+最近何を学びましたか？  
+📸 Who do you share your photos with?  
+あなたは写真を誰と共有しますか？  
+😊 What do you learn from visiting new places?  
+新しい場所を訪れて何を学びますか？`
     },
 
     // Story 11 - A Sports Event
@@ -473,26 +473,26 @@ const eikenpre2 = [
 彼女は来週、もう一つの試合を見るつもりです。  
 😊 Soccer is her favorite sport.  
 サッカーは彼女のお気に入りのスポーツです。  
-⚽ Did Aya watch a soccer match?  
-アヤはサッカーの試合を見ましたか？  
-🏃 What did the players do?  
-選手たちは何をしましたか？  
-😄 Had she cheered before the end?  
-彼女は終わる前に応援していましたか？  
-🥅 Has her team won every game?  
-彼女のチームはすべての試合に勝っていますか？  
-😊 What will she do if they win again?  
-また勝てば彼女は何をしますか？  
-⚽ How was the event compared to TV?  
-そのイベントはテレビと比べてどうでしたか？  
-🏃 Why does she enjoy sports?  
-なぜ彼女はスポーツを楽しんでいますか？  
-😄 What did she shout?  
-彼女は何を叫びましたか？  
-🥅 What will she do next week?  
-彼女は来週何をするつもりですか？  
-😊 Why does she love soccer?  
-なぜ彼女はサッカーが好きですか？`
+⚽ Do you like watching sports events?  
+スポーツイベントを見るのは好きですか？  
+🏃 What makes a game exciting for you?  
+あなたにとって試合を興奮させるものは何ですか？  
+😄 Have you ever cheered for a team?  
+チームを応援したことがありますか？  
+🥅 Has a team you like won recently?  
+あなたが好きなチームは最近勝ちましたか？  
+😊 How do you celebrate a victory?  
+勝利をどうやって祝いますか？  
+⚽ Is watching sports better than TV for you?  
+スポーツを見るのはテレビより良いですか？  
+🏃 Do you prefer sports or another activity?  
+スポーツと他の活動、どちらが好きですか？  
+😄 What do you shout when you’re excited?  
+興奮したとき何を叫びますか？  
+🥅 What events do you plan to attend?  
+どんなイベントに参加する予定ですか？  
+😊 What is your favorite sport to watch?  
+見るのが好きなスポーツは何ですか？`
     },
 
     // Story 12 - A Cooking Class
@@ -518,26 +518,26 @@ const eikenpre2 = [
 彼は来週末、寿司を作るつもりです。  
 😊 Cooking is his new skill.  
 料理は彼の新しいスキルです。  
-🍳 Did Sora take a cooking class?  
-ソラは料理教室に参加しましたか？  
-👩‍🍳 Who taught the recipes?  
-誰がレシピを教えてくれましたか？  
-😄 What had he done before the class?  
-彼は授業前に何をしていましたか？  
-🍚 How was his dish compared to his friend’s?  
-彼の料理は友達のと比べてどうでしたか？  
-😊 What will he do if he practices?  
-練習すれば彼は何をしますか？  
-🍳 How many recipes has he learned?  
-彼は何個のレシピを学んでいますか？  
-👩‍🍳 Why does he enjoy cooking?  
-なぜ彼は料理を楽しんでいますか？  
-😄 Why was the class fun?  
-なぜそのクラスは楽しかったですか？  
-🍚 What will he make next weekend?  
-彼は来週末何を作るつもりですか？  
-😊 What is his new skill?  
-彼の新しいスキルは何ですか？`
+🍳 Have you ever taken a cooking class?  
+料理教室に参加したことがありますか？  
+👩‍🍳 Who teaches you new things?  
+誰があなたに新しいことを教えますか？  
+😄 Have you cooked something recently?  
+最近何か料理しましたか？  
+🍚 What food tastes better to you?  
+どんな食べ物があなたにとって美味しいですか？  
+😊 What would you cook for your family?  
+家族のために何を料理しますか？  
+🍳 How many new things have you learned?  
+いくつの新しいことを学びましたか？  
+👩‍🍳 What ingredients do you like to use?  
+どんな材料を使うのが好きですか？  
+😄 What activity was more fun than expected?  
+予想より楽しかった活動は何ですか？  
+🍚 What will you try making soon?  
+近日中に何を作るつもりですか？  
+😊 What new skill would you like to learn?  
+どんな新しいスキルを学びたいですか？`
     },
 
     // Story 13 - A Day with Friends
@@ -563,26 +563,26 @@ const eikenpre2 = [
 彼は次回、彼らを招待するつもりです。  
 😊 Friends are the best company.  
 友達は最高の仲間です。  
-🎮 Did Kai spend yesterday with friends?  
-カイは昨日友達と過ごしましたか？  
-🎲 What did they play?  
-彼らは何をしましたか？  
-😄 Had he laughed harder before?  
-彼は以前より激しく笑っていましたか？  
-🍕 What did they order for lunch?  
-彼らは昼食に何を注文しましたか？  
-😊 What will he bring if they meet again?  
-また会えば彼は何を持って行きますか？  
-🎮 Has he enjoyed games for long?  
-彼は長い間ゲームを楽しんでいますか？  
-🎲 Why was the day better?  
-なぜその日は良かったですか？  
-😄 Why does he like his friends?  
-なぜ彼は友達が好きですか？  
-🍕 What will he do next time?  
-彼は次回何をするつもりですか？  
-😊 Why are friends the best?  
-なぜ友達は最高ですか？`
+🎮 Do you like spending time with friends?  
+友達と過ごすのは好きですか？  
+🎲 What games do you enjoy playing?  
+どんなゲームをするのが好きですか？  
+😄 When did you laugh a lot recently?  
+最近いつたくさん笑いましたか？  
+🍕 What food do you order with friends?  
+友達とどんな食べ物を注文しますか？  
+😊 What would you bring to a gathering?  
+集まりに何を持って行きますか？  
+🎮 What have you enjoyed since you were young?  
+若い頃から何を楽しんでいますか？  
+🎲 Do you prefer being with others or alone?  
+他の人と一緒か一人、どちらが好きですか？  
+😄 How do you make others happy?  
+どうやって他人を喜ばせますか？  
+🍕 Who would you invite to your house?  
+誰を家に招待しますか？  
+😊 Why are friends important to you?  
+なぜ友達はあなたにとって重要ですか？`
     },
 
     // Story 14 - A School Exchange Program
@@ -608,26 +608,26 @@ const eikenpre2 = [
 彼女はまもなく旅行について書くつもりです。  
 😊 Exchanges teach her about cultures.  
 交換は彼女に文化を教えます。  
-🌍 Did Rina join an exchange program?  
-リナは交換プログラムに参加しましたか？  
-✈️ Who did she meet?  
-彼女は誰に会いましたか？  
-😄 What had she done before going?  
-彼女は行く前に何をしていましたか？  
-🏫 Has her school hosted visitors?  
-彼女の学校は訪問者を迎えましたか？  
-😊 What will she do if she travels again?  
-また旅行すれば彼女は何をしますか？  
-🌍 Why does she enjoy the program?  
-なぜ彼女はプログラムを楽しんでいますか？  
-✈️ How was the program compared to class?  
-そのプログラムは授業と比べてどうでしたか？  
-😄 What did she make?  
-彼女は何を作りましたか？  
-🏫 What will she write about soon?  
-彼女はまもなく何について書くつもりですか？  
-😊 What do exchanges teach her?  
-交換は何を彼女に教えますか？`
+🌍 Have you ever joined an exchange program?  
+交換プログラムに参加したことがありますか？  
+✈️ Do you know anyone who speaks another language?  
+別の言語を話す人を知っていますか？  
+😄 Have you studied hard for something?  
+何かで一生懸命勉強したことがありますか？  
+🏫 Has your school ever had visitors?  
+あなたの学校に訪問者が来たことがありますか？  
+😊 What would you learn from traveling?  
+旅行から何を学びますか？  
+🌍 Do you like meeting new people?  
+新しい人に会うのは好きですか？  
+✈️ What is more exciting than school?  
+学校より興奮するものは何ですか？  
+😄 Have you made friends from other places?  
+他の場所から友達を作ったことがありますか？  
+🏫 What would you write about after a trip?  
+旅行後に何について書きますか？  
+😊 What do you learn from other cultures?  
+他の文化から何を学びますか？`
     },
 
     // Story 15 - A Music Concert
@@ -653,26 +653,26 @@ const eikenpre2 = [
 彼は来週、彼らのCDを買うつもりです。  
 😊 Live music makes him happy.  
 ライブ音楽は彼を幸せにします。  
-🎤 Did Koki go to a concert last night?  
-コウキは昨夜コンサートに行きましたか？  
-🎸 What did the band do?  
-バンドは何をしましたか？  
-😄 Had he bought tickets before?  
-彼は以前にチケットを買っていましたか？  
-🎶 How was the music compared to TV?  
-音楽はテレビと比べてどうでしたか？  
-😊 What will he do if he goes again?  
-また行けば彼は何をしますか？  
-🎤 Has he loved music for long?  
-彼は長い間音楽が好きですか？  
-🎸 What did he do with friends?  
-彼は友達と何をしましたか？  
-😄 Why was the concert the best?  
-なぜコンサートは最高でしたか？  
-🎶 What will he buy next week?  
-彼は来週何を買うつもりですか？  
-😊 Why does live music make him happy?  
-なぜライブ音楽は彼を幸せにしますか？`
+🎤 Have you ever been to a concert?  
+コンサートに行ったことがありますか？  
+🎸 What kind of music do you like?  
+どんな音楽が好きですか？  
+😄 Have you ever bought tickets for an event?  
+イベントのチケットを買ったことがありますか？  
+🎶 Is live music different from recorded music?  
+ライブ音楽は録音された音楽と違いますか？  
+😊 What would you do at a concert?  
+コンサートで何をしますか？  
+🎤 What have you loved since you were a kid?  
+子供の頃から何が好きですか？  
+🎸 Do you enjoy dancing with friends?  
+友達と踊るのは好きですか？  
+😄 What was the best event you attended?  
+参加した最高のイベントは何でしたか？  
+🎶 What music would you buy?  
+どんな音楽を買いますか？  
+😊 What makes you happy?  
+何があなたを幸せにしますか？`
     },
 
     // Story 16 - A Day in the City
@@ -698,26 +698,26 @@ const eikenpre2 = [
 彼女は次回、写真を撮るつもりです。  
 😊 City life excites her a lot.  
 街の生活は彼女をとても興奮させます。  
-🏙️ Did Nao explore the city?  
-ナオは街を探検しましたか？  
-🚌 What did they ride?  
-彼らは何に乗りましたか？  
-😄 What had she done before lunch?  
-彼女は昼食前に何をしていましたか？  
-🏬 How were the stores compared to her town?  
-店は彼女の町と比べてどうでしたか？  
-😊 What will she try if she returns?  
-戻れば彼女は何を試しますか？  
-🏙️ Has she loved cities for long?  
-彼女は長い間街が好きですか？  
-🚌 Why does she enjoy the city?  
-なぜ彼女は街を楽しんでいますか？  
-😄 What did they buy?  
-彼らは何を買いましたか？  
-🏬 What will she do next time?  
-彼女は次回何をするつもりですか？  
-😊 Why does city life excite her?  
-なぜ街の生活は彼女を興奮させますか？`
+🏙️ Do you like visiting cities?  
+街を訪れるのは好きですか？  
+🚌 Have you ever ridden a crowded bus?  
+混んだバスに乗ったことがありますか？  
+😄 What do you do before lunch on a trip?  
+旅行で昼食前に何をしますか？  
+🏬 Are city stores different from your town’s?  
+街の店はあなたの町のと違いますか？  
+😊 What would you try in a new city?  
+新しい街で何を試したいですか？  
+🏙️ Have you ever moved to a new place?  
+新しい場所に引っ越したことがありますか？  
+🚌 What do you enjoy seeing in cities?  
+街で何を見るのが好きですか？  
+😄 What souvenirs have you bought?  
+どんなお土産を買いましたか？  
+🏬 What do you take photos of?  
+何の写真を撮りますか？  
+😊 What excites you about new places?  
+新しい場所で何があなたを興奮させますか？`
     },
 
     // Story 17 - A Nature Hike
@@ -743,26 +743,26 @@ const eikenpre2 = [
 彼はまもなく新しい道を登るつもりです。  
 😊 Hiking relaxes him after school.  
 ハイキングは学校の後で彼をリラックスさせます。  
-⛰️ Did Yuto hike last Sunday?  
-ユウトは先週日曜日ハイキングしましたか？  
-🌲 What surrounded him?  
-何が彼を囲んでいましたか？  
-😄 What had he packed before leaving?  
-彼は出発前に何を詰めていましたか？  
-🏞️ How was the view compared to photos?  
-景色は写真と比べてどうでしたか？  
-😊 What will he bring if he hikes again?  
-またハイキングすれば彼は何を持って行きますか？  
-⛰️ Has he enjoyed nature for long?  
-彼は長い間自然が好きですか？  
-🌲 How far did he walk?  
-彼はどのくらい遠くまで歩きましたか？  
-😄 Why did the air feel fresh?  
-なぜ空気は新鮮に感じましたか？  
-🏞️ What will he climb soon?  
-彼はまもなく何を登るつもりですか？  
-😊 Why does hiking relax him?  
-なぜハイキングは彼をリラックスさせますか？`
+⛰️ Do you enjoy outdoor activities?  
+アウトドア活動は好きですか？  
+🌲 What do you see in nature?  
+自然の中で何を見ますか？  
+😄 What do you pack for a trip?  
+旅行に何を詰めますか？  
+🏞️ What makes a view beautiful to you?  
+あなたにとって景色を美しくするものは何ですか？  
+😊 What would you bring on a hike?  
+ハイキングに何を持って行きますか？  
+⛰️ What have you loved since childhood?  
+子供の頃から何が好きですか？  
+🌲 Do you like walking long distances?  
+長距離を歩くのは好きですか？  
+😄 What feels refreshing to you?  
+何があなたに新鮮に感じますか？  
+🏞️ What new activity will you try soon?  
+近日中になんて新しい活動を試しますか？  
+😊 What relaxes you after a busy day?  
+忙しい日後に何があなたをリラックスさせますか？`
     },
 
     // Story 18 - A Science Experiment
@@ -788,26 +788,26 @@ const eikenpre2 = [
 彼女は来週、新しいテストを試すつもりです。  
 😊 Experiments make her curious.  
 実験は彼女を好奇心旺盛にします。  
-🔬 Did Miu do an experiment yesterday?  
-ミウは昨日実験をしましたか？  
-🧪 What did she use?  
-彼女は何を使いましたか？  
-😄 Who guided her?  
-誰が彼女を導きましたか？  
-🌡️ What had she measured before mixing?  
-彼女は混ぜる前に何を計っていましたか？  
-😊 What will she do if she succeeds?  
-成功すれば彼女は何をしますか？  
-🔬 Has she liked science for long?  
-彼女は長い間科学が好きですか？  
-🧪 How were the results?  
-結果はどうでしたか？  
-😄 What did she learn about?  
-彼女は何について学びましたか？  
-🌡️ What will she try next week?  
-彼女は来週何を試すつもりですか？  
-😊 Why do experiments excite her?  
-なぜ実験は彼女を興奮させますか？`
+🔬 Have you ever done a science experiment?  
+科学実験をしたことがありますか？  
+🧪 What new tools have you used?  
+どんな新しい道具を使いましたか？  
+😄 Who helps you learn new things?  
+誰があなたに新しいことを学ばせますか？  
+🌡️ What have you measured before?  
+これまでに何を計りましたか？  
+😊 What would you show your family?  
+家族に何を見せますか？  
+🔬 What subject do you like at school?  
+学校で好きな科目は何ですか？  
+🧪 What results surprised you recently?  
+最近どんな結果に驚きましたか？  
+😄 What have you learned about recently?  
+最近何について学びましたか？  
+🌡️ What will you try next week?  
+来週何を試しますか？  
+😊 What makes you curious?  
+何があなたを好奇心旺盛にしますか？`
     },
 
     // Story 19 - A Family Tradition
@@ -833,26 +833,26 @@ const eikenpre2 = [
 彼女は来年、飾りを準備するつもりです。  
 😊 Traditions bring her family closer.  
 伝統は彼女の家族を近づけます。  
-🏮 Does Hana’s family follow a tradition?  
-ハナの家族は伝統を守っていますか？  
-🍵 What do they drink?  
-彼らは何を飲みますか？  
-😄 Had she helped her mom before?  
-彼女は以前に母を助けていましたか？  
-🎍 Who decorated the house?  
-誰が家を飾りましたか？  
-😊 What will she do if they continue?  
-続けば彼女は何をしますか？  
-🏮 Has she loved this custom for long?  
-彼女は長い間この習慣が好きですか？  
-🍵 Why does she enjoy the moments?  
-なぜ彼女は瞬間を楽しんでいますか？  
-😄 What did they do yesterday?  
-彼らは昨日何をしましたか？  
-🎍 What will she prepare next year?  
-彼女は来年何を準備するつもりですか？  
-😊 How do traditions help her family?  
-伝統はどうやって彼女の家族を助けますか？`
+🏮 Does your family have any traditions?  
+あなたの家族には伝統がありますか？  
+🍵 What special drinks do you like?  
+どんな特別な飲み物が好きですか？  
+😄 Have you ever helped your parents?  
+両親を助けたことがありますか？  
+🎍 How do you decorate your house?  
+家をどうやって飾りますか？  
+😊 What would you teach someone younger?  
+若い人に何を教えますか？  
+🏮 What have you loved since you were young?  
+若い頃から何が好きですか？  
+🍵 What moments do you find peaceful?  
+どんな瞬間を平和と感じますか？  
+😄 Do you sing with your family?  
+家族と歌いますか？  
+🎍 What will you prepare for a celebration?  
+お祝いに何を準備しますか？  
+😊 How do traditions help your family?  
+伝統はどうやって家族を助けますか？`
     },
 
     // Story 20 - A Birthday Party
@@ -878,26 +878,26 @@ const eikenpre2 = [
 彼は明日、みんなに感謝するつもりです。  
 😊 Birthdays make him feel special.  
 誕生日は彼を特別に感じさせます。  
-🎂 Did Taro throw a birthday party?  
-太郎は誕生日パーティーを開きましたか？  
-🎁 Who arrived early?  
-誰が早く着きましたか？  
-😄 What had he planned before?  
-彼はその前に何を計画していましたか？  
-🍰 Who baked the cake?  
-誰がケーキを焼きましたか？  
-😊 What will he do if he hosts again?  
-また開けば彼は何をしますか？  
-🎂 Has he celebrated every year?  
-彼は毎年祝っていますか？  
-🎁 What does he enjoy most?  
-彼は何を一番楽しんでいますか？  
-😄 How was the party compared to last time?  
-パーティーは前回と比べてどうでしたか？  
-🍰 What will he do tomorrow?  
-彼は明日何をするつもりですか？  
-😊 Why do birthdays make him feel special?  
-なぜ誕生日は彼を特別に感じさせますか？`
+🎂 Have you ever thrown a party?  
+パーティーを開いたことがありますか？  
+🎁 What gifts do you like to receive?  
+どんな贈り物を受け取るのが好きですか？  
+😄 What do you plan before an event?  
+イベントの前に何を計画しますか？  
+🍰 Who makes food for your celebrations?  
+お祝いに誰が食べ物を作りますか？  
+😊 Who would you invite to a party?  
+パーティーに誰を招待しますか？  
+🎂 How often do you celebrate special days?  
+特別な日はどのくらいの頻度で祝いますか？  
+🎁 What do you enjoy most at parties?  
+パーティーで何が一番好きですか？  
+😄 Are your gatherings loud or quiet?  
+あなたの集まりは騒がしいですか、静かですか？  
+🍰 How do you thank people after an event?  
+イベント後、どのように人に感謝しますか？  
+😊 What makes you feel special?  
+何があなたを特別に感じさせますか？`
     },
 
     // Story 21 - A Day at the Amusement Park
@@ -923,26 +923,26 @@ const eikenpre2 = [
 彼女は次回、友達を連れて行くつもりです。  
 😊 Amusement parks are her favorite places.  
 遊園地は彼女のお気に入りの場所です。  
-🎢 Did Kana go to an amusement park?  
-カナは遊園地に行きましたか？  
-🎡 What thrilled her?  
-何が彼女を興奮させましたか？  
-😄 What had she done before lunch?  
-彼女は昼食前に何をしていましたか？  
-🍿 Who sold the popcorn?  
-誰がポップコーンを売りましたか？  
-😊 What will she try if she visits again?  
-また訪れれば彼女は何を試しますか？  
-🎢 Has she loved parks for long?  
-彼女は長い間公園が好きですか？  
-🎡 Why does she enjoy rides?  
-なぜ彼女は乗り物を楽しんでいますか？  
-😄 How was the day compared to school?  
-その日は学校と比べてどうでしたか？  
-🍿 What will she bring next time?  
-彼女は次回何を連れて行くつもりですか？  
-😊 Why does she love amusement parks?  
-なぜ彼女は遊園地が好きですか？`
+🎢 Have you been to an amusement park?  
+遊園地に行ったことがありますか？  
+🎡 What kind of rides do you like?  
+どんな乗り物が好きですか？  
+😄 What have you done before lunch on a trip?  
+旅行で昼食前に何をしましたか？  
+🍿 Who do you buy snacks from?  
+誰からスナックを買いますか？  
+😊 What would you try at a park?  
+公園で何を試したいですか？  
+🎢 What places have you loved since childhood?  
+子供の頃から好きな場所はどこですか？  
+🎡 What excites you about fun activities?  
+楽しい活動で何があなたを興奮させますか？  
+😄 What is more fun than school for you?  
+学校より楽しいものは何ですか？  
+🍿 Who would you bring to a fun place?  
+楽しい場所に誰を連れて行きますか？  
+😊 What is your favorite place to visit?  
+訪れるのが好きな場所はどこですか？`
     },
 
     // Story 22 - A School Debate
@@ -968,26 +968,26 @@ const eikenpre2 = [
 彼は次回、もっと準備するつもりです。  
 😊 Debating teaches him to think fast.  
 討論は彼に速く考えることを教えます。  
-🗣️ Did Riku join a debate today?  
-リクは今日討論に参加しましたか？  
-📢 What did he argue?  
-彼は何を議論しましたか？  
-😄 Who liked his ideas?  
-誰が彼のアイデアを気に入りましたか？  
-🎤 Had he practiced before the event?  
-彼はイベント前に練習していましたか？  
-😊 What will he get if he wins?  
-勝てば彼は何をもらいますか？  
-🗣️ Has he enjoyed debates for long?  
-彼は長い間討論が好きですか？  
-📢 How does he speak compared to teammates?  
-彼はチームメイトと比べてどう話しますか？  
-😄 Why was the debate exciting?  
-なぜ討論は興奮しましたか？  
-🎤 What will he do next time?  
-彼は次回何をするつもりですか？  
-😊 What does debating teach him?  
-討論は何を彼に教えますか？`
+🗣️ Have you ever joined a debate?  
+討論に参加したことがありますか？  
+📢 What topics do you like to discuss?  
+どんな話題を話すのが好きですか？  
+😄 Has anyone liked your ideas before?  
+誰かがあなたのアイデアを気に入ったことがありますか？  
+🎤 What do you practice before an event?  
+イベントの前に何を練習しますか？  
+😊 What would you do if you won something?  
+何か勝ったら何をしますか？  
+🗣️ What have you enjoyed for a long time?  
+長い間何を楽しんでいますか？  
+📢 Do you speak loudly or softly?  
+大声で話しますか、静かに話しますか？  
+😄 What is more exciting than class for you?  
+授業より興奮するものは何ですか？  
+🎤 How do you prepare for challenges?  
+挑戦にどうやって準備しますか？  
+😊 What helps you think quickly?  
+何があなたに速く考えるのを助けますか？`
     },
 
     // Story 23 - A Visit to a Historical Site
@@ -1013,26 +1013,26 @@ const eikenpre2 = [
 彼は写真をオンラインで共有するつもりです。  
 😊 Historical sites fascinate him.  
 歴史的な場所は彼を魅了します。  
-🏯 Did Sota visit a castle?  
-ソウタは城を訪れましたか？  
-🗿 What impressed him?  
-何が彼を感動させましたか？  
-😄 What had he done before going?  
-彼は行く前に何をしていましたか？  
-📸 Who photographed the site?  
-誰がその場所を撮影しましたか？  
-😊 What will he do if he goes again?  
-また行けば彼は何をしますか？  
-🏯 Has he liked history for long?  
-彼は長い間歴史が好きですか？  
-🗿 Why does he enjoy the visit?  
-なぜ彼は訪問を楽しんでいますか？  
-😄 How was the visit compared to books?  
-その訪問は本と比べてどうでしたか？  
-📸 What will he do with his photos?  
-彼は写真で何をするつもりですか？  
-😊 Why do historical sites fascinate him?  
-なぜ歴史的な場所は彼を魅了しますか？`
+🏯 Have you visited a historical place?  
+歴史的な場所を訪れたことがありますか？  
+🗿 What old things interest you?  
+どんな古いものに興味がありますか？  
+😄 What have you read about recently?  
+最近何について読みましたか？  
+📸 Who takes photos when you travel?  
+旅行中、誰が写真を撮りますか？  
+😊 What would you do at a historical site?  
+歴史的な場所で何をしますか？  
+🏯 What subject did you like in grade school?  
+小学校で好きな科目は何でしたか？  
+🗿 What do you imagine when learning history?  
+歴史を学ぶとき何を想像しますか？  
+😄 What is more educational than books for you?  
+本より教育的なものは何ですか？  
+📸 How do you share your experiences?  
+どうやって経験を共有しますか？  
+😊 What places fascinate you?  
+どんな場所があなたを魅了しますか？`
     },
 
     // Story 24 - A Day at the Library
@@ -1058,27 +1058,28 @@ const eikenpre2 = [
 彼女は次に科学の本を借りるつもりです。  
 😊 Libraries help her learn better.  
 図書館は彼女がより良く学ぶのを助けます。  
-📚 Did Yumi spend Saturday at the library?  
-ユミは土曜日を図書館で過ごしましたか？  
-📖 What did she read about?  
-彼女は何について読みましたか？  
-😄 Who helped her?  
-誰が彼女を助けましたか？  
-🔍 What had she done before lunch?  
-彼女は昼食前に何をしていましたか？  
-😊 What will happen if she studies more?  
-もっと勉強すれば何が起こりますか？  
-📚 Has she visited libraries for long?  
-彼女は長い間図書館を訪れていますか？  
-📖 Why does she enjoy libraries?  
-なぜ彼女は図書館を楽しんでいますか？  
-😄 How was the day compared to home?  
-その日は家と比べてどうでしたか？  
-🔍 What will she borrow next?  
-彼女は次に何を借りるつもりですか？  
-😊 How do libraries help her?  
-図書館はどうやって彼女を助けますか？`
+📚 Do you spend time at libraries?  
+図書館で時間を過ごしますか？  
+📖 What kind of books do you read?  
+どんな本を読みますか？  
+😄 Who helps you when you study?  
+勉強するとき誰が助けますか？  
+🔍 What do you search for when studying?  
+勉強するとき何を探しますか？  
+😊 How do you prepare for a test?  
+テストにどうやって準備しますか？  
+📚 How often do you visit quiet places?  
+静かな場所にどのくらいの頻度で訪れますか？  
+📖 Why do you like certain places to read?  
+なぜ特定の場所で読むのが好きですか？  
+😄 What makes a day productive for you?  
+あなたにとって一日を生産的にするものは何ですか？  
+🔍 What books would you borrow?  
+どんな本を借りたいですか？  
+😊 What helps you learn better?  
+何があなたをより良く学ばせますか？`
     },
+
     // Story 25 - Preparing for a School Exam
     {
         title: "25. Preparing for a School Exam",
@@ -1102,26 +1103,26 @@ const eikenpre2 = [
 彼女の努力が成績を向上させました。  
 😊 Exams make her feel nervous but excited.  
 試験は彼女を緊張させますが、興奮もさせます。  
-📚 Has Emi been studying for her exam?  
-エミは試験のために勉強していますか？  
-🧮 Has she solved more problems than others?  
-彼女は他の人より多くの問題を解いていますか？  
-😄 Who gave her extra tips?  
-誰が彼女に特別なヒントをくれましたか？  
-📝 What had she done before starting practice?  
-彼女は練習を始める前に何をしていましたか？  
-😊 What will happen if she studies hard?  
-一生懸命勉強すれば何が起こりますか？  
-📚 Why is the exam important?  
-なぜその試験は重要ですか？  
-🧮 Why does she enjoy math?  
-なぜ彼女は数学が好きですか？  
-😄 What will she do tomorrow?  
-彼女は明日何をするつもりですか？  
-📝 What has improved her grades?  
-何が彼女の成績を向上させましたか？  
-😊 How do exams make her feel?  
-試験は彼女をどう感じさせますか？`
+📚 How do you study for exams?  
+試験のためにどうやって勉強しますか？  
+🧮 What subject do you practice a lot?  
+どの科目をたくさん練習しますか？  
+😄 Has a teacher ever given you advice?  
+先生がアドバイスをくれたことがありますか？  
+📝 What do you review before a test?  
+テスト前に何を見直しますか？  
+😊 What happens when you study hard?  
+一生懸命勉強すると何が起こりますか？  
+📚 What is an important goal for you?  
+あなたにとって重要な目標は何ですか？  
+🧮 What do you enjoy challenging yourself with?  
+何で自分に挑戦するのが好きですか？  
+😄 Who do you ask for help when studying?  
+勉強するとき誰に助けを求めますか？  
+📝 How has effort helped you succeed?  
+努力はどうやってあなたを成功させましたか？  
+😊 How do you feel before a big test?  
+大きなテストの前にどう感じますか？`
     },
 
     // Story 26 - Participating in a School Festival
@@ -1147,26 +1148,26 @@ const eikenpre2 = [
 私は来年またパフォーマンスをするつもりです。  
 😊 Festivals bring the school community together.  
 祭りは学校のコミュニティを一つにします。  
-🎪 Was the school festival held last Saturday?  
-学校祭は先週の土曜日に開催されましたか？  
-🎨 What did students display?  
-生徒たちは何を展示しましたか？  
-😄 What attracted many visitors?  
-何が多くの訪問者を引きつけましたか？  
-🎭 What had you done before the festival?  
-あなたは祭りの前に何をしていましたか？  
-😊 What will you receive if you win?  
-勝てばあなたは何をもらいますか？  
-🎪 How was the festival compared to last year?  
-祭りは去年と比べてどうでしたか？  
-🎨 Why do you enjoy art?  
-なぜあなたはアートが好きですか？  
-😄 Who helped you set up the booth?  
-誰がブースの設置を手伝ってくれましたか？  
-🎭 What will you do next year?  
-あなたは来年何をするつもりですか？  
-😊 How do festivals affect the school?  
-祭りは学校にどう影響しますか？`
+🎪 Have you ever helped at a school event?  
+学校のイベントを手伝ったことがありますか？  
+🎨 What kind of art do you like to create?  
+どんなアートを作るのが好きですか？  
+😄 What attracts people to events you attend?  
+あなたが参加するイベントで何が人を引きつけますか？  
+🎭 Have you rehearsed for something before?  
+何かでリハーサルをしましたか？  
+😊 What prize would you like to win?  
+どんな賞を獲得したいですか？  
+🎪 Do you like crowded or small gatherings?  
+混雑した集まりと小さな集まり、どちらが好きですか？  
+🎨 How do you express your creativity?  
+どうやって創造性を表現しますか？  
+😄 Who helps you with big projects?  
+大きなプロジェクトで誰が助けてくれますか？  
+🎭 What would you perform at an event?  
+イベントで何をパフォーマンスしますか？  
+😊 How do events bring people together?  
+イベントはどうやって人を一つにしますか？`
     },
 
     // Story 27 - Going on a School Trip
@@ -1192,26 +1193,26 @@ const eikenpre2 = [
 私は旅行についてレポートを書くつもりです。  
 😊 School trips are a great way to learn.  
 学校の旅行は学ぶのに素晴らしい方法です。  
-🚌 Did your class go to Kyoto last month?  
-あなたのクラスは先月京都に行きましたか？  
-🏯 What did you visit?  
-あなたは何を訪れましたか？  
-😄 Who explained everything?  
-誰がすべてを説明しましたか？  
-🎒 What had you done the night before?  
-あなたは前日の夜に何をしていましたか？  
-😊 What will you do if you go again?  
-また行けばあなたは何をしますか？  
-🚌 How was the trip compared to your expectations?  
-その旅行はあなたの予想と比べてどうでしたか？  
-🏯 Why are you interested in history?  
-なぜあなたは歴史に興味がありますか？  
-😄 What did you and your friends try?  
-あなたと友達は何を試しましたか？  
-🎒 What will you write about?  
-あなたは何について書くつもりですか？  
-😊 Why are school trips great?  
-なぜ学校の旅行は素晴らしいですか？`
+🚌 Have you ever gone on a school trip?  
+学校の旅行に行ったことがありますか？  
+🏯 What historical places have you visited?  
+どんな歴史的な場所を訪れましたか？  
+😄 Who explains things well to you?  
+誰があなたに物事をうまく説明しますか？  
+🎒 What do you pack for a trip?  
+旅行に何を詰めますか？  
+😊 What would you do on another trip?  
+別の旅行で何をしますか？  
+🚌 What was an educational experience for you?  
+あなたにとって教育的だった経験は何ですか？  
+🏯 What subject interests you the most?  
+どの科目が一番興味がありますか？  
+😄 What food have you tried recently?  
+最近どんな食べ物を試しましたか？  
+🎒 What would you write about after a trip?  
+旅行後に何について書きますか？  
+😊 How do you learn from new experiences?  
+新しい経験からどうやって学びますか？`
     },
 
     // Story 28 - Learning a New Hobby
@@ -1237,26 +1238,26 @@ const eikenpre2 = [
 音楽は彼の情熱になりました。  
 😊 Hobbies make life more enjoyable.  
 趣味は人生をより楽しくします。  
-🎸 Did Ken start learning guitar last year?  
-ケンは去年ギターを学び始めましたか？  
-🎶 Has he practiced more than his brother?  
-彼は兄より多く練習していますか？  
-😄 Who inspires him?  
-誰が彼を刺激しますか？  
-🎵 What had he done before starting?  
-彼は始める前に何をしていましたか？  
-😊 What will he do if he keeps practicing?  
-練習を続ければ彼は何をしますか？  
-🎸 Why does he enjoy guitar?  
-なぜ彼はギターを楽しんでいますか？  
-🎶 How are his skills now?  
-彼のスキルは今どうですか？  
-😄 What will he do at the talent show?  
-彼はタレントショーで何をするつもりですか？  
-🎵 What has become his passion?  
-何が彼の情熱になりましたか？  
-😊 Why are hobbies important?  
-なぜ趣味は重要ですか？`
+🎸 Have you started a new hobby recently?  
+最近新しい趣味を始めましたか？  
+🎶 What do you practice regularly?  
+何を定期的に練習しますか？  
+😄 Who inspires you to try new things?  
+誰があなたに新しいことを試すよう促しますか？  
+🎵 What music do you listen to?  
+どんな音楽を聴きますか？  
+😊 What would you do if you got better at a skill?  
+スキルが上達したら何をしますか？  
+🎸 What do you enjoy creating?  
+何を作るのが好きですか？  
+🎶 Are your skills improving in anything?  
+何かでスキルが向上していますか？  
+😄 Where would you like to perform?  
+どこでパフォーマンスしたいですか？  
+🎵 What is a passion you have?  
+あなたの情熱は何ですか？  
+😊 How do hobbies make your life better?  
+趣味はどうやってあなたの人生を良くしますか？`
     },
 
     // Story 29 - Dealing with a Challenging Situation
@@ -1272,36 +1273,36 @@ const eikenpre2 = [
 私は始める前に先延ばしにしていました。  
 😊 If I manage my time better, I will avoid stress.  
 時間を上手に管理すれば、私はストレスを避けます。  
-😔 The situation taught me a valuable lesson.  
-その状況は私に貴重な教訓を教えてくれました。  
+😔 The situation was more stressful than I anticipated.  
+その状況は予想よりストレスが多かったです。  
 📚 I have learned to ask for help when needed.  
 私は必要な時に助けを求めることを学びました。  
 😄 My teacher praised my final effort.  
 先生は私の最後の努力を褒めてくれました。  
-🖊️ I will start my next assignment earlier.  
-私は次の課題をより早く始めるつもりです。  
+🖊️ I will be more careful in the future.  
+私は将来、もっと注意深くなるつもりです。  
 😊 Challenges make me stronger.  
 挑戦は私を強くします。  
-😔 Did you face a problem at school?  
-あなたは学校で問題に直面しましたか？  
-📚 Was the assignment hard?  
-その課題は難しかったですか？  
-😄 Who helped you?  
-誰Er誰があなたを助けてくれましたか？  
-🖊️ What had you done before starting?  
-あなたは始める前に何をしていましたか？  
-😊 What will you do if you manage time better?  
-時間を上手に管理すればあなたは何をしますか？  
-😔 What did the situation teach you?  
-その状況は何をあなたに教えてくれましたか？  
-📚 What have you learned?  
-あなたは何を学びましたか？  
-😄 What did your teacher praise?  
-先生は何を褒めてくれましたか？  
-🖊️ What will you do with your next assignment?  
-あなたは次の課題で何をするつもりですか？  
-😊 Why do challenges make you stronger?  
-なぜ挑戦はあなたを強くしますか？`
+😔 Have you faced a tough problem recently?  
+最近難しい問題に直面しましたか？  
+📚 What is harder than you expected?  
+予想より難しいものは何ですか？  
+😄 Who helps you when you’re stuck?  
+行き詰まったとき誰が助けてくれますか？  
+🖊️ Have you ever delayed starting something?  
+何かを始めるのを遅らせたことがありますか？  
+😊 How would you manage your time better?  
+どうやって時間を上手に管理しますか？  
+😔 What causes you stress?  
+何があなたにストレスを与えますか？  
+📚 What have you learned from a challenge?  
+挑戦から何を学びましたか？  
+😄 Has anyone praised your work?  
+誰かがあなたの仕事を褒めたことがありますか？  
+🖊️ What will you do more carefully?  
+何をより注意深くしますか？  
+😊 How do challenges help you grow?  
+挑戦はどうやってあなたを成長させますか？`
     },
 
     // Story 30 - Making a New Friend
@@ -1327,26 +1328,26 @@ const eikenpre2 = [
 私はスケッチブックを持って行って共有するつもりです。  
 😊 New friendships are exciting.  
 新しい友情はわくわくします。  
-👫 Did you meet a new student yesterday?  
-あなたは昨日新しい生徒に会いましたか？  
-🗣️ What did you talk about?  
-あなたは何について話しましたか？  
-😄 Was she friendly?  
-彼女は友好的でしたか？  
-🎨 When had she moved?  
-彼女はいつ引っ越してきましたか？  
-😊 What will happen if you hang out?  
-一緒に過ごせば何が起こりますか？  
-👫 Why is making friends easy?  
-なぜ友達を作ることは簡単ですか？  
-🗣️ What interests do you share?  
-あなたたちはどんな興味を共有していますか？  
-😄 What did she invite you to?  
-彼女は何にあなたを招待しましたか？  
-🎨 What will you bring to her house?  
-あなたは彼女の家に何を持って行くつもりですか？  
-😊 Why are new friendships exciting?  
-なぜ新しい友情はわくわくしますか？`
+👫 Have you met someone new recently?  
+最近新しい人に会いましたか？  
+🗣️ What hobbies do you talk about with friends?  
+友達とどんな趣味について話しますか？  
+😄 Who is friendlier than you expected?  
+誰が予想より友好的でしたか？  
+🎨 Have you ever moved to a new place?  
+新しい場所に引っ越したことがありますか？  
+😊 How do you become good friends with someone?  
+誰かと良い友達になるにはどうしますか？  
+👫 Is making friends easy or hard for you?  
+友達を作るのは簡単ですか、難しいですか？  
+🗣️ What interests do you share with others?  
+他の人とどんな興味を共有しますか？  
+😄 Have you been invited to someone’s house?  
+誰かの家に招待されたことがありますか？  
+🎨 What would you share with a friend?  
+友達と何を共有しますか？  
+😊 What makes friendships exciting for you?  
+友情をわくわくさせるものは何ですか？`
     },
 
     // Story 31 - Experiencing a Cultural Event
@@ -1372,26 +1373,26 @@ const eikenpre2 = [
 私は来月、別の儀式に参加するつもりです。  
 😊 Cultural events teach me about history.  
 文化的なイベントは私に歴史を教えます。  
-🎎 Did you attend a tea ceremony?  
-あなたは茶道に参加しましたか？  
-🍵 What did the tea taste like?  
-お茶はどんな味でしたか？  
-😄 Who explained the rituals?  
-誰が儀式を説明しましたか？  
-🏯 What had you done before attending?  
-あなたは参加する前に何をしていましたか？  
-😊 What will you do if you practice?  
-練習すればあなたは何をしますか？  
-🎎 How was the event compared to your expectations?  
-そのイベントはあなたの予想と比べてどうでしたか？  
-🍵 Why are you curious about traditions?  
-なぜあなたは伝統に興味がありますか？  
-😄 What did you and your friend wear?  
-あなたと友達は何を着ましたか？  
-🏯 What will you do next month?  
-あなたは来月何をするつもりですか？  
-😊 What do cultural events teach you?  
-文化的なイベントは何をあなたに教えますか？`
+🎎 Have you been to a cultural event?  
+文化的なイベントに参加したことがありますか？  
+🍵 What drinks do you find interesting?  
+どんな飲み物が面白いと思いますか？  
+😄 Who explains traditions to you?  
+誰があなたに伝統を説明しますか？  
+🏯 What have you read about recently?  
+最近何について読みましたか？  
+😊 What traditional activity would you try?  
+どんな伝統的な活動を試したいですか？  
+🎎 Are formal events fun for you?  
+正式なイベントはあなたにとって楽しいですか？  
+🍵 What are you curious about?  
+何に興味がありますか？  
+😄 What special clothes have you worn?  
+どんな特別な服を着ましたか？  
+🏯 What event will you attend soon?  
+近日中にどんなイベントに参加しますか？  
+😊 What do you learn from cultural activities?  
+文化的活動から何を学びますか？`
     },
 
     // Story 32 - Overcoming a Fear
@@ -1417,26 +1418,26 @@ const eikenpre2 = [
 私は次の発表にボランティアで参加するつもりです。  
 😊 Facing fears makes me stronger.  
 恐怖に立ち向かうことは私を強くします。  
-😨 Were you afraid of speaking in public?  
-あなたは人前で話すのが怖かったですか？  
-🎤 What did you do in class yesterday?  
-あなたは昨日授業で何をしましたか？  
-😄 Who clapped for you?  
-誰があなたに拍手しましたか？  
-🗣️ How long had you prepared your speech?  
-あなたはどのくらいの期間スピーチを準備していましたか？  
-😊 What can you do again?  
-あなたは何をまたできますか？  
-😨 How was the experience?  
-その経験はどうでしたか？  
-🎤 What have you gained?  
-あなたは何を得ましたか？  
-😄 What did your teacher praise?  
-先生は何を褒めてくれましたか？  
-🗣️ What will you do for the next presentation?  
-あなたは次の発表で何をするつもりですか？  
-😊 Why does facing fears make you stronger?  
-なぜ恐怖に立ち向かうことはあなたを強くしますか？`
+😨 What are you afraid of?  
+あなたは何が怖いですか？  
+🎤 Have you ever given a presentation?  
+発表をしたことがありますか？  
+😄 Who supports you when you try something new?  
+新しいことを試すとき誰がサポートしますか？  
+🗣️ How do you prepare for something important?  
+重要なことにどうやって準備しますか？  
+😊 What can you do again after succeeding?  
+成功した後、何をまたできますか？  
+😨 What was less scary than you thought?  
+思ったより怖くなかったものは何ですか？  
+🎤 How have you gained confidence?  
+どうやって自信を得ましたか？  
+😄 Who has praised your efforts?  
+誰があなたの努力を褒めましたか？  
+🗣️ What would you volunteer for?  
+何にボランティアで参加しますか？  
+😊 How does facing fears help you?  
+恐怖に立ち向かうことはどうやってあなたを助けますか？`
     },
 
     // Story 33 - Achieving a Personal Goal
@@ -1462,700 +1463,25 @@ const eikenpre2 = [
 私は次にトライアスロンのトレーニングを始めるつもりです。  
 😊 Achieving goals boosts my confidence.  
 目標を達成することは私の自信を高めます。  
-🏃‍♂️ Did you run a marathon last month?  
-あなたは先月マラソンを走りましたか？  
-🏅 What made you proud?  
-何があなたを誇りに思わせましたか？  
-😄 Who trained you?  
-誰があなたを訓練しましたか？  
-🏋️‍♂️ What had you done before the race?  
-あなたはレース前に何をしていましたか？  
-😊 What will you do if you set another goal?  
-また目標を立てればあなたは何をしますか？  
-🏃‍♂️ How was the marathon?  
-マラソンはどうでしたか？  
-🏅 What have you worked hard for?  
-あなたは何のために一生懸命働いてきましたか？  
-😄 Who cheered for you?  
-誰があなたを応援しましたか？  
-🏋️‍♂️ What will you start next?  
-あなたは次に何を始めるつもりですか？  
-😊 Why does achieving goals boost confidence?  
-なぜ目標を達成することは自信を高めますか？`
-    },
-
-    // Story 34 - Helping a Family Member
-    {
-        title: "34. Helping a Family Member",
-        content: `👵 I helped my grandmother with gardening yesterday.  
-私は昨日、祖母の園芸を手伝いました。  
-🌷 We planted flowers that she loves.  
-私たちは彼女が好きな花を植えました。  
-😄 She is happier when I assist her.  
-私が手伝うと、彼女はより幸せです。  
-🧤 I had worn gloves to protect my hands.  
-私は手を守るために手袋をしていました。  
-😊 If I help again, she will teach me more.  
-また手伝えば、彼女は私にもっと教えてくれます。  
-👵 Gardening is more enjoyable with company.  
-園芸は仲間と一緒だとより楽しいです。  
-🌷 I have learned about different plants.  
-私はさまざまな植物について学びました。  
-😄 My grandmother shared her gardening secrets.  
-祖母は彼女の園芸の秘密を教えてくれました。  
-🧤 I will buy new seeds for her next time.  
-私は次回、彼女のために新しい種を買うつもりです。  
-😊 Helping family strengthens our bond.  
-家族を助けることは私たちの絆を強くします。  
-👵 Did you help your grandmother yesterday?  
-あなたは昨日祖母を手伝いましたか？  
-🌷 What did you plant?  
-あなたは何を植えましたか？  
-😄 When is she happier?  
-彼女はいつより幸せですか？  
-🧤 What had you worn to protect your hands?  
-あなたは手を守るために何をしていましたか？  
-😊 What will she do if you help again?  
-また手伝えば彼女は何をしますか？  
-👵 Why is gardening enjoyable?  
-なぜ園芸は楽しいですか？  
-🌷 What have you learned?  
-あなたは何を学びましたか？  
-😄 What did your grandmother share?  
-祖母は何を教えてくれましたか？  
-🧤 What will you buy next time?  
-あなたは次回何を買うつもりですか？  
-😊 How does helping family affect your bond?  
-家族を助けることは絆にどう影響しますか？`
-    },
-
-    // Story 35 - Participating in a Sports Event
-    {
-        title: "35. Participating in a Sports Event",
-        content: `🏀 Our school held a basketball tournament last week.  
-私たちの学校は先週、バスケットボールのトーナメントを開催しました。  
-🏆 My team, which practiced hard, won first place.  
-一生懸命練習した私のチームが1位になりました。  
-😄 The coach, who is enthusiastic, motivated us.  
-熱心なコーチが私たちを励ましてくれました。  
-🏃‍♂️ I had trained every day before the event.  
-私はイベントの前に毎日トレーニングしていました。  
-😊 If we compete again, I will play even better.  
-また競技すれば、私はもっと上手くプレーします。  
-🏀 The tournament was more competitive than last year.  
-トーナメントは去年より競争が激しかったです。  
-🏆 I have always loved playing basketball.  
-私はいつもバスケットボールをするのが大好きです。  
-😄 My parents watched me play.  
-両親は私のプレーを見ていました。  
-🏃‍♂️ I will join the advanced team next season.  
-私は次のシーズン、上級チームに参加するつもりです。  
-😊 Sports teach me teamwork and discipline.  
-スポーツは私にチームワークと規律を教えます。  
-🏀 Was a basketball tournament held last week?  
-バスケットボールのトーナメントは先週開催されましたか？  
-🏆 What place did your team win?  
-あなたのチームは何位になりましたか？  
-😄 Who motivated you?  
-誰があなたを励ましましたか？  
-🏃‍♂️ What had you done before the event?  
-あなたはイベントの前に何をしていましたか？  
-😊 What will you do if you compete again?  
-また競技すればあなたは何をしますか？  
-🏀 How was the tournament compared to last year?  
-トーナメントは去年と比べてどうでしたか？  
-🏆 Why do you love basketball?  
-なぜあなたはバスケットボールが好きですか？  
-😄 Who watched you play?  
-誰があなたがプレーするのを見ていましたか？  
-🏃‍♂️ What will you join next season?  
-あなたは次のシーズン何に参加するつもりですか？  
-😊 What do sports teach you?  
-スポーツは何をあなたに教えますか？`
-    },
-
-    // Story 36 - Attending a Music Concert
-    {
-        title: "36. Attending a Music Concert",
-        content: `🎵 I attended a piano concert last night.  
-私は昨夜、ピアノコンサートに参加しました。  
-🎹 The pianist, who is famous, played beautifully.  
-有名なピアニストが美しく演奏しました。  
-😄 I had bought tickets months in advance.  
-私は数ヶ月前にチケットを買っていました。  
-🎼 The music was more moving than I expected.  
-音楽は予想より感動的でした。  
-😊 If there’s another concert, I will go again.  
-またコンサートがあれば、私はまた行きます。  
-🎵 The atmosphere was more elegant than a festival.  
-雰囲気は祭りより上品でした。  
-🎹 I have always admired classical music.  
-私はいつもクラシック音楽を賞賛しています。  
-😄 My friend and I discussed the performance afterward.  
-友達と私は後でパフォーマンスについて話し合いました。  
-🎼 I will start taking piano lessons soon.  
-私はまもなくピアノのレッスンを始めるつもりです。  
-😊 Concerts inspire me to appreciate art.  
-コンサートは私に芸術を鑑賞するよう促します。  
-🎵 Did you attend a concert last night?  
-あなたは昨夜コンサートに参加しましたか？  
-🎹 Who played beautifully?  
-誰が美しく演奏しましたか？  
-😄 When had you bought tickets?  
-あなたはいつチケットを買っていましたか？  
-🎼 How was the music?  
-音楽はどうでしたか？  
-😊 What will you do if there’s another concert?  
-またコンサートがあればあなたは何をしますか？  
-🎵 How was the atmosphere compared to a festival?  
-雰囲気は祭りと比べてどうでしたか？  
-🎹 Why do you admire classical music?  
-なぜあなたはクラシック音楽を賞賛しますか？  
-😄 What did you and your friend do afterward?  
-あなたと友達は後で何をしましたか？  
-🎼 What will you start soon?  
-あなたはまもなく何を始めるつもりですか？  
-😊 How do concerts affect you?  
-コンサートはどうやってあなたに影響しますか？`
-    },
-
-    // Story 37 - Visiting a Historical Site
-    {
-        title: "37. Visiting a Historical Site",
-        content: `🏰 We visited an ancient castle during our trip.  
-私たちは旅行中に古い城を訪れました。  
-🗝️ The guide showed us rooms that were restored.  
-ガイドは修復された部屋を見せてくれました。  
-😄 The history, which is fascinating, captivated me.  
-魅力的な歴史が私を魅了しました。  
-📜 I had studied about the castle before visiting.  
-私は訪れる前に城について勉強していました。  
-😊 If I visit again, I will explore the gardens.  
-また訪れれば、私は庭を探検します。  
-🏰 The site was more impressive than I imagined.  
-その場所は想像より印象的でした。  
-🗝️ I have always been interested in medieval times.  
-私はいつも中世に興味があります。  
-😄 My brother took many photos.  
-兄はたくさんの写真を撮りました。  
-📜 I will write a blog post about the visit.  
-私は訪問についてブログ記事を書くつもりです。  
-😊 Historical sites connect me to the past.  
-歴史的な場所は私を過去と結びつけます。  
-🏰 Did you visit an ancient castle?  
-あなたは古い城を訪れましたか？  
-🗝️ What did the guide show you?  
-ガイドは何を見せてくれましたか？  
-😄 What captivated you?  
-何があなたを魅了しましたか？  
-📜 What had you done before visiting?  
-あなたは訪れる前に何をしていましたか？  
-😊 What will you do if you visit again?  
-また訪れればあなたは何をしますか？  
-🏰 How was the site compared to your imagination?  
-その場所はあなたの想像と比べてどうでしたか？  
-🗝️ Why are you interested in medieval times?  
-なぜあなたは中世に興味がありますか？  
-😄 What did your brother do?  
-あなたの兄は何をしましたか？  
-📜 What will you write about?  
-あなたは何について書くつもりですか？  
-😊 How do historical sites affect you?  
-歴史的な場所はどうやってあなたに影響しますか？`
-    },
-
-    // Story 38 - Volunteering in the Community
-    {
-        title: "38. Volunteering in the Community",
-        content: `🤝 I volunteered at a local food bank last weekend.  
-私は先週末、地元のフードバンクでボランティアをしました。  
-🍲 We distributed meals that were nutritious.  
-私たちは栄養価の高い食事を配りました。  
-😄 The manager, who is kind, thanked us.  
-親切なマネージャーが私たちに感謝しました。  
-🛒 I had sorted donations before the event.  
-私はイベントの前に寄付品を整理していました。  
-😊 If I volunteer again, I will bring more friends.  
-またボランティアをすれば、私はもっと友達を連れて行きます。  
-🤝 The experience was more rewarding than I expected.  
-その経験は予想よりやりがいがありました。  
-🍲 I have learned about the importance of community service.  
-私は地域奉仕の重要性を学びました。  
-😄 Many people appreciated our help.  
-多くの人々が私たちの助けに感謝しました。  
-🛒 I will organize a donation drive next month.  
-私は来月、寄付ドライブを組織するつもりです。  
-😊 Volunteering makes me feel fulfilled.  
-ボランティアは私を満たされた気持ちにします。  
-🤝 Did you volunteer at a food bank?  
-あなたはフードバンクでボランティアをしましたか？  
-🍲 What did you distribute?  
-あなたは何を配りましたか？  
-😄 Who thanked you?  
-誰があなたに感謝しましたか？  
-🛒 What had you done before the event?  
-あなたはイベントの前に何をしていましたか？  
-😊 What will you do if you volunteer again?  
-またボランティアをすればあなたは何をしますか？  
-🤝 How was the experience?  
-その経験はどうでしたか？  
-🍲 What have you learned?  
-あなたは何を学びましたか？  
-😄 Who appreciated your help?  
-誰があなたの助けに感謝しましたか？  
-🛒 What will you organize next month?  
-あなたは来月何を組織するつもりですか？  
-😊 Why does volunteering make you feel fulfilled?  
-なぜボランティアはあなたを満たされた気持ちにしますか？`
-    },
-
-    // Story 39 - Celebrating a Traditional Holiday
-    {
-        title: "39. Celebrating a Traditional Holiday",
-        content: `🎇 My family celebrated the New Year with fireworks.  
-私の家族は新年を花火で祝いました。  
-🎊 We wore clothes that were festive.  
-私たちはお祝いの服を着ました。  
-😄 The celebration, which is annual, brings joy.  
-毎年恒例の祝典は喜びをもたらします。  
-🍱 I had helped prepare the special meal.  
-私は特別な食事の準備を手伝っていました。  
-😊 If we gather next year, I will make dessert.  
-来年集まれば、私はデザートを作るつもりです。  
-🎇 The tradition is more meaningful than gifts.  
-その伝統は贈り物より意味があります。  
-🎊 I have cherished these moments since childhood.  
-私は子供の頃からこれらの瞬間を大切にしています。  
-😄 My cousins and I played games together.  
-いとこたちと私は一緒にゲームをしました。  
-🍱 I will learn more recipes from my grandmother.  
-私は祖母からもっとレシピを学ぶつもりです。  
-😊 Holidays strengthen family ties.  
-祝日は家族の絆を強くします。  
-🎇 Did your family celebrate with fireworks?  
-あなたの家族は花火で祝いましたか？  
-🎊 What did you wear?  
-あなたは何を着ましたか？  
-😄 What brings joy?  
-何が喜びをもたらしますか？  
-🍱 What had you helped prepare?  
-あなたは何の準備を手伝っていましたか？  
-😊 What will you make if you gather next year?  
-来年集まればあなたは何を作るつもりですか？  
-🎇 Why is the tradition meaningful?  
-なぜその伝統は意味がありますか？  
-🎊 What have you cherished since childhood?  
-あなたは何を子供の頃から大切にしていますか？  
-😄 What did you and your cousins do?  
-あなたといとこたちは何をしましたか？  
-🍱 What will you learn from your grandmother?  
-あなたは祖母から何を学ぶつもりですか？  
-😊 How do holidays affect family ties?  
-祝日は家族の絆にどう影響しますか？`
-    },
-
-    // Story 40 - Traveling to a New Place
-    {
-        title: "40. Traveling to a New Place",
-        content: `✈️ I traveled to Hokkaido for the first time.  
-私は初めて北海道に旅行しました。  
-❄️ The snow, which was deep, covered everything.  
-深い雪がすべてを覆っていました。  
-😄 The locals, who were welcoming, offered advice.  
-歓迎する地元の人々がアドバイスをくれました。  
-🗺️ I had planned my itinerary before leaving.  
-私は出発前に旅程を計画していました。  
-😊 If I visit again, I will stay longer.  
-また訪れれば、私はもっと長く滞在します。  
-✈️ The journey was more adventurous than expected.  
-その旅は予想より冒険的でした。  
-❄️ I have always wanted to see snow.  
-私はいつも雪を見たかったです。  
-😄 I tried skiing for the first time.  
-私は初めてスキーを試しました。  
-🗺️ I will recommend Hokkaido to my friends.  
-私は友達に北海道を推薦するつもりです。  
-😊 Traveling broadens my horizons.  
-旅行は私の視野を広げます。  
-✈️ Did you travel to Hokkaido?  
-あなたは北海道に旅行しましたか？  
-❄️ What covered everything?  
-何がすべてを覆っていましたか？  
-😄 Who offered advice?  
-誰がアドバイスをくれましたか？  
-🗺️ What had you planned before leaving?  
-あなたは出発前に何を計画していましたか？  
-😊 What will you do if you visit again?  
-また訪れればあなたは何をしますか？  
-✈️ How was the journey?  
-その旅はどうでしたか？  
-❄️ What have you always wanted to see?  
-あなたは何をいつも見たいと思っていましたか？  
-😄 What did you try for the first time?  
-あなたは何を初めて試しましたか？  
-🗺️ What will you recommend to your friends?  
-あなたは友達に何を推薦するつもりですか？  
-😊 How does traveling affect you?  
-旅行はどうやってあなたに影響しますか？`
-    },
-
-    // Story 41 - Starting a New School Year
-    {
-        title: "41. Starting a New School Year",
-        content: `🏫 The new school year began last week.  
-新しい学年は先週始まりました。  
-📚 I have new textbooks that are heavy.  
-私は重い新しい教科書を持っています。  
-😄 My homeroom teacher, who is strict, introduced herself.  
-厳しい担任の先生が自己紹介しました。  
-🖋️ I had bought school supplies before the first day.  
-私は初日前に学用品を買っていました。  
-😊 If I study diligently, I will do well.  
-熱心に勉強すれば、私はうまくやります。  
-🏫 The school has changed since last year.  
-学校は去年から変わりました。  
-📚 I enjoy learning new subjects.  
-私は新しい科目を学ぶのが好きです。  
-😄 My classmates and I made a study group.  
-クラスメイトと私は勉強グループを作りました。  
-🖋️ I will set goals for each term.  
-私は各学期に目標を立てるつもりです。  
-😊 New beginnings are full of possibilities.  
-新しい始まりは可能性でいっぱいです。  
-🏫 Did the new school year begin last week?  
-新しい学年は先週始まりましたか？  
-📚 What do you have that is heavy?  
-あなたは何が重いを持っていますか？  
-😄 Who introduced herself?  
-誰が自己紹介しましたか？  
-🖋️ What had you bought before the first day?  
-あなたは初日前に何を買っていましたか？  
-😊 What will happen if you study diligently?  
-熱心に勉強すれば何が起こりますか？  
-🏫 How has the school changed?  
-学校はどう変わりましたか？  
-📚 Why do you enjoy learning?  
-なぜあなたは学ぶのが好きですか？  
-😄 What did you and your classmates make?  
-あなたとクラスメイトは何を作りましたか？  
-🖋️ What will you set for each term?  
-あなたは各学期に何を立てるつもりですか？  
-😊 Why are new beginnings exciting?  
-なぜ新しい始まりはわくわくしますか？`
-    },
-
-    // Story 42 - Joining a New Club
-    {
-        title: "42. Joining a New Club",
-        content: `🎨 I joined the art club this semester.  
-私は今学期、アートクラブに参加しました。  
-🖌️ We create projects that are displayed.  
-私たちは展示されるプロジェクトを作ります。  
-😄 The leader, who is creative, inspires us.  
-クリエイティブなリーダーが私たちを刺激します。  
-🎨 I had sketched ideas before joining.  
-私は参加する前にアイデアをスケッチしていました。  
-😊 If I participate actively, I will improve.  
-積極的に参加すれば、私は上達します。  
-🖌️ The club is more fun than I expected.  
-クラブは予想より楽しいです。  
-🎨 I have always loved drawing.  
-私はいつも描くのが大好きです。  
-😄 My artwork was praised by the teacher.  
-私のアートワークは先生に褒められました。  
-🖌️ I will enter a competition next month.  
-私は来月、コンテストに参加するつもりです。  
-😊 Clubs help me make new friends.  
-クラブは私に新しい友達を作るのを助けます。  
-🎨 Did you join the art club this semester?  
-あなたは今学期アートクラブに参加しましたか？  
-🖌️ What do you create?  
-あなたは何を作りますか？  
-😄 Who inspires you?  
-誰があなたを刺激しますか？  
-🎨 What had you done before joining?  
-あなたは参加する前に何をしていましたか？  
-😊 What will happen if you participate actively?  
-積極的に参加すれば何が起こりますか？  
-🖌️ How is the club?  
-クラブはどうですか？  
-🎨 Why do you love drawing?  
-なぜあなたは描くのが好きですか？  
-😄 What was praised by the teacher?  
-何が先生に褒められましたか？  
-🖌️ What will you do next month?  
-あなたは来月何をするつもりですか？  
-😊 How do clubs help you?  
-クラブはどうやってあなたを助けますか？`
-    },
-
-    // Story 43 - Dealing with a Misunderstanding
-    {
-        title: "43. Dealing with a Misunderstanding",
-        content: `😕 There was a misunderstanding with my friend last week.  
-先週、友達との間で誤解がありました。  
-🗨️ We had different opinions about a project.  
-私たちはプロジェクトについて異なる意見を持っていました。  
-😄 My teacher, who is wise, mediated the situation.  
-賢い先生がその状況を調停しました。  
-📝 I had explained my side clearly.  
-私は自分の側をはっきりと説明していました。  
-😊 If we communicate better, we will avoid conflicts.  
-もっと良くコミュニケーションを取れば、私たちは衝突を避けます。  
-😕 The experience was more stressful than I anticipated.  
-その経験は予想よりストレスが多かったです。  
-🗨️ I have learned to listen actively.  
-私は積極的に聞くことを学びました。  
-😄 My friend and I apologized to each other.  
-友達と私はお互いに謝りました。  
-📝 I will be more careful in the future.  
-私は将来、もっと注意深くなるつもりです。  
-😊 Misunderstandings can be opportunities to grow.  
-誤解は成長する機会になり得ます。  
-😕 Was there a misunderstanding last week?  
-先週、誤解がありましたか？  
-🗨️ What did you have different opinions about?  
-あなたたちは何について異なる意見を持っていましたか？  
-😄 Who mediated the situation?  
-誰がその状況を調停しましたか？  
-📝 What had you explained clearly?  
-あなたは何をはっきりと説明していましたか？  
-😊 What will happen if you communicate better?  
-もっと良くコミュニケーションを取れば何が起こりますか？  
-😕 How was the experience?  
-その経験はどうでしたか？  
-🗨️ What have you learned?  
-あなたは何を学びましたか？  
-😄 What did you and your friend do?  
-あなたと友達は何をしましたか？  
-📝 What will you be in the future?  
-あなたは将来どうなるつもりですか？  
-😊 How can misunderstandings be opportunities?  
-誤解はどうやって機会になり得ますか？`
-    },
-
-    // Story 44 - Learning from a Mistake
-    {
-        title: "44. Learning from a Mistake",
-        content: `😔 I made a mistake on my science project.  
-私は科学プロジェクトでミスをしました。  
-🧪 The experiment, which failed, taught me a lot.  
-失敗した実験は私に多くを教えてくれました。  
-😄 My partner, who is understanding, supported me.  
-理解のあるパートナーが私を支えてくれました。  
-📊 I had misread the instructions.  
-私は指示を読み間違えていました。  
-😊 If I double-check, I will prevent errors.  
-二重に確認すれば、私はエラーを防ぎます。  
-😔 The mistake was more educational than success.  
-そのミスは成功より教育的でした。  
-🧪 I have become more careful in experiments.  
-私は実験でより注意深くなりました。  
-😄 My teacher encouraged me to try again.  
-先生は私に再挑戦するよう励ましてくれました。  
-📊 I will follow the steps accurately next time.  
-私は次回、ステップを正確に守るつもりです。  
-😊 Mistakes are part of learning.  
-ミスは学びの一部です。  
-😔 Did you make a mistake on your project?  
-あなたはプロジェクトでミスをしましたか？  
-🧪 What taught you a lot?  
-何があなたに多くを教えてくれましたか？  
-😄 Who supported you?  
-誰があなたを支えてくれましたか？  
-📊 What had you misread?  
-あなたは何を読み間違えていましたか？  
-😊 What will you do if you double-check?  
-二重に確認すればあなたは何をしますか？  
-😔 Why was the mistake educational?  
-なぜそのミスは教育的でしたか？  
-🧪 What have you become in experiments?  
-あなたは実験で何になりましたか？  
-😄 What did your teacher encourage you to do?  
-先生は何をするようあなたを励ましましたか？  
-📊 What will you do next time?  
-あなたは次回何をするつもりですか？  
-😊 Why are mistakes part of learning?  
-なぜミスは学びの一部ですか？`
-    },
-
-    // Story 45 - Making a Difficult Decision
-    {
-        title: "45. Making a Difficult Decision",
-        content: `🤔 I had to choose between two clubs at school.  
-私は学校で2つのクラブの間で選ばなければなりませんでした。  
-🎭 The drama club, which is popular, appealed to me.  
-人気のある演劇クラブが私に魅力的でした。  
-😄 My best friend, who is in art club, wanted me to join.  
-アートクラブにいる親友は私に参加してほしいと思っていました。  
-🎨 I had considered my interests carefully.  
-私は自分の興味を慎重に考えていました。  
-😊 If I choose drama, I will develop acting skills.  
-演劇を選べば、私は演技のスキルを伸ばします。  
-🤔 The decision was harder than I expected.  
-その決断は予想より難しかったです。  
-🎭 I have always enjoyed performing.  
-私はいつも演じるのが好きです。  
-😄 My parents supported my choice.  
-両親は私の選択を支持してくれました。  
-🎨 I will try art club next year.  
-私は来年、アートクラブを試すつもりです。  
-😊 Decisions shape our experiences.  
-決断は私たちの経験を形作ります。  
-🤔 Did you have to choose between two clubs?  
-あなたは2つのクラブの間で選ばなければなりませんでしたか？  
-🎭 What appealed to you?  
-何があなたに魅力的でしたか？  
-😄 Who wanted you to join art club?  
-誰があなたにアートクラブに参加してほしいと思っていましたか？  
-🎨 What had you considered carefully?  
-あなたは何を慎重に考えていましたか？  
-😊 What will you develop if you choose drama?  
-演劇を選べばあなたは何を伸ばしますか？  
-🤔 How was the decision?  
-その決断はどうでしたか？  
-🎭 Why do you enjoy performing?  
-なぜあなたは演じるのが好きですか？  
-😄 Who supported your choice?  
-誰があなたの選択を支持しましたか？  
-🎨 What will you try next year?  
-あなたは来年何を試すつもりですか？  
-😊 How do decisions shape experiences?  
-決断はどうやって経験を形作りますか？`
-    },
-
-    // Story 46 - Appreciating Nature
-    {
-        title: "46. Appreciating Nature",
-        content: `🌳 I went hiking in the forest last weekend.  
-私は先週末、森でハイキングをしました。  
-🍃 The trees, which were tall, provided shade.  
-背の高い木々が日陰を提供しました。  
-😄 My guide, who is experienced, shared stories.  
-経験豊富なガイドが話を共有しました。  
-🌄 I had admired the sunrise before hiking.  
-私はハイキングの前に日の出を賞賛していました。  
-😊 If I go again, I will camp overnight.  
-また行けば、私は一晩キャンプします。  
-🌳 The forest was more peaceful than the city.  
-森は街より平和でした。  
-🍃 I have always felt calm in nature.  
-私はいつも自然の中で落ち着きを感じます。  
-😄 I spotted a rare bird.  
-私は珍しい鳥を見つけました。  
-🌄 I will visit a national park next month.  
-私は来月、国立公園を訪れるつもりです。  
-😊 Nature reminds me of life’s beauty.  
-自然は私に人生の美しさを思い出させます。  
-🌳 Did you go hiking last weekend?  
-あなたは先週末ハイキングをしましたか？  
-🍃 What provided shade?  
-何が日陰を提供しましたか？  
-😄 Who shared stories?  
-誰が話を共有しましたか？  
-🌄 What had you admired before hiking?  
-あなたはハイキングの前に何を賞賛していましたか？  
-😊 What will you do if you go again?  
-また行けばあなたは何をしますか？  
-🌳 How was the forest compared to the city?  
-森は街と比べてどうでしたか？  
-🍃 Why do you feel calm in nature?  
-なぜあなたは自然の中で落ち着きを感じますか？  
-😄 What did you spot?  
-あなたは何を見つけましたか？  
-🌄 What will you visit next month?  
-あなたは来月何を訪れるつもりですか？  
-😊 What does nature remind you of?  
-自然は何をあなたに思い出させますか？`
-    },
-
-    // Story 47 - Experiencing a Natural Disaster
-    {
-        title: "47. Experiencing a Natural Disaster",
-        content: `🌪️ A typhoon hit our town last year.  
-台風が去年、私たちの町を襲いました。  
-🏠 Our house, which is old, sustained damage.  
-古い私たちの家は被害を受けました。  
-😄 The community, who is resilient, helped each other.  
-強靭なコミュニティがお互いを助けました。  
-🚧 I had prepared an emergency kit before the storm.  
-私は嵐の前に緊急キットを準備していました。  
-😊 If another typhoon comes, I will be ready.  
-また台風が来れば、私は準備ができています。  
-🌪️ The experience was more frightening than expected.  
-その経験は予想より怖かったです。  
-🏠 I have learned the importance of safety measures.  
-私は安全対策の重要性を学びました。  
-😄 My family and I volunteered to clean up.  
-家族と私は掃除をボランティアでしました。  
-🚧 I will check our house’s condition regularly.  
-私は定期的に家の状態をチェックするつもりです。  
-😊 Disasters teach us to be prepared.  
-災害は私たちに備えることを教えます。  
-🌪️ Did a typhoon hit your town last year?  
-台風は去年あなたの町を襲いましたか？  
-🏠 What sustained damage?  
-何が被害を受けましたか？  
-😄 Who helped each other?  
-誰がお互いを助けましたか？  
-🚧 What had you prepared before the storm?  
-あなたは嵐の前に何を準備していましたか？  
-😊 What will you be if another typhoon comes?  
-また台風が来ればあなたは何ですか？  
-🌪️ How was the experience?  
-その経験はどうでしたか？  
-🏠 What have you learned?  
-あなたは何を学びましたか？  
-😄 What did you and your family do?  
-あなたと家族は何をしましたか？  
-🚧 What will you check regularly?  
-あなたは何を定期的にチェックするつもりですか？  
-😊 What do disasters teach us?  
-災害は何を私たちに教えますか？`
-    },
-
-    // Story 48 - Reflecting on a Past Experience
-    {
-        title: "48. Reflecting on a Past Experience",
-        content: `📝 I wrote about my summer vacation in my diary.  
-私は日記に夏休みについて書きました。  
-🏖️ The beach trip, which was memorable, stood out.  
-思い出深いビーチ旅行が際立っていました。  
-😄 My sister, who loves swimming, enjoyed it.  
-泳ぐのが好きな妹がそれを楽しみました。  
-🌞 I had relaxed more than during school days.  
-私は学校の日々よりリラックスしていました。  
-😊 If I could, I would relive that day.  
-できれば、私はその日を再体験したいです。  
-📝 Writing helps me remember special moments.  
-書くことは私に特別な瞬間を思い出させるのを助けます。  
-🏖️ I have grown closer to my family through trips.  
-私は旅行を通じて家族とより親密になりました。  
-😄 We laughed a lot during the vacation.  
-私たちは休暇中にたくさん笑いました。  
-🌞 I will plan another trip next summer.  
-私は来年の夏に別の旅行を計画するつもりです。  
-😊 Reflecting makes me appreciate life more.  
-反省することは私に人生をより感謝させます。  
-📝 Did you write about your vacation?  
-あなたは休暇について書きましたか？  
-🏖️ What stood out in your diary?  
-あなたの日記で何が際立っていましたか？  
-😄 Who enjoyed the trip?  
-誰が旅行を楽しみましたか？  
-🌞 What had you done more than during school?  
-あなたは学校の時より何をしていましたか？  
-😊 What would you do if you could?  
-できればあなたは何をしますか？  
-📝 How does writing help you?  
-書くことはどうやってあなたを助けますか？  
-🏖️ What have you grown closer to?  
-あなたは何とより親密になりましたか？  
-😄 What did you do during the vacation?  
-あなたは休暇中に何をしましたか？  
-🌞 What will you plan next summer?  
-あなたは来年の夏に何を計画するつもりですか？  
-😊 Why does reflecting make you appreciate life?  
-なぜ反省することはあなたに人生を感謝させますか？`
+🏃‍♂️ Have you achieved a big goal?  
+大きな目標を達成したことがありますか？  
+🏅 What makes you feel proud?  
+何があなたを誇りに思いますか？  
+😄 Who helps you work toward goals?  
+誰が目標に向かって働くのを助けますか？  
+🏋️‍♂️ What do you do daily to improve?  
+毎日何をして向上しますか？  
+😊 What goal would you set next?  
+次にどんな目標を立てますか？  
+🏃‍♂️ What was tougher than you thought?  
+思ったより厳しかったものは何ですか？  
+🏅 How hard have you worked for something?  
+何かでどれくらい一生懸命働きましたか？  
+😄 Who cheers for you when you succeed?  
+成功したとき誰があなたを応援しますか？  
+🏋️‍♂️ What new challenge will you try?  
+どんな新しい挑戦を試しますか？  
+😊 How does success boost your confidence?  
+成功はどうやってあなたの自信を高めますか？`
     }
 ];
