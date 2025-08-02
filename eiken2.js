@@ -2014,5 +2014,139 @@ const eiken2 = [
 最近何を学びましたか？  
 📝 How do workshops build skills?  
 ワークショップはどうやってスキルを築きますか？`
+    },
+    // Story 46 - A Language Course
+    {
+        title: "46. A Language Course",
+        content: `🗣️ I enrolled in a Spanish course last semester.  
+先学期、スペイン語コースに登録しました。  
+🇪🇸 The teacher, who was patient, taught grammar.  
+辛抱強い先生は文法を教えてくれました。  
+😄 I had studied vocabulary before enrolling.  
+登録する前に語彙を勉強していました。  
+📚 If I practice daily, I might speak fluently.  
+毎日練習すれば、流暢に話せるかもしれません。  
+🗨️ Dialogues were practiced by us in pairs.  
+対話は私たちによってペアで練習されました。  
+🗣️ The classroom, which was colorful, was inviting.  
+カラフルな教室は魅力的でした。  
+🇪🇸 I will join a conversation club next month.  
+来月、会話クラブに参加するつもりです。  
+😊 My teacher said I improved quickly.  
+先生は私が早く上達したと言いました。  
+📚 I learned new phrases yesterday.  
+昨日、新しいフレーズを学びました。  
+🗨️ Language courses boost communication.  
+言語コースはコミュニケーションを高めます。  
+🗣️ Do you take language courses?  
+言語コースを受講しますか？  
+🇪🇸 Who teaches you grammar?  
+誰があなたに文法を教えますか？  
+😄 Have you studied vocabulary recently?  
+最近、語彙を勉強しましたか？  
+📚 Would you speak fluently?  
+流暢に話したいですか？  
+🗨️ Do you practice dialogues in pairs?  
+対話をペアで練習しますか？  
+🗣️ Are colorful classrooms inviting?  
+カラフルな教室は魅力的ですか？  
+🇪🇸 What club will you join next?  
+次にどのクラブに参加しますか？  
+😊 Who says you improve quickly?  
+誰があなたが早く上達したと言いますか？  
+📚 What phrases did you learn recently?  
+最近どんなフレーズを学びましたか？  
+🗨️ How do language courses boost communication?  
+言語コースはどうやってコミュニケーションを高めますか？`
+    },
+
+    // Story 47 - A Photography Hobby
+    {
+        title: "47. A Photography Hobby",
+        content: `📷 I started photography as a hobby last summer.  
+去年の夏、写真を趣味として始めました。  
+🎞️ The camera, which was new, captured details.  
+新しいカメラは詳細を捉えました。  
+😄 I had taken photos before buying it.  
+購入する前に写真を撮っていました。  
+📸 If I experiment more, I might win a contest.  
+もっと実験すれば、コンテストに勝てるかもしれません。  
+🖼️ Pictures were edited by me carefully.  
+写真は私によって慎重に編集されました。  
+📷 The park, which is scenic, inspired me.  
+風光明媚な公園は私を刺激しました。  
+🎞️ I will join a photography club next week.  
+来週、写真クラブに参加するつもりです。  
+😊 My friend said my photos were stunning.  
+友達は私の写真が素晴らしいと言いました。  
+📸 I photographed a sunset yesterday.  
+昨日、夕日を撮影しました。  
+🖼️ Photography sparks creativity.  
+写真は創造性を引き出します。  
+📷 Do you have a photography hobby?  
+写真を趣味にしていますか？  
+🎞️ What new equipment do you use?  
+どんな新しい機器を使いますか？  
+😄 Have you taken photos recently?  
+最近、写真を撮りましたか？  
+📸 Would you win a photo contest?  
+写真コンテストに勝ちますか？  
+🖼️ Do you edit pictures carefully?  
+写真を慎重に編集しますか？  
+📷 Are scenic places inspiring?  
+風光明媚な場所は刺激的ですか？  
+🎞️ What club will you join next?  
+次にどのクラブに参加しますか？  
+😊 Who says your photos are stunning?  
+誰があなたの写真が素晴らしいと言いますか？  
+📸 What did you photograph recently?  
+最近何を撮影しましたか？  
+🖼️ How does photography spark creativity?  
+写真はどうやって創造性を引き出しますか？`
+    },
+
+    // Story 48 - A Cooking Class
+    {
+        title: "48. A Cooking Class",
+        content: `🍳 I joined a cooking class last month.  
+先月、料理教室に参加しました。  
+🥄 The chef, who was skilled, taught recipes.  
+熟練したシェフはレシピを教えてくれました。  
+😄 I had cooked meals before enrolling.  
+登録する前に食事を作っていました。  
+🍴 If I practice more, I might cook professionally.  
+もっと練習すれば、プロとして料理できるかもしれません。  
+🥗 Dishes were prepared by us in teams.  
+料理は私たちによってチームで準備されました。  
+🍳 The kitchen, which was modern, was clean.  
+モダンなキッチンは清潔でした。  
+🥄 I will try baking next weekend.  
+来週末、ベーキングを試すつもりです。  
+😊 My teacher said my dish was tasty.  
+先生は私の料理が美味しいと言いました。  
+🍴 I made pasta yesterday.  
+昨日、パスタを作りました。  
+🥗 Cooking classes inspire creativity.  
+料理教室は創造性を刺激します。  
+🍳 Do you take cooking classes?  
+料理教室に参加しますか？  
+🥄 Who teaches you recipes?  
+誰があなたにレシピを教えますか？  
+😄 Have you cooked meals recently?  
+最近、食事を作りましたか？  
+🍴 Would you cook professionally?  
+プロとして料理しますか？  
+🥗 Do you prepare dishes in teams?  
+料理をチームで準備しますか？  
+🍳 Are modern kitchens clean?  
+モダンなキッチンは清潔ですか？  
+🥄 What will you try baking?  
+何を焼いてみますか？  
+😊 Who says your dishes are tasty?  
+誰があなたの料理が美味しいと言いますか？  
+🍴 What did you make recently?  
+最近何を作りましたか？  
+🥗 How do cooking classes inspire creativity?  
+料理教室はどうやって創造性を刺激しますか？`
     }
 ];
