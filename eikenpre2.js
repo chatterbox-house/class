@@ -1483,5 +1483,679 @@ const eikenpre2 = [
 どんな新しい挑戦を試しますか？  
 😊 How does success boost your confidence?  
 成功はどうやってあなたの自信を高めますか？`
+    },
+ // Story 34 - Helping a Family Member
+    {
+        title: "34. Helping a Family Member",
+        content: `👵 I helped my grandmother with gardening yesterday.  
+私は昨日、祖母の園芸を手伝いました。  
+🌷 We planted flowers that she loves.  
+私たちは彼女が好きな花を植えました。  
+😄 She is happier when I assist her.  
+私が手伝うと、彼女はより幸せです。  
+🧤 I had worn gloves to protect my hands.  
+私は手を守るために手袋をしていました。  
+😊 If I help again, she will teach me more.  
+また手伝えば、彼女は私にもっと教えてくれます。  
+👵 Gardening is more enjoyable with company.  
+園芸は仲間と一緒だとより楽しいです。  
+🌷 I have learned about different plants.  
+私はさまざまな植物について学びました。  
+😄 My grandmother shared her gardening secrets.  
+祖母は彼女の園芸の秘密を教えてくれました。  
+🧤 I will buy new seeds for her next time.  
+私は次回、彼女のために新しい種を買うつもりです。  
+😊 Helping family strengthens our bond.  
+家族を助けることは私たちの絆を強くします。  
+👵 Do you spend time with your grandparents?  
+祖父母と時間を過ごしますか？  
+🌷 What plants or flowers do you like?  
+どんな植物や花が好きですか？  
+😄 Who feels happy when you help them?  
+あなたが手伝うと誰が幸せになりますか？  
+🧤 What do you use to protect yourself when working?  
+働くとき何を使って身を守りますか？  
+😊 What would you like to learn from a family member?  
+家族から何を学びたいですか？  
+👵 Is spending time with others more fun than alone?  
+他人と過ごすのは一人より楽しいですか？  
+🌷 What have you learned about recently?  
+最近何について学びましたか？  
+😄 Who shares advice with you?  
+誰があなたにアドバイスをくれますか？  
+🧤 What would you buy for someone you help?  
+助ける人に何を買いますか？  
+😊 How does helping others make you feel?  
+他人を助けることはあなたにどんな気持ちを与えますか？`
+    },
+
+    // Story 35 - A Day at the Zoo
+    {
+        title: "35. A Day at the Zoo",
+        content: `🦒 Ryo visited the zoo with his family last weekend.  
+リョウは先週末、家族と動物園を訪れました。  
+🐘 Animals, which were exotic, amazed him.  
+エキゾチックな動物たちが彼を驚かせました。  
+😄 He had watched a documentary before going.  
+彼は行く前にドキュメンタリーを見ていました。  
+📸 Photos were taken by his sister.  
+写真は彼の姉によって撮られました。  
+😊 If he returns, he will see the penguins.  
+戻れば、彼はペンギンを見ます。  
+🦒 The zoo was busier than he expected.  
+動物園は彼が思っていたより混雑していました。  
+🐘 Ryo has loved animals since he was young.  
+リョウは若い頃から動物が大好きです。  
+😄 He learned about elephant habitats.  
+彼はゾウの生息地について学びました。  
+📸 He will share his photos with friends.  
+彼は友達に写真を共有するつもりです。  
+😊 Zoos teach him about nature.  
+動物園は彼に自然を教えます。  
+🦒 Have you ever visited a zoo?  
+動物園に行ったことがありますか？  
+🐘 What animals do you find interesting?  
+どんな動物が面白いと思いますか？  
+😄 What do you watch to learn something new?  
+新しいことを学ぶために何を見ますか？  
+📸 Who takes photos when you go out?  
+外出時に誰が写真を撮りますか？  
+😊 What would you do at a zoo?  
+動物園で何をしますか？  
+🦒 Are busy places exciting for you?  
+混雑した場所はあなたにとって興奮しますか？  
+🐘 What have you loved since you were young?  
+若い頃から何が好きですか？  
+😄 What have you learned about animals?  
+動物について何を学びましたか？  
+📸 How do you share your experiences?  
+どうやって経験を共有しますか？  
+😊 What do you learn from visiting new places?  
+新しい場所を訪れて何を学びますか？`
+    },
+
+    // Story 36 - A New Pet
+    {
+        title: "36. A New Pet",
+        content: `🐶 Aiko adopted a puppy last month.  
+アイコは先月、子犬を飼いました。  
+🐾 The puppy, which is playful, runs fast.  
+遊び好きな子犬は速く走ります。  
+😄 She had read about dogs before adopting.  
+彼女は飼う前に犬について読んでいました。  
+🦴 The puppy was trained by her brother.  
+子犬は彼女の兄によって訓練されました。  
+😊 If she cares for it, it will stay healthy.  
+世話をすれば、子犬は健康でいられます。  
+🐶 Aiko has wanted a pet since childhood.  
+アイコは子供の頃からペットを欲しがっていました。  
+🐾 She enjoys playing with her puppy daily.  
+彼女は毎日子犬と遊ぶのを楽しんでいます。  
+😄 The puppy makes her laugh a lot.  
+子犬は彼女をたくさん笑わせます。  
+🦴 She will buy a new toy for it soon.  
+彼女はまもなく子犬に新しいおもちゃを買うつもりです。  
+😊 Pets bring joy to her life.  
+ペットは彼女の人生に喜びをもたらします。  
+🐶 Have you ever had a pet?  
+ペットを飼ったことがありますか？  
+🐾 What animals do you think are playful?  
+どんな動物が遊び好きだと思いますか？  
+😄 What do you read about before a big decision?  
+大きな決断の前に何を読みますか？  
+🦴 Who helps train or care for animals you know?  
+知っている動物の訓練や世話を誰がしますか？  
+😊 How do you keep something healthy?  
+何かを健康に保つにはどうしますか？  
+🐶 What did you want when you were young?  
+若い頃に何を欲しがっていましたか？  
+🐾 What do you enjoy doing every day?  
+毎日何をするのが好きですか？  
+😄 What makes you laugh a lot?  
+何があなたをたくさん笑わせますか？  
+🦴 What would you buy for a pet?  
+ペットに何を買いますか？  
+😊 How do animals make your life better?  
+動物はどうやってあなたの人生を良くしますか？`
+    },
+
+    // Story 37 - A Community Project
+    {
+        title: "37. A Community Project",
+        content: `🌳 Yuna joined a community project last week.  
+ユナは先週、コミュニティプロジェクトに参加しました。  
+🧹 She cleaned a park that was very dirty.  
+彼女はとても汚れた公園を掃除しました。  
+😄 The leader, who was kind, thanked everyone.  
+優しいリーダーがみんなに感謝しました。  
+🗑️ She had picked up trash before the project.  
+彼女はプロジェクト前にゴミを拾っていました。  
+😊 If she joins again, she will bring gloves.  
+また参加すれば、彼女は手袋を持って行きます。  
+🌳 The park looks better than it did before.  
+公園は以前より良くなっています。  
+🧹 Yuna enjoys helping her neighborhood.  
+ユナは近所を助けるのを楽しんでいます。  
+😄 Her friends joined the cleanup too.  
+彼女の友達も掃除に参加しました。  
+🗑️ She will organize a cleanup next month.  
+彼女は来月、掃除を企画するつもりです。  
+😊 Community work makes her proud.  
+コミュニティの仕事は彼女を誇りに思います。  
+🌳 Have you joined a community project?  
+コミュニティプロジェクトに参加したことがありますか？  
+🧹 What do you do to keep places clean?  
+場所をきれいに保つために何をしますか？  
+😄 Who has thanked you for helping?  
+誰があなたに助けたことで感謝しましたか？  
+🗑️ Have you ever picked up trash somewhere?  
+どこかでゴミを拾ったことがありますか？  
+😊 What would you bring to a group activity?  
+グループ活動に何を持って行きますか？  
+🌳 How do places look after you help?  
+手伝った後、場所はどう見えますか？  
+🧹 What do you enjoy doing for others?  
+他人に何をするのが好きですか？  
+😄 Who do you work with on projects?  
+プロジェクトで誰と一緒に働きますか？  
+🗑️ What will you organize in the future?  
+将来何を企画しますか？  
+😊 What makes you proud of your work?  
+仕事で何があなたを誇りに思いますか？`
+    },
+
+    // Story 38 - A Science Fair
+    {
+        title: "38. A Science Fair",
+        content: `🔬 Kenta presented at a science fair yesterday.  
+ケンタは昨日、科学フェアで発表しました。  
+🧪 His project, which was creative, won a prize.  
+彼の創造的なプロジェクトが賞を獲得しました。  
+😄 The judge, who was strict, liked his idea.  
+厳しい裁判官が彼のアイデアを気に入りました。  
+📊 He had tested his hypothesis before the fair.  
+彼はフェア前に仮説をテストしていました。  
+😊 If he participates again, he will try harder.  
+また参加すれば、彼はもっと努力します。  
+🔬 The fair was more exciting than class.  
+フェアは授業より興奮しました。  
+🧪 Kenta has loved experiments since last year.  
+ケンタは去年から実験が好きです。  
+😄 He explained his project to visitors.  
+彼は訪問者にプロジェクトを説明しました。  
+📊 He will study chemistry next time.  
+彼は次回、化学を勉強するつもりです。  
+😊 Science fairs inspire his curiosity.  
+科学フェアは彼の好奇心を刺激します。  
+🔬 Have you been to a science fair?  
+科学フェアに行ったことがありますか？  
+🧪 What creative ideas do you have?  
+どんな創造的なアイデアがありますか？  
+😄 Who likes your work or projects?  
+誰があなたの仕事やプロジェクトを気に入りますか？  
+📊 What have you tested before?  
+これまでに何をテストしましたか？  
+😊 What would you do at another fair?  
+別のフェアで何をしますか？  
+🔬 What is more exciting than school?  
+学校より興奮するものは何ですか？  
+🧪 What experiments do you like?  
+どんな実験が好きですか？  
+😄 What do you explain to others?  
+他人に何を説明しますか？  
+📊 What subject will you study next?  
+次にどの科目を勉強しますか？  
+😊 What inspires your curiosity?  
+何があなたの好奇心を刺激しますか？`
+    },
+
+    // Story 39 - A Family Vacation
+    {
+        title: "39. A Family Vacation",
+        content: `🏖️ Mio’s family went on vacation last summer.  
+ミオの家族は去年の夏、休暇に行きました。  
+🌊 The beach, which was sunny, was relaxing.  
+晴れたビーチはリラックスできました。  
+😄 She had packed her swimsuit before leaving.  
+彼女は出発前に水着を詰めていました。  
+🏄 Waves were surfed by her brother.  
+波は彼女の兄によってサーフィンされました。  
+😊 If they go again, she will try surfing too.  
+また行けば、彼女もサーフィンを試します。  
+🏖️ The vacation was better than staying home.  
+その休暇は家にいるより良かったです。  
+🌊 Mio has loved the ocean since childhood.  
+ミオは子供の頃から海が大好きです。  
+😄 They played games on the sand.  
+彼らは砂の上でゲームをしました。  
+🏄 She will take swimming lessons soon.  
+彼女はまもなく水泳のレッスンを受けるつもりです。  
+😊 Vacations create happy memories.  
+休暇は幸せな思い出を作ります。  
+🏖️ Have you gone on a family vacation?  
+家族で休暇に行ったことがありますか？  
+🌊 What do you like about the beach?  
+ビーチの何が好きですか？  
+😄 What do you pack for a trip?  
+旅行に何を詰めますか？  
+🏄 Who does fun activities with you?  
+誰があなたと楽しい活動をしますか？  
+😊 What would you try on a vacation?  
+休暇で何を試したいですか？  
+🏖️ Is traveling better than staying home?  
+旅行は家にいるより良いですか？  
+🌊 What have you loved since you were young?  
+若い頃から何が好きですか？  
+😄 What games do you play with others?  
+他人とどんなゲームをしますか？  
+🏄 What new activity will you try soon?  
+近日中にどんな新しい活動を試しますか？  
+😊 What makes a vacation memorable?  
+休暇を思い出深いものにするのは何ですか？`
+    },
+
+    // Story 40 - A School Play
+    {
+        title: "40. A School Play",
+        content: `🎭 Saki performed in a school play last week.  
+サキは先週、学校の劇で演じました。  
+🎤 Her lines, which were long, were memorized.  
+彼女の長い台詞は暗記されていました。  
+😄 The director, who was patient, helped her.  
+我慢強い監督が彼女を助けました。  
+🎬 She had rehearsed every day before the show.  
+彼女はショーの前に毎日リハーサルをしていました。  
+😊 If she performs again, she will be more confident.  
+また演じれば、彼女はもっと自信を持ちます。  
+🎭 The play was more fun than expected.  
+その劇は予想より楽しかったです。  
+🎤 Saki enjoys acting with her friends.  
+サキは友達と演技するのが好きです。  
+😄 The audience clapped loudly for her.  
+観客は彼女に大きな拍手を送りました。  
+🎬 She will join the drama club next term.  
+彼女は次の学期、演劇クラブに参加するつもりです。  
+😊 Acting makes her feel alive.  
+演技は彼女を生き生きとさせます。  
+🎭 Have you ever been in a school play?  
+学校の劇に参加したことがありますか？  
+🎤 What is hard to memorize for you?  
+あなたにとって何を暗記するのは難しいですか？  
+😄 Who helps you practice something new?  
+新しいことを練習するとき誰が助けますか？  
+🎬 What have you rehearsed for?  
+何のためにリハーサルをしましたか？  
+😊 How do you gain confidence?  
+どうやって自信を得ますか？  
+🎭 What was more fun than you expected?  
+予想より楽しかったものは何ですか？  
+🎤 What do you enjoy doing with friends?  
+友達と何をするのが好きですか？  
+😄 When have people clapped for you?  
+いつ人があなたに拍手を送りましたか？  
+🎬 What club would you join?  
+どんなクラブに参加したいですか？  
+😊 What makes you feel alive?  
+何があなたを生き生きとさせますか？`
+    },
+
+    // Story 41 - A Sports Competition
+    {
+        title: "41. A Sports Competition",
+        content: `🏀 Taro competed in a basketball game yesterday.  
+太郎は昨日、バスケットボールの試合で競いました。  
+🏆 His team, which was strong, won first place.  
+彼の強いチームが1位を獲得しました。  
+😄 He had practiced shooting before the game.  
+彼は試合前にシュートの練習をしていました。  
+🏀 The court was cleaned by the staff.  
+コートはスタッフによって掃除されました。  
+😊 If he plays again, he will score more.  
+またプレーすれば、彼はもっと得点します。  
+🏀 The game was more intense than practice.  
+試合は練習より激しかったです。  
+🏆 Taro has played sports since he was ten.  
+太郎は10歳からスポーツをしています。  
+😄 His coach praised his teamwork.  
+コーチは彼のチームワークを褒めました。  
+🏀 He will train harder next season.  
+彼は次のシーズン、もっと厳しく練習するつもりです。  
+😊 Competitions excite him a lot.  
+競争は彼をとても興奮させます。  
+🏀 Have you played in a sports competition?  
+スポーツ競技に参加したことがありますか？  
+🏆 What prize have you won before?  
+これまでにどんな賞を獲得しましたか？  
+😄 What do you practice before a big event?  
+大きなイベント前に何を練習しますか？  
+🏀 Who helps prepare places you use?  
+あなたが使う場所を誰が準備しますか？  
+😊 What would you do better next time?  
+次回、何をより良くしますか？  
+🏀 Are competitions different from practice?  
+競技は練習と違いますか？  
+🏆 How long have you done a favorite activity?  
+好きな活動をどのくらい続けていますか？  
+😄 Who has praised your skills?  
+誰があなたのスキルを褒めましたか？  
+🏀 What will you train for in the future?  
+将来、何のために練習しますか？  
+😊 What excites you about competitions?  
+競争で何があなたを興奮させますか？`
+    },
+
+    // Story 42 - A Shopping Trip
+    {
+        title: "42. A Shopping Trip",
+        content: `🛍️ Hana went shopping with her mom yesterday.  
+ハナは昨日、母と買い物に行きました。  
+👗 She tried clothes that were colorful.  
+彼女は色鮮やかな服を試着しました。  
+😄 The shop assistant, who was polite, helped her.  
+礼儀正しい店員が彼女を助けました。  
+🛍️ She had saved money before the trip.  
+彼女は旅行前に貯金していました。  
+😊 If she shops again, she will buy shoes.  
+また買い物に行けば、彼女は靴を買います。  
+🛍️ The mall was busier than last time.  
+モールは前回より混雑していました。  
+👗 Hana enjoys finding new styles.  
+ハナは新しいスタイルを見つけるのが好きです。  
+😄 She bought a gift for her friend.  
+彼女は友達に贈り物を買いました。  
+🛍️ She will visit a new store next week.  
+彼女は来週、新しい店を訪れるつもりです。  
+😊 Shopping makes her feel happy.  
+買い物は彼女を幸せにします。  
+🛍️ Do you like going shopping?  
+買い物に行くのは好きですか？  
+👗 What kind of clothes do you like?  
+どんな服が好きですか？  
+😄 Who helps you when you shop?  
+買い物するとき誰が助けますか？  
+🛍️ Have you saved money for something special?  
+何か特別なために貯金したことがありますか？  
+😊 What would you buy on a shopping trip?  
+買い物旅行で何を買いますか？  
+🛍️ Are busy places fun for you?  
+混雑した場所はあなたにとって楽しいですか？  
+👗 What new things do you like to find?  
+どんな新しいものを見つけるのが好きですか？  
+😄 What gifts have you bought for others?  
+他人にどんな贈り物を買いましたか？  
+🛍️ What store would you visit soon?  
+近日中にどんな店を訪れますか？  
+😊 What makes you happy when shopping?  
+買い物で何があなたを幸せにしますか？`
+    },
+
+    // Story 43 - A Visit to a Farm
+    {
+        title: "43. A Visit to a Farm",
+        content: `🚜 Riku visited a farm with his class last week.  
+リクは先週、クラスで農場を訪れました。  
+🐄 Animals, which were friendly, greeted him.  
+友好的な動物たちが彼を迎えました。  
+😄 He had learned about farming before going.  
+彼は行く前に農業について学んでいました。  
+🥕 Vegetables were picked by the students.  
+野菜は生徒たちによって収穫されました。  
+😊 If he visits again, he will feed the animals.  
+また訪れれば、彼は動物に餌をやるつもりです。  
+🚜 The farm was quieter than the city.  
+農場は街より静かでした。  
+🐄 Riku enjoys nature more than technology.  
+リクはテクノロジーより自然を楽しんでいます。  
+😄 He tried fresh milk for the first time.  
+彼は初めて新鮮なミルクを試しました。  
+🥕 He will grow a plant at home soon.  
+彼はまもなく家で植物を育てるつもりです。  
+😊 Farms teach him about food sources.  
+農場は彼に食料の供給源を教えます。  
+🚜 Have you visited a farm before?  
+農場を訪れたことがありますか？  
+🐄 What animals do you like to see?  
+どんな動物を見るのが好きですか？  
+😄 What have you learned about food?  
+食べ物について何を学びましたか？  
+🥕 What vegetables do you enjoy?  
+どんな野菜が好きですか？  
+😊 What would you do at a farm?  
+農場で何をしますか？  
+🚜 Do you prefer quiet or noisy places?  
+静かな場所と騒がしい場所、どちらが好きですか？  
+🐄 What do you enjoy more than technology?  
+テクノロジーより何が好きですか？  
+😄 What new food have you tried?  
+どんな新しい食べ物を試しましたか？  
+🥕 What will you grow at home?  
+家で何を育てますか？  
+😊 What do you learn from nature?  
+自然から何を学びますか？`
+    },
+
+    // Story 44 - A Book Club
+    {
+        title: "44. A Book Club",
+        content: `📚 Yumi joined a book club this month.  
+ユミはこの月、読書クラブに参加しました。  
+📖 She read a novel that was very exciting.  
+彼女はとても興奮する小説を読みました。  
+😄 The leader, who was smart, led discussions.  
+賢いリーダーが議論を導きました。  
+🗣️ She had shared her ideas before the meeting.  
+彼女は会議前にアイデアを共有していました。  
+😊 If she reads more, she will learn new words.  
+もっと読めば、彼女は新しい単語を学びます。  
+📚 The club meets more often than last year.  
+クラブは去年より頻繁に集まります。  
+📖 Yumi enjoys stories about adventure.  
+ユミは冒険の物語を楽しんでいます。  
+😄 She recommended a book to her friend.  
+彼女は友達に本を勧めました。  
+🗣️ She will host a meeting next time.  
+彼女は次回、会議を主催するつもりです。  
+😊 Books make her imagination grow.  
+本は彼女の想像力を育てます。  
+📚 Have you ever joined a book club?  
+読書クラブに参加したことがありますか？  
+📖 What kind of books do you enjoy?  
+どんな本が好きですか？  
+😄 Who leads activities you join?  
+参加する活動を誰が導きますか？  
+🗣️ What ideas have you shared with others?  
+他人とどんなアイデアを共有しましたか？  
+😊 What would you learn from reading more?  
+もっと読むことで何を学びますか？  
+📚 How often do you join group activities?  
+グループ活動にどのくらいの頻度で参加しますか？  
+📖 What stories do you find exciting?  
+どんな物語が興奮しますか？  
+😄 What have you recommended to a friend?  
+友達に何を勧めましたか？  
+🗣️ What would you like to lead?  
+何を主催したいですか？  
+😊 How do books help your imagination?  
+本はどうやってあなたの想像力を助けますか？`
+    },
+
+    // Story 45 - A Charity Event
+    {
+        title: "45. A Charity Event",
+        content: `🤝 Koki helped at a charity event last weekend.  
+コウキは先週末、慈善イベントで手伝いました。  
+🎁 Donations, which were generous, were collected.  
+寛大な寄付が集められました。  
+😄 The organizer, who was kind, thanked him.  
+優しい主催者が彼に感謝しました。  
+🏃 He had run in a charity race before.  
+彼は以前、慈善レースを走っていました。  
+😊 If he helps again, he will invite friends.  
+また手伝えば、彼は友達を招待します。  
+🤝 The event was more meaningful than expected.  
+そのイベントは予想より意味深かったです。  
+🎁 Koki enjoys supporting good causes.  
+コウキは良い目的を支持するのが好きです。  
+😄 He met new people while helping.  
+彼は手伝いながら新しい人に会いました。  
+🏃 He will join another event next month.  
+彼は来月、別のイベントに参加するつもりです。  
+😊 Charity work makes him feel proud.  
+慈善活動は彼を誇りに思います。  
+🤝 Have you helped at a charity event?  
+慈善イベントで手伝ったことがありますか？  
+🎁 What have you given to others?  
+他人に何を与えましたか？  
+😄 Who has thanked you for your help?  
+誰があなたの助けに感謝しましたか？  
+🏃 What activities have you done for others?  
+他人にどんな活動をしましたか？  
+😊 Who would you invite to help with you?  
+誰を一緒に手伝うよう招待しますか？  
+🤝 What was more meaningful than expected?  
+予想より意味深かったものは何ですか？  
+🎁 Why do you support certain causes?  
+なぜ特定の目的を支持しますか？  
+😄 Who have you met at an event?  
+イベントで誰に会いましたか？  
+🏃 What event will you join soon?  
+近日中にどんなイベントに参加しますか？  
+😊 What makes you proud of your actions?  
+あなたの行動で何が誇りに思いますか？`
+    },
+
+    // Story 46 - A Language Class
+    {
+        title: "46. A Language Class",
+        content: `🗣️ Nao started a Spanish class this month.  
+ナオはこの月、スペイン語のクラスを始めました。  
+📚 She learned words that were new to her.  
+彼女は彼女にとって新しい単語を学びました。  
+😄 The teacher, who was lively, made it fun.  
+活気のある先生がそれを楽しくしました。  
+🖊️ She had practiced speaking before class.  
+彼女は授業前に話す練習をしていました。  
+😊 If she studies more, she will speak fluently.  
+もっと勉強すれば、彼女は流暢に話せます。  
+🗣️ The class is harder than she expected.  
+そのクラスは彼女が思っていたより難しいです。  
+📚 Nao enjoys learning about new cultures.  
+ナオは新しい文化を学ぶのが好きです。  
+😄 She practiced with a classmate yesterday.  
+彼女は昨日、クラスメイトと練習しました。  
+🖊️ She will write a story in Spanish soon.  
+彼女はまもなくスペイン語で物語を書くつもりです。  
+😊 Languages open new opportunities.  
+言語は新しい機会を開きます。  
+🗣️ Have you taken a language class?  
+言語のクラスを受けたことがありますか？  
+📚 What new words have you learned?  
+どんな新しい単語を学びましたか？  
+😄 Who makes learning fun for you?  
+誰があなたに楽しく学ばせますか？  
+🖊️ What do you practice before a lesson?  
+授業前に何を練習しますか？  
+😊 What would you do if you spoke another language?  
+別の言語を話せたら何をしますか？  
+🗣️ What is harder than you expected?  
+予想より難しいものは何ですか？  
+📚 What cultures do you like to learn about?  
+どんな文化を学ぶのが好きですか？  
+😄 Who do you practice new skills with?  
+新しいスキルは誰と練習しますか？  
+🖊️ What will you write about soon?  
+近日中に何について書きますか？  
+😊 How do new skills help you?  
+新しいスキルはどうやってあなたを助けますか？`
+    },
+
+    // Story 47 - A Camping Trip
+    {
+        title: "47. A Camping Trip",
+        content: `⛺ Rina went camping with friends last weekend.  
+リナは先週末、友達とキャンプに行きました。  
+🔥 A campfire, which was warm, lit the night.  
+暖かいキャンプファイヤーが夜を照らしました。  
+😄 She had packed a tent before leaving.  
+彼女は出発前にテントを詰めていました。  
+🏕️ Stars were seen by everyone clearly.  
+星はみんなにはっきりと見えました。  
+😊 If she camps again, she will bring a map.  
+またキャンプすれば、彼女は地図を持って行きます。  
+⛺ The trip was more relaxing than home.  
+その旅行は家よりリラックスできました。  
+🔥 Rina enjoys outdoor adventures.  
+リナはアウトドアの冒険を楽しんでいます。  
+😄 They told stories around the fire.  
+彼らは火の周りで物語を話しました。  
+🏕️ She will plan a hike next time.  
+彼女は次回、ハイキングを計画するつもりです。  
+😊 Camping makes her feel free.  
+キャンプは彼女を自由に感じさせます。  
+⛺ Have you ever gone camping?  
+キャンプに行ったことがありますか？  
+🔥 What do you like about campfires?  
+キャンプファイヤーの何が好きですか？  
+😄 What do you pack for a trip?  
+旅行に何を詰めますか？  
+🏕️ What do you see in nature at night?  
+夜の自然で何を見ますか？  
+😊 What would you bring camping?  
+キャンプに何を持って行きますか？  
+⛺ Is camping more fun than staying home?  
+キャンプは家にいるより楽しいですか？  
+🔥 What adventures do you enjoy?  
+どんな冒険が好きですか？  
+😄 What stories do you tell with friends?  
+友達にどんな物語を話しますか？  
+🏕️ What outdoor activity will you plan?  
+どんなアウトドア活動を計画しますか？  
+😊 What makes you feel free?  
+何があなたを自由に感じさせますか？`
+    },
+
+    // Story 48 - A Talent Show
+    {
+        title: "48. A Talent Show",
+        content: `🎤 Kai performed at a talent show yesterday.  
+カイは昨日、タレントショーで演じました。  
+🎶 His song, which was original, impressed everyone.  
+彼のオリジナル曲はみんなを感動させました。  
+😄 The host, who was funny, introduced him.  
+面白いホストが彼を紹介しました。  
+🎸 He had practiced guitar for months.  
+彼は何ヶ月もギターを練習していました。  
+😊 If he performs again, he will sing louder.  
+また演じれば、彼はもっと大きな声で歌います。  
+🎤 The show was more exciting than last year.  
+そのショーは去年より興奮しました。  
+🎶 Kai enjoys sharing his music.  
+カイは音楽を共有するのが好きです。  
+😄 The audience cheered for his performance.  
+観客は彼のパフォーマンスを応援しました。  
+🎸 He will write a new song soon.  
+彼はまもなく新しい曲を書くつもりです。  
+😊 Talent shows boost his confidence.  
+タレントショーは彼の自信を高めます。  
+🎤 Have you performed in a talent show?  
+タレントショーで演じたことがありますか？  
+🎶 What kind of music do you like to perform?  
+どんな音楽を演奏するのが好きですか？  
+😄 Who makes events fun for you?  
+誰がイベントを楽しくしますか？  
+🎸 What have you practiced for a long time?  
+長い間何を練習しましたか？  
+😊 What would you do at another show?  
+別のショーで何をしますか？  
+🎤 Are live events exciting for you?  
+ライブイベントはあなたにとって興奮しますか？  
+🎶 What do you like to share with others?  
+他人と何を共有するのが好きですか？  
+😄 When have people cheered for you?  
+いつ人があなたを応援しましたか？  
+🎸 What creative project will you start?  
+どんな創造的なプロジェクトを始めますか？  
+😊 How do performances help your confidence?  
+パフォーマンスはどうやってあなたの自信を高めますか？`
     }
 ];
