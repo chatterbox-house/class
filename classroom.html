@@ -2690,15 +2690,13 @@ function loadLessonsData() {
                 'Eiken2': eiken2,
                 'EikenPre2': eikenpre2,
                 'EikenPre2Plus': eikenpre2plus,
-'Eiken3': { 
-    stories: [
-        {
-            title: "Yuki's English Journey",
-            content: eiken3.story_1
-        }
-    ],
-    questions: eiken3questions.questions
-},
+                'Eiken3': {
+                    stories: window.eiken3 ? window.eiken3.map(story => ({
+                        title: story.title,
+                        content: story.content
+                    })) : [],
+                    questions: window.eiken3questions ? window.eiken3questions.questions : []
+                },
             'Eiken4': {
     stories: Array.isArray(eiken4) ? 
         eiken4.map(story => ({
