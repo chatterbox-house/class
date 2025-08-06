@@ -1,4 +1,4 @@
-// eikenpre2.js - Eiken 2 Stories
+// eiken2.js - Eiken 2 Stories
 const eiken2 = [
     // Story 1 - A University Orientation
     {
@@ -2150,3 +2150,4 @@ const eiken2 = [
 料理教室はどうやって創造性を刺激しますか？`
     }
 ];
+
