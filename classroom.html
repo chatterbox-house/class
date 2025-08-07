@@ -1108,6 +1108,9 @@
             <div class="dropdown">
 <select id="classSelector">
     <option value="">Select Class</option>
+    <option value="Bronze">Bronze</option>
+    <option value="Silver">Silver</option>
+    <option value="Gold">Gold</option>
     <option value="Eiken5">Eiken 5</option>
     <option value="Eiken4">Eiken 4</option>
     <option value="Eiken3">Eiken 3</option>
@@ -1196,12 +1199,16 @@
 <script src="x.js"></script>
 <script src="c.js"></script>
 <script src="QA5.js"></script>
+<script src="bronze.js"></script>
+<script src="silver.js"></script>
+<script src="gold.js"></script>
 <script src="eiken5story.js"></script>
 <script src="eiken3.js"></script>
 <script src="eiken3questions.js"></script>
 <script src="eiken4.js"></script>
 <script src="easyquestions.js"></script>
 <script src="gettingtoknow.js"></script>
+<script src="wouldyourather.js"></script>
 <script src="eikenpre2.js"></script>
 <script src="eikenpre2plus.js"></script>
 <script src="eiken2.js"></script>
@@ -2725,6 +2732,10 @@ function loadLessonsData() {
                         {
                             title: 'Easy Questions',
                             content: easyquestions2.questions
+                        },
+                        {
+                            title: 'Would You Rather',
+                            content: wouldyourather.questions
                         }
                     ]
                 }
