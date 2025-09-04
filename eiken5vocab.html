@@ -1,98 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Vocab TV — Flash & Match</title>
   <style>
     :root{
       --bg:#0f1724;
-      --panel:#111827;
-      --muted:#94a3b8;
-      --accent:#60a5fa;
-      --accent-2:#34d399;
-      --danger:#fb7185;
+      --panel:#0b1220;
+      --muted:#9aa6b8;
+      --accent:#60a5fa; /* blue */
+      --accent-2:#34d399; /* green */
       --gold:#fbbf24;
+      --danger:#fb7185;
       --text:#e6eef8;
       --card-radius:1.6vh;
       --pad:2vh;
     }
-    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
-    html,body{height:100%;width:100%;margin:0;padding:0;overflow:hidden;background:var(--bg);color:var(--text);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Apple Color Emoji","Segoe UI Emoji";
-    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{height:100%;width:100%;margin:0;padding:0;overflow:hidden;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Apple Color Emoji"}
     .no-scroll{position:fixed;inset:0;overflow:hidden}
+
     /* App shell */
     .screen{position:fixed;inset:0;display:none;padding:var(--pad);align-items:center;justify-content:center}
     .screen.active{display:flex}
-    .card{width:100%;max-width:180vh;aspect-ratio:16/9;border-radius:calc(var(--card-radius));background:linear-gradient(180deg,var(--panel),#071027);padding:var(--pad);display:flex;flex-direction:column;gap:1.6vh;box-shadow:0 1.6vh 3vh rgba(2,6,23,.6);}
-    /* Menu layout: stacked compact panels for TV */
-    .menu-grid{display:flex;flex-direction:column;gap:1.4vh;height:100%;}
-    .panel{background:rgba(255,255,255,0.03);border-radius:1.2vh;padding:1.4vh;display:flex;align-items:center;gap:1.2vh;flex-wrap:wrap;}
-    .panel.title{align-items:center;justify-content:space-between;padding:1.0vh 1.4vh;}
+    .card{width:100%;max-width:180vh;aspect-ratio:16/9;border-radius:calc(var(--card-radius));background:linear-gradient(180deg,var(--panel),#071027);padding:var(--pad);display:flex;flex-direction:column;gap:1.4vh;box-shadow:0 1.6vh 3vh rgba(0,0,0,0.6)}
+
+    /* Menu layout */
+    .menu-grid{display:flex;flex-direction:column;gap:1.2vh;height:100%}
+    .panel{background:rgba(255,255,255,0.03);border-radius:1.2vh;padding:1.2vh;display:flex;align-items:center;gap:1.0vh;flex-wrap:wrap}
+    .panel.title{align-items:center;justify-content:space-between;padding:0.8vh 1.2vh}
     .brand{font-weight:900;font-size:4.8vh;letter-spacing:0.02em}
-    .subtitle{font-size:2.8vh;color:var(--muted)}
-    select, input[type="checkbox"], input[type="radio"], .control{
-      font-size:3.2vh;padding:1.0vh 1.4vh;border-radius:1.0vh;border:0;background:rgba(255,255,255,0.03);color:var(--text);
-    }
-    .controls{display:flex;gap:1.2vh;align-items:center;flex-wrap:wrap;}
-    button.big{
-      font-size:3.6vh;padding:1.2vh 2.0vh;border-radius:1.2vh;border:0;font-weight:800;cursor:pointer;
-      box-shadow:0 0.6vh 1.2vh rgba(2,6,23,.6);
-    }
-    button.primary{background:var(--accent);color:#052334}
-    button.green{background:var(--accent-2);color:#053023}
-    button.warn{background:var(--gold);color:#10201a}
+    .subtitle{font-size:2.6vh;color:var(--muted)}
+
+    select,input[type="checkbox"],input[type="radio"],.control{font-size:3.0vh;padding:0.8vh 1.2vh;border-radius:1.0vh;border:0;background:rgba(255,255,255,0.03);color:var(--text)}
+    .controls{display:flex;gap:0.8vh;align-items:center;flex-wrap:wrap}
+
+    button.big{font-size:3.4vh;padding:1.0vh 1.6vh;border-radius:1.2vh;border:0;font-weight:800;cursor:pointer;box-shadow:0 0.6vh 1.0vh rgba(0,0,0,0.6)}
+    button.primary{background:var(--accent);color:#042033}
+    button.green{background:var(--accent-2);color:#022d20}
+    button.gold{background:var(--gold);color:#10201a}
     button.danger{background:var(--danger);color:#2b0216}
-    /* Flash card screen */
-    .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%;}
-    .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%;}
-    .emoji{font-size:52vh;line-height:1;text-align:center;user-select:none;}
-    .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%;}
-    .word{
-      min-width:30vh;padding:1.2vh 1.6vh;border-radius:1.2vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:800;
-      font-size:6.6vh;letter-spacing:0.02em;
-    }
-    .word.hidden{filter:blur(1.2vh);opacity:0.5}
-    .flash-bottom{display:flex;gap:1.2vh;align-items:center;justify-content:center;flex-direction:column;}
-    .toolbar{display:flex;gap:1.0vh;align-items:center;justify-content:center;flex-wrap:wrap;}
-    .badge{font-size:2.4vh;padding:0.6vh 1.0vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);}
-    /* Game screen */
-    .game-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2vh;height:100%;align-items:stretch;}
-    .game-col{display:flex;flex-direction:column;gap:1.2vh;align-items:stretch;justify-content:center;padding:0;}
-    .game-btn{
-      display:flex;align-items:center;justify-content:flex-start;gap:1.2vh;padding:1.0vh 1.2vh;border-radius:1.0vh;border:0;font-weight:900;
-      font-size:4.2vh;background:rgba(255,255,255,0.02);color:var(--text);min-height:0;flex:1;cursor:pointer;
-    }
-    .game-btn .emoji-small{font-size:5.6vh;margin-left:0;margin-right:1.2vh}
-    .game-btn.selected{outline:0.6vh solid var(--gold);}
-    .game-btn.matched{background:linear-gradient(90deg, rgba(80,200,120,0.18), rgba(60,160,240,0.08));opacity:0.9;color:#001a0d}
-    .game-col > .game-btn{min-height:calc((100% - (4 * 1.2vh)) / 5); } /* 5 buttons with gaps */
-    /* Small text */
-    .hint{font-size:2.6vh;color:var(--muted)}
-    /* responsive ensure fit on smaller TV screens */
-    @media (max-height:600px){
-      .emoji{font-size:40vh}
-      .word{font-size:5.2vh}
-    }
+
+    .hint{font-size:2.4vh;color:var(--muted)}
+
+    /* Flash screen */
+    .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%}
+    .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%}
+    .emoji{font-size:52vh;line-height:1;text-align:center;user-select:none}
+    .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%}
+    .word{min-width:28vh;padding:1.0vh 1.2vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:900;font-size:6.4vh}
+    .word.hidden{filter:blur(1.2vh);opacity:0.45}
+
+    .flash-bottom{display:flex;gap:1.0vh;align-items:center;justify-content:center;flex-direction:column}
+    .toolbar{display:flex;gap:0.8vh;align-items:center;justify-content:center;flex-wrap:wrap}
+    .badge{font-size:2.4vh;padding:0.6vh 1.0vh;border-radius:1.0vh;background:rgba(255,255,255,0.03)}
+
+    /* Nav arrows (big & clear) */
+    .nav-btn{min-width:6.8vh;height:6.8vh;border-radius:1.0vh;font-size:3.6vh;padding:0;display:flex;align-items:center;justify-content:center}
+    .nav-btn.prev{background:var(--accent-2);color:#042c22}
+    .nav-btn.next{background:var(--accent);color:#022b3a}
+
+    /* Game */
+    .game-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.2vh;height:100%;align-items:stretch}
+    .game-col{display:flex;flex-direction:column;gap:1.0vh;align-items:stretch;justify-content:center;padding:0}
+    .game-btn{display:flex;align-items:center;justify-content:flex-start;gap:1.0vh;padding:0.8vh 1.0vh;border-radius:0.8vh;border:0;font-weight:900;font-size:4.0vh;background:rgba(255,255,255,0.02);color:var(--text);cursor:pointer}
+    .game-btn .emoji-small{font-size:5.6vh;margin-right:1.0vh}
+    .game-btn.selected{outline:0.6vh solid var(--gold)}
+    .game-btn.matched{background:linear-gradient(90deg,rgba(80,200,120,0.14),rgba(60,160,240,0.08));color:#001a0d}
+    .game-col > .game-btn{min-height:calc((100% - (4 * 1vh)) / 5)}
+
+    @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
   </style>
 </head>
 <body class="no-scroll">
   <!-- MENU -->
   <section id="menu" class="screen active" aria-label="Menu">
-    <div class="card" role="group" aria-label="Main menu card">
+    <div class="card" role="group" aria-label="Main menu">
       <div class="menu-grid">
         <div class="panel title">
           <div>
             <div class="brand">Vocab TV</div>
-            <div class="subtitle">Flash • Hear • Match — Simple classroom drills</div>
+            <div class="subtitle">Flash • Hear • Match — simple classroom drills</div>
           </div>
           <div style="display:flex;flex-direction:column;gap:0.6vh;align-items:flex-end;">
             <div style="display:flex;gap:0.6vh;">
               <button id="startFlash" class="big primary">Start Flash</button>
               <button id="startGame" class="big green">Start Game</button>
             </div>
-            <div class="hint" style="text-align:right">Use remote arrows + Enter</div>
+            <div class="hint" style="text-align:right">Remote arrows + Enter</div>
           </div>
         </div>
 
@@ -155,7 +151,7 @@
           </div>
 
           <div style="text-align:right;">
-            <div class="hint">Quick actions</div>
+            <div class="hint">Quick</div>
             <div style="display:flex;gap:0.8vh;justify-content:flex-end;">
               <button id="openFlash" class="big primary">Flash</button>
               <button id="openGame" class="big green">Game</button>
@@ -181,15 +177,15 @@
 
       <div class="flash-bottom">
         <div class="toolbar">
-          <button id="prevBtn" class="big">⟵ Prev</button>
-          <button id="revealEN" class="big">Reveal EN</button>
-          <button id="revealJA" class="big">Reveal JA</button>
-          <button id="saveBtn" class="big green">★ Save</button>
-          <button id="playEN" class="big">🔊 EN</button>
-          <button id="playJA" class="big">🔊 JA</button>
-          <button id="nextBtn" class="big">Next ⟶</button>
+          <button id="prevBtn" class="big nav-btn prev" title="Previous">◀</button>
+          <button id="toggleEN" class="big" title="Toggle English">EN</button>
+          <button id="toggleJA" class="big" title="Toggle Japanese">JA</button>
+          <button id="saveBtn" class="big green" title="Save difficult">★</button>
+          <button id="playEN" class="big" title="Play English">🔊</button>
+          <button id="playJA" class="big" title="Play Japanese">🔊</button>
+          <button id="nextBtn" class="big nav-btn next" title="Next">▶</button>
         </div>
-        <div style="display:flex;gap:1.2vh;align-items:center;justify-content:center;">
+        <div style="display:flex;gap:1.0vh;align-items:center;justify-content:center;">
           <div class="badge" id="posBadge">0/0</div>
           <div class="badge" id="catBadge">Category</div>
           <button id="backToMenu" class="big">Menu</button>
@@ -229,19 +225,19 @@
       autoEN: true, autoJA: false, showEN: true, showJA: true, enableAudio: true,
       lastFive: [], gamePairs: [], autoGame: true, enVoice: null, jaVoice: null
     };
-    const DIFF_KEY = 'vocab_difficult_v1';
-    const LAST5_KEY = 'vocab_last5_v1';
-    const GAME_KEY = 'vocab_game_v1';
+    const DIFF_KEY = 'vocab_difficult_v2';
+    const LAST5_KEY = 'vocab_last5_v2';
+    const GAME_KEY = 'vocab_game_v2';
 
-    // Allow either window.vocabularyCategories or global const/var vocabularyCategories
     function getVocabularyRoot(){
       if(typeof window !== 'undefined' && window.vocabularyCategories) return window.vocabularyCategories;
       if(typeof vocabularyCategories !== 'undefined') return vocabularyCategories;
       return null;
     }
 
-    // Persist difficult in sessionStorage
+    // Difficult list persisted in session
     function saveDifficult(word){
+      if(!word) return;
       let list = JSON.parse(sessionStorage.getItem(DIFF_KEY) || '[]');
       if(!list.find(w => w.english===word.english && w.japanese===word.japanese)){
         list.push(word);
@@ -251,41 +247,27 @@
     }
     function getDifficult(){ return JSON.parse(sessionStorage.getItem(DIFF_KEY) || '[]'); }
     function wipeDifficult(){ sessionStorage.removeItem(DIFF_KEY); updateDiffBadge(); buildCategorySelect(); }
-
     function updateDiffBadge(){ $('#diffCount').textContent = `${getDifficult().length} words`; }
 
     function buildCategorySelect(){
-      const sel = $('#categorySelect');
-      sel.innerHTML = '';
+      const sel = $('#categorySelect'); sel.innerHTML = '';
       const root = getVocabularyRoot() || {};
-      const cats = Object.keys(root);
-      for(const c of cats){
-        const opt = document.createElement('option'); opt.value = c; opt.textContent = c; sel.appendChild(opt);
-      }
+      const cats = Object.keys(root || {});
+      for(const c of cats){ const opt = document.createElement('option'); opt.value=c; opt.textContent=c; sel.appendChild(opt); }
       const difficultCount = getDifficult().length;
-      if(difficultCount>0){
-        const opt = document.createElement('option'); opt.value = '_DIFFICULT_'; opt.textContent = `Difficult (${difficultCount})`; sel.appendChild(opt);
-      }
+      if(difficultCount>0){ const opt = document.createElement('option'); opt.value='_DIFFICULT_'; opt.textContent=`Difficult (${difficultCount})`; sel.appendChild(opt); }
       if(!state.category && cats.length) state.category = cats[0];
       sel.value = state.category || '';
     }
 
     function getWordsForCategory(cat){
       if(cat === '_DIFFICULT_') return getDifficult();
-      const root = getVocabularyRoot();
-      if(!root) return [];
+      const root = getVocabularyRoot(); if(!root) return [];
       return root[cat] ? root[cat].slice() : [];
     }
 
-    function shuffle(a){
-      for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
-      return a;
-    }
-
-    function showScreen(name){
-      Object.values(screens).forEach(s=>s.classList.remove('active'));
-      screens[name].classList.add('active');
-    }
+    function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+    function showScreen(name){ Object.values(screens).forEach(s=>s.classList.remove('active')); screens[name].classList.add('active'); }
 
     // TTS helpers
     function speak(text, lang='en-US', which='en'){
@@ -295,254 +277,106 @@
         u.lang = lang;
         if(which==='en' && state.enVoice) u.voice = state.enVoice;
         if(which==='ja' && state.jaVoice) u.voice = state.jaVoice;
-        u.rate = which==='ja' ? 0.92 : 1.0;
+        u.rate = which==='ja'?0.92:1.0;
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(u);
-      }catch(e){ console.warn('TTS error',e); }
+      }catch(e){ console.warn('TTS error', e); }
     }
-    // Voice pick
+
     function pickVoices(){
       const all = window.speechSynthesis.getVoices() || [];
-      const enSel = $('#enVoice'); const jaSel = $('#jaVoice');
-      enSel.innerHTML=''; jaSel.innerHTML='';
-      const enList = all.filter(v=>/^en|English/i.test(v.lang+v.name));
-      const jaList = all.filter(v=>/^ja|Japanese/i.test(v.lang+v.name));
+      const enSel = $('#enVoice'); const jaSel = $('#jaVoice'); enSel.innerHTML=''; jaSel.innerHTML='';
+      const enList = all.filter(v=>/en/i.test(v.lang) || /English/i.test(v.name));
+      const jaList = all.filter(v=>/ja/i.test(v.lang) || /Japanese/i.test(v.name));
       function add(sel,list){ (list.length?list:all).forEach(v=>{ const o=document.createElement('option'); o.value=v.name; o.textContent=`${v.name} (${v.lang})`; sel.appendChild(o); }); }
       add(enSel,enList); add(jaSel,jaList);
-      state.enVoice = enList[0] || all[0] || null;
-      state.jaVoice = jaList[0] || all[0] || null;
-      if(state.enVoice) enSel.value = state.enVoice.name;
-      if(state.jaVoice) jaSel.value = state.jaVoice.name;
+      state.enVoice = enList[0] || all[0] || null; state.jaVoice = jaList[0] || all[0] || null;
+      if(state.enVoice) enSel.value = state.enVoice.name; if(state.jaVoice) jaSel.value = state.jaVoice.name;
       enSel.onchange = ()=>{ state.enVoice = all.find(v=>v.name===enSel.value) || null; };
       jaSel.onchange = ()=>{ state.jaVoice = all.find(v=>v.name===jaSel.value) || null; };
     }
-    window.speechSynthesis.onvoiceschanged = pickVoices;
-    setTimeout(pickVoices, 300);
+    window.speechSynthesis.onvoiceschanged = pickVoices; setTimeout(pickVoices, 300);
 
-    // FLASH CARD logic
-    function loadCategory(cat){
-      state.category = cat;
-      state.words = getWordsForCategory(cat);
-      state.idx = 0;
-      state.shuffled = state.order === 'random' ? shuffle(state.words.slice()) : state.words.slice();
-      $('#catBadge').textContent = cat === '_DIFFICULT_' ? 'Difficult' : (cat || '—');
-      renderCard();
-    }
+    // FLASH CARDS
+    function loadCategory(cat){ state.category = cat; state.words = getWordsForCategory(cat); state.idx = 0; state.shuffled = state.order==='random' ? shuffle(state.words.slice()) : state.words.slice(); $('#catBadge').textContent = cat === '_DIFFICULT_' ? 'Difficult' : (cat || '—'); renderCard(); }
 
     function renderCard(){
-      if(!state.shuffled || state.shuffled.length===0){
-        $('#emoji').textContent = '❓';
-        $('#enWord').textContent = '-';
-        $('#jaWord').textContent = '-';
-        $('#posBadge').textContent = '0/0';
-        return;
-      }
-      const w = state.shuffled[state.idx];
-      $('#emoji').textContent = w.emoji || '❓';
-      $('#enWord').textContent = w.english || '';
-      $('#jaWord').textContent = w.japanese || '';
-      $('#enWord').classList.toggle('hidden', !state.showEN);
-      $('#jaWord').classList.toggle('hidden', !state.showJA);
-      $('#posBadge').textContent = `${state.idx+1}/${state.shuffled.length}`;
-
-      // push last five and possibly auto game
+      if(!state.shuffled || state.shuffled.length===0){ $('#emoji').textContent='❓'; $('#enWord').textContent='-'; $('#jaWord').textContent='-'; $('#posBadge').textContent='0/0'; return; }
+      const w = state.shuffled[state.idx]; $('#emoji').textContent = w.emoji || '❓'; $('#enWord').textContent = w.english || ''; $('#jaWord').textContent = w.japanese || '';
+      $('#enWord').classList.toggle('hidden', !state.showEN); $('#jaWord').classList.toggle('hidden', !state.showJA); $('#posBadge').textContent = `${state.idx+1}/${state.shuffled.length}`;
       pushLastFive(w);
-
-      if(state.autoEN) speak(w.english, 'en-US','en');
-      if(state.autoJA) setTimeout(()=>speak(w.japanese,'ja-JP','ja'), 350);
+      if(state.autoEN) speak(w.english, 'en-US','en'); if(state.autoJA) setTimeout(()=>speak(w.japanese,'ja-JP','ja'), 350);
     }
 
-    function nextCard(){
-      if(state.idx < state.shuffled.length - 1){ state.idx++; renderCard(); }
-      else { // finished deck - loop or show done flash briefly
-        // briefly flash a done badge
-        $('#posBadge').textContent = `${state.shuffled.length}/${state.shuffled.length}`;
-      }
-    }
+    function nextCard(){ if(state.idx < state.shuffled.length - 1){ state.idx++; renderCard(); } else { $('#posBadge').textContent = `${state.shuffled.length}/${state.shuffled.length}`; } }
     function prevCard(){ if(state.idx>0){ state.idx--; renderCard(); } }
 
-    // store last five in localStorage; keep order and avoid immediate duplicates
-    function pushLastFive(w){
-      if(!w) return;
-      let arr = JSON.parse(localStorage.getItem(LAST5_KEY) || '[]');
-      // remove duplicate of identical item to keep recency
-      const key = JSON.stringify({english:w.english,japanese:w.japanese,emoji:w.emoji});
-      arr = arr.filter(x => JSON.stringify(x) !== key);
-      arr.push({english:w.english,japanese:w.japanese,emoji:w.emoji});
-      while(arr.length > 5) arr.shift();
-      localStorage.setItem(LAST5_KEY, JSON.stringify(arr));
-      state.lastFive = arr;
-      // Auto-generate game when exactly 5 and setting enabled
-      if(state.autoGame && arr.length === 5){
-        // Save game pairs and auto-start
-        localStorage.setItem(GAME_KEY, JSON.stringify(arr));
-        // Slight delay to allow a tiny visual before switching
-        setTimeout(()=>{ buildGame(arr); showScreen('game'); }, 250);
-      }
-    }
+    // last five stored in localStorage
+    function pushLastFive(w){ if(!w) return; let arr = JSON.parse(localStorage.getItem(LAST5_KEY) || '[]'); const key = JSON.stringify({english:w.english,japanese:w.japanese,emoji:w.emoji}); arr = arr.filter(x => JSON.stringify(x)!==key); arr.push({english:w.english,japanese:w.japanese,emoji:w.emoji}); while(arr.length>5) arr.shift(); localStorage.setItem(LAST5_KEY, JSON.stringify(arr)); state.lastFive = arr; if(state.autoGame && arr.length===5){ localStorage.setItem(GAME_KEY, JSON.stringify(arr)); setTimeout(()=>{ buildGame(arr); showScreen('game'); }, 250); } }
 
     // GAME logic
     let selEN=null, selJA=null, matched=0;
     function buildGame(fromPairs){
-      const pairs = (fromPairs && fromPairs.length===5) ? fromPairs.slice() :
-                    JSON.parse(localStorage.getItem(GAME_KEY) || '[]');
+      const pairs = (fromPairs && fromPairs.length===5) ? fromPairs.slice() : JSON.parse(localStorage.getItem(GAME_KEY) || '[]');
       let pool = pairs && pairs.length===5 ? pairs.slice() : (state.words.slice().length>=5 ? shuffle(state.words.slice()).slice(0,5) : (pairs||[]));
-      if(pool.length < 5){
-        // fallback: sample from all categories
-        const root = getVocabularyRoot() || {};
-        const all = Object.values(root).flat();
-        pool = shuffle(all).slice(0,5);
-      }
-      state.gamePairs = pool;
-      matched = 0;
-      selEN = selJA = null;
-      $('#matchedCount').textContent = matched;
-      // Build columns
-      const left = $('#colEN'); const right = $('#colJA');
-      left.innerHTML = ''; right.innerHTML = '';
-      const leftItems = pool.map(w => ({key:w.english, text:w.english}));
-      const rightItems = pool.map(w => ({key:w.english, text:w.japanese, emoji:w.emoji}));
+      if(pool.length < 5){ const root = getVocabularyRoot() || {}; const all = Object.values(root).flat(); pool = shuffle(all).slice(0,5); }
+      state.gamePairs = pool; matched = 0; selEN = selJA = null; $('#matchedCount').textContent = matched;
+      const left = $('#colEN'); const right = $('#colJA'); left.innerHTML=''; right.innerHTML='';
+      const leftItems = pool.map(w=>({key:w.english, entext:w.english}));
+      const rightItems = pool.map(w=>({key:w.english, jatext:w.japanese, emoji:w.emoji}));
       shuffle(leftItems); shuffle(rightItems);
-      // create 5 equal buttons in each column
-      leftItems.forEach(item => {
-        const b = document.createElement('button');
-        b.className = 'game-btn';
-        b.dataset.key = item.key;
-        b.dataset.side = 'en';
-        b.innerHTML = `<div style="padding-left:1.2vh">${escapeHtml(item.text)}</div>`;
-        b.onclick = ()=> onGamePress(b);
-        left.appendChild(b);
+      leftItems.forEach(item=>{
+        const b = document.createElement('button'); b.className='game-btn'; b.dataset.key=item.key; b.dataset.entext = item.entext; b.dataset.side='en'; b.innerHTML = `<div style="padding-left:1.0vh">${escapeHtml(item.entext)}</div>`; b.onclick = ()=> onGamePress(b); left.appendChild(b);
       });
-      rightItems.forEach(item => {
-        const b = document.createElement('button');
-        b.className = 'game-btn';
-        b.dataset.key = item.key;
-        b.dataset.side = 'ja';
-        b.innerHTML = `<div style="display:flex;align-items:center;"><div class="emoji-small">${escapeHtml(item.emoji||'')}</div><div>${escapeHtml(item.text)}</div></div>`;
-        b.onclick = ()=> onGamePress(b);
-        right.appendChild(b);
+      rightItems.forEach(item=>{
+        const b = document.createElement('button'); b.className='game-btn'; b.dataset.key=item.key; b.dataset.jatext=item.jatext; b.dataset.side='ja'; b.innerHTML = `<div style="display:flex;align-items:center"><div class="emoji-small">${escapeHtml(item.emoji||'')}</div><div>${escapeHtml(item.jatext)}</div></div>`; b.onclick = ()=> onGamePress(b); right.appendChild(b);
       });
-      // ensure equal heights: the CSS sets flex:1 and computed min-heights
     }
 
-    function onGamePress(btn){
-      if(btn.disabled) return;
-      const side = btn.dataset.side;
-      // visual toggle
-      btn.classList.toggle('selected');
-      if(side==='en'){
-        if(selEN && selEN !== btn) selEN.classList.remove('selected');
-        selEN = (selEN===btn) ? null : btn;
-        if(selEN) speak(selEN.dataset.key, 'en-US','en'); // speak english text
-      } else {
-        if(selJA && selJA !== btn) selJA.classList.remove('selected');
-        selJA = (selJA===btn) ? null : btn;
-        if(selJA) {
-          // find japanese text to speak
-          const txt = btn.innerText || btn.textContent || '';
-          speak(txt, 'ja-JP','ja');
-        }
-      }
-      if(selEN && selJA) {
-        // check match
-        if(selEN.dataset.key === selJA.dataset.key){
-          selEN.disabled = selJA.disabled = true;
-          selEN.classList.remove('selected'); selJA.classList.remove('selected');
-          selEN.classList.add('matched'); selJA.classList.add('matched');
-          matched++;
-          $('#matchedCount').textContent = matched;
-          selEN = selJA = null;
-          if(matched >= 5){
-            // show brief celebration then return to menu
-            setTimeout(()=>{ flashMatchComplete(); }, 400);
-          }
-        } else {
-          // mismatch: flash and unselect
-          const a = [selEN, selJA];
-          a.forEach(el => { if(!el) return; el.animate([{transform:'translateX(0)'},{transform:'translateX(10px)'},{transform:'translateX(-10px)'},{transform:'translateX(0)'}],{duration:260}); el.classList.remove('selected'); });
-          selEN = selJA = null;
-        }
-      }
-    }
+    function onGamePress(btn){ if(btn.disabled) return; const side = btn.dataset.side; btn.classList.toggle('selected'); if(side==='en'){ if(selEN && selEN!==btn) selEN.classList.remove('selected'); selEN = (selEN===btn)?null:btn; if(selEN) speak(selEN.dataset.entext || selEN.dataset.key, 'en-US','en'); } else { if(selJA && selJA!==btn) selJA.classList.remove('selected'); selJA = (selJA===btn)?null:btn; if(selJA) speak(selJA.dataset.jatext || selJA.dataset.key, 'ja-JP','ja'); } if(selEN && selJA){ if(selEN.dataset.key === selJA.dataset.key){ selEN.disabled = selJA.disabled = true; selEN.classList.remove('selected'); selJA.classList.remove('selected'); selEN.classList.add('matched'); selJA.classList.add('matched'); matched++; $('#matchedCount').textContent = matched; selEN = selJA = null; if(matched>=5){ setTimeout(()=>{ flashMatchComplete(); }, 400); } } else { const a=[selEN,selJA]; a.forEach(el=>{ if(!el) return; el.animate([{transform:'translateX(0)'},{transform:'translateX(8px)'},{transform:'translateX(-8px)'},{transform:'translateX(0)'}],{duration:220}); el.classList.remove('selected'); }); selEN = selJA = null; } } }
 
-    function flashMatchComplete(){
-      // tiny overlay effect by changing title or similar (keep simple)
-      // For now just return to menu after short delay
-      setTimeout(()=> showScreen('menu'), 700);
-    }
+    function flashMatchComplete(){ setTimeout(()=> showScreen('menu'), 700); }
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"]|'/g, m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
 
-    // escape html helper
-    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; }); }
-
-    // Wiring events & init
+    // Wiring & init
     function init(){
-      // menu controls
-      document.querySelectorAll('input[name="order"]').forEach(r => r.onchange = ()=> { state.order = r.value; if(state.category) loadCategory(state.category); });
-      $('#autoEN').onchange = e => state.autoEN = e.target.checked;
-      $('#autoJA').onchange = e => state.autoJA = e.target.checked;
-      $('#showEN').onchange = e => { state.showEN = e.target.checked; renderCard(); };
-      $('#showJA').onchange = e => { state.showJA = e.target.checked; renderCard(); };
-      $('#enableAudio').onchange = e => state.enableAudio = e.target.checked;
-      $('#autoGame').onchange = e => state.autoGame = e.target.checked;
+      // menu inputs
+      document.querySelectorAll('input[name="order"]').forEach(r=>r.onchange = ()=>{ state.order = r.value; if(state.category) loadCategory(state.category); });
+      $('#autoEN').onchange = e=> state.autoEN = e.target.checked; $('#autoJA').onchange = e => state.autoJA = e.target.checked; $('#showEN').onchange = e => { state.showEN = e.target.checked; renderCard(); }; $('#showJA').onchange = e => { state.showJA = e.target.checked; renderCard(); }; $('#enableAudio').onchange = e=> state.enableAudio = e.target.checked; $('#autoGame').onchange = e=> state.autoGame = e.target.checked;
 
-      $('#startFlash').onclick = ()=> { if($('#categorySelect').value) { loadCategory($('#categorySelect').value); showScreen('flash'); } };
-      $('#startGame').onclick = ()=> { buildGame(); showScreen('game'); };
-      $('#openFlash').onclick = ()=> { if($('#categorySelect').value) { loadCategory($('#categorySelect').value); showScreen('flash'); } };
-      $('#openGame').onclick = ()=> { buildGame(); showScreen('game'); };
+      // flash buttons
+      $('#startFlash').onclick = ()=>{ const val = $('#categorySelect').value; if(val) { loadCategory(val); showScreen('flash'); } };
+      $('#startGame').onclick = ()=>{ buildGame(); showScreen('game'); };
+      $('#openFlash').onclick = ()=>{ const val = $('#categorySelect').value; if(val){ loadCategory(val); showScreen('flash'); } };
+      $('#openGame').onclick = ()=>{ buildGame(); showScreen('game'); };
+      $('#prevBtn').onclick = prevCard; $('#nextBtn').onclick = nextCard; $('#saveBtn').onclick = ()=>{ const w = state.shuffled[state.idx]; if(w) saveDifficult(w); };
+      $('#playEN').onclick = ()=>{ const w = state.shuffled[state.idx]; if(w) speak(w.english,'en-US','en'); };
+      $('#playJA').onclick = ()=>{ const w = state.shuffled[state.idx]; if(w) speak(w.japanese,'ja-JP','ja'); };
 
-      $('#prevBtn').onclick = prevCard;
-      $('#nextBtn').onclick = nextCard;
-      $('#saveBtn').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) { saveDifficult(w); } };
-      $('#playEN').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) speak(w.english,'en-US','en'); };
-      $('#playJA').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) speak(w.japanese,'ja-JP','ja'); };
-      $('#revealEN').onclick = ()=> { state.showEN = true; $('#showEN').checked = true; renderCard(); };
-      $('#revealJA').onclick = ()=> { state.showJA = true; $('#showJA').checked = true; renderCard(); };
+      // toggle EN/JA on flash
+      $('#toggleEN').onclick = ()=>{ state.showEN = !state.showEN; $('#showEN').checked = state.showEN; renderCard(); };
+      $('#toggleJA').onclick = ()=>{ state.showJA = !state.showJA; $('#showJA').checked = state.showJA; renderCard(); };
 
-      $('#backToMenu').onclick = ()=> showScreen('menu');
-      $('#gameBack').onclick = ()=> showScreen('menu');
-      $('#regenGame').onclick = ()=> { buildGame(); };
+      $('#backToMenu').onclick = ()=> showScreen('menu'); $('#gameBack').onclick = ()=> showScreen('menu'); $('#regenGame').onclick = ()=> buildGame(); $('#wipeDifficult').onclick = ()=> wipeDifficult();
+      $('#categorySelect').onchange = e=>{ state.category = e.target.value; loadCategory(state.category); };
 
-      $('#wipeDifficult').onclick = ()=> wipeDifficult();
-
-      // category change
-      $('#categorySelect').onchange = e => { state.category = e.target.value; loadCategory(state.category); };
-
-      // keyboard shortcuts
-      window.addEventListener('keydown', (e)=>{
-        const onFlash = screens.flash.classList.contains('active');
-        const onMenu = screens.menu.classList.contains('active');
-        const onGame = screens.game.classList.contains('active');
-        if(onFlash){
-          if(e.key==='ArrowRight') nextCard();
-          if(e.key==='ArrowLeft') prevCard();
-          if(e.key.toLowerCase()==='e') $('#playEN').click();
-          if(e.key.toLowerCase()==='j') $('#playJA').click();
-          if(e.key.toLowerCase()==='s') $('#saveBtn').click();
-          if(e.key==='Escape') $('#backToMenu').click();
-        } else if(onMenu){
-          if(e.key==='Enter') $('#startFlash').click();
-        } else if(onGame){
-          if(e.key==='Escape') $('#gameBack').click();
-        }
+      // keyboard
+      window.addEventListener('keydown', e=>{
+        const onFlash = screens.flash.classList.contains('active'); const onMenu = screens.menu.classList.contains('active'); const onGame = screens.game.classList.contains('active');
+        if(onFlash){ if(e.key==='ArrowRight') nextCard(); if(e.key==='ArrowLeft') prevCard(); if(e.key.toLowerCase()==='e') $('#playEN').click(); if(e.key.toLowerCase()==='j') $('#playJA').click(); if(e.key.toLowerCase()==='s') $('#saveBtn').click(); if(e.key==='Escape') $('#backToMenu').click(); }
+        else if(onMenu){ if(e.key==='Enter') $('#startFlash').click(); }
+        else if(onGame){ if(e.key==='Escape') $('#gameBack').click(); }
       });
 
-      // Build categories and default
-      setTimeout(()=> {
+      // build categories after vocab loaded
+      setTimeout(()=>{
         const root = getVocabularyRoot();
-        if(!root || Object.keys(root).length===0){
-          const sel = $('#categorySelect');
-          sel.innerHTML = '<option value=\"\">(No vocabulary found) — add vocabulary.js with window.vocabularyCategories = {...} or const vocabularyCategories = {...}</option>';
-        } else {
-          buildCategorySelect();
-          updateDiffBadge();
-          if(!state.category) state.category = Object.keys(root)[0];
-          loadCategory(state.category);
-        }
-      }, 80);
+        if(!root || Object.keys(root).length===0){ const sel = $('#categorySelect'); sel.innerHTML = '(No vocabulary found) — add vocabulary.js with window.vocabularyCategories = {...} or const vocabularyCategories = {...}'; }
+        else { buildCategorySelect(); updateDiffBadge(); if(!state.category) state.category = Object.keys(root)[0]; loadCategory(state.category); }
+      }, 100);
     }
 
     window.addEventListener('load', init);
-
   </script>
 </body>
 </html>
