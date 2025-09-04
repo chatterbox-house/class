@@ -1083,57 +1083,73 @@
 </head>
 <body>
     <button class="night-mode-toggle" id="nightModeToggle">🌙</button>
-    <div class="container" id="mainContainer">
 
-        <div class="header">CHATTERBOX HOUSE</div>
+<div class="container" id="mainContainer">
+    <div class="header">CHATTERBOX HOUSE</div>
 
-<a href="eiken5vocab.html" class="news-button" style="
-    display: inline-block;
-    background-color: #f72585;
-    color: white;
-    padding: 15px 30px;
-    margin: 20px 0;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    animation: pulse 2s infinite;
-">Eiken 5 Vocabulary</a>
-        
-        <div class="controls-row">
-            <div class="dropdown">
-<select id="classSelector">
-    <option value="">Select Class</option>
-    <option value="Bronze">Bronze</option>
-    <option value="Silver">Silver</option>
-    <option value="Gold">Gold</option>
-    <option value="Eiken5">Eiken 5</option>
-    <option value="Eiken4">Eiken 4</option>
-    <option value="Eiken3">Eiken 3</option>
-    <option value="EikenPre2">Eiken Pre-2</option> 
-    <option value="EikenPre2Plus">Eiken Pre-2 Plus</option>
-    <option value="Eiken2">Eiken 2</option>
-    <option value="EikenPre1">Eiken Pre-1</option>
-    <option value="Eiken1">Eiken 1</option>
-    <option value="C">C Class</option>
-    <option value="X">X Class</option>
-    <option value="HighSchool">High School</option>
-    <option value="Adult">Adult</option>
-</select>
-            </div>
-            
-            <div class="dropdown">
-                <select id="storySelector" disabled>
-                    <option value="">Select Story</option>
-                </select>
-            </div>
+    <a href="eiken5vocab.html" class="news-button" style="
+        display: inline-block;
+        background-color: #f72585;
+        color: white;
+        padding: 15px 30px;
+        margin: 20px 0;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+    ">Eiken 5 Vocabulary</a>
+
+    <a href="news.html" class="news-button" style="
+        display: inline-block;
+        background-color: #f72585;
+        color: white;
+        padding: 15px 30px;
+        margin: 20px 0;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite;
+    ">News</a>
+
+    <div class="controls-row">
+        <div class="dropdown">
+            <select id="classSelector">
+                <option value="">Select Class</option>
+                <option value="Bronze">Bronze</option>
+                <option value="Silver">Silver</option>
+                <option value="Gold">Gold</option>
+                <option value="Eiken5">Eiken 5</option>
+                <option value="Eiken4">Eiken 4</option>
+                <option value="Eiken3">Eiken 3</option>
+                <option value="EikenPre2">Eiken Pre-2</option> 
+                <option value="EikenPre2Plus">Eiken Pre-2 Plus</option>
+                <option value="Eiken2">Eiken 2</option>
+                <option value="EikenPre1">Eiken Pre-1</option>
+                <option value="Eiken1">Eiken 1</option>
+                <option value="C">C Class</option>
+                <option value="X">X Class</option>
+                <option value="HighSchool">High School</option>
+                <option value="Adult">Adult</option>
+            </select>
         </div>
         
+        <div class="dropdown">
+            <select id="storySelector" disabled>
+                <option value="">Select Story</option>
+            </select>
+        </div>
     </div>
+</div>
 
     <!-- READING MODE CONTAINER -->
     <div class="reading-container" id="readingModeContainer" style="display: none;">
@@ -2869,4 +2885,5 @@ function loadLessonsData() {
 </script>   
 </body>
 </html>
+
 
