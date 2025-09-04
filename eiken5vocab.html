@@ -71,6 +71,13 @@
     .game-col > .game-btn{min-height:calc((100% - (4 * 1vh)) / 5)}
 
     @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
+select.control {
+  background: #ffffff;       /* solid white background */
+  color: #000000;            /* black text */
+  font-weight: 700;          /* bold */
+  border: 2px solid #60a5fa; /* blue border for visibility */
+}
+
   </style>
 </head>
 <body class="no-scroll">
@@ -249,11 +256,32 @@
     function wipeDifficult(){ sessionStorage.removeItem(DIFF_KEY); updateDiffBadge(); buildCategorySelect(); }
     function updateDiffBadge(){ $('#diffCount').textContent = `${getDifficult().length} words`; }
 
-    function buildCategorySelect(){
-      const sel = $('#categorySelect'); sel.innerHTML = '';
-      const root = getVocabularyRoot() || {};
-      const cats = Object.keys(root || {});
-      for(const c of cats){ const opt = document.createElement('option'); opt.value=c; opt.textContent=c; sel.appendChild(opt); }
+function buildCategorySelect(){
+  const sel = $('#categorySelect'); sel.innerHTML = '';
+  const root = getVocabularyRoot() || {};
+  const cats = Object.keys(root || {});
+
+  // Build ALL WORDS category
+  let allWords = [];
+  cats.forEach(c => { allWords = allWords.concat(root[c]); });
+  root['_ALL_'] = allWords;
+
+  // First option: All Words
+  const allOpt = document.createElement('option');
+  allOpt.value = '_ALL_';
+  allOpt.textContent = `All Words (${allWords.length})`;
+  sel.appendChild(allOpt);
+
+  // Other categories
+  for (const c of cats) {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  }
+
+  // Difficult list if exists
+
       const difficultCount = getDifficult().length;
       if(difficultCount>0){ const opt = document.createElement('option'); opt.value='_DIFFICULT_'; opt.textContent=`Difficult (${difficultCount})`; sel.appendChild(opt); }
       if(!state.category && cats.length) state.category = cats[0];
