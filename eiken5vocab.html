@@ -1,1294 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eiken Grade 5 Vocabulary Master</title>
-    <style>
-        /* TV-optimized CSS */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px; /* Increased for TV */
-            background: rgba(0, 0, 0, 0.7);
-            border: 12px solid #ffcc00; /* Thicker border */
-            border-radius: 25px; /* Larger radius */
-            padding: 30px; /* More padding */
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); /* Larger shadow */
-            text-align: center;
-        }
-        
-        h1 {
-            font-size: 4rem; /* Larger for TV */
-            text-shadow: 6px 6px 0 #ff00ff, -6px -6px 0 #00ffff;
-            margin-bottom: 30px; /* More spacing */
-            letter-spacing: 3px;
-            color: #ffcc00;
-        }
-        
-        .subtitle {
-            font-size: 2.5rem; /* Larger for TV */
-            margin-bottom: 40px; /* More spacing */
-            color: #ffcc00;
-            text-shadow: 4px 4px 0 #ff00ff;
-        }
-        
-        .card {
-            background: linear-gradient(135deg, #ff9966, #ff5e62);
-            border: 10px solid #ffcc00; /* Thicker border */
-            border-radius: 25px; /* Larger radius */
-            padding: 40px; /* More padding */
-            margin: 30px 0; /* More margin */
-            min-height: 400px; /* Taller for TV */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); /* Larger shadow */
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .card::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: -15px;
-            bottom: -15px;
-            z-index: -1;
-            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff);
-            background-size: 400% 400%;
-            animation: gradientShift 3s ease infinite;
-            border-radius: 30px; /* Larger radius */
-            filter: blur(20px); /* More blur */
-            opacity: 0.7;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .english {
-            font-size: 5rem; /* Larger for TV */
-            font-weight: bold;
-            margin-bottom: 30px; /* More spacing */
-            color: #fff;
-            text-shadow: 6px 6px 0 #000; /* Larger shadow */
-            display: flex;
-            align-items: center;
-            gap: 25px; /* More spacing */
-        }
-        
-        .japanese {
-            font-size: 4rem; /* Larger for TV */
-            color: #ffff00;
-            text-shadow: 5px 5px 0 #000; /* Larger shadow */
-            margin-bottom: 30px; /* More spacing */
-            display: flex;
-            align-items: center;
-            gap: 25px; /* More spacing */
-        }
-        
-        .emoji {
-            font-size: 12rem; /* MUCH Larger for TV - increased from 8rem */
-            margin-bottom: 30px; /* More spacing */
-            filter: drop-shadow(6px 6px 0 #000); /* Larger shadow */
-            min-height: 200px; /* Ensure consistent height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* New flag emoji styling */
-        .emoji.flag-emoji {
-            font-size: 16rem; /* Even larger for flags */
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 30px; /* More spacing */
-            margin: 30px 0; /* More margin */
-            flex-wrap: wrap;
-        }
-        
-        button {
-            background: linear-gradient(to bottom, #ffcc00, #ff9900);
-            border: 6px solid #fff; /* Thicker border */
-            border-radius: 16px; /* Larger radius */
-            color: #000;
-            padding: 20px 35px; /* Larger padding */
-            font-size: 2.5rem; /* Larger for TV */
-            font-weight: bold;
-            cursor: pointer;
-            text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5); /* Larger shadow */
-            box-shadow: 0 8px 0 #cc9900; /* Larger shadow */
-            transition: all 0.1s;
-            min-width: 180px; /* Minimum width for remote navigation */
-        }
-        
-        button:hover, button:focus {
-            transform: translateY(4px);
-            box-shadow: 0 4px 0 #cc9900;
-            outline: 3px solid #00ffff; /* Focus indicator */
-        }
-        
-        button:active {
-            transform: translateY(8px);
-            box-shadow: 0 0px 0 #cc9900;
-        }
-        
-        .progress {
-            font-size: 2.5rem; /* Larger for TV */
-            margin: 30px 0; /* More margin */
-            color: #ffcc00;
-            text-shadow: 4px 4px 0 #000; /* Larger shadow */
-        }
-        
-        .test-container {
-            display: none;
-            background: linear-gradient(135deg, #00b09b, #96c93d);
-            border: 10px solid #ffcc00; /* Thicker border */
-            border-radius: 25px; /* Larger radius */
-            padding: 30px; /* More padding */
-            margin-top: 30px; /* More margin */
-        }
-        
-        .test-title {
-            font-size: 3.5rem; /* Larger for TV */
-            margin-bottom: 30px; /* More spacing */
-            color: #ffcc00;
-            text-shadow: 5px 5px 0 #000; /* Larger shadow */
-        }
-        
-        .match-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px; /* More spacing */
-            margin-bottom: 30px; /* More margin */
-        }
-        
-        .match-column {
-            display: flex;
-            flex-direction: column;
-            gap: 25px; /* More spacing */
-        }
-        
-        .match-column-title {
-            font-size: 2.5rem; /* Larger for TV */
-            color: #ffcc00;
-            text-shadow: 4px 4px 0 #000; /* Larger shadow */
-            margin-bottom: 20px; /* More spacing */
-        }
-        
-        .match-item {
-            background: rgba(0, 0, 0, 0.7);
-            border: 6px solid #ffcc00; /* Thicker border */
-            border-radius: 16px; /* Larger radius */
-            padding: 25px; /* More padding */
-            font-size: 2.5rem; /* Larger for TV */
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 100px; /* Minimum height for remote navigation */
-        }
-        
-        .match-item:hover, .match-item:focus, .match-item.selected {
-            transform: scale(1.05);
-            background: rgba(255, 204, 0, 0.3);
-            outline: 3px solid #00ffff; /* Focus indicator */
-        }
-        
-        .matched {
-            background: linear-gradient(135deg, #00b09b, #96c93d);
-            color: #000;
-        }
-        
-        .incorrect {
-            animation: shake 0.5s;
-            background: linear-gradient(135deg, #ff5e62, #ff9966);
-        }
-        
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-15px); }
-            75% { transform: translateX(15px); }
-        }
-        
-        .celebration {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 100;
-        }
-        
-        .celebration-text {
-            font-size: 6rem; /* Larger for TV */
-            color: #ffcc00;
-            text-shadow: 8px 8px 0 #ff00ff; /* Larger shadow */
-            animation: pulse 1s infinite;
-            margin-bottom: 40px; /* More spacing */
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.3); } /* More pronounced pulse */
-        }
-        
-        .confetti {
-            position: absolute;
-            width: 30px; /* Larger for TV */
-            height: 30px; /* Larger for TV */
-            background: #ff0000;
-            animation: fall linear forwards;
-        }
-        
-        @keyframes fall {
-            to { transform: translateY(100vh) rotate(360deg); }
-        }
-        
-        .settings {
-            margin: 30px 0; /* More margin */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px; /* More spacing */
-            flex-wrap: wrap;
-        }
-        
-        .toggle-japanese {
-            font-size: 2.2rem; /* Larger for TV */
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 15px; /* More spacing */
-        }
-        
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 80px; /* Larger for TV */
-            height: 44px; /* Larger for TV */
-        }
-        
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ff00ff;
-            transition: .4s;
-            border-radius: 44px; /* Larger radius */
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 36px; /* Larger for TV */
-            width: 36px; /* Larger for TV */
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .slider {
-            background-color: #00ffff;
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(36px); /* Adjusted for larger size */
-        }
-        
-        .big-english .english {
-            font-size: 6rem; /* Larger for TV */
-        }
-        
-        .big-english .japanese {
-            display: none;
-        }
-        
-        .play-btn {
-            background: rgba(255, 255, 255, 0.3);
-            border: none;
-            border-radius: 50%;
-            width: 70px; /* Larger for TV */
-            height: 70px; /* Larger for TV */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 2rem; /* Larger for TV */
-            transition: all 0.2s;
-        }
-        
-        .play-btn:hover, .play-btn:focus {
-            background: rgba(255, 255, 255, 0.5);
-            transform: scale(1.2);
-            outline: 3px solid #00ffff; /* Focus indicator */
-        }
-        
-        .category-selector {
-            margin: 25px 0; /* More margin */
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px; /* More spacing */
-        }
-        
-        .category-select {
-            background: linear-gradient(to bottom, #ff9966, #ff5e62);
-            border: 4px solid #fff; /* Thicker border */
-            border-radius: 12px; /* Larger radius */
-            color: #fff;
-            padding: 15px 25px; /* Larger padding */
-            font-size: 1.8rem; /* Larger for TV */
-            cursor: pointer;
-            transition: all 0.2s;
-            min-width: 250px; /* Minimum width for remote navigation */
-        }
-        
-        .category-select:focus {
-            outline: 3px solid #00ffff; /* Focus indicator */
-            background: linear-gradient(to bottom, #ffcc00, #ff9900);
-            color: #000;
-        }
-        
-        .tts-controls {
-            display: flex;
-            gap: 20px; /* More spacing */
-            margin: 20px 0; /* More margin */
-            justify-content: center;
-        }
-        
-        .tts-btn {
-            background: linear-gradient(to bottom, #00b09b, #96c93d);
-            border: 4px solid #fff; /* Thicker border */
-            border-radius: 12px; /* Larger radius */
-            color: #fff;
-            padding: 15px 25px; /* Larger padding */
-            font-size: 1.8rem; /* Larger for TV */
-            cursor: pointer;
-            transition: all 0.2s;
-            min-width: 200px; /* Minimum width for remote navigation */
-        }
-        
-        .tts-btn:hover, .tts-btn:focus {
-            transform: scale(1.05);
-            outline: 3px solid #00ffff; /* Focus indicator */
-        }
-        
-        .match-status {
-            font-size: 2.2rem; /* Larger for TV */
-            margin: 20px 0; /* More margin */
-            color: #ffcc00;
-            text-shadow: 3px 3px 0 #000; /* Larger shadow */
-        }
-        
-        /* Focus styles for TV remote navigation */
-        .focusable:focus {
-            outline: 4px solid #00ffff;
-            outline-offset: 4px;
-            transform: scale(1.05);
-        }
-        
-        /* TV remote navigation container */
-        .navigation-hint {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            color: white;
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 3.5rem; }
-            .subtitle { font-size: 2rem; }
-            .english { font-size: 4rem; }
-            .japanese { font-size: 3.2rem; }
-            .emoji { font-size: 10rem; } /* Adjusted for mobile */
-            .emoji.flag-emoji { font-size: 12rem; } /* Adjusted for mobile */
-            button { font-size: 2rem; padding: 15px 25px; }
-            .play-btn { width: 60px; height: 60px; font-size: 1.8rem; }
-            .match-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Vocab TV — Flash & Match</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --panel:#111827;
+      --muted:#94a3b8;
+      --accent:#60a5fa;
+      --accent-2:#34d399;
+      --danger:#fb7185;
+      --gold:#fbbf24;
+      --text:#e6eef8;
+      --card-radius:1.6vh;
+      --pad:2vh;
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+    html,body{height:100%;width:100%;margin:0;padding:0;overflow:hidden;background:var(--bg);color:var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    .no-scroll{position:fixed;inset:0;overflow:hidden}
+    /* App shell */
+    .screen{position:fixed;inset:0;display:none;padding:var(--pad);align-items:center;justify-content:center}
+    .screen.active{display:flex}
+    .card{width:100%;max-width:180vh;aspect-ratio:16/9;border-radius:calc(var(--card-radius));background:linear-gradient(180deg,var(--panel),#071027);padding:var(--pad);display:flex;flex-direction:column;gap:1.6vh;box-shadow:0 1.6vh 3vh rgba(2,6,23,.6);}
+    /* Menu layout: stacked compact panels for TV */
+    .menu-grid{display:flex;flex-direction:column;gap:1.4vh;height:100%;}
+    .panel{background:rgba(255,255,255,0.03);border-radius:1.2vh;padding:1.4vh;display:flex;align-items:center;gap:1.2vh;flex-wrap:wrap;}
+    .panel.title{align-items:center;justify-content:space-between;padding:1.0vh 1.4vh;}
+    .brand{font-weight:900;font-size:4.8vh;letter-spacing:0.02em}
+    .subtitle{font-size:2.8vh;color:var(--muted)}
+    select, input[type="checkbox"], input[type="radio"], .control{
+      font-size:3.2vh;padding:1.0vh 1.4vh;border-radius:1.0vh;border:0;background:rgba(255,255,255,0.03);color:var(--text);
+    }
+    .controls{display:flex;gap:1.2vh;align-items:center;flex-wrap:wrap;}
+    button.big{
+      font-size:3.6vh;padding:1.2vh 2.0vh;border-radius:1.2vh;border:0;font-weight:800;cursor:pointer;
+      box-shadow:0 0.6vh 1.2vh rgba(2,6,23,.6);
+    }
+    button.primary{background:var(--accent);color:#052334}
+    button.green{background:var(--accent-2);color:#053023}
+    button.warn{background:var(--gold);color:#10201a}
+    button.danger{background:var(--danger);color:#2b0216}
+    /* Flash card screen */
+    .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%;}
+    .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%;}
+    .emoji{font-size:52vh;line-height:1;text-align:center;user-select:none;}
+    .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%;}
+    .word{
+      min-width:30vh;padding:1.2vh 1.6vh;border-radius:1.2vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:800;
+      font-size:6.6vh;letter-spacing:0.02em;
+    }
+    .word.hidden{filter:blur(1.2vh);opacity:0.5}
+    .flash-bottom{display:flex;gap:1.2vh;align-items:center;justify-content:center;flex-direction:column;}
+    .toolbar{display:flex;gap:1.0vh;align-items:center;justify-content:center;flex-wrap:wrap;}
+    .badge{font-size:2.4vh;padding:0.6vh 1.0vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);}
+    /* Game screen */
+    .game-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2vh;height:100%;align-items:stretch;}
+    .game-col{display:flex;flex-direction:column;gap:1.2vh;align-items:stretch;justify-content:center;padding:0;}
+    .game-btn{
+      display:flex;align-items:center;justify-content:flex-start;gap:1.2vh;padding:1.0vh 1.2vh;border-radius:1.0vh;border:0;font-weight:900;
+      font-size:4.2vh;background:rgba(255,255,255,0.02);color:var(--text);min-height:0;flex:1;cursor:pointer;
+    }
+    .game-btn .emoji-small{font-size:5.6vh;margin-left:0;margin-right:1.2vh}
+    .game-btn.selected{outline:0.6vh solid var(--gold);}
+    .game-btn.matched{background:linear-gradient(90deg, rgba(80,200,120,0.18), rgba(60,160,240,0.08));opacity:0.9;color:#001a0d}
+    .game-col > .game-btn{min-height:calc((100% - (4 * 1.2vh)) / 5); } /* 5 buttons with gaps */
+    /* Small text */
+    .hint{font-size:2.6vh;color:var(--muted)}
+    /* responsive ensure fit on smaller TV screens */
+    @media (max-height:600px){
+      .emoji{font-size:40vh}
+      .word{font-size:5.2vh}
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Eiken Grade 5 Vocabulary Master</h1>
-        <div class="subtitle">Learn 684 essential words with retro style!</div>
-        
-        <div class="settings">
-            <div class="toggle-japanese">
-                <span>Show Japanese:</span>
-                <label class="switch">
-                    <input type="checkbox" id="japaneseToggle" checked>
-                    <span class="slider"></span>
-                </label>
+<body class="no-scroll">
+  <!-- MENU -->
+  <section id="menu" class="screen active" aria-label="Menu">
+    <div class="card" role="group" aria-label="Main menu card">
+      <div class="menu-grid">
+        <div class="panel title">
+          <div>
+            <div class="brand">Vocab TV</div>
+            <div class="subtitle">Flash • Hear • Match — Simple classroom drills</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.6vh;align-items:flex-end;">
+            <div style="display:flex;gap:0.6vh;">
+              <button id="startFlash" class="big primary">Start Flash</button>
+              <button id="startGame" class="big green">Start Game</button>
             </div>
-            <div class="toggle-japanese">
-                <span>Big English:</span>
-                <label class="switch">
-                    <input type="checkbox" id="bigEnglishToggle">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="toggle-japanese">
-                <span>Auto TTS:</span>
-                <label class="switch">
-                    <input type="checkbox" id="autoTtsToggle" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="toggle-japanese">
-                <span>Auto Quiz:</span>
-                <label class="switch">
-                    <input type="checkbox" id="autoQuizToggle" checked>
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="toggle-japanese">
-                <span>Sequential Order:</span>
-                <label class="switch">
-                    <input type="checkbox" id="sequentialToggle">
-                    <span class="slider"></span>
-                </label>
-            </div>
+            <div class="hint" style="text-align:right">Use remote arrows + Enter</div>
+          </div>
         </div>
-        
-        <div class="tts-controls">
-            <button class="tts-btn focusable" id="playEnglishBtn">Play English</button>
-            <button class="tts-btn focusable" id="playJapaneseBtn">Play Japanese</button>
-        </div>
-        
-        <div class="category-selector" id="categorySelector">
-            <select class="category-select focusable" id="categorySelect">
-                <!-- Categories will be populated by JavaScript -->
-            </select>
-        </div>
-        
-        <div class="card">
-            <div class="emoji" id="emojiDisplay">📚</div>
-            <div class="english" id="englishDisplay">Ready to start?
-                <button class="play-btn focusable" id="englishPlayBtn">▶️</button>
+
+        <div class="panel">
+          <div style="min-width:38%;">
+            <div class="hint" style="margin-bottom:0.6vh">Category</div>
+            <select id="categorySelect" class="control" aria-label="Category select" style="width:100%"></select>
+          </div>
+
+          <div style="min-width:30%;">
+            <div class="hint" style="margin-bottom:0.6vh">Order</div>
+            <div class="controls">
+              <label style="display:flex;gap:0.6vh;align-items:center"><input type="radio" name="order" value="ordered" checked /> Ordered</label>
+              <label style="display:flex;gap:0.6vh;align-items:center"><input type="radio" name="order" value="random" /> Random</label>
             </div>
-            <div class="japanese" id="japaneseDisplay">準備はいい？
-                <button class="play-btn focusable" id="japanesePlayBtn">▶️</button>
+          </div>
+
+          <div style="min-width:28%;">
+            <div class="hint" style="margin-bottom:0.6vh">Auto-game</div>
+            <div class="controls">
+              <label style="display:flex;gap:0.6vh;align-items:center"><input id="autoGame" type="checkbox" checked /> Start game after 5 cards</label>
             </div>
+          </div>
         </div>
-        
-        <div class="progress" id="progressDisplay">Card: 0/684</div>
-        
-        <div class="controls">
-            <button id="prevBtn" class="focusable">◀ Prev</button>
-            <button id="nextBtn" class="focusable">Next ▶</button>
-            <button id="testBtn" style="display:none;" class="focusable">Take Test</button>
-        </div>
-        
-        <div class="test-container" id="testContainer">
-            <div class="test-title">Match the words!</div>
-            <div class="match-status" id="matchStatus">Match the English words with their Japanese translations</div>
-            <div class="match-grid" id="matchGrid">
-                <div class="match-column">
-                    <div class="match-column-title">English</div>
-                    <div id="englishColumn"></div>
-                </div>
-                <div class="match-column">
-                    <div class="match-column-title">Japanese</div>
-                    <div id="japaneseColumn"></div>
-                </div>
+
+        <div class="panel">
+          <div style="min-width:34%;">
+            <div class="hint" style="margin-bottom:0.6vh">Auto Play</div>
+            <div class="controls">
+              <label><input id="autoEN" type="checkbox" checked /> Auto EN</label>
+              <label><input id="autoJA" type="checkbox" /> Auto JA</label>
+              <label><input id="enableAudio" type="checkbox" checked /> Enable TTS</label>
             </div>
-            <button id="checkTestBtn" class="focusable">Check Answers</button>
+          </div>
+
+          <div style="min-width:34%;">
+            <div class="hint" style="margin-bottom:0.6vh">Show Labels</div>
+            <div class="controls">
+              <label><input id="showEN" type="checkbox" checked /> Show English</label>
+              <label><input id="showJA" type="checkbox" checked /> Show Japanese</label>
+            </div>
+          </div>
+
+          <div style="min-width:28%;">
+            <div class="hint" style="margin-bottom:0.6vh">Voices</div>
+            <div class="controls">
+              <select id="enVoice" class="control"></select>
+              <select id="jaVoice" class="control"></select>
+            </div>
+          </div>
         </div>
+
+        <div class="panel" style="justify-content:space-between;align-items:center;">
+          <div style="display:flex;flex-direction:column;gap:0.6vh;">
+            <div class="hint">Study List</div>
+            <div style="display:flex;gap:1.0vh;align-items:center;">
+              <button id="wipeDifficult" class="big danger">Wipe Difficult</button>
+              <div class="badge" id="diffCount">0 words</div>
+            </div>
+          </div>
+
+          <div style="text-align:right;">
+            <div class="hint">Quick actions</div>
+            <div style="display:flex;gap:0.8vh;justify-content:flex-end;">
+              <button id="openFlash" class="big primary">Flash</button>
+              <button id="openGame" class="big green">Game</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    
-    <div class="celebration" id="celebration">
-        <div class="celebration-text">Congratulations! 🎉</div>
-        <button id="continueBtn" class="focusable">Continue Learning</button>
+  </section>
+
+  <!-- FLASH -->
+  <section id="flash" class="screen" aria-label="Flash cards">
+    <div class="card flash-wrap" role="group" aria-label="Flash card">
+      <div class="emoji-wrap">
+        <div id="emoji" class="emoji" aria-hidden="true">🙂</div>
+      </div>
+
+      <div class="labels" aria-live="polite">
+        <div id="enWord" class="word">English</div>
+        <div id="jaWord" class="word">日本語</div>
+      </div>
+
+      <div class="flash-bottom">
+        <div class="toolbar">
+          <button id="prevBtn" class="big">⟵ Prev</button>
+          <button id="revealEN" class="big">Reveal EN</button>
+          <button id="revealJA" class="big">Reveal JA</button>
+          <button id="saveBtn" class="big green">★ Save</button>
+          <button id="playEN" class="big">🔊 EN</button>
+          <button id="playJA" class="big">🔊 JA</button>
+          <button id="nextBtn" class="big">Next ⟶</button>
+        </div>
+        <div style="display:flex;gap:1.2vh;align-items:center;justify-content:center;">
+          <div class="badge" id="posBadge">0/0</div>
+          <div class="badge" id="catBadge">Category</div>
+          <button id="backToMenu" class="big">Menu</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="navigation-hint" id="navigationHint">
-        Use arrow keys to navigate, Enter to select
+  <!-- GAME -->
+  <section id="game" class="screen" aria-label="Game">
+    <div class="card" role="group" aria-label="Matching game">
+      <div style="display:flex;align-items:center;justify-content:space-between;">
+        <div style="font-weight:900;font-size:3.6vh">Match the pairs</div>
+        <div style="display:flex;gap:1.0vh;align-items:center;">
+          <div class="hint">Matches: <span id="matchedCount">0</span>/5</div>
+          <button id="gameBack" class="big">Menu</button>
+          <button id="regenGame" class="big primary">New Round</button>
+        </div>
+      </div>
+
+      <div class="game-wrap" style="margin-top:1.2vh;">
+        <div id="colEN" class="game-col" aria-label="English words column"></div>
+        <div id="colJA" class="game-col" aria-label="Japanese words column"></div>
+      </div>
     </div>
+  </section>
 
-    <!-- Reference to external vocabulary file -->
-    <script src="vocabulary.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Flatten the vocabulary into a single array
-            const vocabulary = [];
-            for (const category in vocabularyCategories) {
-                vocabulary.push(...vocabularyCategories[category]);
-            }
+  <!-- Vocabulary file -->
+  <script src="vocabulary.js"></script>
 
-            // DOM elements
-            const emojiDisplay = document.getElementById('emojiDisplay');
-            const englishDisplay = document.getElementById('englishDisplay');
-            const japaneseDisplay = document.getElementById('japaneseDisplay');
-            const progressDisplay = document.getElementById('progressDisplay');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const testBtn = document.getElementById('testBtn');
-            const testContainer = document.getElementById('testContainer');
-            const englishColumn = document.getElementById('englishColumn');
-            const japaneseColumn = document.getElementById('japaneseColumn');
-            const checkTestBtn = document.getElementById('checkTestBtn');
-            const celebration = document.getElementById('celebration');
-            const continueBtn = document.getElementById('continueBtn');
-            const japaneseToggle = document.getElementById('japaneseToggle');
-            const bigEnglishToggle = document.getElementById('bigEnglishToggle');
-            const autoTtsToggle = document.getElementById('autoTtsToggle');
-            const autoQuizToggle = document.getElementById('autoQuizToggle');
-            const sequentialToggle = document.getElementById('sequentialToggle');
-            const card = document.querySelector('.card');
-            const englishPlayBtn = document.getElementById('englishPlayBtn');
-            const japanesePlayBtn = document.getElementById('japanesePlayBtn');
-            const playEnglishBtn = document.getElementById('playEnglishBtn');
-            const playJapaneseBtn = document.getElementById('playJapaneseBtn');
-            const categorySelect = document.getElementById('categorySelect');
-            const matchStatus = document.getElementById('matchStatus');
-            const navigationHint = document.getElementById('navigationHint');
+  <script>
+    // Utilities and state
+    const $ = s => document.querySelector(s);
+    const screens = { menu: $('#menu'), flash: $('#flash'), game: $('#game') };
+    const state = {
+      category: null, words: [], idx: 0, order: 'ordered', shuffled: [],
+      autoEN: true, autoJA: false, showEN: true, showJA: true, enableAudio: true,
+      lastFive: [], gamePairs: [], autoGame: true, enVoice: null, jaVoice: null
+    };
+    const DIFF_KEY = 'vocab_difficult_v1';
+    const LAST5_KEY = 'vocab_last5_v1';
+    const GAME_KEY = 'vocab_game_v1';
 
-            // State variables
-            let currentIndex = 0;
-            let seenCount = new Array(vocabulary.length).fill(0);
-            let testWords = [];
-            let matchedPairs = 0;
-            let selectedCategory = "All";
-            let selectedItems = [];
-            let synth = window.speechSynthesis;
-            let cardsExamined = 0;
-            let recentlyViewed = [];
-            let focusableElements = [];
-            let currentFocusIndex = 0;
+    // Allow either window.vocabularyCategories or global const/var vocabularyCategories
+    function getVocabularyRoot(){
+      if(typeof window !== 'undefined' && window.vocabularyCategories) return window.vocabularyCategories;
+      if(typeof vocabularyCategories !== 'undefined') return vocabularyCategories;
+      return null;
+    }
 
-            // Initialize the app
-            function init() {
-                createCategoryDropdown();
-                displayCard();
-                setupEventListeners();
-                setupTVNavigation();
-                
-                // Show navigation hint for a few seconds
-                navigationHint.style.display = 'block';
-                setTimeout(() => {
-                    navigationHint.style.display = 'none';
-                }, 5000);
-            }
+    // Persist difficult in sessionStorage
+    function saveDifficult(word){
+      let list = JSON.parse(sessionStorage.getItem(DIFF_KEY) || '[]');
+      if(!list.find(w => w.english===word.english && w.japanese===word.japanese)){
+        list.push(word);
+        sessionStorage.setItem(DIFF_KEY, JSON.stringify(list));
+      }
+      updateDiffBadge();
+    }
+    function getDifficult(){ return JSON.parse(sessionStorage.getItem(DIFF_KEY) || '[]'); }
+    function wipeDifficult(){ sessionStorage.removeItem(DIFF_KEY); updateDiffBadge(); buildCategorySelect(); }
 
-            // Set up TV remote navigation
-            function setupTVNavigation() {
-                // Get all focusable elements
-                focusableElements = Array.from(document.querySelectorAll('.focusable, button, select, .match-item'));
-                
-                // Add tabindex to all focusable elements if not already present
-                focusableElements.forEach(el => {
-                    if (!el.hasAttribute('tabindex')) {
-                        el.setAttribute('tabindex', '0');
-                    }
-                });
-                
-                // Set up keyboard navigation
-                document.addEventListener('keydown', handleKeyDown);
-                
-                // Set initial focus
-                if (focusableElements.length > 0) {
-                    focusableElements[0].focus();
-                }
-            }
-            
-            // Handle keyboard navigation for TV remote
-            function handleKeyDown(e) {
-                switch(e.key) {
-                    case 'ArrowUp':
-                    case 'ArrowDown':
-                    case 'ArrowLeft':
-                    case 'ArrowRight':
-                        e.preventDefault();
-                        navigateFocus(e.key);
-                        break;
-                    case 'Enter':
-                        // Simulate click on focused element
-                        if (document.activeElement) {
-                            document.activeElement.click();
-                        }
-                        break;
-                }
-            }
-            
-            // Navigate focus based on arrow keys
-            function navigateFocus(direction) {
-                // Special handling for match items in grid
-                if (document.activeElement.classList.contains('match-item')) {
-                    navigateMatchItems(direction);
-                    return;
-                }
-                
-                // Standard navigation for other elements
-                const currentIndex = focusableElements.indexOf(document.activeElement);
-                let newIndex = currentIndex;
-                
-                if (direction === 'ArrowRight' || direction === 'ArrowDown') {
-                    newIndex = (currentIndex + 1) % focusableElements.length;
-                } else if (direction === 'ArrowLeft' || direction === 'ArrowUp') {
-                    newIndex = (currentIndex - 1 + focusableElements.length) % focusableElements.length;
-                }
-                
-                focusableElements[newIndex].focus();
-                currentFocusIndex = newIndex;
-            }
-            
-            // Special navigation for match items in grid
-            function navigateMatchItems(direction) {
-                const currentItem = document.activeElement;
-                const allItems = Array.from(document.querySelectorAll('.match-item'));
-                const currentIndex = allItems.indexOf(currentItem);
-                
-                if (direction === 'ArrowRight') {
-                    // Move to next item in same row (if exists)
-                    const nextIndex = (currentIndex + 1) % allItems.length;
-                    allItems[nextIndex].focus();
-                } else if (direction === 'ArrowLeft') {
-                    // Move to previous item in same row (if exists)
-                    const prevIndex = (currentIndex - 1 + allItems.length) % allItems.length;
-                    allItems[prevIndex].focus();
-                } else if (direction === 'ArrowDown') {
-                    // Move to item below (simplified - just move to next row)
-                    const itemsPerColumn = allItems.length / 2;
-                    let nextIndex = currentIndex + itemsPerColumn;
-                    if (nextIndex >= allItems.length) {
-                        nextIndex = nextIndex - allItems.length;
-                    }
-                    allItems[nextIndex].focus();
-                } else if (direction === 'ArrowUp') {
-                    // Move to item above (simplified - just move to previous row)
-                    const itemsPerColumn = allItems.length / 2;
-                    let prevIndex = currentIndex - itemsPerColumn;
-                    if (prevIndex < 0) {
-                        prevIndex = allItems.length + prevIndex;
-                    }
-                    allItems[prevIndex].focus();
-                }
-            }
+    function updateDiffBadge(){ $('#diffCount').textContent = `${getDifficult().length} words`; }
 
-            // Create category selection dropdown
-            function createCategoryDropdown() {
-                // Add "All" option
-                const allOption = document.createElement('option');
-                allOption.value = 'All';
-                allOption.textContent = 'All Categories';
-                allOption.selected = true;
-                categorySelect.appendChild(allOption);
-                
-                // Add options for each category
-                for (const category in vocabularyCategories) {
-                    const option = document.createElement('option');
-                    option.value = category;
-                    option.textContent = category;
-                    categorySelect.appendChild(option);
-                }
-            }
+    function buildCategorySelect(){
+      const sel = $('#categorySelect');
+      sel.innerHTML = '';
+      const root = getVocabularyRoot() || {};
+      const cats = Object.keys(root);
+      for(const c of cats){
+        const opt = document.createElement('option'); opt.value = c; opt.textContent = c; sel.appendChild(opt);
+      }
+      const difficultCount = getDifficult().length;
+      if(difficultCount>0){
+        const opt = document.createElement('option'); opt.value = '_DIFFICULT_'; opt.textContent = `Difficult (${difficultCount})`; sel.appendChild(opt);
+      }
+      if(!state.category && cats.length) state.category = cats[0];
+      sel.value = state.category || '';
+    }
 
-            // Select a category
-            function selectCategory(category) {
-                selectedCategory = category;
-                
-                // Reset to first card in category
-                if (category === "All") {
-                    currentIndex = 0;
-                } else {
-                    // Find the first word in this category
-                    let foundIndex = -1;
-                    for (let i = 0; i < vocabulary.length; i++) {
-                        if (vocabularyCategories[category].includes(vocabulary[i])) {
-                            foundIndex = i;
-                            break;
-                        }
-                    }
-                    if (foundIndex !== -1) {
-                        currentIndex = foundIndex;
-                    }
-                }
-                
-                displayCard();
-            }
+    function getWordsForCategory(cat){
+      if(cat === '_DIFFICULT_') return getDifficult();
+      const root = getVocabularyRoot();
+      if(!root) return [];
+      return root[cat] ? root[cat].slice() : [];
+    }
 
-            // Get filtered vocabulary based on selected category
-            function getFilteredVocabulary() {
-                if (selectedCategory === "All") {
-                    return vocabulary;
-                } else {
-                    return vocabularyCategories[selectedCategory];
-                }
-            }
+    function shuffle(a){
+      for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+      return a;
+    }
 
-            // Get current index in filtered vocabulary
-            function getCurrentFilteredIndex() {
-                const filtered = getFilteredVocabulary();
-                const currentWord = vocabulary[currentIndex];
-                
-                return filtered.findIndex(word => 
-                    word.english === currentWord.english && 
-                    word.japanese === currentWord.japanese
-                );
-            }
+    function showScreen(name){
+      Object.values(screens).forEach(s=>s.classList.remove('active'));
+      screens[name].classList.add('active');
+    }
 
-            // Display current card
-            function displayCard() {
-                const filtered = getFilteredVocabulary();
-                const filteredIndex = getCurrentFilteredIndex();
-                const currentWord = filtered[filteredIndex];
-                
-                // Handle flag emojis specially
-                const isFlagEmoji = currentWord.emoji && 
-                    (currentWord.emoji.includes('flag') || 
-                     currentWord.english.toLowerCase().includes('flag') ||
-                     currentWord.english.toLowerCase().includes('country'));
-                
-                // Set emoji with special handling for flags
-                if (isFlagEmoji) {
-                    emojiDisplay.textContent = currentWord.emoji || '🏳️';
-                    emojiDisplay.classList.add('flag-emoji');
-                    
-                    // Try to fix flag display issues with a fallback
-                    setTimeout(() => {
-                        if (emojiDisplay.offsetHeight < 50) { // If emoji didn't render properly
-                            emojiDisplay.textContent = '🏳️'; // Fallback to a standard flag
-                        }
-                    }, 100);
-                } else {
-                    emojiDisplay.textContent = currentWord.emoji || '📝';
-                    emojiDisplay.classList.remove('flag-emoji');
-                }
-                
-                englishDisplay.innerHTML = `${currentWord.english} <button class="play-btn focusable" id="englishPlayBtn">▶️</button>`;
-                japaneseDisplay.innerHTML = `${currentWord.japanese} <button class="play-btn focusable" id="japanesePlayBtn">▶️</button>`;
-                progressDisplay.textContent = `Card: ${filteredIndex + 1}/${filtered.length} (${selectedCategory})`;
-                
-                // Update seen count
-                const globalIndex = vocabulary.findIndex(word => 
-                    word.english === currentWord.english && 
-                    word.japanese === currentWord.japanese
-                );
-                seenCount[globalIndex]++;
-                
-                // Add to recently viewed (keep only last 5 unique cards)
-                if (!recentlyViewed.some(item => item.english === currentWord.english)) {
-                    recentlyViewed.push(currentWord);
-                    if (recentlyViewed.length > 5) {
-                        recentlyViewed.shift();
-                    }
-                }
-                
-                // Reattach event listeners to play buttons
-                document.getElementById('englishPlayBtn').addEventListener('click', () => speakText(currentWord.english, 'en-US'));
-                document.getElementById('japanesePlayBtn').addEventListener('click', () => speakText(currentWord.japanese, 'ja-JP'));
-                
-                // Add focusable class and tabindex for TV navigation
-                document.getElementById('englishPlayBtn').classList.add('focusable');
-                document.getElementById('japanesePlayBtn').classList.add('focusable');
-                document.getElementById('englishPlayBtn').setAttribute('tabindex', '0');
-                document.getElementById('japanesePlayBtn').setAttribute('tabindex', '0');
-                
-                // Update focusable elements
-                focusableElements = Array.from(document.querySelectorAll('.focusable, button, select, .match-item'));
-                
-                // Auto-play English TTS if enabled
-                if (autoTtsToggle.checked) {
-                    setTimeout(() => speakText(currentWord.english, 'en-US'), 500);
-                }
-                
-                // Increment cards examined counter
-                cardsExamined++;
-                
-                // Show quiz after every 5 cards if auto quiz is enabled
-                if (autoQuizToggle.checked && cardsExamined % 5 === 0 && recentlyViewed.length >= 3) {
-                    setTimeout(() => {
-                        startTestWithWords(recentlyViewed);
-                    }, 800);
-                }
-            }
+    // TTS helpers
+    function speak(text, lang='en-US', which='en'){
+      if(!state.enableAudio || !text) return;
+      try{
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = lang;
+        if(which==='en' && state.enVoice) u.voice = state.enVoice;
+        if(which==='ja' && state.jaVoice) u.voice = state.jaVoice;
+        u.rate = which==='ja' ? 0.92 : 1.0;
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(u);
+      }catch(e){ console.warn('TTS error',e); }
+    }
+    // Voice pick
+    function pickVoices(){
+      const all = window.speechSynthesis.getVoices() || [];
+      const enSel = $('#enVoice'); const jaSel = $('#jaVoice');
+      enSel.innerHTML=''; jaSel.innerHTML='';
+      const enList = all.filter(v=>/^en|English/i.test(v.lang+v.name));
+      const jaList = all.filter(v=>/^ja|Japanese/i.test(v.lang+v.name));
+      function add(sel,list){ (list.length?list:all).forEach(v=>{ const o=document.createElement('option'); o.value=v.name; o.textContent=`${v.name} (${v.lang})`; sel.appendChild(o); }); }
+      add(enSel,enList); add(jaSel,jaList);
+      state.enVoice = enList[0] || all[0] || null;
+      state.jaVoice = jaList[0] || all[0] || null;
+      if(state.enVoice) enSel.value = state.enVoice.name;
+      if(state.jaVoice) jaSel.value = state.jaVoice.name;
+      enSel.onchange = ()=>{ state.enVoice = all.find(v=>v.name===enSel.value) || null; };
+      jaSel.onchange = ()=>{ state.jaVoice = all.find(v=>v.name===jaSel.value) || null; };
+    }
+    window.speechSynthesis.onvoiceschanged = pickVoices;
+    setTimeout(pickVoices, 300);
 
-            // Start test with specific words
-            function startTestWithWords(words) {
-                playSound('powerup');
-                testWords = words;
-                
-                // Create test interface
-                englishColumn.innerHTML = '';
-                japaneseColumn.innerHTML = '';
-                matchedPairs = 0;
-                selectedItems = [];
-                matchStatus.textContent = `Match the English words with their Japanese translations (${testWords.length} pairs)`;
-                
-                // Create English and Japanese cards
-                const englishWords = [...testWords];
-                const japaneseWords = [...testWords];
-                
-                // Shuffle both arrays
-                shuffleArray(englishWords);
-                shuffleArray(japaneseWords);
-                
-                // Add English cards
-                englishWords.forEach(word => {
-                    const card = document.createElement('div');
-                    card.className = 'match-item focusable';
-                    card.tabIndex = 0;
-                    card.innerHTML = `${word.english} <button class="play-btn focusable">▶️</button>`;
-                    card.dataset.type = 'english';
-                    card.dataset.word = word.english;
-                    card.dataset.text = word.english; // Store text for TTS
-                    card.addEventListener('click', handleMatchClick);
-                    card.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter') {
-                            handleMatchClick(e);
-                        }
-                    });
-                    card.querySelector('.play-btn').addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        speakText(word.english, 'en-US');
-                    });
-                    englishColumn.appendChild(card);
-                });
-                
-                // Add Japanese cards
-                japaneseWords.forEach(word => {
-                    const card = document.createElement('div');
-                    card.className = 'match-item focusable';
-                    card.tabIndex = 0;
-                    card.innerHTML = `${word.japanese} <button class="play-btn focusable">▶️</button>`;
-                    card.dataset.type = 'japanese';
-                    card.dataset.word = word.english;
-                    card.dataset.text = word.japanese; // Store text for TTS
-                    card.addEventListener('click', handleMatchClick);
-                    card.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter') {
-                            handleMatchClick(e);
-                        }
-                    });
-                    card.querySelector('.play-btn').addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        speakText(word.japanese, 'ja-JP');
-                    });
-                    japaneseColumn.appendChild(card);
-                });
-                
-                // Update focusable elements
-                focusableElements = Array.from(document.querySelectorAll('.focusable, button, select, .match-item'));
-                
-                // Show test container
-                testContainer.style.display = 'block';
-                
-                // Focus on first match item
-                const firstMatchItem = document.querySelector('.match-item');
-                if (firstMatchItem) {
-                    firstMatchItem.focus();
-                }
-            }
+    // FLASH CARD logic
+    function loadCategory(cat){
+      state.category = cat;
+      state.words = getWordsForCategory(cat);
+      state.idx = 0;
+      state.shuffled = state.order === 'random' ? shuffle(state.words.slice()) : state.words.slice();
+      $('#catBadge').textContent = cat === '_DIFFICULT_' ? 'Difficult' : (cat || '—');
+      renderCard();
+    }
 
-            // Speak text using TTS
-            function speakText(text, lang) {
-                // Cancel any ongoing speech
-                synth.cancel();
-                
-                const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = lang;
-                utterance.rate = 0.9;
-                
-                // Set American voice if available
-                if (lang === 'en-US') {
-                    const voices = synth.getVoices();
-                    const americanVoice = voices.find(voice => 
-                        voice.lang === 'en-US' && voice.name.includes('English')
-                    );
-                    if (americanVoice) {
-                        utterance.voice = americanVoice;
-                    }
-                }
-                
-                synth.speak(utterance);
-            }
+    function renderCard(){
+      if(!state.shuffled || state.shuffled.length===0){
+        $('#emoji').textContent = '❓';
+        $('#enWord').textContent = '-';
+        $('#jaWord').textContent = '-';
+        $('#posBadge').textContent = '0/0';
+        return;
+      }
+      const w = state.shuffled[state.idx];
+      $('#emoji').textContent = w.emoji || '❓';
+      $('#enWord').textContent = w.english || '';
+      $('#jaWord').textContent = w.japanese || '';
+      $('#enWord').classList.toggle('hidden', !state.showEN);
+      $('#jaWord').classList.toggle('hidden', !state.showJA);
+      $('#posBadge').textContent = `${state.idx+1}/${state.shuffled.length}`;
 
-            // Setup event listeners
-            function setupEventListeners() {
-                prevBtn.addEventListener('click', showPrevCard);
-                nextBtn.addEventListener('click', showNextCard);
-                testBtn.addEventListener('click', startTest);
-                checkTestBtn.addEventListener('click', checkTest);
-                continueBtn.addEventListener('click', hideCelebration);
-                japaneseToggle.addEventListener('change', toggleJapanese);
-                bigEnglishToggle.addEventListener('change', toggleBigEnglish);
-                categorySelect.addEventListener('change', () => selectCategory(categorySelect.value));
-                playEnglishBtn.addEventListener('click', playCurrentEnglish);
-                playJapaneseBtn.addEventListener('click', playCurrentJapanese);
-                
-                // Initial setup for play buttons
-                document.getElementById('englishPlayBtn').addEventListener('click', playCurrentEnglish);
-                document.getElementById('japanesePlayBtn').addEventListener('click', playCurrentJapanese);
-            }
+      // push last five and possibly auto game
+      pushLastFive(w);
 
-            // Play current English word
-            function playCurrentEnglish() {
-                const currentWord = getFilteredVocabulary()[getCurrentFilteredIndex()];
-                speakText(currentWord.english, 'en-US');
-            }
+      if(state.autoEN) speak(w.english, 'en-US','en');
+      if(state.autoJA) setTimeout(()=>speak(w.japanese,'ja-JP','ja'), 350);
+    }
 
-            // Play current Japanese word
-            function playCurrentJapanese() {
-                const currentWord = getFilteredVocabulary()[getCurrentFilteredIndex()];
-                speakText(currentWord.japanese, 'ja-JP');
-            }
+    function nextCard(){
+      if(state.idx < state.shuffled.length - 1){ state.idx++; renderCard(); }
+      else { // finished deck - loop or show done flash briefly
+        // briefly flash a done badge
+        $('#posBadge').textContent = `${state.shuffled.length}/${state.shuffled.length}`;
+      }
+    }
+    function prevCard(){ if(state.idx>0){ state.idx--; renderCard(); } }
 
-            // Show previous card
-            function showPrevCard() {
-                playSound('blip');
-                const filtered = getFilteredVocabulary();
-                let filteredIndex = getCurrentFilteredIndex();
-                
-                filteredIndex = (filteredIndex - 1 + filtered.length) % filtered.length;
-                
-                // Find the global index of this word
-                const currentWord = filtered[filteredIndex];
-                const globalIndex = vocabulary.findIndex(word => 
-                    word.english === currentWord.english && 
-                    word.japanese === currentWord.japanese
-                );
-                
-                currentIndex = globalIndex;
-                displayCard();
-            }
+    // store last five in localStorage; keep order and avoid immediate duplicates
+    function pushLastFive(w){
+      if(!w) return;
+      let arr = JSON.parse(localStorage.getItem(LAST5_KEY) || '[]');
+      // remove duplicate of identical item to keep recency
+      const key = JSON.stringify({english:w.english,japanese:w.japanese,emoji:w.emoji});
+      arr = arr.filter(x => JSON.stringify(x) !== key);
+      arr.push({english:w.english,japanese:w.japanese,emoji:w.emoji});
+      while(arr.length > 5) arr.shift();
+      localStorage.setItem(LAST5_KEY, JSON.stringify(arr));
+      state.lastFive = arr;
+      // Auto-generate game when exactly 5 and setting enabled
+      if(state.autoGame && arr.length === 5){
+        // Save game pairs and auto-start
+        localStorage.setItem(GAME_KEY, JSON.stringify(arr));
+        // Slight delay to allow a tiny visual before switching
+        setTimeout(()=>{ buildGame(arr); showScreen('game'); }, 250);
+      }
+    }
 
-            // Show next card
-            function showNextCard() {
-                playSound('blip');
-                const filtered = getFilteredVocabulary();
-                let filteredIndex = getCurrentFilteredIndex();
-                
-                if (sequentialToggle.checked) {
-                    // Sequential navigation
-                    filteredIndex = (filteredIndex + 1) % filtered.length;
-                } else {
-                    // Random navigation with bucket system
-                    const rarelySeen = [];
-                    const oftenSeen = [];
-                    
-                    for (let i = 0; i < filtered.length; i++) {
-                        const word = filtered[i];
-                        const globalIndex = vocabulary.findIndex(w => 
-                            w.english === word.english && 
-                            w.japanese === word.japanese
-                        );
-                        
-                        if (seenCount[globalIndex] < 3) {
-                            rarelySeen.push(globalIndex);
-                        } else {
-                            oftenSeen.push(globalIndex);
-                        }
-                    }
-                    
-                    // If there are words seen less than 3 times, prioritize them
-                    if (rarelySeen.length > 0) {
-                        const randomIndex = Math.floor(Math.random() * rarelySeen.length);
-                        currentIndex = rarelySeen[randomIndex];
-                    } else {
-                        // Otherwise, choose randomly from all words in category
-                        const randomIndex = Math.floor(Math.random() * filtered.length);
-                        const word = filtered[randomIndex];
-                        currentIndex = vocabulary.findIndex(w => 
-                            w.english === word.english && 
-                            w.japanese === word.japanese
-                        );
-                    }
-                    filteredIndex = getCurrentFilteredIndex();
-                }
-                
-                // Find the global index of the next word
-                const currentWord = filtered[filteredIndex];
-                currentIndex = vocabulary.findIndex(word => 
-                    word.english === currentWord.english && 
-                    word.japanese === currentWord.japanese
-                );
-                
-                displayCard();
-            }
+    // GAME logic
+    let selEN=null, selJA=null, matched=0;
+    function buildGame(fromPairs){
+      const pairs = (fromPairs && fromPairs.length===5) ? fromPairs.slice() :
+                    JSON.parse(localStorage.getItem(GAME_KEY) || '[]');
+      let pool = pairs && pairs.length===5 ? pairs.slice() : (state.words.slice().length>=5 ? shuffle(state.words.slice()).slice(0,5) : (pairs||[]));
+      if(pool.length < 5){
+        // fallback: sample from all categories
+        const root = getVocabularyRoot() || {};
+        const all = Object.values(root).flat();
+        pool = shuffle(all).slice(0,5);
+      }
+      state.gamePairs = pool;
+      matched = 0;
+      selEN = selJA = null;
+      $('#matchedCount').textContent = matched;
+      // Build columns
+      const left = $('#colEN'); const right = $('#colJA');
+      left.innerHTML = ''; right.innerHTML = '';
+      const leftItems = pool.map(w => ({key:w.english, text:w.english}));
+      const rightItems = pool.map(w => ({key:w.english, text:w.japanese, emoji:w.emoji}));
+      shuffle(leftItems); shuffle(rightItems);
+      // create 5 equal buttons in each column
+      leftItems.forEach(item => {
+        const b = document.createElement('button');
+        b.className = 'game-btn';
+        b.dataset.key = item.key;
+        b.dataset.side = 'en';
+        b.innerHTML = `<div style="padding-left:1.2vh">${escapeHtml(item.text)}</div>`;
+        b.onclick = ()=> onGamePress(b);
+        left.appendChild(b);
+      });
+      rightItems.forEach(item => {
+        const b = document.createElement('button');
+        b.className = 'game-btn';
+        b.dataset.key = item.key;
+        b.dataset.side = 'ja';
+        b.innerHTML = `<div style="display:flex;align-items:center;"><div class="emoji-small">${escapeHtml(item.emoji||'')}</div><div>${escapeHtml(item.text)}</div></div>`;
+        b.onclick = ()=> onGamePress(b);
+        right.appendChild(b);
+      });
+      // ensure equal heights: the CSS sets flex:1 and computed min-heights
+    }
 
-            // Start a matching test
-            function startTest() {
-                const filtered = getFilteredVocabulary();
-                
-                // Select 5 random words for the test from current category
-                testWords = [];
-                const indices = [];
-                
-                while (testWords.length < Math.min(5, filtered.length)) {
-                    const randomIndex = Math.floor(Math.random() * filtered.length);
-                    if (!indices.includes(randomIndex)) {
-                        indices.push(randomIndex);
-                        testWords.push(filtered[randomIndex]);
-                    }
-                }
-                
-                startTestWithWords(testWords);
-            }
+    function onGamePress(btn){
+      if(btn.disabled) return;
+      const side = btn.dataset.side;
+      // visual toggle
+      btn.classList.toggle('selected');
+      if(side==='en'){
+        if(selEN && selEN !== btn) selEN.classList.remove('selected');
+        selEN = (selEN===btn) ? null : btn;
+        if(selEN) speak(selEN.dataset.key, 'en-US','en'); // speak english text
+      } else {
+        if(selJA && selJA !== btn) selJA.classList.remove('selected');
+        selJA = (selJA===btn) ? null : btn;
+        if(selJA) {
+          // find japanese text to speak
+          const txt = btn.innerText || btn.textContent || '';
+          speak(txt, 'ja-JP','ja');
+        }
+      }
+      if(selEN && selJA) {
+        // check match
+        if(selEN.dataset.key === selJA.dataset.key){
+          selEN.disabled = selJA.disabled = true;
+          selEN.classList.remove('selected'); selJA.classList.remove('selected');
+          selEN.classList.add('matched'); selJA.classList.add('matched');
+          matched++;
+          $('#matchedCount').textContent = matched;
+          selEN = selJA = null;
+          if(matched >= 5){
+            // show brief celebration then return to menu
+            setTimeout(()=>{ flashMatchComplete(); }, 400);
+          }
+        } else {
+          // mismatch: flash and unselect
+          const a = [selEN, selJA];
+          a.forEach(el => { if(!el) return; el.animate([{transform:'translateX(0)'},{transform:'translateX(10px)'},{transform:'translateX(-10px)'},{transform:'translateX(0)'}],{duration:260}); el.classList.remove('selected'); });
+          selEN = selJA = null;
+        }
+      }
+    }
 
-            // Handle match click
-            function handleMatchClick(e) {
-                const clicked = e.target.closest('.match-item');
-                if (!clicked) return;
-                
-                // Ignore if already matched
-                if (clicked.classList.contains('matched')) return;
-                
-                playSound('blip');
-                
-                // Autoplay TTS when card is clicked
-                const text = clicked.dataset.text;
-                const lang = clicked.dataset.type === 'english' ? 'en-US' : 'ja-JP';
-                speakText(text, lang);
-                
-                // Toggle selection
-                if (clicked.classList.contains('selected')) {
-                    clicked.classList.remove('selected');
-                    selectedItems = selectedItems.filter(item => item !== clicked);
-                } else {
-                    clicked.classList.add('selected');
-                    selectedItems.push(clicked);
-                    
-                    // If two items are selected, check for a match
-                    if (selectedItems.length === 2) {
-                        const [first, second] = selectedItems;
-                        
-                        // Check if it's a match (one English, one Japanese, same word)
-                        if (first.dataset.type !== second.dataset.type && 
-                            first.dataset.word === second.dataset.word) {
-                            // Match!
-                            playSound('coin');
-                            first.classList.add('matched');
-                            second.classList.add('matched');
-                            matchedPairs++;
-                            
-                            // Update status
-                            matchStatus.textContent = `Matched ${matchedPairs} of ${testWords.length} pairs`;
-                            
-                            // Check if all pairs are matched
-                            if (matchedPairs === testWords.length) {
-                                setTimeout(showCelebration, 500);
-                            }
-                        } else {
-                            // Not a match
-                            playSound('error');
-                            first.classList.add('incorrect');
-                            second.classList.add('incorrect');
-                            
-                            setTimeout(() => {
-                                first.classList.remove('selected', 'incorrect');
-                                second.classList.remove('selected', 'incorrect');
-                                selectedItems = [];
-                            }, 1000);
-                        }
-                        
-                        // Reset selection
-                        selectedItems = [];
-                    }
-                }
-            }
+    function flashMatchComplete(){
+      // tiny overlay effect by changing title or similar (keep simple)
+      // For now just return to menu after short delay
+      setTimeout(()=> showScreen('menu'), 700);
+    }
 
-            // Check test answers
-            function checkTest() {
-                const allItems = document.querySelectorAll('.match-item');
-                let allCorrect = true;
-                
-                allItems.forEach(item => {
-                    if (!item.classList.contains('matched')) {
-                        allCorrect = false;
-                    }
-                });
-                
-                if (allCorrect) {
-                    showCelebration();
-                } else {
-                    playSound('error');
-                    alert(`Not all matches are correct. You've matched ${matchedPairs} of ${testWords.length} pairs. Keep trying!`);
-                }
-            }
+    // escape html helper
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]; }); }
 
-            // Show celebration
-            function showCelebration() {
-                playSound('win');
-                celebration.style.display = 'flex';
-                createConfetti();
-                
-                // Update focusable elements
-                focusableElements = Array.from(document.querySelectorAll('.focusable, button, select, .match-item'));
-                
-                // Focus on continue button
-                continueBtn.focus();
-            }
+    // Wiring events & init
+    function init(){
+      // menu controls
+      document.querySelectorAll('input[name="order"]').forEach(r => r.onchange = ()=> { state.order = r.value; if(state.category) loadCategory(state.category); });
+      $('#autoEN').onchange = e => state.autoEN = e.target.checked;
+      $('#autoJA').onchange = e => state.autoJA = e.target.checked;
+      $('#showEN').onchange = e => { state.showEN = e.target.checked; renderCard(); };
+      $('#showJA').onchange = e => { state.showJA = e.target.checked; renderCard(); };
+      $('#enableAudio').onchange = e => state.enableAudio = e.target.checked;
+      $('#autoGame').onchange = e => state.autoGame = e.target.checked;
 
-            // Hide celebration
-            function hideCelebration() {
-                playSound('blip');
-                celebration.style.display = 'none';
-                testContainer.style.display = 'none';
-                
-                // Update focusable elements
-                focusableElements = Array.from(document.querySelectorAll('.focusable, button, select, .match-item'));
-                
-                // Focus on next button
-                nextBtn.focus();
-            }
+      $('#startFlash').onclick = ()=> { if($('#categorySelect').value) { loadCategory($('#categorySelect').value); showScreen('flash'); } };
+      $('#startGame').onclick = ()=> { buildGame(); showScreen('game'); };
+      $('#openFlash').onclick = ()=> { if($('#categorySelect').value) { loadCategory($('#categorySelect').value); showScreen('flash'); } };
+      $('#openGame').onclick = ()=> { buildGame(); showScreen('game'); };
 
-            // Create confetti effect
-            function createConfetti() {
-                const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-                
-                for (let i = 0; i < 50; i++) {
-                    const confetti = document.createElement('div');
-                    confetti.className = 'confetti';
-                    confetti.style.left = Math.random() * 100 + 'vw';
-                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                    confetti.style.width = (10 + Math.random() * 20) + 'px';
-                    confetti.style.height = (10 + Math.random() * 20) + 'px';
-                    confetti.style.animationDuration = (1 + Math.random() * 2) + 's';
-                    confetti.style.animationDelay = Math.random() * 2 + 's';
-                    document.body.appendChild(confetti);
-                    
-                    // Remove confetti after animation
-                    setTimeout(() => {
-                        confetti.remove();
-                    }, 3000);
-                }
-            }
+      $('#prevBtn').onclick = prevCard;
+      $('#nextBtn').onclick = nextCard;
+      $('#saveBtn').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) { saveDifficult(w); } };
+      $('#playEN').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) speak(w.english,'en-US','en'); };
+      $('#playJA').onclick = ()=> { const w = state.shuffled[state.idx]; if(w) speak(w.japanese,'ja-JP','ja'); };
+      $('#revealEN').onclick = ()=> { state.showEN = true; $('#showEN').checked = true; renderCard(); };
+      $('#revealJA').onclick = ()=> { state.showJA = true; $('#showJA').checked = true; renderCard(); };
 
-            // Toggle Japanese display
-            function toggleJapanese() {
-                if (japaneseToggle.checked) {
-                    japaneseDisplay.style.display = 'flex';
-                } else {
-                    japaneseDisplay.style.display = 'none';
-                }
-            }
+      $('#backToMenu').onclick = ()=> showScreen('menu');
+      $('#gameBack').onclick = ()=> showScreen('menu');
+      $('#regenGame').onclick = ()=> { buildGame(); };
 
-            // Toggle big English
-            function toggleBigEnglish() {
-                if (bigEnglishToggle.checked) {
-                    card.classList.add('big-english');
-                } else {
-                    card.classList.remove('big-english');
-                }
-            }
+      $('#wipeDifficult').onclick = ()=> wipeDifficult();
 
-            // Play sound effects
-            function playSound(type) {
-                // Create audio context
-                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-                
-                if (type === 'blip') {
-                    const oscillator = audioContext.createOscillator();
-                    oscillator.type = 'sine';
-                    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-                    oscillator.connect(audioContext.destination);
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.1);
-                } else if (type === 'coin') {
-                    const oscillator = audioContext.createOscillator();
-                    oscillator.type = 'triangle';
-                    oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
-                    oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioContext.currentTime + 0.2); // C6
-                    oscillator.connect(audioContext.destination);
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.3);
-                } else if (type === 'powerup') {
-                    const oscillator = audioContext.createOscillator();
-                    oscillator.type = 'sawtooth';
-                    oscillator.frequency.setValueAtTime(261.63, audioContext.currentTime); // C4
-                    oscillator.frequency.exponentialRampToValueAtTime(523.25, audioContext.currentTime + 0.5); // C5
-                    oscillator.connect(audioContext.destination);
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.6);
-                } else if (type === 'error') {
-                    const oscillator = audioContext.createOscillator();
-                    oscillator.type = 'square';
-                    oscillator.frequency.setValueAtTime(349.23, audioContext.currentTime); // F4
-                    oscillator.frequency.setValueAtTime(277.18, audioContext.currentTime + 0.1); // D#4
-                    oscillator.connect(audioContext.destination);
-                    oscillator.start();
-                    oscillator.stop(audioContext.currentTime + 0.2);
-                } else if (type === 'win') {
-                    // Play a little victory melody
-                    const notes = [523.25, 659.25, 783.99, 1046.5]; // C5, E5, G5, C6
-                    const times = [0, 0.1, 0.2, 0.3];
-                    
-                    notes.forEach((freq, i) => {
-                        const oscillator = audioContext.createOscillator();
-                        oscillator.type = 'sine';
-                        oscillator.frequency.setValueAtTime(freq, audioContext.currentTime + times[i]);
-                        oscillator.connect(audioContext.destination);
-                        oscillator.start();
-                        oscillator.stop(audioContext.currentTime + times[i] + 0.2);
-                    });
-                }
-            }
+      // category change
+      $('#categorySelect').onchange = e => { state.category = e.target.value; loadCategory(state.category); };
 
-            // Utility function to shuffle array
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-            }
+      // keyboard shortcuts
+      window.addEventListener('keydown', (e)=>{
+        const onFlash = screens.flash.classList.contains('active');
+        const onMenu = screens.menu.classList.contains('active');
+        const onGame = screens.game.classList.contains('active');
+        if(onFlash){
+          if(e.key==='ArrowRight') nextCard();
+          if(e.key==='ArrowLeft') prevCard();
+          if(e.key.toLowerCase()==='e') $('#playEN').click();
+          if(e.key.toLowerCase()==='j') $('#playJA').click();
+          if(e.key.toLowerCase()==='s') $('#saveBtn').click();
+          if(e.key==='Escape') $('#backToMenu').click();
+        } else if(onMenu){
+          if(e.key==='Enter') $('#startFlash').click();
+        } else if(onGame){
+          if(e.key==='Escape') $('#gameBack').click();
+        }
+      });
 
-            // Initialize the app
-            init();
-        });
-    </script>
+      // Build categories and default
+      setTimeout(()=> {
+        const root = getVocabularyRoot();
+        if(!root || Object.keys(root).length===0){
+          const sel = $('#categorySelect');
+          sel.innerHTML = '<option value=\"\">(No vocabulary found) — add vocabulary.js with window.vocabularyCategories = {...} or const vocabularyCategories = {...}</option>';
+        } else {
+          buildCategorySelect();
+          updateDiffBadge();
+          if(!state.category) state.category = Object.keys(root)[0];
+          loadCategory(state.category);
+        }
+      }, 80);
+    }
+
+    window.addEventListener('load', init);
+
+  </script>
 </body>
 </html>
