@@ -111,9 +111,22 @@
         }
         
         .emoji {
-            font-size: 8rem; /* Larger for TV */
+            font-size: 12rem; /* MUCH Larger for TV - increased from 8rem */
             margin-bottom: 30px; /* More spacing */
             filter: drop-shadow(6px 6px 0 #000); /* Larger shadow */
+            min-height: 200px; /* Ensure consistent height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* New flag emoji styling */
+        .emoji.flag-emoji {
+            font-size: 16rem; /* Even larger for flags */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 15px;
+            margin: 20px 0;
         }
         
         .controls {
@@ -440,7 +453,8 @@
             .subtitle { font-size: 2rem; }
             .english { font-size: 4rem; }
             .japanese { font-size: 3.2rem; }
-            .emoji { font-size: 6rem; }
+            .emoji { font-size: 10rem; } /* Adjusted for mobile */
+            .emoji.flag-emoji { font-size: 12rem; } /* Adjusted for mobile */
             button { font-size: 2rem; padding: 15px 25px; }
             .play-btn { width: 60px; height: 60px; font-size: 1.8rem; }
             .match-grid { grid-template-columns: 1fr; }
@@ -773,7 +787,28 @@
                 const filteredIndex = getCurrentFilteredIndex();
                 const currentWord = filtered[filteredIndex];
                 
-                emojiDisplay.textContent = currentWord.emoji || '📝';
+                // Handle flag emojis specially
+                const isFlagEmoji = currentWord.emoji && 
+                    (currentWord.emoji.includes('flag') || 
+                     currentWord.english.toLowerCase().includes('flag') ||
+                     currentWord.english.toLowerCase().includes('country'));
+                
+                // Set emoji with special handling for flags
+                if (isFlagEmoji) {
+                    emojiDisplay.textContent = currentWord.emoji || '🏳️';
+                    emojiDisplay.classList.add('flag-emoji');
+                    
+                    // Try to fix flag display issues with a fallback
+                    setTimeout(() => {
+                        if (emojiDisplay.offsetHeight < 50) { // If emoji didn't render properly
+                            emojiDisplay.textContent = '🏳️'; // Fallback to a standard flag
+                        }
+                    }, 100);
+                } else {
+                    emojiDisplay.textContent = currentWord.emoji || '📝';
+                    emojiDisplay.classList.remove('flag-emoji');
+                }
+                
                 englishDisplay.innerHTML = `${currentWord.english} <button class="play-btn focusable" id="englishPlayBtn">▶️</button>`;
                 japaneseDisplay.innerHTML = `${currentWord.japanese} <button class="play-btn focusable" id="japanesePlayBtn">▶️</button>`;
                 progressDisplay.textContent = `Card: ${filteredIndex + 1}/${filtered.length} (${selectedCategory})`;
