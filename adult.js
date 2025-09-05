@@ -680,6 +680,110 @@ Do you think Japan should abolish the death penalty? Why or why not?
    毎日、どれくらいの時間を空想に費やしていますか？
 50. How many things do you look forward to right now?  
    今、楽しみにしていることはいくつありますか？`
+ },
+        {
+            title: "Proverbs",
+            content: `1. Actions speak louder than words. Do you think actions are more important than words?
+行動は言葉より雄弁である。行動が言葉より大切だと思いますか？
+2. The early bird catches the worm. Is waking up early always good?
+早起きは三文の得。早起きはいつも良いと思いますか？
+3. A friend in need is a friend indeed. What makes a good friend?
+困った時の友は本当の友。良い友達とはどんな人ですか？
+4. Honesty is the best policy. Should you always be honest?
+正直が一番。いつも正直でいるべきだと思いますか？
+5. Don’t judge a book by its cover. Do you judge people by their looks?
+本を表紙で判断するな。見た目で人を判断しますか？
+6. Better late than never. Is it okay to be late?
+遅れてもやらないよりはマシ。遅れるのは大丈夫だと思いますか？
+7. Every cloud has a silver lining. Can bad things have good sides?
+どんな雲にも銀の裏地がある。悪いことにも良い面があると思いますか？
+8. A penny saved is a penny earned. Is saving money important?
+節約したお金は稼いだお金。お金を節約するのは大切だと思いますか？
+9. Too many cooks spoil the broth. Is it better to work alone?
+料理人が多すぎるとスープが台無しになる。一人で働く方が良いと思いますか？
+10. Time is money. Is time more important than money?
+時間はお金。時間はお金より大切だと思いますか？
+11. Practice makes perfect. Do you like to practice?
+習うより慣れよ。練習するのは好きですか？
+12. When in Rome, do as the Romans do. Should you follow other cultures’ rules?
+郷に入っては郷に従え。他の国の習慣に従うべきだと思いますか？
+13. A journey of a thousand miles begins with a single step. Is it hard to start a big goal?
+千里の道も一歩から。大きな目標を始めるのは難しいと思いますか？
+14. Don’t count your chickens before they hatch. Do you plan a lot before things happen?
+卵が孵る前にひよこを数えるな。物事が起こる前にたくさん計画しますか？
+15. The grass is always greener on the other side. Do other people’s lives seem better?
+隣の芝はいつも青い。他の人の生活が良く見えますか？
+16. Birds of a feather flock together. Do you like friends who are like you?
+類は友を呼ぶ。自分と似た友達が好きですか？
+17. All’s well that ends well. Is a good ending the most important?
+終わりよければすべてよし。良い結末が一番大切だと思いますか？
+18. Don’t bite the hand that feeds you. Should you always respect those who help you?
+手を噛むな。助けてくれる人をいつも尊敬すべきですか？
+19. A watched pot never boils. Does waiting feel slow to you?
+見つめる鍋は決して沸かない。待つのは遅く感じますか？
+20. Where there’s a will, there’s a way. Can you always find a way if you try?
+意志あるところに道はある。努力すれば道は見つかりますか？
+21. Don’t put all your eggs in one basket. Is it risky to focus on one thing?
+すべての卵を一つのカゴに入れるな。一つのことに集中するのは危険ですか？
+22. A stitch in time saves nine. Is it better to fix problems early?
+早めに縫えば九を救う。問題を早く解決する方が良いですか？
+23. Out of sight, out of mind. Do you forget things you don’t see?
+見えないものは心から消える。見えないものは忘れますか？
+24. Two heads are better than one. Is it better to work with others?
+二つの頭は一つより良い。他の人と働く方が良いですか？
+25. An apple a day keeps the doctor away. Is healthy eating important?
+一日一つのリンゴで医者いらず。健康的な食事は大切ですか？
+26. Look before you leap. Should you think before you act?
+跳ぶ前に見ろ。行動する前に考えるべきですか？
+27. The pen is mightier than the sword. Are words stronger than fighting?
+ペンは剣よりも強し。言葉は戦うことより強いですか？
+28. A leopard can’t change its spots. Can people really change?
+ヒョウは斑点を変えられない。人は本当に変われますか？
+29. Beggars can’t be choosers. Should you accept what you get?
+乞食は選べない。与えられたものを受け入れるべきですか？
+30. Don’t cry over spilled milk. Should you forget past mistakes?
+こぼれたミルクを泣くな。過去の失敗を忘れるべきですか？
+31. Absence makes the heart grow fonder. Do you miss people when they’re gone?
+離れていると心が近くなる。離れている人を恋しく思いますか？
+32. You can’t teach an old dog new tricks. Is it hard to learn new things when older?
+老犬に新しい芸は教えられない。年を取ると新しいことを学ぶのは難しいですか？
+33. Every dog has its day. Does everyone get a chance to succeed?
+どんな犬にもその日がある。誰にも成功するチャンスがありますか？
+34. The squeaky wheel gets the grease. Should you speak up to get help?
+きしむ車輪に油が差される。助けが必要なら声を上げるべきですか？
+35. A rolling stone gathers no moss. Is it good to keep moving?
+転がる石に苔は生えない。動き続けるのは良いことですか？
+36. Slow and steady wins the race. Is it better to go slow or fast?
+ゆっくり着実に進めば勝つ。ゆっくり進む方が良いですか？
+37. Don’t put off until tomorrow what you can do today. Do you do things right away?
+今日できることを明日に延ばすな。すぐに行動しますか？
+38. Many hands make light work. Does teamwork make things easier?
+多くの手は仕事を軽くする。チームワークは仕事を楽にしますか？
+39. No news is good news. Is no news always good?
+知らせがないのは良い知らせ。知らせがないのは良いことですか？
+40. You reap what you sow. Do your actions decide your future?
+蒔いた種は刈り取る。行動が未来を決めますか？
+41. Haste makes waste. Does rushing cause mistakes?
+急げば無駄になる。急ぐとミスになりますか？
+42. A chain is only as strong as its weakest link. Does one weak person ruin a team?
+鎖は最も弱い環で決まる。一人の弱さがチームをダメにしますか？
+43. The more, the merrier. Is it more fun with more people?
+多ければ多いほど楽しい。人が多い方が楽しいですか？
+44. Blood is thicker than water. Is family more important than friends?
+血は水より濃い。家族は友達より大切ですか？
+45. Laughter is the best medicine. Does laughing make you feel better?
+笑いは最高の薬。笑うと気分が良くなりますか？
+46. A little knowledge is a dangerous thing. Is it bad to know only a little?
+少しの知識は危険。少ししか知らないのは危険ですか？
+47. Beauty is in the eye of the beholder. Does everyone see beauty differently?
+美は見る人の目にある。人は美を違うように見ますか？
+48. Necessity is the mother of invention. Do problems make you creative?
+必要は発明の母。問題はあなたを創造的にしますか？
+49. Don’t make a mountain out of a molehill. Do you worry about small problems?
+モグラ塚を山にするな。小さな問題を大きく心配しますか？
+50. Fortune favors the bold. Should you take risks to succeed?
+運は大胆な者に味方する。成功するにはリスクを取るべきですか？`
      }
     ]
 };
+
