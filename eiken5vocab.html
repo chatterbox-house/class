@@ -78,13 +78,26 @@
 
     @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
     
-    select.control {
-      background: #ffffff;       /* solid white background */
-      color: #000000;            /* black text */
-      font-weight: 700;          /* bold */
-      border: 2px solid #60a5fa; /* blue border for visibility */
-    }
-
+select.control {
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border: 2px solid #60a5fa;
+  -webkit-appearance: none;
+  appearance: none;
+padding: 1.2vh; /* More padding for clarity */
+  font-size: 3.2vh; /* Slightly larger text */
+}
+option {
+  background: #ffffff;
+  color: #000000;
+  font-size: 3.2vh;
+}
+select.control:focus {
+  outline: 0.4vh solid var(--gold);
+  background: #e0e0e0; /* Slightly different background on focus */
+  box-shadow: 0 0 1vh rgba(255, 215, 0, 0.5); /* Glow effect */
+}
     /* TV remote navigation helper */
     .nav-hint {
       position: fixed;
