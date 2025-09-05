@@ -78,26 +78,55 @@
 
     @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
     
-select.control {
-  background: #ffffff;
-  color: #000000;
-  font-weight: 700;
-  border: 2px solid #60a5fa;
-  -webkit-appearance: none;
-  appearance: none;
-padding: 1.2vh; /* More padding for clarity */
-  font-size: 3.2vh; /* Slightly larger text */
-}
-option {
-  background: #ffffff;
-  color: #000000;
-  font-size: 3.2vh;
-}
-select.control:focus {
-  outline: 0.4vh solid var(--gold);
-  background: #e0e0e0; /* Slightly different background on focus */
-  box-shadow: 0 0 1vh rgba(255, 215, 0, 0.5); /* Glow effect */
-}
+    /* Android TV Dropdown Fix */
+    select.control {
+      background: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      border: 2px solid #60a5fa;
+      -webkit-appearance: menulist; /* Changed from 'none' to 'menulist' for Android TV compatibility */
+      appearance: menulist;
+      padding: 1.2vh;
+      font-size: 3.2vh;
+      width: 100%;
+      min-height: 6vh; /* Added minimum height for better touch targeting */
+    }
+    
+    /* Ensure options are visible on Android TV */
+    select.control option {
+      background: #ffffff;
+      color: #000000;
+      font-size: 3.2vh;
+      padding: 1.2vh;
+      display: block; /* Ensure options are displayed as blocks */
+    }
+    
+    /* Focus styles for better visibility */
+    select.control:focus {
+      outline: 0.4vh solid var(--gold);
+      background: #e0e0e0;
+      box-shadow: 0 0 1vh rgba(255, 215, 0, 0.5);
+    }
+    
+    /* Additional wrapper for the dropdown to ensure proper sizing */
+    .dropdown-wrapper {
+      position: relative;
+      width: 100%;
+    }
+    
+    /* Custom dropdown arrow for better visibility */
+    .dropdown-wrapper::after {
+      content: "▼";
+      font-size: 2.4vh;
+      color: #000000;
+      position: absolute;
+      right: 1.5vh;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
     /* TV remote navigation helper */
     .nav-hint {
       position: fixed;
@@ -137,7 +166,9 @@ select.control:focus {
         <div class="panel">
           <div style="min-width:38%;">
             <div class="hint" style="margin-bottom:0.6vh">Category</div>
-            <select id="categorySelect" class="control" aria-label="Category select" style="width:100%" tabindex="0"></select>
+            <div class="dropdown-wrapper">
+              <select id="categorySelect" class="control" aria-label="Category select" style="width:100%" tabindex="0"></select>
+            </div>
           </div>
 
           <div style="min-width:30%;">
@@ -177,8 +208,12 @@ select.control:focus {
           <div style="min-width:28%;">
             <div class="hint" style="margin-bottom:0.6vh">Voices</div>
             <div class="controls">
-              <select id="enVoice" class="control" tabindex="0"></select>
-              <select id="jaVoice" class="control" tabindex="0"></select>
+              <div class="dropdown-wrapper">
+                <select id="enVoice" class="control" tabindex="0"></select>
+              </div>
+              <div class="dropdown-wrapper">
+                <select id="jaVoice" class="control" tabindex="0"></select>
+              </div>
             </div>
           </div>
         </div>
@@ -595,44 +630,21 @@ select.control:focus {
 
       // keyboard navigation for TV
       window.addEventListener('keydown', e=>{
-        const onFlash = screens.flash.classList.contains('active'); 
-        const onMenu = screens.menu.classList.contains('active'); 
+        const onFlash = screens.flash.classList.contains('active');
         const onGame = screens.game.classList.contains('active');
+        const onMenu = screens.menu.classList.contains('active');
         
-        // TV remote navigation
-        if (e.key.startsWith('Arrow')) {
+        if (onFlash || onGame || onMenu) {
           handleTVNavigation(e);
-          return;
-        }
-        
-        if(onFlash){ 
-          if(e.key==='Enter') nextCard();
-          if(e.key.toLowerCase()==='e') $('#playEN').click(); 
-          if(e.key.toLowerCase()==='j') $('#playJA').click(); 
-          if(e.key.toLowerCase()==='s') $('#saveBtn').click(); 
-          if(e.key==='Escape' || e.key==='Backspace') $('#backToMenu').click(); 
-        }
-        else if(onMenu){ 
-          if(e.key==='Enter') $('#startFlash').click(); 
-          if(e.key==='Escape' || e.key==='Backspace') {} // Already on menu
-        }
-        else if(onGame){ 
-          if(e.key==='Escape' || e.key==='Backspace') $('#gameBack').click(); 
         }
       });
 
-      // build categories after vocab loaded
-      setTimeout(()=>{
-        const root = getVocabularyRoot();
-        if(!root || Object.keys(root).length===0){ const sel = $('#categorySelect'); sel.innerHTML = '(No vocabulary found) — add vocabulary.js with window.vocabularyCategories = {...} or const vocabularyCategories = {...}'; }
-        else { buildCategorySelect(); updateDiffBadge(); if(!state.category) state.category = Object.keys(root)[0]; loadCategory(state.category); }
-      }, 100);
-      
-      // Initialize focus management
-      updateFocusableElements();
+      // Initialize
+      buildCategorySelect(); updateDiffBadge(); pickVoices();
     }
 
-    window.addEventListener('load', init);
+    // Start when ready
+    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
   </script>
 </body>
 </html>
