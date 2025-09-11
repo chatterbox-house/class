@@ -875,9 +875,104 @@ A: 「自由は混沌としていますが、専制よりははるかに良い�
 
 30. 🧐 A: “The truth is not decided by how many people believe it.” B: “Public opinion shapes reality and influences what is treated as truth.” 
 A: 「真実は何人が信じているかで決まるものではありません。」 B: 「世論は現実を形作り、何が真実とされるかに影響を与えます。」`
-} 
-    ] 
+} ,
+        {
+            title: "(Simple) Turning Point USA",
+            content: `1. 🏦 A: “Capitalism helps people make money.” B: “Capitalism only helps rich people.”  
+A: 「資本主義は人がお金を稼ぐのを助けます。」 B: 「資本主義は金持ちだけを助けます。」  
+
+2. 🗣️ A: “Free speech means you can say your ideas.” B: “Bad words should be stopped to protect people.”  
+A: 「言論の自由は自分の考えを言うことです。」 B: 「悪い言葉は人を守るために止めるべきです。」  
+
+3. 🎓 A: “College is not needed for success.” B: “Without college, people get low-paying jobs.”  
+A: 「成功には大学は必要ではありません。」 B: 「大学がなければ、低い給料の仕事になります。」  
+
+4. 🏛️ A: “Big government takes away freedom.” B: “Government makes life fair for everyone.”  
+A: 「大きな政府は自由を奪います。」 B: 「政府はみんなの生活を公平にします。」  
+
+5. 🇺🇸 A: “The American dream needs hard work.” B: “The American dream is hard because life is unfair.”  
+A: 「アメリカンドリームには努力が必要です。」 B: 「アメリカンドリームは生活が不公平で難しいです。」  
+
+6. ⚖️ A: “Don’t trust big power.” B: “Strong leaders stop chaos.”  
+A: 「大きな権力を信じないでください。」 B: 「強いリーダーは混乱を止めます。」  
+
+7. 🙏 A: “Family and faith make society strong.” B: “Family and religion can be unfair.”  
+A: 「家族と信仰は社会を強くします。」 B: 「家族や宗教は不公平になることがあります。」  
+
+8. 🧠 A: “Teach young people how to think.” B: “Schools should teach fair values.”  
+A: 「若者に考える方法を教えるべきです。」 B: 「学校は公平な価値観を教えるべきです。」  
+
+9. 🌹 A: “Socialism makes people poor.” B: “Socialism makes life fair for all.”  
+A: 「社会主義は人を貧しくします。」 B: 「社会主義はみんなの生活を公平にします。」  
+
+10. 🎯 A: “Personal responsibility gives freedom.” B: “Life’s problems stop many from success.”  
+A: 「個人の責任は自由を与えます。」 B: 「生活の問題は多くの人の成功を止めます。」  
+
+11. 📜 A: “The Constitution is always important.” B: “The Constitution is old and unfair.”  
+A: 「憲法はいつも重要です。」 B: 「憲法は古くて不公平です。」  
+
+12. 🇺🇸 A: “Loving your country is good.” B: “Loving your country can hurt others.”  
+A: 「国を愛することは良いことです。」 B: 「国を愛することは他人を傷つけることがあります。」  
+
+13. 💼 A: “Starting a business leads to freedom.” B: “Only rich people win with business.”  
+A: 「ビジネスを始めることは自由につながります。」 B: 「金持ちだけがビジネスで勝ちます。」  
+
+14. 💪 A: “Hard work is important.” B: “Work can’t fix unfair life problems.”  
+A: 「努力は重要です。」 B: 「仕事は不公平な生活の問題を解決できません。」  
+
+15. 🎭 A: “Fight for your ideas in culture.” B: “Culture should be fair and equal.”  
+A: 「文化で自分の考えを戦うべきです。」 B: 「文化は公平で平等であるべきです。」  
+
+16. ⏳ A: “Freedom can be lost easily.” B: “Freedom without fairness is empty.”  
+A: 「自由は簡単に失われます。」 B: 「公平のない自由は意味がありません。」  
+
+17. 🗺️ A: “America is a great country.” B: “America has hurt many people.”  
+A: 「アメリカは素晴らしい国です。」 B: 「アメリカは多くの人を傷つけました。」  
+
+18. 🏢 A: “Government takes from others to give.” B: “Taxes help people and make life fair.”  
+A: 「政府は他人から取って与えます。」 B: 「税金は人を助け、生活を公平にします。」  
+
+19. 📚 A: “Education should prepare you for life.” B: “Education should teach fairness.”  
+A: 「教育は人生の準備をするべきです。」 B: 「教育は公平さを教えるべきです。」  
+
+20. 🔒 A: “Freedom needs constant protection.” B: “Freedom must include fairness.”  
+A: 「自由には常に守りが必要です。」 B: 「自由には公平さが含まれなければなりません。」  
+
+21. ⭐ A: “America’s values make it special.” B: “America’s values fail some people.”  
+A: 「アメリカの価値観は特別です。」 B: 「アメリカの価値観は一部の人に失敗します。」  
+
+22. 🧩 A: “Victim culture hurts young people.” B: “Seeing unfairness helps fix society.”  
+A: 「被害者文化は若者を傷つけます。」 B: 「不公平を見ることが社会を直します。」  
+
+23. 🛡️ A: “Strong borders make a strong country.” B: “Borders should let people in need enter.”  
+A: 「強い国境は強い国を作ります。」 B: 「国境は困っている人を入れるべきです。」  
+
+24. 💹 A: “Free markets help poor people.” B: “Markets create unfairness.”  
+A: 「自由市場は貧しい人を助けます。」 B: 「市場は不公平を作ります。」  
+
+25. ⚖️ A: “Nobody deserves another’s money.” B: “Sharing wealth stops unfairness.”  
+A: 「誰も他人のお金を受ける権利はありません。」 B: 「富を分けることは不公平を止めます。」  
+
+26. 📝 A: “Free speech protects all rights.” B: “Free speech can spread bad ideas.”  
+A: 「言論の自由はすべての権利を守ります。」 B: 「言論の自由は悪い考えを広めることがあります。」  
+
+27. 🏅 A: “Being brave is better than being liked.” B: “Rules keep society safe.”  
+A: 「勇敢であることは好かれるより大切です。」 B: 「ルールは社会を安全にします。」  
+
+28. 🏫 A: “Schools shape a country’s future.” B: “Schools should teach fairness, not one idea.”  
+A: 「学校は国の未来を形作ります。」 B: 「学校は公平さを教え、一つの考えを押し付けるべきではありません。」  
+
+29. 🌪️ A: “Freedom is better than control.” B: “Too much freedom can hurt people.”  
+A: 「自由は支配より良いです。」 B: 「自由が多すぎると人を傷つけます。」  
+
+30. 🧐 A: “Truth doesn’t depend on popularity.” B: “What people believe shapes truth.”  
+A: 「真実は人気に依存しません。」 B: 「人々が信じることは真実を形作ります。」`  
+  }
+    ]
 };
+
+
+
 
 
 
