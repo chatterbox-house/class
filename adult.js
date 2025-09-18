@@ -1119,9 +1119,163 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
 
 50. 🌌 In some cultures, shooting stars are believed to carry wishes to heaven. Would you make a wish on one?
     ある文化では、流れ星は願いを天に運ぶと信じられています。あなたは流れ星に願いをかけますか？`  
+ } ,
+        {
+            title: "Surprising Facts",
+            content: `1. 🐙 Octopuses have three hearts. Do you think that makes them more lovable?
+   タコには心臓が3つあります。それで彼らがもっと愛らしく思えますか？
+
+2. 🌋 There’s a volcano in Indonesia that erupts blue flames. Would you want to see it?
+   インドネシアには青い炎を噴き出す火山があります。あなたは見てみたいですか？
+
+3. 🐘 Elephants can recognize themselves in mirrors. Do you think animals can be self-aware?
+   ゾウは鏡の中の自分を認識できます。動物は自分を意識できると思いますか？
+
+4. 🍫 Switzerland eats more chocolate per person than any other country. Do you like this fact?
+   スイスは一人当たりのチョコレート消費量が世界一です。この事実は気に入りますか？
+
+5. 🐢 The oldest known tortoise lived over 180 years. Do you want to live that long?
+   最も長生きしたカメは180年以上生きました。あなたもそれくらい生きたいですか？
+
+6. 🌌 There are more stars in the universe than grains of sand on Earth. Does that make you feel small?
+   宇宙には地球上の砂粒より多くの星があります。それで自分が小さく感じますか？
+
+7. 🐦 Penguins propose to their mates with pebbles. Do you find that romantic?
+   ペンギンは小石で求愛します。それをロマンチックだと思いますか？
+
+8. 🍌 Bananas are berries, but strawberries are not. Does that surprise you?
+   バナナはベリーですが、イチゴはそうではありません。それは驚きですか？
+
+9. 🕵️‍♂️ In Japan, there are more registered pets than children. Do you think this is a problem?
+   日本では登録されたペットの数が子供の数より多いです。これは問題だと思いますか？
+
+10. 🛕 In India, there’s a temple where rats are worshiped. Would you go there?
+    インドにはネズミが崇拝されている寺院があります。あなたは行ってみたいですか？
+
+11. 🐦 Hummingbirds are the only birds that can fly backward. Do you admire their skill?
+    ハチドリは唯一後ろ向きに飛べる鳥です。彼らの技術を尊敬しますか？
+
+12. 🐕 Dogs’ sense of smell is at least 40 times stronger than humans. Do you wish you had this power?
+    犬の嗅覚は人間の40倍以上です。あなたもこの力が欲しいですか？
+
+13. 🐊 Crocodiles cannot stick out their tongues. Does that make them scarier or sillier?
+    ワニは舌を出せません。それで彼らは怖いですか、それとも滑稽ですか？
+
+14. 🏝 There’s an island in the Bahamas with only swimming pigs. Would you swim with them?
+    バハマには泳ぐブタだけが住む島があります。あなたは一緒に泳ぎますか？
+
+15. 🧊 Antarctica is the driest continent. Does that surprise you?
+    南極大陸は最も乾燥した大陸です。それは驚きですか？
+
+16. 🥤 In Bolivia, there’s a prison where inmates run shops and restaurants. Would you eat there?
+    ボリビアには囚人が店やレストランを経営する刑務所があります。あなたはそこで食事しますか？
+
+17. 🌳 The Amazon produces 20% of the world’s oxygen. Do you think we protect it enough?
+    アマゾンは世界の酸素の20％を生み出しています。私たちは十分に守っていると思いますか？
+
+18. 🍕 In the US, more than 350 slices of pizza are eaten every second. Do you eat pizza often?
+    アメリカでは毎秒350枚以上のピザが食べられています。あなたもよく食べますか？
+
+19. 🐼 Pandas spend up to 14 hours a day eating. Would you enjoy that lifestyle?
+    パンダは1日に最大14時間食べ続けます。あなたはその生活を楽しめますか？
+
+20. 🦒 Giraffes have the same number of neck bones as humans. Does that amaze you?
+    キリンの首の骨の数は人間と同じです。それは驚きですか？
+
+21. 🧄 Garlic was once used as money in ancient Egypt. Would you accept it as currency?
+    古代エジプトではニンニクがお金として使われていました。あなたはそれを通貨として受け取りますか？
+
+22. 🐨 Koalas’ fingerprints look almost identical to human ones. Does that surprise you?
+    コアラの指紋は人間のものとほとんど同じです。それは驚きですか？
+
+23. 🍦 Ice cream was once considered a luxury for the rich. Do you think it still is?
+    アイスクリームはかつて裕福層の贅沢品でした。今もそうだと思いますか？
+
+24. 🦘 Kangaroos can’t walk backward. Do you think that makes them unique?
+    カンガルーは後ろに歩けません。それで彼らはユニークだと思いますか？
+
+25. 🕰 The Great Wall of China is not visible from space with the naked eye. Does this surprise you?
+    万里の長城は肉眼では宇宙から見えません。それは驚きですか？
+
+26. 🐟 Goldfish can recognize their owners’ faces. Do you think fish can bond with people?
+    金魚は飼い主の顔を認識できます。魚は人と絆を結べると思いますか？
+
+27. 🍷 In Italy, children sometimes drink watered-down wine with meals. Would you allow that?
+    イタリアでは子供が薄めたワインを食事と一緒に飲むことがあります。あなたは許しますか？
+
+28. 🐝 Bees can recognize human faces. Would you like to be recognized by an insect?
+    ハチは人間の顔を認識できます。あなたは昆虫に認識されたいですか？
+
+29. 📚 Iceland publishes more books per capita than any other country. Do you think this is impressive?
+    アイスランドは一人当たりの出版数が世界一です。これは印象的だと思いますか？
+
+30. 🥔 Potatoes were the first vegetable grown in space. Would you eat space potatoes?
+    ジャガイモは宇宙で初めて育てられた野菜です。あなたは宇宙ジャガイモを食べますか？
+
+31. 🐫 Camels have three eyelids to protect against sand. Do you think that’s clever?
+    ラクダには砂から目を守るためにまぶたが3枚あります。それは賢いと思いますか？
+
+32. 🎶 Finland has more heavy metal bands per capita than anywhere else. Do you like this?
+    フィンランドは人口比で最も多くのヘビーメタルバンドがあります。あなたはこれが好きですか？
+
+33. 🐍 In some parts of the world, snake wine is considered healthy. Would you try it?
+    世界の一部では、ヘビ酒が健康に良いとされています。あなたは飲んでみたいですか？
+
+34. 🐧 Emperor penguins can stay underwater for 27 minutes. Do you admire this ability?
+    コウテイペンギンは27分間潜水できます。あなたはこの能力を尊敬しますか？
+
+35. 🚄 Japan’s bullet trains are faster than most airplanes at takeoff. Would you like to ride one?
+    日本の新幹線は多くの飛行機の離陸時より速いです。あなたは乗ってみたいですか？
+
+36. 🌶 The world’s hottest chili can cause hallucinations. Would you dare eat it?
+    世界一辛い唐辛子は幻覚を引き起こすことがあります。あなたは挑戦しますか？
+
+37. 🦏 Rhino horns are made of the same material as hair. Does that surprise you?
+    サイの角は髪の毛と同じ成分でできています。それは驚きですか？
+
+38. 🏔 Mount Everest grows about 4 millimeters taller every year. Do you think mountains are alive?
+    エベレスト山は毎年約4ミリ高くなっています。山は生きていると思いますか？
+
+39. 🐙 Some octopuses can use tools like coconuts for shelter. Do you think that’s intelligent?
+    一部のタコはココナッツを使って住処にします。それは知的だと思いますか？
+
+40. 🍯 Honey never spoils. Would you eat 1,000-year-old honey?
+    ハチミツは腐りません。あなたは1000年前のハチミツを食べますか？
+
+41. 🐦 The ostrich’s eye is bigger than its brain. Does this fact amuse you?
+    ダチョウの目は脳より大きいです。この事実はおもしろいですか？
+
+42. 🧊 In Greenland, houses are often painted bright colors to help people see them in snow. Do you like this idea?
+    グリーンランドでは家を雪の中で見つけやすいように鮮やかに塗ります。このアイデアは好きですか？
+
+43. 🐿 Squirrels plant thousands of trees by forgetting where they buried nuts. Do you think accidents can help nature?
+    リスは埋めた木の実を忘れることで何千本もの木を育てます。偶然が自然を助けると思いますか？
+
+44. 🕰 The oldest known piece of chewing gum is over 9,000 years old. Would you try ancient gum?
+    最も古いチューインガムは9,000年以上前のものです。あなたは古代のガムを試しますか？
+
+45. 🐦 Some parrots can live more than 80 years. Would you want a pet that outlives you?
+    一部のオウムは80年以上生きます。あなたは自分より長生きするペットが欲しいですか？
+
+46. 🏜 The Sahara Desert used to be green and full of lakes. Does that change how you imagine it?
+    サハラ砂漠はかつて緑豊かで湖がたくさんありました。それでイメージは変わりますか？
+
+47. 🧃 Tomato juice is more popular than beer on airplanes. Would you drink it there?
+    飛行機ではトマトジュースがビールより人気です。あなたはそこで飲みますか？
+
+48. 🐾 Tigers’ skin has stripes just like their fur. Does that surprise you?
+    トラの皮膚にも毛と同じ縞模様があります。それは驚きですか？
+
+49. 🦅 Bald eagles can see four times farther than humans. Would you like that vision?
+    ハクトウワシは人間の4倍遠くを見ることができます。あなたはその視力が欲しいですか？
+
+50. 🌊 The Pacific Ocean is larger than all land on Earth combined. Does that amaze you?
+    太平洋は地球上のすべての陸地を合わせたより大きいです。それは驚きですか？`  
   }
     ]
 };
+
+
 
 
 
