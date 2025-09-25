@@ -53,24 +53,27 @@
     /* Flash screen */
     .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%}
     .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%}
-.emoji{
+.emoji {
   font-size: min(52vh, 480px);
-  line-height:1;
-  text-align:center;
-  user-select:none;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
   text-shadow: 0 0 1vh rgba(0,0,0,0.3);
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
-  filter: drop-shadow(0 0 0.4vh rgba(0,0,0,0.2));
-  /* Force hardware acceleration */
-  transform: translate3d(0,0,0);
-  will-change: transform;
-  /* Ensure crisp rendering */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+  text-rendering: optimizeLegibility;
+  backface-visibility: hidden;
 }
+@media screen and (min-width: 1280px) and (min-height: 720px) {
+  .emoji {
+    font-size: min(50vh, 460px);
+    text-shadow: 0 0 1.2vh rgba(0,0,0,0.4);
+  }
+}
+
+
     .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%}
     .word{min-width:28vh;padding:1.0vh 1.2vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:900;font-size:6.4vh}
     .word.hidden{filter:blur(1.2vh);opacity:0.45}
