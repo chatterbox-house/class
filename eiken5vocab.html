@@ -78,54 +78,64 @@
 
     @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
     
-    /* Android TV Dropdown Fix */
-    select.control {
-      background: #ffffff;
-      color: #000000;
-      font-weight: 700;
-      border: 2px solid #60a5fa;
-      -webkit-appearance: menulist; /* Changed from 'none' to 'menulist' for Android TV compatibility */
-      appearance: menulist;
-      padding: 1.2vh;
-      font-size: 3.2vh;
-      width: 100%;
-      min-height: 6vh; /* Added minimum height for better touch targeting */
-    }
-    
-    /* Ensure options are visible on Android TV */
-    select.control option {
-      background: #ffffff;
-      color: #000000;
-      font-size: 3.2vh;
-      padding: 1.2vh;
-      display: block; /* Ensure options are displayed as blocks */
-    }
-    
-    /* Focus styles for better visibility */
-    select.control:focus {
-      outline: 0.4vh solid var(--gold);
-      background: #e0e0e0;
-      box-shadow: 0 0 1vh rgba(255, 215, 0, 0.5);
-    }
-    
-    /* Additional wrapper for the dropdown to ensure proper sizing */
-    .dropdown-wrapper {
-      position: relative;
-      width: 100%;
-    }
-    
-    /* Custom dropdown arrow for better visibility */
-    .dropdown-wrapper::after {
-      content: "▼";
-      font-size: 2.4vh;
-      color: #000000;
-      position: absolute;
-      right: 1.5vh;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      z-index: 1;
-    }
+/* Android TV Dropdown Fix - COMPLETE REPLACEMENT */
+.tv-dropdown {
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 700;
+  border: 0.3vh solid #60a5fa !important;
+  -webkit-appearance: menulist;
+  appearance: menulist;
+  padding: 1.2vh 3vh 1.2vh 1.2vh !important;
+  font-size: 3.2vh;
+  width: 100%;
+  min-height: 6vh;
+  border-radius: 0.8vh;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ensure dropdown options are properly styled */
+.tv-dropdown option {
+  background: #ffffff;
+  color: #000000;
+  font-size: 3.2vh;
+  padding: 1.2vh;
+  display: block;
+  font-weight: normal;
+}
+
+/* Focus styles for TV remote navigation */
+.tv-dropdown:focus {
+  outline: 0.4vh solid var(--gold) !important;
+  background: #e0e0e0 !important;
+  box-shadow: 0 0 1vh rgba(255, 215, 0, 0.5);
+  border-color: var(--gold) !important;
+}
+
+/* Custom dropdown arrow that doesn't interfere with functionality */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-wrapper::after {
+  content: "▼";
+  font-size: 2.4vh;
+  color: #000000;
+  position: absolute;
+  right: 1.5vh;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Ensure dropdowns are above other elements when open */
+.tv-dropdown:active,
+.tv-dropdown:focus {
+  z-index: 100;
+}
 
     /* TV remote navigation helper */
     .nav-hint {
@@ -164,12 +174,14 @@
         </div>
 
         <div class="panel">
-          <div style="min-width:38%;">
-            <div class="hint" style="margin-bottom:0.6vh">Category</div>
-            <div class="dropdown-wrapper">
-              <select id="categorySelect" class="control" aria-label="Category select" style="width:100%" tabindex="0"></select>
-            </div>
-          </div>
+<div style="min-width:38%;">
+  <div class="hint" style="margin-bottom:0.6vh">Category</div>
+  <div class="dropdown-wrapper">
+    <select id="categorySelect" class="control tv-dropdown" aria-label="Category select" style="width:100%" tabindex="0">
+      <option value="">Loading categories...</option>
+    </select>
+  </div>
+</div>
 
           <div style="min-width:30%;">
             <div class="hint" style="margin-bottom:0.6vh">Order</div>
@@ -205,17 +217,21 @@
             </div>
           </div>
 
-          <div style="min-width:28%;">
-            <div class="hint" style="margin-bottom:0.6vh">Voices</div>
-            <div class="controls">
-              <div class="dropdown-wrapper">
-                <select id="enVoice" class="control" tabindex="0"></select>
-              </div>
-              <div class="dropdown-wrapper">
-                <select id="jaVoice" class="control" tabindex="0"></select>
-              </div>
-            </div>
-          </div>
+<div style="min-width:28%;">
+  <div class="hint" style="margin-bottom:0.6vh">Voices</div>
+  <div class="controls">
+    <div class="dropdown-wrapper">
+      <select id="enVoice" class="control tv-dropdown" tabindex="0">
+        <option value="">Loading English voices...</option>
+      </select>
+    </div>
+    <div class="dropdown-wrapper">
+      <select id="jaVoice" class="control tv-dropdown" tabindex="0">
+        <option value="">Loading Japanese voices...</option>
+      </select>
+    </div>
+  </div>
+</div>
         </div>
 
         <div class="panel" style="justify-content:space-between;align-items:center;">
@@ -327,36 +343,55 @@
     function wipeDifficult(){ sessionStorage.removeItem(DIFF_KEY); updateDiffBadge(); buildCategorySelect(); }
     function updateDiffBadge(){ $('#diffCount').textContent = `${getDifficult().length} words`; }
 
-    function buildCategorySelect(){
-      const sel = $('#categorySelect'); sel.innerHTML = '';
-      const root = getVocabularyRoot() || {};
-      const cats = Object.keys(root || {});
+function buildCategorySelect(){
+  const sel = $('#categorySelect'); 
+  // Clear existing options but keep the loading message briefly
+  sel.innerHTML = '<option value="">Loading categories...</option>';
+  
+  setTimeout(() => {
+    sel.innerHTML = '';
+    const root = getVocabularyRoot() || {};
+    const cats = Object.keys(root || {});
 
-      // Build ALL WORDS category
-      let allWords = [];
-      cats.forEach(c => { allWords = allWords.concat(root[c]); });
-      root['_ALL_'] = allWords;
+    // Build ALL WORDS category
+    let allWords = [];
+    cats.forEach(c => { allWords = allWords.concat(root[c]); });
+    root['_ALL_'] = allWords;
 
-      // First option: All Words
-      const allOpt = document.createElement('option');
-      allOpt.value = '_ALL_';
-      allOpt.textContent = `All Words (${allWords.length})`;
-      sel.appendChild(allOpt);
+    // First option: All Words
+    const allOpt = document.createElement('option');
+    allOpt.value = '_ALL_';
+    allOpt.textContent = `All Words (${allWords.length})`;
+    sel.appendChild(allOpt);
 
-      // Other categories
-      for (const c of cats) {
-        const opt = document.createElement('option');
-        opt.value = c;
-        opt.textContent = c;
-        sel.appendChild(opt);
-      }
-
-      // Difficult list if exists
-      const difficultCount = getDifficult().length;
-      if(difficultCount>0){ const opt = document.createElement('option'); opt.value='_DIFFICULT_'; opt.textContent=`Difficult (${difficultCount})`; sel.appendChild(opt); }
-      if(!state.category && cats.length) state.category = cats[0];
-      sel.value = state.category || '';
+    // Other categories
+    for (const c of cats) {
+      const opt = document.createElement('option');
+      opt.value = c;
+      opt.textContent = c;
+      sel.appendChild(opt);
     }
+
+    // Difficult list if exists
+    const difficultCount = getDifficult().length;
+    if(difficultCount > 0){ 
+      const opt = document.createElement('option'); 
+      opt.value='_DIFFICULT_'; 
+      opt.textContent=`Difficult (${difficultCount})`; 
+      sel.appendChild(opt); 
+    }
+    
+    if(!state.category && cats.length) state.category = cats[0];
+    sel.value = state.category || '';
+    
+    // Add TV-friendly event handling
+    sel.addEventListener('change', function() {
+      state.category = this.value;
+      loadCategory(state.category);
+    });
+    
+  }, 100);
+}
 
     function getWordsForCategory(cat){
       if(cat === '_DIFFICULT_') return getDifficult();
