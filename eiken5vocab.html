@@ -54,16 +54,18 @@
     .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%}
     .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%}
 .emoji{
-  font-size:52vh;
+  font-size: min(52vh, 480px); /* Use pixels as max size for better rendering */
   line-height:1;
   text-align:center;
   user-select:none;
-  /* Add these lines for better TV rendering */
   text-shadow: 0 0 1vh rgba(0,0,0,0.3);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   filter: drop-shadow(0 0 0.4vh rgba(0,0,0,0.2));
+  /* Force hardware acceleration for better rendering */
+  transform: translate3d(0,0,0);
+  will-change: transform;
 }
     .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%}
     .word{min-width:28vh;padding:1.0vh 1.2vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:900;font-size:6.4vh}
