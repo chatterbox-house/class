@@ -1271,9 +1271,164 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
 
 50. 🌊 The Pacific Ocean is larger than all land on Earth combined. Does that amaze you?
     太平洋は地球上のすべての陸地を合わせたより大きいです。それは驚きですか？`  
+ } ,
+        {
+            title: "🗣️ 50 Mini-Debates for ESL Discussion",
+            content: `1. 🍕 Pineapple belongs on pizza. Do you agree or disagree?
+   ピザにパイナップルは合う。あなたは賛成ですか、それとも反対ですか？
+
+2. 🛌 It’s better to wake up early than stay up late. Which side are you on?
+   早起きする方が夜更かしするより良い。あなたはどちらの立場ですか？
+
+3. 📱 Social media does more harm than good. Do you think so?
+   ソーシャルメディアは良いことより悪いことの方が多い。そう思いますか？
+
+4. 🏫 School uniforms should be banned. What’s your opinion?
+   制服は廃止されるべきだ。あなたの意見は？
+
+5. 🐶 Dogs are better pets than cats. Which do you prefer?
+   犬は猫より良いペットだ。あなたはどちらが好きですか？
+
+6. 🛫 Traveling alone is better than traveling with friends. What do you think?
+   一人旅は友達との旅行より良い。あなたはどう思いますか？
+
+7. 🍫 Chocolate should be considered a health food. Do you agree?
+   チョコレートは健康食品と見なすべきだ。賛成ですか？
+
+8. 🏠 Working from home is more productive than working in an office. What’s your view?
+   在宅勤務はオフィス勤務より生産的だ。あなたの考えは？
+
+9. 👩‍🏫 Teachers should be paid more than doctors. Do you agree?
+   教師は医者より多くの給料をもらうべきだ。賛成ですか？
+
+10. 📺 Reality TV is harmful to society. What’s your take?
+    リアリティ番組は社会に有害だ。あなたはどう思いますか？
+
+11. 🏙️ City life is better than country life. Which do you prefer?
+    都会生活は田舎生活より良い。どちらが好きですか？
+
+12. 🥩 Humans should stop eating meat. Are you for or against?
+    人間は肉を食べるのをやめるべきだ。賛成ですか反対ですか？
+
+13. 🚗 Owning a car is unnecessary in modern cities. Do you think so?
+    現代の都市では車を所有する必要はない。そう思いますか？
+
+14. 🧠 Intelligence is more important than kindness. Which matters more to you?
+    知性は優しさより重要だ。あなたにとってどちらが大切ですか？
+
+15. 🎓 University should be free for everyone. Should it?
+    大学はすべての人に無料であるべきだ。そう思いますか？
+
+16. 🖥️ Artificial intelligence will do more good than harm. What’s your view?
+    人工知能は悪より善をもたらすだろう。あなたの考えは？
+
+17. 📚 Reading books is better than watching movies. Do you agree?
+    本を読む方が映画を見るより良い。賛成ですか？
+
+18. 💰 Money can buy happiness. Can it?
+    お金で幸せは買える。そう思いますか？
+
+19. 🪩 School should start later in the day. Would this help students?
+    学校はもっと遅く始まるべきだ。これは生徒にとって良いと思いますか？
+
+20. 🌍 Globalisation is a good thing. Is it really?
+    グローバル化は良いことだ。本当にそうですか？
+
+21. 🍷 The legal drinking age should be lowered. Do you support this?
+    飲酒可能年齢は下げるべきだ。これに賛成しますか？
+
+22. 🪙 Governments should give citizens a universal basic income. Should they?
+    政府は国民にベーシックインカムを与えるべきだ。そうすべきですか？
+
+23. 📵 Smartphones should be banned in classrooms. Agree or disagree?
+    教室でスマートフォンは禁止すべきだ。賛成ですか反対ですか？
+
+24. 🎮 Video games cause violence. Do you think that’s true?
+    テレビゲームは暴力を引き起こす。そう思いますか？
+
+25. 🪐 Humans should colonize other planets. Should we?
+    人類は他の惑星を植民地化すべきだ。そうすべきですか？
+
+26. 🏳️‍🌈 Same-sex marriage should be legal everywhere. Do you agree?
+    同性婚は世界中で合法にすべきだ。賛成ですか？
+
+27. 🏥 Healthcare is a human right. Should governments provide it for free?
+    医療は人権だ。政府は無料で提供すべきですか？
+
+28. 🚬 Smoking should be completely banned. Should it?
+    喫煙は完全に禁止されるべきだ。そうすべきですか？
+
+29. 🐮 Eating insects is the future of food. Would you try it?
+    昆虫食は未来の食糧になる。あなたは試してみたいですか？
+
+30. 🧪 Animal testing should be banned. Do you support this?
+    動物実験は禁止されるべきだ。あなたは賛成ですか？
+
+31. 🪙 Billionaires should not exist. What’s your opinion?
+    億万長者は存在すべきではない。あなたの意見は？
+
+32. 🏰 Monarchy is outdated and should be abolished. Do you agree?
+    君主制は時代遅れで廃止すべきだ。賛成ですか？
+
+33. 🪩 Fame always makes people unhappy. Do you think that’s true?
+    有名になると必ず不幸になる。そう思いますか？
+
+34. 📈 Capitalism is the best economic system. Is it?
+    資本主義は最良の経済システムだ。本当にそうですか？
+
+35. 🐕‍🦺 Humans should have stricter laws protecting animals. Should they?
+    人間は動物を守るためにもっと厳しい法律を作るべきだ。そう思いますか？
+
+36. 📺 We should stop watching the news for our mental health. Would you?
+    メンタルのためにニュースを見るのをやめるべきだ。あなたはやめますか？
+
+37. 🏫 Homework should be banned. Do you think it’s useful?
+    宿題は禁止すべきだ。役に立つと思いますか？
+
+38. 🚀 Space exploration is a waste of money. Do you agree?
+    宇宙探査はお金の無駄だ。賛成ですか？
+
+39. 🍔 Fast food should be more heavily taxed. Should it?
+    ファストフードにはもっと重い税金をかけるべきだ。そう思いますか？
+
+40. 📚 History classes are more important than science classes. Which is more valuable?
+    歴史の授業は理科の授業より重要だ。どちらが価値があると思いますか？
+
+41. 🏛️ Democracy is the best form of government. Is it?
+    民主主義は最良の政治体制だ。本当にそうですか？
+
+42. 🧑‍⚖️ The death penalty should be abolished worldwide. Do you support this?
+    死刑は世界中で廃止されるべきだ。あなたは賛成ですか？
+
+43. 🐻 Zoos should be banned. Are they cruel or educational?
+    動物園は禁止すべきだ。残酷だと思いますか、それとも教育的だと思いますか？
+
+44. 🧬 Humans should be allowed to genetically engineer their children. Should we?
+    人間は自分の子どもを遺伝子操作することを許されるべきだ。そう思いますか？
+
+45. 🏳️‍⚧️ Gender is a choice. Do you agree or disagree?
+    性別は選択である。賛成ですか反対ですか？
+
+46. 📢 Free speech should have no limits. Should there be any restrictions?
+    言論の自由には制限があってはならない。制限は必要だと思いますか？
+
+47. 🌱 Climate change is the greatest threat to humanity. Do you believe this?
+    気候変動は人類にとって最大の脅威だ。そう信じますか？
+
+48. 🐕 People should have to pass a test before owning a pet. Do you support that idea?
+    ペットを飼う前にテストに合格すべきだ。この考えに賛成ですか？
+
+49. 📉 Social media companies should be broken up by governments. Do you think so?
+    ソーシャルメディア企業は政府によって分割されるべきだ。そう思いますか？
+
+50. 🏡 Happiness is more important than success. Which matters more to you?
+    幸せは成功より重要だ。あなたにとってどちらが大切ですか`  
   }
     ]
 };
+
+
+
 
 
 
