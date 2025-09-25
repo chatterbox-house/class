@@ -53,7 +53,18 @@
     /* Flash screen */
     .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%}
     .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%}
-    .emoji{font-size:52vh;line-height:1;text-align:center;user-select:none}
+.emoji{
+  font-size:52vh;
+  line-height:1;
+  text-align:center;
+  user-select:none;
+  /* Add these lines for better TV rendering */
+  text-shadow: 0 0 1vh rgba(0,0,0,0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  filter: drop-shadow(0 0 0.4vh rgba(0,0,0,0.2));
+}
     .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%}
     .word{min-width:28vh;padding:1.0vh 1.2vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:900;font-size:6.4vh}
     .word.hidden{filter:blur(1.2vh);opacity:0.45}
@@ -71,7 +82,15 @@
     .game-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.2vh;height:100%;align-items:stretch}
     .game-col{display:flex;flex-direction:column;gap:1.0vh;align-items:stretch;justify-content:center;padding:0}
     .game-btn{display:flex;align-items:center;justify-content:flex-start;gap:1.0vh;padding:0.8vh 1.0vh;border-radius:0.8vh;border:0;font-weight:900;font-size:4.0vh;background:rgba(255,255,255,0.02);color:var(--text);cursor:pointer;min-height:12vh;}
-    .game-btn .emoji-small{font-size:5.6vh;margin-right:1.0vh}
+.game-btn .emoji-small{
+  font-size:5.6vh;
+  margin-right:1.0vh;
+  /* Add the same improvements for small emoji */
+  text-shadow: 0 0 0.4vh rgba(0,0,0,0.2);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+}
     .game-btn.selected{outline:0.6vh solid var(--gold)}
     .game-btn.matched{background:linear-gradient(90deg,rgba(80,200,120,0.14),rgba(60,160,240,0.08));color:#001a0d}
     .game-col > .game-btn{min-height:calc((100% - (4 * 1vh)) / 5)}
@@ -149,6 +168,36 @@
       color: var(--muted);
       z-index: 100;
     }
+/* TV-specific emoji improvements */
+@media (min-width: 1200px) and (min-height: 600px) {
+  .emoji {
+    font-weight: normal !important;
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 0.3vh transparent;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Force specific emoji fonts that render better on TV */
+  .emoji, .emoji-small {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", sans-serif !important;
+  }
+}
+
+/* Alternative: Use SVG emoji if available (better quality) */
+.emoji {
+  /* This helps some TVs use higher quality emoji rendering */
+  font-feature-settings: "kern";
+  font-kerning: normal;
+}
+
+/* For very large displays (TVs) */
+@media (min-width: 1600px) {
+  .emoji {
+    text-shadow: 0 0 1.5vh rgba(0,0,0,0.4);
+    filter: drop-shadow(0 0 0.6vh rgba(0,0,0,0.3));
+  }
+}
   </style>
 </head>
 <body class="no-scroll">
