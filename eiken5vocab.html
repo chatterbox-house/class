@@ -177,9 +177,9 @@
 <div style="min-width:38%;">
   <div class="hint" style="margin-bottom:0.6vh">Category</div>
   <div class="dropdown-wrapper">
-    <select id="categorySelect" class="control tv-dropdown" aria-label="Category select" style="width:100%" tabindex="0">
-      <option value="">Loading categories...</option>
-    </select>
+<select id="categorySelect" class="control tv-dropdown" aria-label="Category select" style="width:100%" tabindex="0">
+  <option value="">Select a category</option>
+</select>
   </div>
 </div>
 
@@ -221,14 +221,13 @@
   <div class="hint" style="margin-bottom:0.6vh">Voices</div>
   <div class="controls">
     <div class="dropdown-wrapper">
-      <select id="enVoice" class="control tv-dropdown" tabindex="0">
-        <option value="">Loading English voices...</option>
-      </select>
-    </div>
-    <div class="dropdown-wrapper">
-      <select id="jaVoice" class="control tv-dropdown" tabindex="0">
-        <option value="">Loading Japanese voices...</option>
-      </select>
+<select id="enVoice" class="control tv-dropdown" tabindex="0">
+  <option value="">English voice</option>
+</select>
+
+<select id="jaVoice" class="control tv-dropdown" tabindex="0">
+  <option value="">Japanese voice</option>
+</select>
     </div>
   </div>
 </div>
@@ -345,52 +344,45 @@
 
 function buildCategorySelect(){
   const sel = $('#categorySelect'); 
-  // Clear existing options but keep the loading message briefly
   sel.innerHTML = '<option value="">Loading categories...</option>';
   
-  setTimeout(() => {
-    sel.innerHTML = '';
-    const root = getVocabularyRoot() || {};
-    const cats = Object.keys(root || {});
+  // Load immediately without timeout
+  const root = getVocabularyRoot() || {};
+  const cats = Object.keys(root || {});
 
-    // Build ALL WORDS category
-    let allWords = [];
-    cats.forEach(c => { allWords = allWords.concat(root[c]); });
-    root['_ALL_'] = allWords;
+  // Build ALL WORDS category
+  let allWords = [];
+  cats.forEach(c => { allWords = allWords.concat(root[c]); });
+  root['_ALL_'] = allWords;
 
-    // First option: All Words
-    const allOpt = document.createElement('option');
-    allOpt.value = '_ALL_';
-    allOpt.textContent = `All Words (${allWords.length})`;
-    sel.appendChild(allOpt);
+  // Clear and rebuild options
+  sel.innerHTML = '';
 
-    // Other categories
-    for (const c of cats) {
-      const opt = document.createElement('option');
-      opt.value = c;
-      opt.textContent = c;
-      sel.appendChild(opt);
-    }
+  // First option: All Words
+  const allOpt = document.createElement('option');
+  allOpt.value = '_ALL_';
+  allOpt.textContent = `All Words (${allWords.length})`;
+  sel.appendChild(allOpt);
 
-    // Difficult list if exists
-    const difficultCount = getDifficult().length;
-    if(difficultCount > 0){ 
-      const opt = document.createElement('option'); 
-      opt.value='_DIFFICULT_'; 
-      opt.textContent=`Difficult (${difficultCount})`; 
-      sel.appendChild(opt); 
-    }
-    
-    if(!state.category && cats.length) state.category = cats[0];
-    sel.value = state.category || '';
-    
-    // Add TV-friendly event handling
-    sel.addEventListener('change', function() {
-      state.category = this.value;
-      loadCategory(state.category);
-    });
-    
-  }, 100);
+  // Other categories
+  for (const c of cats) {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c;
+    sel.appendChild(opt);
+  }
+
+  // Difficult list if exists
+  const difficultCount = getDifficult().length;
+  if(difficultCount > 0){ 
+    const opt = document.createElement('option'); 
+    opt.value='_DIFFICULT_'; 
+    opt.textContent=`Difficult (${difficultCount})`; 
+    sel.appendChild(opt); 
+  }
+  
+  if(!state.category && cats.length) state.category = cats[0];
+  sel.value = state.category || '';
 }
 
     function getWordsForCategory(cat){
@@ -453,58 +445,59 @@ function buildCategorySelect(){
       }catch(e){ console.warn('TTS error', e); }
     }
 
-    function pickVoices(){
-      const all = window.speechSynthesis.getVoices() || [];
-      const enSel = $('#enVoice'); const jaSel = $('#jaVoice'); enSel.innerHTML=''; jaSel.innerHTML='';
-      
-      // Filter for US English and British English voices
-      const enList = all.filter(v => /en/i.test(v.lang) && /English/i.test(v.name));
-      const usVoices = enList.filter(v => /US|United States/i.test(v.name) || /en-US/i.test(v.lang));
-      const ukVoices = enList.filter(v => /UK|GB|British/i.test(v.name) || /en-GB/i.test(v.lang));
-      const otherEnVoices = enList.filter(v => !usVoices.includes(v) && !ukVoices.includes(v));
-      
-      // Add US voices first, then UK voices, then others
-      usVoices.forEach(v => {
-        const o = document.createElement('option');
-        o.value = v.name;
-        o.textContent = `${v.name} (US English)`;
-        enSel.appendChild(o);
-      });
-      
-      ukVoices.forEach(v => {
-        const o = document.createElement('option');
-        o.value = v.name;
-        o.textContent = `${v.name} (British English)`;
-        enSel.appendChild(o);
-      });
-      
-      otherEnVoices.forEach(v => {
-        const o = document.createElement('option');
-        o.value = v.name;
-        o.textContent = `${v.name} (${v.lang})`;
-        enSel.appendChild(o);
-      });
-      
-      // Japanese voices
-      const jaList = all.filter(v=>/ja/i.test(v.lang) || /Japanese/i.test(v.name));
-      jaList.forEach(v=>{ 
-        const o=document.createElement('option'); 
-        o.value=v.name; 
-        o.textContent=`${v.name} (${v.lang})`; 
-        jaSel.appendChild(o); 
-      });
-      
-      // Set default voices if available
-      state.enVoice = usVoices[0] || ukVoices[0] || enList[0] || all[0] || null; 
-      state.jaVoice = jaList[0] || all[0] || null;
-      
-      if(state.enVoice) enSel.value = state.enVoice.name; 
-      if(state.jaVoice) jaSel.value = state.jaVoice.name;
-      
-      enSel.onchange = ()=>{ state.enVoice = all.find(v=>v.name===enSel.value) || null; };
-      jaSel.onchange = ()=>{ state.jaVoice = all.find(v=>v.name===jaSel.value) || null; };
-    }
-    window.speechSynthesis.onvoiceschanged = pickVoices; setTimeout(pickVoices, 300);
+function pickVoices(){
+  const all = window.speechSynthesis.getVoices() || [];
+  const enSel = $('#enVoice'); 
+  const jaSel = $('#jaVoice'); 
+  
+  // Clear existing options
+  enSel.innerHTML = '<option value="">English voice</option>';
+  jaSel.innerHTML = '<option value="">Japanese voice</option>';
+  
+  // Filter for US English and British English voices
+  const enList = all.filter(v => /en/i.test(v.lang) && /English/i.test(v.name));
+  const usVoices = enList.filter(v => /US|United States/i.test(v.name) || /en-US/i.test(v.lang));
+  const ukVoices = enList.filter(v => /UK|GB|British/i.test(v.name) || /en-GB/i.test(v.lang));
+  const otherEnVoices = enList.filter(v => !usVoices.includes(v) && !ukVoices.includes(v));
+  
+  // Add US voices first, then UK voices, then others
+  usVoices.forEach(v => {
+    const o = document.createElement('option');
+    o.value = v.name;
+    o.textContent = `${v.name} (US English)`;
+    enSel.appendChild(o);
+  });
+  
+  ukVoices.forEach(v => {
+    const o = document.createElement('option');
+    o.value = v.name;
+    o.textContent = `${v.name} (British English)`;
+    enSel.appendChild(o);
+  });
+  
+  otherEnVoices.forEach(v => {
+    const o = document.createElement('option');
+    o.value = v.name;
+    o.textContent = `${v.name} (${v.lang})`;
+    enSel.appendChild(o);
+  });
+  
+  // Japanese voices
+  const jaList = all.filter(v=>/ja/i.test(v.lang) || /Japanese/i.test(v.name));
+  jaList.forEach(v=>{ 
+    const o=document.createElement('option'); 
+    o.value=v.name; 
+    o.textContent=`${v.name} (${v.lang})`; 
+    jaSel.appendChild(o); 
+  });
+  
+  // Set default voices if available
+  state.enVoice = usVoices[0] || ukVoices[0] || enList[0] || all[0] || null; 
+  state.jaVoice = jaList[0] || all[0] || null;
+  
+  if(state.enVoice) enSel.value = state.enVoice.name; 
+  if(state.jaVoice) jaSel.value = state.jaVoice.name;
+}
 
     // FLASH CARDS
     function loadCategory(cat){ 
