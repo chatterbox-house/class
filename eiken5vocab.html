@@ -54,7 +54,7 @@
     .flash-wrap{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:100%}
     .emoji-wrap{display:flex;align-items:center;justify-content:center;flex:1;width:100%}
 .emoji{
-  font-size: min(52vh, 480px); /* Use pixels as max size for better rendering */
+  font-size: min(52vh, 480px);
   line-height:1;
   text-align:center;
   user-select:none;
@@ -63,9 +63,13 @@
   -moz-osx-font-smoothing: grayscale;
   font-smooth: always;
   filter: drop-shadow(0 0 0.4vh rgba(0,0,0,0.2));
-  /* Force hardware acceleration for better rendering */
+  /* Force hardware acceleration */
   transform: translate3d(0,0,0);
   will-change: transform;
+  /* Ensure crisp rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
 }
     .labels{display:flex;gap:2vh;align-items:center;justify-content:center;width:100%}
     .word{min-width:28vh;padding:1.0vh 1.2vh;border-radius:1.0vh;background:rgba(255,255,255,0.03);text-align:center;font-weight:900;font-size:6.4vh}
@@ -97,7 +101,18 @@
     .game-btn.matched{background:linear-gradient(90deg,rgba(80,200,120,0.14),rgba(60,160,240,0.08));color:#001a0d}
     .game-col > .game-btn{min-height:calc((100% - (4 * 1vh)) / 5)}
 
-    @media (max-height:620px){ .emoji{font-size:44vh} .word{font-size:5.6vh} }
+@media (max-height:620px){ 
+  .emoji{font-size:44vh} 
+  .word{font-size:5.6vh} 
+}
+
+/* Additional Android TV optimization */
+@media (max-width: 1920px) and (min-height: 1080px) {
+  .emoji {
+    font-size: 46vh;
+    text-shadow: 0 0 1.5vh rgba(0,0,0,0.4);
+  }
+}
     
 /* Android TV Dropdown Fix - COMPLETE REPLACEMENT */
 .tv-dropdown {
@@ -170,34 +185,51 @@
       color: var(--muted);
       z-index: 100;
     }
-/* TV-specific emoji improvements */
-@media (min-width: 1200px) and (min-height: 600px) {
+/* CRISP EMOJI FIX FOR ANDROID TV - Use SVG emoji */
+.emoji {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+  font-weight: normal !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  /* Force SVG emoji rendering */
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+/* Additional fix for small emoji in game buttons */
+.emoji-small {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", sans-serif;
+  font-weight: normal !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force high-quality rendering on all screens */
+@media screen {
+  .emoji, .emoji-small {
+    text-shadow: 0 0 0.8vh rgba(0,0,0,0.3);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+}
+
+/* Special fix for Android TV browsers */
+@supports (-webkit-tv-select: none) or (tv-select: none) {
   .emoji {
-    font-weight: normal !important;
-    text-rendering: optimizeLegibility;
-    -webkit-text-stroke: 0.3vh transparent;
+    font-size: min(48vh, 460px) !important;
+    text-shadow: 0 0 1.2vh rgba(0,0,0,0.4);
+    filter: drop-shadow(0 0 0.8vh rgba(0,0,0,0.3));
     transform: translateZ(0);
     backface-visibility: hidden;
+    perspective: 1000;
   }
   
-  /* Force specific emoji fonts that render better on TV */
-  .emoji, .emoji-small {
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Android Emoji", sans-serif !important;
-  }
-}
-
-/* Alternative: Use SVG emoji if available (better quality) */
-.emoji {
-  /* This helps some TVs use higher quality emoji rendering */
-  font-feature-settings: "kern";
-  font-kerning: normal;
-}
-
-/* For very large displays (TVs) */
-@media (min-width: 1600px) {
-  .emoji {
-    text-shadow: 0 0 1.5vh rgba(0,0,0,0.4);
-    filter: drop-shadow(0 0 0.6vh rgba(0,0,0,0.3));
+  .emoji-small {
+    font-size: 5.2vh !important;
+    text-shadow: 0 0 0.6vh rgba(0,0,0,0.3);
   }
 }
   </style>
