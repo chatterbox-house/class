@@ -1550,9 +1550,140 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
     火山から出てくる溶けた岩石を何と呼びますか？
     Answer: It is called lava.
     答え: それは溶岩と呼ばれます。`  
+
+
+ } ,
+        {
+            title: "🌍 Trivia Quiz for Young Adults (Ages 18–30)",
+            content: `1. What is the capital city of Canada?
+   カナダの首都はどこですか？
+   Answer: The capital of Canada is Ottawa.
+   答え: カナダの首都はオタワです。
+
+2. What is the longest river in the world?
+   世界で最も長い川はどこですか？
+   Answer: The Nile River is the longest river.
+   答え: ナイル川が世界で最も長い川です。
+
+3. Which planet is known as the “Red Planet”?
+   「赤い惑星」として知られている惑星はどれですか？
+   Answer: Mars is the Red Planet.
+   答え: 火星が「赤い惑星」です。
+
+4. Who painted the Mona Lisa?
+   「モナ・リザ」を描いたのは誰ですか？
+   Answer: Leonardo da Vinci painted the Mona Lisa.
+   答え: レオナルド・ダ・ヴィンチが「モナ・リザ」を描きました。
+
+5. What is the chemical symbol for gold?
+   金の化学記号は何ですか？
+   Answer: The symbol for gold is Au.
+   答え: 金の化学記号はAuです。
+
+6. In what year did World War II end?
+   第二次世界大戦が終わったのは何年ですか？
+   Answer: It ended in 1945.
+   答え: 1945年に終わりました。
+
+7. What country has the largest population in the world?
+   世界で最も人口が多い国はどこですか？
+   Answer: India has the largest population.
+   答え: インドが最も人口が多い国です。
+
+8. What is sushi traditionally wrapped in?
+   寿司は伝統的に何で包まれていますか？
+   Answer: Sushi is often wrapped in seaweed.
+   答え: 寿司は伝統的に海苔で包まれます。
+
+9. What is the main language spoken in Brazil?
+   ブラジルで主に話されている言語は何ですか？
+   Answer: People mainly speak Portuguese.
+   答え: 主にポルトガル語が話されています。
+
+10. What is the smallest prime number?
+    最も小さい素数は何ですか？
+    Answer: The smallest prime number is 2.
+    答え: 最も小さい素数は2です。
+
+11. Which country gave the Statue of Liberty to the United States?
+    自由の女神像をアメリカに贈った国はどこですか？
+    Answer: France gave it to the United States.
+    答え: フランスがアメリカに贈りました。
+
+12. What is the hardest natural substance on Earth?
+    地球上で最も硬い天然物質は何ですか？
+    Answer: Diamond is the hardest natural substance.
+    答え: ダイヤモンドが最も硬い天然物質です。
+
+13. In what city would you find the Colosseum?
+    コロッセオがある都市はどこですか？
+    Answer: The Colosseum is in Rome.
+    答え: コロッセオはローマにあります。
+
+14. Which planet has the most moons?
+    最も多くの衛星を持つ惑星はどれですか？
+    Answer: Jupiter has the most moons.
+    答え: 木星が最も多くの衛星を持っています。
+
+15. What does “www” stand for in a website address?
+    ウェブサイトのアドレスにある「www」は何の略ですか？
+    Answer: It stands for World Wide Web.
+    答え: 「World Wide Web（ワールド・ワイド・ウェブ）」の略です。
+
+16. What metal is liquid at room temperature?
+    常温で液体の金属は何ですか？
+    Answer: Mercury is liquid at room temperature.
+    答え: 水銀は常温で液体です。
+
+17. Which famous scientist developed the theory of relativity?
+    相対性理論を提唱した有名な科学者は誰ですか？
+    Answer: Albert Einstein developed it.
+    答え: アルベルト・アインシュタインが提唱しました。
+
+18. What city is known as “The Big Apple”?
+    「ビッグアップル」と呼ばれる都市はどこですか？
+    Answer: New York City is “The Big Apple.”
+    答え: ニューヨーク市は「ビッグアップル」と呼ばれます。
+
+19. What gas do plants absorb from the atmosphere?
+    植物が大気から吸収する気体は何ですか？
+    Answer: Plants absorb carbon dioxide.
+    答え: 植物は二酸化炭素を吸収します。
+
+20. What is the name of the largest desert in the world?
+    世界で最も大きな砂漠の名前は何ですか？
+    Answer: The Sahara Desert is the largest.
+    答え: サハラ砂漠が最も大きな砂漠です。
+
+21. Which country is famous for inventing pizza?
+    ピザの発祥地として有名な国はどこですか？
+    Answer: Italy is famous for inventing pizza.
+    答え: イタリアはピザの発祥地として有名です。
+
+22. Who wrote the play *Romeo and Juliet*?
+    『ロミオとジュリエット』を書いたのは誰ですか？
+    Answer: William Shakespeare wrote it.
+    答え: ウィリアム・シェイクスピアが書きました。
+
+23. Which organ in the human body pumps blood?
+    人間の体で血液を送り出す器官はどれですか？
+    Answer: The heart pumps blood.
+    答え: 心臓が血液を送り出します。
+
+24. What is the main ingredient in traditional Japanese miso soup?
+    日本の伝統的な味噌汁の主な材料は何ですか？
+    Answer: The main ingredient is miso (soybean paste).
+    答え: 主な材料は味噌（大豆のペースト）です。
+
+25. What is the tallest mountain in the world?
+    世界で一番高い山はどこですか？
+    Answer: Mount Everest is the tallest mountain.
+    答え: エベレスト山が一番高い山です。`  
   }
     ]
 };
+
+
 
 
 
