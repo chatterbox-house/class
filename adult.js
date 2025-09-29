@@ -1423,9 +1423,139 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
 
 50. 🏡 Happiness is more important than success. Which matters more to you?
     幸せは成功より重要だ。あなたにとってどちらが大切ですか`  
+ } ,
+        {
+            title: "🧠 Fun Trivia Quiz for Kids (Ages 11–13)",
+            content: `1. What fruit keeps the doctor away if you eat one every day?
+   毎日1個食べると医者いらずと言われる果物は何ですか？
+   Answer: An apple keeps the doctor away.
+   答え: りんごを食べると医者いらずです。
+
+2. What animal is known as “man’s best friend”?
+   「人間の最良の友」として知られている動物は何ですか？
+   Answer: A dog is man’s best friend.
+   答え: 犬は人間の最良の友です。
+
+3. What is the largest country in the world?
+   世界で一番大きな国はどこですか？
+   Answer: Russia is the largest country.
+   答え: ロシアが一番大きな国です。
+
+4. What food is made from cacao beans?
+   カカオ豆から作られる食べ物は何ですか？
+   Answer: Chocolate is made from cacao beans.
+   答え: チョコレートはカカオ豆から作られます。
+
+5. What is the name of the planet we live on?
+   私たちが住んでいる惑星の名前は何ですか？
+   Answer: We live on Earth.
+   答え: 私たちは地球に住んでいます。
+
+6. What black and white animal is famous in China?
+   中国で有名な白黒の動物は何ですか？
+   Answer: The panda is famous in China.
+   答え: パンダが中国で有名です。
+
+7. Who brings presents to children at Christmas?
+   クリスマスに子どもたちにプレゼントを持ってくるのは誰ですか？
+   Answer: Santa Claus brings presents.
+   答え: サンタクロースがプレゼントを持ってきます。
+
+8. What animal changes from a tadpole into an adult?
+   オタマジャクシから大人になる動物は何ですか？
+   Answer: A frog changes from a tadpole.
+   答え: カエルはオタマジャクシから成長します。
+
+9. What is the largest ocean on Earth?
+   地球で一番大きな海はどこですか？
+   Answer: The Pacific Ocean is the largest.
+   答え: 太平洋が一番大きな海です。
+
+10. What company makes the iPhone?
+    iPhoneを作っている会社はどこですか？
+    Answer: Apple makes the iPhone.
+    答え: Apple（アップル）がiPhoneを作っています。
+
+11. What is the name of the famous Disney princess who loses her glass slipper?
+    ガラスの靴をなくす有名なディズニープリンセスは誰ですか？
+    Answer: Cinderella loses her glass slipper.
+    答え: シンデレラがガラスの靴をなくします。
+
+12. What do we call animals that lived millions of years ago and are now extinct?
+    何百万年も前に生きていて、今は絶滅している動物を何と呼びますか？
+    Answer: They are called dinosaurs.
+    答え: それは恐竜と呼ばれます。
+
+13. How many continents are there on Earth?
+    地球には大陸がいくつありますか？
+    Answer: There are seven continents.
+    答え: 大陸は7つあります。
+
+14. What three colors are called “primary colors”?
+    「三原色」と呼ばれる3つの色は何ですか？
+    Answer: Red, blue, and yellow are primary colors.
+    答え: 赤・青・黄色が三原色です。
+
+15. What is H₂O more commonly known as?
+    H₂Oはもっと一般的に何と呼ばれていますか？
+    Answer: H₂O is water.
+    答え: H₂Oは水です。
+
+16. What sport is the FIFA World Cup for?
+    FIFAワールドカップはどのスポーツの大会ですか？
+    Answer: It is for soccer (football).
+    答え: サッカー（フットボール）の大会です。
+
+17. What is the name of the star at the center of our solar system?
+    私たちの太陽系の中心にある星の名前は何ですか？
+    Answer: The Sun is at the center.
+    答え: 太陽が中心にあります。
+
+18. What sweet food do bees make?
+    ハチが作る甘い食べ物は何ですか？
+    Answer: Bees make honey.
+    答え: ハチははちみつを作ります。
+
+19. What is the first letter of the English alphabet?
+    英語のアルファベットの最初の文字は何ですか？
+    Answer: The first letter is A.
+    答え: 最初の文字はAです。
+
+20. What is Winnie-the-Pooh’s favorite food?
+    くまのプーさんの大好物は何ですか？
+    Answer: His favorite food is honey.
+    答え: プーさんの大好物ははちみつです。
+
+21. What is the largest land animal on Earth?
+    地球で一番大きな陸の動物は何ですか？
+    Answer: The elephant is the largest land animal.
+    答え: ゾウが一番大きな陸の動物です。
+
+22. Where is the Eiffel Tower?
+    エッフェル塔はどこにありますか？
+    Answer: The Eiffel Tower is in Paris.
+    答え: エッフェル塔はパリにあります。
+
+23. On what date is Halloween celebrated?
+    ハロウィンは何月何日に祝われますか？
+    Answer: Halloween is on October 31st.
+    答え: ハロウィンは10月31日です。
+
+24. Which animal carries its home on its back?
+    背中に家を背負っている動物は何ですか？
+    Answer: A turtle carries its home on its back.
+    答え: カメは背中に家（甲羅）を背負っています。
+
+25. What do you call melted rock that comes out of a volcano?
+    火山から出てくる溶けた岩石を何と呼びますか？
+    Answer: It is called lava.
+    答え: それは溶岩と呼ばれます。`  
   }
     ]
 };
+
+
+
 
 
 
