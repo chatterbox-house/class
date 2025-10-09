@@ -1679,9 +1679,90 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
     世界で一番高い山はどこですか？
     Answer: Mount Everest is the tallest mountain.
     答え: エベレスト山が一番高い山です。`  
+} ,
+        {
+            title: "🌟 Best and Worst Questions",
+            content: `1. 🥤 What’s the best drink to have in the morning? What’s the worst drink to have in the morning?
+   朝に飲むのに一番いい飲み物は何ですか？一番悪い飲み物は何ですか？
+
+2. 🎬 What’s the best movie you’ve ever seen? What’s the worst movie you’ve ever seen?
+   今まで見た中で一番良い映画は何ですか？一番悪い映画は何ですか？
+
+3. 🎵 What’s the best song to sing at karaoke? What’s the worst song to sing at karaoke?
+   カラオケで歌うのに一番いい曲は何ですか？一番悪い曲は何ですか？
+
+4. 🍕 What’s the best topping for pizza? What’s the worst topping for pizza?
+   ピザの一番おいしいトッピングは何ですか？一番まずいトッピングは何ですか？
+
+5. ✈️ What’s the best country to visit? What’s the worst country to visit?
+   旅行に一番おすすめの国はどこですか？一番おすすめできない国はどこですか？
+
+6. 📱 What’s the best app on your phone? What’s the worst app?
+   スマホで一番いいアプリは何ですか？一番悪いアプリは何ですか？
+
+7. 🧑‍🍳 What’s the best meal you can cook? What’s the worst meal you ever cooked?
+   自分で作れる一番おいしい料理は何ですか？今までで一番ひどく作った料理は何ですか？
+
+8. 💤 What’s the best time to go to bed? What’s the worst time to go to bed?
+   寝るのに一番いい時間はいつですか？一番悪い時間はいつですか？
+
+9. 🧊 What’s the best season of the year? What’s the worst season?
+   一年の中で一番いい季節はいつですか？一番悪い季節はいつですか？
+
+10. 🎂 What’s the best thing about birthdays? What’s the worst thing about birthdays?
+    誕生日の一番いいところは何ですか？一番嫌なところは何ですか？
+
+11. 🚌 What’s the best way to go to school or work? What’s the worst way?
+    学校や仕事に行くのに一番いい方法は何ですか？一番悪い方法は何ですか？
+
+12. 🎮 What’s the best video game you’ve played? What’s the worst one?
+    今までで一番おもしろかったゲームは何ですか？一番つまらなかったゲームは何ですか？
+
+13. 🧦 What’s the best gift you ever received? What’s the worst gift you ever got?
+    今までにもらった一番うれしかったプレゼントは何ですか？一番がっかりしたプレゼントは何ですか？
+
+14. ☕ What’s the best café or restaurant in your town? What’s the worst one?
+    あなたの町で一番いいカフェやレストランはどこですか？一番悪いのはどこですか？
+
+15. 🧍 What’s the best thing about being an adult? What’s the worst thing?
+    大人でいることの一番いいところは何ですか？一番悪いところは何ですか？
+
+16. 📚 What’s the best subject in school? What’s the worst subject?
+    学校で一番好きな教科は何ですか？一番嫌いな教科は何ですか？
+
+17. 🌧️ What’s the best thing to do on a rainy day? What’s the worst thing to do?
+    雨の日にするのに一番いいことは何ですか？一番悪いことは何ですか？
+
+18. 🐶 What’s the best pet to have? What’s the worst pet to have?
+    飼うのに一番いいペットは何ですか？一番悪いペットは何ですか？
+
+19. 👗 What’s the best thing to wear in summer? What’s the worst thing to wear?
+    夏に着るのに一番いい服は何ですか？一番悪い服は何ですか？
+
+20. 🍣 What’s the best Japanese food? What’s the worst Japanese food?
+    日本料理で一番おいしいものは何ですか？一番おいしくないものは何ですか？
+
+21. 📺 What’s the best TV show you’ve watched recently? What’s the worst one?
+    最近見たテレビ番組で一番良かったものは何ですか？一番悪かったものは何ですか？
+
+22. 🏖️ What’s the best place to relax? What’s the worst place to relax?
+    リラックスするのに一番いい場所はどこですか？一番悪い場所はどこですか？
+
+23. 🏠 What’s the best thing about your home? What’s the worst thing?
+    あなたの家の一番いいところは何ですか？一番悪いところは何ですか？
+
+24. 💬 What’s the best English word you know? What’s the worst English word?
+    知っている英単語の中で一番好きな言葉は何ですか？一番嫌いな言葉は何ですか？
+
+25. 🎉 What’s the best way to celebrate something? What’s the worst way?
+    何かをお祝いするのに一番いい方法は何ですか？一番悪い方法は何ですか？`  
   }
     ]
 };
+
+
+
+
 
 
 
