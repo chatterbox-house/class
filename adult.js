@@ -1756,9 +1756,164 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
 
 25. 🎉 What’s the best way to celebrate something? What’s the worst way?
     何かをお祝いするのに一番いい方法は何ですか？一番悪い方法は何ですか？`  
+
+} ,
+        {
+            title: "🌏 Cultural Comparison Topics",
+            content: `1. 🏠 Should people take off their shoes inside everywhere?
+   世界中で靴を脱ぐべきだと思いますか？
+
+2. 🍽️ Is it polite to finish all the food on your plate?
+   お皿の食べ物を全部食べるのは礼儀正しいですか？
+
+3. 🙇 Is bowing better than shaking hands?
+   おじぎをする方が握手より良いですか？
+
+4. 🗣️ Should people always use polite language with strangers?
+   知らない人には常に丁寧な言葉を使うべきですか？
+
+5. 🎁 Should you open gifts immediately or later?
+   プレゼントはすぐに開けるべきですか？それとも後で？
+
+6. 🍶 Is it rude to pour your own drink?
+   自分でお酒を注ぐのは失礼ですか？
+
+7. 🚇 Should people be quiet on public transport?
+   公共交通で静かにするべきですか？
+
+8. 🍜 Is it okay to slurp noodles loudly?
+   麺を音を立てて食べても大丈夫ですか？
+
+9. ⏰ Is being a few minutes late acceptable?
+   数分遅れても大丈夫ですか？
+
+10. 🎂 Should birthdays be celebrated with friends or family?
+    誕生日は友達と祝うべきですか？家族と祝うべきですか？
+
+11. 💬 Should people say what they really think, even if it’s rude?
+    たとえ失礼でも、本音を言うべきですか？
+
+12. 💡 Is group harmony more important than individuality?
+    調和は個性よりも大切ですか？
+
+13. 👕 Should students wear uniforms at school?
+    学生は制服を着るべきですか？
+
+14. 🎓 Should everyone go to university?
+    誰でも大学に行くべきですか？
+
+15. 🏢 Is it good to stay in one company for life?
+    一つの会社に一生勤めるのは良いことですか？
+
+16. 💼 Should workers take long holidays like in Europe?
+    ヨーロッパのように長い休暇を取るべきですか？
+
+17. 💍 Should people marry young or wait until later?
+    若いうちに結婚すべきですか？それとも後の方がいいですか？
+
+18. 👪 Should people live with their parents after marriage?
+    結婚後も両親と一緒に住むべきですか？
+
+19. 🏘️ Is living in a small house better than a big one?
+    小さい家に住む方が大きい家よりいいですか？
+
+20. 🧳 Should students travel abroad before starting work?
+    働く前に海外旅行をするべきですか？
+
+21. 🏫 Should schools teach more about other cultures?
+    学校はもっと外国の文化を教えるべきですか？
+
+22. 🍱 Is Japanese food healthier than Western food?
+    日本食は西洋の食事より健康的ですか？
+
+23. ☕ Is it okay to eat or drink while walking?
+    歩きながら食べたり飲んだりしてもいいですか？
+
+24. 🧓 Should older people be more respected than young people?
+    年上の人は若者よりもっと尊敬されるべきですか？
+
+25. 🧍 Should people bow or hug when they meet?
+    会ったときはおじぎをする方がいいですか？ハグをする方がいいですか？
+
+26. 🏮 Are Japanese festivals better than Western holidays?
+    日本の祭りは西洋の祝日より楽しいですか？
+
+27. 🏖️ Should beaches be free for everyone?
+    海辺は誰でも無料で使えるべきですか？
+
+28. 🛍️ Should stores open on New Year’s Day?
+    お正月に店を開けるべきですか？
+
+29. 🎆 Should fireworks be allowed everywhere?
+    どこでも花火をしてもいいと思いますか？
+
+30. 🥋 Should every child learn martial arts?
+    すべての子どもが武道を習うべきですか？
+
+31. 🧍‍♀️ Should people stand in line everywhere, like in Japan?
+    日本のようにどこでも列に並ぶべきですか？
+
+32. 💬 Is it okay to talk loudly on the phone in public?
+    公共の場で大声で電話してもいいですか？
+
+33. 🍔 Should fast food be banned in schools?
+    学校でファストフードを禁止すべきですか？
+
+34. 🐶 Should pets be allowed in restaurants or cafés?
+    レストランやカフェにペットを入れてもいいですか？
+
+35. 🚗 Should everyone learn to drive?
+    みんなが運転を習うべきですか？
+
+36. 🚴 Should cities have more bicycle roads?
+    都市にはもっと自転車専用道路を作るべきですか？
+
+37. 🌳 Should people plant trees near their homes?
+    自分の家の近くに木を植えるべきですか？
+
+38. 🏥 Should healthcare be completely free?
+    医療は完全に無料にすべきですか？
+
+39. 💸 Should rich people pay higher taxes?
+    お金持ちはもっと多く税金を払うべきですか？
+
+40. 📱 Should smartphones be banned in classrooms?
+    授業中にスマホを禁止すべきですか？
+
+41. 🎤 Should Japanese people speak more English in daily life?
+    日本人はもっと英語を日常で使うべきですか？
+
+42. 🏫 Should schools start later in the morning?
+    学校はもっと遅く始まる方がいいですか？
+
+43. 🎮 Should video games be limited for children?
+    子どものゲーム時間を制限すべきですか？
+
+44. 💑 Should people date before marriage?
+    結婚前に恋愛をするべきですか？
+
+45. 🧘 Should students learn about mental health in school?
+    学校でメンタルヘルスを学ぶべきですか？
+
+46. 🕊️ Should Japan have a stronger military?
+    日本はもっと強い軍を持つべきですか？
+
+47. 🌏 Should Japanese people live abroad for a few years?
+    日本人は数年間海外で暮らすべきですか？
+
+48. 📺 Are Japanese TV shows better than foreign ones?
+    日本のテレビ番組は外国の番組より面白いですか？
+
+49. 🧹 Should everyone clean their own school or workplace?
+    全員が自分の学校や職場を掃除するべきですか？
+
+50. 🧧 Should people give money as gifts, or is that too impersonal?
+    お金をプレゼントとしてあげるのはいいことですか？それとも冷たいですか？`  
   }
     ]
 };
+
+
 
 
 
