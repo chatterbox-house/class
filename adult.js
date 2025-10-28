@@ -1909,9 +1909,265 @@ A: 「真実は人気に依存しません。」 B: 「人々が信じること�
 
 50. 🧧 Should people give money as gifts, or is that too impersonal?
     お金をプレゼントとしてあげるのはいいことですか？それとも冷たいですか？`  
+} ,
+        {
+            title: "🕵️‍♂️ Famous Misquotes & Urban Legends Quiz",
+            content: `1. 🧠 “Einstein failed math in school.”
+   アインシュタインは学校で数学を落第した。
+   False. He was actually excellent at math.
+   ウソ。本当は数学がとても得意でした。
+
+2. 🍎 “Newton discovered gravity when an apple hit his head.”
+   ニュートンはリンゴが頭に落ちて重力を発見した。
+   False. The story was added later for storytelling.
+   ウソ。その話は後で作られたものです。
+
+3. 🌍 “People in Columbus’s time thought the Earth was flat.”
+   コロンブスの時代の人々は地球が平らだと思っていた。
+   False. Educated Europeans already knew it was round.
+   ウソ。知識人はすでに地球が丸いと知っていました。
+
+4. 🦇 “Bats are blind.”
+   コウモリは目が見えない。
+   False. They can see and use echolocation.
+   ウソ。目は見え、エコーロケーションも使います。
+
+5. 💡 “Thomas Edison invented the first practical light bulb.”
+   エジソンは最初の実用的な電球を発明した。
+   True. He made the first commercially successful bulb.
+   ホント。実用的な電球を最初に作ったのは彼です。
+
+6. 🧱 “The Great Wall of China can be seen from space with the naked eye.”
+   万里の長城は宇宙から肉眼で見える。
+   False. It is too narrow to be seen without aid.
+   ウソ。肉眼では狭すぎて見えません。
+
+7. 🐘 “Elephants are afraid of mice.”
+   ゾウはネズミを怖がる。
+   False. They may be cautious, but not truly scared.
+   ウソ。警戒はしますが、本当に怖がるわけではありません。
+
+8. 🚢 “The Titanic was called ‘unsinkable.’”
+   タイタニック号は「沈まない船」と呼ばれていた。
+   True. Advertisements called it unsinkable.
+   ホント。広告では沈まないとされていました。
+
+9. 🐦 “Owls can turn their heads 360 degrees.”
+   フクロウは首を360度回せる。
+   False. They can rotate about 270 degrees.
+   ウソ。約270度しか回せません。
+
+10. 🧊 “Vikings wore horned helmets.”
+    バイキングは角のあるヘルメットをかぶっていた。
+    False. That image comes from modern costume design.
+    ウソ。そのイメージは現代の衣装からです。
+
+11. 👨‍🚀 “Neil Armstrong said, ‘That’s one small step for man, one giant leap for mankind.’”
+    ニール・アームストロングは「人類にとって小さな一歩、人類全体にとって大きな飛躍」と言った。
+    True. That’s exactly what he said on the Moon.
+    ホント。月での言葉は正確にそうでした。
+
+12. 🐼 “Pandas only eat bamboo.”
+    パンダは竹だけを食べる。
+    False. They mostly eat bamboo but occasionally other plants and meat.
+    ウソ。主に竹を食べますが、他の植物や肉も時々食べます。
+
+13. 🧬 “Humans evolved from monkeys.”
+    人間はサルから進化した。
+    False. Humans and monkeys share a common ancestor.
+    ウソ。人間とサルは共通の祖先を持ちます。
+
+14. ⚡ “Benjamin Franklin proved lightning is electricity with a kite experiment.”
+    ベンジャミン・フランクリンは凧の実験で雷が電気であることを証明した。
+    True. His famous kite experiment showed this.
+    ホント。有名な凧の実験で証明しました。
+
+15. 🍫 “Chocolate causes acne.”
+    チョコレートを食べるとニキビができる。
+    False. There is no strong scientific evidence.
+    ウソ。科学的な証拠はありません。
+
+16. 🐕 “Dogs only see in black and white.”
+    犬は白黒しか見えない。
+    False. They see some colors, like blue and yellow.
+    ウソ。青や黄色などの色は見えます。
+
+17. 👽 “Area 51 contains alien spacecraft.”
+    エリア51には宇宙人の宇宙船がある。
+    False. No evidence supports this claim.
+    ウソ。証拠はありません。
+
+18. 🧔 “Santa Claus is based on a real person.”
+    サンタクロースは実在の人物がモデル。
+    True. He was based on Saint Nicholas.
+    ホント。聖ニコラスがモデルです。
+
+19. 🐍 “Cleopatra was Egyptian.”
+    クレオパトラはエジプト人だった。
+    False. She was Greek from the Ptolemaic dynasty.
+    ウソ。彼女はギリシャ系でした。
+
+20. 🕰 “Napoleon was very short.”
+    ナポレオンはとても背が低かった。
+    False. He was average height for his time.
+    ウソ。当時の平均身長でした。
+
+21. 👁 “The Great Fire of London started in a bakery.”
+    ロンドン大火はパン屋から始まった。
+    True. It started on Pudding Lane in 1666.
+    ホント。1666年、パディングレーンのパン屋で起きました。
+
+22. 🧙 “Witches were burned at the stake in medieval Europe.”
+    中世ヨーロッパで魔女は火あぶりにされた。
+    True. Some witch trials ended with executions by fire.
+    ホント。魔女裁判では火刑もありました。
+
+23. 🐧 “Penguins live in the North Pole.”
+    ペンギンは北極に住む。
+    False. Penguins are native to the Southern Hemisphere.
+    ウソ。南半球に住んでいます。
+
+24. 🦑 “Giant squids can grow longer than a school bus.”
+    ダイオウイカはスクールバスより長くなる。
+    True. They can reach over 10 meters.
+    ホント。10メートル以上に成長します。
+
+25. 🌋 “Mount Vesuvius destroyed Pompeii in 79 AD.”
+    ヴェスヴィオ火山が紀元79年にポンペイを壊滅させた。
+    True. The eruption buried the city in ash.
+    ホント。噴火で街は火山灰に埋まりました。
+
+26. 🧂 “Salt was once used as currency.”
+    塩はかつて通貨として使われていた。
+    True. Ancient civilizations sometimes used salt for trade.
+    ホント。古代文明では貿易に塩が使われました。
+
+27. 🐴 “The Trojan Horse was a real historical event.”
+    トロイの木馬は実際の歴史的事件だった。
+    False. It may be a legend from Homer’s epic.
+    ウソ。ホメロスの叙事詩の伝説です。
+
+28. 🕷 “Spiders can live for several years without food.”
+    クモは何年も食べずに生きられる。
+    True. Some species can survive long periods.
+    ホント。一部の種類は長期間生きられます。
+
+29. 🌪 “Tornadoes only occur in the United States.”
+    竜巻はアメリカでしか起きない。
+    False. They occur in many countries.
+    ウソ。世界中で発生します。
+
+30. 🏰 “The Tower of London was originally a royal palace.”
+    ロンドン塔は元々王宮だった。
+    True. It was built by William the Conqueror as a palace and fortress.
+    ホント。ウィリアム征服王が宮殿兼要塞として建てました。
+
+31. 🦑 “Octopuses have three hearts.”
+    タコには心臓が3つある。
+    True. Two pump blood to the gills, one to the body.
+    ホント。2つはエラに、1つは体に血を送ります。
+
+32. 🏞 “The Amazon rainforest produces 20% of the world’s oxygen.”
+    アマゾン熱帯雨林は世界の酸素の20％を生産する。
+    True. Though slightly debated, it’s roughly correct.
+    ホント。議論はあるが、おおむね正しいです。
+
+33. 🎨 “Van Gogh cut off his entire ear.”
+    ゴッホは耳を全部切り落とした。
+    False. He only cut part of his ear.
+    ウソ。耳の一部だけ切りました。
+
+34. 🏝 “Australia is wider than the moon.”
+オーストラリアは月より広い。
+False. The Moon is much larger.
+ウソ。月のほうがはるかに大きいです。
+
+35. 🏹 “Robin Hood was a real historical figure.”
+    ロビン・フッドは実在した人物。
+    False. His legend is based on folklore.
+    ウソ。伝説に基づく人物です。
+
+36. 🐅 “Tigers can change the pattern of their stripes.”
+    トラは縞模様を変えることができる。
+    False. Stripes are permanent and unique to each tiger.
+    ウソ。縞模様は永久で個体ごとに異なります。
+
+37. 🏰 “Disneyland opened in 1955.”
+    ディズニーランドは1955年に開園した。
+    True. Disneyland in California opened then.
+    ホント。カリフォルニアのディズニーランドはその年に開園。
+
+38. 🏺 “King Tut’s tomb was found intact.”
+    ツタンカーメン王の墓は完全に無傷で発見された。
+    True. It was almost untouched in 1922.
+    ホント。1922年にほぼ手つかずで発見されました。
+
+39. 🦠 “The Black Death killed one-third of Europe’s population.”
+    黒死病はヨーロッパ人口の3分の1を殺した。
+    True. Estimates range around 25–30%.
+    ホント。推定25～30％が死亡。
+
+40. 🦎 “Chameleons change color to match their background.”
+    カメレオンは背景に合わせて色を変える。
+    False. They change color mainly for mood, temperature, and communication.
+    ウソ。主に気分、温度、コミュニケーションのために変えます。
+
+41. 🐉 “Dragons are real animals that existed in China.”
+    ドラゴンは中国で実在した動物。
+    False. Dragons are mythical creatures.
+    ウソ。神話上の生き物です。
+
+42. 🛳 “The Mayflower carried pilgrims to America in 1620.”
+    メイフラワー号は1620年にピルグリムをアメリカに運んだ。
+    True. It carried English settlers to Plymouth Colony.
+    ホント。イングランドの入植者をプリマス植民地へ運びました。
+
+43. 🦢 “Swans mate for life.”
+    ハクチョウは生涯のパートナーとつがう。
+    True. They are mostly monogamous.
+    ホント。主に一夫一妻です。
+
+44. 🏔 “Mount Everest is the tallest mountain in the world.”
+    エベレスト山は世界で一番高い山。
+    True. It reaches 8,848 meters.
+    ホント。高さは8,848メートルです。
+
+45. 🐋 “Blue whales are the largest animals to have ever existed.”
+    シロナガスクジラはこれまでに存在した最大の動物。
+    True. They can reach over 30 meters long.
+    ホント。30メートル以上になることがあります。
+
+46. 🐜 “Ants can lift 50 times their own body weight.”
+    アリは自分の体重の50倍を持ち上げられる。
+    True. Some species can lift incredible weights.
+    ホント。一部の種類は驚くほど重いものを持ち上げられます。
+
+47. 🦈 “Sharks can smell a drop of blood from miles away.”
+    サメは何マイルも離れた血を嗅ぎ分けられる。
+    True. They have extremely sensitive olfactory senses.
+    ホント。非常に敏感な嗅覚を持っています。
+
+48. 🌐 “The Internet was invented in the 1990s.”
+    インターネットは1990年代に発明された。
+    False. It was developed from the 1960s onward.
+    ウソ。1960年代から発展しました。
+
+49. 🌑 “The moon has a dark side that never faces Earth.”
+    月には地球に向かない暗い側がある。
+    False. All parts receive sunlight; “dark side” is a misnomer.
+    ウソ。すべての日光を受けます。「暗い側」は誤解です。
+
+50. 🐦 “Birds are dinosaurs.”
+    鳥は恐竜の一種である。
+    True. Birds evolved from theropod dinosaurs.
+    ホント。鳥は獣脚類恐竜から進化しました。`  
   }
     ]
 };
+
+
+
+
 
 
 
