@@ -2161,9 +2161,165 @@ False. The Moon is much larger.
     鳥は恐竜の一種である。
     True. Birds evolved from theropod dinosaurs.
     ホント。鳥は獣脚類恐竜から進化しました。`  
+
+
+} ,
+        {
+            title: "Taboo Topics (Soft Version)",
+            content: `1. Should companies check your social media before hiring you?
+   会社は採用前にSNSを確認すべきですか？
+
+2. Should students be allowed to have tattoos?
+   学生はタトゥーをしてもいいと思いますか？
+
+3. Is it OK to live with your partner before marriage?
+   結婚前に同棲するのはいいことですか？
+
+4. Should parents control how their children use smartphones?
+   親は子どものスマホの使い方を管理すべきですか？
+
+5. Should people talk about their salary with friends?
+   給料の話を友達とするのはよいことですか？
+
+6. Should schools teach about romantic relationships?
+   学校で恋愛について教えるべきですか？
+
+7. Should rich people pay higher taxes?
+   お金持ちはもっと高い税金を払うべきですか？
+
+8. Should people post pictures of their children online?
+   自分の子どもの写真をネットに載せるのは良いことですか？
+
+9. Should couples share bank accounts?
+   夫婦は銀行口座を共有すべきですか？
+
+10. Is it OK to date someone you met online?
+    ネットで出会った人と付き合うのはいいことですか？
+
+11. Should old people stop driving after a certain age?
+    高齢者はある年齢で運転をやめるべきですか？
+
+12. Should parents choose their children’s careers?
+    親は子どもの職業を決めるべきですか？
+
+13. Is it rude to ask someone about their age?
+    年齢を聞くのは失礼ですか？
+
+14. Should schools allow students to dye their hair?
+    学校で髪を染めるのを許可すべきですか？
+
+15. Should couples get married before having children?
+    子どもを持つ前に結婚すべきですか？
+
+16. Is it OK to use your phone during meals?
+    食事中にスマホを使うのはいいことですか？
+
+17. Should women be required to take their husband’s last name?
+    女性は結婚後に夫の姓を名乗るべきですか？
+
+18. Should people be able to work from home forever?
+    人々はずっと在宅勤務できるようにすべきですか？
+
+19. Should religion be discussed at school?
+    宗教について学校で話すのは良いことですか？
+
+20. Should teachers be allowed to have visible tattoos?
+    先生が見える場所にタトゥーを入れるのは許されるべきですか？
+
+21. Should parents tell children the truth about Santa Claus?
+    親はサンタクロースの真実を子どもに伝えるべきですか？
+
+22. Should people be allowed to smoke in public places?
+    公共の場で喫煙することを許可すべきですか？
+
+23. Should men and women have equal pay for the same job?
+    同じ仕事なら男女は同じ給料をもらうべきですか？
+
+24. Should schools have uniforms?
+    学校に制服は必要ですか？
+
+25. Should students learn how to manage money at school?
+    お金の管理を学校で教えるべきですか？
+
+26. Should people talk about politics at work?
+    職場で政治の話をするのはよいことですか？
+
+27. Should pets be treated like family members?
+    ペットを家族の一員のように扱うべきですか？
+
+28. Should people post selfies every day?
+    毎日セルフィーを投稿するのは良いことですか？
+
+29. Should marriage be necessary for a happy life?
+    幸せな人生には結婚が必要ですか？
+
+30. Should people who don’t have children pay fewer taxes?
+    子どもがいない人は税金を少なくすべきですか？
+
+31. Should students be punished for being late?
+    遅刻した学生を罰するべきですか？
+
+32. Should parents give their children pocket money?
+    親は子どもにお小遣いをあげるべきですか？
+
+33. Should people always tell the truth, even if it hurts?
+    相手を傷つけても正直に話すべきですか？
+
+34. Should people be allowed to work after retirement age?
+    定年後も働くことを許可すべきですか？
+
+35. Should schools teach about mental health?
+    学校でメンタルヘルスについて教えるべきですか？
+
+36. Should parents check their children’s messages or emails?
+    親は子どものメッセージやメールを確認すべきですか？
+
+37. Should friends lend each other money?
+    友達同士でお金を貸すのは良いことですか？
+
+38. Should influencers be honest about cosmetic surgery?
+    インフルエンサーは整形手術について正直に話すべきですか？
+
+39. Should people be allowed to work part-time instead of full-time?
+    フルタイムではなくパートタイムで働くことを選べるようにすべきですか？
+
+40. Should students use smartphones in class?
+    授業中にスマホを使うのは良いことですか？
+
+41. Should couples celebrate Valentine’s Day?
+    カップルはバレンタインデーを祝うべきですか？
+
+42. Should social media use be limited by age?
+    SNSの利用は年齢で制限すべきですか？
+
+43. Should people have to pay for university education?
+    大学教育は有料であるべきですか？
+
+44. Should it be illegal to gossip about others online?
+    ネットで他人の噂をするのを違法にすべきですか？
+
+45. Should parents tell children who they can date?
+    親は子どもが誰と付き合うかを決めるべきですか？
+
+46. Should couples share their passwords?
+    カップルはお互いのパスワードを共有すべきですか？
+
+47. Should people delete old photos of their ex-partners?
+    元恋人との写真を削除すべきですか？
+
+48. Should people discuss how much money they make on dates?
+    デート中に収入の話をするのは良いことですか？
+
+49. Should people marry someone their parents don’t like?
+    親が嫌がる人と結婚してもいいですか？
+
+50. Should everyone have to do some volunteer work every year?
+    全員が毎年ボランティア活動をすべきですか？`  
   }
     ]
 };
+
+
 
 
 
