@@ -1076,7 +1076,6 @@ CEOがデューデリジェンス（適正評価手続き）を行っていれ�
 🗣️ Will AI ever write a Pulitzer Prize-winning novel?
 AIはいつかピューリッツァー賞を受賞する小説を書くでしょうか？`
     },
-const eiken1_part3 = [
     // Story 25 - Environmental Advocacy
     {
         title: "25. Environmental Advocacy",
@@ -2157,3 +2156,4 @@ VRデータのプライバシーリスクは何ですか？
 現実は私たちが知覚するものによって定義されますか？`
     }
 ];
+
