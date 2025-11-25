@@ -2766,16 +2766,19 @@ function loadLessonsData() {
                 }
             };
 
-            // Process each class to ensure consistent structure
+// Process each class to ensure consistent structure
             Object.entries(classData).forEach(([className, data]) => {
                 if (!data) return; // Skip if data not loaded
                 
                 if (Array.isArray(data)) {
-                    // For classes that are just arrays of content
+                    // UPDATED LOGIC HERE:
+                    // Check if the items inside the array are Objects with a 'title' property
                     lessonsData[className] = {
-                        stories: data.map((content, i) => ({
-                            title: `Story ${i+1}`,
-                            content: content
+                        stories: data.map((item, i) => ({
+                            // If item.title exists, use it. If not, make a generic "Story X" title.
+                            title: item.title ? item.title : `Story ${i+1}`,
+                            // If item.content exists, use it. If item is just a string, use item itself.
+                            content: item.content ? item.content : item
                         }))
                     };
                 } else if (data.stories || data.questions) {
@@ -2894,6 +2897,7 @@ function loadLessonsData() {
 </script>   
 </body>
 </html>
+
 
 
 
