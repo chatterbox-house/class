@@ -1,134 +1,136 @@
 // eiken3.js
 var eiken3 = [
     {
-        title: "1. A Trip to Kyoto",
+        title: "1. A Trip to Kyoto (Present Perfect: Experience)",
         content: `🏯 I have been to Kyoto three times.
 私は京都に3回行ったことがあります。
-⛩️ It is famous for its old temples.
-そこは古い寺で有名です。
-🍁 Last fall, I visited Kiyomizu Temple.
-去年の秋、清水寺を訪れました。
-👀 I have never seen such beautiful leaves.
-あんなに美しい紅葉は見たことがありません。
-📸 I took many pictures with my camera.
-私はカメラでたくさんの写真を撮りました。
-🍵 We drank green tea at a tea house.
-お茶屋さんで緑茶を飲みました。
-🍡 I have eaten yatsuhashi before, but this was fresh.
-八つ橋は以前食べたことがありますが、これは新鮮でした。
-🚌 We traveled around the city by bus.
-私たちはバスで市内を回りました。
-😊 I want to go there again someday.
-いつかまたそこに行きたいです。
+⛩️ I have visited many old temples there.
+そこでたくさんの古いお寺を訪れたことがあります。
+🍁 I have seen beautiful autumn leaves before.
+以前、美しい紅葉を見たことがあります。
+📸 I have taken pictures of Kiyomizu Temple.
+清水寺の写真を撮ったことがあります。
+🍵 I have drunk green tea at a tea house.
+お茶屋さんで緑茶を飲んだことがあります。
+🍡 I have eaten Yatsuhashi, a traditional sweet.
+八つ橋という伝統的なお菓子を食べたことがあります。
+🚌 I have traveled around the city by bus.
+バスで市内を回ったことがあります。
+👘 I have worn a kimono once.
+一度着物を着たことがあります。
+🚄 I have ridden the Shinkansen many times.
+新幹線に何度も乗ったことがあります。
+😊 I have had a great time in Kyoto.
+京都で素晴らしい時間を過ごしたことがあります。
 🚅 Have you ever been to Tokyo?
 東京に行ったことがありますか？
-🏯 Have you ever visited a famous castle?
-有名な城を訪れたことがありますか？
-⛩️ What is your city famous for?
-あなたの街は何で有名ですか？
-🍁 Do you like autumn leaves?
-紅葉は好きですか？
-👀 Have you ever seen a shooting star?
-流れ星を見たことがありますか？
-📸 Do you usually take pictures with a phone or a camera?
-普段、スマホとカメラのどちらで写真を撮りますか？
-🍵 Do you drink green tea often?
-よく緑茶を飲みますか？
-🍡 Have you ever eaten Japanese sweets?
-和菓子を食べたことがありますか？
-🚌 Do you go to school by bus?
-バスで学校に行きますか？
-😊 Where do you want to go someday?
-いつかどこに行きたいですか？`
+🏯 Have you ever visited a castle?
+お城を訪れたことがありますか？
+🍁 Have you ever seen red autumn leaves?
+紅葉を見たことがありますか？
+📸 Have you ever taken a picture with a camera?
+カメラで写真を撮ったことがありますか？
+🍵 Have you ever drunk matcha?
+抹茶を飲んだことがありますか？
+🍡 Have you ever eaten traditional Japanese sweets?
+日本の伝統的なお菓子を食べたことがありますか？
+🚌 Have you ever traveled by bus?
+バスで旅行したことがありますか？
+👘 Have you ever worn a kimono or yukata?
+着物や浴衣を着たことがありますか？
+🚄 Have you ever ridden a bullet train?
+新幹線に乗ったことがありますか？
+😊 Have you ever had a great trip?
+素晴らしい旅行をしたことがありますか？`
     },
     {
-        title: "2. The New Library",
+        title: "2. The New Library (Passive Voice)",
         content: `📚 A new library was built in our town.
 私たちの町に新しい図書館が建てられました。
 🏗️ It was opened last month.
-それは先月開館しました。
-📖 Many books are kept there.
-たくさんの本がそこで保管されています。
-💻 Computers are used by students to study.
-コンピュータは生徒によって勉強に使われます。
+それは先月開館されました。
+📖 Many books are kept on the shelves.
+たくさんの本が棚に保管されています。
+💻 Computers are used by students.
+コンピュータが生徒たちに使われています。
 🤫 Quiet music is played inside.
 中では静かな音楽が流されています。
 🖼️ Beautiful pictures are shown on the walls.
 美しい絵が壁に飾られています。
-🧒 Children are read to by volunteers.
-子供たちはボランティアに読み聞かせをしてもらいます。
+English is spoken by the staff.
+スタッフによって英語が話されています。
 💳 A card is needed to borrow books.
 本を借りるにはカードが必要です。
-🏠 The library is visited by many people daily.
-図書館は毎日多くの人に訪れられます。
-😊 It is loved by everyone in the town.
-それは町の全員に愛されています。
-📚 Is there a library in your town?
-あなたの町に図書館はありますか？
+🏠 The library is visited by many people.
+その図書館は多くの人に訪れられています。
+😊 It is loved by everyone.
+それはみんなに愛されています。
+📚 Is a library used by students in your school?
+あなたの学校では図書館は生徒に使われていますか？
 🏗️ When was your school built?
 あなたの学校はいつ建てられましたか？
-📖 Where are your books kept at home?
-家では本はどこに保管されていますか？
-💻 Do you use computers to study?
-勉強にコンピュータを使いますか？
-🤫 What kind of music is played in stores?
-お店ではどんな音楽が流れていますか？
+📖 Where are your books kept?
+あなたの本はどこに保管されていますか？
+💻 Are computers used in your class?
+あなたのクラスでコンピュータは使われていますか？
+🤫 Is music played in your house?
+あなたの家で音楽は流されていますか？
 🖼️ Are pictures shown in your classroom?
 教室に絵は飾られていますか？
-🧒 Do you like being read to?
-読み聞かせをしてもらうのは好きですか？
+🗣️ Is English spoken in your country?
+あなたの国で英語は話されていますか？
 💳 What is needed to ride a train?
-電車に乗るには何が必要ですか？
-🏠 Which place is visited by many people in your city?
-あなたの街で多くの人が訪れる場所はどこですか？
-😊 What food is loved by children?
-どんな食べ物が子供たちに愛されていますか？`
+電車に乗るには何が必要とされますか？
+🏠 Which place is visited by many tourists?
+どの場所が多くの観光客に訪れられますか？
+😊 Are you loved by your family?
+あなたは家族に愛されていますか？`
     },
     {
-        title: "3. My Brother's Hobby",
+        title: "3. My Brother's Hobby (Gerunds)",
         content: `🎸 My brother enjoys playing the guitar.
 兄はギターを弾くことを楽しんでいます。
 🎵 He started learning it two years ago.
 彼は2年前にそれを習い始めました。
-🎼 Practicing every day is important for him.
-毎日練習することは彼にとって重要です。
+🎼 Practicing every day is important.
+毎日練習することは重要です。
 😩 Sometimes he stops playing to rest.
 時々彼は休むために弾くのを止めます。
 🎧 He likes listening to rock music.
 彼はロック音楽を聴くのが好きです。
 🎤 Singing is also his hobby.
 歌うことも彼の趣味です。
-👨‍🎤 He dreams of becoming a musician.
-彼はミュージシャンになることを夢見ています。
-🏫 He finished doing his homework early.
-彼は宿題をするのを早く終えました。
+👨‍🎤 He finished writing a new song.
+彼は新しい歌を書き終えました。
+🏫 He is good at playing the drums too.
+彼はドラムを叩くのも得意です。
 🎸 Playing with a band is fun.
 バンドと一緒に演奏するのは楽しいです。
 😊 I like watching him play.
 私は彼が演奏するのを見るのが好きです。
-🎸 What do you enjoy doing in your free time?
-暇なときに何をするのを楽しみますか？
+🎸 Do you enjoy playing any instruments?
+何か楽器を演奏するのを楽しみますか？
 🎵 When did you start learning English?
 いつ英語を習い始めましたか？
-🎼 Is studying every day important?
-毎日勉強することは重要ですか？
+🎼 Is studying every day hard for you?
+毎日勉強するのはあなたにとって大変ですか？
 😩 What time do you stop watching TV?
 何時にテレビを見るのを止めますか？
 🎧 Do you like listening to music?
 音楽を聴くのは好きですか？
 🎤 Is singing your hobby?
 歌うことはあなたの趣味ですか？
-👨‍🎤 Do you dream of becoming famous?
-有名になることを夢見ていますか？
-🏫 When did you finish eating breakfast today?
-今日、いつ朝食を食べ終わりましたか？
-🎸 Is playing sports fun for you?
+👨‍🎤 Have you finished doing your homework?
+宿題をし終えましたか？
+🏫 Are you good at cooking?
+料理をするのは得意ですか？
+🎸 Is playing sports fun?
 スポーツをするのは楽しいですか？
-😊 Do you like watching sports on TV?
-テレビでスポーツを見るのは好きですか？`
+😊 Do you like watching movies?
+映画を見るのは好きですか？`
     },
     {
-        title: "4. A Great Movie",
+        title: "4. A Great Movie (Relative Pronouns: Subject)",
         content: `🎬 I watched a movie that was very exciting.
 私はとてもわくわくする映画を見ました。
 🎥 It is a story about a boy who has magic power.
@@ -171,7 +173,7 @@ var eiken3 = [
 あなたを泣かせる映画は好きですか？`
     },
     {
-        title: "5. How to Make Curry",
+        title: "5. How to Make Curry (It is ... to ...)",
         content: `🍛 It is easy to make curry.
 カレーを作るのは簡単です。
 🥕 It is important to cut the vegetables.
@@ -214,7 +216,7 @@ var eiken3 = [
 YouTubeを見るのは面白いですか？`
     },
     {
-        title: "6. The Fastest Runner",
+        title: "6. The Fastest Runner (Comparisons)",
         content: `🏃 Ken is the fastest runner in our class.
 ケンは私たちのクラスで一番速いランナーです。
 💨 He runs faster than any other student.
@@ -257,7 +259,7 @@ YouTubeを見るのは面白いですか？`
 猫と犬、どちらが好きですか？`
     },
     {
-        title: "7. Giving a Gift",
+        title: "7. Giving a Gift (SVOO: Give someone something)",
         content: `🎁 I gave my mother a present.
 私は母にプレゼントをあげました。
 💐 I bought her some flowers.
@@ -300,7 +302,7 @@ YouTubeを見るのは面白いですか？`
 人々に贈り物をあげるのは好きですか？`
     },
     {
-        title: "8. A Rainy Day",
+        title: "8. A Rainy Day (Conjunctions: Because, When, If)",
         content: `🌧️ I stayed home because it was raining.
 雨が降っていたので家にいました。
 📖 When I have free time, I read books.
@@ -343,7 +345,7 @@ YouTubeを見るのは面白いですか？`
 休日で嬉しいですか？`
     },
     {
-        title: "9. My Dream Job",
+        title: "9. My Dream Job (Infinitive: To do)",
         content: `💭 I want to be a doctor in the future.
 私は将来、医者になりたいです。
 🏥 I want to work in a hospital to help people.
@@ -386,7 +388,7 @@ YouTubeを見るのは面白いですか？`
 あなたの夢は何ですか？`
     },
     {
-        title: "10. The Lost Dog",
+        title: "10. The Lost Dog (Relative Pronouns: Object/Mixed)",
         content: `🐶 This is the dog that I found yesterday.
 これは私が昨日見つけた犬です。
 🐕 The dog which has a red collar is cute.
@@ -429,7 +431,7 @@ YouTubeを見るのは面白いですか？`
 友達がいて幸せですか？`
     },
     {
-        title: "11. Asking the Way",
+        title: "11. Asking the Way (Indirect Questions)",
         content: `🗺️ Excuse me, could you tell me where the station is?
 すみません、駅がどこにあるか教えていただけますか？
 🤔 I don't know how to get there.
@@ -472,7 +474,7 @@ YouTubeを見るのは面白いですか？`
 私が言うことがわかりますか？`
     },
     {
-        title: "12. My Favorite Season",
+        title: "12. My Favorite Season (Review: Relative/Gerunds)",
         content: `🍂 Autumn is the season that I like the best.
 秋は私が一番好きな季節です。
 🌡️ It is not too hot and not too cold.
@@ -515,7 +517,7 @@ YouTubeを見るのは面白いですか？`
 春/夏/秋/冬で嬉しいですか？`
     },
     {
-        title: "13. The Environment",
+        title: "13. The Environment (Auxiliary Verbs)",
         content: `🌍 We must protect the earth.
 私たちは地球を守らなければなりません。
 🗑️ We should not throw trash on the street.
@@ -558,7 +560,7 @@ YouTubeを見るのは面白いですか？`
 地球のために何ができますか？`
     },
     {
-        title: "14. A Surprise Party",
+        title: "14. A Surprise Party (Past Continuous)",
         content: `🎉 We were preparing for a party when Ken came.
 ケンが来たとき、私たちはパーティーの準備をしていました。
 🎈 I was blowing up balloons.
@@ -601,7 +603,7 @@ YouTubeを見るのは面白いですか？`
 昨日は良い日でしたか？`
     },
     {
-        title: "15. My School Trip",
+        title: "15. My School Trip (Future: Will/Be going to)",
         content: `🚌 I will go on a school trip next week.
 来週、修学旅行に行きます。
 🏯 We are going to visit Nara and Kyoto.
@@ -644,7 +646,7 @@ YouTubeを見るのは面白いですか？`
 一番の思い出は何ですか？`
     },
     {
-        title: "16. The History Museum",
+        title: "16. The History Museum (There is/are)",
         content: `🏛️ There is a big museum in the city.
 街に大きな博物館があります。
 🦖 There are many dinosaur bones inside.
@@ -687,7 +689,7 @@ YouTubeを見るのは面白いですか？`
 やりたいことはたくさんありますか？`
     },
     {
-        title: "17. My Sister's Job",
+        title: "17. My Sister's Job (Present Perfect: Continuation)",
         content: `💇‍♀️ My sister has been working as a hairdresser for five years.
 姉は5年間美容師として働いています。
 ✂️ She has cut many people's hair.
@@ -730,7 +732,7 @@ YouTubeを見るのは面白いですか？`
 勉強は好きですか？`
     },
     {
-        title: "18. Using the Internet",
+        title: "18. Using the Internet (Gerunds as Subject)",
         content: `🌐 Using the internet is very convenient.
 インターネットを使うことはとても便利です。
 🔍 Searching for information is easy.
@@ -773,7 +775,7 @@ YouTubeを見るのは面白いですか？`
 新しいことを学ぶのはわくわくしますか？`
     },
     {
-        title: "19. Cooking Dinner",
+        title: "19. Cooking Dinner (SVOC: Make + O + C)",
         content: `🍳 Cooking dinner makes me happy.
 夕食を作ることは私を幸せにします。
 🧅 Cutting onions makes me cry.
@@ -816,7 +818,7 @@ YouTubeを見るのは面白いですか？`
 運動はあなたを強くしますか？`
     },
     {
-        title: "20. A Famous Person",
+        title: "20. A Famous Person (Passive Voice)",
         content: `⚾ Shohei Ohtani is known by everyone.
 大谷翔平はみんなに知られています。
 📺 He is seen on TV every day.
@@ -859,7 +861,7 @@ MVP賞が彼に与えられました。
 あなたは友達に何と呼ばれていますか？`
     },
     {
-        title: "21. The School Rules",
+        title: "21. The School Rules (Must / Have to)",
         content: `🏫 We have many rules at school.
 学校にはたくさんのルールがあります。
 👔 We must wear a uniform.
@@ -902,7 +904,7 @@ MVP賞が彼に与えられました。
 他人に親切にしなければなりませんか？`
     },
     {
-        title: "22. My Favorite Subject",
+        title: "22. My Favorite Subject (Gerunds as Object)",
         content: `🔬 I like studying science.
 私は理科を勉強するのが好きです。
 🧪 I enjoy doing experiments.
@@ -945,7 +947,7 @@ MVP賞が彼に与えられました。
 何をするのを楽しみにしていますか？`
     },
     {
-        title: "23. The Weather Forecast",
+        title: "23. The Weather Forecast (Future with Will)",
         content: `🌦️ I watched the weather forecast.
 天気予報を見ました。
 ☀️ It will be sunny tomorrow.
@@ -988,7 +990,7 @@ MVP賞が彼に与えられました。
 日曜日はどこにいますか？`
     },
     {
-        title: "24. My Aunt in America",
+        title: "24. My Aunt in America (Present Perfect: Continuation)",
         content: `🇺🇸 My aunt has lived in America for ten years.
 おばは10年間アメリカに住んでいます。
 🏙️ She lives in New York.
@@ -1031,7 +1033,7 @@ MVP賞が彼に与えられました。
 最近幸せですか？`
     },
     {
-        title: "25. Shopping Online",
+        title: "25. Shopping Online (Gerunds/Comparisons)",
         content: `💻 Buying things online is popular now.
 オンラインで物を買うことは今人気です。
 📦 I ordered a new bag yesterday.
@@ -1074,7 +1076,7 @@ MVP賞が彼に与えられました。
 何か楽しみにしていますか？`
     },
     {
-        title: "26. Traffic Rules",
+        title: "26. Traffic Rules (Must/Should)",
         content: `🚦 We must follow traffic rules.
 私たちは交通ルールを守らなければなりません。
 🛑 Cars must stop at a red light.
@@ -1117,7 +1119,7 @@ MVP賞が彼に与えられました。
 安全は重要ですか？`
     },
     {
-        title: "27. My Pet Dog",
+        title: "27. My Pet Dog (Relative Pronouns: Subject/Object)",
         content: `🐶 I have a dog whose name is Max.
 私にはマックスという名前の犬がいます。
 🐕 He is a dog that likes to run.
@@ -1160,7 +1162,7 @@ MVP賞が彼に与えられました。
 ここにいて嬉しいですか？`
     },
     {
-        title: "28. A Good Friend",
+        title: "28. A Good Friend (Relative Pronouns / Adjectives)",
         content: `👫 A good friend is someone who helps you.
 良い友達とはあなたを助けてくれる人です。
 👂 It is important to listen to your friends.
@@ -1203,7 +1205,7 @@ MVP賞が彼に与えられました。
 良い友達になりたいですか？`
     },
     {
-        title: "29. Summer Festival",
+        title: "29. Summer Festival (Passive Voice)",
         content: `🏮 The summer festival is held in August.
 夏祭りは8月に開催されます。
 👘 Yukatas are worn by many people.
@@ -1246,7 +1248,7 @@ MVP賞が彼に与えられました。
 それは楽しいイベントとして知られていますか？`
     },
     {
-        title: "30. Cooking Pasta",
+        title: "30. Cooking Pasta (Imperatives / Procedures)",
         content: `🍝 Let's make pasta for lunch.
 昼食にパスタを作りましょう。
 💧 First, boil water in a large pot.
@@ -1289,7 +1291,7 @@ MVP賞が彼に与えられました。
 いつ出しますか？`
     },
     {
-        title: "31. My Future",
+        title: "31. My Future (Infinitive / Want to)",
         content: `💭 I have many dreams for the future.
 私には将来の夢がたくさんあります。
 👨‍🏫 I want to be a teacher.
@@ -1332,7 +1334,7 @@ MVP賞が彼に与えられました。
 一生懸命頑張りますか？`
     },
     {
-        title: "32. A Lucky Day",
+        title: "32. A Lucky Day (Past Tense Review)",
         content: `🍀 Yesterday was a lucky day.
 昨日はラッキーな日でした。
 🚌 I caught the bus just in time.
@@ -1375,7 +1377,7 @@ MVP賞が彼に与えられました。
 どう感じましたか？`
     },
     {
-        title: "33. Recycling",
+        title: "33. Recycling (Gerunds / Passive)",
         content: `♻️ Recycling is important for our environment.
 リサイクルは私たちの環境にとって重要です。
 📰 We recycle newspapers and magazines.
@@ -1418,7 +1420,7 @@ MVP賞が彼に与えられました。
 地球を守ることができますか？`
     },
     {
-        title: "34. The Zoo Animals",
+        title: "34. The Zoo Animals (Superlatives)",
         content: `🦒 The giraffe is the tallest animal in the zoo.
 キリンは動物園で一番背が高い動物です。
 🐘 The elephant is the heaviest.
@@ -1461,7 +1463,7 @@ MVP賞が彼に与えられました。
 動物が好きですか？`
     },
     {
-        title: "35. Learning Kanji",
+        title: "35. Learning Kanji (It is ... to ... / Gerunds)",
         content: `✍️ Learning Kanji is interesting but hard.
 漢字を学ぶのは面白いですが難しいです。
 🇯🇵 There are thousands of Kanji in Japanese.
@@ -1504,7 +1506,7 @@ MVP賞が彼に与えられました。
 何ができるようになりたいですか？`
     },
     {
-        title: "36. My Grandmother",
+        title: "36. My Grandmother (Present Perfect: Continuation)",
         content: `👵 My grandmother has lived in this town for 50 years.
 祖母はこの町に50年間住んでいます。
 🏡 She has owned her house since 1970.
@@ -1547,7 +1549,7 @@ MVP賞が彼に与えられました。
 いつ彼女を訪ねますか？`
     },
     {
-        title: "37. A Busy Week",
+        title: "37. A Busy Week (Have to / Must)",
         content: `📅 I have a busy schedule this week.
 今週は忙しいスケジュールです。
 ⚽ I have to practice soccer on Monday.
@@ -1590,7 +1592,7 @@ MVP賞が彼に与えられました。
 忙しいのを楽しみますか？`
     },
     {
-        title: "38. Sports Day",
+        title: "38. Sports Day (Comparisons / Past Tense)",
         content: `🏃 Yesterday was Sports Day at school.
 昨日は学校の運動会でした。
 💨 I ran as fast as I could.
@@ -1633,7 +1635,7 @@ MVP賞が彼に与えられました。
 良い日でしたか？`
     },
     {
-        title: "39. Sending a Letter",
+        title: "39. Sending a Letter (SVOO / Past Tense)",
         content: `✉️ I wrote a letter to my friend in Canada.
 カナダの友達に手紙を書きました。
 📮 I went to the post office to send it.
@@ -1676,7 +1678,7 @@ MVP賞が彼に与えられました。
 何を待っていますか？`
     },
     {
-        title: "40. Cleaning the House",
+        title: "40. Cleaning the House (SVOC: Make)",
         content: `🧹 We cleaned the whole house today.
 今日、家全体を掃除しました。
 🪟 Cleaning the windows made them clear.
@@ -1719,7 +1721,7 @@ MVP賞が彼に与えられました。
 きれいな家は良い気分ですか？`
     },
     {
-        title: "41. Lost Wallet",
+        title: "41. Lost Wallet (Relative Pronouns / Past Tense)",
         content: `👛 I lost my wallet which was a birthday gift.
 誕生日のプレゼントだった財布をなくしました。
 😰 I dropped it somewhere in the park.
@@ -1762,7 +1764,7 @@ MVP賞が彼に与えられました。
 ラッキーでしたか？`
     },
     {
-        title: "42. Weather in Japan",
+        title: "42. Weather in Japan (Adjectives / Seasons)",
         content: `🗾 The weather in Japan changes every season.
 日本の天気は季節ごとに変わります。
 🌸 In spring, it is warm and pleasant.
@@ -1805,7 +1807,7 @@ MVP賞が彼に与えられました。
 どんな日が好きですか？`
     },
     {
-        title: "43. My Favorite Book",
+        title: "43. My Favorite Book (Relative Pronouns: Subject)",
         content: `📖 My favorite book is "Harry Potter".
 私のお気に入りの本は「ハリー・ポッター」です。
 🧙‍♂️ It is a story about a boy who is a wizard.
@@ -1848,7 +1850,7 @@ MVP賞が彼に与えられました。
 どこを訪れたいですか？`
     },
     {
-        title: "44. School Trip Plan",
+        title: "44. School Trip Plan (Future: Be going to)",
         content: `🚌 We are going to go on a school trip.
 私たちは修学旅行に行く予定です。
 🏯 We will visit Kyoto next month.
@@ -1891,7 +1893,7 @@ MVP賞が彼に与えられました。
 後で何をしなければなりませんか？`
     },
     {
-        title: "45. Volunteer Work",
+        title: "45. Volunteer Work (Relative Pronouns)",
         content: `🤝 I joined a volunteer group last week.
 先週ボランティアグループに参加しました。
 🧹 We are people who clean the town.
@@ -1934,7 +1936,7 @@ MVP賞が彼に与えられました。
 誰が参加できますか？`
     },
     {
-        title: "46. A Cold",
+        title: "46. A Cold (Health / Modals)",
         content: `😷 I have caught a cold.
 風邪をひいてしまいました。
 🤒 I have a fever and a cough.
@@ -1977,7 +1979,7 @@ MVP賞が彼に与えられました。
 何を願っていますか？`
     },
     {
-        title: "47. New Year's Resolutions",
+        title: "47. New Year's Resolutions (Future / Decisions)",
         content: `🎍 It is the beginning of the year.
 年の初めです。
 📝 I have decided my New Year's resolutions.
@@ -2020,7 +2022,7 @@ MVP賞が彼に与えられました。
 努力しますか？`
     },
     {
-        title: "48. Thank You Letter",
+        title: "48. Thank You Letter (SVOO / Past Tense)",
         content: `💌 I wrote a thank you letter to my teacher.
 先生に感謝の手紙を書きました。
 👩‍🏫 She taught me English for one year.
