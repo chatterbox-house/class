@@ -1,5 +1,6 @@
 const eikenpre1 = [
     // Story 1 - A Volunteer Experience
+
     {
         title: "1. A Volunteer Experience",
         content: `🤝 I engaged in a philanthropic endeavor at a local nursing facility last weekend.  
@@ -493,7 +494,6 @@ AI開発を規制しない限り、倫理的ジレンマは避けられません
 🗣️ Is preparation more important than natural talent?  
 準備は生まれつきの才能よりも重要ですか？`
     },
-const eikenpre1 = [
     // Story 12 - A Study Abroad Experience
     {
         title: "12. A Study Abroad Experience",
@@ -2157,3 +2157,4 @@ SWOT分析の目的は何ですか？
 成功のためにメンターシップは必要ですか？`
     }
 ];
+
