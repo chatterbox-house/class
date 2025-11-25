@@ -2669,4 +2669,827 @@ BBQは社交の場です。新しい人と話しますか？
 50. 👑 Be the King/Queen of your own life.
 自分の人生の王様/女王様になろう。`
         },
-        
+      {
+            title: "Week 25: The Longest Day (June 18 – June 24)",
+            content: `1. ☀️ The Summer Solstice (Geshi) is this week. It is the longest day of the year.
+夏至は今週です。一年で最も日が長い日です。
+2. 🗿 In the UK, people gather at Stonehenge to watch the sunrise. Do you like ancient ruins?
+英国ではストーンヘンジに集まって日の出を見ます。古代遺跡は好きですか？
+3. 🕯️ "Candle Night" events encourage turning off lights. Do you use candles at home?
+「キャンドルナイト」では消灯を呼びかけます。家でろうそくを使いますか？
+4. 🕰️ The sun sets very late (around 7:30 PM). Do you feel like you have more time?
+日が沈むのがとても遅いです（午後7時半頃）。時間が増えた気がしますか？
+5. 🧛‍♀️ Short nights mean less time for vampires. Do you prefer day or night?
+夜が短いということは吸血鬼の時間が減るということです。昼と夜、どっちが好きですか？
+6. 🐙 In Kansai, people eat octopus on the solstice. Did you eat Tako?
+関西では夏至にタコを食べます。タコを食べましたか？
+7. 🕶️ The sun is strong. Do you wear sunglasses or use a parasol (higasa)?
+日差しが強いです。サングラスをかけますか、それとも日傘を使いますか？
+8. 🌡️ It is getting hotter. Is your air conditioner clean and ready?
+暑くなってきました。エアコンの掃除と準備はできていますか？
+9. 🧴 Sunscreen is essential. Do you apply it every day?
+日焼け止めは必須です。毎日塗っていますか？
+10. 🧖‍♂️ The heat makes us sweat. Do you use cooling wipes (Gatsby, etc.)?
+暑さで汗をかきます。冷却シート（ギャツビーなど）を使いますか？
+11. 🍺 Beer gardens are perfect for long evenings. Have you booked one?
+ビアガーデンは長い夜に最適です。予約しましたか？
+12. 🦟 Mosquitoes are active. What is your weapon against them? (Spray? Coil?)
+蚊が活発です。対抗する武器は何ですか？（スプレー？蚊取り線香？）
+13. 🛌 Sleeping when it's bright outside is hard. Do you have blackout curtains?
+外が明るい時に寝るのは難しいです。遮光カーテンを持っていますか？
+14. 🏞️ Hiking in summer is hot. Do you prefer hiking in autumn?
+夏のハイキングは暑いです。秋のハイキングの方が好きですか？
+15. 🏄‍♂️ Surfing season. Have you ever tried surfing?
+サーフィンの季節です。サーフィンをしたことはありますか？
+16. 🍦 Ice cream sales go up. What is your favorite konbini ice cream?
+アイスの売り上げが上がります。コンビニで一番好きなアイスは何ですか？
+17. 🔌 Saving electricity is a hot topic. Do you worry about power shortages?
+節電は話題になっています。電力不足が心配ですか？
+18. 🌌 Short nights mean short stargazing time. Can you see the Milky Way?
+夜が短いと星を見る時間も短いです。天の川が見えますか？
+19. 🛫 Summer travel plans. Have you booked your flights yet?
+夏の旅行計画。もうフライトを予約しましたか？
+20. 🏊‍♀️ Swimming pools are opening. Do you like swimming in pools or the sea?
+プールが開き始めています。プールと海、どっちで泳ぐのが好きですか？
+21. 🎐 Wind chimes (Furin) make a cooling sound. Do you have one?
+風鈴は涼しげな音がします。持っていますか？
+22. 🐍 Snakes come out in the heat. Are you afraid of finding a snake?
+暑くなると蛇が出てきます。蛇を見つけるのが怖いですか？
+23. 🎋 Tanabata is coming soon. Are you thinking of a wish?
+もうすぐ七夕です。願い事を考えていますか？
+24. 🍹 Mojitos and Highballs are refreshing. What is your summer drink?
+モヒートやハイボールは爽快です。あなたの夏の飲み物は何ですか？
+25. 🍧 Shaved ice (Kakigori). Traditional (Strawberry) or Fancy (Matcha/Fruit)?
+かき氷。昔ながら（イチゴ）と高級（抹茶/フルーツ）、どっち？
+26. 🧖‍♀️ "Summer cold" (Natsu-kaze) is hard to cure. Are you healthy?
+「夏風邪」は治りにくいです。健康ですか？
+27. 👔 Cool Biz fashion. Is it okay to wear a polo shirt to work?
+クールビズファッション。ポロシャツで出勤してもいいですか？
+28. 🌞 Sunrise is around 4:45 AM. Do you wake up with the sun?
+日の出は午前4時45分頃です。太陽と一緒に起きますか？
+29. 🌽 Corn is in season. Boiled or Grilled?
+トウモロコシが旬です。茹でる？焼く？
+30. 🕰️ "Carpe Diem" (Seize the Day). With long days, you can do more.
+「今を生きろ」。日が長いのでもっと多くのことができます。
+31. 🔦 Fireflies (Hotaru) can be seen in clean rivers. Have you seen them?
+きれいな川ではホタルが見られます。見たことはありますか？
+32. 🚲 Cycling in the heat requires water. Do you carry a bottle?
+暑い中のサイクリングには水が必要です。ボトルを持ち歩いていますか？
+33. 🍅 Summer vegetables (Tomato, Cucumber, Eggplant). Do you eat seasonal food?
+夏野菜（トマト、きゅうり、ナス）。旬のものを食べますか？
+34. 👕 Wearing white reflects the sun. Do you wear black in summer?
+白を着ると太陽を反射します。夏に黒を着ますか？
+35. 💤 Siesta (afternoon nap) is common in hot countries. Should Japan adopt it?
+シエスタ（昼寝）は暑い国で一般的です。日本も取り入れるべきですか？
+36. 🥵 Heatstroke (Netchusho) is dangerous. Do you drink sports drinks?
+熱中症は危険です。スポーツドリンクを飲みますか？
+37. 🚿 Cold showers feel great in June. Do you take cold showers?
+6月の冷たいシャワーは最高です。冷たいシャワーを浴びますか？
+38. 👓 Sunglasses make everyone look like a movie star. Do you agree?
+サングラスをかけると誰もが映画スターのように見えます。そう思いませんか？
+39. 💇‍♂️ Cutting hair short for summer. Did you get a haircut?
+夏のために髪を短く切る。髪を切りましたか？
+40. 🕯️ Using candles saves electricity and is romantic. Do you have a partner?
+ろうそくを使うと節電になりロマンチックです。パートナーはいますか？
+41. 🌆 Sunsets are beautiful in summer. Do you stop to watch the sunset?
+夏の夕日は美しいです。立ち止まって夕日を見ますか？
+42. 🧢 Wearing a hat prevents sunburn. Do you look good in hats?
+帽子を被ると日焼けを防げます。帽子は似合いますか？
+43. 👟 Sandals season. Do you paint your toenails (pedicure)?
+サンダルの季節です。足の爪を塗りますか（ペディキュア）？
+44. 🗓️ The year is half over soon. Did you achieve your January goals?
+もうすぐ1年の半分が終わります。1月の目標は達成しましたか？
+45. 🎆 Fireworks festivals are being announced. Are you excited?
+花火大会が発表され始めています。ワクワクしますか？
+46. 🦟 Citronella candles keep mosquitoes away. Do you like the smell?
+シトロネラキャンドルは蚊を寄せ付けません。その匂いは好きですか？
+47. 🏞️ Going to the river for BBQ. River water is cold and nice.
+川へBBQに行く。川の水は冷たくて気持ちいいです。
+48. 🧛 Vampires hate the sun. Do you avoid the sun like a vampire?
+吸血鬼は太陽が嫌いです。吸血鬼のように太陽を避けていますか？
+49. 🌿 Green curtains (Goya/Morning Glory) keep houses cool. Do you grow them?
+緑のカーテン（ゴーヤ/朝顔）は家を涼しくします。育てていますか？
+50. 🌞 Enjoy the sun, but stay safe!
+太陽を楽しんで、でも気をつけて！`
+        },
+        {
+            title: "Week 26: School's Out! (June 25 – July 1)",
+            content: `1. 🏫 In the US/UK, school finishes now for summer. Japanese kids have to wait until late July. Is that fair?
+米英では今学校が夏休みに入ります。日本の子供は7月下旬まで待たなければなりません。公平ですか？
+2. 🏖️ Western summer holidays are long (2 months). What would you do with 2 months off?
+欧米の夏休みは長いです（2ヶ月）。2ヶ月休みがあったら何をしますか？
+3. 📝 Japanese kids have lots of summer homework. Do Western kids have homework? (Usually no!).
+日本の子供は夏休みの宿題がたくさんあります。欧米の子供は？（たいていないです！）。
+4. 🏊‍♂️ School pool duty. Did you like swimming class in school?
+学校のプール当番。学校の水泳の授業は好きでしたか？
+5. 🧒 "Radio Taiso" (Radio Calisthenics) starts soon. Did you go every morning as a kid?
+もうすぐラジオ体操が始まります。子供の頃、毎朝行きましたか？
+6. 🎒 Landmower parents (clearing obstacles for kids). Should kids be bored in summer?
+除雪機ペアレント（子供の障害物を取り除く親）。夏休み、子供は退屈するべきでしょうか？
+7. 🍦 Ice cream trucks play music in the West. Do we have them in Japan? (Yaki-imo trucks?)
+欧米ではアイスクリームトラックが音楽を流します。日本にありますか？（焼き芋トラック？）
+8. 🌡️ It is officially summer. Are you ready for the Osaka heat?
+正式に夏です。大阪の暑さへの覚悟はできていますか？
+9. 🦟 Mosquito coils (Katori-senko) smell like summer. Do you use them?
+蚊取り線香は夏の匂いがします。使いますか？
+10. 🎐 Eel (Unagi) helps stamina. It is expensive, but do you eat it?
+うなぎはスタミナがつきます。高いですが、食べますか？
+11. 🏚️ Haunted houses (Obakeyashiki) open in summer. Why do we want to be scared in summer?
+夏にお化け屋敷が開きます。なぜ夏に怖がりたいのでしょう？
+12. 🎆 Buying fireworks at the konbini. Do you prefer handheld fireworks or rockets?
+コンビニで花火を買う。手持ち花火とロケット花火、どっちが好きですか？
+13. 🏊‍♀️ Can you swim? What stroke? (Crawl, Breaststroke, Butterfly?)
+泳げますか？どの泳法？（クロール、平泳ぎ、バタフライ？）
+14. 👒 Straw hats are classic. Do you have a "Mugi-wara" hat?
+麦わら帽子は定番です。持っていますか？
+15. 🏝️ Okinawa is popular now. Have you been to Miyakojima or Ishigaki?
+今、沖縄が人気です。宮古島や石垣島に行ったことはありますか？
+16. 🎢 Theme parks are hot and crowded. Is waiting in line worth it?
+テーマパークは暑くて混んでいます。並ぶ価値はありますか？
+17. 🍺 "Edamame and Beer." Is this the best Japanese combination?
+「枝豆とビール」。これは日本最高の組み合わせですか？
+18. 🍉 Watermelon (Suika). Do you put salt on it?
+スイカ。塩をかけますか？
+19. 🦗 Cicadas (Semi) will start singing soon. Is it noise or nostalgia?
+もうすぐセミが鳴き始めます。騒音ですか、それともノスタルジーですか？
+20. 🛌 Trying to sleep without AC. Is it impossible in Osaka?
+エアコンなしで寝ようとする。大阪では不可能ですか？
+21. 🥤 Calpis is a summer drink. Do you like it?
+カルピスは夏の飲み物です。好きですか？
+22. 👕 Aloha shirts. Are they business wear or vacation wear?
+アロハシャツ。ビジネスウェアですか、休暇着ですか？
+23. ⛱️ Going to the beach (Umi-biraki). Do you like swimming in the ocean?
+海開き。海で泳ぐのは好きですか？
+24. 👙 Buying a new swimsuit. Is it stressful to try them on?
+新しい水着を買う。試着するのはストレスですか？
+25. 🏙️ Summer sales begin. Do you wait for the sale to buy clothes?
+サマーセールが始まります。服を買うのはセールまで待ちますか？
+26. 🏕️ Camping in the mountains is cooler. Do you have a tent?
+山でのキャンプは涼しいです。テントを持っていますか？
+27. 🚣‍♀️ Rafting is exciting. Have you tried it?
+ラフティングはエキサイティングです。やったことはありますか？
+28. 👻 Ghost stories (Kaidan). Have you ever seen a ghost?
+怪談。幽霊を見たことはありますか？
+29. 🦟 Getting bitten by a mosquito on the foot. Itches like crazy!
+足の裏を蚊に刺される。ものすごく痒い！
+30. 🧴 Sunburn peels. Have you ever had a bad sunburn?
+日焼けの皮がむける。ひどい日焼けをしたことはありますか？
+31. 🦗 Catching beetles (Kabutomushi). Did you do this as a boy?
+カブトムシを捕まえる。少年の頃やりましたか？
+32. 🚶‍♂️ Walking into a department store just for the AC. Do you do this?
+エアコンのためだけにデパートに入る。やりますか？
+33. 🕰️ Summer evenings are long. Do you stay out later?
+夏の夕方は長いです。遅くまで外にいますか？
+34. 🥤 Barley tea (Mugicha) in the fridge. Is it always there?
+冷蔵庫に麦茶。常にありますか？
+35. 🥶 Brain freeze from eating ice cream too fast. Ouch!
+アイスを早く食べすぎて頭がキーンとする。痛い！
+36. 🌭 Summer festivals (Matsuri) are starting. What is the best stall food?
+夏祭りが始まります。最高の屋台フードは何ですか？
+37. 🎣 Fishing is relaxing. Do you fish?
+釣りはリラックスできます。釣りをしますか？
+38. 🧟 Staying up late to play video games. Summer tradition?
+夜更かししてゲームをする。夏の伝統ですか？
+39. 🚲 Cycling to the beach. Is it too far from Osaka?
+自転車で海へ行く。大阪からは遠すぎますか？
+40. 🥒 Cucumbers on a stick (Ippon-zuke). Refreshing?
+きゅうりの一本漬け。さっぱりしますか？
+41. 🌌 Star Festival (Tanabata) is next week. Are you preparing?
+七夕は来週です。準備していますか？
+42. 🕶️ Looking cool in summer fashion. Linen shirts?
+夏のファッションでかっこよく決める。リネンのシャツ？
+43. 🚿 Cold water splash on the face. Wakes you up!
+冷たい水を顔にかける。目が覚めます！
+44. 📅 Half the year is gone. July is the start of the second half.
+1年の半分が過ぎました。7月は後半戦のスタートです。
+45. 🏖️ Building a sandcastle. Are you an architect?
+砂の城を作る。あなたは建築家ですか？
+46. 🐡 Jellyfish appear later in summer. Watch out!
+夏遅くにはクラゲが出ます。気をつけて！
+47. 🧺 Hanging futons in the sun. They smell like the sun.
+布団を干す。太陽の匂いがします。
+48. 🥤 Ramune with the marble inside. Can you open it without spilling?
+ビー玉入りのラムネ。こぼさずに開けられますか？
+49. 🐕 Walking the dog requires waiting until sunset. The asphalt is too hot!
+犬の散歩は日が沈むまで待たないといけません。アスファルトが熱すぎます！
+50. 🎉 Have a great summer! Make lots of memories.
+良い夏を！たくさんの思い出を作ってください。`
+        },
+        {
+            title: "Week 27: Stars & Stripes (July 2 – July 8)",
+            content: `1. 🇺🇸 July 4th is Independence Day in the USA. Have you been to America?
+7月4日はアメリカの独立記念日です。アメリカに行ったことはありますか？
+2. 🎋 July 7th is Tanabata (Star Festival) in Japan. Which festival is quieter?
+7月7日は日本の七夕です。どっちの祭りの方が静かですか？
+3. 🎆 Americans celebrate with huge fireworks and BBQs. Do you like loud parties?
+アメリカ人は巨大な花火とBBQで祝います。賑やかなパーティーは好きですか？
+4. 🎋 We write wishes on Tanzaku (strips of paper). What is your wish this year?
+短冊に願い事を書きます。今年の願いは何ですか？
+5. 🌠 Orihime and Hikoboshi can only meet once a year. Is long-distance love difficult?
+織姫と彦星は年に一度しか会えません。遠距離恋愛は難しいですか？
+6. 🌌 Can you see the Milky Way (Amanogawa) from your house?
+家から天の川が見えますか？
+7. 🌭 Hot Dog Eating Contest is famous in NY on July 4th. Could you eat 70 hot dogs?
+NYでは7月4日にホットドッグ早食い大会が有名です。70個も食べられますか？
+8. 🎋 Bamboo decorations are beautiful. Where do you see them in Osaka?
+笹飾りはきれいです。大阪のどこで見かけますか？
+9. 🌧️ It often rains on Tanabata. Does that mean the lovers can't meet?
+七夕はよく雨が降ります。恋人たちは会えないということでしょうか？
+10. 👘 Yukata season starts. Do you have a Yukata? Can you put it on yourself?
+浴衣の季節が始まります。浴衣を持っていますか？自分で着られますか？
+11. 🦅 The Bald Eagle is the symbol of the US. What bird represents Japan? (Green Pheasant/Crane?)
+ハクトウワシはアメリカの象徴です。日本を象徴する鳥は何ですか？（キジ？ツル？）
+12. 🍔 Hamburgers and ribs. American food is big. Can you eat big portions?
+ハンバーガーとリブ。アメリカの食事は巨大です。大盛りを食べられますか？
+13. 🎋 "I wish for money." Is it bad to wish for money on Tanabata?
+「お金が欲しい」。七夕にお金を願うのは悪いことですか？
+14. 🥁 Parades with drums and flags. Do you like marching bands?
+太鼓と旗のパレード。マーチングバンドは好きですか？
+15. 🌟 Stars are actually giant balls of gas. Does science ruin the romance?
+星は実際には巨大なガスの塊です。科学はロマンを台無しにしますか？
+16. 🔴⚪🔵 Red, White, and Blue are the US colors. What are Japan's colors? (Red and White?)
+赤、白、青はアメリカの色です。日本の色は？（赤と白？）
+17. 🎋 Sendai has a famous Tanabata festival (in August). Have you been?
+仙台には有名な七夕祭りがあります（8月開催）。行ったことはありますか？
+18. 🕰️ History: USA is about 250 years old. Japan is thousands. Old vs New?
+歴史：アメリカは約250歳。日本は何千歳。古い対新しい？
+19. 🎇 Handheld fireworks (Senko-hanabi) are emotional. Do you like them?
+線香花火は情緒があります。好きですか？
+20. 🗽 The Statue of Liberty represents freedom. What does freedom mean to you?
+自由の女神は自由を象徴します。あなたにとって自由とは何ですか？
+21. 🌌 Do you know your star sign (Zodiac)? Does it match your personality?
+自分の星座を知っていますか？性格と合っていますか？
+22. 🎋 Bamboo grows very fast. If you had a bamboo forest, what would you do?
+竹はとても早く育ちます。もし竹林を持っていたらどうしますか？
+23. 🥧 Apple Pie is an American symbol. Do you like warm apple pie with ice cream?
+アップルパイはアメリカの象徴です。アイスを添えた温かいアップルパイは好きですか？
+24. 💑 Orihime was a weaver, Hikoboshi was a cowherd. Do you work hard like them?
+織姫は機織り、彦星は牛飼いでした。彼らのように一生懸命働いていますか？
+25. 🌧️ If it rains, magpies (birds) build a bridge for the lovers. Do you like birds?
+雨が降るとカササギ（鳥）が恋人のために橋を作ります。鳥は好きですか？
+26. 🏈 American Football or Baseball? Which is the true American sport?
+アメフトと野球、どっちが真のアメリカのスポーツですか？
+27. 🍬 Konpeito (sugar candy) looks like stars. Do you eat it?
+金平糖は星のように見えます。食べますか？
+28. 🎋 Writing wishes for world peace. Are you an idealist?
+世界平和を願う。あなたは理想主義者ですか？
+29. 🇺🇸 Have you ever celebrated a foreign holiday?
+外国の祝日を祝ったことはありますか？
+30. 👔 "Cool Biz" is in full swing. Are you comfortable?
+クールビズが真っ盛りです。快適ですか？
+31. 🏊‍♀️ Going to the pool. Waterslides are fun. Are you too old for slides?
+プールへ行く。ウォータースライダーは楽しいです。滑るには年を取りすぎていますか？
+32. 🍺 Beer consumption rises in July. Do you contribute to the statistics?
+7月はビールの消費量が増えます。統計に貢献していますか？
+33. 🎋 Somen noodles represent the Milky Way. Do you eat Somen in summer?
+そうめんは天の川を表しています。夏にそうめんを食べますか？
+34. 🏙️ New York vs. Osaka. Both are energetic cities. Which is friendlier?
+ニューヨーク対大阪。どちらもエネルギッシュな街です。どっちがフレンドリー？
+35. 🎆 Watching fireworks on TV vs. In person. The sound is different!
+テレビで見る花火対生で見る花火。音が違います！
+36. 🌌 Astronomy (studying space). Did you want to be an astronaut?
+天文学（宇宙の研究）。宇宙飛行士になりたかったですか？
+37. 🎋 Plastic bamboo vs. Real bamboo. Which do you display?
+プラスチックの笹と本物の笹。どっちを飾りますか？
+38. 🥤 Cola with ice. The taste of America?
+氷入りのコーラ。アメリカの味？
+39. 🛍️ Summer sales are dangerous for the wallet. Did you buy too much?
+サマーセールは財布に危険です。買いすぎましたか？
+40. 💑 Meeting once a year keeps the romance fresh? Maybe?
+年に一度会う方がロマンスは新鮮？かもね？
+41. 🦅 Have you ever seen a shooting star? Did you make a wish fast enough?
+流れ星を見たことはありますか？すぐに願い事を言えましたか？
+42. 🇺🇸 The "American Dream." Does everyone have a chance to succeed?
+「アメリカンドリーム」。誰もが成功するチャンスを持っていますか？
+43. 🍉 Watermelon with seeds or seedless? Seeds are annoying.
+種ありスイカと種なしスイカ？種は邪魔ですよね。
+44. 🎋 Do you keep your Tanzaku or burn them?
+短冊は取っておきますか、燃やしますか？
+45. 🏖️ California beaches vs. Okinawa beaches.
+カリフォルニアのビーチ対沖縄のビーチ。
+46. 🦟 Mosquito bites itch more at night. Why?
+蚊に刺されたところは夜になると痒くなります。なぜ？
+47. 🏙️ Osaka city lights are like stars on the ground.
+大阪の街の灯りは地上の星のようです。
+48. 🍺 Craft beer is popular in the US and Japan. IPA or Lager?
+クラフトビールは日米で人気です。IPA派、ラガー派？
+49. 🌌 The universe is expanding. Is your mind expanding?
+宇宙は膨張しています。あなたの心も広がっていますか？
+50. ✨ Keep looking up at the stars!
+星を見上げ続けよう！`
+        },
+        {
+            title: "Week 28: Festival Fever (July 9 – July 15)",
+            content: `1. 🏮 Gion Matsuri (Kyoto) has started. It is one of the biggest festivals. Have you been?
+祇園祭（京都）が始まりました。最大級の祭りです。行ったことはありますか？
+2. 🎆 Tenjin Matsuri (Osaka) is coming soon. Which do you prefer: Kyoto's elegance or Osaka's energy?
+天神祭（大阪）ももうすぐです。京都の雅と大阪のエネルギー、どっちが好きですか？
+3. 🐙 Takoyaki, Yakisoba, Okonomiyaki. What is the King of Stall Food (Yatai)?
+たこ焼き、焼きそば、お好み焼き。屋台フードの王様は何ですか？
+4. 👘 Walking in Geta (wooden sandals) hurts your feet. Do you wear them anyway?
+下駄で歩くと足が痛くなります。それでも履きますか？
+5. 🐠 Goldfish Scooping (Kingyo-sukui). Are you a pro? Can you catch the black one?
+金魚すくい。あなたはプロですか？黒い出目金を捕まえられますか？
+6. 🎭 Mikoshi (Portable Shrines) are heavy. Have you ever carried one?
+お神輿は重いです。担いだことはありますか？
+7. 🥁 The sound of Taiko drums makes Japanese people excited. Is it in your DNA?
+太鼓の音は日本人を興奮させます。DNAに入っていますか？
+8. 🍧 Shaved ice (Kakigori) with Blue Hawaii syrup. What flavor is "Blue Hawaii" actually?
+ブルーハワイのかき氷。「ブルーハワイ」って実際何味ですか？
+9. 🥵 It is incredibly hot and humid. How do you survive the festival heat?
+信じられないほど蒸し暑いです。祭りの暑さをどう生き延びますか？
+10. 🚻 Toilet lines at festivals are endless. Is this the biggest problem?
+祭りのトイレの列は終わりがありません。これが最大の問題ですか？
+11. 🥒 Ippon-zuke (Pickled cucumber on a stick). It cools you down. Do you buy it?
+きゅうりの一本漬け。体を冷やしてくれます。買いますか？
+12. 🏮 Lanterns lit up at night are beautiful. Do you take good photos?
+夜に灯る提灯は美しいです。良い写真が撮れますか？
+13. 👯 Crowds are so tight you can't move. Do you panic?
+身動きが取れないほどの人混みです。パニックになりますか？
+14. 🎋 "Kon-chiki-chin" (Gion Matsuri music). Does the music stick in your head?
+「コンチキチン」（祇園祭の音楽）。音楽が頭から離れなくなりますか？
+15. 🎭 Masks (Omen) for kids. Anpanman or Demon Slayer?
+子供用のお面。アンパンマン、それとも鬼滅の刃？
+16. 🚤 Tenjin Matsuri has boats on the river. Have you watched from the riverbank?
+天神祭には船が出ます。川岸から見たことはありますか？
+17. 🦑 Grilled Squid (Ikayaki). The smell is irresistible. Do you agree?
+イカ焼き。あの匂いには抵抗できません。そう思いませんか？
+18. 👘 Men in Yukata look 20% cooler. Do you agree?
+浴衣姿の男性は2割増しでかっこよく見えます。そう思いませんか？
+19. 🥤 Ramune bottles clinking. A sound of summer.
+ラムネの瓶が触れ合う音。夏の音です。
+20. 🔫 Shooting games (Shateki) at stalls. Did you ever win a prize?
+射的。景品を取ったことはありますか？
+21. 🍌 Choco-banana. Is it delicious or just colorful?
+チョコバナナ。美味しいですか、それともただカラフルなだけ？
+22. 🎇 Fireworks at Tenjin Matsuri are spectacular. Do you have a secret viewing spot?
+天神祭の花火は壮観です。秘密の観覧スポットを知っていますか？
+23. 👮‍♂️ Police shouting "DJ Police" instructions. Are they funny?
+警察官が「DJポリス」として誘導します。彼らは面白いですか？
+24. 🍬 Cotton Candy (Wataame) in character bags. Why is it so expensive?
+キャラ袋入りの綿菓子。なぜあんなに高いのでしょう？
+25. 👫 Festivals are popular date spots. Is it easy to lose your partner in the crowd?
+祭りは人気のデートスポットです。人混みでパートナーとはぐれやすいですか？
+26. 🚶‍♂️ The "Yamaboko Junko" (Float Procession) in Kyoto is a UNESCO heritage. Is it boring to watch?
+京都の「山鉾巡行」はユネスコ遺産です。見るのは退屈ですか？
+27. 🪜 Climbing onto a float (Hoko). Have you seen the view from the top?
+鉾に登る。上からの景色を見たことはありますか？
+28. 🚮 Trash on the streets after the festival. Should we clean it up?
+祭り後の路上のゴミ。私たちが掃除すべきでしょうか？
+29. 🦟 Getting bitten by mosquitoes while waiting for fireworks.
+花火を待っている間に蚊に刺される。
+30. 👶 Babies crying at loud festivals. Should parents bring babies?
+うるさい祭りで泣く赤ちゃん。親は赤ちゃんを連れてくるべきでしょうか？
+31. 🌬️ Using a handheld fan (Uchiwa). Does it really help?
+うちわを使う。本当に効果ありますか？
+32. 🍺 Drinking alcohol while walking is legal in Japan. Is it strange for foreigners?
+歩きながらお酒を飲むのは日本では合法です。外国人には奇妙でしょうか？
+33. 🧇 Baby Castella (sponge cake balls). You can't stop eating them.
+ベビーカステラ。食べるのが止まりません。
+34. 🎭 Noh theater performances at shrines. Traditional and mysterious.
+神社での能の奉納。伝統的で神秘的です。
+35. 🕯️ Floating lanterns on the river. Beautiful?
+川に灯篭を流す。美しいですか？
+36. 🥵 Heatstroke alert. Drink water, not just beer!
+熱中症アラート。ビールだけじゃなくて水も飲んで！
+37. 🤳 Taking selfies in Yukata. Do you post them?
+浴衣でセルフィー。投稿しますか？
+38. 🦶 Geta blisters (blisters on feet). Do you bring band-aids?
+下駄で靴擦れ。絆創膏を持っていますか？
+39. 🏮 The festival spirit makes people friendly. Do you talk to strangers?
+祭りの雰囲気は人をフレンドリーにします。知らない人と話しますか？
+40. 🌽 Grilled corn gets stuck in your teeth. Careful!
+焼きトウモロコシが歯に挟まります。気をつけて！
+41. 👻 Obake-yashiki (Haunted House) at the festival. Fake screams?
+祭りのお化け屋敷。偽物の悲鳴？
+42. 🐢 Selling turtles at festivals is rare now. Did you ever buy one?
+亀すくいは今は珍しいです。買ったことはありますか？
+43. 🧹 The cleanup crew works all night. Respect them.
+清掃スタッフは一晩中働きます。彼らに敬意を。
+44. 🕰️ Festivals have centuries of history. Do you feel the history?
+祭りには何世紀もの歴史があります。歴史を感じますか？
+45. 🎆 The finale of the fireworks. Sad or satisfied?
+花火のフィナーレ。悲しいですか、満足ですか？
+46. 🚄 Hotels in Kyoto/Osaka are full. Did you book early?
+京都・大阪のホテルは満室です。早く予約しましたか？
+47. 🎐 Buying a wind chime as a souvenir.
+お土産に風鈴を買う。
+48. 🦟 Mosquito repellent is your perfume tonight.
+今夜の香水は虫除けスプレーです。
+49. 👯 "Wasshoi! Wasshoi!" Can you shout it?
+「ワッショイ！ワッショイ！」叫べますか？
+50. 🏮 Enjoy the festival fever! It only happens once a year.
+祭りの熱気を楽しんで！年に一度だけですよ。`
+        },  
+        {
+            title: "Week 29: The Sea & Holidays (July 16 – July 22)",
+            content: `1. 🏖️ Marine Day (Umi no Hi) is this week. Do you like the sea?
+今週は海の日です。海は好きですか？
+2. 👙 In the West, people go to the beach to get a tan. In Japan, many avoid the sun. Which are you?
+欧米では日焼けしにビーチへ行きます。日本では多くの人が日差しを避けます。あなたはどっち？
+3. 🦈 "Jaws" made everyone afraid of sharks. Are you scared of swimming in deep water?
+「ジョーズ」はみんなにサメの恐怖を植え付けました。深い水で泳ぐのは怖いですか？
+4. ⛱️ Do you have a favorite beach in Kansai? (Suma? Shirahama?)
+関西にお気に入りのビーチはありますか？（須磨？白浜？）
+5. 🏐 Beach Volleyball is an Olympic sport. Have you played it?
+ビーチバレーはオリンピック種目です。やったことはありますか？
+6. 🍹 Drinking tropical cocktails (Piña Colada) by the sea. Is this paradise?
+海辺でトロピカルカクテル（ピニャコラーダ）を飲む。ここは楽園ですか？
+7. 🧴 Sunscreen smells like summer. Does the smell bring back memories?
+日焼け止めは夏の匂いがします。その匂いは思い出を蘇らせますか？
+8. 🐚 Collecting seashells. Did you do this as a child?
+貝殻集め。子供の頃やりましたか？
+9. 🦀 Crabs walk sideways. Do you sometimes want to walk away from your problems sideways?
+カニは横に歩きます。時々問題から横歩きで逃げたくなりませんか？
+10. 🏄‍♂️ Surfers look cool, but waiting for a wave looks boring. Is patience important?
+サーファーはかっこいいですが、波待ちは退屈そうです。忍耐は重要ですか？
+11. 🛥️ Have you ever been on a boat party or cruise?
+船上パーティーやクルーズに行ったことはありますか？
+12. 🎣 Fishing in the ocean. Do you eat what you catch?
+海釣り。釣った魚は食べますか？
+13. 🌊 The sound of waves is relaxing. Do you use "White Noise" to sleep?
+波の音はリラックスできます。「ホワイトノイズ」を使って寝ますか？
+14. 🏊‍♀️ Swimming lessons at school. Did you hate the "Hell Shower" (cold shower)?
+学校の水泳の授業。「地獄のシャワー」（冷たいシャワー）は嫌いでしたか？
+15. 🏝️ Being stranded on a deserted island. What 3 things would you bring?
+無人島に取り残される。3つ持っていくなら何ですか？
+16. 👙 Bikinis vs. One-piece swimsuits. What is the trend this year?
+ビキニ対ワンピース。今年のトレンドは何ですか？
+17. 🕶️ Wearing sunglasses in the water. Do you worry about losing them?
+水の中でサングラスをかける。なくすのが心配ではありませんか？
+18. 🦑 Grilled squid (Ikayaki) at the beach hut (Umi-no-ie). Why is it so expensive?
+海の家のイカ焼き。なぜあんなに高いのでしょう？
+19. 🚗 Driving to the beach involves traffic jams. Is the drive part of the fun?
+ビーチへのドライブには渋滞がつきものです。ドライブも楽しみの一部ですか？
+20. 🧂 Sea water is salty. Getting water in your eyes hurts!
+海水はしょっぱいです。目に入ると痛い！
+21. 🧜‍♀️ The Little Mermaid. Would you trade your voice for legs?
+リトル・マーメイド。足のために声を差し出せますか？
+22. 🚮 Plastic trash in the ocean is a crisis. Do you use less plastic?
+海のプラスチックゴミは危機的状況です。プラスチックの使用を減らしていますか？
+23. ⚓ Sailors have a tattoo of an anchor. Do you like nautical fashion (stripes)?
+船乗りは錨のタトゥーを入れています。マリンファッション（ボーダー）は好きですか？
+24. 🏯 Sandcastles are temporary art. How do you feel when the waves destroy them?
+砂の城は一時的な芸術です。波がそれを壊す時、どう感じますか？
+25. 🌡️ The sand is too hot to walk on! Do you run to the water?
+砂が熱すぎて歩けません！水まで走りますか？
+26. 🐦 Seagulls steal food. Have you ever been attacked by a bird?
+カモメは食べ物を盗みます。鳥に襲われたことはありますか？
+27. 🎆 Fireworks over the ocean. The reflection is beautiful.
+海上の花火。反射が美しいです。
+28. 💑 A romantic walk on the beach at sunset. Is this a cliché?
+夕暮れのビーチをロマンチックに散歩。これは決まり文句（ありきたり）ですか？
+29. 🍉 Breaking a watermelon (Suikawari) on the beach. Is it dangerous with a stick?
+ビーチでスイカ割り。棒を使うのは危険じゃないですか？
+30. 🧴 Tanning oil vs. Sunblock. Do you want to be bronze or pale?
+サンオイル対日焼け止め。小麦色になりたいですか、色白でいたいですか？
+31. 🏊‍♂️ Can you tread water (stay afloat) for 5 minutes?
+立ち泳ぎ（浮いたまま）が5分間できますか？
+32. 🚿 Sand gets everywhere. In your bag, in your car... annoying?
+砂はどこにでも入ります。カバンの中、車の中… イライラしますか？
+33. 🌬️ Sea breeze makes hair sticky. Do you mind?
+潮風で髪がベタベタになります。気になりますか？
+34. 🌊 Tsunamis are scary. Do you know the evacuation route?
+津波は怖いです。避難経路を知っていますか？
+35. 🐢 Sea Turtles lay eggs on the beach. Have you seen them?
+ウミガメは浜辺で卵を産みます。見たことはありますか？
+36. ⛵ Sailing requires teamwork. Are you a good team player?
+セーリングにはチームワークが必要です。あなたはチームプレイヤーですか？
+37. 🐬 Swimming with dolphins. Is it a dream of yours?
+イルカと泳ぐ。あなたの夢ですか？
+38. 🏖️ Parasols flying away in the wind. Watch out!
+風で飛んでいくパラソル。気をつけて！
+39. 🧒 Burying your father in the sand. Did you do this?
+お父さんを砂に埋める。やりましたか？
+40. 🍧 Shaved ice tastes best when you are hot and salty.
+暑くて塩っぽい時に食べるかき氷は最高です。
+41. 📸 Taking a "jump shot" on the beach. Did you succeed?
+ビーチで「ジャンプ写真」を撮る。成功しましたか？
+42. 🚬 Smoking on the beach is often banned now. Good or bad?
+ビーチでの喫煙は今や禁止されていることが多いです。良いことですか、悪いことですか？
+43. 👟 Flip-flops (Zori/Sandals). Do you wear them all summer?
+ビーチサンダル（草履）。夏はずっと履いていますか？
+44. 🛳️ Sea sickness. Do you get sick on boats?
+船酔い。船で酔いますか？
+45. 🐡 Blowfish (Fugu) live in the sea. They are poisonous but delicious.
+フグは海に住んでいます。毒があるけど美味しいです。
+46. 🌊 The tide goes in and out. Life has rhythms.
+潮は満ち引きします。人生にもリズムがあります。
+47. 🧘‍♀️ Yoga on the beach. Is sand comfortable?
+ビーチヨガ。砂は快適ですか？
+48. 🏘️ A beach house (Villa). Would you buy one if you were rich?
+ビーチハウス（別荘）。お金持ちなら買いますか？
+49. 🏊‍♀️ Night swimming. Is it scary or exciting?
+夜の遊泳。怖いですか、ワクワクしますか？
+50. 🌊 "The sea cures all ailments of man." (Plato). Do you agree?
+「海は人のすべての病を癒やす」（プラトン）。同意しますか？`
+        },
+        {
+            title: "Week 30: Osaka's Big Night (July 23 – July 29)",
+            content: `1. 🎆 This week is the climax of the Tenjin Matsuri (July 25). Are you going?
+今週は天神祭のクライマックス（7月25日）です。行きますか？
+2. 🚤 The boat procession (Funatogyo) is unique to Osaka. Have you seen the bonfire boats?
+船渡御（ふなとぎょ）は大阪独特です。かがり火の船を見たことがありますか？
+3. 🎇 3,000 fireworks go up in the city center. Is it too crowded to see?
+都心で3000発の花火が上がります。混みすぎて見えませんか？
+4. 👘 Wearing Yukata is hot and tight. Is fashion pain?
+浴衣を着るのは暑くてきついです。おしゃれは我慢ですか？
+5. 🏙️ Osaka is called the "City of Water." Do you think our rivers are beautiful?
+大阪は「水の都」と呼ばれています。川は美しいと思いますか？
+6. 🦟 Mosquitoes love festivals too. Did you bring spray?
+蚊も祭りが大好きです。スプレーを持ってきましたか？
+7. 👏 "Osaka-jime" (Clapping rhythm). Can you do the "Uchi-ma-sho"?
+「大阪締め」（手拍子のリズム）。「打ちまーしょ」ができますか？
+8. 🍻 Drinking beer on the riverbank. Be careful not to fall in!
+川岸でビールを飲む。落ちないように気をつけて！
+9. 🌉 The bridges of Osaka are lit up. Which bridge is your favorite?
+大阪の橋がライトアップされます。どの橋が一番好きですか？
+10. 🚇 The last train after the fireworks is a nightmare. Do you leave early?
+花火後の終電は悪夢です。早めに帰りますか？
+11. 🥵 "Nettaiya" (Tropical Night) means it stays above 25°C at night. Can you sleep?
+「熱帯夜」は夜も25度以上あることです。眠れますか？
+12. 🏨 Hotels with a view of the fireworks are expensive. Is it worth 50,000 yen?
+花火が見えるホテルは高いです。5万円の価値はありますか？
+13. 🏮 The festival honors Sugawara no Michizane (God of Learning). Do you pray for intelligence?
+祭りは菅原道真（学問の神様）を祀っています。賢くなるよう祈りますか？
+14. 👫 If you go to a festival with a date, you must hold hands so you don't get lost. Good excuse?
+デートで祭りに行ったら、はぐれないように手を繋がないといけません。良い口実ですか？
+15. 🧊 Putting ice inside your clothes to stay cool. Have you tried it?
+服の中に氷を入れて涼む。試したことはありますか？
+16. 🚣‍♂️ Rowing a Dondoko boat looks hard. Are you strong?
+ドンドコ船を漕ぐのは大変そうです。力持ちですか？
+17. 🎆 "Tamaya!" is what people used to shout at fireworks. Do you shout anything?
+昔は花火に向かって「たーまーやー！」と叫びました。何か叫びますか？
+18. 🍢 Hamo (Pike Conger) is the festival fish of Osaka. Do you like Hamo?
+ハモは大阪の祭りの魚です。ハモは好きですか？
+19. 🏙️ Viewing fireworks from a skyscraper (Abeno Harukas). Is high-up better?
+超高層ビル（あべのハルカス）から花火を見る。高いところの方がいいですか？
+20. 📸 Taking photos of fireworks with a smartphone is difficult. Are your photos blurry?
+スマホで花火を撮るのは難しいです。写真はブレていませんか？
+21. 🚽 Portable toilets at festivals. Avoid at all costs?
+祭りの仮設トイレ。何としてでも避けますか？
+22. 🥤 Tapioca or Fruit Smoothie? What are you drinking?
+タピオカ、それともフルーツスムージー？何を飲んでいますか？
+23. 🕶️ It is still bright at 7 PM. Summer nights feel endless.
+午後7時でもまだ明るいです。夏の夜は終わらない気がします。
+24. 🤒 Heatstroke alert. Do not forget to drink water and salt.
+熱中症アラート。水と塩分を摂るのを忘れないで。
+25. 🧨 Firecrackers (Bakuchiku) are loud. Do you cover your ears?
+爆竹はうるさいです。耳を塞ぎますか？
+26. 🧹 The next morning, the streets are full of trash. Osaka needs to be cleaner.
+翌朝、通りはゴミだらけです。大阪はもっときれいになるべきです。
+27. 💑 Did you ever have a summer romance that ended in autumn?
+秋に終わるひと夏の恋をしたことはありますか？
+28. 🦟 Itching all over. Mosquito bites ruin the mood.
+全身痒い。蚊刺されはムードを台無しにします。
+29. 🦁 Lion Dance (Shishimai) bites your head for good luck. Would you let it bite you?
+獅子舞は幸運のために頭を噛みます。噛ませますか？
+30. 🍧 Eating shaved ice too fast leads to a headache. Slow down!
+かき氷を早く食べ過ぎると頭痛がします。ゆっくり食べて！
+31. 🎋 Tenjin Matsuri ends, and summer feels like it's peaking. Are you sad?
+天神祭が終わり、夏がピークに達した気がします。寂しいですか？
+32. 🏢 Working while the festival noises are outside. Is it hard to concentrate?
+外で祭りの音がする中での仕事。集中するのは難しいですか？
+33. 👘 Yukata date. He wears Jimbei, she wears Yukata. Cute couple?
+浴衣デート。彼は甚平、彼女は浴衣。可愛いカップル？
+34. 🎆 Sparklers (Senko Hanabi) fall off too quickly. Is life like a sparkler?
+線香花火はすぐに落ちてしまいます。人生は線香花火のようですか？
+35. 🌆 The sunset over the river is romantic. Who are you watching it with?
+川に沈む夕日はロマンチックです。誰と一緒に見ていますか？
+36. 🛶 Would you like to ride on one of the festival boats?
+祭りの船に乗ってみたいですか？
+37. 🍺 Beer tastes 10x better outdoors. Science cannot explain this.
+外で飲むビールは10倍美味しいです。科学では説明できません。
+38. 🎭 Street performers draw a crowd. Do you tip them?
+大道芸人が人を集めています。チップをあげますか？
+39. 🕯️ The bonfires on the boats are scary but magical. Fire and Water.
+船のかがり火は怖いけど幻想的です。火と水。
+40. 🏙️ Do you love Osaka? This festival is the heart of the city.
+大阪を愛していますか？この祭りは街の心臓です。
+41. 🚕 Taxis are impossible to catch. Prepare to walk.
+タクシーは捕まえられません。歩く覚悟をして。
+42. 🥵 Sweat is dripping. Is it attractive or gross?
+汗が滴り落ちます。魅力的ですか、それとも気持ち悪いですか？
+43. 🍧 Condensed milk on shaved ice. Yes or No?
+かき氷に練乳。あり、なし？
+44. 🎇 The smell of gunpowder (fireworks smoke).
+火薬の匂い（花火の煙）。
+45. 🏮 Red lanterns everywhere. The city looks like a movie set.
+至る所に赤い提灯。街が映画のセットのようです。
+46. 🤫 Keep your festival wishes secret? Or tell everyone?
+祭りの願い事は秘密にする？それともみんなに言う？
+47. 👮‍♂️ Crowds are controlled by police with megaphones. Thank you, officer!
+群衆はメガホンを持った警察にコントロールされています。ありがとう、お巡りさん！
+48. 🕶️ Hiding tired eyes behind sunglasses the next day.
+翌日、疲れた目をサングラスで隠す。
+49. 🗓️ After Tenjin Matsuri, real summer begins.
+天神祭の後、本当の夏が始まります。
+50. 🎉 Osaka, you are loud, hot, and wonderful!
+大阪、君はうるさくて、暑くて、素晴らしい！`
+        },
+        {
+            title: "Week 31: Summer Heat (July 30 – August 5)",
+            content: `1. 🥵 It is August. The temperature is over 35°C. Are you melting?
+8月です。気温は35度を超えています。溶けていませんか？
+2. 🎐 Shochu-mimai (Summer greeting cards). Do you send them?
+暑中見舞い。送りますか？
+3. 🦗 Cicadas (Semi) are screaming. Is it the sound of summer or just noise?
+セミが叫んでいます。夏の音ですか、ただの騒音ですか？
+4. 👻 Ghost stories chill the blood. Do you like scary movies in summer?
+怪談は血を凍らせます。夏に怖い映画を見るのは好きですか？
+5. 🥵 Concrete jungle. Osaka is hotter than Okinawa sometimes. Why?
+コンクリートジャングル。大阪は時々沖縄より暑いです。なぜ？
+6. 🧊 Carry a portable fan (Handy Fan). Does everyone have one now?
+携帯扇風機（ハンディファン）を持ち歩く。今はみんな持っていますか？
+7. 🥒 Cucumbers cool the body. Do you eat Morokyu (Cucumber with miso)?
+きゅうりは体を冷やします。もろきゅうを食べますか？
+8. 🧟 Zombies are popular in summer attractions. Would you survive a zombie attack?
+ゾンビは夏のアトラクションで人気です。ゾンビの攻撃を生き延びられますか？
+9. ⛱️ Higasa (Parasol). Men are using them now ("Higasa Danshi"). Is it cool?
+日傘。今は男性も使っています（日傘男子）。かっこいいですか？
+10. 🌫️ Uchimizu (Sprinkling water on the ground). Does it actually lower the temperature?
+打ち水。本当に気温が下がりますか？
+11. 🍑 Peaches are in season. They are expensive but delicious. Do you peel them?
+桃が旬です。高いけど美味しいです。皮を剥きますか？
+12. 🌡️ Sleepless nights. Do you use a cooling pillow (Ice-non)?
+眠れない夜。冷却枕（アイスノン）を使いますか？
+13. 🥵 "It's not the heat, it's the humidity." Do you agree?
+「暑さじゃなくて湿気が問題だ」。同意しますか？
+14. 🛁 Taking a cold bath. Is it shocking or refreshing?
+冷たいお風呂に入る。ショックですか、リフレッシュしますか？
+15. 👔 Office AC wars. Men want it cold, women want it warm. Who wins?
+オフィスのエアコン戦争。男性は寒く、女性は暖かくしたい。勝つのはどっち？
+16. 🦟 The sound of a mosquito at 3 AM. The most annoying sound on earth?
+午前3時の蚊の音。地球上で最もイライラする音？
+17. 🎐 Wind chimes need wind. What if there is no wind?
+風鈴には風が必要です。風がなかったら？
+18. 🥤 Barley tea (Mugicha) is the champion of summer drinks. Do you make it at home?
+麦茶は夏の飲み物の王者です。家で作りますか？
+19. 👒 Hats are mandatory. Do you have hat hair?
+帽子は必須です。帽子を脱ぐと髪がぺちゃんこになりますか？
+20. 🏬 Running into a convenience store just to cool down. Do you buy something?
+涼むためだけにコンビニに駆け込む。何か買いますか？
+21. 🐍 Snakes love the heat. Be careful in the grass!
+蛇は暑さが大好きです。草むらには気をつけて！
+22. 🍉 Watermelon juice dripping on your shirt. It stains!
+スイカの汁がシャツに垂れる。シミになります！
+23. 🕶️ Asphalt melts your shoes. Do you wear thick soles?
+アスファルトで靴が溶けそうです。厚底を履きますか？
+24. 👵 "Drink hot tea to cool down." Old wisdom. Do you believe it?
+「体を冷やすために熱いお茶を飲め」。昔の知恵です。信じますか？
+25. 🎇 Sparklers (Hanabi) in the park. Be careful of fire rules.
+公園で花火。火気のルールには気をつけて。
+26. 🏊‍♀️ Night pool parties are for taking photos, not swimming. True?
+ナイトプールは泳ぐためじゃなくて写真を撮るためのもの。本当？
+27. 🥵 Losing appetite (Natsubate). Do you eat spicy food to get energy?
+食欲不振（夏バテ）。エネルギーを得るために辛いものを食べますか？
+28. 🍛 Curry is popular in summer. Why do we eat hot food in hot weather?
+夏はカレーが人気です。なぜ暑い時に熱いものを食べるのでしょう？
+29. 🥶 Brain freeze from a slushie. Hold your tongue to the roof of your mouth!
+フローズンドリンクで頭がキーンとする。舌を上顎に押し当てて！
+30. 🎢 Roller coasters are breezier than walking.
+ジェットコースターは歩くより風通しが良いです。
+31. 📅 August has no national holidays until Mountain Day (11th). Keep working!
+8月は山の日（11日）まで祝日がありません。働き続けよう！
+32. 🌵 Cactus thrives in this heat. Are you a cactus?
+サボテンはこの暑さで繁栄します。あなたはサボテンですか？
+33. 👕 Change your shirt twice a day? Laundry pile is huge.
+1日に2回シャツを着替える？洗濯物の山が巨大です。
+34. 🦟 Insect bite itchiness. Do you scratch or slap?
+虫刺されの痒み。掻きますか、叩きますか？
+35. 🏢 The walk from the station to the office is a survival mission.
+駅から会社まで歩くのはサバイバルミッションです。
+36. 🍺 Beer is 90% water. So it's hydration? (No, it's alcohol).
+ビールは90％水です。だから水分補給？（いいえ、アルコールです）。
+37. 🏜️ Mirage on the road. Is that water or heat haze?
+道路の蜃気楼。あれは水ですか、陽炎ですか？
+38. 💆‍♀️ Cooling shampoo with menthol. Tingle Tingle!
+メントール入りの冷却シャンプー。スースーします！
+39. 🚿 Cold shower before bed helps you sleep.
+寝る前の冷たいシャワーは睡眠を助けます。
+40. 🏞️ Going to the mountains to escape the heat. Is it cooler?
+暑さから逃れるために山へ。涼しいですか？
+41. 🌽 Corn is sweet. Do you eat it off the cob?
+トウモロコシは甘いです。芯から直接かじりますか？
+42. 👚 Sleeveless shirts. Are you confident about your arms?
+ノースリーブのシャツ。腕に自信がありますか？
+43. 🧴 Deodorant spray cloud in the locker room. Choking hazard!
+ロッカールームのデオドラントスプレーの雲。窒息の危険！
+44. 🌞 The sun wakes you up at 5 AM. Do you go back to sleep?
+太陽が朝5時にあなたを起こします。二度寝しますか？
+45. 🛣️ Road trips means hot cars. Touching the steering wheel burns!
+ロードトリップは車が暑いということです。ハンドルを触ると火傷します！
+46. 🥤 Ice cubes melt in 2 minutes. Drink fast!
+氷が2分で溶けます。早く飲んで！
+47. 🌡️ "Dangerously Hot." When the news says this, stay inside.
+「危険な暑さ」。ニュースがこう言ったら、中にいて。
+48. 🐕 Walking the dog at 5 AM or 8 PM. Dog owners have it hard.
+朝5時か夜8時に犬の散歩。犬の飼い主は大変です。
+49. 💤 Siesta time? I wish I was Spanish.
+シエスタの時間？スペイン人だったらよかったのに。
+50. 🥵 Survival of the fittest. We can make it to Autumn!
+適者生存。秋まで生き残れるはず！`
+        },
+        {
+            title: "Week 32: Comedy & Arts (August 6 – August 12)",
+            content: `1. 🎭 The Edinburgh Fringe Festival (biggest arts fest) is in August. Do you like live theater?
+エディンバラ・フリンジ・フェスティバル（最大の芸術祭）は8月です。生の演劇は好きですか？
+2. 🤣 Osaka is the capital of comedy in Japan. Do you watch Yoshimoto Shinkigeki?
+大阪は日本のお笑いの首都です。吉本新喜劇を見ますか？
+3. 🎤 Manzai (Double act) vs. Stand-up Comedy (Solo). Which is funnier?
+漫才（コンビ）対スタンダップコメディ（ピン）。どっちが面白いですか？
+4. 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Edinburgh is in Scotland. Have you ever seen a man in a kilt playing bagpipes?
+エディンバラはスコットランドにあります。キルトを着てバグパイプを吹く男性を見たことがありますか？
+5. 🤡 Street performers (Buskers) are everywhere at festivals. Do you stop to watch?
+大道芸人（バスカー）は祭りの至る所にいます。立ち止まって見ますか？
+6. 🤣 Laughter is the best medicine. When was the last time you laughed until you cried?
+笑いは最高の薬です。最後に泣くほど笑ったのはいつですか？
+7. 🗣️ Hecklers (people who shout at comedians). Is it rude or part of the show?
+ヘックラー（コメディアンに野次を飛ばす人）。失礼ですか、ショーの一部ですか？
+8. 🤕 Slapstick comedy (hitting, falling). Is it funny or violent?
+スラップスティックコメディ（叩く、転ぶ）。面白いですか、暴力的ですか？
+9. 👫 Boke (funny man) and Tsukkomi (straight man). Which role are you in real life?
+ボケとツッコミ。実生活ではどっちの役割ですか？
+10. 🎭 Improv comedy (no script). Are you good at thinking fast?
+即興コメディ（台本なし）。素早く考えるのは得意ですか？
+11. 🎪 The circus is coming! Are you afraid of clowns?
+サーカスが来る！ピエロは怖いですか？
+12. 🎤 Karaoke is a performance. Do you dance when you sing?
+カラオケはパフォーマンスです。歌う時に踊りますか？
+13. 🖌️ Art museums are cool (temperature and style). Who is your favorite artist?
+美術館はクール（温度もスタイルも）です。好きなアーティストは誰ですか？
+14. 🤣 "Owarai" shows on TV. Do you have a favorite comedian?
+テレビの「お笑い」番組。好きな芸人はいますか？
+15. 🎭 Shakespeare plays are performed at festivals. "To be or not to be?"
+シェイクスピアの劇が祭りで上演されます。「生きるべきか死ぬべきか？」
+16. 🥃 Scotch Whisky fits the Edinburgh vibe. Do you drink whisky on the rocks?
+スコッチウイスキーはエディンバラの雰囲気に合います。ウイスキーをロックで飲みますか？
+17. ⛰️ Mountain Day (Yama no Hi) is August 11th. It's a new holiday. Do you hike?
+山の日（8月11日）は新しい祝日です。ハイキングしますか？
+18. 🛫 August is peak travel season. Airports are chaotic. Do you travel in August?
+8月は旅行のピークシーズンです。空港は混沌としています。8月に旅行しますか？
+19. 🎆 Fireworks are art in the sky. Are pyrotechnicians artists?
+花火は空の芸術です。花火師は芸術家ですか？
+20. 👐 Why are Osaka people so friendly/funny? Is it the food?
+なぜ大阪の人はあんなにフレンドリーで面白いのでしょう？食べ物のせい？
+21. 🎩 Magic shows. Do you want to know the secret, or just enjoy the trick?
+マジックショー。タネを知りたいですか、それともただトリックを楽しみたいですか？
+22. 🎻 Classical music concerts outdoors. Classy picnic?
+野外でのクラシックコンサート。優雅なピクニック？
+23. 🗣️ Kansai-ben (dialect) sounds funny to Tokyo people. Are you proud of your dialect?
+関西弁は東京の人には面白く聞こえます。自分の方言を誇りに思いますか？
+24. 😆 A sense of humor is important for marriage. Do you agree?
+結婚にはユーモアのセンスが重要です。同意しますか？
+25. 🎭 Cosplay is a form of performance art. Have you ever cosplayed?
+コスプレはパフォーマンスアートの一種です。コスプレしたことはありますか？
+26. 🖊️ Writing a joke is hard. Tell me a joke in English!
+ジョークを書くのは難しいです。英語でジョークを言って！
+27. 🚶‍♂️ Walking around a festival all day is tiring. Wear comfortable shoes.
+一日中祭りを歩き回るのは疲れます。快適な靴を履いて。
+28. 🎟️ Tickets for popular shows sell out fast. Are you lucky with tickets?
+人気ショーのチケットはすぐ売り切れます。チケット運はありますか？
+29. 🏨 Hotel prices in August are insane. Do you stay with friends?
+8月のホテル代は異常です。友達の家に泊まりますか？
+30. 🤫 Mime artists (Silent comedy). Can you communicate without words?
+パントマイム（無言劇）。言葉なしでコミュニケーションできますか？
+31. 🤣 Laughing creates abs (abdominal muscles). Is comedy a workout?
+笑うと腹筋がつきます。コメディは筋トレですか？
+32. 🎭 Tragedy vs. Comedy. Which do you prefer to watch?
+悲劇と喜劇。どっちを見るのが好きですか？
+33. 👻 Ghost stories are a summer art form. Can you tell a scary story?
+怪談は夏の芸術形式です。怖い話をできますか？
+34. 🕰️ Obon is coming next week. Are you preparing?
+来週はお盆です。準備していますか？
+35. 🏰 Edinburgh Castle sits on a volcano. Osaka Castle sits on... a park.
+エディンバラ城は火山の上にあります。大阪城は…公園の上にあります。
+36. 🥁 Drumming performances. The rhythm of the heartbeat.
+太鼓のパフォーマンス。心臓のリズム。
+37. 💃 Salsa dancing in the park. Are you shy to dance?
+公園でサルサダンス。踊るのが恥ずかしいですか？
+38. 🖍️ Face painting for kids. Would you paint your face?
+子供のフェイスペイント。顔にペイントしますか？
+39. 🍻 Pubs stay open late during the festival. Do you like night life?
+祭りの間、パブは遅くまで開いています。ナイトライフは好きですか？
+40. 🎤 Open mic nights (amateurs performing). Would you try it?
+オープンマイクナイト（素人のパフォーマンス）。やってみたいですか？
+41. 🤪 Making a funny face (Hen-gao). Are you good at it?
+変顔をする。得意ですか？
+42. 🧘‍♀️ Laughter Yoga. Ho ho ha ha. Is it weird?
+ラフターヨガ。ホホハハ。変ですか？
+43. 🌧️ It often rains in Scotland. It is humid in Osaka. Which weather is worse?
+スコットランドはよく雨が降ります。大阪は蒸し暑いです。どっちの天気が悪いですか？
+44. 🕶️ Celebrities might be in the crowd. Do you look for famous people?
+有名人が群衆の中にいるかもしれません。有名人を探しますか？
+45. 👯‍♀️ Flash mobs (sudden dance crowds). Surprise!
+フラッシュモブ（突然踊り出す集団）。サプライズ！
+46. 🖌️ Caricature artists (funny portraits). Do you have one?
+似顔絵アーティスト（面白い肖像画）。持っていますか？
+47. 📺 Variety shows in Japan. Are they art?
+日本のバラエティ番組。あれは芸術ですか？
+48. 🎙️ Podcasts are modern radio. Do you listen to comedy podcasts?
+ポッドキャストは現代のラジオです。お笑いのポッドキャストを聴きますか？
+49. 🎭 "All the world's a stage." Are you acting right now?
+「この世はすべて舞台」。あなたは今、演じていますか？
+50. 😄 Keep smiling! It confuses people.
+笑っていよう！人々を戸惑わせるから。`
+        }
