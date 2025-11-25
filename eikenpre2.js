@@ -1,2208 +1,2260 @@
-// eikenpre2.js - Eiken Pre-2 Stories (new version, stories 1–10)
+// eikenpre2_remastered.js - Eiken Pre-2 Stories (Corrected Level: Stories 1–10)
 const eikenpre2 = [
     // Story 1 - A New Routine
+    // Target Grammar: Present Perfect / Comparatives
     {
         title: "1. A New Routine",
-        content: `🏡 Emma has started waking up early this month.  
-エマは今月、早起きを始めました。  
-🚶‍♀️ She goes jogging before school, which makes her feel fresh.  
-彼女は学校の前にジョギングをしていて、それで気分がすっきりします。  
-⏰ She had never exercised in the morning before this.  
-彼女はこれ以前、朝に運動したことがありませんでした。  
-🌳 The park, which is near her house, is usually quiet.  
-彼女の家の近くにある公園は普段静かです。  
-💪 If she continues this routine, she will become healthier.  
-この習慣を続ければ、彼女はもっと健康になります。  
-🏃‍♀️ She runs faster now than she did last year.  
-彼女は去年より今のほうが速く走ります。  
-💧 Emma has also been drinking more water recently.  
-エマは最近もっと水を飲むようになりました。  
-📚 She feels more energetic during her classes.  
-彼女は授業中、以前より活発に感じます。  
-😊 Her mother praised her effort yesterday.  
-彼女の母は昨日、彼女の努力を褒めました。  
-🌟 Healthy habits are becoming a part of her life.  
-健康的な習慣が彼女の生活の一部になっています。  
+        content: `🏡 Emma has decided to change her lifestyle this month.
+エマは今月、生活様式を変えることに決めました。
+🏃‍♀️ She has started jogging in the park every morning.
+彼女は毎朝公園でジョギングを始めました。
+🌳 The fresh air makes her feel very energetic.
+新鮮な空気は彼女をとても活発な気分にさせます。
+⏰ Waking up early was difficult for her at first.
+早起きすることは、最初彼女にとって困難でした。
+💪 However, she is stronger now than she was last month.
+しかし、彼女は先月よりも今のほうが丈夫です。
+🥤 She also tries to drink a lot of water after running.
+彼女は走った後、たくさんの水を飲むようにもしています。
+🥗 It is important for her to eat a healthy breakfast, too.
+健康的な朝食を食べることも、彼女にとって重要です。
+😊 Her mother is happy to see Emma's effort.
+彼女の母はエマの努力を見て喜んでいます。
+📉 Emma has already lost a little weight since last week.
+エマは先週からすでに少し体重が減りました。
+🌟 She hopes to continue this good habit for a long time.
+彼女はこの良い習慣を長く続けたいと願っています。
 
-🏡 Have you ever changed your daily routine?  
-あなたは毎日の習慣を変えたことがありますか？  
-🆕 What have you started doing recently?  
-最近始めたことは何ですか？  
-📍 Is there a place near your house that you visit often?  
-あなたの家の近くによく訪れる場所はありますか？  
-⏰ Have you ever done something earlier than usual?  
-いつもより早く何かをしたことがありますか？  
-🕒 What would you do if you had more free time in the morning?  
-朝もっと自由な時間があったら、何をしますか？  
-👏 Who has praised you for your effort before?  
-これまでにあなたの努力を褒めてくれた人は誰ですか？  
-⚡ What makes you feel more energetic than usual?  
-普段より元気に感じさせるものは何ですか？  
-📆 Had you tried a new habit before this year?  
-今年になる前に新しい習慣を試したことはありましたか？  
-📺 What is healthier for you than watching TV?  
-テレビを見るよりあなたにとって健康的なことは何ですか？  
-🌱 If you could improve one habit, which would you choose?  
-もし1つ習慣を改善できるとしたら、どれを選びますか？`
+🏃‍♀️ Have you ever tried jogging in the morning?
+あなたは朝にジョギングをしてみたことがありますか？
+⏰ Is it difficult for you to wake up early?
+あなたにとって早起きすることは難しいですか？
+🥗 What do you usually eat for breakfast?
+あなたは普段朝食に何を食べますか？
+💪 Do you think you are healthier now than last year?
+あなたは去年より今のほうが健康的だと思いますか？
+🥤 How much water do you drink every day?
+あなたは毎日どれくらいの水を飲みますか？
+🌳 Do you like going to parks? Why or why not?
+あなたは公園に行くのが好きですか？なぜですか？
+🏃‍♀️ What sports do you like to play?
+あなたはどんなスポーツをするのが好きですか？
+😊 What makes you feel happy in the morning?
+朝、何があなたを幸せな気分にさせますか？
+📅 Do you have a daily routine?
+あなたは毎日の決まった習慣を持っていますか？
+🌟 What is one good habit you want to start?
+あなたが始めたい良い習慣はなんですか？`
     },
 
     // Story 2 - Helping at Home
+    // Target Grammar: Passive Voice / Adverbs
     {
         title: "2. Helping at Home",
-        content: `🧹 Kenta has been helping more with housework lately.  
-ケンタは最近、家事をもっと手伝うようになりました。  
-🍽️ He washes the dishes after dinner, which makes his parents happy.  
-彼は夕食の後に皿を洗い、それが両親を喜ばせます。  
-🧺 He had rarely done chores when he was younger.  
-彼はもっと若い頃はほとんど家事をしていませんでした。  
-🏠 The kitchen, which was messy before, looks cleaner now.  
-以前は散らかっていたキッチンが、今はもっときれいに見えます。  
-👍 If he finishes his homework early, he will help with the laundry.  
-宿題を早く終えれば、彼は洗濯を手伝います。  
-👦 He works more carefully than his little brother.  
-彼は弟よりもっと注意深く作業します。  
-🕒 Kenta has already taken out the trash this morning.  
-ケンタは今朝すでにゴミを出しました。  
-😊 His mother thanked him kindly yesterday.  
-昨日、母は彼に優しくお礼を言いました。  
-👪 Helping at home is becoming a habit for him.  
-家を手伝うことは彼にとって習慣になりつつあります。  
-🌟 He feels proud when he sees the clean rooms.  
-きれいになった部屋を見ると、彼は誇らしく感じます。  
+        content: `🧹 Kenta is busy because he helps his parents every day.
+ケンタは毎日両親を手伝っているので忙しいです。
+🍽️ The dishes are usually washed by Kenta after dinner.
+夕食後、皿はたいていケンタによって洗われます。
+🧺 He also likes to fold the laundry while watching TV.
+彼はテレビを見ながら洗濯物をたたむのも好きです。
+✨ The living room is kept clean thanks to his work.
+彼のア仕事のおかげで、居間はきれいに保たれています。
+🙏 His mother always says, "Thank you for helping me."
+彼の母はいつも「手伝ってくれてありがとう」と言います。
+⏳ It takes him about thirty minutes to finish his chores.
+彼が雑用を終えるのに約30分かかります。
+👦 Kenta is more helpful than his younger brother.
+ケンタは弟よりも役に立ちます。
+🚮 He has just taken out the garbage this morning.
+彼は今朝、ちょうどゴミを出したところです。
+👪 Helping the family is a natural thing for him.
+家族を助けることは、彼にとって当たり前のことです。
+😊 He feels proud when the house looks tidy.
+家が整頓されていると、彼は誇らしく感じます。
 
-🧺 Have you ever helped with housework at home?  
-家で家事を手伝ったことがありますか？  
-🧽 What chores have you done before?  
-これまでにどんな家事をしたことがありますか？  
-🏡 Is there a room in your house that you clean often?  
-あなたの家でよく掃除する部屋はありますか？  
-🏋️ Who works harder than you at home?  
-家では誰があなたより一生懸命働きますか？  
-🕰️ What would you do if your parents asked for help?  
-両親に手伝いを頼まれたら、あなたは何をしますか？  
-🙏 Has anyone thanked you for helping at home?  
-家で手伝ってくれてありがとうと言われたことがありますか？  
-👌 What housework is easier for you than others?  
-他の家事よりあなたにとって簡単な家事は何ですか？  
-👶 Had you done any chores before you entered junior high school?  
-中学生になる前に何か家事をしたことはありましたか？  
-📵 What is more important for you than looking at your phone?  
-スマホを見ることよりあなたにとって大切なことは何ですか？  
-👨‍👩‍👧‍👦 If you had more time at home, how would you help your family?  
-家で時間がもっとあったら、どうやって家族を手伝いますか？`
+🧹 Do you help with housework at home?
+あなたは家で家事を手伝いますか？
+🍽️ Who usually washes the dishes in your family?
+あなたの家族では誰が普段お皿を洗いますか？
+🧺 Do you know how to use a washing machine?
+あなたは洗濯機の使い方を知っていますか？
+⏳ How long does it take you to clean your room?
+部屋を掃除するのにどれくらい時間がかかりますか？
+🚮 What is the easiest chore for you?
+あなたにとって一番簡単な家事は何ですか？
+😫 What housework do you dislike the most?
+あなたが一番嫌いな家事は何ですか？
+🙏 Do you think children should help their parents?
+子どもは両親を手伝うべきだと思いますか？
+🏠 Is your room usually clean or messy?
+あなたの部屋は普段きれいですか、それとも散らかっていますか？
+📺 Do you do other things while watching TV?
+あなたはテレビを見ながら他のことをしますか？
+✨ How do you feel when your room is clean?
+部屋がきれいだとどんな気分になりますか？`
     },
 
     // Story 3 - Joining a Music Club
+    // Target Grammar: Gerunds (Verb+ing) / Infinitive (to Verb)
     {
         title: "3. Joining a Music Club",
-        content: `🎵 Yui has joined the school music club this year.  
-ユイは今年、学校の音楽クラブに入りました。  
-🎹 She plays the keyboard, which she bought last spring.  
-彼女は去年の春に買ったキーボードを弾きます。  
-🎼 She had played the piano for three years before joining.  
-彼女は入部する前に3年間ピアノを弾いていました。  
-👩‍🏫 The teacher, who is very patient, teaches them new songs.  
-とても我慢強い先生が彼らに新しい曲を教えます。  
-🎤 If they practice hard, they will perform at the school festival.  
-一生懸命練習すれば、彼らは文化祭で演奏します。  
-🎶 Their sound is better now than it was last month.  
-彼らの音は先月より今のほうが良いです。  
-🎧 Yui has already memorized two difficult pieces.  
-ユイはすでに2つの難しい曲を暗記しました。  
-😊 She enjoys listening to her friends’ parts as well.  
-彼女は友達のパートを聞くのも楽しんでいます。  
-🎉 The club has become the best part of her week.  
-クラブは彼女の一週間で一番楽しい時間になりました。  
-🌟 Music is slowly changing her school life.  
-音楽は少しずつ彼女の学校生活を変えています。  
+        content: `🎵 Yui joined the school music club in April.
+ユイは4月に学校の音楽部に入りました。
+🎸 She is interested in playing the guitar.
+彼女はギターを弾くことに興味があります。
+🎼 Learning a new instrument is not easy for her.
+新しい楽器を学ぶことは、彼女にとって簡単ではありません。
+👩‍🏫 However, the teacher teaches her very kindly.
+しかし、先生はとても親切に彼女に教えてくれます。
+📅 The club members practice together three times a week.
+部員たちは週に3回一緒に練習します。
+👂 Yui enjoys listening to the other students play.
+ユイは他の生徒が演奏するのを聞くのが好きです。
+🎉 They are planning to perform at the school festival.
+彼らは学園祭で演奏することを計画しています。
+🎹 Yui wants to be able to play a famous pop song.
+ユイは有名なポップソングを弾けるようになりたいです。
+🤝 Making music with friends is a lot of fun.
+友達と音楽を作ることはとても楽しいです。
+🌟 She has improved a lot since she started.
+彼女は始めてからずいぶん上達しました。
 
-🎻 Have you ever joined a school club?  
-あなたは学校のクラブに入ったことがありますか？  
-🥁 What instrument have you tried playing before?  
-これまでにどんな楽器を弾いてみたことがありますか？  
-📚 Is there a teacher who is kind and patient at your school?  
-あなたの学校に親切で我慢強い先生はいますか？  
-🧠 Have you memorized any songs recently?  
-最近何か曲を暗記しましたか？  
-🎪 What would you do if you could perform on a big stage?  
-大きなステージで演奏できるとしたら、何をしますか？  
-🏆 Who practices harder than you in your group or class?  
-あなたのグループやクラスで、誰があなたより一生懸命練習しますか？  
-🎧 What kind of music is more exciting for you than others?  
-他の音楽よりあなたにとってワクワクする音楽は何ですか？  
-🎼 Had you learned any instrument before entering junior high school?  
-中学校に入る前に何か楽器を習ったことがありますか？  
-🙌 Who has encouraged you to keep practicing something?  
-何かを続けて練習するよう励ましてくれた人は誰ですか？  
-🎤 If you join a new club, what will you choose?  
-もし新しいクラブに入るなら、何を選びますか？`
+🎵 Are you a member of any school club?
+あなたは学校のクラブのメンバーですか？
+🎸 Do you play any musical instruments?
+あなたは何か楽器を演奏しますか？
+🎤 Do you like singing songs?
+あなたは歌を歌うのが好きですか？
+🎼 What kind of music do you usually listen to?
+普段どんな種類の音楽を聴きますか？
+👩‍🏫 Is there a strict teacher at your school?
+あなたの学校に厳しい先生はいますか？
+🎉 Have you ever performed on a stage?
+あなたはステージで演奏（演技）したことがありますか？
+📅 How often do you practice sports or music?
+あなたはどのくらいの頻度でスポーツや音楽を練習しますか？
+🎹 What instrument do you want to try in the future?
+将来どんな楽器に挑戦してみたいですか？
+🤝 Do you prefer doing things alone or with a group?
+一人で何かをするのとグループでするのと、どちらが好きですか？
+🌟 What is your favorite school event?
+あなたの一番好きな学校行事は何ですか？`
     },
 
     // Story 4 - Preparing for a Speech
+    // Target Grammar: Superlative / Adjectives
     {
         title: "4. Preparing for a Speech",
-        content: `🎤 Daiki has been preparing a speech for English class.  
-ダイキは英語の授業のためにスピーチの準備をしています。  
-🏘️ He chose a topic about his hometown, which is by the sea.  
-彼は海のそばにある自分の故郷についてのテーマを選びました。  
-📝 He had written a short essay before turning it into a speech.  
-彼はそれをスピーチに変える前に短いエッセイを書いていました。  
-👩‍🏫 His teacher, who is strict but fair, checked his draft.  
-厳しいけれど公平な先生が彼の下書きをチェックしました。  
-⏱️ If he practices every day, he will feel less nervous.  
-毎日練習すれば、彼はあまり緊張しなくなるでしょう。  
-🗣️ He speaks more clearly now than he did last term.  
-彼は前学期より今のほうがはっきり話します。  
-📱 Daiki has been listening to model speeches online.  
-ダイキはオンラインで模範スピーチを聞いています。  
-😊 His friends have given him helpful advice.  
-友達は彼に役に立つアドバイスをしてくれました。  
-🏆 He hopes his speech will be better than the others.  
-彼は自分のスピーチが他の人のより良くなることを願っています。  
-🌟 This experience is teaching him confidence.  
-この経験は彼に自信を教えています。  
+        content: `🗣️ Daiki has to give a speech in English class tomorrow.
+ダイキは明日、英語の授業でスピーチをしなければなりません。
+📝 He has been writing his draft for two days.
+彼は2日間ずっと下書きを書いています。
+🌍 The topic of his speech is "Global Warming."
+彼のスピーチのテーマは「地球温暖化」です。
+😰 He feels nervous about speaking in front of people.
+彼は人前で話すことに緊張しています。
+⏱️ It is difficult to finish the speech in three minutes.
+スピーチを3分で終えるのは難しいです。
+👨‍🏫 His teacher advised him to speak slowly and clearly.
+先生は彼に、ゆっくりとはっきり話すよう助言しました。
+💪 Practicing in front of a mirror is helpful.
+鏡の前で練習することは役に立ちます。
+🏆 He wants to give the best speech in the class.
+彼はクラスで一番良いスピーチをしたいと思っています。
+🧠 Memorizing English sentences takes a lot of time.
+英語の文章を暗記するのは時間がかかります。
+🌟 Daiki hopes that everyone enjoys his ideas.
+ダイキはみんなが彼のアイデアを楽しんでくれることを願っています。
 
-🎙️ Have you ever given a speech in front of others?  
-あなたは人前でスピーチをしたことがありますか？  
-📚 What topics have you spoken about in class?  
-授業でどんな話題について話したことがありますか？  
-✏️ Is there a teacher who has checked your writing carefully?  
-あなたの文章を丁寧にチェックしてくれた先生はいますか？  
-🪞 Have you practiced speaking in front of a mirror before?  
-鏡の前で話す練習をしたことがありますか？  
-😰 What would you do if you felt very nervous on stage?  
-ステージでとても緊張したら、何をしますか？  
-🔊 Who speaks more clearly than you among your friends?  
-友達の中で、誰があなたよりはっきり話しますか？  
-📖 What kind of practice is more useful for you than just reading?  
-ただ読むことより、あなたにとって役に立つ練習は何ですか？  
-📄 Had you written any English essays before this year?  
-今年になる前に英語のエッセイを書いたことはありましたか？  
-👂 Who has given you good advice about studying or speaking?  
-勉強や発表について良いアドバイスをくれた人は誰ですか？  
-💬 If you could choose any topic, what would you speak about?  
-どんなテーマでも選べるとしたら、何について話しますか？`
+🗣️ Do you like speaking in front of other people?
+あなたは人前で話すのが好きですか？
+📝 Have you ever written a speech in English?
+英語でスピーチを書いたことがありますか？
+🌍 Are you interested in environmental problems?
+あなたは環境問題に興味がありますか？
+😰 What makes you feel nervous?
+何があなたを緊張させますか？
+⏱️ Can you speak English for one minute without stopping?
+あなたは立ち止まらずに1分間英語を話せますか？
+👨‍🏫 Has a teacher ever given you good advice?
+先生があなたに良いアドバイスをくれたことはありますか？
+💪 How do you practice for a test or speech?
+あなたはテストやスピーチのためにどうやって練習しますか？
+🧠 Are you good at memorizing things?
+あなたは物事を暗記するのが得意ですか？
+🗣️ Which language do you want to speak fluently?
+どの言語を流暢に話せるようになりたいですか？
+🌟 What topic would you choose for a speech?
+スピーチのためにどんなトピックを選びますか？`
     },
 
     // Story 5 - Weekend Part-Time Job
+    // Target Grammar: Relative Clause (who/that) / SVOO
     {
         title: "5. Weekend Part-Time Job",
-        content: `☕ Haruka has been working at a small café on weekends.  
-ハルカは週末に小さなカフェで働いています。  
-🍰 She serves cakes and drinks, which are popular with students.  
-彼女は学生に人気のケーキや飲み物を出しています。  
-📅 She had never had a part-time job before this one.  
-彼女はこの仕事の前にはアルバイトをしたことがありませんでした。  
-👨‍🍳 Her boss, who is friendly, teaches her new things kindly.  
-フレンドリーな店長が優しく新しいことを教えてくれます。  
-💴 If she saves enough money, she will buy a new smartphone.  
-十分なお金を貯めれば、彼女は新しいスマホを買うつもりです。  
-🙂 She is more confident with customers than she was last month.  
-彼女は先月よりお客さんに対して自信があります。  
-☕ Haruka has already learned how to use the coffee machine.  
-ハルカはすでにコーヒーマシンの使い方を覚えました。  
-😊 She enjoys talking with regular customers.  
-彼女は常連客と話すのを楽しんでいます。  
-👨‍👩‍👧 Her parents have praised her for being responsible.  
-両親は責任感があると彼女を褒めました。  
-🌟 This job is giving her real-world experience.  
-この仕事は彼女に現実の世界の経験を与えています。  
+        content: `☕ Haruka works at a cafe that is near the station.
+ハルカは駅の近くにあるカフェで働いています。
+📅 She usually works on Saturday and Sunday.
+彼女はたいてい土曜日と日曜日に働きます。
+🍰 There are many customers who love the cakes there.
+そこには、そこのケーキが大好きな多くのお客さんがいます。
+💴 She is saving money to buy a new smartphone.
+彼女は新しいスマホを買うためにお金を貯めています。
+😊 The manager gives her a free coffee after work.
+店長は仕事の後に彼女に無料のコーヒーをくれます。
+👔 It is important to be polite to the customers.
+お客さんに対して礼儀正しくすることは重要です。
+🗣️ She has learned how to speak to strangers.
+彼女は見知らぬ人への話し方を学びました。
+💪 Standing all day is tiring, but she enjoys it.
+一日中立っているのは疲れますが、彼女はそれを楽しんでいます。
+🤝 She has made friends with the other staff members.
+彼女は他のスタッフのメンバーと友達になりました。
+🌟 Working has taught her the value of money.
+働くことは彼女にお金の価値を教えました。
 
-💼 Have you ever had a part-time job?  
-あなたはアルバイトをしたことがありますか？  
-🧠 What jobs have you thought about doing in the future?  
-将来どんな仕事をしてみたいと考えたことがありますか？  
-🏪 Is there a shop or café where you often go?  
-あなたがよく行く店やカフェはありますか？  
-🛠️ Have you learned any useful skills outside school?  
-学校以外で役に立つスキルを学んだことがありますか？  
-🎁 What would you buy if you saved enough money?  
-十分なお金を貯めたら、何を買いますか？  
-👔 Who is more responsible than you in your family or class?  
-家族やクラスの中で、誰があなたより責任感がありますか？  
-🎨 What kind of work is more interesting for you than office work?  
-事務仕事よりあなたにとって面白い仕事は何ですか？  
-💭 Had you ever thought about working while still a student?  
-学生のうちに働くことについて考えたことがありますか？  
-👥 Who has taught you how to deal with customers or strangers?  
-お客さんや知らない人への対応を教えてくれた人は誰ですか？  
-📱 If you could choose any part-time job, what would you do?  
-どんなアルバイトでも選べるなら、何をしますか？`
+☕ Do you want to have a part-time job?
+あなたはアルバイトをしたいですか？
+🍰 What kind of shop would you like to work at?
+どんな種類のお店で働きたいですか？
+💴 Are you saving money for anything special?
+何か特別なもののために貯金をしていますか？
+👔 Do you think being polite is important?
+礼儀正しくすることは大切だと思いますか？
+🗣️ Do you enjoy talking to new people?
+新しい人と話すのは楽しいですか？
+💪 What is the most tiring thing for you?
+あなたにとって一番疲れることは何ですか？
+🤝 Is it easy for you to make new friends?
+新しい友達を作るのはあなたにとって簡単ですか？
+☕ Do you prefer coffee or tea?
+コーヒーと紅茶、どちらが好きですか？
+🌟 What did you buy with your own money recently?
+最近自分のお金で何を買いましたか？
+📅 How do you spend your weekends?
+週末はどのように過ごしますか？`
     },
 
     // Story 6 - Visiting Grandparents
+    // Target Grammar: Be going to / When clause
     {
         title: "6. Visiting Grandparents",
-        content: `🚃 Satoshi has visited his grandparents many times this year.  
-サトシは今年、祖父母の家に何度も訪れました。  
-🏡 Their house, which is in the countryside, is very quiet.  
-田舎にある彼らの家はとても静かです。  
-🧓 He had not seen them for a long time before spring.  
-春になるまで、彼は長い間彼らに会っていませんでした。  
-🍚 His grandmother, who is a great cook, always makes his favorite dishes.  
-素晴らしい料理人である祖母はいつも彼の大好きな料理を作ってくれます。  
-🌾 If the weather is good, they will walk together by the rice fields.  
-天気が良ければ、彼らは一緒に田んぼのそばを散歩します。  
-✨ The stars are brighter there than in the city.  
-そこでは星が街よりも明るく見えます。  
-🎁 Satoshi has brought small gifts for them each time.  
-サトシは訪れるたびに小さな贈り物を持って行きました。  
-😊 They have told him many stories about the past.  
-彼らは彼に昔の話をたくさんしてくれました。  
-🛏️ He sleeps more deeply there than at home.  
-彼は家にいるときより、そこでのほうがよく眠れます。  
-❤️ The visits are making their relationship stronger.  
-その訪問によって彼らの関係は強くなっています。  
+        content: `🚅 Satoshi is going to visit his grandparents next week.
+サトシは来週、祖父母を訪ねる予定です。
+🏡 They live in a small village in the mountains.
+彼らは山の中の小さな村に住んでいます。
+👴 His grandfather grows vegetables in the garden.
+彼の祖父は庭で野菜を育てています。
+👵 When Satoshi arrives, his grandmother will cook dinner.
+サトシが到着すると、祖母が夕食を作ってくれます。
+🍅 Fresh vegetables taste much better than store-bought ones.
+新鮮な野菜は店で買ったものよりずっと美味しい味がします。
+🌌 The stars in the village are very beautiful at night.
+夜、村の星はとても美しいです。
+🚶‍♂️ Satoshi plans to go hiking with his grandfather.
+サトシは祖父とハイキングに行くことを計画しています。
+🎁 He has bought some Japanese sweets as a souvenir.
+彼はお土産として和菓子を買いました。
+😊 He is looking forward to seeing them again.
+彼はまた彼らに会うことを楽しみにしています。
+📸 He will take many photos during his stay.
+彼は滞在中にたくさんの写真を撮るでしょう。
 
-👵 Have you ever visited your grandparents’ house?  
-あなたは祖父母の家を訪れたことがありますか？  
-🌄 What places have you visited in the countryside?  
-これまでにどんな田舎の場所を訪れましたか？  
-🍲 Is there someone who always cooks special food for you?  
-いつもあなたのために特別な料理を作ってくれる人はいますか？  
-📖 Have you heard any stories about the past from older people?  
-年配の人から昔の話を聞いたことがありますか？  
-🧳 What would you do if you stayed in a very quiet place?  
-とても静かな場所に泊まるとしたら、何をしますか？  
-🌌 Where are the stars brighter for you than in your town?  
-あなたの町より星が明るく見える場所はどこですか？  
-🎀 Had you given any gifts to relatives before junior high school?  
-中学生になる前に親戚に何か贈り物をしたことはありましたか？  
-🤗 Who has made you feel welcome when you visited them?  
-あなたが訪れたとき、歓迎してくれた人は誰ですか？  
-🏕️ What kind of place is more relaxing for you than the city?  
-街よりあなたにとってリラックスできる場所はどんなところですか？  
-🚗 If you could visit any relative now, who would you choose?  
-今誰か親戚を訪ねられるとしたら、誰を選びますか？`
+🏡 Do your grandparents live near your house?
+あなたの祖父母は家の近くに住んでいますか？
+🚅 How often do you visit your relatives?
+どのくらいの頻度で親戚を訪ねますか？
+🍅 Do you like eating vegetables?
+野菜を食べるのは好きですか？
+🌌 Have you ever seen a shooting star?
+流れ星を見たことがありますか？
+🚶‍♂️ Do you like hiking or walking in nature?
+ハイキングや自然の中を歩くのは好きですか？
+🎁 What souvenir would you buy for a foreign friend?
+外国の友達にどんなお土産を買いますか？
+👵 Is there a special food your family cooks?
+あなたの家族が作る特別な料理はありますか？
+📸 Do you like taking photos with your phone?
+スマホで写真を撮るのは好きですか？
+😊 Who are you looking forward to seeing?
+誰に会うのを楽しみにしていますか？
+🏞️ Do you prefer the city or the countryside?
+都会と田舎、どちらが好きですか？`
     },
 
     // Story 7 - A Study Abroad Dream
+    // Target Grammar: If clause / Auxiliaries (must, should)
     {
         title: "7. A Study Abroad Dream",
-        content: `✈️ Mei has dreamed of studying abroad since she was small.  
-メイは小さい頃から留学することを夢見てきました。  
-📺 She watches videos about foreign schools, which look very exciting.  
-彼女はとてもわくわくしそうな海外の学校の動画を見ています。  
-💰 She had started saving pocket money long before junior high school.  
-彼女は中学生になるずっと前から小遣いを貯め始めていました。  
-👩‍🏫 Her English teacher, who studied in Canada, often shares stories.  
-カナダに留学したことがある英語の先生がよく体験談を話してくれます。  
-💬 If Mei improves her English, she will apply for an exchange program.  
-メイが英語を上達させれば、彼女は交換留学プログラムに申し込みます。  
-📖 She studies longer now than she did in elementary school.  
-彼女は小学生のときより今のほうが長く勉強しています。  
-📚 Mei has already read several books in English.  
-メイはすでに何冊か英語の本を読みました。  
-😊 Her parents have begun to support her dream more seriously.  
-両親は彼女の夢を以前より真剣に応援し始めました。  
-🌍 She feels that the world is bigger than she thought before.  
-彼女は世界が以前考えていたよりずっと大きいと感じています。  
-🌟 This dream is pushing her to work harder every day.  
-この夢が彼女を毎日もっと頑張らせています。  
+        content: `✈️ Mei has a dream of studying in Canada.
+メイにはカナダに留学するという夢があります。
+🇨🇦 She thinks Canada is a beautiful and safe country.
+彼女はカナダが美しく安全な国だと思っています。
+📚 To achieve her dream, she must study English hard.
+夢を叶えるために、彼女は英語を一生懸命勉強しなければなりません。
+📺 She watches movies in English every weekend.
+彼女は毎週末、英語で映画を見ます。
+💰 Studying abroad costs a lot of money.
+留学には多額のお金がかかります。
+🗣️ If she goes to Canada, she will stay with a host family.
+もしカナダに行ったら、彼女はホストファミリーと滞在するつもりです。
+🤝 She wants to make friends from different countries.
+彼女はさまざまな国の友達を作りたいと思っています。
+📄 Her teacher told her to read more English books.
+先生は彼女にもっと英語の本を読むように言いました。
+🌟 She believes that this experience will change her life.
+彼女はこの経験が人生を変えると信じています。
+🗺️ Mei is excited to see the world.
+メイは世界を見ることにワクワクしています。
 
-🌐 Have you ever thought about studying abroad?  
-あなたは留学について考えたことがありますか？  
-🗺️ What countries have you wanted to visit?  
-今までどんな国に行ってみたいと思いましたか？  
-🎓 Is there a teacher who has studied in another country?  
-他の国で勉強したことがある先生はいますか？  
-📹 Have you watched any videos about schools in other countries?  
-他の国の学校についての動画を見たことがありますか？  
-🏠 What would you do if you lived in a foreign country for a year?  
-1年間外国に住むとしたら、何をしますか？  
-📈 Who studies harder than you among your friends?  
-友達の中で、誰があなたより一生懸命勉強していますか？  
-📑 What subjects are more important for you than others now?  
-今あなたにとって他の科目より大切な科目は何ですか？  
-💳 Had you saved any money by yourself before junior high?  
-中学生になる前に自分でお金を貯めたことはありましたか？  
-🙋‍♀️ Who has encouraged you to follow your dreams?  
-あなたの夢を追いかけるよう励ましてくれた人は誰ですか？  
-🇺🇳 If you could join an exchange program, which country would you choose?  
-交換留学に参加できるとしたら、どの国を選びますか？`
+✈️ Do you want to study abroad?
+あなたは留学したいですか？
+🇨🇦 Which country do you want to visit the most?
+一番訪れてみたい国はどこですか？
+📚 Why do you study English?
+なぜあなたは英語を勉強しますか？
+📺 What is your favorite movie?
+あなたの一番好きな映画は何ですか？
+🗣️ Would you like to stay with a host family?
+ホストファミリーと一緒に滞在してみたいですか？
+🤝 Do you have any friends who live in other countries?
+他の国に住んでいる友達はいますか？
+💰 Is it important to save money for the future?
+将来のためにお金を貯めることは大切ですか？
+📄 Do you enjoy reading books in English?
+英語で本を読むのは楽しいですか？
+🌟 What is your biggest dream?
+あなたの最大の夢は何ですか？
+🗺️ Do you think traveling is important?
+旅行は大切だと思いますか？`
     },
 
     // Story 8 - Starting a Blog
+    // Target Grammar: Present Perfect Continuous / Adjectives (-ing/-ed)
     {
         title: "8. Starting a Blog",
-        content: `💻 Ryo has started a blog about his daily life at school.  
-リョウは学校での毎日の生活についてブログを始めました。  
-⌨️ He writes short posts, which his friends enjoy reading.  
-彼は友達が読むのを楽しんでいる短い記事を書いています。  
-🧠 He had kept a diary on paper before creating the blog.  
-彼はブログを作る前に紙の日記をつけていました。  
-📸 He sometimes uploads photos that he has taken in class or at events.  
-彼はときどき、授業やイベントで撮った写真をアップロードします。  
-🌐 If more people read his blog, he will update it more often.  
-もっと多くの人が彼のブログを読めば、彼はもっと頻繁に更新するでしょう。  
-✍️ His writing is clearer now than it was last year.  
-彼の文章は去年より今のほうがわかりやすいです。  
-📨 Ryo has already received a few comments from other students.  
-リョウはすでに他の生徒からいくつかコメントを受け取りました。  
-😊 He feels happy when someone says they enjoyed his post.  
-誰かが記事を楽しんだと言ってくれると、彼はうれしく感じます。  
-🧑‍💻 The blog is becoming an important record of his school days.  
-そのブログは彼の学校生活の大切な記録になりつつあります。  
-🌟 He hopes to keep writing even after graduation.  
-彼は卒業後も書き続けたいと願っています。  
+        content: `💻 Ryo has been writing a blog for three months.
+リョウは3ヶ月間ブログを書いています。
+📝 He writes about his daily life and hobbies.
+彼は日常生活や趣味について書きます。
+📷 Sometimes, he uploads photos of his lunch.
+時々、彼は昼食の写真をアップロードします。
+🌐 It is exciting to get comments from strangers.
+見知らぬ人からコメントをもらうのはワクワクします。
+🖊️ Writing articles is a good way to practice writing.
+記事を書くことは、ライティングを練習する良い方法です。
+👀 He checks his blog every day to see the views.
+彼は閲覧数を見るために毎日ブログをチェックします。
+📉 At first, not many people read his blog.
+最初、あまり多くの人は彼のブログを読みませんでした。
+📈 But now, the number of readers is increasing.
+しかし今、読者の数は増えています。
+😊 Ryo is happy when people say his blog is funny.
+人々が彼のブログを面白いと言ってくれると、リョウは嬉しいです。
+🚀 He wants to become a famous blogger someday.
+彼はいつか有名なブロガーになりたいと思っています。
 
-📝 Have you ever written a blog or a diary?  
-あなたはブログや日記を書いたことがありますか？  
-📷 What kind of photos have you shared with others?  
-今までどんな写真を他の人と共有しましたか？  
-📖 Is there something you enjoy reading on the internet?  
-インターネットで読むのが好きなものはありますか？  
-📬 Have you received comments or messages about your work before?  
-自分の作品についてコメントやメッセージをもらったことがありますか？  
-⌛ What would you do if many people started reading your posts?  
-多くの人があなたの記事を読み始めたら、あなたはどうしますか？  
-🧾 What is easier for you than writing a long essay?  
-長いエッセイを書くよりあなたにとって簡単なことは何ですか？  
-📚 Had you written anything regularly before junior high school?  
-中学生になる前に何かを定期的に書いていましたか？  
-💡 Who has inspired you to create something, like stories or pictures?  
-物語や絵など、何かを作るようにあなたを刺激してくれた人は誰ですか？  
-🖊️ What topics are more interesting for you to write about than others?  
-他の話題よりあなたにとって書くのが面白いトピックは何ですか？  
-🗂️ If you started a blog, what would you write about?  
-もしブログを始めるなら、何について書きますか？`
+💻 Do you read any blogs or websites often?
+あなたはよくブログやウェブサイトを読みますか？
+📝 Do you keep a diary?
+あなたは日記をつけていますか？
+📷 Do you like posting photos on social media?
+SNSに写真を投稿するのは好きですか？
+🌐 Have you ever written a comment on a video?
+動画にコメントを書いたことはありますか？
+🖊️ Do you prefer writing by hand or typing?
+手書きとタイピング、どちらが好きですか？
+👀 How much time do you spend on the internet?
+インターネットにどれくらいの時間を費やしますか？
+😊 What makes you feel excited?
+何があなたをワクワクさせますか？
+📉 Have you ever started something and stopped?
+何かを始めてやめてしまったことはありますか？
+🚀 Do you want to be famous? Why?
+有名になりたいですか？なぜですか？
+📈 What kind of videos do you watch online?
+オンラインでどんな種類の動画を見ますか？`
     },
 
-    // Story 9 - Training for a Sports Day
+    // Story 9 - Training for Sports Day
+    // Target Grammar: Because / Comparative (Adverbs)
     {
-        title: "9. Training for a Sports Day",
-        content: `🏃‍♂️ Koki has been training for the school sports day.  
-コウキは学校の運動会のためにずっと練習しています。  
-🏫 He practices running on the ground, which is behind the school building.  
-彼は校舎の裏にあるグラウンドで走る練習をしています。  
-📅 He had not cared much about sports before this year.  
-彼は今年になる前はスポーツにあまり関心がありませんでした。  
-👨‍🏫 His PE teacher, who is strict, gives him a clear schedule.  
-厳しい体育の先生が彼にわかりやすい練習計画を渡します。  
-🥇 If he does his best, he will join the relay team.  
-全力を尽くせば、彼はリレーチームに入ります。  
-🏃‍♂️ He can run farther now than he could two months ago.  
-彼は2か月前より今のほうが遠くまで走ることができます。  
-💦 Koki has already improved his time in the 100-meter race.  
-コウキはすでに100メートル走のタイムを伸ばしました。  
-😊 His friends have started cheering for him during practice.  
-友達は練習中に彼のことを応援し始めました。  
-🎉 Sports day is becoming more exciting for him than ever.  
-運動会はこれまでより彼にとってずっと楽しみになっています。  
-🌟 He has learned that steady effort really works.  
-彼は地道な努力が本当に役に立つと学びました。  
+        title: "9. Training for Sports Day",
+        content: `🏃‍♂️ Koki is training hard because Sports Day is coming.
+運動会が近づいているので、コウキは一生懸命トレーニングしています。
+👟 He runs faster than any other student in his class.
+彼はクラスの他のどの生徒よりも速く走ります。
+🥇 He wants to win the 100-meter race.
+彼は100メートル走で勝ちたいと思っています。
+💦 Practice is very tough, but he never gives up.
+練習はとてもきついですが、彼は決してあきらめません。
+🥤 Drinking sports drinks helps him feel better.
+スポーツドリンクを飲むことは、彼の気分を良くするのに役立ちます。
+👥 His friends cheer for him during practice.
+練習中、友達が彼を応援してくれます。
+👟 He bought a new pair of running shoes yesterday.
+彼は昨日、新しいランニングシューズを１足買いました。
+💪 He feels that his legs are getting stronger.
+彼は足が強くなっていると感じています。
+🎉 Koki is excited to run in front of his parents.
+コウキは両親の前で走ることにワクワクしています。
+🌟 He hopes his team will win the relay.
+彼は自分のチームがリレーで勝つことを願っています。
 
-⚽ Have you ever trained hard for a sports event?  
-あなたはスポーツのイベントのために一生懸命練習したことがありますか？  
-🏅 What kinds of sports have you tried before?  
-今までどんなスポーツを試したことがありますか？  
-📆 Is there a school event you look forward to every year?  
-毎年楽しみにしている学校のイベントはありますか？  
-🚶‍♂️ Have you exercised more this year than last year?  
-あなたは今年、去年より多く運動していますか？  
-🎯 What would you do if you joined a relay team?  
-リレーチームに入ったら、あなたは何をしますか？  
-💪 Who is stronger or faster than you among your friends?  
-友達の中で、誰があなたより強かったり速かったりしますか？  
-🥤 What helps you feel better after hard practice?  
-きつい練習の後であなたの体調をよくしてくれるものは何ですか？  
-🏃‍♀️ Had you joined any races before junior high school?  
-中学生になる前に何かのレースに出たことはありましたか？  
-📣 Who has cheered for you when you tried something difficult?  
-あなたが難しいことに挑戦したとき、誰があなたを応援してくれましたか？  
-🧗‍♂️ What kind of challenge is more exciting for you than studying?  
-勉強よりあなたにとってワクワクする挑戦はどんなものですか？`
+🏃‍♂️ Do you like Sports Day?
+あなたは運動会が好きですか？
+👟 Can you run fast?
+あなたは速く走れますか？
+🥇 Have you ever won a prize or a medal?
+賞やメダルを取ったことはありますか？
+💦 What do you do when you feel tired?
+疲れたとき、あなたは何をしますか？
+🥤 What is your favorite drink after sports?
+スポーツの後の好きな飲み物は何ですか？
+👥 Do you like team sports or individual sports?
+チームスポーツと個人スポーツ、どちらが好きですか？
+💪 Do you do any muscle training?
+筋力トレーニングをしていますか？
+🎉 Does your family come to see your school events?
+家族はあなたの学校行事を見に来ますか？
+🌟 Do you think winning is the most important thing?
+勝つことが一番大事なことだと思いますか？
+👟 What brand of shoes do you like?
+どのブランドの靴が好きですか？`
     },
 
     // Story 10 - Working on a Group Project
+    // Target Grammar: Make + Object + Adjective / Each other
     {
         title: "10. Working on a Group Project",
-        content: `🧑‍🤝‍🧑 Hana has been working on a group project in science class.  
-ハナは理科の授業でグループプロジェクトに取り組んでいます。  
-🔬 Her group is making a poster about the human body, which is a big topic.  
-彼女のグループは大きなテーマである人体についてのポスターを作っています。  
-📚 She had read several science articles before the first meeting.  
-彼女は最初の話し合いの前にいくつかの科学記事を読んでいました。  
-👨‍🏫 Their teacher, who likes experiments, gave them useful materials.  
-実験が好きな先生が彼らに役に立つ資料をくれました。  
-🧩 If each member does their part, the project will be successful.  
-メンバーそれぞれが自分の役割を果たせば、このプロジェクトは成功するでしょう。  
-🗣️ Hana speaks more actively in the group than she does in normal class.  
-ハナは普通の授業よりグループの中で積極的に話します。  
-📊 They have already decided on the design of the poster.  
-彼らはすでにポスターのデザインを決めました。  
-😊 Her classmates have shared many good ideas.  
-クラスメイトはたくさんの良いアイデアを出しました。  
-🏁 The deadline is closer now than last week.  
-締め切りは先週より今のほうが近づいています。  
-🌟 Hana is learning how to cooperate with others.  
-ハナは他の人と協力する方法を学んでいます。  
+        content: `🧪 Hana is working on a science project with her group.
+ハナはグループで科学のプロジェクトに取り組んでいます。
+🎨 They decided to make a big poster about space.
+彼らは宇宙についての大きなポスターを作ることに決めました。
+✂️ Hana is good at drawing, so she draws the pictures.
+ハナは絵を描くのが得意なので、彼女が絵を描きます。
+🗣️ The members talk to each other to share ideas.
+メンバーはアイデアを共有するために互いに話し合います。
+🕰️ Sometimes it is hard to finish the work on time.
+時々、時間通りに作業を終えるのは難しいです。
+😠 One boy didn't do his work, which made Hana angry.
+ある男の子が自分の仕事をせず、それはハナを怒らせました。
+🤝 However, they learned to cooperate in the end.
+しかし、最後には彼らは協力することを学びました。
+📄 The poster looks very colorful and interesting.
+ポスターはとてもカラフルで面白そうに見えます。
+👩‍🏫 The teacher praised their good teamwork.
+先生は彼らの良いチームワークを褒めました。
+🌟 Hana felt happy to complete the project.
+ハナはプロジェクトを完了して嬉しく感じました。
 
-🤝 Have you ever worked on a group project?  
-あなたはグループプロジェクトに取り組んだことがありますか？  
-📖 What kinds of topics have you researched for school?  
-学校のためにどんなテーマを調べたことがありますか？  
-📂 Is there a teacher who has given you helpful materials?  
-役に立つ資料をくれた先生はいますか？  
-📅 Have you finished a task just before the deadline?  
-締め切りの直前にタスクを終えたことがありますか？  
-🧠 What would you do if one member didn’t do their work?  
-もし1人のメンバーが仕事をしなかったら、あなたは何をしますか？  
-🗣️ Who speaks more actively than you during group work?  
-グループ活動のとき、誰があなたより積極的に話しますか？  
-🧪 What is more interesting for you than just reading a textbook?  
-ただ教科書を読むことよりあなたにとって面白いことは何ですか？  
-🧾 Had you made any posters before junior high school?  
-中学生になる前にポスターを作ったことはありましたか？  
-💡 Who has given you the best ideas during a project?  
-プロジェクトの間に最高のアイデアをくれた人は誰ですか？  
-👥 If you could choose your group members, what kind of people would you choose?  
-グループメンバーを選べるなら、どんな人を選びますか？`
-},
-
+🧪 Do you like science class?
+理科の授業は好きですか？
+🎨 Are you good at drawing or painting?
+絵を描くのは得意ですか？
+🗣️ Do you like working in a group?
+グループで作業するのは好きですか？
+🕰️ Are you usually on time for appointments?
+普段、約束の時間に間に合いますか？
+😠 What makes you feel angry?
+何があなたを怒らせますか？
+🤝 Is teamwork important in society?
+社会においてチームワークは大切ですか？
+📄 Have you ever made a poster?
+ポスターを作ったことがありますか？
+👩‍🏫 Do you like presenting in front of the class?
+クラスの前で発表するのは好きですか？
+🌟 How do you feel when you finish a difficult task?
+難しい課題を終えたとき、どんな気分になりますか？
+🗣️ What creates a good group leader?
+何が良いグループリーダーを作りますか？`
+    },
+// eikenpre2_part2.js - Stories 11–30
+const eikenpre2_part2 = [
     // Story 11 - A School Festival Day
+    // Target Grammar: Passive Voice / Be covered with
     {
         title: "11. A School Festival Day",
-        content: `🎪 Yuna has been preparing for the school festival all week.  
-ユナは今週ずっと学校祭の準備をしています。  
-🎨 Her class is making an art gallery, which will be in their classroom.  
-彼女のクラスは教室で行うアートギャラリーを作っています。  
-🖼️ She had never painted such a big picture before this project.  
-彼女はこのプロジェクトの前にこんな大きな絵を描いたことがありませんでした。  
-👩‍🏫 Their homeroom teacher, who loves art, gives them good advice.  
-美術が大好きな担任の先生が彼らに良いアドバイスをしてくれます。  
-📅 If everything is ready on time, their class will open the gallery first.  
-すべてが時間通りに準備できれば、クラスは最初にギャラリーを開きます。  
-🎭 Yuna thinks the festival is more exciting than a normal school day.  
-ユナは学校祭は普通の学校の日よりワクワクすると考えています。  
-🧹 She has already helped clean the room and put up decorations.  
-彼女はすでに部屋の掃除を手伝い、飾り付けをしました。  
-😊 Her classmates have worked hard together without complaining.  
-クラスメイトは文句を言わずに一生懸命協力してきました。  
-📸 Yuna plans to take many photos during the festival.  
-ユナは学校祭の間にたくさん写真を撮るつもりです。  
-🌟 She hopes this year’s festival will be the best one ever.  
-彼女は今年の学校祭が今までで一番良いものになることを願っています。  
+        content: `🎪 Yuna is very busy preparing for the school festival.
+ユナは学園祭の準備でとても忙しいです。
+🎨 Her classroom is decorated with colorful papers.
+彼女の教室はカラフルな紙で飾られています。
+🖼️ The students decided to make an art gallery.
+生徒たちはアートギャラリーを作ることに決めました。
+🖌️ Yuna enjoys painting pictures with her friends.
+ユナは友達と絵を描くのを楽しんでいます。
+👩‍🏫 Her teacher said, "Let's do our best together."
+彼女の先生は「一緒に全力を尽くしましょう」と言いました。
+🕒 They have been working since early this morning.
+彼らは今朝早くからずっと作業しています。
+🧹 The floor must be cleaned before the guests arrive.
+お客さんが到着する前に、床を掃除しなければなりません。
+😊 Yuna is excited to show her art to her parents.
+ユナは両親に自分のアートを見せることにワクワクしています。
+📸 Many photos will be taken during the festival.
+お祭りの間、たくさんの写真が撮られるでしょう。
+🌟 She thinks that school events are important memories.
+彼女は学校行事は大切な思い出だと考えています。
 
-🎡 Have you ever taken part in a school festival?  
-あなたは学校祭に参加したことがありますか？  
-🎨 What kind of display or show would you like to make?  
-どんな展示や出し物を作ってみたいですか？  
-🧑‍🎨 Is there someone in your class who is good at drawing or painting?  
-あなたのクラスに絵やペイントが得意な人はいますか？  
-🧹 Have you helped decorate a room for an event before?  
-イベントのために部屋を飾ったことがありますか？  
-🕒 What would you do if you didn’t have enough time before an event?  
-イベントの前に時間が足りなかったら、あなたはどうしますか？  
-🎉 Which school events are more fun for you than regular classes?  
-あなたにとってどの学校行事が普通の授業より楽しいですか？  
-📷 Had you taken many photos at school events before junior high school?  
-中学生になる前に学校行事でたくさん写真を撮ったことはありましたか？  
-👭 Who has worked hard together with you on a big project?  
-大きなプロジェクトであなたと一緒に一生懸命働いてくれたのは誰ですか？  
-🖌️ What kind of art is more interesting for you than just looking at pictures in a book?  
-本の絵を見るだけより、あなたにとってもっと面白いアートはどんなものですか？  
-🏫 If your class could open any kind of booth, what would you choose?  
-クラスがどんな出し物でもできるとしたら、何を選びますか？`
+🎪 Do you like school festivals?
+あなたは学園祭が好きですか？
+🎨 What did your class do for the last festival?
+あなたのクラスは前の学園祭で何をしましたか？
+🖌️ Are you good at painting or drawing?
+あなたは絵を描くのが得意ですか？
+🖼️ Do you like going to art museums?
+美術館に行くのは好きですか？
+🧹 Do you help clean your classroom?
+あなたは教室の掃除を手伝いますか？
+📸 Do you like taking photos of your friends?
+友達の写真を撮るのは好きですか？
+😊 Who do you want to invite to your school festival?
+学園祭に誰を招待したいですか？
+🕒 Have you ever stayed at school late?
+学校に遅くまで残ったことはありますか？
+🌟 What is your best memory from junior high school?
+中学校での一番の思い出は何ですか？
+🎭 Do you prefer watching shows or doing them?
+ショーを見るのとやるのとでは、どちらが好きですか？`
     },
 
     // Story 12 - A Trip to the Aquarium
+    // Target Grammar: Look + Adjective / Interested in
     {
         title: "12. A Trip to the Aquarium",
-        content: `🐟 Takumi visited a large aquarium with his family last Sunday.  
-タクミは先週の日曜日に家族と一緒に大きな水族館を訪れました。  
-🦈 He saw many fish and sharks, which were swimming in huge tanks.  
-彼は巨大な水槽で泳いでいるたくさんの魚やサメを見ました。  
-📷 He had charged his camera the night before the trip.  
-彼は旅行の前の晩にカメラを充電していました。  
-👨‍👩‍👦 His father, who likes the sea, explained the names of some fish.  
-海が好きな父は、いくつかの魚の名前を説明してくれました。  
-🐬 If he goes there again, he will watch the dolphin show.  
-またそこへ行けば、彼はイルカショーを見るつもりです。  
-😲 The jellyfish corner was more beautiful than he expected.  
-クラゲのコーナーは彼が思っていたよりも美しかったです。  
-📖 Takumi has read books about sea animals since elementary school.  
-タクミは小学生のころから海の生き物の本を読んできました。  
-😊 He felt happy because he could see real animals, not just pictures.  
-彼は写真だけでなく本物の生き物を見ることができてうれしかったです。  
-🎫 He bought a small keychain as a souvenir.  
-彼はおみやげとして小さなキーホルダーを買いました。  
-🌊 The trip made him want to learn more about the ocean.  
-その旅行は彼に海についてもっと学びたいと思わせました。  
+        content: `🐟 Takumi visited a large aquarium last Sunday.
+タクミは先週の日曜日に大きな水族館を訪れました。
+🦈 He was surprised to see the big sharks.
+彼は大きなサメを見て驚きました。
+🌊 The water in the tank looked very clean and blue.
+水槽の水はとてもきれいで青く見えました。
+📷 Taking photos of fish is difficult because they move fast.
+魚は速く動くので、写真を撮るのは難しいです。
+🐬 The dolphin show was the most exciting part.
+イルカショーは最もワクワクする部分でした。
+🐧 He saw penguins that were walking on the ice.
+彼は氷の上を歩いているペンギンを見ました。
+🧠 Takumi is interested in sea animals.
+タクミは海の生き物に興味を持っています。
+🎁 He bought a dolphin strap for his sister.
+彼は妹のためにイルカのストラップを買いました。
+😊 It is fun to learn about life under the sea.
+海中の生物について学ぶのは楽しいです。
+🌟 He wants to go there again next summer.
+彼は来年の夏にまたそこへ行きたいと思っています。
 
-🐠 Have you ever visited an aquarium or a zoo?  
-あなたは水族館か動物園を訪れたことがありますか？  
-📚 What animals have you studied or read about before?  
-あなたはこれまでにどんな動物について勉強したり読んだりしましたか？  
-👨‍👩‍👧 Is there someone in your family who likes animals a lot?  
-あなたの家族の中に動物が大好きな人はいますか？  
-📷 Have you taken pictures of animals or nature?  
-動物や自然の写真を撮ったことがありますか？  
-🚍 What would you do if your class went on a trip to the aquarium?  
-もしクラスで水族館に行くなら、あなたは何をしますか？  
-✨ Which places are more interesting for you than a shopping mall?  
-あなたにとってショッピングモールより面白い場所はどこですか？  
-🎁 Had you bought souvenirs on school trips before junior high school?  
-中学生になる前に、学校の旅行でおみやげを買ったことがありますか？  
-🌍 Who has taught you something new about nature or the environment?  
-自然や環境について新しいことを教えてくれた人は誰ですか？  
-🏖️ What is more relaxing for you than staying at home on a holiday?  
-休日に家にいることより、あなたにとってもっとリラックスできることは何ですか？  
-📖 If you could learn more about one animal, which would you choose?  
-もし一つの動物についてもっと学べるなら、どれを選びますか？`
+🐟 Do you like going to aquariums?
+あなたは水族館に行くのが好きですか？
+🦈 Which do you like better, sharks or dolphins?
+サメとイルカ、どちらが好きですか？
+📷 Is it difficult to take photos of animals?
+動物の写真を撮るのは難しいですか？
+🌊 Do you know how to swim?
+あなたは泳ぎ方を知っていますか？
+🐧 What is your favorite sea animal?
+一番好きな海の生き物は何ですか？
+🎁 Do you usually buy souvenirs when you travel?
+旅行するとき普段お土産を買いますか？
+🧠 Are you interested in biology or science?
+あなたは生物学や科学に興味がありますか？
+😊 Who did you go with on your last trip?
+この前の旅行は誰と行きましたか？
+🌟 Where do you want to go next summer?
+次の夏はどこへ行きたいですか？
+🐠 Have you ever had a fish as a pet?
+魚をペットとして飼ったことはありますか？`
     },
 
     // Story 13 - Learning to Cook
+    // Target Grammar: How to... / Give + Person + Thing
     {
         title: "13. Learning to Cook",
-        content: `🍳 Miki has started learning how to cook simple dishes.  
-ミキは簡単な料理の作り方を習い始めました。  
-👩‍🍳 Her mother, who is a good cook, teaches her step by step.  
-料理が上手な母が、一つ一つ丁寧に教えてくれます。  
-🥗 She had only used a microwave before she began these lessons.  
-彼女はこのレッスンを始める前は電子レンジしか使ったことがありませんでした。  
-🍛 Last weekend, she made curry, which her family really enjoyed.  
-先週末、彼女は家族がとても喜んだカレーを作りました。  
-🔥 If she is careful, she will not burn the food.  
-気をつければ、彼女は料理を焦がさないでしょう。  
-🔪 She is now faster at cutting vegetables than she was two weeks ago.  
-彼女は今、2週間前より野菜を切るのが速くなっています。  
-📒 Miki has been writing her favorite recipes in a notebook.  
-ミキはお気に入りのレシピをノートに書きためています。  
-😊 Her father has praised her for helping with dinner.  
-父は夕食の手伝いをしている彼女を褒めました。  
-🍱 She plans to make her own lunch box someday.  
-彼女はいつか自分でお弁当を作るつもりです。  
-🌟 Cooking is becoming one of her new hobbies.  
-料理は彼女の新しい趣味の一つになりつつあります。  
+        content: `🍳 Miki has started learning how to cook.
+ミキは料理の仕方を学び始めました。
+👩‍🍳 Her mother teaches her how to make miso soup.
+彼女の母は彼女に味噌汁の作り方を教えます。
+🔪 Cutting vegetables carefully is very important.
+野菜を注意深く切ることはとても重要です。
+🍛 Last weekend, she made curry for her family.
+先週末、彼女は家族のためにカレーを作りました。
+😋 Her father said, "This is delicious!"
+彼女の父は「これはおいしい！」と言いました。
+🔥 Miki must be careful when she uses fire.
+ミキは火を使うとき気をつけなければなりません。
+📖 She often reads recipes on the internet.
+彼女はよくインターネットでレシピを読みます。
+🍱 She wants to make her own bento for school.
+彼女は学校用に自分のお弁当を作りたいと思っています。
+😊 Cooking makes her feel happy and relaxed.
+料理は彼女を幸せでリラックスした気分にさせます。
+🌟 One day, she wants to cook a meal for her friends.
+いつか、彼女は友達のために食事を作りたいと思っています。
 
-🍽️ Have you ever cooked a meal by yourself?  
-あなたは自分で食事を作ったことがありますか？  
-👨‍🍳 Who usually cooks in your house?  
-あなたの家ではふだん誰が料理をしますか？  
-🥕 What dishes have you tried making before?  
-これまでにどんな料理を作ってみたことがありますか？  
-📖 Have you followed a recipe from a book or the internet?  
-本やインターネットのレシピに従って作ったことがありますか？  
-🥣 What would you do if you made a mistake while cooking?  
-料理中に失敗してしまったら、あなたはどうしますか？  
-🍓 Which homemade foods are more delicious to you than store-bought ones?  
-あなたにとって、買ったものよりおいしい手作りの食べ物は何ですか？  
-📝 Had you helped with cooking before you entered junior high school?  
-中学生になる前に料理を手伝ったことはありましたか？  
-👏 Who has praised you when you helped in the kitchen?  
-台所を手伝ったとき、あなたを褒めてくれた人は誰ですか？  
-🍱 What kind of lunch would you like to make for yourself?  
-自分のためにどんなお弁当を作ってみたいですか？  
-🥗 If you could learn one special dish, what would it be?  
-もし一つ特別な料理を学べるなら、それは何ですか？`
+🍳 Do you cook at home?
+あなたは家で料理をしますか？
+🍛 What is your favorite food to eat?
+食べるのが一番好きな食べ物は何ですか？
+🔪 Can you use a knife well?
+あなたは包丁を上手に使えますか？
+👩‍🍳 Who usually cooks dinner in your family?
+あなたの家族では誰が普段夕食を作りますか？
+🍱 Do you bring a bento to school or buy lunch?
+学校にお弁当を持っていきますか、それとも昼食を買いますか？
+📖 Do you watch cooking videos on YouTube?
+YouTubeで料理の動画を見ますか？
+🔥 Have you ever burned food?
+食べ物を焦がしたことはありますか？
+😋 What food do you dislike?
+嫌いな食べ物は何ですか？
+🌟 If you could cook anything, what would you make?
+もし何でも作れるなら、何を作りますか？
+😊 Do you think cooking is a useful skill?
+料理は役に立つスキルだと思いますか？`
     },
 
     // Story 14 - A Rainy Day at Home
+    // Target Grammar: Present Perfect Continuous / Stop -ing
     {
         title: "14. A Rainy Day at Home",
-        content: `🌧️ It has been raining since early this morning.  
-今朝早くからずっと雨が降っています。  
-🏠 Ayaka is staying at home, which feels warmer than outside.  
-アヤカは家で過ごしていて、そこは外よりあたたかく感じます。  
-📺 She had planned to go shopping with a friend before she saw the weather.  
-彼女は天気を見る前は、友達と買い物に行く予定を立てていました。  
-📚 Instead, she is reading a novel that she borrowed from the library.  
-その代わりに、彼女は図書館で借りた小説を読んでいます。  
-☕ If the rain stops in the afternoon, she will walk to a nearby café.  
-午後に雨がやめば、彼女は近くのカフェまで歩いて行くつもりです。  
-🛋️ She thinks a quiet day at home is sometimes better than going out.  
-彼女は、家で静かに過ごす一日が外出するより良いときもあると考えています。  
-📖 Ayaka has already finished half of the book.  
-アヤカはすでに本の半分を読み終えました。  
-😊 Her mother has made hot cocoa for her.  
-母は彼女のためにホットココアを作ってくれました。  
-🎧 She listens to soft music while she is reading.  
-彼女は本を読みながら静かな音楽を聴いています。  
-🌈 She feels that this rainy day is turning into a relaxing time.  
-彼女は、この雨の日がリラックスできる時間になっていると感じています。  
+        content: `🌧️ It has been raining since this morning.
+今朝からずっと雨が降っています。
+🏠 Ayaka decided to stay at home today.
+アヤカは今日、家にいることに決めました。
+🛍️ She wanted to go shopping, but she stopped thinking about it.
+彼女は買い物に行きたかったですが、それについて考えるのをやめました。
+📚 Instead, she started reading a new book.
+その代わりに、彼女は新しい本を読み始めました。
+☕ Drinking hot tea makes her feel warm.
+温かいお茶を飲むことは彼女を温かい気分にさせます。
+🎧 She enjoys listening to quiet music in her room.
+彼女は部屋で静かな音楽を聴くのを楽しみます。
+💤 Sometimes, rainy days make her sleepy.
+時々、雨の日は彼女を眠くさせます。
+📞 She talked with her friend on the phone for an hour.
+彼女は友達と電話で1時間話しました。
+🌈 She hopes the weather will be nice tomorrow.
+彼女は明日天気が良くなることを願っています。
+😊 Spending time alone is not bad.
+一人で時間を過ごすのも悪くありません。
 
-📚 Have you ever spent a whole day at home because of the weather?  
-あなたは天気のせいで一日中家で過ごしたことがありますか？  
-📖 What kinds of books have you enjoyed reading?  
-今までどんな本を楽しく読んできましたか？  
-🧣 Is there something that makes you feel warm and comfortable at home?  
-家であなたをあたたかく心地よくしてくれるものはありますか？  
-🛍️ Had you made any plans that were canceled by rain before?  
-雨のせいでキャンセルになった予定は今までにありましたか？  
-☕ What would you do if you had a free rainy afternoon?  
-雨の午後に自由な時間があったら、何をしますか？  
-🏡 Which do you like more, staying at home or going out on weekends?  
-週末は家で過ごすのと外出するのと、どちらが好きですか？  
-🎶 What kind of music is more relaxing for you than loud songs?  
-大きな音の曲より、あなたにとってもっとリラックスできる音楽はどんなものですか？  
-📘 Have you ever borrowed something interesting from a library?  
-図書館で何か面白いものを借りたことがありますか？  
-👩‍👧 Who has made something warm for you, like soup or a drink?  
-スープや飲み物など、あたたかいものを作ってくれた人は誰ですか？  
-🌦️ If you could choose the weather for tomorrow, what would it be?  
-もし明日の天気を選べるなら、どんな天気にしますか？`
+🌧️ What do you do on rainy days?
+雨の日には何をしますか？
+🏠 Do you like staying home or going out?
+家にいるのと外出するのと、どちらが好きですか？
+📚 Do you read books often? What kind?
+よく本を読みますか？どんな種類ですか？
+☕ What is your favorite hot drink?
+一番好きな温かい飲み物は何ですか？
+🎧 Do you listen to music while studying?
+勉強中に音楽を聴きますか？
+💤 Do you take naps on weekends?
+週末に昼寝をしますか？
+📞 How long do you usually talk on the phone?
+普段どれくらい電話で話しますか？
+🌈 Which season do you like the best?
+どの季節が一番好きですか？
+☔ Do you carry an umbrella every day?
+毎日傘を持ち歩きますか？
+😊 Do you feel lonely when you are alone?
+一人でいるとき寂しく感じますか？`
     },
 
     // Story 15 - Practicing an Instrument
+    // Target Grammar: Comparative / Want to be
     {
         title: "15. Practicing an Instrument",
-        content: `🎻 Shun has been practicing the violin after school every day.  
-シュンは放課後毎日バイオリンの練習をしています。  
-🏠 He practices in his room, which is on the second floor of his house.  
-彼は家の2階にある自分の部屋で練習しています。  
-🎼 He had learned the basics from a music school when he was younger.  
-彼はもっと若いころに音楽教室で基礎を習っていました。  
-👨‍👩‍👦 His parents, who love classical music, are happy to hear him improve.  
-クラシック音楽が好きな両親は、彼の上達を聞いて喜んでいます。  
-🎵 If he keeps practicing, he will join the local youth orchestra.  
-練習を続ければ、彼は地元のジュニアオーケストラに入るでしょう。  
-⏱️ He can play longer pieces now than he could last year.  
-彼は去年より今のほうが長い曲を演奏できます。  
-📱 Sometimes he records his playing and listens to it later.  
-彼はときどき自分の演奏を録音して、あとで聞きます。  
-😊 Shun has already learned three new songs this month.  
-シュンは今月すでに3曲の新しい曲を覚えました。  
-🎶 He feels proud when a difficult part sounds smooth.  
-難しい部分がなめらかに聞こえるとき、彼は誇りに感じます。  
-🌟 Music is becoming an important part of his identity.  
-音楽は彼の大切な一部になりつつあります。  
+        content: `🎻 Shun practices the violin every day after school.
+シュンは放課後毎日バイオリンを練習します。
+🏠 He usually practices in his room for two hours.
+彼はたいてい自分の部屋で2時間練習します。
+🎶 Playing the violin is more difficult than playing the piano.
+バイオリンを弾くことはピアノを弾くことより難しいです。
+🎼 However, he loves the beautiful sound of the violin.
+しかし、彼はバイオリンの美しい音が大好きです。
+👨‍👩‍👦 His parents always encourage him to keep trying.
+彼の両親はいつも、挑戦し続けるよう彼を励まします。
+🏆 He wants to be a professional musician in the future.
+彼は将来プロの音楽家になりたいと思っています。
+📅 Next month, he has an important concert.
+来月、彼には重要なコンサートがあります。
+🎵 He has memorized all the notes for the song.
+彼はその曲のすべての音符を暗記しました。
+😊 Shun feels happy when he plays well.
+シュンは上手に弾けたとき、嬉しく感じます。
+🌟 Music is the most important thing in his life.
+音楽は彼の人生で最も重要なものです。
 
-🎸 Have you ever learned to play an instrument?  
-あなたは楽器の弾き方を習ったことがありますか？  
-🎧 What kind of music have you listened to the most?  
-今まで一番よく聞いてきた音楽はどんなものですか？  
-🏫 Is there a music club or band at your school?  
-あなたの学校に音楽クラブやバンドはありますか？  
-📼 Have you recorded yourself doing something, like playing or speaking?  
-演奏やスピーチなど、自分のしていることを録音したことがありますか？  
-🎯 What would you do if you could perform on a big stage?  
-大きなステージで演奏できるとしたら、何をしますか？  
-🎶 Which is more enjoyable for you, listening to music or making music?  
-音楽を聴くのと演奏するのとでは、あなたにとってどちらのほうが楽しいですか？  
-📆 Had you taken any music lessons before junior high school?  
-中学生になる前に音楽のレッスンを受けたことはありましたか？  
-👏 Who has supported you while you practiced something difficult?  
-あなたが難しいことを練習しているとき、支えてくれた人は誰ですか？  
-🎼 What kind of song would you like to play perfectly?  
-完璧に演奏してみたい曲はどんなものですか？  
-🎻 If you could start a new instrument now, which one would you choose?  
-今新しい楽器を始められるとしたら、どれを選びますか？`
+🎻 Have you ever played the violin?
+バイオリンを弾いたことはありますか？
+🎶 Is it difficult for you to read music?
+楽譜を読むのはあなたにとって難しいですか？
+🎼 Do you prefer classical music or pop music?
+クラシック音楽とポップス、どちらが好きですか？
+👨‍👩‍👦 Do your parents support your hobbies?
+ご両親はあなたの趣味を応援してくれますか？
+🏆 What do you want to be in the future?
+将来何になりたいですか？
+📅 Do you get nervous before a test or concert?
+テストやコンサートの前に緊張しますか？
+🎵 Can you sing a song in English?
+英語で歌を歌えますか？
+🏠 Where do you usually study or practice?
+普段どこで勉強や練習をしますか？
+😊 What makes you feel proud of yourself?
+何があなたに自分を誇らしく感じさせますか？
+🌟 Do you have a favorite musician?
+好きな音楽家はいますか？`
     },
 
     // Story 16 - Cleaning the Local Park
+    // Target Grammar: Passive Voice / Be glad to
     {
         title: "16. Cleaning the Local Park",
-        content: `🌳 A volunteer group has been cleaning the local park once a month.  
-あるボランティアグループは月に一度、近所の公園を掃除しています。  
-🧒 Riku joined them for the first time last weekend.  
-リクは先週末、初めてその活動に参加しました。  
-🗑️ He had only walked through the park before, without thinking about trash.  
-彼はそれまで、公園のゴミについて考えずに通り抜けるだけでした。  
-👨‍🦳 The leader, who is an elderly man, kindly explained the rules.  
-リーダーである年配の男性が、親切にルールを説明しました。  
-🧤 If everyone picks up a little bit of trash, the park will stay clean.  
-全員が少しずつゴミを拾えば、公園はきれいなままになります。  
-🚮 Riku was surprised that the bags became heavier than he expected.  
-リクはゴミ袋が思っていたより重くなったことに驚きました。  
-😊 He has felt closer to his neighborhood since that day.  
-彼はその日以来、自分の近所にもっと親しみを感じています。  
-🌼 The flowers in the park look more beautiful without trash around them.  
-公園の花は、周りにゴミがないほうがもっと美しく見えます。  
-👨‍👩‍👧‍👦 Some families have thanked the group for their work.  
-何家族かが、そのグループの活動に感謝してくれました。  
-🌟 Riku has decided to join the cleanup again next month.  
-リクは来月も掃除に参加することを決めました。  
+        content: `🌳 Riku joined a volunteer group last Saturday.
+リクは先週の土曜日にボランティアグループに参加しました。
+🧤 They went to the local park to pick up trash.
+彼らはゴミを拾うために地元の公園へ行きました。
+🗑️ Many plastic bottles were found under the benches.
+多くのペットボトルがベンチの下で見つかりました。
+♻️ The trash must be separated into different bags.
+ゴミは別々の袋に分別されなければなりません。
+👴 An old man said to Riku, "Thank you for your hard work."
+あるお年寄りがリクに「頑張ってくれてありがとう」と言いました。
+😊 Riku was glad to hear those kind words.
+リクはその優しい言葉を聞いて嬉しかったです。
+🌿 Now, the park looks much cleaner than before.
+今、公園は以前よりずっときれいに見えます。
+🤝 Working together with neighbors is a good experience.
+近所の人たちと協力することは良い経験です。
+🌍 Riku thinks we should protect our environment.
+リクは私たちが環境を守るべきだと考えています。
+🌟 He decided to join the activity again next month.
+彼は来月もまたその活動に参加することに決めました。
 
-🧹 Have you ever joined a cleanup or volunteer activity?  
-あなたは清掃活動やボランティア活動に参加したことがありますか？  
-🏞️ What places in your town have you visited many times?  
-あなたの町で何度も訪れた場所はどこですか？  
-👀 Have you noticed trash on the street or in parks before?  
-今までに道や公園のゴミに気づいたことがありますか？  
-👨‍👩‍👧 Who has taught you to take care of your environment?  
-環境を大切にすることを教えてくれた人は誰ですか？  
-🌱 What would you do if you saw someone throwing trash on the ground?  
-もし誰かが地面にゴミを捨てているのを見たら、あなたはどうしますか？  
-🏡 Which places are more important for you to keep clean than others?  
-あなたにとって、他の場所よりきれいに保つことが大切な場所はどこですか？  
-🧤 Had you worn gloves for work or cleaning before?  
-今まで仕事や掃除で手袋をしたことがありますか？  
-😊 Who has thanked you for helping in your town or school?  
-あなたが町や学校で手伝ったとき、感謝してくれた人は誰ですか？  
-🌍 What kind of small action is more helpful for the Earth than just talking?  
-ただ話すより地球のために役立つ小さな行動はどんなものですか？  
-🚶‍♂️ If you could start a project in your area, what would you do?  
-自分の地域でプロジェクトを始められるとしたら、何をしますか？`
+🌳 Have you ever done volunteer work?
+ボランティア活動をしたことがありますか？
+🗑️ Do you separate trash at home?
+家でゴミを分別していますか？
+♻️ Why is recycling important?
+なぜリサイクルは重要だと思いますか？
+🧤 Do you mind getting your hands dirty?
+手が汚れるのは気になりますか？
+👴 Do you talk to your neighbors often?
+近所の人とよく話しますか？
+😊 When did someone say "thank you" to you recently?
+最近いつ誰かに「ありがとう」と言われましたか？
+🌿 Do you like clean places?
+きれいな場所は好きですか？
+🌍 What can we do to help the earth?
+地球を助けるために何ができますか？
+🤝 Is it easy to work with new people?
+新しい人と一緒に働くのは簡単ですか？
+🌟 Do you want to join a community group?
+地域のグループに参加したいですか？`
     },
 
     // Story 17 - A Long Phone Call
+    // Target Grammar: Enjoy -ing / Adverbial clauses
     {
         title: "17. A Long Phone Call",
-        content: `📱 Saki talked with her cousin on the phone for almost two hours.  
-サキはいとこと電話でほぼ2時間話しました。  
-🏙️ Her cousin, who lives in Tokyo, has just entered high school.  
-東京に住んでいる彼女のいとこは、ちょうど高校に入学したところです。  
-🧠 They had not spoken for such a long time since last New Year.  
-彼女たちは昨年の正月以来、こんなに長く話していませんでした。  
-🎒 They shared stories about their schools, which are quite different.  
-彼女たちはかなり違うそれぞれの学校の話を共有しました。  
-📆 If they are free next weekend, they will meet in person.  
-もし来週末に時間があれば、彼女たちは実際に会うつもりです。  
-⌛ The time passed faster than Saki expected.  
-時間はサキが思っていたより早く過ぎました。  
-😊 She has felt closer to her cousin since the call.  
-彼女はその電話以来、いとこに以前より親しみを感じています。  
-💬 They promised to message each other more often.  
-彼女たちはもっと頻繁にメッセージを送り合うと約束しました。  
-🌙 Saki went to bed later than usual that night.  
-その夜サキは、いつもより遅く寝ました。  
-🌟 The call reminded her how important family is.  
-その電話は、家族がどれほど大切かを彼女に思い出させました。  
+        content: `📱 Saki called her cousin who lives in Tokyo.
+サキは東京に住んでいるいとこに電話しました。
+🏙️ Her cousin has just started high school life there.
+彼女のいとこはそこで高校生活を始めたばかりです。
+🗣️ They enjoyed talking about their schools and friends.
+二人は学校や友達について話すのを楽しみました。
+😲 Saki was surprised to hear that Tokyo is very crowded.
+サキは東京がとても混雑していると聞いて驚きました。
+⌛ They talked for more than two hours.
+彼らは2時間以上話しました。
+🌙 It was already midnight when they finished talking.
+話し終えたとき、すでに真夜中でした。
+😊 Saki felt that time flies when she is having fun.
+サキは、楽しんでいるときは時間が経つのが早いと感じました。
+📧 They promised to send messages to each other.
+彼らはお互いにメッセージを送ることを約束しました。
+😴 The next morning, Saki was a little sleepy.
+翌朝、サキは少し眠かったです。
+🌟 Keeping in touch with family is important for her.
+家族と連絡を取り合うことは彼女にとって大切です。
 
-📞 Have you ever talked on the phone for a very long time?  
-あなたはとても長い時間電話で話したことがありますか？  
-👨‍👩‍👧 Who in your family do you communicate with the most?  
-あなたの家族の中で、誰と一番よく連絡を取りますか？  
-💻 Have you used video calls to talk with friends or relatives?  
-友達や親戚と話すためにビデオ通話を使ったことがありますか？  
-📅 Had you gone a long time without contacting someone important before?  
-大切な人と長い間連絡を取らなかったことは今までにありますか？  
-🚉 What would you do if a relative came to visit your town?  
-もし親戚があなたの町に遊びに来たら、あなたは何をしますか？  
-⌚ Which feels shorter for you, two hours with a good friend or one hour in class?  
-あなたにとって、友達と2時間過ごすのと授業で1時間過ごすのとでは、どちらが短く感じますか？  
-📨 Who has sent you messages that made you happy?  
-あなたをうれしい気持ちにさせるメッセージを送ってくれた人は誰ですか？  
-🏫 What topics are more fun to talk about than schoolwork?  
-学校の勉強より話していて楽しい話題は何ですか？  
-📆 Have you promised to keep in touch with someone after a big change, like graduation?  
-卒業など大きな変化のあとで、誰かと連絡を取り続けると約束したことがありますか？  
-👪 If you could call anyone tonight, who would you like to talk to?  
-もし今夜誰にでも電話できるとしたら、誰と話したいですか？`
+📱 Do you prefer phone calls or text messages?
+電話とテキストメッセージ、どちらが好きですか？
+🏙️ Do you want to live in a big city like Tokyo?
+東京のような大都市に住みたいですか？
+🗣️ Who do you talk to the most?
+誰と一番よく話しますか？
+⌛ What is the longest time you have talked on the phone?
+電話で話した最長時間はどれくらいですか？
+🌙 What time do you usually go to bed?
+普段何時に寝ますか？
+😲 Have you ever been to Tokyo?
+東京に行ったことがありますか？
+😊 Does time fly when you play video games?
+テレビゲームをしていると時間は早く過ぎますか？
+📧 How many messages do you send a day?
+1日に何通メッセージを送りますか？
+😴 Is it hard for you to wake up in the morning?
+朝起きるのはつらいですか？
+🌟 Do you have cousins? Are you close to them?
+いとこはいますか？彼らと仲が良いですか？`
     },
 
     // Story 18 - Visiting a Museum
+    // Target Grammar: Be interested in / Passive (was built)
     {
         title: "18. Visiting a Museum",
-        content: `🏛️ Haru has visited the city history museum with his class.  
-ハルはクラスと一緒に市立歴史博物館を訪れました。  
-🚌 They went there by bus, which took about thirty minutes.  
-彼らはバスでそこへ行き、約30分かかりました。  
-📜 Haru had read a booklet about the museum before the trip.  
-ハルは旅行の前に博物館のパンフレットを読んでいました。  
-👩‍🏫 Their guide, who was very knowledgeable, answered many questions.  
-とても物知りなガイドが、たくさんの質問に答えてくれました。  
-🏺 If Haru has time, he will visit the museum again with his family.  
-時間があれば、ハルは家族と一緒にもう一度博物館を訪れるつもりです。  
-📷 The old tools and clothes were more interesting than he had imagined.  
-古い道具や服は、彼が想像していたよりも興味深いものでした。  
-📝 He has written notes about his favorite exhibits.  
-彼は気に入った展示についてメモを書きました。  
-😊 His teacher has asked the students to make a short report.  
-先生は生徒たちに短いレポートを書くように頼みました。  
-🖼️ Haru plans to draw a picture of one of the displays.  
-ハルは展示の一つの絵を描くつもりです。  
-🌟 The visit helped him feel more connected to his city.  
-その訪問によって、彼は自分の街により親しみを感じるようになりました。  
+        content: `🏛️ Haru went to the history museum with his class.
+ハルはクラスと一緒に歴史博物館へ行きました。
+🚌 They went there by bus from their school.
+彼らは学校からバスでそこへ行きました。
+🏺 Haru is interested in old Japanese culture.
+ハルは日本の古い文化に興味があります。
+🏯 The museum building was built one hundred years ago.
+その博物館の建物は100年前に建てられました。
+👀 They looked at many old tools and clothes.
+彼らはたくさんの古い道具や服を見ました。
+📝 The students had to take notes for their report.
+生徒たちはレポートのためにメモを取らなければなりませんでした。
+🤔 Haru wondered how people lived without electricity.
+ハルは電気がなしで人々がどう暮らしていたのか不思議に思いました。
+📸 Taking photos was allowed in some rooms.
+いくつかの部屋では写真を撮ることが許可されていました。
+😊 He learned many new things about his city.
+彼は自分の街について多くの新しいことを学びました。
+🌟 Haru wants to visit the museum again with his family.
+ハルは家族と一緒にもう一度その博物館を訪れたいと思っています。
 
-🚌 Have you ever gone on a class trip to a museum?  
-あなたはクラスで博物館に行ったことがありますか？  
-🏺 What kinds of historical things have you seen before?  
-今までどんな歴史的なものを見たことがありますか？  
-📖 Have you read about your city’s history in a book or booklet?  
-あなたの街の歴史について本やパンフレットで読んだことがありますか？  
-🎓 Is there a guide or teacher who explains things very clearly?  
-物事をとてもわかりやすく説明してくれるガイドや先生はいますか？  
-🏙️ What would you do if you had one free afternoon in your city?  
-あなたの街で自由な午後が一度あったら、何をしますか？  
-🖊️ Which is more interesting for you, reading history or seeing it in a museum?  
-あなたにとって、歴史を読むのと博物館で見るのとではどちらが面白いですか？  
-📝 Had you taken notes during trips or events before?  
-今までに旅行やイベントのときにメモを取ったことがありますか？  
-📸 Who has taken good photos for you on a trip?  
-旅行であなたのために良い写真を撮ってくれた人は誰ですか？  
-🏛️ What kind of museum would you like to visit the most?  
-あなたが一番訪れてみたい博物館はどんな種類ですか？  
-🧭 If you could make an exhibit about your life, what would you show?  
-あなたの人生について展示を作るとしたら、何を展示しますか？`
+🏛️ Do you like history?
+あなたは歴史が好きですか？
+🚌 Do you take a bus to school?
+学校へはバスで行きますか？
+🏺 What old things do you have in your house?
+あなたの家にどんな古いものがありますか？
+👀 Do you prefer looking at things or reading about them?
+物を見るのと読むのとでは、どちらが好きですか？
+📝 Do you like writing reports?
+レポートを書くのは好きですか？
+🤔 Can you live without a smartphone for a day?
+1日スマホなしで生活できますか？
+📸 Do you follow the rules in public places?
+公共の場所でルールを守りますか？
+😊 What is the most interesting subject for you?
+あなたにとって一番面白い教科は何ですか？
+🌟 What museums have you visited?
+どんな博物館を訪れたことがありますか？
+🏯 Do you like visiting old temples?
+古いお寺を訪れるのは好きですか？`
     },
 
     // Story 19 - Starting a New Club
+    // Target Grammar: Relative pronoun (that) / Try to
     {
         title: "19. Starting a New Club",
-        content: `📝 Some students have started a creative writing club at school.  
-何人かの生徒が学校で創作ライティングクラブを始めました。  
-📚 Aya joined the club because she loves stories.  
-アヤは物語が大好きなので、そのクラブに入りました。  
-✍️ She had written short tales in her notebook before the club existed.  
-クラブができる前から、彼女はノートに短い物語を書いていました。  
-👨‍🏫 Their adviser, who is the Japanese teacher, gives them writing themes.  
-顧問である国語の先生が、彼らに書くテーマを出してくれます。  
-💡 If they finish their stories, they will put them together in a small book.  
-物語を書き上げれば、彼らはそれらを小さな本にまとめます。  
-🕒 Club time seems shorter than one normal class period.  
-クラブの時間は、普通の授業1コマより短く感じられます。  
-📖 Aya has already shared one story with the other members.  
-アヤはすでに一つの物語を他のメンバーと共有しました。  
-😊 Her friends have given her kind and honest comments.  
-友達は彼女に親切で正直なコメントをくれました。  
-🌱 Aya feels that her imagination is growing week by week.  
-アヤは自分の想像力が週ごとに育っていると感じています。  
-🌟 The club is becoming a special place for her creativity.  
-そのクラブは彼女の創造性のための特別な場所になりつつあります。  
+        content: `📝 Aya loves writing stories and poems.
+アヤは物語や詩を書くのが大好きです。
+🏫 She decided to start a Creative Writing Club at school.
+彼女は学校で創作ライティング部を始めることに決めました。
+👥 She needed five members to start the new club.
+新しい部を始めるには5人のメンバーが必要でした。
+🗣️ She talked to her friends who like reading books.
+彼女は本を読むのが好きな友達に話しました。
+📄 They made posters to advertise their club.
+彼らは部を宣伝するためにポスターを作りました。
+😊 Luckily, six students joined the club.
+幸運なことに、6人の生徒が入部しました。
+✍️ Now, they try to write a short story every week.
+今、彼らは毎週短い物語を書こうとしています。
+📚 They read each other's stories and share comments.
+彼らはお互いの物語を読み、コメントを共有します。
+🌟 Aya is happy that she has friends with the same hobby.
+アヤは同じ趣味を持つ友達がいて幸せです。
+🚀 Her dream is to publish a book in the future.
+彼女の夢は将来本を出版することです。
 
-📖 Have you ever written your own story or poem?  
-あなたは自分の物語や詩を書いたことがありますか？  
-🗒️ What kinds of things have you written in notebooks before?  
-今までノートにどんなことを書いてきましたか？  
-👩‍🏫 Is there a teacher who supports your creative ideas?  
-あなたの創造的なアイデアを応援してくれる先生はいますか？  
-📆 Have you joined any new clubs since entering your current school?  
-今の学校に入ってから新しいクラブに入ったことがありますか？  
-📕 What would you do if your writing were printed in a real book?  
-あなたの書いたものが本に印刷されたら、どうしますか？  
-🧠 Which is more fun for you, reading stories or making them?  
-あなたにとって、物語を読むのと作るのとではどちらがより楽しいですか？  
-🖊️ Had you shown your writing to other people before this year?  
-今年になる前に自分の文章を他の人に見せたことがありますか？  
-💬 Who has given you helpful comments to make your work better?  
-あなたの作品を良くするために役立つコメントをくれた人は誰ですか？  
-📚 What kind of book would you like to write in the future?  
-将来どんな本を書いてみたいですか？  
-👥 If you could start any club at school, what kind of club would it be?  
-もし学校でどんなクラブでも作れるなら、どんなクラブにしますか？`
+📝 Do you like writing?
+書くことは好きですか？
+🏫 Does your school have many clubs?
+あなたの学校にはたくさんのクラブがありますか？
+👥 If you started a club, what kind would it be?
+もしクラブを作るなら、どんな種類にしますか？
+🗣️ Are you good at asking people for help?
+人に助けを求めるのは得意ですか？
+📄 Do you know how to make a poster?
+ポスターの作り方を知っていますか？
+✍️ Have you ever written a story?
+物語を書いたことがありますか？
+📚 What is your favorite book genre?
+好きな本のジャンルは何ですか？
+🌟 Do you share the same hobbies with your friends?
+友達と同じ趣味を共有していますか？
+🚀 What is your dream job?
+あなたの夢の仕事は何ですか？
+😊 Are you a leader or a follower?
+あなたはリーダータイプですか、フォロワータイプですか？`
     },
 
     // Story 20 - A Busy Morning
+    // Target Grammar: Too... to... / Be late for
     {
         title: "20. A Busy Morning",
-        content: `⏰ Ken overslept this morning because he had stayed up late.  
-ケンは昨夜遅くまで起きていたので、今朝寝坊してしまいました。  
-🏃‍♂️ He ran to the station, which is ten minutes from his house.  
-彼は家から10分のところにある駅まで走りました。  
-🚉 The train that he usually takes had already left.  
-彼がいつも乗る電車はすでに出てしまっていました。  
-📱 His friend, who rides the same train, sent him a worried message.  
-同じ電車に乗る友達が、心配してメッセージを送ってきました。  
-🕒 If Ken catches the next train, he will just make it before class.  
-次の電車に乗れれば、彼はぎりぎり授業に間に合います。  
-😰 Today feels more stressful than a normal school day.  
-今日は普通の学校の日よりストレスが多く感じられます。  
-🚶‍♂️ While he is waiting, he has decided not to stay up so late again.  
-待っている間に、彼はもう二度とそんなに夜更かししないと決めました。  
-🧠 He remembers that he had promised his parents to manage his time better.  
-彼は時間をもっと上手に使うと、両親に約束していたことを思い出しました。  
-😊 Ken finally gets on the next train and feels a little relieved.  
-ケンはやっと次の電車に乗り、少しほっとしました。  
-🌟 He thinks this busy morning has taught him an important lesson.  
-彼はこの忙しい朝が、自分に大事な教訓を教えてくれたと思っています。  
+        content: `⏰ Ken overslept this morning because his alarm didn't ring.
+今朝、目覚ましが鳴らなかったのでケンは寝坊しました。
+😱 He was too shocked to move for a moment.
+彼はショックのあまり一瞬動けませんでした。
+🍞 He didn't have time to eat breakfast.
+彼には朝食を食べる時間がありませんでした。
+🏃‍♂️ He ran to the station as fast as he could.
+彼はできるだけ速く駅まで走りました。
+🚋 However, he missed the train that he usually takes.
+しかし、彼はいつも乗る電車を逃してしまいました。
+😰 He was worried about being late for school.
+彼は学校に遅刻することを心配しました。
+📱 He sent a message to his friend saying, "I might be late."
+彼は友達に「遅れるかもしれない」とメッセージを送りました。
+🏫 Luckily, he arrived at the school gate just in time.
+幸運なことに、彼は学校の門にギリギリ間に合って到着しました。
+💨 He was very tired and out of breath.
+彼はとても疲れて息切れしていました。
+🌟 Ken decided to go to bed earlier tonight.
+ケンは今夜もっと早く寝ることに決めました。
 
-⏱️ Have you ever overslept on an important day?  
-あなたは大事な日に寝坊したことがありますか？  
-🚃 What kinds of transportation have you used to go to school?  
-今まで学校に行くのにどんな交通手段を使いましたか？  
-📆 Have you been late for school or a lesson before?  
-学校やレッスンに遅刻したことがありますか？  
-🌙 Had you stayed up late many times before junior high school?  
-中学生になる前に、何度も夜更かしをしたことがありますか？  
-📚 What would you do if you knew you would be late for class?  
-もし授業に遅刻しそうだとわかったら、あなたはどうしますか？  
-😓 Which situations are more stressful for you than tests?  
-テストよりあなたにとってストレスが大きい状況はどんなときですか？  
-📵 Who has told you to take better care of your health or sleep?  
-あなたに健康や睡眠をもっと大事にしなさいと言ってくれた人は誰ですか？  
-🕰️ What habits help you get up on time in the morning?  
-朝時間通りに起きるのに役立つ習慣は何ですか？  
-🚶‍♀️ Do you prefer walking, biking, or taking a train to school?  
-学校へ行くのに歩くのと自転車と電車では、どれが好きですか？  
-📖 If you could change one thing about your morning routine, what would it be?  
-もし朝の習慣を一つ変えられるとしたら、それは何ですか？`
+⏰ Do you use an alarm clock to wake up?
+起きるために目覚まし時計を使いますか？
+😱 Have you ever overslept on an important day?
+大事な日に寝坊したことがありますか？
+🍞 Do you eat breakfast every day?
+毎日朝食を食べますか？
+🏃‍♂️ Are you a fast runner?
+走るのは速いですか？
+🚋 How do you go to school?
+どうやって学校に行きますか？
+😰 What do you do when you are late?
+遅刻したときどうしますか？
+📱 Do you text your friends often?
+よく友達にメッセージを送りますか？
+🏫 What time does your first class start?
+最初の授業は何時に始まりますか？
+💨 Do you get tired easily?
+疲れやすいですか？
+🌟 What time do you usually sleep?
+普段何時に寝ますか？`
     },
+
     // Story 21 - A Visit to the Library
+    // Target Grammar: Present Perfect (Experience) / Recommend
     {
         title: "21. A Visit to the Library",
-        content: `📚 Haruka has been visiting the school library more often this term.  
-ハルカは今学期、学校の図書室によく行くようになりました。  
-📖 She enjoys reading mystery books, which make her think deeply.  
-彼女は深く考えさせられるミステリー本を読むのが好きです。  
-📅 She had not been a big reader before entering junior high school.  
-彼女は中学生になる前はあまり読書家ではありませんでした。  
-👩‍🏫 The librarian, who is very kind, recommends books to students.  
-とても親切な司書の先生が生徒に本をおすすめしてくれます。  
-🔍 If Haruka likes a book, she will borrow more from the same author.  
-ハルカがある本を気に入れば、同じ作者の本をもっと借りるつもりです。  
-📚 She reads faster now than she did last year.  
-彼女は去年より今のほうが速く読めます。  
-📝 Haruka has been writing short summaries in her notebook.  
-ハルカはノートに短い要約を書いています。  
-😊 Her friends have started borrowing the books she recommends.  
-友達は彼女のおすすめする本を借り始めました。  
-📘 She feels proud when someone enjoys a book she chose.  
-誰かが彼女が選んだ本を楽しんでくれると、彼女は誇りに感じます。  
-🌟 Reading is becoming an important part of her daily life.  
-読書は彼女の日常生活の大切な一部になりつつあります。  
+        content: `📚 Haruka has visited the school library many times this month.
+ハルカは今月、何度も学校の図書室を訪れています。
+📖 She likes reading mystery novels very much.
+彼女はミステリー小説を読むのがとても好きです。
+👩‍🏫 The librarian recommended a famous book to her.
+司書の先生が彼女に有名な本を勧めました。
+🔍 The story is about a detective who solves difficult cases.
+その物語は、難事件を解決する探偵についてのものです。
+🤔 Reading books makes her think deeply.
+本を読むことは彼女に深く考えさせます。
+📝 She has written a book report for her Japanese class.
+彼女は国語の授業のために読書感想文を書きました。
+🤫 You must be quiet when you are in the library.
+図書室にいるときは静かにしなければなりません。
+🤝 Haruka often borrows books that her friends like.
+ハルカはよく友達が好きな本を借ります。
+🌟 She thinks that libraries are wonderful places.
+彼女は図書室は素晴らしい場所だと思っています。
+📅 She plans to read ten books during the summer vacation.
+彼女は夏休みの間に10冊の本を読む予定です。
 
-📚 Have you ever borrowed a book from the library?  
-あなたは図書室や図書館で本を借りたことがありますか？  
-📖 What kinds of books have you enjoyed the most?  
-今までどんな本を一番楽しんできましたか？  
-👩‍🏫 Is there someone who recommends books to you?  
-あなたに本をおすすめしてくれる人はいますか？  
-📝 Have you written summaries or notes about books before?  
-今まで本の要約やメモを書いたことがありますか？  
-📘 What would you do if you found an amazing book?  
-素晴らしい本を見つけたら、あなたはどうしますか？  
-📚 Which is more interesting for you, mysteries or fantasy stories?  
-あなたにとって、ミステリーとファンタジーではどちらのほうが面白いですか？  
-📅 Had you visited the library often before junior high school?  
-中学生になる前に図書室によく行っていましたか？  
-📖 Who has introduced you to your favorite book?  
-あなたの好きな本を紹介してくれたのは誰ですか？  
-📙 What kind of book would you like to read next?  
-次にどんな本を読んでみたいですか？  
-📚 If you could meet any author, who would you choose?  
-もしどんな作家にでも会えるなら、誰を選びますか？`
+📚 Do you go to the library often?
+よく図書館に行きますか？
+📖 What was the last book you read?
+最後に読んだ本は何ですか？
+👩‍🏫 Do you ask teachers for advice?
+先生にアドバイスを求めますか？
+🔍 Do you like mystery movies or books?
+ミステリー映画や本は好きですか？
+🤔 Do you like thinking about puzzles?
+パズルについて考えるのは好きですか？
+📝 Have you written a book report recently?
+最近読書感想文を書きましたか？
+🤫 Can you stay quiet for a long time?
+長い間静かにしていられますか？
+🤝 Do you lend books to your friends?
+友達に本を貸しますか？
+🌟 What is your favorite place in school?
+学校で一番好きな場所はどこですか？
+📅 How many books do you read in a year?
+1年に何冊本を読みますか？`
     },
 
     // Story 22 - A New Pet
+    // Target Grammar: Take care of / Adjective (Playful)
     {
         title: "22. A New Pet",
-        content: `🐹 Nao has recently adopted a small hamster from a local shop.  
-ナオは最近、近くの店から小さなハムスターを迎えました。  
-🏠 She bought a cage, which she decorated with colorful toys.  
-彼女はカラフルなおもちゃで飾ったケージを買いました。  
-🐾 She had never taken care of a pet before this.  
-彼女はこれまでペットの世話をしたことがありませんでした。  
-👩‍⚕️ The shop owner, who knows a lot, taught her how to feed it.  
-知識のある店主が、エサの与え方を教えてくれました。  
-🕒 If she cleans the cage every week, the hamster will stay healthy.  
-毎週ケージを掃除すれば、ハムスターは健康に過ごせます。  
-😄 The hamster is more active at night than during the day.  
-ハムスターは昼間より夜のほうが活発です。  
-🥕 Nao has already bought fresh vegetables for its diet.  
-ナオはすでにエサ用の新鮮な野菜を買いました。  
-😊 She enjoys watching it run on the wheel.  
-彼女はハムスターが回し車で走るのを見るのを楽しんでいます。  
-💤 It sometimes falls asleep in a funny position.  
-時々、ハムスターは面白い姿勢で寝ます。  
-🌟 This new pet is bringing joy to Nao’s daily life.  
-この新しいペットはナオの日常に喜びをもたらしています。  
+        content: `🐹 Nao got a hamster for her birthday last week.
+ナオは先週の誕生日にハムスターをもらいました。
+🏠 She bought a small cage and put it in her room.
+彼女は小さなケージを買って部屋に置きました。
+📛 She named the hamster "Chibi" because it is very small.
+とても小さいので、彼女はハムスターを「チビ」と名付けました。
+🌻 Taking care of a pet is not easy work.
+ペットの世話をするのは簡単な仕事ではありません。
+💧 She changes the water and gives it food every day.
+彼女は毎日水を替え、エサを与えます。
+🏃‍♂️ Chibi likes running on the wheel at night.
+チビは夜に回し車で走るのが好きです。
+👀 Watching the hamster makes Nao smile.
+ハムスターを見ているとナオは笑顔になります。
+🧹 She has to clean the cage once a week.
+彼女は週に一度ケージを掃除しなければなりません。
+😊 Chibi is becoming more friendly to her.
+チビは彼女に対してより人懐っこくなってきています。
+🌟 Nao loves her new small family member.
+ナオは新しい小さな家族のメンバーを愛しています。
 
-🐶 Have you ever had a pet at home?  
-あなたは家でペットを飼ったことがありますか？  
-🥕 What animals have you fed before?  
-今までどんな動物にエサをあげたことがありますか？  
-🏡 Is there someone in your family who loves animals?  
-あなたの家族に動物が大好きな人はいますか？  
-🧼 Have you cleaned a pet’s cage or area before?  
-ペットのケージや場所を掃除したことがありますか？  
-🐾 What would you do if you got a new pet?  
-新しいペットを迎えたら、あなたは何をしますか？  
-🐱 Which animals are cuter to you than dogs or cats?  
-あなたにとって、犬や猫よりかわいい動物はどれですか？  
-💡 Had you wanted a pet before you got older?  
-あなたは大きくなる前にペットが欲しいと思っていましたか？  
-😊 Who has taught you how to take care of an animal?  
-動物の世話の仕方を教えてくれた人は誰ですか？  
-🏪 What pet shops or zoos would you like to visit?  
-どんなペットショップや動物園に行ってみたいですか？  
-🌟 If you could have any animal as a pet, what would you choose?  
-もしどんな動物でもペットにできるなら、どれを選びますか？`
+🐹 Do you have any pets?
+ペットを飼っていますか？
+🏠 Do you want to keep an animal in your room?
+部屋で動物を飼いたいですか？
+📛 Do you have a nickname?
+あだ名はありますか？
+🌻 Is it difficult to take care of animals?
+動物の世話をするのは難しいですか？
+💧 What chores do you do every day?
+毎日どんな雑用をしますか？
+🏃‍♂️ Are you active at night or in the morning?
+あなたは夜型ですか、朝型ですか？
+👀 What makes you smile?
+何があなたを笑顔にしますか？
+🧹 Do you like cleaning?
+掃除は好きですか？
+😊 Are you shy or friendly?
+あなたはシャイですか、それともフレンドリーですか？
+🌟 What animal do you want to have?
+どんな動物を飼いたいですか？`
     },
 
     // Story 23 - A Class Debate
+    // Target Grammar: Agree/Disagree with / Opinion
     {
         title: "23. A Class Debate",
-        content: `🗣️ Yuto has been preparing for a class debate about technology.  
-ユウトはテクノロジーについてのクラス討論の準備をしています。  
-📱 His topic, which is about smartphone use, is popular among students.  
-彼のテーマであるスマホの使い方は生徒の間で人気です。  
-📖 He had researched online articles before writing his speech.  
-彼はスピーチを書く前にオンライン記事を調べていました。  
-👨‍🏫 Their teacher, who likes discussions, taught them debate rules.  
-議論が好きな先生が、討論のルールを教えてくれました。  
-📝 If Yuto organizes his ideas well, he will speak more confidently.  
-ユウトが考えをうまく整理すれば、自信を持って話すことができます。  
-🧠 He thinks more deeply now than he did last term.  
-彼は前学期より今のほうが深く考えるようになりました。  
-📚 Yuto has already found strong examples to support his opinion.  
-ユウトはすでに自分の意見を支える強い例を見つけました。  
-😊 His classmates have given him helpful feedback.  
-クラスメイトは彼に役立つフィードバックをくれました。  
-🎤 He plans to practice speaking in front of a mirror tonight.  
-彼は今夜鏡の前で話す練習をするつもりです。  
-🌟 The debate will help him build confidence in public speaking.  
-この討論は、人前で話す自信をつけるのに役立つでしょう。  
+        content: `🗣️ Yuto's class had a debate yesterday.
+ユウトのクラスは昨日討論会をしました。
+📱 The topic was "Students should not use smartphones at school."
+テーマは「生徒は学校でスマホを使うべきではない」でした。
+🤔 Yuto thought about this topic very seriously.
+ユウトはこのテーマについてとても真剣に考えました。
+👍 He agreed with the idea because smartphones can be distracting.
+スマホは気が散る原因になるので、彼はその考えに賛成しました。
+📚 Students should focus on studying during class.
+生徒は授業中、勉強に集中すべきです。
+✋ However, some students disagreed with him.
+しかし、何人かの生徒は彼に反対しました。
+🔍 They said smartphones are useful for searching for information.
+彼らは、スマホは情報を探すのに便利だと言いました。
+👂 Listening to other opinions is very important.
+他の意見を聞くことはとても重要です。
+🎤 Yuto stood up and spoke his opinion clearly.
+ユウトは立ち上がり、自分の意見をはっきりと述べました。
+🌟 It was a good chance to think about school rules.
+それは校則について考える良い機会でした。
 
-🗣️ Have you ever joined a debate or discussion at school?  
-あなたは学校で討論やディスカッションに参加したことがありますか？  
-📱 What technology have you used most in the last few years?  
-ここ数年で一番使ってきたテクノロジーは何ですか？  
-📖 Have you done research for a school assignment before?  
-学校の課題のために調べ物をしたことがありますか？  
-👨‍🏫 Is there a teacher who encourages students to share opinions?  
-意見を共有するよう生徒を励ましてくれる先生はいますか？  
-💬 What would you do if someone strongly disagreed with you?  
-誰かがあなたに強く反対したら、あなたはどうしますか？  
-🧠 Which topics are more interesting to discuss than others?  
-他の話題より議論するのが面白いと感じるテーマはどれですか？  
-📚 Had you practiced public speaking before junior high school?  
-中学生になる前に人前で話す練習をしたことがありますか？  
-📝 Who has given you advice about organizing your ideas?  
-考え方をまとめるアドバイスをしてくれた人は誰ですか？  
-📊 What kind of opinion would you like to share in a debate?  
-討論でどんな意見を伝えてみたいですか？  
-🎤 If you could debate any topic, what would you choose?  
-どんなテーマでも討論できるなら、何を選びますか？`
+🗣️ Do you like debating?
+討論するのは好きですか？
+📱 Do you bring your smartphone to school?
+学校にスマホを持っていきますか？
+🤔 Do you think school rules are strict?
+校則は厳しいと思いますか？
+👍 Do you agree that students need smartphones?
+生徒にスマホが必要だということに賛成ですか？
+📚 Can you focus on studying at home?
+家で勉強に集中できますか？
+✋ Is it hard to say "no" to your friends?
+友達に「いいえ」と言うのは難しいですか？
+🔍 Do you use the internet for homework?
+宿題にインターネットを使いますか？
+👂 Are you a good listener?
+あなたは聞き上手ですか？
+🎤 Can you speak your opinion clearly?
+自分の意見をはっきりと話せますか？
+🌟 What rule do you want to change at school?
+学校でどんなルールを変えたいですか？`
     },
 
     // Story 24 - A Snowy Morning
+    // Target Grammar: So... that... / It is [adjective] to...
     {
         title: "24. A Snowy Morning",
-        content: `❄️ Snow has been falling since late last night.  
-昨夜遅くから雪が降り続いています。  
-🏠 Kenji wakes up to a white yard, which looks like a winter postcard.  
-ケンジは冬の絵葉書のように見える真っ白な庭を見て目を覚ましました。  
-🚶‍♂️ He had planned to walk to school, but the road was too slippery.  
-彼は学校まで歩いて行く予定でしたが、道が滑りやすすぎました。  
-🚌 His mother, who was worried, drove him to the bus stop.  
-心配した母が彼をバス停まで車で送ってくれました。  
-🕐 If the snow gets heavier, school may finish early.  
-雪がもっと強くなれば、学校は早く終わるかもしれません。  
-🥶 The wind feels colder today than yesterday.  
-風は昨日より今日のほうが冷たく感じられます。  
-📸 Kenji has already taken pictures of the snowy trees.  
-ケンジは雪の木々の写真をすでに撮りました。  
-😊 His friends built a small snowman before class.  
-彼の友達は授業の前に小さな雪だるまを作りました。  
-☕ He drank warm tea in the classroom to warm up.  
-彼は体を温めるために教室で温かいお茶を飲みました。  
-🌟 Kenji thinks snowy mornings are difficult but beautiful.  
-ケンジは雪の朝は大変だけれど美しいと思っています。  
+        content: `❄️ It snowed heavily last night.
+昨夜、雪が激しく降りました。
+⛄ The garden was covered with white snow this morning.
+今朝、庭は白い雪で覆われていました。
+🥶 It was so cold that Kenji didn't want to get out of bed.
+あまりに寒かったので、ケンジはベッドから出たくありませんでした。
+🚌 The bus was late because of the icy roads.
+凍った道路のせいでバスが遅れました。
+🚶‍♂️ Walking on the snow is slippery and dangerous.
+雪の上を歩くのは滑りやすくて危険です。
+🧤 He wore gloves and a thick coat to stay warm.
+彼は暖かくするために手袋と厚いコートを着ました。
+🏫 When he arrived at school, his friends were making a snowman.
+学校に着くと、友達が雪だるまを作っていました。
+😊 It is fun to play in the snow with friends.
+友達と雪の中で遊ぶのは楽しいです。
+☕ Drinking hot cocoa is the best thing on a cold day.
+寒い日にはホットココアを飲むのが最高です。
+🌟 Kenji likes winter because the scenery is beautiful.
+景色が美しいので、ケンジは冬が好きです。
 
-❄️ Have you ever seen heavy snow in your town?  
-あなたの町で大雪を見たことがありますか？  
-☕ What warm drinks have you enjoyed in winter?  
-冬にどんな温かい飲み物を楽しんできましたか？  
-🚍 How do you usually get to school when the weather is bad?  
-天気が悪いとき、あなたは普段どうやって学校に行きますか？  
-📷 Have you taken photos of snow or winter scenes?  
-雪や冬の景色を写真に撮ったことがありますか？  
-🧣 What would you do if school ended early because of snow?  
-雪で学校が早く終わったら、あなたは何をしますか？  
-🥶 Which season feels colder to you than winter?  
-冬よりあなたにとって寒く感じる季節はありますか？  
-🚗 Had you been driven to school before you got older?  
-あなたが大きくなる前に、学校まで送ってもらったことはありましたか？  
-😊 Who has spent a fun snowy day with you before?  
-雪の日をあなたと一緒に楽しく過ごしてくれた人は誰ですか？  
-🧤 What clothes are more helpful than a jacket on a cold day?  
-寒い日にジャケットより役立つ服は何ですか？  
-⛄ If you could choose winter activities, what would you like to do?  
-冬のアクティビティを選べるなら、何をしたいですか？`
+❄️ Does it snow in your town?
+あなたの町では雪が降りますか？
+⛄ Have you ever made a snowman?
+雪だるまを作ったことがありますか？
+🥶 Do you like cold weather?
+寒い天気は好きですか？
+🚌 Have you ever been late because of the weather?
+天気のせいで遅刻したことがありますか？
+🚶‍♂️ Have you ever slipped on ice?
+氷の上で滑ったことがありますか？
+🧤 Do you wear gloves in winter?
+冬に手袋をしますか？
+🏫 What do you do during recess at school?
+学校の休み時間は何をしますか？
+😊 What is your favorite winter activity?
+一番好きな冬のアクティビティは何ですか？
+☕ Do you prefer coffee, tea, or cocoa?
+コーヒー、紅茶、ココアのどれが好きですか？
+🌟 Which scenery do you like, mountains or the ocean?
+山と海、どちらの景色が好きですか？`
     },
 
     // Story 25 - Preparing for a Test
+    // Target Grammar: Help + Person + Verb / As... as possible
     {
         title: "25. Preparing for a Test",
-        content: `📝 Mei has been studying hard for the math test next week.  
-メイは来週の数学のテストに向けて一生懸命勉強しています。  
-📚 She reviews old problems, which help her understand patterns.  
-彼女はパターンを理解するのに役立つ過去の問題を復習しています。  
-📅 She had struggled with fractions before entering junior high school.  
-彼女は中学生になる前は分数に苦労していました。  
-👨‍🏫 Her math teacher, who is strict but helpful, gives clear explanations.  
-厳しいけれど役に立つ先生がわかりやすい説明をしてくれます。  
-🧮 If Mei keeps practicing every day, she will improve her score.  
-メイが毎日練習を続ければ、点数が上がるでしょう。  
-⏱️ She can solve problems faster now than she could last year.  
-彼女は去年より今のほうが速く問題を解けます。  
-📖 Mei has been using a textbook and a workbook together.  
-メイは教科書とワークブックを一緒に使っています。  
-😊 Her friends sometimes help her when she is stuck.  
-困ったとき、友達が助けてくれます。  
-🧠 She feels more confident than before.  
-彼女は以前より自信を感じています。  
-🌟 Mei believes this test will show how much she has grown.  
-メイはこのテストが自分の成長を示すものになると信じています。  
+        content: `📝 Mei has a big math test next week.
+メイは来週、大きな数学のテストがあります。
+📚 She is studying as hard as possible.
+彼女はできるだけ一生懸命勉強しています。
+🔢 Math is a little difficult for her.
+数学は彼女にとって少し難しいです。
+👨‍🏫 She asked her teacher to help her understand the problems.
+彼女は先生に、問題を理解するのを手伝ってくれるよう頼みました。
+🏠 She studies in the living room after dinner.
+彼女は夕食後、リビングで勉強します。
+🚫 She stopped watching TV to focus on her studies.
+彼女は勉強に集中するためにテレビを見るのをやめました。
+🤝 Her friend, Saki, is good at math.
+友達のサキは数学が得意です。
+🗣️ They teach each other during the lunch break.
+彼らは昼休みに教え合います。
+📈 Mei feels that her skills are improving.
+メイは自分のスキルが向上していると感じています。
+🌟 She wants to get a good score to make her parents happy.
+彼女は両親を喜ばせるために良い点数を取りたいと思っています。
 
-🧮 Have you ever studied for a big test?  
-あなたは大きなテストのために勉強したことがありますか？  
-📘 What subjects have you found difficult before?  
-今までどんな教科が難しいと感じてきましたか？  
-👨‍🏫 Is there a teacher who explains things very well?  
-物事をとてもわかりやすく説明してくれる先生はいますか？  
-📝 Have you practiced old test questions?  
-過去問題を練習したことがありますか？  
-📅 What would you do if you didn’t understand a problem?  
-問題が理解できなかったら、あなたはどうしますか？  
-🧠 Which subject is more interesting for you than math?  
-数学よりあなたにとって面白い教科は何ですか？  
-📚 Had you used workbooks before junior high school?  
-中学生になる前にワークブックを使っていましたか？  
-😊 Who has helped you study when you were confused?  
-あなたが混乱したときに勉強を手伝ってくれた人は誰ですか？  
-🕐 What is the best time of day for you to study?  
-あなたにとって一番勉強に向いている時間帯はいつですか？  
-📝 If you could remove one school subject, which would it be?  
-もし学校の教科を一つ無くせるなら、どれにしますか？`
+📝 Do you like taking tests?
+テストを受けるのは好きですか？
+📚 How many hours do you study a day?
+1日に何時間勉強しますか？
+🔢 What is your most difficult subject?
+一番難しい教科は何ですか？
+👨‍🏫 Do you ask questions in class?
+授業中に質問をしますか？
+🏠 Where is the best place for you to study?
+あなたにとって一番勉強しやすい場所はどこですか？
+🚫 What distracts you from studying?
+何があなたの勉強の邪魔をしますか？
+🤝 Do you study with your friends?
+友達と一緒に勉強しますか？
+🗣️ Are you good at teaching others?
+人に教えるのは得意ですか？
+📈 Do you worry about your grades?
+成績について心配しますか？
+🌟 How do you feel when you get a good score?
+良い点数を取ったとき、どんな気分になりますか？`
     },
 
     // Story 26 - A Day at the Beach
+    // Target Grammar: Sound/Look/Feel + Adjective / Comparison
     {
         title: "26. A Day at the Beach",
-        content: `🏖️ Sora visited the beach with his family last weekend.  
-ソラは先週末、家族と一緒に海へ行きました。  
-🌊 The water, which was very clear, looked beautiful in the sun.  
-とても透明な水は、太陽の光の中で美しく見えました。  
-🏝️ He had never swum in the ocean before this trip.  
-彼はこの旅行の前に海で泳いだことがありませんでした。  
-👨‍👩‍👧 His sister, who loves swimming, taught him how to float.  
-泳ぐのが大好きな彼の妹が浮き方を教えてくれました。  
-☀️ If the weather stays warm, they will visit the beach again.  
-天気が暖かいままなら、彼らはまた海へ行くつもりです。  
-🐚 Sora found more shells than his sister.  
-ソラは妹よりたくさん貝殻を見つけました。  
-📷 He has already posted some beach photos online.  
-彼はすでに海の写真をオンラインに投稿しました。  
-😊 His family enjoyed eating lunch by the water.  
-家族は水辺で昼食を楽しみました。  
-🍦 They bought ice cream before going home.  
-家へ帰る前にアイスクリームを買いました。  
-🌟 The day made Sora love the ocean even more.  
-その日はソラに海をもっと好きにさせました。  
+        content: `🏖️ Sora went to the beach with his family last August.
+ソラは去年の8月、家族と海に行きました。
+🚗 It took two hours to get there by car.
+車でそこに着くのに2時間かかりました。
+🌊 The sea looked very blue and beautiful.
+海はとても青くて美しく見えました。
+👂 The sound of the waves made him feel relaxed.
+波の音は彼をリラックスした気分にさせました。
+🏊‍♂️ He swam in the ocean with his father.
+彼は父と一緒に海で泳ぎました。
+🐚 Sora found many pretty shells on the sand.
+ソラは砂の上でたくさんのきれいな貝殻を見つけました。
+🍦 Eating ice cream on the beach was delicious.
+ビーチで食べるアイスクリームはおいしかったです。
+🌞 His skin became darker than before.
+彼の肌は以前より黒くなりました。
+📸 He took a picture of the sunset.
+彼は夕日の写真を撮りました。
+🌟 Summer is the best season for outdoor activities.
+夏はアウトドア活動に最高の季節です。
 
-🌊 Have you ever been to a beach or seaside area?  
-あなたは海や海辺に行ったことがありますか？  
-🐚 What things have you found on the beach before?  
-今までに海岸でどんなものを見つけたことがありますか？  
-🌞 What weather do you think is best for going to the beach?  
-海へ行くのに最適な天気はどんな天気だと思いますか？  
-🏄‍♂️ Had you swum in a pool before swimming in the ocean?  
-海で泳ぐ前にプールで泳いだことはありましたか？  
-🍦 What would you do if you spent a whole day at the beach?  
-一日中海で過ごすとしたら、あなたは何をしますか？  
-🐠 Which sea animals are more interesting for you than fish?  
-あなたにとって魚より面白い海の生き物は何ですか？  
-📷 Have you posted photos of a trip online before?  
-旅行の写真をネットに投稿したことがありますか？  
-👨‍👩‍👧 Who has gone to the beach with you in the past?  
-今まであなたと一緒に海へ行ったのは誰ですか？  
-🏖️ What beach would you like to visit one day?  
-いつか訪れてみたい海はどこですか？  
-🌅 If you could watch a sunset anywhere, where would you choose?  
-もしどこでも夕日を見られるなら、どこを選びますか？`
+🏖️ Do you like the beach?
+海は好きですか？
+🚗 Do you like long car drives?
+長い車のドライブは好きですか？
+🌊 Can you swim well?
+上手に泳げますか？
+👂 What sounds make you relax?
+どんな音があなたをリラックスさせますか？
+🏊‍♂️ Do you prefer the pool or the sea?
+プールと海、どちらが好きですか？
+🐚 Have you ever collected shells?
+貝殻を集めたことがありますか？
+🍦 What is your favorite ice cream flavor?
+好きなアイスクリームの味は何ですか？
+🌞 Do you get sunburned easily?
+日焼けしやすいですか？
+📸 Do you like taking pictures of scenery?
+景色の写真を撮るのは好きですか？
+🌟 What is your favorite summer memory?
+一番好きな夏の思い出は何ですか？`
     },
 
     // Story 27 - Choosing a Birthday Gift
+    // Target Grammar: Give + Person + Thing / Something + Adjective
     {
         title: "27. Choosing a Birthday Gift",
-        content: `🎁 Emi has been looking for a birthday gift for her best friend.  
-エミは親友の誕生日プレゼントを探しています。  
-🛍️ She checked many shops, which had beautiful accessories.  
-彼女はたくさんの店をチェックし、美しいアクセサリーを見つけました。  
-📅 She had asked her friend’s mother for hints before going shopping.  
-彼女は買い物に行く前に、友達の母にヒントを聞いていました。  
-👩‍👧 Emi’s mother, who knows her taste well, gave her some advice.  
-エミの母は彼女の好みをよく知っていて、アドバイスをしてくれました。  
-🎀 If Emi finds something cute, she will wrap it nicely.  
-エミがかわいいものを見つければ、きれいに包むつもりです。  
-💍 The necklace she liked was more expensive than she expected.  
-彼女が気に入ったネックレスは思っていたより高かったです。  
-💡 Emi has considered making something handmade instead.  
-エミは代わりに手作りのものを作ることも考えました。  
-😊 She enjoys choosing gifts because it makes people happy.  
-プレゼントを選ぶのは、人を喜ばせることができるので彼女は楽しんでいます。  
-🎉 She plans to give the gift at her friend’s party.  
-彼女は友達のパーティーでそのプレゼントを渡すつもりです。  
-🌟 Emi hopes her friend will love the present.  
-エミは友達がそのプレゼントを気に入ってくれることを願っています。  
+        content: `🎁 Emi is looking for a birthday gift for her best friend.
+エミは親友への誕生日プレゼントを探しています。
+📅 Her friend's birthday is next Saturday.
+友達の誕生日は次の土曜日です。
+🛍️ She went to the shopping mall to find something cute.
+彼女は何かかわいいものを見つけるためにショッピングモールへ行きました。
+🎀 There were many kinds of accessories in the shop.
+店にはたくさんの種類のアクセサリーがありました。
+🤔 It is difficult to choose the perfect gift.
+完璧なプレゼントを選ぶのは難しいです。
+💍 She decided to buy a silver necklace.
+彼女は銀のネックレスを買うことに決めました。
+📝 She also wrote a message card to her friend.
+彼女は友達にメッセージカードも書きました。
+🍰 They are going to have a party at Emi's house.
+彼らはエミの家でパーティーをする予定です。
+😊 Emi hopes her friend will like the present.
+エミは友達がプレゼントを気に入ってくれることを願っています。
+🌟 Giving gifts makes both people happy.
+プレゼントを贈ることは両方の人を幸せにします。
 
-🎁 Have you ever chosen a birthday gift for someone?  
-あなたは誰かの誕生日プレゼントを選んだことがありますか？  
-🛍️ What shops have you visited to buy gifts?  
-プレゼントを買うためにどんな店に行ったことがありますか？  
-🎀 What kinds of gifts do you think make people happy?  
-どんなプレゼントが人を喜ばせると思いますか？  
-🧵 Have you made handmade gifts before?  
-手作りのプレゼントを作ったことがありますか？  
-💴 What would you do if the gift you liked was too expensive?  
-気に入ったプレゼントが高すぎたら、あなたはどうしますか？  
-💡 Which gifts are more meaningful for you than store-bought ones?  
-市販のものより、あなたにとって意味のあるプレゼントは何ですか？  
-👩‍👧 Had you ever asked someone for gift ideas before buying something?  
-何かを買う前に誰かにアイデアを聞いたことがありましたか？  
-😊 Who has given you a memorable present?  
-あなたに思い出に残るプレゼントをくれたのは誰ですか？  
-🎉 What kind of party would you like for your birthday?  
-あなたの誕生日にどんなパーティーをしてみたいですか？  
-🎁 If you could receive any gift right now, what would you choose?  
-もし今すぐどんなプレゼントでももらえるなら、何を選びますか？`
+🎁 Do you like giving gifts?
+プレゼントを贈るのは好きですか？
+📅 When is your birthday?
+あなたの誕生日はいつですか？
+🛍️ Where do you usually go shopping?
+普段どこへ買い物に行きますか？
+🎀 Do you like wearing accessories?
+アクセサリーを身につけるのは好きですか？
+🤔 Are you good at choosing gifts?
+プレゼントを選ぶのは得意ですか？
+💍 What is the most expensive thing you bought?
+あなたが買った一番高いものは何ですか？
+📝 Do you write letters to your friends?
+友達に手紙を書きますか？
+🍰 What kind of cake do you like?
+どんなケーキが好きですか？
+😊 What was the best gift you received?
+あなたがもらった最高のプレゼントは何でしたか？
+🌟 Do you prefer giving or receiving gifts?
+プレゼントをあげるのと受け取るの、どちらが好きですか？`
     },
 
     // Story 28 - Trying a New Sport
+    // Target Grammar: Be good at / Practice -ing
     {
         title: "28. Trying a New Sport",
-        content: `🏸 Rina has started learning badminton with her classmates.  
-リナはクラスメイトと一緒にバドミントンを習い始めました。  
-🏫 They practice in the school gym, which echoes with fast rallies.  
-彼らはスピード感のあるラリーが響く学校の体育館で練習しています。  
-🎾 Rina had only played soft tennis before trying badminton.  
-リナはバドミントンを始める前はソフトテニスしかしたことがありませんでした。  
-👟 Their coach, who used to be a local champion, teaches them techniques.  
-地元のチャンピオンだったコーチが技術を教えてくれます。  
-💨 If Rina keeps practicing, her footwork will become faster.  
-リナが練習を続ければ、フットワークがもっと速くなるでしょう。  
-🏸 She finds badminton more exciting than any other sport.  
-彼女はバドミントンが他のスポーツよりもエキサイティングだと感じています。  
-💦 Rina has already learned how to smash the shuttle.  
-リナはすでにスマッシュの打ち方を覚えました。  
-😊 Her classmates enjoy playing with her because she tries hard.  
-彼女が一生懸命頑張るので、クラスメイトは一緒にプレーするのを楽しんでいます。  
-🏆 She hopes to join a tournament next year.  
-彼女は来年の大会に出たいと思っています。  
-🌟 This new sport is giving her confidence and energy.  
-この新しいスポーツは彼女に自信と活力を与えています。  
+        content: `🏸 Rina started playing badminton in high school.
+リナは高校でバドミントンを始めました。
+🏃‍♀️ She wanted to try something new and exciting.
+彼女は何か新しくてワクワクすることを試したかったのです。
+👟 At first, she was not good at hitting the shuttle.
+最初、彼女はシャトルを打つのが得意ではありませんでした。
+😓 Moving quickly around the court is tiring.
+コートを素早く動き回るのは疲れます。
+💪 However, she practices playing every day.
+しかし、彼女は毎日プレーするのを練習しています。
+👥 Her teammates are very kind and helpful.
+彼女のチームメイトはとても親切で役に立ちます。
+👏 Last week, she won her first practice match.
+先週、彼女は初めての練習試合に勝ちました。
+😊 She was very happy and proud.
+彼女はとても嬉しく、誇らしかったです。
+💦 Playing sports is good for her health.
+スポーツをすることは彼女の健康に良いです。
+🌟 She wants to become a regular player soon.
+彼女はすぐにレギュラー選手になりたいと思っています。
 
-🏀 Have you ever tried a new sport?  
-あなたは新しいスポーツを試したことがありますか？  
-🎾 What sports have you played in PE class?  
-体育の授業でどんなスポーツをしたことがありますか？  
-🏸 Which sports are more exciting for you than others?  
-他のスポーツよりあなたにとってエキサイティングなスポーツは何ですか？  
-👟 Have you learned any techniques from a coach or teacher?  
-コーチや先生から技術を教わったことがありますか？  
-🎯 What would you do if you joined a sports club?  
-スポーツクラブに入ったら、あなたは何をしますか？  
-💦 Which exercise is harder for you, running or jumping?  
-走ることと飛ぶことでは、あなたにとってどちらのほうが難しいですか？  
-🎽 Had you practiced sports outside school before junior high?  
-中学生になる前に学校外でスポーツを練習していましたか？  
-😊 Who has encouraged you to keep trying something difficult?  
-難しいことを続けるよう励ましてくれた人は誰ですか？  
-🏆 What kind of tournament would you like to join someday?  
-いつか参加してみたい大会はどんなものですか？  
-🥇 If you became good at any sport, which would you choose?  
-もしどんなスポーツでも得意になれるなら、どれを選びますか？`
+🏸 What sports have you played?
+どんなスポーツをしたことがありますか？
+🏃‍♀️ Do you like trying new things?
+新しいことに挑戦するのは好きですか？
+👟 Are you good at sports?
+スポーツは得意ですか？
+😓 What makes you feel tired?
+何があなたを疲れさせますか？
+💪 How often do you exercise?
+どのくらいの頻度で運動しますか？
+👥 Do you have good teammates or friends?
+良いチームメイトや友達がいますか？
+👏 Are you competitive?
+あなたは負けず嫌いですか？
+😊 When was the last time you felt proud?
+最後に誇らしいと感じたのはいつですか？
+💦 Do you think health is important?
+健康は大切だと思いますか？
+🌟 What is your goal for this year?
+今年の目標は何ですか？`
     },
 
     // Story 29 - Helping a Neighbor
+    // Target Grammar: Ask + Person + To / Passive
     {
         title: "29. Helping a Neighbor",
-        content: `🏡 Aoi has been helping her elderly neighbor with small tasks.  
-アオイは高齢の近所の人の小さな仕事を手伝っています。  
-🧹 She cleans the porch, which gets dusty easily.  
-彼女はすぐにほこりっぽくなる玄関先を掃除します。  
-🧴 Aoi had only greeted her neighbor before they started talking more.  
-アオイは以前はあいさつするだけでしたが、最近もっと話すようになりました。  
-👵 The neighbor, who lives alone, enjoys their conversations.  
-一人で暮らしている近所の人は、彼女との会話を楽しんでいます。  
-🍵 If Aoi has time, she will visit again to check in on her.  
-アオイに時間があれば、様子を見にまた訪ねるつもりです。  
-🌼 She feels happier helping others than doing nothing.  
-何もしないより、人を助けるほうが彼女は幸せに感じます。  
-📦 Aoi has already carried some heavy boxes for her neighbor.  
-アオイはすでに近所の人のために重い箱を運びました。  
-😊 They often talk about flowers and family.  
-彼女たちはよく花や家族の話をします。  
-💕 The neighbor thanks Aoi every time she helps.  
-近所の人はアオイが手伝うたびにお礼を言います。  
-🌟 Aoi feels she is becoming a kinder person.  
-アオイは自分がより優しい人になっていると感じています。  
+        content: `🏡 Aoi lives next to an elderly woman named Mrs. Tanaka.
+アオイは田中さんという年配の女性の隣に住んでいます。
+👵 Mrs. Tanaka lives alone and sometimes needs help.
+田中さんは一人暮らしで、時々助けを必要としています。
+📦 Yesterday, she asked Aoi to carry a heavy box.
+昨日、彼女はアオイに重い箱を運んでくれるよう頼みました。
+💪 Aoi is young and strong, so she could do it easily.
+アオイは若くて力持ちなので、簡単にそれができました。
+🍵 Mrs. Tanaka gave her some tea and sweets.
+田中さんは彼女にお茶とお菓子をくれました。
+🗣️ They enjoyed talking for a while on the porch.
+二人は縁側でしばらく話すのを楽しみました。
+😊 It is nice to be kind to neighbors.
+近所の人に親切にするのは良いことです。
+🤝 Aoi thinks that people should help each other.
+アオイは人々は助け合うべきだと考えています。
+🏘️ Her town is a friendly place to live.
+彼女の町は住むのにフレンドリーな場所です。
+🌟 Small kindness makes the world better.
+小さな親切が世界を良くします。
 
-👵 Have you ever helped someone in your neighborhood?  
-あなたは近所の誰かを手伝ったことがありますか？  
-🧹 What small tasks have you done for others before?  
-今までどんな小さな仕事を他の人のためにしてきましたか？  
-🌼 Who in your town needs help the most?  
-あなたの町で一番助けを必要としているのは誰ですか？  
-🧺 Had you talked with elderly people often before this year?  
-今年になる前に高齢の人とよく話していましたか？  
-🍵 What would you do if your neighbor asked you for help?  
-近所の人に手伝いを頼まれたら、あなたはどうしますか？  
-💬 Which is easier for you, talking with adults or with children?  
-大人と話すのと子どもと話すのでは、どちらがあなたにとって簡単ですか？  
-🙋‍♀️ Who has asked you for help recently?  
-最近あなたに助けを求めてきた人は誰ですか？  
-😊 What kind of help can you give to someone living alone?  
-一人暮らしの人にどんな助けができますか？  
-🏡 Have you ever visited a neighbor’s home before?  
-今まで近所の家を訪れたことがありますか？  
-🌟 If you could help anyone today, who would you choose?  
-もし今日誰かを助けられるなら、誰を選びますか？`
+🏡 Do you know your neighbors?
+近所の人を知っていますか？
+👵 Do you like talking to older people?
+年配の人と話すのは好きですか？
+📦 Can you carry heavy things?
+重いものを運べますか？
+💪 Do you think you are strong?
+自分は力持ちだと思いますか？
+🍵 Do you like Japanese sweets?
+和菓子は好きですか？
+🗣️ What do you talk about with adults?
+大人と何について話しますか？
+😊 Do you think you are a kind person?
+自分は親切な人だと思いますか？
+🤝 Have you ever helped a stranger?
+見知らぬ人を助けたことがありますか？
+🏘️ Do you like your town?
+自分の町が好きですか？
+🌟 Why is kindness important?
+なぜ親切は大切なのですか？`
     },
 
     // Story 30 - A New Hobby: Photography
+    // Target Grammar: Enjoy -ing / Pictures of
     {
         title: "30. A New Hobby: Photography",
-        content: `📸 Yuki has started taking photos as a new hobby.  
-ユキは新しい趣味として写真を撮り始めました。  
-🌅 She enjoys capturing sunsets, which are beautiful in her town.  
-彼女は町で美しい夕日を撮るのを楽しんでいます。  
-📷 She had only used her phone camera before getting a real one.  
-彼女は本格的なカメラを手に入れる前はスマホのカメラしか使っていませんでした。  
-👨‍🏫 Her uncle, who is a photographer, teaches her useful tips.  
-写真家であるおじが役に立つコツを教えてくれます。  
-🌄 If she wakes up early, she will take pictures of the morning light.  
-早起きすれば、朝の光の写真を撮るつもりです。  
-🌈 Her photos look more colorful now than when she started.  
-彼女の写真は始めたころより今のほうがカラフルに見えます。  
-📸 Yuki has already made a small album of her best shots.  
-ユキはすでにお気に入りの写真で小さなアルバムを作りました。  
-😊 She enjoys showing her pictures to her family.  
-彼女は家族に写真を見せるのを楽しんでいます。  
-🏞️ She wants to visit new places to find more subjects.  
-彼女はもっと被写体を探すために新しい場所を訪れたいと思っています。  
-🌟 Photography is teaching her to see beauty in everyday life.  
-写真を撮ることは、日常の中の美しさに気づかせてくれています。  
+        content: `📸 Yuki bought a new camera last month.
+ユキは先月新しいカメラを買いました。
+🏞️ He enjoys taking pictures of nature.
+彼は自然の写真を撮るのを楽しんでいます。
+🌅 The sunset in his town is very beautiful.
+彼の町の夕日はとても美しいです。
+📱 Smartphone cameras are good, but he prefers his new camera.
+スマホのカメラも良いですが、彼は新しいカメラのほうが好きです。
+🐦 He often goes to the park to find birds.
+彼はよく鳥を見つけるために公園に行きます。
+🚶‍♂️ Walking around with a camera is fun.
+カメラを持って歩き回るのは楽しいです。
+💻 He uploads his best photos to his computer.
+彼は一番良い写真をコンピュータにアップロードします。
+🖼️ He wants to make a photo album for his family.
+彼は家族のためにフォトアルバムを作りたいと思っています。
+👀 Through the camera, the world looks different.
+カメラを通すと、世界は違って見えます。
+🌟 Yuki wants to be a photographer in the future.
+ユキは将来カメラマンになりたいと思っています。
 
-📷 Have you ever taken photos as a hobby?  
-あなたは趣味として写真を撮ったことがありますか？  
-🌄 What kinds of scenes have you photographed before?  
-今までどんな景色を写真に撮ったことがありますか？  
-📱 Which do you prefer, using a phone camera or a real camera?  
-スマホのカメラと本格的なカメラでは、どちらを使うのが好きですか？  
-👨‍🏫 Have you learned any skills from a family member?  
-家族から何かスキルを学んだことがありますか？  
-🚶‍♀️ What would you do if you found a beautiful sunset outside?  
-外で美しい夕日を見つけたら、あなたはどうしますか？  
-🌈 Which colors are more attractive to you than others?  
-あなたにとって、他の色より魅力的な色は何ですか？  
-📚 Had you collected photos or pictures before junior high school?  
-中学生になる前に写真や絵を集めていましたか？  
-😊 Who has complimented your pictures before?  
-あなたの写真を褒めてくれた人は誰ですか？  
-🏞️ What places would you like to photograph someday?  
-いつか写真を撮ってみたい場所はどこですか？  
-📸 If you could take perfect photos, what would you choose as your subject?  
-もし完璧な写真を撮れるなら、どんな被写体を選びますか？`
+📸 Do you have a camera?
+カメラを持っていますか？
+🏞️ What do you like to take pictures of?
+何を写真に撮るのが好きですか？
+🌅 Do you like watching sunsets?
+夕日を見るのは好きですか？
+📱 Do you use your phone to take photos?
+写真を撮るのにスマホを使いますか？
+🐦 Do you like animals or birds?
+動物や鳥は好きですか？
+🚶‍♂️ Do you like walking outside?
+外を歩くのは好きですか？
+💻 Do you have a computer?
+コンピュータを持っていますか？
+🖼️ Do you print your photos?
+写真を印刷しますか？
+👀 Do you notice small changes in your town?
+町の小さな変化に気づきますか？
+🌟 Do you have a hobby you want to start?
+始めたい趣味はありますか？`
     },
+// eikenpre2_part3.js - Stories 31–48 (Final Batch)
+const eikenpre2_part3 = [
     // Story 31 - Experiencing a Cultural Event
+    // Target Grammar: Passive Voice / Be interested in
     {
         title: "31. Experiencing a Cultural Event",
-        content: `🎎 Kana has attended a traditional tea ceremony for the first time.  
-カナは初めて伝統的な茶道に参加しました。  
-🍵 The room, which was decorated with flowers and scrolls, felt calm.  
-花や掛け軸で飾られたその部屋は、とても落ち着いた雰囲気でした。  
-👘 She had only seen tea ceremonies on TV before this day.  
-彼女はこの日まで茶道をテレビで見るだけでした。  
-👩‍🏫 The host, who wore a kimono, explained each careful movement.  
-着物を着た亭主が、一つ一つの丁寧な動きを説明してくれました。  
-🧎‍♀️ If Kana visits again, she will try to sit more politely.  
-カナがまた訪れれば、もっと礼儀正しく座るようにしてみるつもりです。  
-🍡 The sweets tasted sweeter than she expected.  
-お菓子は彼女が思っていたより甘く感じられました。  
-🕊️ Kana has become more interested in Japanese traditions.  
-カナは日本の伝統に以前より興味を持つようになりました。  
-📸 She has already shown photos of the ceremony to her family.  
-彼女はすでに家族に茶道の写真を見せました。  
-😊 Her grandmother was happy because she loves traditional culture.  
-伝統文化が大好きな祖母は、その話を聞いて喜びました。  
-🌟 The experience helped Kana feel proud of her culture.  
-その経験はカナに自分の文化を誇りに思わせました。  
+        content: `🎎 Kana attended a traditional tea ceremony yesterday.
+カナは昨日、伝統的な茶道に参加しました。
+🍵 The ceremony was held in a quiet Japanese room.
+その儀式は静かな和室で行われました。
+👘 The teacher was dressed in a beautiful kimono.
+先生は美しい着物を着ていました。
+🌿 Kana is interested in traditional Japanese culture.
+カナは日本の伝統文化に興味があります。
+🍵 The tea tasted a little bitter, but it was delicious.
+お茶は少し苦い味がしましたが、おいしかったです。
+🤫 Everyone kept silent during the ceremony.
+儀式の間、みんな黙っていました。
+🍰 They ate sweet cakes before drinking the tea.
+彼らはお茶を飲む前に甘いお菓子を食べました。
+🧘‍♀️ Sitting on the floor for a long time was difficult.
+長い間床に座っているのは大変でした。
+😊 However, Kana enjoyed the peaceful atmosphere.
+しかし、カナはその平和な雰囲気を楽しみました。
+🌟 She wants to learn more about her country's traditions.
+彼女は自国の伝統についてもっと学びたいと思っています。
 
-🎎 Have you ever joined a traditional event or ceremony?  
-あなたは伝統的な行事や儀式に参加したことがありますか？  
-👘 What traditional clothes have you seen or worn before?  
-今までどんな伝統的な服を見たり着たりしたことがありますか？  
-🍵 Have you tasted any special food or drink at a cultural event?  
-文化的な行事で特別な食べ物や飲み物を味わったことがありますか？  
-📚 Is there someone who has taught you about your country’s traditions?  
-あなたの国の伝統について教えてくれた人はいますか？  
-🏯 What would you do if a foreign friend visited during a festival?  
-外国の友達が祭りのときに訪ねてきたら、あなたはどうしますか？  
-🎏 Which traditional events are more interesting for you than New Year’s?  
-あなたにとって、お正月より興味深い伝統行事はどれですか？  
-📷 Had you taken photos at temples or shrines before junior high school?  
-中学生になる前に寺や神社で写真を撮ったことがありますか？  
-😊 Who has told you stories about old customs or festivals?  
-古い習慣や祭りについて話してくれた人は誰ですか？  
-🎉 What traditional event would you like to experience in another country?  
-他の国でどんな伝統行事を体験してみたいですか？  
-🌸 If you could keep one tradition forever, which would you choose?  
-もし一つの伝統を永遠に残せるなら、どれを選びますか？`
+🎎 Have you ever attended a tea ceremony?
+茶道に参加したことがありますか？
+👘 Do you have a kimono or yukata?
+着物や浴衣を持っていますか？
+🍵 Do you like green tea?
+緑茶は好きですか？
+🌿 Are you interested in history?
+歴史に興味がありますか？
+🍰 Do you like Japanese sweets or Western sweets?
+和菓子と洋菓子、どちらが好きですか？
+🤫 Can you stay quiet in a library?
+図書館で静かにしていられますか？
+🧘‍♀️ Is it hard for you to sit seiza style?
+正座をするのはあなたにとって大変ですか？
+😊 What makes you feel peaceful?
+何があなたを穏やかな気持ちにさせますか？
+🌟 What is a famous tradition in Japan?
+日本の有名な伝統は何ですか？
+🌏 Do you want to introduce Japanese culture to foreigners?
+外国人に日本文化を紹介したいですか？`
     },
 
     // Story 32 - Babysitting a Little Cousin
+    // Target Grammar: Ask + Person + To... / Give + Person + Thing
     {
         title: "32. Babysitting a Little Cousin",
-        content: `🧸 Hiro has been asked to babysit his little cousin on Saturday.  
-ヒロは土曜日に小さないとこの世話を頼まれました。  
-🏠 He will watch him at his aunt’s house, which is near the station.  
-彼はいとこを駅の近くにあるおばの家で見てあげる予定です。  
-👶 Hiro had only played with him at family parties before.  
-ヒロはいとことこれまで家族の集まりで遊ぶだけでした。  
-👩‍👦 His aunt, who works part-time, needs someone she can trust.  
-パートで働いているおばは、信頼できる人が必要です。  
-🧃 If the boy gets hungry, Hiro will give him snacks and juice.  
-いとこがお腹を空かせたら、ヒロはお菓子とジュースをあげるつもりです。  
-🎲 Playing with a child is harder than Hiro thought.  
-子どもと遊ぶのはヒロが思っていたより大変です。  
-📺 He has planned some games and a short cartoon to watch.  
-彼はいくつかのゲームと短いアニメを見る計画を立てました。  
-😊 His cousin has always smiled when Hiro visits.  
-いとこはヒロが来るといつも笑顔になります。  
-🕒 Hiro wants the afternoon to be fun and safe.  
-ヒロはその午後を楽しく安全な時間にしたいと思っています。  
-🌟 This babysitting job may teach him how to handle children.  
-このベビーシッターの仕事は、子どもの扱い方を彼に教えてくれるかもしれません。  
+        content: `👶 Hiro looked after his little cousin last weekend.
+ヒロは先週末、小さないとこの世話をしました。
+🏠 His aunt asked him to watch the boy for three hours.
+彼のおばは彼に、3時間その男の子を見ていてくれるよう頼みました。
+🧸 They played with toy cars in the living room.
+彼らはリビングでおもちゃの車で遊びました。
+🍼 Hiro gave his cousin some milk and cookies.
+ヒロはいとこにミルクとクッキーをあげました。
+😭 Suddenly, the baby started crying loudly.
+突然、赤ちゃんが大声で泣き始めました。
+😰 Hiro didn't know what to do at first.
+ヒロは最初どうすればいいかわかりませんでした。
+🎶 He tried singing a song to make him stop crying.
+彼は泣き止ませるために歌を歌ってみました。
+😴 Finally, the cousin fell asleep on the sofa.
+ついに、いとこはソファで眠りに落ちました。
+😓 Taking care of children is harder than studying.
+子供の世話をするのは勉強するより大変です。
+🌟 Hiro respects his parents more now.
+ヒロは今、両親をもっと尊敬しています。
 
-👶 Have you ever taken care of a younger child?  
-あなたは小さい子どもの世話をしたことがありますか？  
-🧃 What snacks are good for children in your opinion?  
-あなたの考えでは、子どもに良いおやつは何ですか？  
-🎮 What games have you played with younger kids before?  
-今まで小さい子とどんな遊びやゲームをしましたか？  
-👪 Is there someone in your family who often cares for children?  
-あなたの家族の中で、よく子どもの面倒を見る人はいますか？  
-🧸 What would you do if a child started crying while you watched them?  
-あなたが見ている間に子どもが泣き出したら、どうしますか？  
-📺 Which is better for small children, playing outside or watching TV?  
-小さい子どもには、外で遊ぶのとテレビを見るのとではどちらが良いと思いますか？  
-🍼 Had you helped with a baby or toddler before junior high school?  
-中学生になる前に赤ちゃんや幼児の世話を手伝ったことがありますか？  
-😊 Who has shown you how to hold or comfort a child?  
-子どもを抱いたりあやしたりする方法を教えてくれた人は誰ですか？  
-🏠 In what kind of place do you think children feel safe?  
-どんな場所で子どもは安心するとあなたは思いますか？  
-🌟 If you could choose a part-time job, would you like to work with children?  
-もしアルバイトを選べるなら、子どもと関わる仕事をしたいですか？`
+👶 Do you like babies or small children?
+赤ちゃんや小さい子供は好きですか？
+🏠 Have you ever babysat anyone?
+誰かの世話をしたことはありますか？
+🧸 What was your favorite toy when you were little?
+小さい頃、一番好きだったおもちゃは何ですか？
+🍼 Do you know how to make milk for a baby?
+赤ちゃんのためにミルクの作り方を知っていますか？
+😭 What do you do when a child cries?
+子供が泣いているとき、どうしますか？
+😰 Do you panic easily?
+すぐにパニックになりますか？
+🎶 Can you sing children's songs?
+童謡を歌えますか？
+😴 Do you take naps?
+昼寝をしますか？
+😓 What is the hardest thing you have done?
+あなたがした中で一番大変だったことは何ですか？
+🌟 Do you respect your parents? Why?
+両親を尊敬していますか？なぜですか？`
     },
 
     // Story 33 - A School Recycling Project
+    // Target Grammar: Passive Voice / It is important to...
     {
         title: "33. A School Recycling Project",
-        content: `♻️ The student council has started a new recycling project at school.  
-生徒会は学校で新しいリサイクルプロジェクトを始めました。  
-🧃 Students bring plastic bottles, which are collected in special boxes.  
-生徒たちは特別な箱に集められるペットボトルを持ってきます。  
-📅 The project had been discussed for months before it began.  
-このプロジェクトは始まる前に何か月も話し合われていました。  
-👩‍🏫 Their science teacher, who cares about the environment, supports it.  
-環境を大切にする理科の先生がこの活動を応援しています。  
-🗑️ If everyone joins, the amount of trash will be reduced.  
-みんなが参加すれば、ゴミの量は減るでしょう。  
-📉 They have already collected more bottles than they expected.  
-彼らはすでに予想より多くのボトルを集めました。  
-📢 Posters around the school explain which items can be recycled.  
-学校中のポスターが、どの品物がリサイクルできるかを説明しています。  
-😊 Many students have begun to think more about waste.  
-多くの生徒がゴミについて以前より考えるようになりました。  
-🌱 The project is making the school cleaner than before.  
-このプロジェクトのおかげで学校は以前よりきれいになっています。  
-🌟 The students feel proud that they are helping the Earth.  
-生徒たちは地球の役に立っていることを誇りに感じています。  
+        content: `♻️ The student council started a recycling project.
+生徒会はリサイクルプロジェクトを始めました。
+🗑️ Plastic bottles are collected in a special box.
+ペットボトルは特別な箱に集められます。
+🧼 Students must wash the bottles before throwing them away.
+生徒たちは捨てる前にボトルを洗わなければなりません。
+🧴 The caps are also recycled to make new things.
+キャップも新しいものを作るためにリサイクルされます。
+🌍 It is important to reduce waste for the earth.
+地球のためにゴミを減らすことは重要です。
+📄 They made posters to explain the rules.
+彼らはルールを説明するためにポスターを作りました。
+🤝 Everyone is cooperating with the project.
+みんながプロジェクトに協力しています。
+📉 The amount of garbage has decreased this month.
+今月、ゴミの量が減りました。
+😊 The teachers are happy with the result.
+先生たちは結果に満足しています。
+🌟 Small actions can change the world.
+小さな行動が世界を変えることができます。
 
-♻️ Have you ever separated trash for recycling at home or school?  
-あなたは家や学校でゴミを分別してリサイクルしたことがありますか？  
-🗑️ What kinds of trash have you recycled before?  
-今までどんなゴミをリサイクルしたことがありますか？  
-🌍 Who has taught you about protecting the environment?  
-環境を守ることについて教えてくれた人は誰ですか？  
-📜 Have you read any articles or posters about recycling?  
-リサイクルについての記事やポスターを読んだことがありますか？  
-🚮 What would you do if you saw someone throwing trash on the ground?  
-誰かが地面にゴミを捨てているのを見たら、あなたはどうしますか？  
-🏫 Which places are more important to keep clean, schools or parks?  
-学校と公園では、どちらをきれいに保つことがより大切だと思いますか？  
-📦 Had you joined any environmental activities before junior high school?  
-中学生になる前に環境活動に参加したことがありますか？  
-😊 Who has praised you for doing something good for nature?  
-自然に良いことをしたとき、あなたを褒めてくれた人は誰ですか？  
-🌱 What small eco-friendly habit would you like to start?  
-どんな小さなエコな習慣を始めてみたいですか？  
-🌟 If your class could start a project to help the Earth, what would you choose?  
-クラスで地球のためのプロジェクトを始められるなら、何を選びますか？`
+♻️ Do you recycle at home?
+家でリサイクルしていますか？
+🗑️ How many plastic bottles do you use a week?
+1週間に何本ペットボトルを使いますか？
+🧼 Do you wash bottles before recycling?
+リサイクルする前にボトルを洗いますか？
+🌍 Do you worry about environmental problems?
+環境問題について心配していますか？
+📄 Have you ever made a poster for school?
+学校のためにポスターを作ったことはありますか？
+🤝 Is your class cooperative?
+あなたのクラスは協力的ですか？
+📉 Do you try to reduce plastic waste?
+プラスチックゴミを減らそうとしていますか？
+😊 What makes you feel satisfied?
+何があなたを満足させますか？
+🌟 What can you do to save the earth?
+地球を救うために何ができますか？
+🚮 Do you pick up trash when you see it?
+ゴミを見たら拾いますか？`
     },
 
     // Story 34 - Camping in the Mountains
+    // Target Grammar: Past Continuous / Comparative
     {
         title: "34. Camping in the Mountains",
-        content: `⛰️ Daigo went camping in the mountains with his friends last month.  
-ダイゴは先月、友達と一緒に山へキャンプに行きました。  
-🏕️ Their tent, which they set up near a river, was small but comfortable.  
-川の近くに張った彼らのテントは小さいけれど快適でした。  
-🔥 They had prepared food and tools carefully before the trip.  
-彼らは旅行の前に食べ物と道具を慎重に準備していました。  
-👨‍🏫 One friend’s father, who was experienced, taught them how to build a fire.  
-キャンプ慣れした友達の父親が、焚き火の仕方を教えてくれました。  
-🍛 If the fire goes out, they will not be able to cook dinner.  
-火が消えてしまえば、夕食を作ることができません。  
-🌌 The stars looked brighter there than in the city.  
-そこでは星が街よりも明るく見えました。  
-🐦 Daigo has loved nature since he was a child.  
-ダイゴは子どものころから自然が大好きです。  
-😊 He enjoyed listening to the sound of the river at night.  
-彼は夜に川の音を聞くのを楽しみました。  
-📷 He has already printed some photos from the trip.  
-彼はすでにキャンプの写真を何枚か印刷しました。  
-🌟 The camping trip made their friendship stronger.  
-このキャンプ旅行は彼らの友情をより強くしました。  
+        content: `⛺ Daigo went camping with his friends in August.
+ダイゴは8月に友達とキャンプに行きました。
+🌲 They set up a tent near a beautiful river.
+彼らは美しい川の近くにテントを張りました。
+🔥 Making a fire was more difficult than they thought.
+火を起こすのは彼らが思っていたより難しかったです。
+🍛 They cooked curry and rice for dinner.
+彼らは夕食にカレーライスを作りました。
+🌌 While they were eating, they looked at the stars.
+食べている間、彼らは星を見ました。
+✨ The stars were much brighter than in the city.
+星は街よりもずっと明るかったです。
+🐻 They were a little afraid of wild animals.
+彼らは野生動物を少し怖がっていました。
+💤 Sleeping in a sleeping bag was a new experience.
+寝袋で寝るのは新しい経験でした。
+🌅 The sunrise the next morning was amazing.
+翌朝の日の出は素晴らしかったです。
+🌟 Daigo loves spending time in nature.
+ダイゴは自然の中で過ごすのが大好きです。
 
-🏕️ Have you ever gone camping or stayed in a cabin?  
-あなたはキャンプをしたり山小屋に泊まったりしたことがありますか？  
-🔥 What food would you like to cook over a campfire?  
-キャンプの焚き火でどんな食べ物を作ってみたいですか？  
-🌌 Have you looked at the stars away from the city lights?  
-街の明かりから離れて星を見たことがありますか？  
-🎒 Had you prepared your own backpack for a trip before?  
-以前に旅行のために自分でリュックを準備したことがありますか？  
-🚶‍♂️ What would you do if you heard strange sounds at night in the mountains?  
-山で夜に変な音を聞いたら、あなたはどうしますか？  
-🏞️ Which do you prefer, spending time in the mountains or by the sea?  
-山と海では、どちらで過ごすほうが好きですか？  
-🧭 Who has taught you how to stay safe in nature?  
-自然の中で安全に過ごす方法を教えてくれた人は誰ですか？  
-📷 What kind of scenery would you like to photograph while camping?  
-キャンプ中にどんな景色を写真に撮ってみたいですか？  
-⛺ What is more difficult for you, sleeping in a tent or hiking all day?  
-テントで寝ることと一日中ハイキングすることでは、どちらのほうが大変ですか？  
-🌟 If you could plan a camping trip anywhere, where would you go?  
-どこでもキャンプ旅行を計画できるなら、どこへ行きたいですか？`
+⛺ Do you like camping?
+キャンプは好きですか？
+🌲 Have you ever slept in a tent?
+テントで寝たことがありますか？
+🔥 Can you make a fire?
+火を起こせますか？
+🍛 What is the best food to eat outside?
+外で食べるのに一番良い食べ物は何ですか？
+🌌 Do you like watching the night sky?
+夜空を見るのは好きですか？
+✨ Where can you see beautiful stars?
+どこできれいな星が見られますか？
+🐻 Are you afraid of bears or snakes?
+クマやヘビが怖いですか？
+💤 Can you sleep anywhere?
+どこでも眠れますか？
+🌅 Do you usually see the sunrise?
+普段日の出を見ますか？
+🌟 Do you prefer the mountains or the beach?
+山と海、どちらが好きですか？`
     },
 
     // Story 35 - Taking Online Lessons
+    // Target Grammar: Present Perfect Continuous / Look forward to
     {
         title: "35. Taking Online Lessons",
-        content: `💻 Mina has started taking online piano lessons at home.  
-ミナは家でオンラインピアノレッスンを受け始めました。  
-🎹 Her teacher, who lives in another city, teaches through video calls.  
-別の町に住んでいる先生がビデオ通話で教えてくれます。  
-📅 She had gone to a local music school before the pandemic.  
-彼女は以前、パンデミックの前は地元の音楽教室に通っていました。  
-🎧 Now she wears headphones, which help her focus on the sound.  
-今、彼女は音に集中できるようヘッドホンをつけています。  
-🕒 If the internet connection is bad, the lesson will be difficult.  
-インターネットの接続が悪ければ、レッスンは大変になります。  
-⌨️ Mina types messages to ask questions when she doesn’t understand.  
-わからないとき、ミナは質問するためにメッセージを入力します。  
-🎵 She has already learned two new songs online.  
-彼女はオンラインで既に2曲の新しい曲を習いました。  
-😊 Her parents are happy because she can learn safely at home.  
-彼女の両親は、家で安全に学べるので喜んでいます。  
-📱 Mina sometimes records her lessons and watches them again.  
-ミナはときどきレッスンを録画して、あとで見直します。  
-🌟 Online lessons are becoming a normal part of her life.  
-オンラインレッスンは彼女の生活の当たり前の一部になりつつあります。  
+        content: `💻 Mina has been taking English lessons online for a year.
+ミナは1年間オンラインで英語のレッスンを受けています。
+🇵🇭 Her teacher lives in the Philippines.
+彼女の先生はフィリピンに住んでいます。
+🗣️ They talk through a video call once a week.
+彼らは週に一度、ビデオ通話で話します。
+🏠 Mina can take the lesson in her own room.
+ミナは自分の部屋でレッスンを受けることができます。
+💰 Online lessons are usually cheaper than regular schools.
+オンラインレッスンはたいてい普通の学校より安いです。
+📝 She prepares for the lesson by reading news articles.
+彼女はニュース記事を読んでレッスンの予習をします。
+😊 Her speaking skills are getting better.
+彼女のスピーキングスキルは良くなってきています。
+✈️ She looks forward to visiting her teacher someday.
+彼女はいつか先生を訪ねるのを楽しみにしています。
+🌏 Technology helps us connect with the world.
+テクノロジーは私たちが世界とつながるのを助けてくれます。
+🌟 Mina wants to work for an international company.
+ミナは国際的な企業で働きたいと思っています。
 
-💻 Have you ever taken an online class or lesson?  
-あなたはオンラインの授業やレッスンを受けたことがありますか？  
-📱 What apps or websites have you used for studying?  
-勉強のためにどんなアプリやサイトを使ったことがありますか？  
-🎧 Do you find it easier to learn with video or with a real book?  
-ビデオで学ぶほうが、本で学ぶより簡単だと感じますか？  
-🕒 Had you studied at home for a long time before?  
-あなたは以前、長い時間家で勉強したことがありますか？  
-📶 What would you do if your internet stopped during a lesson?  
-レッスン中にインターネットが止まったら、あなたはどうしますか？  
-🏫 Which do you prefer, learning at school or learning online?  
-学校で学ぶのとオンラインで学ぶのでは、どちらが好きですか？  
-🎥 Who has taught you something through a video or livestream?  
-ビデオやライブ配信で何かを教えてくれた人は誰ですか？  
-📝 What kind of subject would you like to learn online?  
-オンラインでどんな科目を学んでみたいですか？  
-⌚ When is a better time for you to study online, morning or night?  
-オンラインで勉強するのに、朝と夜ではどちらのほうが良いですか？  
-🌍 If you could learn from any teacher in the world, who would you choose?  
-世界中のどんな先生からでも学べるとしたら、誰を選びますか？`
+💻 Have you ever taken an online lesson?
+オンラインレッスンを受けたことがありますか？
+🗣️ Do you like talking in English?
+英語で話すのは好きですか？
+🏠 Do you prefer studying at home or at school?
+家で勉強するのと学校でするのと、どちらが好きですか？
+💰 Do you think English lessons are expensive?
+英語のレッスンは高いと思いますか？
+📝 Do you prepare for your classes?
+授業の予習をしますか？
+😊 Do you think your English is improving?
+あなたの英語は上達していると思いますか？
+✈️ Which country do you want to visit?
+どの国に行きたいですか？
+🌏 Is the internet important for studying?
+勉強にインターネットは重要ですか？
+🌟 What kind of job do you want in the future?
+将来どんな仕事につきたいですか？
+🇵🇭 Do you know anyone who lives abroad?
+海外に住んでいる人を知っていますか？`
     },
 
     // Story 36 - Visiting Someone in Hospital
+    // Target Grammar: Relative Pronoun (who) / Hope that
     {
         title: "36. Visiting Someone in Hospital",
-        content: `🏥 Taku visited his grandfather in the hospital last Sunday.  
-タクは先週の日曜日に病院のおじいさんを見舞いました。  
-🌿 The room, which had a small window, was quiet and clean.  
-小さな窓のあるその部屋は静かで清潔でした。  
-🧓 His grandfather had broken his leg a week before the visit.  
-おじいさんはタクが訪れる1週間前に足を骨折していました。  
-🌼 Taku brought flowers, which his grandfather liked very much.  
-タクはおじいさんがとても喜んだ花を持って行きました。  
-💬 If Taku visits often, his grandfather will feel less lonely.  
-タクがよく訪れれば、おじいさんはあまり寂しく感じないでしょう。  
-😊 They talked about school and funny family stories.  
-二人は学校のことや家族の面白い話をしました。  
-📖 Taku has been writing letters to his grandfather since he was small.  
-タクは小さいころからおじいさんに手紙を書いてきました。  
-💊 The nurse, who was very kind, explained the treatment.  
-とても親切な看護師が治療について説明してくれました。  
-🚶‍♂️ His grandfather is walking better now than last week.  
-おじいさんは先週より今のほうが楽に歩けるようになっています。  
-🌟 The visit reminded Taku to value time with his family.  
-そのお見舞いは、家族との時間を大切にすることをタクに思い出させました。  
+        content: `🏥 Taku went to the hospital to visit his grandfather.
+タクは祖父を見舞うために病院へ行きました。
+🛏️ His grandfather, who broke his leg, was in bed.
+足を骨折した祖父はベッドにいました。
+💐 Taku brought some flowers to cheer him up.
+タクは彼を元気づけるために花を持って行きました。
+🍎 He also cut some apples for his grandfather.
+彼はまた、祖父のためにリンゴを切りました。
+😊 His grandfather looked happy to see Taku.
+祖父はタクに会えて嬉しそうでした。
+🚶‍♂️ The doctor said he needs to practice walking.
+医者は、彼には歩く練習が必要だと言いました。
+💪 Taku hopes that his grandfather gets well soon.
+タクは祖父が早く良くなることを願っています。
+🏠 He wants to go back home as soon as possible.
+彼はできるだけ早く家に帰りたがっています。
+👨‍👩‍👦 Family support is very important when someone is sick.
+誰かが病気のとき、家族の支えはとても重要です。
+🌟 Taku promised to visit him again next Sunday.
+タクは次の日曜日にまた彼を訪ねると約束しました。
 
-🏥 Have you ever visited someone in a hospital?  
-あなたは誰かを病院にお見舞いしたことがありますか？  
-🌼 What small gifts would you bring to a person who is sick?  
-病気の人にどんな小さな贈り物を持って行きたいですか？  
-📨 Have you written letters or messages to someone who wasn’t well?  
-体調の悪い人に手紙やメッセージを書いたことがありますか？  
-👨‍👩‍👧 Who has taken care of you when you were sick?  
-あなたが病気のときにお世話をしてくれたのは誰ですか？  
-💬 What would you talk about if you visited a friend in hospital?  
-友達を病院にお見舞いするとしたら、何について話しますか？  
-🕊️ Which makes people feel better, quiet conversation or exciting news?  
-人の気持ちを楽にするのは、静かな会話とワクワクするニュースではどちらだと思いますか？  
-👨‍⚕️ Had you been afraid of hospitals when you were younger?  
-あなたは小さいころ病院が怖かったことがありますか？  
-😊 Who has cheered you up when you felt weak or tired?  
-あなたが弱っていたり疲れていたりするときに元気づけてくれた人は誰ですか？  
-🏡 What is more comforting for you than medicine when you feel sick?  
-気分が悪いとき、薬よりあなたを安心させてくれるものは何ですか？  
-🌟 If you could help someone feel better today, what would you do?  
-もし今日誰かの気分を良くできるなら、あなたは何をしますか？`
+🏥 Do you like hospitals?
+病院は好きですか？
+🛏️ Have you ever stayed in a hospital?
+入院したことがありますか？
+💐 What do you bring when you visit a sick person?
+病気の人を見舞うとき、何を持っていきますか？
+🍎 Can you peel an apple?
+リンゴの皮をむけますか？
+😊 Who makes you happy when you are sad?
+悲しいとき、誰があなたを幸せにしますか？
+🚶‍♂️ Do you exercise to stay healthy?
+健康を保つために運動しますか？
+💪 Do you hope for anything special now?
+今、何か特別なことを願っていますか？
+🏠 Do you think home is the best place?
+家が一番良い場所だと思いますか？
+👨‍👩‍👦 Do you help your family when they are sick?
+家族が病気のとき手伝いますか？
+🌟 Do you keep your promises?
+約束を守りますか？`
     },
 
     // Story 37 - Playing Music at the Station
+    // Target Grammar: Participle (Playing) / Stop to...
     {
         title: "37. Playing Music at the Station",
-        content: `🎶 A small group of students has been playing music at the station.  
-ある小さな学生グループは駅で音楽を演奏しています。  
-🚉 They stand near an open space, which many people walk through.  
-彼らは多くの人が通る広いスペースの近くに立っています。  
-🎺 One boy had practiced the trumpet for years before joining the group.  
-一人の少年はグループに入る前に何年もトランペットの練習をしていました。  
-🎻 A girl, who plays the violin, leads them when they start a song.  
-バイオリンを弾く少女が、演奏を始めるときに彼らをリードします。  
-💰 If people enjoy the music, they will put coins into a small box.  
-人々が音楽を楽しめば、小さな箱にコインを入れてくれます。  
-👂 The sound is louder than in their school music room.  
-音は学校の音楽室よりも大きく響きます。  
-😊 Some passengers have stopped to listen and clap.  
-何人かの乗客は立ち止まって聞き、拍手しました。  
-📷 Others have taken photos and short videos.  
-他の人たちは写真や短い動画を撮りました。  
-🎵 The students feel nervous at first but then enjoy themselves.  
-生徒たちは最初は緊張しますが、そのうち楽しめるようになります。  
-🌟 The experience is giving them confidence to perform in public.  
-この経験は、人前で演奏する自信を彼らに与えています。  
+        content: `🎷 A group of students was playing jazz at the station.
+学生のグループが駅でジャズを演奏していました。
+🚉 Many people stopped to listen to their music.
+多くの人々が彼らの音楽を聴くために立ち止まりました。
+🎹 The boy playing the piano looked very cool.
+ピアノを弾いている男の子はとてもかっこよく見えました。
+🥁 The sound of the drums was loud and exciting.
+ドラムの音は大きくて刺激的でした。
+👏 When they finished a song, everyone clapped.
+彼らが曲を終えると、みんなが拍手しました。
+😊 The students looked happy to see the audience.
+学生たちは聴衆を見て嬉しそうでした。
+🎩 Some people put money in a hat.
+帽子にお金を入れる人もいました。
+🎵 Music has the power to change people's mood.
+音楽には人々の気分を変える力があります。
+📸 I took a video of their performance.
+私は彼らの演奏の動画を撮りました。
+🌟 I want to learn how to play the saxophone.
+私はサックスの吹き方を習いたいと思いました。
 
-🎺 Have you ever listened to street musicians or performers?  
-あなたはストリートミュージシャンやパフォーマーの演奏を聞いたことがありますか？  
-🚉 What kinds of places have you seen people performing in?  
-今までどんな場所で人が演奏しているのを見たことがありますか？  
-🎻 Have you played an instrument in front of strangers before?  
-見知らぬ人の前で楽器を演奏したことがありますか？  
-📹 Would you record a video if you saw a good performance outside?  
-外で良い演奏を見かけたら、あなたは動画を撮りますか？  
-💬 What would you say to someone playing music well on the street?  
-ストリートで上手に演奏している人に、あなたは何と言いますか？  
-👏 Which is more exciting, a big concert hall or a small street show?  
-大きなコンサートホールと小さなストリートショーでは、どちらのほうがワクワクしますか？  
-😰 Had you been very nervous before your first performance?  
-初めての発表の前に、とても緊張したことがありますか？  
-😊 Who has supported you when you felt shy in public?  
-人前で恥ずかしかったときにあなたを支えてくれた人は誰ですか？  
-🎼 What kind of music would you like to perform outdoors?  
-外でどんな音楽を演奏してみたいですか？  
-🌟 If you saw students performing at a station, what would you do?  
-駅で学生が演奏しているのを見かけたら、あなたはどうしますか？`
+🎷 Do you like jazz music?
+ジャズ音楽は好きですか？
+🚉 Do you often see musicians on the street?
+通りで音楽家をよく見かけますか？
+🎹 Do you think playing the piano is cool?
+ピアノを弾くのはかっこいいと思いますか？
+🥁 Do you like loud music?
+大きな音の音楽は好きですか？
+👏 Do you clap after a performance?
+演奏の後に拍手しますか？
+😊 Do you get nervous in front of people?
+人前で緊張しますか？
+🎩 Have you ever given money to a street performer?
+大道芸人にお金をあげたことがありますか？
+🎵 Does music change your mood?
+音楽はあなたの気分を変えますか？
+📸 Do you take videos with your smartphone?
+スマホで動画を撮りますか？
+🌟 What instrument do you want to play?
+どの楽器を演奏したいですか？`
     },
 
     // Story 38 - Learning Calligraphy
+    // Target Grammar: Gerund (Writing) / As... as
     {
         title: "38. Learning Calligraphy",
-        content: `🖌️ Rika has started learning Japanese calligraphy after school.  
-リカは放課後に書道を習い始めました。  
-📜 Her teacher, who is very strict about posture, corrects her often.  
-姿勢にとても厳しい先生が、よく彼女を注意します。  
-🧒 Rika had only written with a pen before joining the class.  
-リカはクラスに入る前はペンでしか書いたことがありませんでした。  
-🖤 Now she uses ink and a brush, which feel very different.  
-今、彼女はとても感触の違う墨と筆を使っています。  
-🧽 If she makes a mistake, she will try the same character again.  
-もし間違えたら、彼女は同じ字をもう一度書き直します。  
-📄 Her lines are straighter now than when she started.  
-彼女の線は始めたころより今のほうがまっすぐです。  
-🏠 Rika has already put one of her works on her room wall.  
-リカはすでに自分の作品の一つを部屋の壁に飾りました。  
-😊 Her parents have praised her for her concentration.  
-両親は彼女の集中力を褒めました。  
-🎍 She plans to write a New Year’s word for her family.  
-彼女は家族のためにお正月の言葉を書くつもりです。  
-🌟 Calligraphy is teaching her patience and careful movement.  
-書道は彼女に忍耐と慎重な動きを教えています。  
+        content: `🖌️ Rika goes to a calligraphy class every Tuesday.
+リカは毎週火曜日に書道教室に行きます。
+⚫ She uses a brush and black ink to write kanji.
+彼女は漢字を書くために筆と黒い墨を使います。
+📝 Writing with a brush is more difficult than using a pen.
+筆で書くことはペンを使うことより難しいです。
+🧘‍♀️ She must sit straight and concentrate.
+彼女はまっすぐ座って集中しなければなりません。
+👩‍🏫 Her teacher writes characters as beautifully as art.
+彼女の先生は芸術と同じくらい美しく文字を書きます。
+📄 Rika practices the same character many times.
+リカは同じ文字を何度も練習します。
+😊 When she writes well, she feels satisfied.
+上手に書けると、彼女は満足感を感じます。
+🏆 She won a prize in a contest last year.
+彼女は昨年、コンクールで賞を取りました。
+🏠 She displays her best work in her room.
+彼女は一番良い作品を部屋に飾っています。
+🌟 Calligraphy teaches her to be patient.
+書道は彼女に忍耐強くなることを教えてくれます。
 
-🖌️ Have you ever tried calligraphy or special writing?  
-あなたは書道や特別な書き方を試したことがありますか？  
-✒️ What kinds of tools have you used for writing or drawing?  
-今まで文字を書いたり絵を描いたりするのにどんな道具を使ったことがありますか？  
-📄 Do you prefer writing by hand or typing on a computer?  
-手書きとパソコン入力では、どちらのほうが好きですか？  
-📚 Had you practiced writing characters carefully in elementary school?  
-小学校のときに丁寧に字を書く練習をしていましたか？  
-🧘‍♀️ What would you do if you had to stay very still for a long time?  
-長い間じっとしていなければならないとしたら、あなたはどうしますか？  
-🎨 Which is more relaxing for you, drawing pictures or writing characters?  
-絵を描くことと字を書くことでは、どちらのほうがリラックスできますか？  
-😊 Who has praised your handwriting or art before?  
-あなたの字や絵を褒めてくれた人は誰ですか？  
-🖼️ What kind of word or phrase would you like to hang on your wall?  
-自分の部屋の壁にどんな言葉やフレーズを飾ってみたいですか？  
-🎍 Have you seen calligraphy used in temples, shrines, or shops?  
-お寺や神社、店などで書道が使われているのを見たことがありますか？  
-🌟 If you could write one word to describe yourself, what would it be?  
-自分を表す言葉を一つ書けるとしたら、それは何ですか？`
+🖌️ Have you ever tried calligraphy (Shodo)?
+書道をしたことがありますか？
+⚫ Do you like the smell of ink?
+墨の匂いは好きですか？
+📝 Is your handwriting good or bad?
+あなたの字は上手ですか、下手ですか？
+🧘‍♀️ Can you concentrate for a long time?
+長い間集中できますか？
+👩‍🏫 Do you respect your teachers?
+先生を尊敬していますか？
+📄 Do you mind doing the same thing many times?
+同じことを何度もするのは気になりますか？
+😊 What makes you feel satisfied?
+何があなたを満足させますか？
+🏆 Have you ever won a contest?
+コンクールで勝ったことはありますか？
+🏠 Do you put posters or pictures in your room?
+部屋にポスターや写真を貼っていますか？
+🌟 Do you think you are a patient person?
+自分は忍耐強い人だと思いますか？`
     },
 
     // Story 39 - Helping with Homework
+    // Target Grammar: Help + Person + (to) Verb / Show + Person + Thing
     {
         title: "39. Helping with Homework",
-        content: `📖 Yuna has been helping her younger brother with his homework.  
-ユナは弟の宿題を手伝っています。  
-🏫 They sit at the kitchen table, which is bright and quiet in the evening.  
-彼らは、夕方に明るくて静かなキッチンのテーブルに座ります。  
-📘 Her brother had struggled with kanji before Yuna started helping.  
-弟はユナが手伝う前は漢字に苦労していました。  
-👩‍🏫 Yuna, who is patient, explains each character slowly.  
-我慢強いユナは、一つ一つの漢字をゆっくり説明します。  
-✏️ If he writes the stroke order correctly, she praises him.  
-正しい書き順で書ければ、ユナは彼を褒めます。  
-📚 His grades are better now than last term.  
-弟の成績は前の学期より今のほうが良いです。  
-😊 Yuna has noticed that teaching also helps her review.  
-ユナは、教えることが自分の復習にもなると気づきました。  
-🍵 Their mother brings them tea when they are studying.  
-母は二人が勉強しているときにお茶を持ってきてくれます。  
-🕒 Sometimes the homework takes longer than they expected.  
-宿題は時々、二人が思っていたより長くかかります。  
-🌟 Yuna feels proud when her brother understands something new.  
-弟が新しいことを理解したとき、ユナは誇らしく感じます。  
+        content: `📚 Yuna helps her younger brother with his homework.
+ユナは弟の宿題を手伝います。
+🔢 He is not good at math, so he needs help.
+彼は数学が得意ではないので、助けが必要です。
+👩‍🏫 Yuna shows him how to solve the problems.
+ユナは彼に問題の解き方を教えます。
+🤔 Sometimes, the questions are difficult for Yuna too.
+時々、その質問はユナにとっても難しいです。
+📝 She tells him to write the answers clearly.
+彼女は彼に答えをはっきりと書くように言います。
+😊 When he understands, he looks happy.
+彼が理解すると、彼は嬉しそうに見えます。
+🍪 Their mother brings them snacks while they study.
+勉強中、母が彼らにおやつを持ってきてくれます。
+🤝 Teaching someone is a good way to learn.
+誰かに教えることは学ぶための良い方法です。
+🕒 They study together for an hour after dinner.
+彼らは夕食後、1時間一緒に勉強します。
+🌟 Yuna wants her brother to like studying.
+ユナは弟に勉強を好きになってほしいと思っています。
 
-📚 Have you ever helped someone with their homework?  
-あなたは誰かの宿題を手伝ったことがありますか？  
-👧 Who has helped you with difficult schoolwork before?  
-今まで難しい勉強を手伝ってくれた人は誰ですか？  
-✏️ Which subjects are easier for you to explain to others?  
-他の人に説明するのが簡単な教科はどれですか？  
-📖 Had you taught a younger person something before junior high school?  
-中学生になる前に年下の人に何かを教えたことがありますか？  
-⌛ What would you do if homework took much longer than you planned?  
-宿題が予定より長くかかったら、あなたはどうしますか？  
-👨‍👩‍👧 Which is harder for you, asking for help or helping others?  
-あなたにとって難しいのは、人に助けを求めることと人を助けることのどちらですか？  
-😊 Who has praised you for being kind or helpful?  
-親切にしたり手伝ったりしたことであなたを褒めてくれた人は誰ですか？  
-📚 What kind of study time is more effective for you than studying alone?  
-一人で勉強するより、あなたにとって効果的な勉強の時間はどんな形ですか？  
-🕒 When do you usually do your homework, right after school or at night?  
-あなたは普段、宿題をするのは放課後すぐですか、それとも夜ですか？  
-🌟 If you could have a study partner, what kind of person would you choose?  
-もし勉強仲間を選べるなら、どんな人を選びますか？`
+📚 Do you help your siblings or friends with homework?
+兄弟や友達の宿題を手伝いますか？
+🔢 Do you like math?
+数学は好きですか？
+👩‍🏫 Are you good at explaining things?
+物事を説明するのは得意ですか？
+🤔 What subject is difficult for you?
+あなたにとって難しい教科は何ですか？
+📝 Is your notebook clean and easy to read?
+あなたのノートはきれいで読みやすいですか？
+😊 Do you feel happy when you help others?
+人を助けると幸せな気分になりますか？
+🍪 Do you eat snacks while studying?
+勉強中におやつを食べますか？
+🤝 Do you prefer studying alone or with others?
+一人で勉強するのと他の人と勉強するのと、どちらが好きですか？
+🕒 When do you do your homework?
+いつ宿題をしますか？
+🌟 Do you like studying? Why or why not?
+勉強は好きですか？なぜですか、なぜ違いますか？`
     },
 
     // Story 40 - A Trip to the Planetarium
+    // Target Grammar: Be covered with / Look like
     {
         title: "40. A Trip to the Planetarium",
-        content: `🌌 Tomoki’s class visited a planetarium on a science field trip.  
-トモキのクラスは理科の遠足でプラネタリウムを訪れました。  
-🏛️ The dome, which showed the night sky, was completely dark inside.  
-夜空を映し出すドームは、中が真っ暗でした。  
-⭐ He had never seen so many stars at once before.  
-彼はそれまで一度にこんなにたくさんの星を見たことがありませんでした。  
-👨‍🏫 The guide, who loved space, explained each constellation.  
-宇宙が大好きなガイドが、それぞれの星座を説明してくれました。  
-🪐 If Tomoki studies astronomy more, he will understand the universe better.  
-トモキがもっと天文学を勉強すれば、宇宙をもっとよく理解できるでしょう。  
-👀 The stars on the screen looked closer than the real ones in the sky.  
-スクリーンの星は本物の空の星より近くに見えました。  
-📖 Tomoki has been reading a book about planets since the trip.  
-トモキは遠足以来、惑星についての本を読んでいます。  
-😊 His classmates have talked about their favorite constellations.  
-クラスメイトたちは自分の好きな星座の話をしました。  
-📷 He has kept the ticket in his notebook as a memory.  
-彼は思い出としてチケットをノートにはさんでいます。  
-🌟 The visit made him feel small but excited about the universe.  
-その訪問は、宇宙について彼を小さく感じさせると同時にワクワクさせました。  
+        content: `🌌 Tomoki visited the city planetarium yesterday.
+トモキは昨日、市のプラネタリウムを訪れました。
+🏛️ The room was dark and cool inside.
+部屋の中は暗くて涼しかったです。
+⭐ The ceiling was covered with thousands of stars.
+天井は何千もの星で覆われていました。
+😲 It looked like the real night sky.
+それは本当の夜空のように見えました。
+👨‍🏫 The guide explained the names of the constellations.
+ガイドが星座の名前を説明しました。
+🪐 Tomoki learned about planets like Mars and Jupiter.
+トモキは火星や木星のような惑星について学びました。
+🚀 He imagined traveling through space in a rocket.
+彼はロケットで宇宙を旅することを想像しました。
+😴 The chair was so comfortable that he almost slept.
+椅子がとても快適だったので、彼はもう少しで眠るところでした。
+😊 He bought a postcard of the galaxy.
+彼は銀河のポストカードを買いました。
+🌟 He wants to buy a telescope to see real stars.
+彼は本物の星を見るために望遠鏡を買いたいと思っています。
 
-🌌 Have you ever visited a planetarium or science museum?  
-あなたはプラネタリウムや科学館を訪れたことがありますか？  
-⭐ What constellations or stars have you learned about before?  
-今までどんな星座や星について学んだことがありますか？  
-📺 Have you watched TV programs about space or the universe?  
-宇宙についてのテレビ番組を見たことがありますか？  
-📖 Had you read any books about planets when you were younger?  
-小さいころ、惑星についての本を読んだことがありますか？  
-🪐 What would you do if you could travel into space once?  
-もし一度だけ宇宙旅行ができるなら、あなたは何をしますか？  
-🌠 Which do you like more, looking at the real night sky or a show in a planetarium?  
-本物の夜空を見るのとプラネタリウムのショーを見るのとでは、どちらが好きですか？  
-👨‍🏫 Who has explained science topics to you in an exciting way?  
-科学の話題をわくわくするように説明してくれた人は誰ですか？  
-📚 What kind of science topic is more interesting for you than others?  
-他の科学の話題よりあなたにとって面白いテーマは何ですか？  
-📝 Would you like to keep a notebook about space or stars?  
-宇宙や星についてのノートをつけてみたいと思いますか？  
-🌍 If you could name a new planet, what name would you give it?  
-もし新しい惑星に名前をつけられるなら、どんな名前にしますか？`
+🌌 Have you ever been to a planetarium?
+プラネタリウムに行ったことがありますか？
+⭐ Do you like looking at stars?
+星を見るのは好きですか？
+😲 Can you find the North Star?
+北極星を見つけられますか？
+👨‍🏫 Do you know your zodiac sign?
+自分の星座を知っていますか？
+🪐 Which planet is your favorite?
+どの惑星が一番好きですか？
+🚀 Do you want to go to space?
+宇宙に行きたいですか？
+😴 Do you fall asleep in movies or class?
+映画や授業中に寝てしまいますか？
+😊 Do you collect postcards or stamps?
+ポストカードや切手を集めていますか？
+🌟 Do you have a telescope?
+望遠鏡を持っていますか？
+👽 Do you believe in aliens?
+宇宙人を信じますか？`
     },
 
     // Story 41 - Moving to a New House
+    // Target Grammar: Present Perfect (Just/Already) / Comparative
     {
         title: "41. Moving to a New House",
-        content: `📦 Yoshi’s family has just moved to a new apartment.  
-ヨシの家族はちょうど新しいマンションに引っ越したところです。  
-🏙️ The building, which is taller than their old one, has many families.  
-以前住んでいた建物より高いこのマンションには多くの家族が住んでいます。  
-🚚 They had packed boxes for weeks before the moving day.  
-彼らは引っ越しの日の前に何週間も荷物を箱に詰めていました。  
-🐈 Their cat, who hates change, hid under the sofa.  
-変化が嫌いな飼い猫はソファの下に隠れました。  
-🛏️ If Yoshi arranges his room well, he will have more space than before.  
-ヨシが部屋をうまく整理すれば、以前より広いスペースを持てるでしょう。  
-🗺️ The new neighborhood feels bigger and busier than the old one.  
-新しい近所は昔の場所より広くてにぎやかに感じられます。  
-🧑‍🤝‍🧑 Yoshi has already greeted some neighbors in the hallway.  
-ヨシはすでに廊下で何人かの近所の人にあいさつしました。  
-🏫 He has checked how long it takes to walk to school.  
-彼は学校まで歩いて何分かかるかを確認しました。  
-😊 His parents say the new place will bring them fresh experiences.  
-両親は新しい場所が新しい経験をもたらしてくれると言っています。  
-🌟 Yoshi is nervous but excited about his new life.  
-ヨシは緊張しているけれど、新しい生活にワクワクしています。  
+        content: `📦 Yoshi has just moved to a new house.
+ヨシはちょうど新しい家に引っ越したところです。
+🚚 His new house is bigger than his old one.
+彼の新しい家は前の家より大きいです。
+📦 He has already unpacked most of his boxes.
+彼はすでに箱のほとんどを開けました。
+🛏️ He has his own room now, which makes him happy.
+彼は今自分の部屋を持っていて、それは彼を幸せにします。
+🧹 Cleaning the new room took a long time.
+新しい部屋を掃除するのは時間がかかりました。
+👋 He hasn't met his new neighbors yet.
+彼はまだ新しい近所の人に会っていません。
+🏫 His new school is close to his house.
+新しい学校は家の近くです。
+😊 He is looking forward to making new friends.
+彼は新しい友達を作るのを楽しみにしています。
+🖼️ He wants to buy new curtains for his window.
+彼は窓のために新しいカーテンを買いたいと思っています。
+🌟 A new life is starting for Yoshi.
+ヨシにとって新しい生活が始まっています。
 
-🚚 Have you ever moved to a new house or town?  
-あなたは新しい家や町に引っ越したことがありますか？  
-📦 What things would you pack first if you had to move?  
-もし引っ越さなければならないなら、何を最初に箱に詰めますか？  
-🏙️ Do you prefer living in a busy area or a quiet one?  
-にぎやかな場所と静かな場所では、どちらに住むのが好きですか？  
-🐈 Had you seen pets react to moving or traveling before?  
-ペットが引っ越しや旅行に反応するのを見たことがありますか？  
-🗺️ What would you do if you didn’t know anyone in your new neighborhood?  
-新しい近所に誰も知り合いがいなかったら、あなたはどうしますか？  
-🏡 Which is more important for you, the size of your room or its location?  
-あなたにとって大切なのは、部屋の広さと場所のどちらですか？  
-😊 Who has helped you feel comfortable in a new situation?  
-新しい環境であなたを安心させてくれた人は誰ですか？  
-🚶‍♂️ What places would you look for first in a new town (e.g. park, shop)?  
-新しい町で最初に探す場所（公園や店など）はどこですか？  
-📷 Would you like to take photos of your new home or room?  
-新しい家や部屋の写真を撮ってみたいと思いますか？  
-🌟 If you could design your own ideal room, what would it look like?  
-理想の自分の部屋をデザインできるなら、どんな部屋にしますか？`
+📦 Have you ever moved house?
+引っ越しをしたことがありますか？
+🚚 Do you want to live in a big house?
+大きな家に住みたいですか？
+🛏️ Do you have your own room?
+自分の部屋を持っていますか？
+🧹 Do you keep your room clean?
+部屋をきれいにしていますか？
+👋 Is it easy for you to talk to new people?
+新しい人と話すのはあなたにとって簡単ですか？
+🏫 Is your school far from your house?
+学校は家から遠いですか？
+😊 How do you make new friends?
+どうやって新しい友達を作りますか？
+🖼️ What color are your curtains?
+カーテンは何色ですか？
+🌟 Do you like changes in your life?
+人生の変化は好きですか？
+📦 Do you have many things in your room?
+部屋にたくさんのものがありますか？`
     },
 
     // Story 42 - Shopping Online
+    // Target Grammar: It is [adjective] to... / Too... to...
     {
         title: "42. Shopping Online",
-        content: `🛒 Ryo has started buying some of his clothes online.  
-リョウは服の一部をオンラインで買い始めました。  
-📱 He uses a shopping app, which shows many styles and prices.  
-彼はたくさんのスタイルと値段を見せてくれるショッピングアプリを使っています。  
-📏 He had often chosen the wrong size before he learned how to check the chart.  
-サイズ表の見方を覚える前は、彼はよく間違ったサイズを選んでいました。  
-👨‍👩‍👦 His mother, who is careful with money, checks the total cost with him.  
-お金に慎重な母が、一緒に合計金額を確認してくれます。  
-📦 If the item doesn’t fit, they will return it.  
-商品が合わなければ、二人はそれを返品するつもりです。  
-🎽 Online shops have more choices than the local store.  
-オンラインショップは地元の店より選択肢が多いです。  
-📬 Ryo has already received two shirts by delivery.  
-リョウはすでに配達でシャツを2枚受け取りました。  
-😊 He enjoys opening packages when they arrive.  
-荷物が届いて箱を開けるとき、彼はワクワクします。  
-⌛ Sometimes the wait feels longer than he expected.  
-待ち時間が思っていたより長く感じることもあります。  
-🌟 Online shopping is teaching him to compare prices and quality.  
-ネットショッピングは、値段と品質を比べることを彼に教えています。  
+        content: `🛒 Ryo likes buying clothes online.
+リョウはオンラインで服を買うのが好きです。
+📱 It is easy to find the size and color he wants.
+彼が欲しいサイズと色を見つけるのは簡単です。
+💰 Sometimes, things are cheaper online than in stores.
+時々、店よりもオンラインのほうが安いです。
+📦 He ordered a new T-shirt two days ago.
+彼は2日前に新しいTシャツを注文しました。
+🚚 It usually takes three days to arrive.
+届くのにたいてい3日かかります。
+🤔 Sometimes he worries that the size won't fit.
+時々、彼はサイズが合わないことを心配します。
+💳 He asked his mother to pay with her credit card.
+彼は母にクレジットカードで払ってもらうよう頼みました。
+😲 Once, he bought a bag that was too small to use.
+一度、彼は使うには小さすぎるバッグを買ってしまいました。
+😊 However, opening the package is exciting.
+しかし、荷物を開けるのはワクワクします。
+🌟 Online shopping is very convenient for busy people.
+オンラインショッピングは忙しい人にとってとても便利です。
 
-🛍️ Have you ever bought something online?  
-あなたはオンラインで何かを買ったことがありますか？  
-📦 What kinds of things would you like to order on the internet?  
-インターネットでどんなものを注文してみたいですか？  
-💳 Who has taught you how to pay safely online?  
-オンラインで安全に支払う方法を教えてくれた人は誰ですか？  
-📏 Have you checked size charts or reviews before buying something?  
-何かを買う前にサイズ表やレビューを確認したことがありますか？  
-⌛ What would you do if your order arrived late?  
-注文したものが遅れて届いたら、あなたはどうしますか？  
-🏪 Which do you prefer, shopping in a real store or online?  
-実際の店で買い物をするのとオンラインで買い物をするのとでは、どちらが好きですか？  
-📬 Had you ever received a package by mail when you were younger?  
-小さいころに郵便で荷物を受け取ったことがありますか？  
-😊 Who has given you good advice about spending money?  
-お金の使い方について良いアドバイスをくれた人は誰ですか？  
-💰 What is more important for you, low price or high quality?  
-あなたにとって大切なのは、安い値段と高い品質のどちらですか？  
-🛒 If you had a gift card for an online shop, what would you buy?  
-もしオンラインショップのギフトカードをもらったら、何を買いますか？`
+🛒 Do you shop online?
+オンラインで買い物をしますか？
+📱 Do you use Amazon or Rakuten?
+Amazonや楽天を使いますか？
+💰 Do you compare prices before buying?
+買う前に値段を比較しますか？
+📦 What was the last thing you bought online?
+最後にオンラインで買ったものは何ですか？
+🚚 Do you mind waiting for delivery?
+配達を待つのは気になりますか？
+🤔 Have you ever bought something by mistake?
+間違って何かを買ったことはありますか？
+💳 Do you have your own money to spend?
+使うための自分のお金を持っていますか？
+😲 Have you ever returned a product?
+商品を返品したことはありますか？
+😊 What do you want to buy next?
+次は何か買いたいですか？
+🌟 Is convenience important to you?
+便利さはあなたにとって重要ですか？`
     },
 
     // Story 43 - Raising Money for Charity
+    // Target Grammar: Want + Person + To / Passive Voice
     {
         title: "43. Raising Money for Charity",
-        content: `💰 A group of students has organized a charity event at school.  
-ある生徒グループは学校でチャリティーイベントを企画しました。  
-🍞 They sold homemade bread, which parents helped them bake.  
-生徒たちは、保護者が一緒に焼いてくれた手作りパンを売りました。  
-📅 They had planned the event for over a month.  
-彼らは1か月以上前からこのイベントを計画していました。  
-👩‍🏫 Their homeroom teacher, who supports their idea, helped with the posters.  
-彼らのアイデアを応援する担任の先生がポスター作りを手伝ってくれました。  
-🎯 If they collect enough money, they will donate it to a children’s hospital.  
-十分なお金が集まれば、彼らはそれを子ども病院に寄付するつもりです。  
-🥐 More people came than they had expected.  
-彼らが予想していたより多くの人がやって来ました。  
-😊 Some students have never done charity work before.  
-チャリティー活動をするのは初めての生徒もいました。  
-📊 They have counted the money together after school.  
-彼らは放課後に一緒にお金を数えました。  
-🎉 Everyone felt happy that they could help others in a small way.  
-みんな、小さな形でも人の役に立てたことをうれしく感じました。  
-🌟 The event taught them that kindness can start at school.  
-このイベントは、優しさは学校から始められることを教えてくれました。  
+        content: `🍪 The students decided to have a charity sale.
+生徒たちはチャリティーセールをすることに決めました。
+🍪 They baked cookies and cakes at home.
+彼らは家でクッキーとケーキを焼きました。
+🏫 They sold them at the school entrance.
+彼らは学校の入り口でそれらを売りました。
+📢 They wanted many people to buy their sweets.
+彼らは多くの人に自分たちのお菓子を買ってほしいと思いました。
+💰 The cookies were sold for 100 yen each.
+クッキーは1つ100円で売られました。
+💵 They collected more than 10,000 yen.
+彼らは1万円以上を集めました。
+🏥 The money will be donated to a hospital.
+そのお金は病院に寄付されます。
+😊 Everyone felt happy to help people in need.
+みんな、困っている人々を助けることができて幸せに感じました。
+🤝 Working together for a good cause is important.
+良い目的のために協力することは大切です。
+🌟 They plan to do this again next year.
+彼らは来年もまたこれをする予定です。
 
-💰 Have you ever joined a charity event or fundraiser?  
-あなたはチャリティーイベントや募金活動に参加したことがありますか？  
-🍪 What kinds of things could you sell to raise money?  
-お金を集めるためにどんなものを売ることができると思いますか？  
-🏥 What causes or groups would you like to support?  
-どんな活動や団体を応援したいと思いますか？  
-📢 Have you made posters or announcements for a school event?  
-学校のイベントのためにポスターやお知らせを作ったことがありますか？  
-🎯 What would you do if your class decided to raise money for charity?  
-クラスでチャリティーのためにお金を集めることになったら、あなたはどうしますか？  
-🤝 Which is more difficult for you, asking for donations or working at an event?  
-あなたにとって難しいのは、寄付をお願いすることとイベントで働くことのどちらですか？  
-😊 Who has inspired you to be kind or helpful to others?  
-誰があなたに、人の役に立つような親切な人になろうと刺激を与えてくれましたか？  
-📊 Had you learned about charities in class before?  
-これまで授業でチャリティーについて学んだことがありますか？  
-🎁 What kind of charity event would you like to create at your school?  
-あなたの学校でどんなチャリティーイベントを作ってみたいですか？  
-🌟 If you could donate your time or money, which would you choose and why?  
-時間とお金のどちらかを寄付できるとしたら、どちらを選び、なぜですか？`
+🍪 Do you like baking cookies?
+クッキーを焼くのは好きですか？
+🏫 Have you ever sold something?
+何かを売ったことはありますか？
+📢 Are you good at advertising?
+宣伝は得意ですか？
+💰 Do you donate money to charity?
+チャリティーにお金を寄付しますか？
+💵 How much money do you need a month?
+1ヶ月にいくらお金が必要ですか？
+🏥 Do you want to help sick children?
+病気の子供たちを助けたいですか？
+😊 What makes you feel proud?
+何があなたを誇らしくさせますか？
+🤝 Is it easy to work as a team?
+チームとして働くのは簡単ですか？
+🌟 What kind of volunteer work interests you?
+どんなボランティア活動に興味がありますか？
+🍪 What is your favorite sweet treat?
+一番好きなお菓子は何ですか？`
     },
 
     // Story 44 - Practicing a Foreign Language
+    // Target Grammar: Present Perfect Continuous / Look forward to
     {
         title: "44. Practicing a Foreign Language",
-        content: `🗣️ Erika has been using an app to practice a foreign language every day.  
-エリカは毎日アプリを使って外国語の練習をしています。  
-📱 The app, which has many short lessons, reminds her to study.  
-たくさんの短いレッスンがあるそのアプリは、彼女に勉強するよう通知します。  
-📅 She had wanted to speak another language since elementary school.  
-彼女は小学生のころから別の言語を話したいと思っていました。  
-🎧 Her favorite lesson is listening, which helps her understand native speakers.  
-彼女のお気に入りのレッスンはリスニングで、ネイティブの話者を理解する助けになります。  
-🕒 If she continues for a year, she will be able to have simple conversations.  
-1年間続ければ、簡単な会話ができるようになるでしょう。  
-📖 Erika studies more regularly now than she did before the app.  
-エリカはアプリを使う前より今のほうが規則的に勉強しています。  
-🌍 She has already learned basic greetings and phrases.  
-彼女はすでに基本的なあいさつやフレーズを覚えました。  
-😊 Her dream is to travel and use the language in that country.  
-彼女の夢は、その国を旅行してそこでその言語を使うことです。  
-🧠 She enjoys noticing words that are similar to English.  
-彼女は英語と似ている単語に気づくのを楽しんでいます。  
-🌟 Learning the language is making the world feel smaller and friendlier.  
-その言語を学ぶことで、世界がより身近で親しみやすく感じられています。  
+        content: `🗣️ Erika has been studying French for six months.
+エリカは6ヶ月間フランス語を勉強しています。
+📱 She uses a smartphone app to practice every day.
+彼女は毎日練習するためにスマホアプリを使います。
+🇫🇷 She wants to travel to Paris in the future.
+彼女は将来パリに旅行したいと思っています。
+🥐 She loves French food, especially croissants.
+彼女はフランス料理、特にクロワッサンが大好きです。
+👂 Listening to French radio is difficult but fun.
+フランス語のラジオを聴くのは難しいですが楽しいです。
+🤔 French pronunciation is different from English.
+フランス語の発音は英語とは違います。
+😊 She can say "Hello" and "Thank you" in French.
+彼女はフランス語で「こんにちは」と「ありがとう」が言えます。
+✈️ She looks forward to speaking with local people.
+彼女は地元の人々と話すことを楽しみにしています。
+🌍 Learning a new language opens up the world.
+新しい言語を学ぶことは世界を広げます。
+🌟 Erika studies hard to make her dream come true.
+エリカは夢を叶えるために一生懸命勉強しています。
 
-🗣️ Have you ever tried to learn another language?  
-あなたは別の言語を学ぼうとしたことがありますか？  
-📱 What apps or tools have you used to study languages?  
-言語を勉強するためにどんなアプリや道具を使ったことがありますか？  
-🎧 Which is harder for you, speaking or listening?  
-あなたにとって難しいのは、話すことと聞くことのどちらですか？  
-📅 Had you wanted to talk with people from other countries when you were younger?  
-あなたは小さいころ、外国の人と話したいと思っていましたか？  
-✈️ What would you do if you could use another language fluently?  
-もし別の言語を流暢に使えるなら、あなたは何をしますか？  
-🌍 Which country’s language is more interesting for you than others?  
-他の言語よりあなたにとって興味深い国の言語はどれですか？  
-😊 Who has encouraged you to study languages?  
-あなたに言語の勉強を励ましてくれた人は誰ですか？  
-📖 What methods are more helpful for you than just reading a textbook?  
-ただ教科書を読むより、あなたにとって役に立つ勉強法は何ですか？  
-📝 Would you like to write a diary in another language someday?  
-いつか別の言語で日記を書いてみたいと思いますか？  
-🌟 If you could instantly master any language, which one would you choose?  
-もしすぐにどんな言語でもマスターできるなら、どれを選びますか？`
+🗣️ What languages do you speak?
+何語を話しますか？
+📱 Do you use apps to study?
+勉強にアプリを使いますか？
+🇫🇷 Do you want to go to France?
+フランスに行きたいですか？
+🥐 Do you like bread?
+パンは好きですか？
+👂 Do you listen to foreign music?
+外国の音楽を聴きますか？
+🤔 Is English pronunciation difficult?
+英語の発音は難しいですか？
+😊 Can you say "Thank you" in three languages?
+3つの言語で「ありがとう」と言えますか？
+✈️ Do you like traveling abroad?
+海外旅行は好きですか？
+🌍 Why is learning English important?
+なぜ英語を学ぶことは重要なのでしょうか？
+🌟 What is your dream for the future?
+将来の夢は何ですか？`
     },
 
     // Story 45 - Joining a Drama Club
+    // Target Grammar: Relative Pronoun (That/Which) / Try to
     {
         title: "45. Joining a Drama Club",
-        content: `🎭 Kenta has joined the school drama club this semester.  
-ケンタは今学期、学校の演劇部に入りました。  
-📜 The script, which they are practicing, is a comedy about school life.  
-彼らが練習している台本は、学校生活についてのコメディです。  
-📅 Kenta had only watched plays before becoming an actor himself.  
-ケンタは自分が演じる前は、芝居を観るだけでした。  
-👩‍🏫 Their adviser, who loves theater, teaches them how to express emotions.  
-演劇が大好きな顧問の先生が、感情の表し方を教えてくれます。  
-🎙️ If Kenta remembers all his lines, the performance will go smoothly.  
-ケンタがせりふをすべて覚えれば、公演はスムーズに進むでしょう。  
-😰 He feels more nervous on stage than in the classroom.  
-彼は教室にいるときより舞台に立つときのほうが緊張します。  
-🎬 The club has already chosen costumes for each character.  
-部活ではすでに各キャラクターの衣装を選びました。  
-😊 Kenta enjoys practicing with his friends after school.  
-ケンタは放課後に友達と練習するのを楽しんでいます。  
-👏 Some students have promised to come and watch the show.  
-何人かの生徒は観に行くと約束しました。  
-🌟 The drama club is helping Kenta become more confident.  
-演劇部はケンタがより自信を持つ助けになっています。  
+        content: `🎭 Kenta joined the drama club this semester.
+ケンタは今学期、演劇部に入りました。
+📜 They are practicing a play that is very funny.
+彼らはとても面白い劇を練習しています。
+🤴 Kenta plays the role of a prince.
+ケンタは王子の役を演じます。
+🗣️ He tries to speak loudly so everyone can hear him.
+彼はみんなに聞こえるように大きな声で話そうとしています。
+😓 Remembering all the lines is difficult work.
+すべてのセリフを覚えるのは大変な作業です。
+👯‍♂️ He enjoys acting with his club members.
+彼は部員たちと演技をするのを楽しんでいます。
+💄 He has to wear makeup and a costume on stage.
+彼はステージでメイクと衣装を身につけなければなりません。
+😰 He feels nervous before the show starts.
+彼はショーが始まる前、緊張します。
+👏 The audience clapped their hands loudly.
+観客は大きな拍手を送りました。
+🌟 Kenta felt that acting is his passion.
+ケンタは演技が自分の情熱だと感じました。
 
-🎭 Have you ever acted in a play or skit?  
-あなたは劇や寸劇で演じたことがありますか？  
-📜 What kinds of stories would you like to perform on stage?  
-舞台でどんな物語を演じてみたいですか？  
-😰 Have you felt nervous speaking in front of many people?  
-大勢の前で話すときに緊張したことがありますか？  
-🎙️ Had you memorized a long text or script before?  
-今までに長い文章や台本を暗記したことがありますか？  
-🎬 What would you do if you forgot your line on stage?  
-舞台で自分のせりふを忘れてしまったら、どうしますか？  
-👏 Which is more fun for you, watching a play or acting in one?  
-あなたにとって楽しいのは、芝居を見ることと演じることのどちらですか？  
-😊 Who has encouraged you when you were shy about performing?  
-発表するのが恥ずかしかったときにあなたを励ましてくれた人は誰ですか？  
-🎟️ What kind of theater show would you like to see someday?  
-いつかどんな劇やショーを見てみたいですか？  
-🎭 Do you prefer serious dramas or comedies?  
-シリアスなドラマとコメディでは、どちらが好きですか？  
-🌟 If you could play any role, what kind of character would you choose?  
-もしどんな役でも演じられるなら、どんなキャラクターを選びますか？`
+🎭 Do you like acting?
+演技は好きですか？
+📜 Do you prefer comedy or tragedy?
+コメディと悲劇、どちらが好きですか？
+🤴 What role would you like to play?
+どんな役を演じてみたいですか？
+🗣️ Can you speak loudly in front of people?
+人前で大きな声で話せますか？
+😓 Are you good at memorizing things?
+暗記は得意ですか？
+👯‍♂️ Do you like working with others?
+他の人と作業するのは好きですか？
+💄 Have you ever worn a costume?
+衣装を着たことがありますか？
+😰 How do you relax when you are nervous?
+緊張しているとき、どうやってリラックスしますか？
+👏 Do you go to see plays or musicals?
+劇やミュージカルを見に行きますか？
+🌟 What is your passion?
+あなたの情熱は何ですか？`
     },
 
     // Story 46 - Volunteering at an Animal Shelter
+    // Target Grammar: Stop -ing / Make + Person + Adjective
     {
         title: "46. Volunteering at an Animal Shelter",
-        content: `🐕 Haru has been volunteering at a local animal shelter.  
-ハルは地元の動物保護施設でボランティアをしています。  
-🏠 The shelter, which is small but clean, cares for cats and dogs.  
-小さいけれど清潔なその施設では、犬や猫の世話をしています。  
-🐈 Haru had only seen such places on TV before working there.  
-ハルはそこで働く前は、そのような場所をテレビで見るだけでした。  
-👩‍⚕️ A staff member, who is very kind, shows Haru how to feed the animals.  
-とても優しいスタッフが、ハルに動物へのエサの与え方を教えてくれます。  
-🧹 If Haru cleans the cages carefully, the animals will stay healthier.  
-ハルがケージを丁寧に掃除すれば、動物たちはより健康に過ごせます。  
-🐾 Some dogs are shyer than others.  
-中には他の犬より恥ずかしがり屋の犬もいます。  
-😊 Haru has already grown fond of a small brown dog.  
-ハルはすでに小さな茶色い犬に愛着を感じています。  
-📸 He sometimes takes photos to help the shelter find new owners.  
-彼はときどき写真を撮って、施設が新しい飼い主を見つける手助けをします。  
-😢 It is harder to say goodbye than he expected when animals leave.  
-動物たちがお別れするとき、彼が思っていたよりつらく感じます。  
-🌟 Volunteering there is teaching him responsibility and compassion.  
-そこでのボランティアは、彼に責任感と優しさを教えています。  
+        content: `🐕 Haru volunteers at an animal shelter on weekends.
+ハルは週末に動物保護施設でボランティアをしています。
+🏠 There are many dogs and cats that have no home.
+そこには家のない犬や猫がたくさんいます。
+🍖 Haru feeds them and cleans their cages.
+ハルは彼らにエサをやり、ケージを掃除します。
+🚶‍♂️ He also takes the dogs for a walk in the park.
+彼はまた、犬を公園へ散歩に連れて行きます。
+😢 Seeing abandoned animals makes him feel sad.
+捨てられた動物を見ると、彼は悲しくなります。
+🚫 He thinks people should stop buying pets easily.
+彼は、人々は安易にペットを買うのをやめるべきだと考えています。
+😊 When a dog finds a new family, Haru is happy.
+犬が新しい家族を見つけると、ハルは嬉しいです。
+🤝 He wants to help as many animals as possible.
+彼はできるだけ多くの動物を助けたいと思っています。
+📢 He tells his friends about the shelter.
+彼は友達に施設について話します。
+🌟 Animals are our friends, not just toys.
+動物はただのおもちゃではなく、私たちの友達です。
 
-🐾 Have you ever visited or helped at an animal shelter?  
-あなたは動物保護施設を訪れたり手伝ったりしたことがありますか？  
-🐶 What kinds of animals would you like to help?  
-どんな動物を助けてみたいですか？  
-🧼 Have you cleaned or fed animals before?  
-動物の掃除やエサやりをしたことがありますか？  
-😊 Who has shown you how to be gentle with animals?  
-動物に優しく接する方法を教えてくれた人は誰ですか？  
-💭 What would you do if you wanted to take every animal home?  
-すべての動物を連れて帰りたくなったら、あなたはどうしますか？  
-🏠 Which is more important, giving money to shelters or giving time as a volunteer?  
-施設にお金を寄付することとボランティアとして時間を与えることでは、どちらが大切だと思いますか？  
-🐱 Had you wanted a pet strongly when you were younger?  
-あなたは小さいころ強くペットを欲しいと思っていましたか？  
-📸 Would you share photos or stories to help animals find homes?  
-動物たちが家を見つけられるよう、写真や話を広めたいと思いますか？  
-😢 How would you feel if an animal you liked was adopted by another family?  
-あなたの好きな動物が他の家族に引き取られたら、どんな気持ちになりますか？  
-🌟 If you could start a project for animals, what would you do?  
-もし動物のためのプロジェクトを始められるなら、何をしますか？`
+🐕 Do you like dogs or cats?
+犬と猫、どちらが好きですか？
+🏠 Have you ever been to an animal shelter?
+動物保護施設に行ったことがありますか？
+🍖 Do you feed your pet?
+ペットにエサをあげますか？
+🚶‍♂️ Do you like walking dogs?
+犬の散歩は好きですか？
+😢 What makes you feel sad?
+何があなたを悲しくさせますか？
+🚫 What should people stop doing?
+人々は何をするのをやめるべきですか？
+😊 Does helping others make you happy?
+人を助けることはあなたを幸せにしますか？
+🤝 Do you want to do volunteer work?
+ボランティア活動をしたいですか？
+📢 Do you share news on social media?
+SNSでニュースを共有しますか？
+🌟 Do you think animals have feelings?
+動物には感情があると思いますか？`
     },
 
     // Story 47 - Taking Care of Houseplants
+    // Target Grammar: Remember to / Be interested in
     {
         title: "47. Taking Care of Houseplants",
-        content: `🌿 Maki has started growing houseplants in her room.  
-マキは自分の部屋で観葉植物を育て始めました。  
-🪴 She bought small pots, which she placed near the window.  
-彼女は小さな鉢を買い、窓のそばに置きました。  
-📅 She had often forgotten to water plants in the past.  
-彼女は以前、よく植物に水やりをするのを忘れていました。  
-📱 Now she sets reminders on her phone, which beep every few days.  
-今、彼女は数日に一度鳴るスマホのリマインダーを設定しています。  
-💧 If she gives too much water, the plants will not grow well.  
-水をやりすぎると、植物はうまく育ちません。  
-🌱 The leaves look greener now than when she first bought them.  
-葉っぱは最初に買ったときより今のほうが青々としています。  
-😊 Maki has learned the names of the plants she owns.  
-マキは自分が育てている植物の名前を覚えました。  
-🧹 She also keeps the area around the pots clean.  
-彼女は鉢の周りもきれいに保っています。  
-🧘‍♀️ Looking at the plants makes her feel calmer after school.  
-植物を見ると、彼女は学校のあと心が落ち着きます。  
-🌟 Taking care of them is teaching her to be more responsible.  
-世話をすることで、彼女はもっと責任感を持つことを学んでいます。  
+        content: `🌿 Maki bought a small plant for her room.
+マキは部屋のために小さな植物を買いました。
+🪴 It is a green plant that is easy to grow.
+それは育てるのが簡単な緑の植物です。
+💧 She must remember to water it twice a week.
+彼女は週に2回水をやるのを覚えておかなければなりません。
+☀️ Plants need sunlight to grow well.
+植物がよく育つには日光が必要です。
+📏 The plant is getting bigger day by day.
+その植物は日に日に大きくなっています。
+🗣️ Some people say talking to plants is good.
+植物に話しかけるのは良いと言う人もいます。
+👀 Maki enjoys watching new leaves come out.
+マキは新しい葉が出てくるのを見るのが好きです。
+🧘‍♀️ The green color makes her feel relaxed.
+緑色は彼女をリラックスさせます。
+🌸 She is interested in growing flowers next time.
+彼女は次は花を育てることに興味があります。
+🌟 Nature brings energy to our life.
+自然は私たちの生活にエネルギーをもたらします。
 
-🌿 Have you ever grown plants at home or at school?  
-あなたは家や学校で植物を育てたことがありますか？  
-💧 How often would you water a small plant in your room?  
-あなたの部屋の小さな植物には、どのくらいの頻度で水をあげますか？  
-🌱 Which is more difficult for you, growing plants or caring for pets?  
-あなたにとって難しいのは、植物を育てることとペットの世話をすることのどちらですか？  
-🪴 Had you tried gardening or planting seeds when you were younger?  
-小さいころにガーデニングや種まきをしたことがありますか？  
-📱 What would you do if you noticed your plant was turning brown?  
-もし自分の植物が茶色くなっていることに気づいたら、どうしますか？  
-🌻 Which plants or flowers are more beautiful to you than roses?  
-あなたにとって、バラより美しいと思う植物や花は何ですか？  
-😊 Who has taught you something about nature or plants?  
-自然や植物について何か教えてくれた人は誰ですか？  
-🧘‍♀️ Do you feel relaxed when you look at trees or flowers?  
-木や花を見るとリラックスした気持ちになりますか？  
-🏡 What place with plants or gardens would you like to visit?  
-植物や庭のある場所で、どこに行ってみたいですか？  
-🌟 If you could grow any plant perfectly, what would you choose?  
-もしどんな植物でも完璧に育てられるなら、何を選びますか？`
+🌿 Do you have plants in your house?
+家に植物がありますか？
+🪴 Do you want to grow vegetables?
+野菜を育てたいですか？
+💧 Do you often forget to do things?
+よく物事を忘れますか？
+☀️ Do you like sunny days?
+晴れた日は好きですか？
+📏 Are you getting taller?
+背は伸びていますか？
+🗣️ Do you talk to yourself?
+独り言を言いますか？
+👀 Do you observe nature?
+自然を観察しますか？
+🧘‍♀️ What color relaxes you?
+何色があなたをリラックスさせますか？
+🌸 What is your favorite flower?
+一番好きな花は何ですか？
+🌟 Do you like walking in the forest?
+森の中を歩くのは好きですか？`
     },
 
     // Story 48 - Looking Back on the Year
+    // Target Grammar: Present Perfect / Be going to
     {
         title: "48. Looking Back on the Year",
-        content: `📆 At the end of December, Saki has been thinking about her year.  
-12月の終わりに、サキはこの一年について考えています。  
-📝 She writes in her journal, which she started last spring.  
-彼女は春に始めた日記に文章を書いています。  
-📅 She had faced some difficult tests and club activities.  
-彼女はいくつかの難しいテストや部活動に直面してきました。  
-😊 She also remembers fun times with friends who supported her.  
-彼女はまた、自分を支えてくれた友達との楽しい時間も思い出します。  
-🎯 If she sets clear goals, next year will be even better.  
-はっきりした目標を立てれば、来年はもっと良い年になるでしょう。  
-📈 Saki feels stronger now than she did at the beginning of the year.  
-サキは年の初めのころより今のほうが強くなったと感じています。  
-🎉 Her family has praised her for working hard.  
-家族は一生懸命頑張った彼女を褒めました。  
-🎁 She has decided to thank the people who helped her.  
-彼女は自分を助けてくれた人たちに感謝を伝えることにしました。  
-🌙 That night, she goes to bed feeling hopeful about the future.  
-その夜、彼女は将来に希望を感じながら眠りにつきます。  
-🌟 The year has taught her many lessons about herself.  
-この一年は、彼女に自分自身について多くのことを教えてくれました。  
+        content: `📅 It is December, and the year is ending soon.
+12月になり、もうすぐ一年が終わります。
+🤔 Saki is thinking about what she did this year.
+サキは今年自分が何をしたかについて考えています。
+🎾 She started playing tennis and made new friends.
+彼女はテニスを始め、新しい友達を作りました。
+📚 She studied hard and passed the Eiken test.
+彼女は一生懸命勉強し、英検に合格しました。
+✈️ She went on a school trip to Kyoto.
+彼女は修学旅行で京都に行きました。
+😊 She has many good memories from this year.
+彼女には今年の良い思い出がたくさんあります。
+🎯 However, there are things she wants to improve.
+しかし、改善したいこともあります。
+💪 Next year, she is going to read more books.
+来年、彼女はもっと本を読むつもりです。
+📝 She wrote her new goals in her diary.
+彼女は日記に新しい目標を書きました。
+🌟 Saki hopes next year will be a great year.
+サキは来年が素晴らしい年になることを願っています。
 
-📆 Have you ever written a journal or diary about your year?  
-あなたは一年間について日記を書いたことがありますか？  
-🎯 What goals have you reached in the past twelve months?  
-この12か月で達成した目標は何ですか？  
-😊 Who has supported you the most this year?  
-今年一番あなたを支えてくれたのは誰ですか？  
-📚 Had you faced any big challenges before this year?  
-今年になる前に大きな挑戦に直面したことがありますか？  
-🕊️ What would you do if you wanted to thank someone for their help?  
-誰かに助けてもらったことにお礼を言いたいとしたら、どうしますか？  
-📈 Which feels more important to you, your successes or what you learned from mistakes?  
-あなたにとって大切なのは、成功と失敗から学んだことのどちらですか？  
-🎉 How do you usually celebrate the end of the year?  
-あなたは普段どのように年末をお祝いしますか？  
-📝 Would you like to write goals for next year on paper?  
-来年の目標を紙に書いてみたいと思いますか？  
-👨‍👩‍👧 Who has praised you for your efforts this year?  
-今年、あなたの努力を褒めてくれた人は誰ですか？  
-🌟 If you could choose one word to describe this year, what would it be?  
-今年を表す言葉を一つ選べるとしたら、それは何ですか？`
+📅 What month is it now?
+今は何月ですか？
+🤔 Do you remember what you did this year?
+今年何をしたか覚えていますか？
+🎾 Did you start anything new this year?
+今年何か新しいことを始めましたか？
+📚 Did you pass any tests this year?
+今年何かテストに合格しましたか？
+✈️ Did you go on a trip this year?
+今年旅行に行きましたか？
+😊 What is your best memory of this year?
+今年の最高思い出は何ですか？
+🎯 Do you have a goal for next year?
+来年の目標はありますか？
+💪 What do you want to improve?
+何を改善したいですか？
+📝 Do you write a diary?
+日記を書いていますか？
+🌟 Are you happy with your school life?
+学校生活に満足していますか？`
     }
 ];
