@@ -1,10 +1,4 @@
-To improve the **Eiken Grade 5 (Beginner)** stories, I have rewritten all 48 entries.
-
-The new stories focus on **standard Eiken 5 grammar** (simple present, present continuous, basic `can`/`like`/`do` verbs) and vocabulary (family, school, daily routine, hobbies). I have used common names (Ken, Emi, Tom, etc.) to make them more natural and relatable than the previous "The boy/The girl" style.
-
-Here is the improved content for `eiken5story.js`.
-
-```javascript
+// eiken5story.js
 var eiken5story = [
     // Story 1 - My Family
     {
@@ -2166,4 +2160,4 @@ CDを聞きますか？
 あなたの夢は大きいですか？`
     }
 ];
-```
+
