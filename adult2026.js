@@ -3492,4 +3492,829 @@ NYでは7月4日にホットドッグ早食い大会が有名です。70個も�
 「この世はすべて舞台」。あなたは今、演じていますか？
 50. 😄 Keep smiling! It confuses people.
 笑っていよう！人々を戸惑わせるから。`
-        }
+        },
+        {
+            title: "Week 33: Spirits & Hometowns (Aug 13 – Aug 19)",
+            content: `1. 🍆 Obon is this week. Do you make a horse out of a cucumber? (Shoryo-uma).
+今週はお盆です。きゅうりで馬を作りますか？（精霊馬）。
+2. 🐄 Do you make a cow out of an eggplant? Why is the cow slower?
+ナスで牛を作りますか？なぜ牛の方が遅いのでしょうか？
+3. 🔥 "Mukaebi" (Welcoming fire). Do you light a fire to welcome ancestors?
+「迎え火」。先祖を迎えるために火を焚きますか？
+4. 🚗 "Kisei Rush" (Homecoming traffic). Are you stuck in a 50km traffic jam?
+「帰省ラッシュ」。50キロの渋滞に巻き込まれていますか？
+5. 👵 Returning to your hometown (Furusato). Is it relaxing or stressful?
+故郷（ふるさと）に帰る。リラックスできますか、それともストレスですか？
+6. 👻 Obon is when spirits return. Are you afraid of ghosts (Yurei)?
+お盆は霊が帰ってくる時です。幽霊は怖いですか？
+7. 💃 Bon Odori (Bon Dance). Can you dance the Kawachi Ondo?
+盆踊り。河内音頭を踊れますか？
+8. 🕍 Visiting the grave (Ohaka-mairi). Do you clean the gravestone?
+お墓参り。墓石を掃除しますか？
+9. 🧟 In the West, Halloween is for spirits. Obon is more serious. Why?
+欧米ではハロウィンが霊の祭りですが、お盆の方が真面目です。なぜでしょう？
+10. 🚄 Shinkansen tickets are sold out. Standing room only. Can you stand for 3 hours?
+新幹線のチケットは売り切れ、立ち席のみです。3時間立っていられますか？
+11. 🎁 O-chugen (Summer gifts). Did you send beer or somen to your boss?
+お中元。上司にビールやそうめんを送りましたか？
+12. 🎆 Taking ancestors to see fireworks. Do spirits like fireworks?
+先祖を花火見物に連れて行く。霊は花火が好きでしょうか？
+13. 🎐 The sound of Cicadas (Semi) is loudest now. Does it make you feel hot?
+セミの声が今一番うるさいです。暑く感じますか？
+14. 🕯️ "Okuribi" (Sending fire). Daimonji in Kyoto burns huge characters on mountains. Have you seen it?
+「送り火」。京都の大文字焼きは山で巨大な文字を燃やします。見たことはありますか？
+15. 🍱 Eating Shojin Ryori (Buddhist vegetarian food). Is it healthy?
+精進料理を食べる。健康的ですか？
+16. 👴 Listening to grandpa's war stories. Is it important to remember?
+おじいちゃんの戦争の話を聞く。記憶することは重要ですか？
+17. 🌊 Some say "Don't swim in the sea during Obon" (spirits will pull you down). Do you believe it?
+「お盆に海で泳ぐな（霊に引きずり込まれる）」と言われます。信じますか？
+18. 👘 Wearing casual clothes or formal black clothes?
+カジュアルな服、それとも黒い礼服？
+19. 🛤️ Rural train lines are empty usually, but full now. Do you like local trains?
+田舎の電車は普段空いていますが、今は満員です。ローカル線は好きですか？
+20. 👪 Family reunions involve asking "When are you getting married?" Annoying?
+親戚の集まりでは「いつ結婚するの？」と聞かれます。うっとうしいですか？
+21. 🦟 Mosquitoes at the graveyard. Do you bring spray?
+墓場の蚊。スプレーを持って行きますか？
+22. 🏮 Lanterns floating down the river (Toro Nagashi). It is beautiful but sad.
+川を流れる灯籠（灯籠流し）。美しいですが悲しいです。
+23. 🏯 Camping near the grave? Some regions do this.
+お墓の近くでキャンプ？そうする地域もあります。
+24. 🕰️ "Time stops in the countryside." Do you like the slow life?
+「田舎では時間が止まる」。スローライフは好きですか？
+25. 📺 Watching horror movies on TV. Why do we watch scary things in summer?
+テレビでホラー映画を見る。なぜ夏に怖いものを見るのでしょう？
+26. 🍵 Green tea and Ohagi (rice cake). Sweet bean paste or Kinako?
+緑茶とおはぎ。あんこ、それともきなこ？
+27. 🤝 Meeting old school friends (Dosokai). Have they changed?
+同窓会。彼らは変わりましたか？
+28. 💤 Napping on tatami mats. The smell of tatami is nostalgic.
+畳で昼寝。畳の匂いは懐かしいです。
+29. 🌽 Grandparents always give too much food. "Eat more!"
+祖父母はいつも食べ物を出しすぎます。「もっと食べなさい！」
+30. 🌡️ It is still incredibly hot. Heatstroke alert continues.
+まだ信じられないほど暑いです。熱中症アラート継続中。
+31. 🎒 "U-turn Rush" (Return traffic). The highway is a parking lot.
+「Uターンラッシュ」。高速道路は駐車場状態です。
+32. 🌆 Sunset is getting a little earlier. Summer is passing.
+日が沈むのが少し早くなりました。夏が過ぎていきます。
+33. 👻 Kimodameshi (Test of Courage) in a dark forest. Would you go alone?
+暗い森で肝試し。一人で行けますか？
+34. 🏙️ Osaka city is quiet because everyone went home. Do you like the empty city?
+みんな帰省したので大阪の街は静かです。人のいない街は好きですか？
+35. 🕯️ Burning incense (Senko). The smell sticks to your clothes.
+線香を焚く。匂いが服につきます。
+36. 👔 Work starts again soon. Do you have the "Post-Holiday Blues"?
+もうすぐ仕事が再開します。「連休明けの憂鬱」になっていますか？
+37. 👶 Babies crying when they see relatives they don't know.
+知らない親戚を見て泣く赤ちゃん。
+38. 📸 Taking a family photo. It might be the last time everyone is together.
+家族写真を撮る。全員が揃うのはこれが最後かもしれません。
+39. 🍺 Drinking with cousins. Do you get along?
+いとこと飲む。仲はいいですか？
+40. 🐜 Bugs in the countryside are huge. Giant centipedes (Mukade)!
+田舎の虫は巨大です。巨大ムカデ！
+41. 🌌 Star gazing in the countryside. The sky is full of stars.
+田舎で星を見る。空は星でいっぱいです。
+42. 🛫 Obon vacation in Hawaii. Is it better than the countryside?
+ハワイでお盆休み。田舎よりいいですか？
+43. 🧹 Cleaning the Buddhist altar (Butsudan).
+仏壇の掃除。
+44. 👻 Japanese ghosts have no feet. Western ghosts wear sheets.
+日本の幽霊には足がありません。西洋の幽霊はシーツを被っています。
+45. 🍜 Late night Ramen after drinking. A bad habit?
+飲んだ後の深夜のラーメン。悪い習慣ですか？
+46. 🎁 Bringing souvenir (Omiyage) back to the office. Tokyo Banana?
+会社にお土産を持って帰る。東京ばな奈？
+47. 🌡️ The asphalt radiates heat at night.
+夜、アスファルトが熱を放出します。
+48. ⛪ Praying for peace. Obon is a time of reflection.
+平和を祈る。お盆は省みる時間です。
+49. 👴 "See you next year." Life is short.
+「また来年」。人生は短いです。
+50. 👋 Goodbye spirits. Go back safely on the eggplant cow.
+さようなら霊たち。ナスの牛に乗って気をつけて帰ってね。`
+        },
+        {
+            title: "Week 34: Sports Fanatics (Aug 20 – Aug 26)",
+            content: `1. ⚾ Koshien (High School Baseball) final is this week. Are you watching?
+甲子園（高校野球）の決勝は今週です。見ていますか？
+2. 🏟️ Koshien Stadium is legendary. Have you ever been there? The ivy is beautiful.
+甲子園球場は伝説的です。行ったことはありますか？ツタが美しいです。
+3. ⚽ The Premier League (UK Football) season starts in August. Do you like soccer?
+プレミアリーグ（英国サッカー）は8月に開幕します。サッカーは好きですか？
+4. 😭 High school players crying after losing. Does it make you cry?
+負けて泣く高校球児。もらい泣きしますか？
+5. 🎺 Brass bands cheering. The music of Koshien is famous.
+ブラスバンドの応援。甲子園の音楽は有名です。
+6. 🌡️ Playing baseball in 35°C heat. Is it dangerous or heroic?
+35度の中で野球をする。危険ですか、英雄的ですか？
+7. ⚾ Collecting the dirt (sand) from Koshien. A sad souvenir.
+甲子園の土（砂）を集める。悲しいお土産です。
+8. 🏟️ The roar of the crowd. Do you prefer watching sports at home or at the stadium?
+観衆の歓声。スポーツは家で見るのとスタジアムで見るの、どっちが好きですか？
+9. 🐯 Are you a Hanshin Tigers fan? (If you live in Osaka, say yes!).
+阪神タイガースファンですか？（大阪に住んでいるなら、イエスと言って！）。
+10. 🎈 Releasing balloons (Jet Fusen) in the 7th inning. Is it fun?
+7回裏にジェット風船を飛ばす。楽しいですか？
+11. 🍺 The Beer Girl (Uriko) carries a heavy keg. It's hard work!
+ビール売り子は重い樽を背負っています。重労働ですよ！
+12. ⚽ European football fans sing songs. Japanese baseball fans use trumpets. Which is better?
+欧州のサッカーファンは歌を歌います。日本の野球ファンはラッパを使います。どっちがいい？
+13. 🎾 Tennis US Open starts soon. Do you play tennis?
+テニスの全米オープンがもうすぐ始まります。テニスをしますか？
+14. 🏋️‍♂️ Professional athletes make millions. Are they paid too much?
+プロアスリートは何億円も稼ぎます。もらいすぎですか？
+15. 🧢 Wearing a baseball cap backwards. Is it cool?
+野球帽を後ろ向きに被る。かっこいいですか？
+16. 🏃‍♀️ Cheering for your hometown team. Is local pride important?
+地元のチームを応援する。地元の誇りは大切ですか？
+17. 📺 Sports bars are noisy and fun. Do you go to sports bars?
+スポーツバーはうるさくて楽しいです。行きますか？
+18. ⛹️‍♂️ Basketball is growing in Japan. Did you read "Slam Dunk"?
+日本でバスケが伸びています。「スラムダンク」を読みましたか？
+19. 🎌 The national anthem. Do you sing loud?
+国歌。大声で歌いますか？
+20. 🤬 Yelling at the referee. "Are you blind!?" Do you get angry?
+審判に怒鳴る。「目は見えてんのか！？」怒りますか？
+21. 🤝 Sportsmanship. Shaking hands after the game.
+スポーツマンシップ。試合後の握手。
+22. 🧴 Sunburn at the stadium. Did you forget sunscreen?
+スタジアムでの日焼け。日焼け止めを忘れましたか？
+23. 🌭 Stadium food (Hot dogs, Yakisoba). Expensive but necessary?
+スタジアムフード（ホットドッグ、焼きそば）。高いけど必要？
+24. ⚾ Baseball rules are complicated. Can you explain "Offside" in soccer?
+野球のルールは複雑です。サッカーの「オフサイド」を説明できますか？
+25. 🏟️ Dome stadiums involve AC. Outdoor stadiums involve sweat. Which is real sports?
+ドーム球場はエアコンがあります。屋外球場は汗だくです。どっちが本当のスポーツ？
+26. 🎫 Season tickets are a dream. Would you buy them?
+年間シートは夢です。買いたいですか？
+27. 🦸‍♂️ Star players are heroes. Who was your hero growing up? (Ichiro?)
+スター選手はヒーローです。子供の頃のヒーローは誰でしたか？（イチロー？）
+28. ⚽ Hooligans (violent fans) are a problem in Europe. Are Japanese fans polite?
+フーリガン（暴力的ファン）は欧州の問題です。日本のファンは礼儀正しいですか？
+29. ⚾ Pitchers throwing 160km/h. Can you hit that?
+160キロを投げるピッチャー。打てますか？
+30. 🕰️ Baseball games are long. Soccer is 90 minutes. Do you have a short attention span?
+野球の試合は長いです。サッカーは90分です。集中力は続きますか？
+31. 🏆 The Championship Trophy. Have you ever won a trophy?
+優勝トロフィー。トロフィーをもらったことはありますか？
+32. 🧒 "Little League" parents can be crazy. Did your parents push you in sports?
+「リトルリーグ」の親はクレージーになることがあります。親にスポーツを強制されましたか？
+33. 👟 Nike vs. Adidas. Are you loyal to a brand?
+ナイキ対アディダス。ブランドにこだわりはありますか？
+34. 🏉 Rugby is popular in Osaka (Hanazono). Rugby players are huge!
+大阪ではラグビーが人気です（花園）。ラグビー選手は巨大です！
+35. 🏊‍♂️ Swimming is a great summer sport. Do you watch swimming on TV?
+水泳は素晴らしい夏のスポーツです。テレビで水泳を見ますか？
+36. 🏟️ The wave (Mexican Wave). Do you join in?
+ウェーブ（メキシカンウェーブ）。参加しますか？
+37. 🚑 Injuries end careers. Sports can be cruel.
+怪我はキャリアを終わらせます。スポーツは残酷です。
+38. ⚾ Koshien soil is sacred. Would you put it in a jar?
+甲子園の土は神聖です。瓶に入れて飾りますか？
+39. 🥊 Boxing or MMA (Fighting). Is it too violent for you?
+ボクシングや総合格闘技。あなたには暴力的すぎますか？
+40. 👯 Cheerleaders dancing. Is it distracting?
+チアリーダーのダンス。気が散りますか？
+41. 📺 Instant Replay (VAR). Does technology slow down the game?
+インスタントリプレイ（VAR）。技術は試合を遅くしますか？
+42. 🌭 7th Inning Stretch. Time to stand up and sing.
+7回裏のストレッチ。立ち上がって歌う時間です。
+43. 🧔 Beards in baseball. Some teams ban them. Is that fair?
+野球選手の髭。禁止するチームもあります。公平ですか？
+44. 🏟️ Parking at the stadium is impossible. Take the train!
+スタジアムの駐車は不可能です。電車で行こう！
+45. ⚾ "Draft Day." Picking new players. Is it exciting?
+「ドラフト会議」。新しい選手を選ぶ。ワクワクしますか？
+46. 🌧️ Rain delay. Waiting for the rain to stop is boring.
+雨天中断。雨が止むのを待つのは退屈です。
+47. 🏅 Gold Medal. Is coming in 2nd place (Silver) disappointing?
+金メダル。2位（銀）になるのはがっかりですか？
+48. 🚴 Tour de France just finished. Do you watch cycling?
+ツールドフランスが終わったばかりです。自転車競技を見ますか？
+49. ⚾ Koshien ends, and summer ends. The sound of the siren.
+甲子園が終わり、夏が終わります。サイレンの音。
+50. 🏟️ Sports teach us how to win and how to lose.
+スポーツは勝ち方と負け方を教えてくれます。`
+        },
+        {
+            title: "Week 35: Back to School (Aug 27 – Sep 2)",
+            content: `1. 🏫 August 31st is a nightmare for students. Did you finish your homework early?
+8月31日は学生にとって悪夢です。宿題は早く終わらせましたか？
+2. 🎒 In the US, "Back to School" sales are huge. Stationery, clothes, laptops.
+米国では「バック・トゥ・スクール」セールが巨大です。文房具、服、パソコン。
+3. ✏️ Buying new stationery. Do you love the smell of new notebooks?
+新しい文房具を買う。新しいノートの匂いは好きですか？
+4. 📝 Summer Research Project (Jiyu Kenkyu). What did you make? (A coin bank?)
+夏休みの自由研究。何を作りましたか？（貯金箱？）
+5. 😨 "The dog ate my homework." Did you ever make a crazy excuse?
+「犬が宿題を食べちゃった」。変な言い訳をしたことはありますか？
+6. 💇‍♀️ Changing your image (high school debut) after summer. Did you dye your hair?
+夏休み明けのイメチェン（高校デビュー）。髪を染めましたか？
+7. 🌡️ It is September but still hot. "Zansho" (Lingering heat).
+9月ですがまだ暑いです。「残暑」。
+8. 🍇 Grapes and Pears (Nashi) are in supermarkets. Autumn food is coming.
+ぶどうや梨がスーパーに並んでいます。秋の味覚が来ます。
+9. 🦗 The sound of insects changes from Cicadas to Crickets. Can you hear it?
+虫の音がセミからコオロギに変わります。聞こえますか？
+10. 📉 Post-summer depression. The fun is over. Back to reality.
+夏の終わりの鬱。楽しみは終わり。現実に戻る。
+11. 👕 Putting away Aloha shirts and bringing out jackets. Too early?
+アロハシャツを片付けてジャケットを出す。早すぎますか？
+12. 🏊‍♂️ The pool is closed. Jellyfish are in the sea. Swimming is over.
+プールは閉鎖。海にはクラゲ。水泳は終わりです。
+13. 📚 Reading lists. Did you read any books this summer?
+読書リスト。この夏、本を読みましたか？
+14. 🏫 University students have a longer vacation (until late Sept). Are you jealous?
+大学生の休みはもっと長いです（9月下旬まで）。嫉妬しますか？
+15. 🚌 School buses are back on the road. Traffic gets worse.
+スクールバスが道に戻ってきました。渋滞が悪化します。
+16. 🍱 Making bento starts again. Mothers are crying (or happy?).
+お弁当作りが再開します。お母さんたちは泣いています（それとも嬉しい？）。
+17. 🍂 "Autumn of Appetite." Do you gain weight in autumn?
+「食欲の秋」。秋は太りますか？
+18. 🎑 Moon viewing (Tsukimi) burgers at McDonald's. Is this a tradition now?
+マクドナルドの月見バーガー。これはもう伝統ですか？
+19. 📓 Expensive backpacks. Do kids need iPads for school now?
+高いリュックサック。今の子供は学校にiPadが必要ですか？
+20. 👟 New shoes for the new term. White sneakers?
+新学期のための新しい靴。白いスニーカー？
+21. ⛈️ Typhoon season (Nihyakutoka). Typhoons come in September. Are you prepared?
+台風シーズン（二百十日）。台風は9月に来ます。準備はいいですか？
+22. 🧴 Sun tan fading. Are you sad to lose your tan?
+日焼けが薄くなる。日焼けが消えるのは悲しいですか？
+23. 🕰️ The sun sets earlier. It gets dark at 6:30 PM.
+日が沈むのが早くなります。午後6時半には暗くなります。
+24. 🍂 Leaves are not changing yet, but the air feels different.
+葉はまだ変わっていませんが、空気が違います。
+25. 🏫 School uniforms. Switching from summer to winter uniform (Koromogae).
+学校の制服。夏服から冬服への衣替え。
+26. 🚶‍♂️ Walking to school in the rain. Typhoons make commuting hard.
+雨の中の通学。台風は通勤通学を困難にします。
+27. 🎒 Randoseru (Backpack) is heavy. Are Japanese kids carrying too much?
+ランドセルは重いです。日本の子供は荷物を持ちすぎていませんか？
+28. ✏️ Mechanical pencil vs. Wood pencil. Which do you prefer?
+シャープペンシル対鉛筆。どっちが好きですか？
+29. 🧼 Cleaning the classroom (Osouji). Students clean in Japan, janitors clean in US.
+教室の掃除。日本では生徒が、米国では用務員が掃除します。
+30. 🏫 Bullying (Ijime) is a problem. Is school a safe place?
+いじめは問題です。学校は安全な場所ですか？
+31. 🧒 "I don't want to go to school!" Did you say this to your mom?
+「学校行きたくない！」お母さんに言いましたか？
+32. 📏 Math class. Do you still use geometry in real life?
+数学の授業。実生活で幾何学を使っていますか？
+33. 🎨 Art class. Were you a good artist?
+美術の授業。絵は上手でしたか？
+34. 🍱 Who did you eat lunch with? Being alone (Benjo-meshi) is sad.
+誰とお昼を食べましたか？一人（便所飯）は悲しいです。
+35. 🏫 School festivals (Bunkasai) are coming. Haunted houses and yakisoba.
+文化祭が近づいています。お化け屋敷と焼きそば。
+36. 🚌 School trips (Shugaku Ryoko). Where did you go? Kyoto? Tokyo?
+修学旅行。どこに行きましたか？京都？東京？
+37. 🧑‍🏫 Teacher's Day is big in some countries. Do you respect teachers?
+教師の日はある国では盛大です。先生を尊敬していますか？
+38. 🎒 Gap (clothing store) has big sales. Do you buy autumn clothes now?
+Gap（服屋）で大セール。今、秋服を買いますか？
+39. 🕰️ Waking up at 6 AM again. The struggle is real.
+また朝6時に起きる生活。戦いは現実です。
+40. 🍵 Hot tea tastes good again. Goodbye iced coffee.
+熱いお茶がまた美味しくなります。さよならアイスコーヒー。
+41. 🌾 Rice harvest is starting. New rice (Shinmai) is delicious.
+稲刈りが始まります。新米は美味しいです。
+42. 🐟 Sanma (Pacific Saury) fish is expensive recently. Do you eat it?
+サンマが最近高いです。食べますか？
+43. 🤧 Seasonal allergies (Fall pollen). Ragweed?
+秋の花粉症。ブタクサ？
+44. 📅 September has "Silver Week" sometimes. Holidays are coming!
+9月には時々「シルバーウィーク」があります。休日が来る！
+45. 🚴 Cycling in autumn is perfect. Not sweating is nice.
+秋のサイクリングは完璧です。汗をかかないのはいいことです。
+46. 🏕️ Camping is better in September. Fewer bugs.
+キャンプは9月の方がいいです。虫が少ないから。
+47. 🌰 Chestnuts (Kuri). Roasted chestnuts smell like autumn.
+栗。焼き栗は秋の匂いがします。
+48. 👔 No more Cool Biz? Ties are coming back.
+クールビズ終了？ネクタイが戻ってきます。
+49. 🏫 Life-long learning. You are never too old to go "back to school."
+生涯学習。「学校に戻る」のに遅すぎることはありません。
+50. 🍂 Embrace the change of season. Goodbye Summer!
+季節の変わり目を受け入れよう。さようなら夏！`
+        },
+        {
+            title: "Week 36: Work & Labor (Sep 3 – Sep 9)",
+            content: `1. 🛠️ First Monday of September is Labor Day in the USA/Canada.
+9月の第一月曜は米国・カナダの労働者の日（レーバーデー）です。
+2. 👔 "Karoshi" (Death by overwork) is a Japanese word famous worldwide. Is it shameful?
+「過労死」は世界で有名な日本語です。恥ずべきことですか？
+3. 🕰️ 9-to-5 job. Do you work 9 to 5, or 9 to 9?
+9時5時の仕事。9時から5時までですか、それとも9時から9時まで？
+4. 💼 "Work-Life Balance." Is it a myth or reality in Japan?
+「ワークライフバランス」。日本では神話ですか、現実ですか？
+5. 🏖️ Taking paid holidays (Yukyu). Do you feel guilty taking a day off?
+有給休暇を取る。休むことに罪悪感を感じますか？
+6. 🕴️ "Salaryman" life. Suits, trains, drinking. Is it a hard life?
+「サラリーマン」生活。スーツ、電車、飲み会。辛い人生ですか？
+7. 🧑‍💻 Remote work (Telework). Do you prefer working from home or the office?
+リモートワーク。在宅勤務とオフィス、どっちが好きですか？
+8. 💴 Bonus season is over. Did you save it or spend it?
+ボーナスシーズンは終わりました。貯金しましたか、使いましたか？
+9. 🤝 Teamwork vs. Individual work. Which are you better at?
+チームワーク対個人プレー。どっちが得意ですか？
+10. 😴 Sleeping at your desk (Inemuri). Is it a sign of hard work or laziness?
+机で居眠り。それは勤勉の証ですか、怠慢ですか？
+11. 🍻 Nomikai (Drinking party) with the boss. Is it work or fun?
+上司との飲み会。仕事ですか、楽しみですか？
+12. 👔 Dress code. Should offices allow jeans and t-shirts?
+ドレスコード。オフィスでジーンズとTシャツを許可すべきですか？
+13. 🧹 Cleaning the office. Why don't Japanese companies hire cleaners?
+オフィス掃除。なぜ日本の会社は清掃員を雇わないのでしょう？
+14. 🕵️‍♂️ "Black Company" (Exploitative company). Have you ever worked for one?
+「ブラック企業」。働いたことはありますか？
+15. 🕰️ Overtime (Zangyo). Do you get paid for it?
+残業。残業代は出ますか？
+16. 👴 Retirement age is rising. Do you want to work until you are 70?
+定年年齢が上がっています。70歳まで働きたいですか？
+17. 🏖️ "Fire" (Financial Independence, Retire Early). Is this your goal?
+「FIRE」（経済的自立、早期リタイア）。これが目標ですか？
+18. 👩‍💼 Women in the workplace. Is the "O-cha kumi" (serving tea) culture dead?
+職場の女性。「お茶汲み」文化は死にましたか？
+19. 📄 Hanko (Seals). Why do we still stamp paper in the digital age?
+ハンコ。なぜデジタル時代にまだ紙に判を押すのでしょう？
+20. 📠 Fax machines. Japan loves them. Do you still use a fax?
+FAX。日本は大好きです。まだFAXを使っていますか？
+21. 🕴️ Job hunting (Shukatsu). Wearing the same black suit. Is it creepy?
+就活。みんな同じ黒いスーツ。不気味ですか？
+22. 🚌 Commuting time. Is 1 hour too long?
+通勤時間。1時間は長すぎますか？
+23. 🍱 Desk lunch. Eating while typing. Is it healthy?
+デスクランチ。打ちながら食べる。健康的ですか？
+24. 💭 "Ikigai" (Reason for being). Is your job your Ikigai?
+「生き甲斐」。仕事はあなたの生き甲斐ですか？
+25. 📉 Recession and inflation. Are you worried about your salary?
+不景気とインフレ。給料が心配ですか？
+26. 🤖 Will AI take your job? Robots don't need holidays.
+AIがあなたの仕事を奪いますか？ロボットは休みを必要としません。
+27. 🚜 Manual labor vs. Office labor. Which is harder?
+肉体労働対オフィス労働。どっちが大変ですか？
+28. 👔 The boss (Bucho). Is he scary or friendly?
+部長。怖いですか、フレンドリーですか？
+29. 📧 Email etiquette. "Osewa ni natte orimasu." Do we need this every time?
+メールのマナー。「お世話になっております」。毎回必要ですか？
+30. 🕰️ Leaving on time (Teiji). Do you run out the door?
+定時退社。ドアから走って出ますか？
+31. 🤐 Gossip in the office. Do you listen?
+オフィスの噂話。聞きますか？
+32. 🤒 Calling in sick. Do you sound sicker than you are on the phone?
+病欠の電話。電話で実際より病気っぽく話しますか？
+33. 💼 Business cards (Meishi). Do you have a cool design?
+名刺。かっこいいデザインですか？
+34. 🏙️ Transfer (Tenkin) to Tokyo or Osaka. Which do you prefer?
+東京か大阪への転勤。どっちがいいですか？
+35. 🏢 Open plan offices. No privacy. Do you hate it?
+オープンプランのオフィス。プライバシーがない。嫌いですか？
+36. ☕ Coffee breaks. How many coffees do you drink a day?
+コーヒーブレイク。1日何杯飲みますか？
+37. 🛋️ The office chair. Is it comfortable? Back pain?
+オフィスの椅子。快適ですか？腰痛は？
+38. 📄 Paperwork. Japan loves paper.
+書類仕事。日本は紙が大好きです。
+39. 🕰️ "Premium Friday" (Leaving early on last Friday). Does anyone do this?
+「プレミアムフライデー」。誰かやってますか？
+40. 👔 "Shoshin" (Promotion). Do you want to be the President (Shacho)?
+昇進。社長になりたいですか？
+41. 🏭 Factory work vs. Service industry.
+工場労働対サービス業。
+42. 🌍 Working abroad. Would you take a job in London or NY?
+海外で働く。ロンドンやNYでの仕事を引き受けますか？
+43. 🧑‍🎨 Dream job. If money didn't matter, what would you do? (Painter? Baker?)
+夢の仕事。お金が関係なければ何をしますか？（画家？パン屋？）
+44. 🤝 Business manners. Bowing angle. Is it stressful?
+ビジネスマナー。お辞儀の角度。ストレスですか？
+45. 📉 Strikes. Workers demanding more money. Good or bad?
+ストライキ。労働者が金を要求する。良いこと、悪いこと？
+46. 💻 Zoom meetings. "You are on mute." The phrase of the year.
+Zoom会議。「ミュートになってますよ」。今年の流行語。
+47. 👔 Casual Friday. Can you wear sneakers?
+カジュアルフライデー。スニーカーは履けますか？
+48. 🕰️ Time is money. Do you waste time at work?
+時は金なり。仕事で時間を無駄にしていますか？
+49. 📄 Resignation letter. Have you ever quit a job dramatically?
+辞表。ドラマチックに仕事を辞めたことはありますか？
+50. 🛠️ Work hard, play hard. Don't forget to play!
+よく働き、よく遊べ。遊ぶのを忘れないで！`
+        },
+        {
+            title: "Week 37: Respect & The Moon (Sep 10 – Sep 16)",
+            content: `1. 🎑 Tsukimi (Moon Viewing) season. Do you look up at the moon?
+お月見の季節です。月を見上げますか？
+2. 🐰 In Japan, a rabbit is pounding mochi on the moon. In the US, it's a man's face. What do you see?
+日本ではウサギが餅をついています。アメリカでは男の人の顔です。あなたには何が見えますか？
+3. 🍔 Tsukimi Burgers are everywhere. Have you eaten one this year?
+月見バーガーがあちこちにあります。今年食べましたか？
+4. 👴 Respect for the Aged Day is next week. Do you buy a gift for your grandparents?
+来週は敬老の日です。祖父母にプレゼントを買いますか？
+5. 👵 Japan has an aging society. Is this a crisis or just reality?
+日本は高齢化社会です。これは危機ですか、それともただの現実ですか？
+6. 🌕 The Full Moon makes people crazy ("Lunatic"). Do you feel strange during a full moon?
+満月は人を狂わせます（「ルナティック」）。満月の時に変な気分になりますか？
+7. 🍡 Dango (Dumplings) are for offering to the moon. Do you eat them or just look at them?
+団子は月へのお供えです。食べますか、それとも見るだけですか？
+8. 🌾 Susuki (Pampas grass) is a decoration. Do you have allergies to grass?
+ススキは飾りです。イネ科のアレルギーはありますか？
+9. 🚀 Humans walked on the moon in 1969. Do you believe it really happened?
+1969年に人類は月に降りました。本当に起こったと信じますか？
+10. 👴 At what age is someone "old"? 60? 70? 80?
+何歳からが「老人」ですか？60歳？70歳？80歳？
+11. 🚌 Silver Seats (Priority Seats) on the train. Do you give up your seat?
+電車のシルバーシート（優先席）。席を譲りますか？
+12. 💴 Pension (Nenkin). Are you worried you won't get a pension?
+年金。年金がもらえないのではないかと心配ですか？
+13. 🕰️ "Life begins at 60." What do you want to do when you retire?
+「人生は60歳から」。定年後に何をしたいですか？
+14. 🌝 The Harvest Moon is the brightest. Is it romantic to walk under the moonlight?
+中秋の名月は一番明るいです。月明かりの下を歩くのはロマンチックですか？
+15. 🐇 Why does the rabbit make mochi? (Legend says he sacrificed himself).
+なぜウサギは餅をついているのですか？（伝説では彼は自分を犠牲にしました）。
+16. 🍵 Matching Matcha with Moon Dango. A perfect Japanese night?
+抹茶と月見団子。完璧な日本の夜？
+17. 🛋️ Electric massage chairs are popular gifts for the elderly. Do you want one?
+電動マッサージチェアは高齢者への人気の贈り物です。欲しいですか？
+18. 🧙‍♀️ Witches fly across the moon. Are you ready for Halloween season soon?
+魔女が月を横切って飛びます。もうすぐハロウィンシーズンの準備はいいですか？
+19. 🐺 Werewolves howl at the moon. Do you like wolves?
+狼男は月に向かって吠えます。狼は好きですか？
+20. 🛌 Sleeping gets easier as nights get cooler. Do you sleep well in autumn?
+夜が涼しくなると眠りやすくなります。秋はよく眠れますか？
+21. 📸 Taking a photo of the moon with a smartphone is impossible. Have you tried?
+スマホで月の写真を撮るのは不可能です。試したことはありますか？
+22. 👵 "Grandma's wisdom" (Obaachan no chiebukuro). What did your grandma teach you?
+「おばあちゃんの知恵袋」。おばあちゃんは何を教えてくれましたか？
+23. 🎋 Bamboo cutters found Princess Kaguya inside a bamboo stalk. She came from the moon.
+竹取の翁は竹の中からかぐや姫を見つけました。彼女は月から来ました。
+24. 🕰️ Time goes faster as you get older. Does a year feel like a month?
+年を取ると時間が早く過ぎます。1年が1ヶ月のように感じますか？
+25. 🍂 The air smells like autumn. Can you smell the change in seasons?
+空気が秋の匂いがします。季節の変化を匂いで感じ取れますか？
+26. 🚶‍♂️ Centenarians (people over 100). Do you want to live to be 100?
+センテナリアン（100歳以上の人）。100歳まで生きたいですか？
+27. 🤖 Care robots (robots helping old people). Is it sad or convenient?
+介護ロボット（老人を助けるロボット）。悲しいですか、便利ですか？
+28. 🌕 Blue Moon (Two full moons in a month). "Once in a blue moon" means rarely.
+ブルームーン（1ヶ月に2回満月がある）。「ごく稀に」という意味です。
+29. 🍶 Drinking sake while viewing the moon (Tsukimi-zake).
+月を見ながらお酒を飲む（月見酒）。
+30. 🎑 Putting pampas grass in a vase. It makes a mess when it dries!
+花瓶にススキを飾る。乾くと散らかるんですよね！
+31. 🧬 Good genes. Do people in your family live a long time?
+良い遺伝子。あなたの家族は長生きですか？
+32. 👴 Gateball (Croquet) is popular with seniors. Is it a sport?
+ゲートボールは高齢者に人気です。あれはスポーツですか？
+33. 📡 Aliens on the dark side of the moon. Conspiracy theory?
+月の裏側の宇宙人。陰謀論？
+34. 🏙️ Light pollution hides the moon in Osaka. Can you see it clearly?
+光害で大阪では月が見えにくいです。はっきり見えますか？
+35. 🍳 Putting a raw egg on noodles makes it "Tsukimi Udon." Do you like raw egg?
+麺に生卵を乗せると「月見うどん」になります。生卵は好きですか？
+36. 🪜 Climbing a ladder to the moon. A dream?
+梯子で月へ登る。夢？
+37. 👴 Showing respect to your boss. Is age more important than skill in Japan?
+上司に敬意を示す。日本ではスキルより年齢が重要ですか？
+38. 🌑 New Moon (invisible). A time for new beginnings?
+新月（見えない）。新しい始まりの時？
+39. 🌌 The moon controls the tides. Does it control you?
+月は潮の満ち引きを支配します。月はあなたを支配しますか？
+40. 🧹 Cleaning the grave before Ohigan. Respecting ancestors.
+お彼岸の前にお墓を掃除する。先祖を敬う。
+41. 🍘 Senbei (Rice crackers) often have a moon shape. Soy sauce flavor?
+煎餅はよく月の形をしています。醤油味？
+42. 👵 Living with three generations (Grandparents, Parents, Kids). Is it common now?
+三世代同居（祖父母、親、子）。今は一般的ですか？
+43. 📺 "Mito Komon" is an old person's drama. Did you watch it with your grandparents?
+「水戸黄門」はお年寄りのドラマです。祖父母と一緒に見ましたか？
+44. 🪐 We are planning to build a base on the moon. Would you work there?
+月に基地を作る計画があります。そこで働きたいですか？
+45. 🕰️ "Respect your elders." Is this value disappearing?
+「年長者を敬え」。この価値観は消えつつありますか？
+46. 🕯️ Candlelight dinner under the moon. Too dark to eat?
+月明かりの下でのキャンドルディナー。暗すぎて食べられない？
+47. 🏃‍♂️ Seniors running marathons. Are they healthier than you?
+マラソンを走る高齢者。あなたより健康的ですか？
+48. 🎑 The moon is beautiful, isn't it? (A famous way to say "I love you" in Japan).
+月が綺麗ですね（日本で「愛してる」と言う有名な方法）。
+49. 🌕 Supermoon (Big moon). Did you take a picture?
+スーパームーン（大きな月）。写真を撮りましたか？
+50. 🙏 Gratitude for longevity. Be thankful for every day.
+長寿への感謝。毎日に感謝しましょう。`
+        },
+        {
+            title: "Week 38: Silver Week & Equinox (Sep 17 – Sep 23)",
+            content: `1. 📆 "Silver Week" occurs when holidays line up in September. Do we have a long weekend this year?
+9月に祝日が並ぶと「シルバーウィーク」になります。今年は連休ですか？
+2. 🍂 Autumn Equinox (Shubun no Hi). Day and night are equal length. Balance.
+秋分の日。昼と夜の長さが同じです。バランス。
+3. 🌺 Higanbana (Red Spider Lilies) bloom near graves. Are they beautiful or scary?
+彼岸花（曼珠沙華）がお墓の近くに咲きます。美しいですか、怖いですか？
+4. 🍡 Ohagi (Rice cake). It is the same as Botamochi, but the name changes. Why?
+おはぎ。ぼたもちと同じですが名前が変わります。なぜ？
+5. 🌥️ The weather is finally cooling down. Are you happy summer is over?
+ようやく涼しくなってきました。夏が終わって嬉しいですか？
+6. 🛤️ Visiting graves (Ohaka-mairi). Do you have to travel far?
+お墓参り。遠くまで行かなければなりませんか？
+7. 🍁 Momiji (Maple leaves) are still green. When do they turn red in Osaka?
+紅葉はまだ緑です。大阪ではいつ赤くなりますか？
+8. 🚗 Traffic jams during Silver Week. Do you prefer trains or cars?
+シルバーウィークの渋滞。電車と車、どっちが好きですか？
+9. 🏔️ Hiking season begins. Mt. Fuji trails are closing soon. Have you climbed it?
+ハイキングシーズンが始まります。富士山の登山道はもうすぐ閉鎖です。登ったことはありますか？
+10. 📚 Reading Week. "Dokusho no Aki." What book are you reading?
+読書週間。「読書の秋」。どんな本を読んでいますか？
+11. 🐟 Sanma (Pacific Saury) grilling smell. Do neighbors complain?
+サンマを焼く匂い。近所から苦情は来ますか？
+12. 👻 The veil between the living and dead is thin during Equinox. Do you feel spirits?
+お彼岸の間、生と死の境界が薄くなります。霊を感じますか？
+13. 🌰 Chestnut picking (Kurigari). Have you ever picked chestnuts? Spiky!
+栗拾い。栗を拾ったことはありますか？トゲトゲ！
+14. 🍄 Matsutake mushrooms are very expensive. Why? They smell like socks (to some people).
+松茸はとても高いです。なぜ？靴下の匂いがします（と言う人もいます）。
+15. 🕰️ "Heat and cold last until the Equinox." (Atsusa samusa mo higan made). Is it true?
+「暑さ寒さも彼岸まで」。本当ですか？
+16. 🛣️ Going for a drive to see the cosmos flowers. Do you like Cosmos?
+コスモスを見にドライブに行く。コスモスは好きですか？
+17. 🍂 Fallen leaves on the street. Who cleans them up?
+通りの落ち葉。誰が掃除しますか？
+18. 🥘 Nabe (Hot pot) season starts soon. Are you ready for Nabe?
+鍋の季節がもうすぐ始まります。鍋の準備はいいですか？
+19. 🍇 Grape picking. Muscat or Kyoho? Which is better?
+ぶどう狩り。マスカットと巨峰、どっちがいい？
+20. 🛌 Sleeping with the window open. Be careful of catching a cold.
+窓を開けて寝る。風邪をひかないように気をつけて。
+21. 👔 Changing wardrobe. Short sleeves to long sleeves.
+衣替え。半袖から長袖へ。
+22. 🏃‍♂️ Sports Day is coming. Are you practicing jogging?
+スポーツの日が近づいています。ジョギングの練習をしていますか？
+23. 🥜 Gingko nuts (Ginnan) smell terrible on the street but taste good. Do you eat them?
+銀杏は道でひどい匂いがしますが、味は美味しいです。食べますか？
+24. 🌕 The moon is still beautiful. Do you have a balcony?
+月はまだ美しいです。ベランダはありますか？
+25. 🏞️ Picnics without mosquitoes. Finally!
+蚊のいないピクニック。ついに！
+26. 🚶‍♀️ Walking meditation. Focus on your steps.
+歩行瞑想。歩くことに集中して。
+27. 🍵 Warm Hojicha (Roasted tea). The smell of autumn.
+温かいほうじ茶。秋の香り。
+28. 🎃 Halloween decorations are appearing in shops. Too early?
+お店にハロウィンの飾りが現れています。早すぎますか？
+29. 🥔 Sweet potatoes (Satsumaimo). Yaki-imo trucks are calling.
+さつまいも。焼き芋屋さんが呼んでいます。
+30. 🌥️ Typhoons often hit in September. Do you have a flashlight?
+9月はよく台風が来ます。懐中電灯はありますか？
+31. 🏡 Staying home during the holidays to save money. Good plan?
+節約のために連休は家にいる。良い計画ですか？
+32. 🧒 Kids are back in school rhythm. Is the house quiet?
+子供たちは学校のリズムに戻りました。家は静かですか？
+33. 🍂 The sound of dry leaves stepping. Crunch crunch.
+枯れ葉を踏む音。カサカサ。
+34. 🍱 Seasonal bento ingredients. Mushroom rice?
+季節のお弁当の具。きのこご飯？
+35. 🕯️ Ancestors watch over us. Do you talk to them?
+先祖が見守っています。彼らに話しかけますか？
+36. 🌇 Sunsets are orange and purple. Beautiful autumn sky.
+夕日はオレンジと紫です。美しい秋の空。
+37. 🐿️ Squirrels collecting nuts. Are you saving money for winter?
+木の実を集めるリス。冬のために貯金していますか？
+38. 🧥 Buying a new trench coat. Beige or Black?
+新しいトレンチコートを買う。ベージュ、それとも黒？
+39. 🕰️ The year is 75% over. Did you achieve your goals?
+1年の75％が終わりました。目標は達成しましたか？
+40. 🌾 Rice fields turn gold. The harvest is here.
+田んぼが金色になります。収穫の時です。
+41. 🍻 Drinking beer outside is getting chilly. Bring a jacket.
+外でビールを飲むのは肌寒くなってきました。上着を持ってきて。
+42. 🚲 Cycling in the cool breeze. The best season for bikes.
+涼しい風の中サイクリング。自転車に最高の季節です。
+43. 📺 New TV dramas start in autumn. Are you watching anything?
+秋に新しいドラマが始まります。何か見ていますか？
+44. 🎭 Art exhibitions. "Autumn of Arts."
+美術展。「芸術の秋」。
+45. 🕷️ Spider lilies are poisonous. Don't eat them!
+彼岸花には毒があります。食べないで！
+46. 🗓️ Check the calendar. When is the next holiday? (November?).
+カレンダーを確認。次の祝日はいつ？（11月？）。
+47. 🤧 Temperature difference causes allergies. Runny nose?
+寒暖差でアレルギーが出ます。鼻水が出ますか？
+48. 🧖‍♀️ Onsen trips are perfect now. Not too hot.
+温泉旅行は今が最高です。暑すぎないので。
+49. 🏙️ Osaka Midosuji leaves will turn yellow soon.
+大阪御堂筋の葉がもうすぐ黄色になります。
+50. ⚖️ Balance your life like the Equinox. Work and Rest.
+秋分のように人生のバランスをとろう。仕事と休息。`
+        },
+        {
+            title: "Week 39: Beer & Harvest (Sep 24 – Sep 30)",
+            content: `1. 🍺 Oktoberfest starts in September (ironically). Do you like German beer?
+オクトーバーフェストは（皮肉にも）9月に始まります。ドイツビールは好きですか？
+2. 🥨 Pretzels and Sausages. German food matches beer perfectly.
+プレッツェルとソーセージ。ドイツ料理はビールに完璧に合います。
+3. 💃 Polka dancing. Can you dance the "Chicken Dance"?
+ポルカダンス。「チキンダンス」を踊れますか？
+4. 🌾 Harvest Moon. Farmers are busy harvesting rice. Do you help?
+収穫の月。農家は稲刈りで忙しいです。手伝いますか？
+5. 🍺 Craft Beer festivals. IPA, Stout, Lager. What is your style?
+クラフトビールフェス。IPA、スタウト、ラガー。あなたのスタイルは？
+6. 🎃 Pumpkins are harvested now. Do you eat pumpkin soup?
+カボチャは今収穫されます。パンプキンスープを食べますか？
+7. 🏉 Rugby World Cup often happens in autumn. Are you a rugby fan?
+ラグビーW杯はよく秋に開催されます。ラグビーファンですか？
+8. 🍷 Beaujolais Nouveau is coming (November), but wine harvest is now. Do you like wine?
+ボジョレーヌーボーは（11月に）来ますが、ワインの収穫は今です。ワインは好きですか？
+9. 🐟 Salmon run upstream in autumn. Do you like grilled salmon?
+秋に鮭が川を遡ります。焼き鮭は好きですか？
+10. 🍻 "Prost!" (Cheers in German). How many languages can you say cheers in?
+「プロースト！」（ドイツ語で乾杯）。何ヶ国語で乾杯と言えますか？
+11. 🍎 Apple picking season. Fresh apples are crunchy.
+リンゴ狩りの季節。新鮮なリンゴはシャキシャキしています。
+12. 🏔️ The mountains are changing color. Do you plan a "Momiji-gari" trip?
+山の色が変わってきています。「紅葉狩り」の旅行を計画していますか？
+13. 🌰 Chestnuts again. Chestnut rice (Kuri-gohan). Yummy?
+また栗です。栗ご飯。美味しい？
+14. 🍺 Drinking beer from a giant glass boot. Can you finish it?
+巨大なガラスのブーツでビールを飲む。飲み干せますか？
+15. 🕰️ End of September means the first half of the fiscal year ends. Busy?
+9月末は上半期の終わりです。忙しいですか？
+16. 🧥 Fashion is shifting. Leather jackets? Boots?
+ファッションが変わります。レザージャケット？ブーツ？
+17. 🤧 Catching a cold because you didn't wear enough clothes.
+薄着すぎて風邪をひく。
+18. 🍲 Oden is appearing in convenience stores. What is your favorite ingredient? (Daikon? Egg?)
+コンビニにおでんが登場しています。好きな具は何ですか？（大根？卵？）
+19. 🎣 Fishing is good in autumn. Fish are eating to prepare for winter.
+秋は釣りに良いです。魚は冬に備えて食べています。
+20. 🏈 American Football season is in full swing. Super Bowl is far away.
+アメフトのシーズンが真っ盛りです。スーパーボウルはまだ先です。
+21. 🍠 Sweet potato digging (Imo-hori). Kindergarten tradition.
+芋掘り。幼稚園の伝統行事。
+22. 🍺 Beer belly. Does beer make you fat?
+ビール腹。ビールは太りますか？
+23. 🌫️ Foggy mornings occur in autumn. Is it spooky?
+秋は朝霧が発生します。不気味ですか？
+24. 🍫 Chocolate season begins. Summer chocolate melts, autumn chocolate is safe.
+チョコの季節が始まります。夏のチョコは溶けますが、秋は安全です。
+25. 📚 Libraries promote reading. Do you have a library card?
+図書館が読書を推進しています。図書カードを持っていますか？
+26. 🚶‍♂️ Hiking without sweating. The weather is perfect.
+汗をかかずにハイキング。天気は完璧です。
+27. 🌕 Looking at the moon while drinking. "Hanami" for spring, "Tsukimi" for autumn.
+飲みながら月を見る。春は「花見」、秋は「月見」。
+28. 🥧 Pumpkin pie. Is it a dessert or a vegetable dish?
+パンプキンパイ。デザートですか、野菜料理ですか？
+29. 🦉 Owls hooting at night. A symbol of wisdom.
+夜にフクロウが鳴く。知恵の象徴。
+30. 🍵 Matcha sweets are popular in autumn. Why?
+秋は抹茶スイーツが人気です。なぜ？
+31. 🦗 Crickets enter the house. Do you catch them or kill them?
+コオロギが家に入ってきます。捕まえますか、殺しますか？
+32. 🚜 Tractors on the road causing traffic. It's harvest time.
+トラクターが道を塞いで渋滞。収穫の時期です。
+33. 🍂 Crunching leaves. Do you go out of your way to step on a crunchy leaf?
+葉っぱを踏む音。カサカサ音のためにわざわざ葉っぱを踏みますか？
+34. 👔 Neckties and scarves. Accessories are fun again.
+ネクタイとスカーフ。小物がまた楽しくなります。
+35. 🕯️ Candles smell like pumpkin spice. Do you like spicy smells?
+キャンドルがパンプキンスパイスの香り。スパイシーな香りは好きですか？
+36. 🌭 Bratwurst (German sausage). Mustard is essential.
+ブラートヴルスト（ドイツのソーセージ）。マスタードは必須です。
+37. 🍺 Non-alcoholic beer is getting better. Do you drink it?
+ノンアルコールビールが美味しくなっています。飲みますか？
+38. 🎢 Amusement parks imply Halloween themes soon. Zombies are waking up.
+遊園地はもうすぐハロウィンテーマになります。ゾンビが目覚めています。
+39. 🕰️ "Fall back" (Daylight savings ends in West). Japan doesn't change time. Good?
+「フォールバック」（欧米のサマータイム終了）。日本は時間を変えません。良いこと？
+40. 🥯 Bagels and cream cheese. A cozy breakfast.
+ベーグルとクリームチーズ。居心地の良い朝食。
+41. 🌾 Rice allergies? Some people are allergic to rice pollen.
+イネアレルギー？イネ科の花粉にアレルギーがある人もいます。
+42. 🖼️ Visiting Kyoto temples in autumn. Crowded but beautiful.
+秋の京都の寺に行く。混んでいますが美しいです。
+43. 🤧 Dry skin starts now. Hand cream?
+乾燥肌が始まります。ハンドクリーム？
+44. 🍵 Hojicha Latte. The trend of autumn.
+ほうじ茶ラテ。秋のトレンド。
+45. 🍻 Drinking outside at night requires a blanket.
+夜の外飲みには毛布が必要です。
+46. 🥓 Smoked food (Kunsei) is popular. Cheese, bacon, nuts.
+燻製が人気です。チーズ、ベーコン、ナッツ。
+47. 🎼 Jazz festivals are common in autumn. Do you like Jazz?
+秋はジャズフェスが多いです。ジャズは好きですか？
+48. 📅 October is tomorrow. The year is ending fast.
+明日は10月です。1年が終わるのが早いです。
+49. 🎃 Halloween costumes. Have you decided yet?
+ハロウィンのコスチューム。もう決めましたか？
+50. 🍺 Cheers to the harvest! Eat, drink, and be merry.
+収穫に乾杯！食べて、飲んで、楽しんで。`
+        },
+        {
+            title: "Week 40: Fashion Change (Oct 1 – Oct 7)",
+            content: `1. 👗 "Koromogae" (Wardrobe Change). October 1st is the traditional day. Did you switch?
+「衣替え」。10月1日が伝統的な日です。入れ替えましたか？
+2. 🐆 Osaka is famous for leopard print (Hyo-gara). Do you own any animal print?
+大阪はヒョウ柄で有名です。アニマル柄を持っていますか？
+3. 👢 Boots season. Do you prefer ankle boots or long boots?
+ブーツの季節。アンクルブーツとロングブーツ、どっちが好きですか？
+4. 🧣 Scarves are cozy. Do you know how to tie a scarf stylishly?
+スカーフ（マフラー）は暖かいです。おしゃれな巻き方を知っていますか？
+5. 🧥 Trench coats. The classic autumn look. Do you look like a detective?
+トレンチコート。秋の定番ルック。探偵みたいに見えますか？
+6. 🧶 Knitting is a hobby for autumn. Can you knit a sweater?
+編み物は秋の趣味です。セーターを編めますか？
+7. 👖 Jeans are too hot in summer, perfect now. Denim on Denim?
+ジーンズは夏には暑すぎますが、今は完璧です。デニムオンデニム？
+8. 🧥 Leather jackets. Do they make you feel tough?
+レザージャケット。タフな気分になりますか？
+9. 🎩 Hats (Berets, Fedoras). Do you wear hats in autumn?
+帽子（ベレー帽、フェドラ）。秋に帽子を被りますか？
+10. 🧛‍♀️ Halloween colors (Orange and Black) are appearing. Do you wear orange?
+ハロウィンカラー（オレンジと黒）が出てきました。オレンジを着ますか？
+11. 🛍️ Fast fashion (Uniqlo/Zara) vs. Vintage. Which do you prefer?
+ファストファッション（ユニクロ/ザラ）対古着。どっちが好きですか？
+12. 🕶️ The sun is lower, so glare is strong. Keep your sunglasses.
+太陽が低いので眩しいです。サングラスはしまわないで。
+13. 👃 The smell of Kinmokusei (Fragrant Olive). Do you like it?
+金木犀の香り。好きですか？
+14. 💈 Changing hair color for autumn. Darker colors?
+秋に向けて髪色を変える。暗めの色？
+15. 💅 Nail art. Autumn colors (Burgundy, Gold).
+ネイルアート。秋色（バーガンディ、ゴールド）。
+16. 👔 Suits are comfortable again. Do you like wearing a suit?
+スーツがまた快適になります。スーツを着るのは好きですか？
+17. 🧥 Down jackets (Uniqlo). Is it too early?
+ダウンジャケット（ユニクロ）。まだ早いですか？
+18. 🚶‍♀️ Fashion Week in Paris/Milan/Tokyo. Do you follow trends?
+パリ・ミラノ・東京のファッションウィーク。トレンドを追いますか？
+19. 🥶 Mornings are cold, afternoons are hot. How do you dress? Layers?
+朝は寒く、昼は暑いです。どういう服を着ますか？重ね着？
+20. 👚 Clearing out the closet (Danshari). Did you throw away old clothes?
+クローゼットの整理（断捨離）。古い服を捨てましたか？
+21. 🌂 Autumn rain is cold. Do you have a stylish umbrella?
+秋の雨は冷たいです。おしゃれな傘を持っていますか？
+22. 👕 Flannel shirts (Checkered). Lumberjack style?
+フランネルシャツ（チェック柄）。木こりスタイル？
+23. 🧣 Cashmere is expensive but soft. Is it worth the money?
+カシミアは高いけど柔らかいです。お金を出す価値はありますか？
+24. 👖 Corduroy pants. The sound "zip zip" when you walk.
+コーデュロイのパンツ。歩くと「シュッシュッ」と音がします。
+25. 🧥 Buying a coat is a big investment. What color is your coat?
+コートを買うのは大きな投資です。あなたのコートは何色ですか？
+26. 👞 Suede shoes. Don't wear them in the rain!
+スエードの靴。雨の日に履かないで！
+27. 🚴 Fashionable cycling. Don't get your coat caught in the wheel.
+おしゃれなサイクリング。コートを車輪に巻き込まないで。
+28. 🧤 Gloves? Not yet. Put them in your pocket.
+手袋？まだです。ポケットに入れておいて。
+29. 👜 Bags change from baskets (summer) to leather (autumn).
+バッグはカゴ（夏）から革（秋）に変わります。
+30. 👗 "Fashion is pain." High heels and tight jeans. Do you agree?
+「ファッションは我慢」。ハイヒールとタイトジーンズ。同意しますか？
+31. 🧒 Kids grow fast. Buying new clothes every season is expensive.
+子供は早く育ちます。毎シーズン服を買うのは高いです。
+32. 🎎 Kimono in autumn have specific patterns (Momiji).
+秋の着物には特定の柄（紅葉）があります。
+33. 🧟 Zombie makeup practice for Halloween.
+ハロウィンのためのゾンビメイク練習。
+34. 🎭 Masquerade masks. Mysterious?
+マスカレードの仮面。ミステリアス？
+35. 👖 Skinny jeans vs. Baggy jeans. What is the trend now?
+スキニージーンズ対バギージーンズ。今のトレンドは？
+36. 🧵 Sewing a button. Can you do it yourself?
+ボタンを付ける。自分でできますか？
+37. 🧺 Dry cleaning winter coats. Did you pick them up?
+冬のコートのクリーニング。受け取りましたか？
+38. 🏔️ Outdoor fashion (North Face/Patagonia) is popular in the city. Why?
+アウトドアファッション（ノースフェイス/パタゴニア）が街で人気です。なぜ？
+39. 💍 Accessories. Gold looks better in autumn?
+アクセサリー。秋はゴールドが似合う？
+40. 🛁 Bath bombs with autumn scents. Relaxing fashion for the bath.
+秋の香りのバスボム。お風呂のおしゃれ。
+41. 👻 Ghost costumes made of sheets. Cheap fashion.
+シーツで作ったお化けの衣装。安いファッション。
+42. 🕰️ Retro fashion (80s/90s). Is it cool or old?
+レトロファッション（80年代/90年代）。かっこいいですか、古いですか？
+43. 👟 Sneakers with suits. Business casual?
+スーツにスニーカー。ビジネスカジュアル？
+44. 🧦 Colorful socks hidden under pants. Secret fashion.
+ズボンの下に隠れたカラフルな靴下。秘密のおしゃれ。
+45. 🏫 School uniforms change. Do students look smarter in winter uniforms?
+学校の制服が変わります。冬服の学生は賢く見えますか？
+46. 🧣 Blanket scarf. It's a scarf and a blanket. Practical!
+ブランケットスカーフ。スカーフであり毛布です。実用的！
+47. 🌬️ Windbreakers. Useful for windy Osaka days.
+ウインドブレーカー。風の強い大阪の日に便利です。
+48. 🧛 Cape or Cloak? Vampires wear capes.
+ケープかマントか？吸血鬼はケープを着ます。
+49. 🛍️ Window shopping. Just looking.
+ウィンドウショッピング。見るだけ。
+50. 👗 Wear what makes you happy! Confidence is the best fashion.
+自分が幸せになる服を着よう！自信が最高のファッションです。`
+        }, 
+        
