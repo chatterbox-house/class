@@ -2705,6 +2705,9 @@ function loadLessonsData() {
         try {
             // Standard format for all classes
             const classData = {
+                'Bronze': {
+                    stories: typeof bronzeStories !== 'undefined' ? bronzeStories : []
+                },
                 'Adult': adult,
                 'X': x,
                 'C': c,
@@ -2885,5 +2888,6 @@ function loadLessonsData() {
 </script>   
 </body>
 </html>
+
 
 
