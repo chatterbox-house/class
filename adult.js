@@ -2619,8 +2619,6 @@ False. The Moon is much larger.
 100. If I could surprise my future self, I’d say…
      　未来の自分を驚かせるなら、私は…と言う。`  
 } ,
-var adult_2025_end = {
-    stories: [
         {
             title: "Week 1: Thanksgiving & Black Friday (Nov 25 – Dec 1, 2025)",
             content: `1. 🦃 Thanksgiving (US) is this Thursday, Nov 27th. What are you thankful for this year?
@@ -3138,6 +3136,7 @@ var adult_2025_end = {
         }
     ]
 };
+
 
 
 
