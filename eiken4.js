@@ -1,2069 +1,2067 @@
 // eiken4.js
 const eiken4 = [
     {
-        title: "1. Last Weekend",
-        content: `🏞️ I went to the river last Sunday.
-私は先週の日曜日に川へ行きました。
-🎣 My father caught three big fish.
-父は大きな魚を3匹釣りました。
-🐟 We cooked the fish for lunch.
-私たちは昼食にその魚を料理しました。
-😋 It was very delicious.
-それはとてもおいしかったです。
-🏊 Then, I swam in the river.
-それから、私は川で泳ぎました。
-💧 The water was cold but clean.
-水は冷たかったですがきれいでした。
-📸 My mother took many pictures of us.
-母は私たちの写真をたくさん撮りました。
-🚗 We came home at five o'clock.
-私たちは5時に家に帰ってきました。
-😴 I was tired, so I went to bed early.
-私は疲れていたので、早く寝ました。
-😊 It was a great day.
-それは素晴らしい一日でした。
-🏞️ Where did you go last Sunday?
-先週の日曜日どこへ行きましたか？
-🎣 How many fish did your father catch?
-お父さんは何匹魚を釣りましたか？
-🐟 Did you cook the fish?
-魚を料理しましたか？
-😋 Was the lunch delicious?
-昼食はおいしかったですか？
-🏊 Did you swim in the river?
-川で泳ぎましたか？
-💧 Was the water warm?
-水は温かかったですか？
-📸 Who took pictures?
-誰が写真を撮りましたか？
-🚗 What time did you come home?
-何時に家に帰ってきましたか？
-😴 Why did you go to bed early?
-なぜ早く寝ましたか？
-😊 Did you have a good time?
-楽しかったですか？`
+        title: "1. Last Weekend (Past Tense)",
+        content: `🏞️ I went to the park last Sunday.
+私はこの前の日曜日に公園へ行きました。
+🏃 I played soccer with my friends.
+私は友達とサッカーをしました。
+🍱 We ate lunch on a bench.
+私たちはベンチで昼食を食べました。
+🍙 My mother made rice balls for me.
+母が私におにぎりを作ってくれました。
+🌤️ The weather was very nice.
+天気はとても良かったです。
+🚴 Then, we rode our bikes.
+それから、私たちは自転車に乗りました。
+🥤 I drank some orange juice.
+私はオレンジジュースを飲みました。
+🐕 I saw a cute dog there.
+そこでかわいい犬を見ました。
+🏠 I came home at five o'clock.
+私は5時に家に帰りました。
+🛁 I took a bath and went to bed.
+私はお風呂に入って寝ました。
+📅 What did you do last Sunday?
+この前の日曜日に何をしましたか？
+🏃 Do you like playing sports?
+スポーツをするのは好きですか？
+🍱 Where do you usually eat lunch?
+たいていどこで昼食を食べますか？
+🍙 Can you make rice balls?
+おにぎりを作れますか？
+🌤️ Was it sunny yesterday?
+昨日は晴れていましたか？
+🚴 Do you have a bike?
+自転車を持っていますか？
+🥤 What is your favorite drink?
+好きな飲み物は何ですか？
+🐕 Do you like dogs or cats?
+犬と猫、どちらが好きですか？
+🏠 What time do you usually come home?
+たいてい何時に家に帰りますか？
+🛁 Do you take a bath in the morning?
+朝にお風呂に入りますか？`
     },
     {
-        title: "2. Shopping for a Gift",
-        content: `🎁 Tomorrow is my sister's birthday.
-明日は妹の誕生日です。
-🏬 I will go to the department store.
-私はデパートに行くつもりです。
-👛 I want to buy a nice bag for her.
-私は彼女に素敵なカバンを買いたいです。
-🎀 She likes pink and white.
-彼女はピンクと白が好きです。
-💰 I have three thousand yen.
-私は3000円持っています。
-🚌 I am going to take the bus there.
-私はそこへバスで行くつもりです。
-🍰 I will also buy a small cake.
-私は小さなケーキも買うつもりです。
-🎉 We are going to have a party at night.
-私たちは夜にパーティーをする予定です。
-😄 I hope she likes my present.
-彼女が私のプレゼントを気に入ってくれるといいです。
-😊 I am excited for tomorrow.
-私は明日が楽しみです。
-🎁 Whose birthday is it tomorrow?
-明日は誰の誕生日ですか？
-🏬 Where will you go?
-どこへ行くつもりですか？
-👛 What do you want to buy?
-何を買いたいですか？
-🎀 What colors does your sister like?
-妹さんは何色が好きですか？
+        title: "2. Summer Plans (Future: Be going to)",
+        content: `🏖️ Summer vacation starts next week.
+来週、夏休みが始まります。
+🚗 I am going to visit my grandmother.
+私は祖母を訪ねるつもりです。
+🏡 She lives near the sea.
+彼女は海の近くに住んでいます。
+🏊 We are going to swim in the sea.
+私たちは海で泳ぐ予定です。
+🎆 I am going to see fireworks, too.
+花火も見るつもりです。
+🍉 We are going to eat cold watermelon.
+私たちは冷たいスイカを食べるつもりです。
+🎣 My father is going to go fishing.
+父は釣りに行く予定です。
+📚 I am going to do my homework in the morning.
+私は午前中に宿題をするつもりです。
+😊 I am going to enjoy my vacation.
+私は休みを楽しむつもりです。
+📸 I am going to take many pictures.
+たくさん写真を撮るつもりです。
+🏖️ When does your summer vacation start?
+あなたの夏休みはいつ始まりますか？
+🚗 Who are you going to visit?
+誰を訪ねるつもりですか？
+🏡 Do you live near the sea?
+海の近くに住んでいますか？
+🏊 Can you swim well?
+上手に泳げますか？
+🎆 Do you like fireworks?
+花火は好きですか？
+🍉 What fruit do you like?
+どんな果物が好きですか？
+🎣 Do you want to go fishing?
+釣りに行きたいですか？
+📚 Do you have a lot of homework?
+宿題はたくさんありますか？
+😊 What are you going to do tomorrow?
+明日は何をするつもりですか？
+📸 Do you take pictures with your phone?
+スマホで写真を撮りますか？`
+    },
+    {
+        title: "3. My Brother (Comparatives)",
+        content: `👦 I have a younger brother.
+私には弟がいます。
+📏 He is taller than me.
+彼は私より背が高いです。
+🏃 He runs faster than me.
+彼は私より速く走ります。
+🧠 But I am smarter than him.
+でも私の方が彼より賢いです。
+🎮 He likes video games more than studying.
+彼は勉強よりテレビゲームが好きです。
+🗣️ He speaks louder than my father.
+彼は父より大きな声で話します。
+🍚 He eats more rice than me.
+彼は私よりご飯をたくさん食べます。
+🏊 I can swim better than him.
+私の方が彼より上手に泳げます。
+😊 He is younger, but he is strong.
+彼は年下ですが、強いです。
+🤝 We are good friends.
+私たちは仲の良い友達です。
+👦 Do you have any brothers or sisters?
+兄弟や姉妹はいますか？
+📏 Are you taller than your mother?
+お母さんより背が高いですか？
+🏃 Can you run fast?
+速く走れますか？
+🧠 What subject are you good at?
+どの教科が得意ですか？
+🎮 Do you like games more than sports?
+スポーツよりゲームが好きですか？
+🗣️ Do you speak in a loud voice?
+大きな声で話しますか？
+🍚 Do you eat a lot?
+たくさん食べますか？
+🏊 Who swims better, you or your friend?
+あなたと友達、どちらが泳ぐのが上手ですか？
+😊 Who is the strongest in your family?
+家族で誰が一番強いですか？
+🤝 Who is your best friend?
+親友は誰ですか？`
+    },
+    {
+        title: "4. Shopping (Want to)",
+        content: `🏬 I want to go to the department store.
+私はデパートに行きたいです。
+👕 I want to buy a new T-shirt.
+新しいTシャツを買いたいです。
+🔴 I want a red one.
+赤いのが欲しいです。
+💰 I have two thousand yen.
+私は2000円持っています。
+🚌 I will go there by bus.
+そこへはバスで行きます。
+🎁 I also want to buy a present for my sister.
+妹へのプレゼントも買いたいです。
+🍰 She wants to eat cake.
+彼女はケーキを食べたがっています。
+🍦 I want to eat ice cream.
+私はアイスクリームが食べたいです。
+👀 I want to look at the toy shop, too.
+おもちゃ屋も見たいです。
+🏠 I want to go home before dinner.
+夕食前に家に帰りたいです。
+🏬 Do you like shopping?
+買い物は好きですか？
+👕 What do you want to buy now?
+今、何を買いたいですか？
+🔴 What is your favorite color?
+好きな色は何ですか？
 💰 How much money do you have?
 いくらお金を持っていますか？
-🚌 How will you go to the store?
-どうやって店に行きますか？
-🍰 Will you buy a cake?
-ケーキを買いますか？
-🎉 When will you have the party?
-いつパーティーをしますか？
-😄 Do you think she will like the gift?
-彼女はプレゼントを気に入ると思いますか？
-😊 Are you excited?
-わくわくしていますか？`
+🚌 Do you go to school by bus?
+バスで学校に行きますか？
+🎁 Do you buy presents for your friends?
+友達にプレゼントを買いますか？
+🍰 Do you like cake?
+ケーキは好きですか？
+🍦 Which ice cream flavor do you like?
+どのアイスクリームの味が好きですか？
+👀 Do you often go to toy shops?
+よくおもちゃ屋に行きますか？
+🏠 What time do you want to go home?
+何時に帰りたいですか？`
     },
     {
-        title: "3. My Summer Vacation",
-        content: `🌻 I visited my grandparents in August.
-私は8月に祖父母を訪ねました。
-🏡 They live near the mountains.
-彼らは山の近くに住んでいます。
-🌽 I helped my grandfather in the garden.
-私は庭で祖父を手伝いました。
-🍅 We picked fresh tomatoes and corn.
-私たちは新鮮なトマトとトウモロコシを採りました。
-🐞 I found a big beetle on a tree.
-私は木の上に大きなカブトムシを見つけました。
-🎆 We saw fireworks by the river at night.
-夜に川のそばで花火を見ました。
-🧊 We ate shaved ice, too.
-私たちはかき氷も食べました。
-🚌 I stayed there for one week.
-私はそこに1週間滞在しました。
-👋 I was sad to say goodbye.
-さよならを言うのが悲しかったです。
-😊 I want to go back next year.
-来年もまた戻りたいです。
-🌻 Who did you visit in August?
-8月に誰を訪ねましたか？
-🏡 Where do your grandparents live?
-祖父母はどこに住んでいますか？
-🌽 Did you help your grandfather?
-祖父を手伝いましたか？
-🍅 What did you pick in the garden?
-庭で何を採りましたか？
-🐞 What did you find on a tree?
-木の上で何を見つけましたか？
-🎆 Where did you see fireworks?
-どこで花火を見ましたか？
-🧊 Did you eat ice cream or shaved ice?
-アイスクリームとかき氷、どちらを食べましたか？
-🚌 How long did you stay there?
-そこにどのくらい滞在しましたか？
-👋 Were you happy to say goodbye?
-さよならを言って嬉しかったですか？
-😊 When do you want to go back?
-いつまた戻りたいですか？`
-    },
-    {
-        title: "4. School Sports Day",
-        content: `🏃 Yesterday was our Sports Day.
-昨日は運動会でした。
-☁️ It was cloudy but not rainy.
-曇りでしたが雨ではありませんでした。
-👟 I ran the 100-meter race.
-私は100メートル走を走りました。
-💨 I ran faster than my friend Ken.
-私は友達のケンより速く走りました。
-🥇 I won first place!
-私は1位になりました！
-🍱 My mother made a special lunch box.
-母が特別なお弁当を作ってくれました。
-🍙 The rice balls were bigger than usual.
-おにぎりはいつもより大きかったです。
-💃 In the afternoon, we danced together.
-午後はみんなで踊りました。
-😅 I was very tired but happy.
-とても疲れましたが幸せでした。
-🏆 Our team got the big trophy.
-私たちのチームは大きなトロフィーをもらいました。
-🏃 What event was yesterday?
-昨日は何の行事でしたか？
-☁️ Was it rainy yesterday?
-昨日は雨でしたか？
-👟 What race did you run?
-どのレースを走りましたか？
-💨 Did you run faster than Ken?
-ケンより速く走りましたか？
-🥇 What place did you win?
-何位になりましたか？
-🍱 Who made lunch?
-誰がお昼を作りましたか？
-🍙 Were the rice balls small?
-おにぎりは小さかったですか？
-💃 What did you do in the afternoon?
-午後は何をしましたか？
-😅 How did you feel?
-どう感じましたか？
-🏆 Did your team win a trophy?
-あなたのチームはトロフィーを取りましたか？`
-    },
-    {
-        title: "5. A Cold Winter Day",
-        content: `❄️ It is very cold today.
-今日はとても寒いです。
-🌡️ The temperature is only 2 degrees.
-気温はたったの2度です。
-🧣 I must wear a coat and a scarf.
-私はコートとマフラーをしなければなりません。
-🏫 I walk to school every morning.
-私は毎朝歩いて学校に行きます。
-🥶 My hands get cold quickly.
-私の手はすぐに冷たくなります。
-🔥 The classroom is warm.
-教室は暖かいです。
-🍲 We have hot stew for lunch.
-昼食に温かいシチューが出ます。
-☃️ After school, I will play in the snow.
-放課後、私は雪の中で遊ぶつもりです。
-🧤 I need my gloves.
-私には手袋が必要です。
-🏠 I want to drink hot cocoa at home.
-家でホットココアが飲みたいです。
-❄️ Is it hot today?
-今日は暑いですか？
-🌡️ What is the temperature?
-気温は何度ですか？
-🧣 What must you wear?
-何を身につけなければなりませんか？
-🏫 How do you go to school?
-どうやって学校に行きますか？
-🥶 Do your hands get warm quickly?
-手はすぐに温かくなりますか？
-🔥 Is the classroom cold?
-教室は寒いですか？
-🍲 What is for lunch?
-昼食は何ですか？
-☃️ What will you do after school?
-放課後何をしますか？
-🧤 Do you need gloves?
-手袋は必要ですか？
-🏠 What do you want to drink?
-何を飲みたいですか？`
-    },
-    {
-        title: "6. Studying for Tests",
-        content: `📚 I have a big math test on Friday.
-金曜日に大きな数学のテストがあります。
-📝 I must study hard today.
-今日は一生懸命勉強しなければなりません。
-🏠 I am going to study in my room.
-私は自分の部屋で勉強するつもりです。
-📖 My math book is on the desk.
-数学の本は机の上にあります。
-🤔 Some questions are difficult for me.
-いくつかの問題は私にとって難しいです。
-👨 My father is good at math.
-父は数学が得意です。
-🙋 I will ask him for help.
-私は彼に助けを求めるつもりです。
-🕙 I plan to study until ten o'clock.
-私は10時まで勉強する予定です。
-🎮 I cannot play games tonight.
-今夜はゲームができません。
-💯 I want to get a good score.
-良い点数を取りたいです。
-📚 When is the math test?
-数学のテストはいつですか？
-📝 What must you do today?
-今日何をしなければなりませんか？
-🏠 Where are you going to study?
-どこで勉強するつもりですか？
-📖 Where is your book?
-本はどこにありますか？
-🤔 Are all questions easy?
-全ての問題は簡単ですか？
-👨 Who is good at math?
-誰が数学が得意ですか？
-🙋 Who will you ask for help?
-誰に助けを求めますか？
-🕙 What time will you finish studying?
-何時に勉強を終えますか？
-🎮 Can you play games tonight?
-今夜ゲームができますか？
-💯 Do you want a good score?
-良い点数が欲しいですか？`
-    },
-    {
-        title: "7. My Favorite Hobby",
-        content: `🍳 My hobby is cooking.
-私の趣味は料理をすることです。
-🥞 I like making breakfast on weekends.
-私は週末に朝食を作るのが好きです。
-🥘 Last Sunday, I made an omelet.
-先週の日曜日、オムレツを作りました。
-🔪 Cutting vegetables is a little hard.
-野菜を切るのは少し難しいです。
-👩 My mother teaches me how to cook.
-母が料理の仕方を教えてくれます。
-🍰 I enjoy baking cakes, too.
-私はケーキを焼くのも楽しみます。
-😋 Eating is the best part.
-食べることは一番良い部分です。
-👨 My father says my food is tasty.
-父は私の料理がおいしいと言います。
-📖 I want to buy a new cookbook.
-私は新しい料理本を買いたいです。
-👨‍🍳 I want to be a chef in the future.
-将来シェフになりたいです。
-🍳 What is your hobby?
-趣味は何ですか？
-🥞 When do you make breakfast?
-いつ朝食を作りますか？
-🥘 What did you make last Sunday?
-先週の日曜日何を作りましたか？
-🔪 Is cutting vegetables easy?
-野菜を切るのは簡単ですか？
-👩 Who teaches you?
-誰が教えてくれますか？
-🍰 Do you enjoy baking?
-焼くことを楽しみますか？
-😋 What is the best part?
-一番良い部分は何ですか？
-👨 Does your father like your food?
-お父さんはあなたの料理が好きですか？
-📖 What do you want to buy?
-何を買いたいですか？
-👨‍🍳 What do you want to be?
-何になりたいですか？`
-    },
-    {
-        title: "8. A Trip to the Zoo",
-        content: `🦁 We went to the city zoo yesterday.
-私たちは昨日、市営動物園に行きました。
-🚌 We took a bus to get there.
-そこへ行くためにバスに乗りました。
-🦒 I saw a giraffe eating leaves.
-私はキリンが葉っぱを食べているのを見ました。
-🐘 The elephant was bigger than the bus.
-ゾウはバスよりも大きかったです。
-🐼 The pandas were very cute.
-パンダはとてもかわいかったです。
-📸 I took a photo of a lion.
-私はライオンの写真を撮りました。
-🍦 It was hot, so we ate ice cream.
-暑かったので、アイスクリームを食べました。
-🐒 The monkeys were jumping around.
-サルたちは飛び回っていました。
-🎁 I bought a key chain at the shop.
-私は店でキーホルダーを買いました。
-😊 We had a wonderful time.
-私たちは素晴らしい時間を過ごしました。
-🦁 Where did you go yesterday?
-昨日どこへ行きましたか？
-🚌 How did you get there?
-どうやってそこへ行きましたか？
-🦒 What was the giraffe doing?
-キリンは何をしていましたか？
-🐘 Was the elephant small?
-ゾウは小さかったですか？
-🐼 Were the pandas cute?
-パンダはかわいかったですか？
-📸 What did you take a photo of?
-何の写真を撮りましたか？
-🍦 Why did you eat ice cream?
-なぜアイスクリームを食べましたか？
-🐒 What were the monkeys doing?
-サルは何をしていましたか？
-🎁 What did you buy?
-何を買いましたか？
-😊 Did you have a good time?
-楽しかったですか？`
-    },
-    {
-        title: "9. Helping at Home",
-        content: `🏠 I have to help my mother today.
-私は今日、母を手伝わなければなりません。
-🧹 First, I must clean my room.
-まず、自分の部屋を掃除しなければなりません。
-🧺 Then, I have to fold the laundry.
-それから、洗濯物をたたまなければなりません。
-🍽️ I set the table for dinner every day.
-私は毎日夕食のテーブルをセットします。
-🐕 Sometimes I walk the dog.
-時々犬の散歩をします。
-🚿 Washing the bath is my job, too.
-お風呂を洗うのも私の仕事です。
-😄 My mother is very busy.
-母はとても忙しいです。
-🍰 So I want to help her.
-だから私は彼女を助けたいです。
-🙏 She says "Thank you" to me.
-彼女は私に「ありがとう」と言います。
-😊 It makes me feel happy.
-それは私を幸せな気分にします。
-🏠 Do you have to help at home?
-家で手伝わなければなりませんか？
-🧹 What must you clean?
-何を掃除しなければなりませんか？
-🧺 What do you do with laundry?
-洗濯物をどうしますか？
-🍽️ Do you set the table?
-テーブルをセットしますか？
-🐕 Do you have a dog to walk?
-散歩させる犬はいますか？
-🚿 Is washing the bath your job?
-お風呂洗いはあなたの仕事ですか？
-😄 Is your mother busy?
-お母さんは忙しいですか？
-🍰 Why do you help her?
-なぜ彼女を助けるのですか？
-🙏 What does she say to you?
-彼女はあなたに何と言いますか？
-😊 How do you feel?
-どう感じますか？`
-    },
-    {
-        title: "10. New Year's Day",
-        content: `🎍 January 1st is New Year's Day.
-1月1日は元日です。
-⛩️ We went to the shrine early in the morning.
-私たちは朝早く神社に行きました。
-🙏 I prayed for a good year.
-私は良い年になるよう祈りました。
-🧧 My uncle gave me otoshidama.
-おじさんが私にお年玉をくれました。
-🍱 We ate traditional food called osechi.
-私たちはおせちと呼ばれる伝統的な料理を食べました。
-🥣 I also ate mochi soup.
-お餅のスープ（お雑煮）も食べました。
-🪁 I flew a kite with my cousins.
-いとこと凧揚げをしました。
-🃏 We played card games together.
-一緒にカードゲームをしました。
-📺 We watched funny shows on TV.
-テレビで面白い番組を見ました。
-😊 It was a fun start to the year.
-楽しい一年の始まりでした。
-🎍 What is January 1st?
-1月1日は何ですか？
-⛩️ Where did you go in the morning?
-朝どこへ行きましたか？
-🙏 What did you pray for?
-何を祈りましたか？
-🧧 What did your uncle give you?
-おじさんは何をくれましたか？
-🍱 What did you eat?
-何を食べましたか？
-🥣 Did you eat mochi?
-お餅を食べましたか？
-🪁 What did you do with your cousins?
-いとこと何をしましたか？
-🃏 Did you play games?
-ゲームをしましたか？
-📺 What did you watch on TV?
-テレビで何を見ましたか？
-😊 Was it a fun day?
-楽しい日でしたか？`
-    },
-    {
-        title: "11. Library Rules",
-        content: `📚 I am at the library now.
-私は今図書館にいます。
-🤫 You must be quiet here.
-ここでは静かにしなければなりません。
-🏃 You must not run.
-走ってはいけません。
-🍽️ You cannot eat or drink.
-食べたり飲んだりしてはいけません。
-📖 You can read many interesting books.
-たくさんの面白い本を読むことができます。
-💻 You can also use the computer.
-コンピュータも使うことができます。
-💳 I have a library card.
-私は図書カードを持っています。
-📚 I am going to borrow three books.
-私は本を3冊借りるつもりです。
-📅 I must return them next week.
-来週それらを返さなければなりません。
-😊 I love reading stories.
-私は物語を読むのが大好きです。
-📚 Where are you?
-どこにいますか？
-🤫 How must you be in the library?
-図書館ではどうしていなければなりませんか？
-🏃 Can you run in the library?
-図書館で走れますか？
-🍽️ Can you eat food there?
-そこで食べ物を食べられますか？
-📖 What can you do there?
-そこで何ができますか？
-💻 Is there a computer?
-コンピュータはありますか？
-💳 Do you have a library card?
-図書カードを持っていますか？
-📚 How many books will you borrow?
-何冊本を借りますか？
-📅 When must you return them?
-いつ返さなければなりませんか？
-😊 Do you love reading?
-読書は大好きですか？`
-    },
-    {
-        title: "12. Planning a Party",
-        content: `🎉 Next Sunday is Halloween.
-今度の日曜日はハロウィンです。
-👻 We are going to have a party.
-私たちはパーティーをする予定です。
-🎃 I will wear a pumpkin costume.
-私はカボチャの衣装を着るつもりです。
-🧛 My brother is going to be a vampire.
-兄は吸血鬼になる予定です。
-🍬 We will buy lots of candy and chocolate.
-私たちはたくさんのキャンディとチョコを買います。
-🏠 We are going to decorate the living room.
-私たちは居間を飾るつもりです。
-🕺 My friends will come at two o'clock.
-友達が2時に来ます。
-🍕 We will eat pizza and drink soda.
-私たちはピザを食べてソーダを飲みます。
-📸 We are going to take many photos.
-私たちは写真をたくさん撮るつもりです。
-😄 It will be very exciting.
-とてもわくわくするでしょう。
-🎉 What is next Sunday?
-今度の日曜日は何ですか？
-👻 What are you going to have?
-何をする予定ですか？
-🎃 What will you wear?
-何を着ますか？
-🧛 What will your brother be?
-お兄さんは何になりますか？
-🍬 What will you buy?
-何を買いますか？
-🏠 Where will you decorate?
-どこを飾りますか？
-🕺 What time will friends come?
-何時に友達が来ますか？
-🍕 What will you eat?
-何を食べますか？
-📸 What are you going to take?
-何を撮るつもりですか？
-😄 How will it be?
-どうなるでしょう？`
-    },
-    {
-        title: "13. A Sick Friend",
-        content: `🤒 My friend Mike was sick yesterday.
-私の友達のマイクは昨日病気でした。
-🏫 He didn't come to school.
-彼は学校に来ませんでした。
-📞 I called him in the evening.
-私は夕方に彼に電話しました。
-🗣️ He said he had a bad cold.
-彼はひどい風邪だと言いました。
-🛏️ I said, "You should sleep early."
-私は「早く寝たほうがいいよ」と言いました。
-🍎 "You should eat some fruit," I added.
-「果物を食べたほうがいいよ」と付け加えました。
-📝 I brought him the homework today.
-今日、彼に宿題を持って行きました。
-🏠 I went to his house after school.
-放課後、彼の家に行きました。
-😄 He looked better today.
-彼は今日、良さそうに見えました。
-🏫 He will come to school tomorrow.
-彼は明日学校に来るでしょう。
-🤒 Who was sick yesterday?
-昨日誰が病気でしたか？
-🏫 Did he come to school?
-彼は学校に来ましたか？
-📞 When did you call him?
-いつ彼に電話しましたか？
-🗣️ What did he have?
-彼はどうでしたか（何の病気でしたか）？
-🛏️ What did you say he should do?
-彼はどうすべきだとあなたは言いましたか？
-🍎 What should he eat?
-彼は何を食べるべきですか？
-📝 What did you bring him?
-彼に何を持って行きましたか？
-🏠 When did you go to his house?
-いつ彼の家に行きましたか？
-😄 How did he look today?
-今日彼はどう見えましたか？
-🏫 Will he come to school tomorrow?
-彼は明日学校に来ますか？`
-    },
-    {
-        title: "14. Moving House",
-        content: `📦 We moved to a new house last week.
-私たちは先週、新しい家に引っ越しました。
-🚚 A big truck came to our old house.
-大きなトラックが古い家に来ました。
-💪 The men carried many heavy boxes.
-男性たちがたくさんの重い箱を運びました。
-🏠 Our new house is bigger than the old one.
-新しい家は前の家より大きいです。
-🛏️ I have my own room now.
-私は今、自分の部屋があります。
-🎨 The walls are painted light blue.
-壁は水色に塗られています。
-🧹 We cleaned the house yesterday.
-私たちは昨日、家を掃除しました。
-🛋️ We are going to buy a new sofa.
-私たちは新しいソファを買うつもりです。
-🏞️ There is a nice park near my house.
-家の近くに素敵な公園があります。
-😊 I like my new home.
-私は新しい家が好きです。
-📦 When did you move?
-いつ引っ越しましたか？
-🚚 What came to your house?
-何が家に来ましたか？
-💪 What did the men carry?
-男性たちは何を運びましたか？
-🏠 Is the new house small?
-新しい家は小さいですか？
-🛏️ Do you have your own room?
-自分の部屋がありますか？
-🎨 What color are the walls?
-壁は何色ですか？
-🧹 What did you do yesterday?
-昨日は何をしましたか？
-🛋️ What are you going to buy?
-何を買うつもりですか？
-🏞️ What is near your house?
-家の近くに何がありますか？
-😊 Do you like your new home?
-新しい家は好きですか？`
-    },
-    {
-        title: "15. My Dog Pochi",
-        content: `🐶 I have a dog named Pochi.
-私はポチという犬を飼っています。
-🐕 He is bigger than a cat.
-彼は猫より大きいです。
-🦴 He likes bones very much.
-彼は骨が大好きです。
-🏃 He can run faster than me.
-彼は私より速く走れます。
-🧠 He is smarter than other dogs.
-彼は他の犬より賢いです。
-🤝 He can shake hands.
-彼はお手（握手）ができます。
-🏞️ We went for a walk this morning.
-今朝、散歩に行きました。
-🎾 We played with a ball in the park.
-公園でボール遊びをしました。
-🚿 I washed him in the afternoon.
-午後、彼を洗いました。
-😴 Now he is sleeping under the table.
-今、彼はテーブルの下で寝ています。
-🐶 What is your dog's name?
-あなたの犬の名前は何ですか？
-🐕 Is he smaller than a cat?
-彼は猫より小さいですか？
-🦴 What does he like?
-彼は何が好きですか？
-🏃 Can he run fast?
-彼は速く走れますか？
-🧠 Is he smart?
-彼は賢いですか？
-🤝 What can he do?
-彼は何ができますか？
-🏞️ Where did you go this morning?
-今朝どこへ行きましたか？
-🎾 What did you play with?
-何で遊びましたか？
-🚿 What did you do in the afternoon?
-午後何をしましたか？
-😴 Where is he sleeping?
-彼はどこで寝ていますか？`
-    },
-    {
-        title: "16. Art Museum",
-        content: `🎨 I went to the art museum on Saturday.
-私は土曜日に美術館に行きました。
-🖼️ I saw many beautiful paintings.
-たくさんの美しい絵を見ました。
-👨‍🎨 Some were painted by famous artists.
-いくつかは有名な画家によって描かれていました。
-🤔 One picture was very strange.
-一つの絵はとても奇妙でした。
-🟦 It was just blue and yellow lines.
-それはただの青と黄色の線でした。
-🕐 We stayed there for two hours.
-私たちはそこに2時間いました。
-☕ Then we went to the museum cafe.
-それから美術館のカフェに行きました。
-🍰 I ate cheese cake and drank tea.
-私はチーズケーキを食べて紅茶を飲みました。
-🚌 We took the bus back home.
-バスに乗って家に帰りました。
-🎨 It was an interesting day.
-興味深い一日でした。
-🎨 Where did you go on Saturday?
-土曜日にどこへ行きましたか？
-🖼️ What did you see?
-何を見ましたか？
-👨‍🎨 Were the artists famous?
-画家たちは有名でしたか？
-🤔 Was one picture strange?
-一つの絵は奇妙でしたか？
-🟦 What did the picture look like?
-その絵はどんな見た目でしたか？
-🕐 How long did you stay?
-どのくらい滞在しましたか？
-☕ Where did you go after?
-その後どこへ行きましたか？
-🍰 What did you eat?
-何を食べましたか？
-🚌 How did you go home?
-どうやって帰りましたか？
-🎨 Was it boring?
-退屈でしたか？`
-    },
-    {
-        title: "17. Favorite Season",
-        content: `🌸 Spring is the best season for me.
-私にとって春は一番良い季節です。
-🌡️ It is warmer than winter.
-冬より暖かいです。
-🍒 Cherry blossoms are the most beautiful flowers.
-桜は最も美しい花です。
-🍱 People enjoy picnics under the trees.
-人々は木の下でピクニックを楽しみます。
-🎒 School starts in April in Japan.
-日本では4月に学校が始まります。
-🦟 Summer is too hot for me.
-夏は私には暑すぎます。
-🍂 Autumn is nice, but a little sad.
-秋は良いですが、少し寂しいです。
-❄️ Winter is the coldest season.
-冬は一番寒い季節です。
-😊 That is why I like spring the best.
-だから私は春が一番好きです。
-🌸 I am going to view flowers next week.
-来週、お花見に行くつもりです。
-🌸 What is your favorite season?
-一番好きな季節は何ですか？
-🌡️ Is spring warmer than winter?
-春は冬より暖かいですか？
-🍒 What are the most beautiful flowers?
-最も美しい花は何ですか？
-🍱 What do people do in spring?
-人々は春に何をしますか？
-🎒 When does school start?
-学校はいつ始まりますか？
-🦟 Why don't you like summer?
-なぜ夏が好きではないのですか？
-🍂 How is autumn?
-秋はどうですか？
-❄️ What is the coldest season?
-一番寒い季節は何ですか？
-😊 Which season do you like the best?
-どの季節が一番好きですか？
-🌸 What are you going to do next week?
-来週何をするつもりですか？`
-    },
-    {
-        title: "18. Learning Guitar",
-        content: `🎸 I am learning to play the guitar.
-私はギターを弾くことを習っています。
-📅 I practice every day after school.
-私は放課後毎日練習します。
-🤕 My fingers hurt a little.
-指が少し痛いです。
-🎶 But playing music is fun.
-でも音楽を演奏するのは楽しいです。
-👨‍🎤 I want to be a musician in the future.
-将来ミュージシャンになりたいです。
-🎤 I also like singing songs.
-歌を歌うのも好きです。
-🎸 My guitar is older than me.
-私のギターは私より古いです。
-🎁 It was my father's guitar.
-それは父のギターでした。
-👪 I am going to play for my family soon.
-もうすぐ家族のために演奏するつもりです。
-👏 I hope they like it.
-彼らが気に入ってくれるといいです。
-🎸 What are you learning?
-何を習っていますか？
-📅 When do you practice?
-いつ練習しますか？
-🤕 Do your fingers hurt?
-指は痛いですか？
-🎶 Is playing music fun?
-音楽を演奏するのは楽しいですか？
-👨‍🎤 What do you want to be?
-何になりたいですか？
-🎤 Do you like singing?
-歌うのは好きですか？
-🎸 Is your guitar new?
-あなたのギターは新しいですか？
-🎁 Whose guitar was it?
-それは誰のギターでしたか？
-👪 Who will you play for?
-誰のために演奏しますか？
-👏 Do you want them to like it?
-彼らに気に入ってほしいですか？`
-    },
-    {
-        title: "19. Camping Trip",
-        content: `⛺ We went camping last summer.
-私たちは去年の夏キャンプに行きました。
-🌲 We stayed in a forest near a lake.
-湖の近くの森に泊まりました。
-🔥 My father made a fire.
-父が火をおこしました。
-🍛 We cooked curry and rice outside.
-外でカレーとご飯を作りました。
-😋 It tasted better than at home.
-家で食べるよりおいしかったです。
-🌌 At night, we looked at the stars.
-夜に星を見ました。
-✨ The stars were very bright.
-星はとても明るかったです。
-⛺ We slept in a tent.
-テントで寝ました。
-🐦 In the morning, birds were singing.
-朝、鳥が歌っていました。
-🛶 We went canoeing on the lake.
-湖でカヌーをしました。
-⛺ When did you go camping?
-いつキャンプに行きましたか？
-🌲 Where did you stay?
-どこに泊まりましたか？
-🔥 What did your father do?
-お父さんは何をしましたか？
-🍛 What did you cook?
-何を料理しましたか？
-😋 Was it delicious?
-おいしかったですか？
-🌌 What did you see at night?
-夜に何を見ましたか？
-✨ Were the stars bright?
-星は明るかったですか？
-⛺ Where did you sleep?
-どこで寝ましたか？
-🐦 What did you hear in the morning?
-朝、何を聞きましたか？
-🛶 What did you do on the lake?
-湖で何をしましたか？`
-    },
-    {
-        title: "20. Computer Class",
-        content: `💻 We have a computer class on Mondays.
-月曜日にコンピュータの授業があります。
-⌨️ I can type very fast.
-私はとても速くタイプできます。
-🖱️ We learned how to use a mouse.
-マウスの使い方を習いました。
-🎨 Yesterday, we drew pictures on the computer.
-昨日はコンピュータで絵を描きました。
-🖌️ I drew a picture of a spaceship.
-私は宇宙船の絵を描きました。
-🌐 We also use the internet.
-インターネットも使います。
-🔍 I searched for information about animals.
-動物についての情報を探しました。
-📧 I want to send an email to my friend.
-友達にメールを送りたいです。
-🚫 But we must not play games in class.
-でも授業中にゲームをしてはいけません。
-😊 Computers are very useful.
-コンピュータはとても便利です。
-💻 When is the computer class?
-コンピュータの授業はいつですか？
-⌨️ Can you type fast?
-速くタイプできますか？
-🖱️ What did you learn?
-何を習いましたか？
-🎨 What did you do yesterday?
-昨日は何をしましたか？
-🖌️ What did you draw?
-何を描きましたか？
-🌐 Do you use the internet?
-インターネットを使いますか？
-🔍 What did you search for?
-何を探しましたか？
-📧 What do you want to send?
-何を送りたいですか？
-🚫 Can you play games?
-ゲームはできますか？
-😊 Are computers useful?
-コンピュータは便利ですか？`
-    },
-    {
-        title: "21. The Festival",
-        content: `🏮 There was a summer festival last night.
-昨夜、夏祭りがありました。
-👘 I wore a yukata.
-私は浴衣を着ました。
-👣 I went with my friends.
-友達と行きました。
-🥁 We heard the sound of drums.
-太鼓の音が聞こえました。
-💃 People were dancing in a circle.
-人々は輪になって踊っていました。
-🐙 I bought takoyaki at a stall.
-屋台でたこ焼きを買いました。
-🍧 I also ate shaved ice.
-かき氷も食べました。
-🎆 Then, the fireworks started.
-それから、花火が始まりました。
-😲 They were huge and colorful.
-それらは巨大でカラフルでした。
-😊 I had a lot of fun.
-とても楽しかったです。
-🏮 When was the festival?
-祭りはいつでしたか？
-👘 What did you wear?
-何を着ましたか？
-👣 Who did you go with?
-誰と行きましたか？
-🥁 What did you hear?
-何が聞こえましたか？
-💃 What were people doing?
-人々は何をしていましたか？
-🐙 What did you buy?
-何を買いましたか？
-🍧 Did you eat shaved ice?
-かき氷を食べましたか？
-🎆 What started later?
-後で何が始まりましたか？
-😲 Were the fireworks small?
-花火は小さかったですか？
-😊 Did you have fun?
-楽しかったですか？`
-    },
-    {
-        title: "22. My Busy Morning",
-        content: `⏰ I woke up late this morning.
-今朝、起きるのが遅かったです。
-😱 It was seven thirty!
-7時半でした！
-👕 I washed my face and got changed quickly.
-顔を洗って急いで着替えました。
-🍞 I didn't have time for breakfast.
-朝食の時間がありませんでした。
-🥛 I only drank a glass of milk.
-牛乳を一杯だけ飲みました。
-🏃 I ran to the station.
-駅まで走りました。
-😰 I almost missed the train.
-電車に乗り遅れるところでした。
-🏫 I arrived at school at eight twenty.
-8時20分に学校に着きました。
-🧘 I was just in time.
-ギリギリ間に合いました。
-😴 I must wake up earlier tomorrow.
-明日はもっと早く起きなければなりません。
-⏰ Did you wake up early?
-早く起きましたか？
-😱 What time was it?
-何時でしたか？
-👕 Did you change quickly?
-急いで着替えましたか？
-🍞 Did you eat a big breakfast?
-たくさん朝食を食べましたか？
-🥛 What did you drink?
-何を飲みましたか？
-🏃 How did you go to the station?
-どうやって駅に行きましたか？
-😰 Did you miss the train?
-電車に乗り遅れましたか？
-🏫 What time did you arrive at school?
-何時に学校に着きましたか？
-🧘 Were you late?
-遅刻しましたか？
-😴 What must you do tomorrow?
-明日何をしなければなりませんか？`
-    },
-    {
-        title: "23. A Letter to Grandma",
-        content: `👵 Dear Grandma,
-おばあちゃんへ
-😃 How are you? I am fine.
-お元気ですか？私は元気です。
-🏫 School is fun but busy.
-学校は楽しいけど忙しいです。
-🎹 I practice the piano every day.
-毎日ピアノを練習しています。
-🎼 I can play the song you like.
-おばあちゃんが好きな曲を弾けます。
-🎁 Thank you for the birthday present.
-誕生日プレゼントをありがとう。
-📚 The book was very interesting.
-その本はとても面白かったです。
-🚌 We are going to visit you next month.
-来月、そちらに行く予定です。
-🍪 I will make cookies for you.
-クッキーを作ってあげます。
-🖊️ Please write back soon.
-早くお返事書いてね。
-❤️ Love, Emi.
-愛を込めて、エミより。
-👵 Who is the letter for?
-誰への手紙ですか？
-😃 Is Emi fine?
-エミは元気ですか？
-🏫 How is school?
-学校はどうですか？
-🎹 What does she practice?
-彼女は何を練習していますか？
-🎼 Can she play the song?
-彼女はその曲を弾けますか？
-🎁 Why did she say thank you?
-なぜありがとうと言いましたか？
-📚 Was the book boring?
-その本は退屈でしたか？
-🚌 When will they visit Grandma?
-いつおばあちゃんを訪ねますか？
-🍪 What will Emi make?
-エミは何を作りますか？
-🖊️ Who wrote the letter?
-誰が手紙を書きましたか？`
-    },
-    {
-        title: "24. Lost in the Department Store",
-        content: `🏬 I went to the department store with my mom.
-母とデパートに行きました。
-🧸 I was looking at toys.
-私はおもちゃを見ていました。
-👀 Suddenly, I couldn't see my mom.
-突然、母が見えなくなりました。
-😰 I looked around, but she wasn't there.
-周りを見ましたが、彼女はいませんでした。
-😢 I was scared and wanted to cry.
-私は怖くて泣きたくなりました。
-💁‍♀️ A kind shop clerk came to me.
-親切な店員さんが私のところへ来ました。
-📢 She called my mother on the speaker.
-彼女はスピーカーで母を呼び出しました。
-🏃 My mother came running.
-母が走って来ました。
-🫂 She hugged me tight.
-彼女は私を強く抱きしめました。
-🤝 I must stay close to her next time.
-次は彼女の近くにいなければなりません。
-🏬 Who did you go with?
-誰と行きましたか？
-🧸 What were you looking at?
-何を見ていましたか？
-👀 Did you lose your mom?
-お母さんとはぐれましたか？
-😰 Was she there?
-彼女はそこにいましたか？
-😢 How did you feel?
-どう感じましたか？
-💁‍♀️ Who came to you?
-誰があなたのところに来ましたか？
-📢 What did the clerk do?
-店員さんは何をしましたか？
-🏃 Did your mother walk?
-お母さんは歩きましたか？
-🫂 What did she do?
-彼女は何をしましたか？
-🤝 What must you do next time?
-次はどうしなければなりませんか？`
-    },
-    {
-        title: "25. Making a Sandwich",
-        content: `🥪 I was hungry, so I made a sandwich.
-お腹が空いたのでサンドイッチを作りました。
-🍞 First, I took two slices of bread.
-まず、パンを2枚取りました。
-🧈 I put butter on the bread.
-パンにバターを塗りました。
-🥗 Then I put lettuce and ham on it.
-それからレタスとハムをのせました。
-🧀 I also like cheese, so I added a slice.
-チーズも好きなので、1枚加えました。
-🧂 I put a little salt and pepper.
-塩とコショウを少しかけました。
-🍞 I put the other bread on top.
-もう一枚のパンを上にのせました。
-🔪 I cut the sandwich in half.
-サンドイッチを半分に切りました。
-🥛 I poured a glass of milk.
-牛乳をコップに注ぎました。
-😋 It was a great lunch.
-素晴らしい昼食でした。
-🥪 Why did you make a sandwich?
-なぜサンドイッチを作りましたか？
-🍞 How many slices of bread did you use?
-パンを何枚使いましたか？
-🧈 What did you put on the bread first?
-最初にパンに何を塗りましたか？
-🥗 What vegetables did you use?
-どんな野菜を使いましたか？
-🧀 Did you add cheese?
-チーズを加えましたか？
-🧂 Did you use sugar?
-砂糖を使いましたか？
-🍞 What did you put on top?
-上に何をのせましたか？
-🔪 Did you cut the sandwich?
-サンドイッチを切りましたか？
-🥛 What did you drink?
-何を飲みましたか？
-😋 Was it a good lunch?
-良い昼食でしたか？`
-    },
-    {
-        title: "26. My New Bike",
-        content: `🚲 I got a new bike for my birthday.
-誕生日に新しい自転車をもらいました。
-🔴 It is red and shiny.
-それは赤くてピカピカです。
-🔔 It has a silver bell.
-銀色のベルがついています。
- basket I put my bag in the basket.
-私はカゴにカバンを入れます。
-🏞️ Yesterday, I rode it to the park.
-昨日、それに乗って公園に行きました。
-💨 It is faster than my old bike.
-それは私の古い自転車より速いです。
-🛑 I stopped at the traffic light.
-私は信号で止まりました。
-🚧 I was careful of cars.
-車に気をつけました。
-🧼 I will clean it every week.
-毎週掃除するつもりです。
-😊 I really like my new bike.
-新しい自転車がとても気に入っています。
-🚲 When did you get the bike?
-いつ自転車をもらいましたか？
-🔴 What color is it?
-それは何色ですか？
-🔔 Does it have a bell?
-ベルはついていますか？
-basket What do you put in the basket?
-カゴに何を入れますか？
-🏞️ Where did you ride it?
-どこへ乗って行きましたか？
-💨 Is it slow?
-それは遅いですか？
-🛑 Where did you stop?
-どこで止まりましたか？
-🚧 What were you careful of?
-何に気をつけましたか？
-🧼 When will you clean it?
-いつ掃除しますか？
-😊 Do you like it?
-気に入っていますか？`
-    },
-    {
-        title: "27. Hiking",
-        content: `⛰️ My family likes hiking.
-私の家族はハイキングが好きです。
-🚗 Last week, we drove to Mt. Takao.
-先週、車で高尾山に行きました。
-🥾 We wore hiking boots.
-私たちは登山靴を履きました。
-🎒 I carried a backpack with water.
-私は水の入ったリュックを背負いました。
-🚶 Walking up the mountain was hard.
-山を登るのは大変でした。
-😅 I was tired, but I didn't stop.
-疲れましたが、止まりませんでした。
-🍙 We ate rice balls at the top.
-頂上でおにぎりを食べました。
-👀 The view was beautiful.
-景色がきれいでした。
-📸 We took a photo together.
-一緒に写真を撮りました。
-🚠 We took the cable car down.
-ケーブルカーで下りました。
-⛰️ What does your family like?
-あなたの家族は何が好きですか？
-🚗 Where did you go last week?
-先週どこへ行きましたか？
-🥾 What did you wear?
-何を履きましたか？
-🎒 What was in your backpack?
-リュックには何が入っていましたか？
-🚶 Was it easy to walk up?
-登るのは簡単でしたか？
-😅 Did you stop?
-止まりましたか？
-🍙 Where did you eat?
-どこで食べましたか？
-👀 How was the view?
-景色はどうでしたか？
-📸 What did you do at the top?
-頂上で何をしましたか？
-🚠 How did you go down?
-どうやって下りましたか？`
-    },
-    {
-        title: "28. A Rainy Sunday",
-        content: `🌧️ Last Sunday was rainy.
-先週の日曜日は雨でした。
-🏠 I couldn't play outside.
-外で遊べませんでした。
-📖 So, I read a book in my room.
-だから、部屋で本を読みました。
-📚 It was a story about a wizard.
-それは魔法使いの話でした。
-🎨 Then, I drew some pictures.
-それから、絵を描きました。
-🖌️ I used my new crayons.
-新しいクレヨンを使いました。
-🍜 My mom made ramen for lunch.
-母が昼食にラーメンを作ってくれました。
-😋 It was hot and tasty.
-熱くておいしかったです。
-🎮 In the afternoon, I played video games.
-午後はテレビゲームをしました。
-😊 I had a relaxing day.
-リラックスした一日でした。
-🌧️ How was the weather last Sunday?
-先週の日曜日の天気はどうでしたか？
-🏠 Could you play outside?
-外で遊べましたか？
-📖 What did you do in your room?
-部屋で何をしましたか？
-📚 What was the book about?
-何についての本でしたか？
-🎨 What did you do after reading?
-読書のあと何をしましたか？
-🖌️ What did you use?
-何を使いましたか？
-🍜 What did you eat for lunch?
-昼食に何を食べましたか？
-😋 Was it cold?
-それは冷たかったですか？
-🎮 What did you do in the afternoon?
-午後は何をしましたか？
-😊 Was it a busy day?
-忙しい一日でしたか？`
-    },
-    {
-        title: "29. Soccer Practice",
-        content: `⚽ I am on the school soccer team.
-私は学校のサッカーチームに入っています。
-🏃 We practice three times a week.
-週に3回練習します。
-👟 I bought new soccer shoes yesterday.
-昨日、新しいサッカーシューズを買いました。
-🥅 Today, we practiced shooting.
-今日はシュートの練習をしました。
-🦶 I kicked the ball hard.
-ボールを強く蹴りました。
-🥅 It went into the goal.
-それはゴールに入りました。
-👏 My coach said, "Good job!"
-コーチが「よくやった！」と言いました。
-💧 I was thirsty, so I drank water.
-喉が渇いたので水を飲みました。
-🚲 I rode my bike home.
-自転車で家に帰りました。
-🛁 I took a shower right away.
-すぐにシャワーを浴びました。
-⚽ What team are you on?
-何のチームに入っていますか？
-🏃 How often do you practice?
-どのくらいの頻度で練習しますか？
-👟 When did you buy shoes?
-いつ靴を買いましたか？
-🥅 What did you practice today?
-今日何を練習しましたか？
-🦶 How did you kick the ball?
-どうやってボールを蹴りましたか？
-🥅 Did it go into the goal?
-ゴールに入りましたか？
-👏 What did the coach say?
-コーチは何と言いましたか？
-💧 Why did you drink water?
-なぜ水を飲みましたか？
-🚲 How did you go home?
-どうやって家に帰りましたか？
-🛁 What did you do at home?
-家で何をしましたか？`
-    },
-    {
-        title: "30. My Aunt's Wedding",
-        content: `👰 My aunt got married last month.
-先月、おばさんが結婚しました。
-💒 The wedding was at a beautiful hotel.
-結婚式は美しいホテルでありました。
-👔 I wore a suit and a tie.
-私はスーツとネクタイを着用しました。
-👗 My sister wore a pink dress.
-妹はピンクのドレスを着ました。
-💍 My aunt looked very pretty.
-おばさんはとてもきれいでした。
-🤵 Her husband looked handsome.
-彼女の夫はハンサムでした。
-🍽️ We ate a delicious French dinner.
-私たちはおいしいフランス料理の夕食を食べました。
-🍰 There was a big wedding cake.
-大きなウェディングケーキがありました。
-🎤 My father sang a song for them.
-父が彼らのために歌を歌いました。
-🎉 It was a happy day.
-幸せな一日でした。
-👰 Who got married?
-誰が結婚しましたか？
-💒 Where was the wedding?
-結婚式はどこでありましたか？
-👔 What did you wear?
-何を着ましたか？
-👗 What color was your sister's dress?
-妹のドレスは何色でしたか？
-💍 How did your aunt look?
-おばさんはどう見えましたか？
-🤵 How did her husband look?
-夫はどう見えましたか？
-🍽️ What did you eat?
-何を食べましたか？
-🍰 Was there a cake?
-ケーキはありましたか？
-🎤 What did your father do?
-お父さんは何をしましたか？
-🎉 How was the day?
-その日はどうでしたか？`
-    },
-    {
-        title: "31. Favorite School Subject",
-        content: `🏫 I like school very much.
+        title: "5. My School (There is/are)",
+        content: `🏫 There is a big library in my school.
+私の学校には大きな図書室があります。
+📚 There are many interesting books.
+面白い本がたくさんあります。
+🌲 There are some trees in the schoolyard.
+校庭には何本かの木があります。
+⚽ There is a soccer field, too.
+サッカー場もあります。
+👨‍🏫 There are thirty students in my class.
+私のクラスには30人の生徒がいます。
+🖼️ There is a map on the wall.
+壁には地図があります。
+🕰️ There is a clock above the blackboard.
+黒板の上に時計があります。
+💻 There are five computers in the classroom.
+教室には5台のコンピュータがあります。
+💐 There are flowers on the teacher's desk.
+先生の机の上に花があります。
+😊 I like my school very much.
 私は学校が大好きです。
-🔬 My favorite subject is science.
-一番好きな科目は理科です。
-🧪 I like doing experiments.
-実験をするのが好きです。
-🤔 It is interesting to learn new things.
-新しいことを学ぶのは面白いです。
-💯 I got 100 points on the last test.
-前のテストで100点を取りました。
-➕ I like math, too.
-数学も好きです。
-🔢 But history is a little difficult.
-でも歴史は少し難しいです。
-📅 I have science class on Tuesday.
-火曜日に理科の授業があります。
-👨‍🏫 My science teacher is Mr. Tanaka.
-理科の先生は田中先生です。
-👩‍🔬 I want to be a scientist.
-私は科学者になりたいです。
-🏫 Do you like school?
-学校は好きですか？
-🔬 What is your favorite subject?
-一番好きな科目は何ですか？
-🧪 What do you like doing?
-何をするのが好きですか？
-🤔 Is it boring to learn?
-学ぶのは退屈ですか？
-💯 What score did you get?
-何点取りましたか？
-➕ Do you like math?
-数学は好きですか？
-🔢 Is history easy?
-歴史は簡単ですか？
-📅 When is science class?
-理科の授業はいつですか？
-👨‍🏫 Who is your teacher?
-先生は誰ですか？
-👩‍🔬 What do you want to be?
-何になりたいですか？`
+🏫 Is your school big?
+あなたの学校は大きいですか？
+📚 Do you like reading books?
+本を読むのは好きですか？
+🌲 Are there trees near your house?
+家の近くに木はありますか？
+⚽ Is there a park in your town?
+町に公園はありますか？
+👨‍🏫 How many students are in your class?
+クラスに何人の生徒がいますか？
+🖼️ Is there a picture in your room?
+部屋に絵はありますか？
+🕰️ What time is it now?
+今、何時ですか？
+💻 Do you have a computer?
+コンピュータを持っていますか？
+💐 Do you like flowers?
+花は好きですか？
+😊 Do you like your school?
+学校は好きですか？`
     },
     {
-        title: "32. Cleaning the Park",
-        content: `🧹 Last Saturday was "Clean Up Day".
-先週の土曜日は「掃除の日」でした。
-🤝 I went to the park with my neighbors.
-近所の人たちと公園に行きました。
-🧤 We wore gloves and carried bags.
-私たちは手袋をして袋を持ちました。
-🗑️ We picked up trash on the grass.
-芝生の上のゴミを拾いました。
-🍾 There were many empty bottles.
-空き瓶がたくさんありました。
-🍬 I found some candy wrappers, too.
-キャンディの包み紙も見つけました。
-💦 It was hard work.
-大変な仕事でした。
-✨ But the park became very clean.
-でも公園はとてもきれいになりました。
-🍹 After that, we drank juice.
-その後、ジュースを飲みました。
-😊 I felt good.
-良い気分でした。
-🧹 What day was last Saturday?
-先週の土曜日は何の日でしたか？
-🤝 Who did you go with?
-誰と行きましたか？
-🧤 What did you wear?
-何を身につけましたか？
-🗑️ What did you pick up?
-何を拾いましたか？
-🍾 What was on the grass?
-芝生の上に何がありましたか？
-🍬 Did you find money?
-お金を見つけましたか？
-💦 Was it easy work?
-簡単な仕事でしたか？
-✨ How did the park look?
-公園はどうなりましたか？
-🍹 What did you do after?
-その後何をしましたか？
-😊 How did you feel?
-どう感じましたか？`
+        title: "6. Rules (Must/Must not)",
+        content: `📚 I am in the library now.
+私は今、図書館にいます。
+🤫 I must be quiet here.
+ここでは静かにしなければなりません。
+🏃 I must not run in the library.
+図書館の中で走ってはいけません。
+🍔 I must not eat or drink.
+食べたり飲んだりしてはいけません。
+📅 I must return the books next week.
+来週、本を返さなければなりません。
+🕗 I must go home at five o'clock.
+5時に家に帰らなければなりません。
+📝 I must do my homework today.
+今日、宿題をしなければなりません。
+🛌 I must go to bed early.
+早く寝なければなりません。
+🦷 I must brush my teeth every day.
+毎日歯を磨かなければなりません。
+🙏 We must help each other.
+私たちはお互いに助け合わなければなりません。
+📚 Do you go to the library?
+図書館に行きますか？
+🤫 Must you be quiet in class?
+授業中は静かにしなければなりませんか？
+🏃 Must you run in P.E. class?
+体育の授業で走らなければなりませんか？
+🍔 Must you eat breakfast?
+朝食を食べなければなりませんか？
+📅 When must you go to school?
+いつ学校に行かなければなりませんか？
+🕗 What time must you go home?
+何時に帰らなければなりませんか？
+📝 Must you study English today?
+今日、英語を勉強しなければなりませんか？
+🛌 Must you wake up early tomorrow?
+明日、早く起きなければなりませんか？
+🦷 Do you brush your teeth after dinner?
+夕食後に歯を磨きますか？
+🙏 Do you help your mother?
+お母さんを手伝いますか？`
     },
     {
-        title: "33. My Cat's Tricks",
-        content: `🐱 I have a smart cat named Luna.
-ルナという賢い猫を飼っています。
-🐈 She can do some tricks.
-彼女はいくつか芸ができます。
-🤚 If I say "Sit", she sits.
-私が「お座り」と言うと、彼女は座ります。
-🤝 She can also shake hands.
-彼女は握手（お手）もできます。
-🧶 She likes playing with a ball.
-彼女はボールで遊ぶのが好きです。
-🏃 When I throw it, she runs to it.
-私が投げると、彼女はそこへ走ります。
-🐟 I give her a treat when she is good.
-彼女が良い子の時はおやつをあげます。
-🛌 She sleeps on my bed at night.
-夜は私のベッドで寝ます。
-⏰ She wakes me up in the morning.
-朝、私を起こしてくれます。
-❤️ She is a very special cat.
-彼女はとても特別な猫です。
-🐱 Is your cat smart?
-あなたの猫は賢いですか？
-🐈 Can she do tricks?
-彼女は芸ができますか？
-🤚 What does she do when you say "Sit"?
-「お座り」と言うと彼女はどうしますか？
-🤝 Can she shake hands?
-彼女は握手できますか？
-🧶 What does she like playing with?
-彼女は何で遊ぶのが好きですか？
-🏃 What happens when you throw a ball?
-ボールを投げるとどうなりますか？
-🐟 When do you give her a treat?
-いつおやつをあげますか？
-🛌 Where does she sleep?
-彼女はどこで寝ますか？
-⏰ What does she do in the morning?
-彼女は朝何をしますか？
-❤️ Do you like her?
-彼女が好きですか？`
+        title: "7. Hobbies (Gerunds: ~ing)",
+        content: `🎾 My hobby is playing tennis.
+私の趣味はテニスをすることです。
+🏃 I like running in the park.
+私は公園を走るのが好きです。
+🍳 My mother likes cooking.
+母は料理をするのが好きです。
+📖 I enjoy reading books every day.
+私は毎日読書を楽しみます。
+🐟 My father enjoys fishing on weekends.
+父は週末に釣りを楽しみます。
+📺 I like watching movies.
+私は映画を見るのが好きです。
+🎶 Listening to music is fun.
+音楽を聴くことは楽しいです。
+🗣️ Speaking English is interesting.
+英語を話すことは面白いです。
+🎹 My sister is good at playing the piano.
+妹はピアノを弾くのが得意です。
+🛑 I stopped playing the game.
+私はゲームをするのをやめました。
+🎾 What is your hobby?
+趣味は何ですか？
+🏃 Do you like playing sports?
+スポーツをするのは好きですか？
+🍳 Do you like cooking?
+料理をするのは好きですか？
+📖 Do you enjoy reading?
+読書を楽しみますか？
+🐟 What does your father like doing?
+お父さんは何をするのが好きですか？
+📺 Do you like watching TV?
+テレビを見るのは好きですか？
+🎶 Do you like listening to music?
+音楽を聴くのは好きですか？
+🗣️ Is speaking English difficult?
+英語を話すのは難しいですか？
+🎹 Are you good at singing?
+歌うのは得意ですか？
+🛑 What time do you stop studying?
+何時に勉強をやめますか？`
     },
     {
-        title: "34. Visiting the Dentist",
-        content: `🦷 I went to the dentist yesterday.
-昨日、歯医者に行きました。
-😣 I had a toothache.
-歯が痛かったのです。
-🏥 The clinic is near my school.
-クリニックは学校の近くにあります。
-👩‍⚕️ The dentist was a kind woman.
-歯医者さんは親切な女性でした。
-🪑 I sat in a big chair.
-大きな椅子に座りました。
-😮 "Open your mouth," she said.
-「口を開けて」と彼女は言いました。
-🔍 She looked at my teeth carefully.
-彼女は私の歯を注意深く見ました。
-🦠 I had a small cavity.
-小さな虫歯がありました。
-🛠️ She fixed it quickly.
-彼女はすぐにそれを直しました。
-🍬 "Don't eat too much candy," she said.
-「キャンディを食べ過ぎないでね」と彼女は言いました。
-🦷 Where did you go yesterday?
-昨日どこへ行きましたか？
-😣 Why did you go there?
-なぜそこへ行きましたか？
-🏥 Where is the clinic?
-クリニックはどこにありますか？
-👩‍⚕️ Was the dentist scary?
-歯医者さんは怖かったですか？
-🪑 Where did you sit?
-どこに座りましたか？
-😮 What did she say?
-彼女は何と言いましたか？
-🔍 What did she look at?
-彼女は何を見ましたか？
-🦠 Did you have a cavity?
-虫歯がありましたか？
-🛠️ Did she fix it?
-彼女はそれを直しましたか？
-🍬 What must you not eat too much?
-何を食べ過ぎてはいけませんか？`
+        title: "8. Winter Day (Superlatives)",
+        content: `❄️ Today is the coldest day of the year.
+今日は一年で一番寒い日です。
+🏔️ Mt. Fuji is the highest mountain in Japan.
+富士山は日本で一番高い山です。
+⛄ Winter is the best season for skiing.
+冬はスキーに一番良い季節です。
+🕖 I get up the earliest in my family.
+私は家族の中で一番早く起きます。
+🦁 The lion is the strongest animal.
+ライオンは一番強い動物です。
+💙 Blue is the most popular color.
+青は一番人気のある色です。
+🍕 This is the most delicious pizza.
+これは一番おいしいピザです。
+🧠 Science is the most difficult subject for me.
+理科は私にとって一番難しい教科です。
+😊 My mother is the busiest person.
+母は一番忙しい人です。
+📅 December is the last month.
+12月は最後の月です。
+❄️ Do you like cold days?
+寒い日は好きですか？
+🏔️ What is the highest mountain you know?
+知っている中で一番高い山は何ですか？
+⛄ Which season is the best for you?
+どの季節が一番好きですか？
+🕖 Who gets up the earliest in your family?
+家族で誰が一番早く起きますか？
+🦁 What is the strongest animal?
+一番強い動物は何ですか？
+💙 What is the most beautiful flower?
+一番美しい花は何ですか？
+🍕 What is the most delicious food?
+一番おいしい食べ物は何ですか？
+🧠 What is the most difficult subject?
+一番難しい教科は何ですか？
+😊 Who is the busiest in your family?
+家族で誰が一番忙しいですか？
+📅 What is the first month of the year?
+一年の一番初めの月は何ですか？`
     },
     {
-        title: "35. A Snowy Day",
-        content: `❄️ It snowed a lot last night.
-昨夜、雪がたくさん降りました。
-🌨️ Everything was white this morning.
-今朝はすべてが白かったです。
-🏫 School started one hour late.
-学校は1時間遅れて始まりました。
-⛄ I made a snowman before school.
-学校へ行く前に雪だるまを作りました。
-🧣 I wore my boots and scarf.
-ブーツとマフラーを身につけました。
-🚶 Walking was difficult.
-歩くのは難しかったです。
-🧊 The road was slippery.
-道は滑りやすかったです。
-💥 My friend slipped and fell.
-友達が滑って転びました。
-🤝 I helped him stand up.
-私は彼が立つのを手伝いました。
-🥶 It was a very cold day.
-とても寒い日でした。
-❄️ When did it snow?
-いつ雪が降りましたか？
-🌨️ What color was everything?
-すべて何色でしたか？
-🏫 Was school on time?
-学校は時間通りでしたか？
-⛄ What did you make?
-何を作りましたか？
-🧣 What did you wear?
-何を身につけましたか？
-🚶 Was walking easy?
-歩くのは簡単でしたか？
-🧊 Why was the road slippery?
-なぜ道は滑りやすかったのですか？（雪/氷のため）
-💥 What happened to your friend?
-友達に何が起きましたか？
-🤝 What did you do?
-あなたは何をしましたか？
-🥶 Was it warm?
-暖かかったですか？`
+        title: "9. Helping (Give/Show)",
+        content: `🎁 I gave a present to my friend.
+私は友達にプレゼントをあげました。
+💐 My father gave flowers to my mother.
+父は母に花をあげました。
+📖 Please show me your textbook.
+あなたの教科書を私に見せてください。
+🐶 I give food to my dog every day.
+私は毎日犬に餌をあげます。
+📸 I showed my pictures to my teacher.
+私は先生に自分の写真を見せました。
+👵 My grandmother told me a story.
+祖母は私に物語を話してくれました。
+📝 I sent a letter to my cousin.
+いとこに手紙を送りました。
+📧 My friend sent me an email.
+友達が私にメールを送ってくれました。
+🙋 I teach Japanese to my American friend.
+私はアメリカ人の友達に日本語を教えます。
+🥘 My mother made lunch for us.
+母は私たちに昼食を作ってくれました。
+🎁 Did you give a present to anyone recently?
+最近誰かにプレゼントをあげましたか？
+💐 Do you give flowers on Mother's Day?
+母の日に花をあげますか？
+📖 Can you show me your pen?
+ペンを見せてもらえますか？
+🐶 Do you have a pet?
+ペットを飼っていますか？
+📸 Do you like taking pictures?
+写真を撮るのは好きですか？
+👵 Who tells you stories?
+誰があなたに話をしてくれますか？
+📝 Do you write letters often?
+よく手紙を書きますか？
+📧 Do you send emails or messages?
+メールやメッセージを送りますか？
+🙋 Can you teach me math?
+数学を教えてくれますか？
+🥘 Who makes dinner in your house?
+家で誰が夕食を作りますか？`
     },
     {
-        title: "36. The School Trip",
-        content: `🚌 We are going on a school trip next week.
-来週、修学旅行に行きます。
-🏯 We will visit Kyoto and Nara.
-京都と奈良を訪れる予定です。
-🕐 We are going to meet at the station at eight.
-8時に駅で集合する予定です。
-🚅 We will take the bullet train.
-新幹線に乗ります。
-🦌 In Nara, we will see the deer park.
-奈良では、鹿公園を見ます。
-🍘 I want to feed the deer.
-鹿に餌をやりたいです。
-🏯 In Kyoto, we will see old temples.
-京都では、古い寺を見ます。
-🏨 We are going to stay in a hotel.
-ホテルに泊まる予定です。
-🛍️ I will buy souvenirs for my family.
-家族にお土産を買うつもりです。
-😄 I can't wait!
-待ちきれません！
-🚌 When is the school trip?
-修学旅行はいつですか？
-🏯 Where will you visit?
-どこを訪れますか？
-🕐 What time will you meet?
-何時に集合しますか？
-🚅 What train will you take?
-どの電車に乗りますか？
-🦌 What will you see in Nara?
-奈良で何を見ますか？
-🍘 What do you want to do?
-何をしたいですか？
-🏯 What will you see in Kyoto?
-京都で何を見ますか？
-🏨 Where will you stay?
-どこに泊まりますか？
-🛍️ Who will you buy souvenirs for?
-誰にお土産を買いますか？
-😄 Are you happy?
-嬉しいですか？`
+        title: "10. Future Dreams (To be)",
+        content: `💭 I have a dream.
+私には夢があります。
+👨‍⚕️ I want to be a doctor.
+私は医者になりたいです。
+✈️ I want to go to many countries.
+私はたくさんの国に行きたいです。
+🗣️ I want to speak English well.
+英語を上手に話したいです。
+⚾ I want to be a baseball player.
+私は野球選手になりたいです。
+🐕 I want to have a big dog.
+私は大きな犬を飼いたいです。
+🏠 I want to live in a big house.
+大きな家に住みたいです。
+🎹 I want to play the piano better.
+もっと上手にピアノを弾きたいです。
+👨‍🍳 My brother wants to be a cook.
+兄は料理人になりたがっています。
+😊 I hope my dream comes true.
+夢が叶うといいなと思います。
+💭 What is your dream?
+あなたの夢は何ですか？
+👨‍⚕️ What do you want to be?
+何になりたいですか？
+✈️ Which country do you want to go to?
+どの国に行きたいですか？
+🗣️ Do you want to speak English?
+英語を話したいですか？
+⚾ Do you want to be a sports player?
+スポーツ選手になりたいですか？
+🐕 What animal do you want to keep?
+どんな動物を飼いたいですか？
+🏠 Where do you want to live?
+どこに住みたいですか？
+🎹 What instrument do you want to play?
+どの楽器を演奏したいですか？
+👨‍🍳 Does your friend want to be a cook?
+友達は料理人になりたがっていますか？
+😊 Do you study hard for your dream?
+夢のために一生懸命勉強していますか？`
     },
     {
-        title: "37. Watching a Movie",
-        content: `🎬 I watched a movie on Friday night.
-金曜の夜に映画を見ました。
-🏠 I watched it at home with my sister.
-家で妹と見ました。
-🍿 We made popcorn.
-私たちはポップコーンを作りました。
-🦸 It was a movie about a superhero.
-それはスーパーヒーローの映画でした。
-💪 He was very strong and fast.
-彼はとても強くて速かったです。
-😈 He fought a bad guy.
-彼は悪者と戦いました。
-😲 The movie was exciting.
-映画はわくわくしました。
-😊 My sister liked it, too.
-妹もそれを気に入りました。
-🕙 We went to bed at ten.
-私たちは10時に寝ました。
-🛌 I dreamed about flying.
-私は空を飛ぶ夢を見ました。
-🎬 When did you watch a movie?
-いつ映画を見ましたか？
-🏠 Where did you watch it?
-どこで見ましたか？
-🍿 What did you eat?
-何を食べましたか？
-🦸 What was the movie about?
-何についての映画でしたか？
-💪 Was the hero weak?
-ヒーローは弱かったですか？
-😈 Who did he fight?
-彼は誰と戦いましたか？
-😲 Was the movie boring?
-映画は退屈でしたか？
-😊 Did your sister like it?
-妹はそれを気に入りましたか？
-🕙 What time did you sleep?
-何時に寝ましたか？
-🛌 What did you dream about?
-何の夢を見ましたか？`
-    },
-    {
-        title: "38. My Robot",
-        content: `🤖 I have a toy robot.
-私はおもちゃのロボットを持っています。
-🎁 My uncle gave it to me.
-おじさんが私にくれました。
-🎨 It is silver and blue.
-それは銀色と青です。
-🚶 It can walk and talk.
-それは歩いたり話したりできます。
-💡 Its eyes shine when it moves.
-動くとき目が光ります。
-🎮 I use a remote controller.
-私はリモコンを使います。
-👾 I play with it in my room.
-部屋でそれで遊びます。
-🔋 It needs four batteries.
-それは電池が4本必要です。
-🐶 My dog is afraid of the robot.
-私の犬はそのロボットを怖がります。
-😄 It is my favorite toy.
-それは私のお気に入りのおもちゃです。
-🤖 What do you have?
-何を持っていますか？
-🎁 Who gave it to you?
-誰がくれましたか？
-🎨 What color is it?
-何色ですか？
-🚶 What can it do?
-それは何ができますか？
-💡 What happens to its eyes?
-目はどうなりますか？
-🎮 How do you control it?
-どうやって操作しますか？
-👾 Where do you play?
-どこで遊びますか？
-🔋 What does it need?
-何が必要ですか？
-🐶 Does your dog like it?
-犬はそれが好きですか？
-😄 Do you like it?
-あなたはそれが好きですか？`
-    },
-    {
-        title: "39. Planting Flowers",
-        content: `🌷 We planted flowers in the garden.
-庭に花を植えました。
-🚜 First, my father dug the soil.
-まず、父が土を掘りました。
-🌼 We bought seeds at the flower shop.
-花屋で種を買いました。
-🕳️ I put the seeds in the holes.
-私が穴に種を入れました。
-💧 Then, I watered them.
-それから、水をやりました。
-🌞 Flowers need sun and water.
-花には太陽と水が必要です。
-🌱 After two weeks, small green leaves came out.
-2週間後、小さな緑の葉が出てきました。
-😄 I was very happy to see them.
-それらを見てとても嬉しかったです。
-🌸 Now, beautiful flowers are blooming.
-今、美しい花が咲いています。
-🦋 Butterflies come to the garden.
-蝶々が庭にやって来ます。
-🌷 What did you plant?
-何を植えましたか？
-🚜 What did your father do?
-お父さんは何をしましたか？
-🌼 Where did you buy seeds?
-どこで種を買いましたか？
-🕳️ What did you do with the seeds?
-種をどうしましたか？
-💧 What did you do next?
-次に何をしましたか？
-🌞 What do flowers need?
-花には何が必要ですか？
-🌱 When did leaves come out?
-いつ葉が出ましたか？
-😄 How did you feel?
-どう感じましたか？
-🌸 Are flowers blooming now?
-今、花は咲いていますか？
-🦋 What comes to the garden?
-何が庭に来ますか？`
-    },
-    {
-        title: "40. My Brother's Job",
-        content: `👨‍🍳 My brother is a cook.
-兄は料理人です。
-🇮🇹 He works at an Italian restaurant.
-彼はイタリアンレストランで働いています。
-🍝 He makes delicious pasta and pizza.
-彼はおいしいパスタとピザを作ります。
-🔪 He is very good at cutting vegetables.
-彼は野菜を切るのがとても上手です。
-👔 He wears a white uniform and a tall hat.
-彼は白い制服と高い帽子をかぶります。
-🕙 He goes to work at ten in the morning.
-彼は朝10時に仕事に行きます。
-🌙 He comes home late at night.
-彼は夜遅くに帰ってきます。
-😓 He is often tired.
-彼はよく疲れています。
-😊 But he loves his job.
-でも彼は仕事が大好きです。
-🍽️ We go to his restaurant on birthdays.
-誕生日に彼のレストランに行きます。
-👨‍🍳 What is your brother's job?
-お兄さんの仕事は何ですか？
-🇮🇹 Where does he work?
-彼はどこで働いていますか？
-🍝 What does he make?
-彼は何を作りますか？
-🔪 What is he good at?
-彼は何が得意ですか？
-👔 What does he wear?
-彼は何を着ていますか？
-🕙 When does he go to work?
-いつ仕事に行きますか？
-🌙 When does he come home?
-いつ帰ってきますか？
-😓 Is he tired?
-彼は疲れていますか？
-😊 Does he like his job?
-彼は仕事が好きですか？
-🍽️ When do you go to his restaurant?
-いつ彼のレストランに行きますか？`
-    },
-    {
-        title: "41. Fishing",
-        content: `🎣 I like fishing with my grandpa.
-私はおじいちゃんと釣りをするのが好きです。
-🌊 We go to the sea near his house.
-彼の家の近くの海に行きます。
-🌅 We wake up very early.
-とても早く起きます。
-🎣 I have my own fishing rod.
-自分の釣り竿を持っています。
-🐟 Last time, I caught a small fish.
-前回、小さな魚を釣りました。
-🔁 I put it back in the water.
-それを水に戻しました。
-🐙 My grandpa caught an octopus.
-おじいちゃんはタコを釣りました。
-😲 It was moving and scary.
-それは動いていて怖かったです。
-🥣 Grandma cooked it for dinner.
-おばあちゃんが夕食に料理してくれました。
-😋 It was chewy and tasty.
-歯ごたえがあっておいしかったです。
-🎣 Who do you fish with?
-誰と釣りをしますか？
-🌊 Where do you go?
-どこへ行きますか？
-🌅 Do you wake up late?
-遅く起きますか？
-🎣 Do you use your grandpa's rod?
-おじいちゃんの竿を使いますか？
-🐟 What did you catch?
-何を釣りましたか？
-🔁 Did you eat the small fish?
-小さな魚を食べましたか？
-🐙 What did grandpa catch?
-おじいちゃんは何を釣りましたか？
-😲 Was the octopus dead?
-タコは死んでいましたか？
-🥣 Who cooked it?
-誰が料理しましたか？
-😋 How was the taste?
-味はどうでしたか？`
-    },
-    {
-        title: "42. Halloween",
-        content: `🎃 October 31st is Halloween.
-10月31日はハロウィンです。
-👻 Children wear scary costumes.
-子供たちは怖い衣装を着ます。
-🚪 They go to houses and say "Trick or Treat".
-彼らは家々へ行き「トリック・オア・トリート」と言います。
-🍬 People give them candy.
-人々は彼らにキャンディをあげます。
-🏚️ I went to a haunted house party.
-私はお化け屋敷パーティーに行きました。
-🕸️ It was dark and spooky.
-暗くて不気味でした。
-🧙‍♀️ My friend was a witch.
-友達は魔女でした。
-🧟 I was a zombie.
-私はゾンビでした。
-🍏 We played games with apples.
-リンゴを使ったゲームをしました。
-😄 It was a fun night.
-楽しい夜でした。
-🎃 When is Halloween?
-ハロウィンはいつですか？
-👻 What do children wear?
-子供たちは何を着ますか？
-🚪 What do they say?
-彼らは何と言いますか？
-🍬 What do they get?
-彼らは何をもらいますか？
-🏚️ Where did you go?
-どこへ行きましたか？
-🕸️ How was the house?
-家はどうでしたか？
-🧙‍♀️ What was your friend?
-友達は何でしたか？
-🧟 What were you?
-あなたは何でしたか？
-🍏 What did you play with?
-何を使って遊びましたか？
-😄 Was it scary?
-怖かったですか？（答え：楽しかった）`
-    },
-    {
-        title: "43. The Station",
-        content: `🚉 Excuse me, where is the station?
+        title: "11. Directions (Imperative)",
+        content: `🗺️ Excuse me, where is the station?
 すみません、駅はどこですか？
 👉 Go straight down this street.
 この道をまっすぐ行ってください。
 🚦 Turn left at the second traffic light.
 2つ目の信号を左に曲がってください。
-🏪 You will see a convenience store.
-コンビニが見えます。
-🏥 The station is next to the hospital.
-駅は病院の隣です。
+🏥 You will see a hospital on your right.
+右側に病院が見えます。
+🏪 The station is next to the store.
+駅はその店の隣です。
+🚫 Don't turn right.
+右に曲がってはいけません。
 🚶 It takes about ten minutes.
 約10分かかります。
-🚌 You can also take a bus.
+🚌 You can take a bus, too.
 バスに乗ることもできます。
-🚏 The bus stop is over there.
-バス停はあそこです。
 🙏 Thank you very much.
 ありがとうございます。
-😊 You're welcome.
-どういたしまして。
-🚉 What is the person looking for?
-その人は何を探していますか？
-👉 Which way should they go first?
-最初にどちらへ行くべきですか？
-🚦 Where should they turn left?
-どこで左に曲がるべきですか？
-🏪 What will they see?
-何が見えますか？
-🏥 Where is the station?
-駅はどこにありますか？
-🚶 How long does it take?
-どのくらいかかりますか？
-🚌 Is there a bus?
-バスはありますか？
-🚏 Where is the bus stop?
-バス停はどこですか？
-🙏 What did the person say?
-その人は何と言いましたか？
-😊 Is the other person kind?
-もう一人の人は親切ですか？`
+👋 Have a nice day.
+良い一日を。
+🗺️ Do you know where the station is?
+駅がどこにあるか知っていますか？
+👉 Can you go straight?
+まっすぐ行けますか？
+🚦 Can you turn left?
+左に曲がれますか？
+🏥 Is there a hospital near your house?
+家の近くに病院はありますか？
+🏪 What is next to your house?
+家の隣には何がありますか？
+🚫 Do you look right and left before crossing?
+渡る前に右と左を見ますか？
+🚶 How long does it take to school?
+学校までどのくらいかかりますか？
+🚌 Do you take a bus or train?
+バスか電車に乗りますか？
+🙏 Do you say "Thank you"?
+「ありがとう」と言いますか？
+👋 Do you say "Good morning"?
+「おはよう」と言いますか？`
     },
     {
-        title: "44. Making Cookies",
-        content: `🍪 I made cookies for Valentine's Day.
-バレンタインデーにクッキーを作りました。
-🥣 I mixed flour, sugar, and butter.
-小麦粉、砂糖、バターを混ぜました。
-🥚 I added one egg.
-卵を1個加えました。
-🍫 I put chocolate chips in, too.
-チョコチップも入れました。
-🧸 I used bear-shaped cutters.
-クマの形の型を使いました。
-🔥 I baked them in the oven.
-オーブンで焼きました。
-👃 The kitchen smelled sweet.
-キッチンは甘い匂いがしました。
-🛍️ I put them in small bags.
-小さな袋に入れました。
-🎁 I gave them to my friends and father.
-友達と父にあげました。
-😋 They said, "Yummy!"
-彼らは「おいしい！」と言いました。
-🍪 What did you make?
-何を作りましたか？
-🥣 What did you mix?
-何を混ぜましたか？
-🥚 How many eggs did you use?
-卵を何個使いましたか？
-🍫 What else did you put in?
-他に何を入れましたか？
-🧸 What shape were the cookies?
-クッキーはどんな形でしたか？
-🔥 How did you cook them?
-どうやって調理しましたか？
-👃 How was the smell?
-匂いはどうでしたか？
-🛍️ What did you put them in?
-何に入れましたか？
-🎁 Who did you give them to?
-誰にあげましたか？
-😋 Did they like them?
-彼らは気に入りましたか？`
+        title: "12. Telephone (Calling)",
+        content: `📞 Hello, this is Ken speaking.
+もしもし、ケントです。
+🏠 Is Tom home?
+トムは家にいますか？
+🚿 No, he is taking a shower now.
+いいえ、彼は今シャワーを浴びています。
+📝 Can I leave a message?
+伝言をお願いできますか？
+🆗 Sure.
+いいよ。
+🎬 Please tell him about the movie.
+彼に映画について伝えてください。
+🕘 We will meet at nine tomorrow.
+明日9時に会います。
+📱 I will call him back later.
+後でかけ直します。
+👋 Thank you, goodbye.
+ありがとう、さようなら。
+📞 Hello?
+もしもし？
+📞 Do you talk on the phone often?
+よく電話で話しますか？
+🏠 Are you home now?
+今、家にいますか？
+🚿 What are you doing now?
+今、何をしていますか？
+📝 Do you take messages for your family?
+家族のために伝言を受け取りますか？
+🆗 Do you have a smartphone?
+スマホを持っていますか？
+🎬 Do you like watching movies?
+映画を見るのは好きですか？
+🕘 What time will you meet your friend?
+何時に友達と会いますか？
+📱 Who do you call the most?
+誰に一番電話をかけますか？
+👋 Do you say "Goodbye" to your teacher?
+先生に「さようなら」と言いますか？
+📞 Is your phone number easy to remember?
+電話番号は覚えやすいですか？`
     },
     {
-        title: "45. My Town",
-        content: `🏘️ I live in a small town.
-私は小さな町に住んでいます。
-🌳 There are many green trees.
-緑の木がたくさんあります。
-🏞️ A clean river runs through the town.
-きれいな川が町を流れています。
-🎣 People enjoy fishing there.
-人々はそこで釣りを楽しみます。
-📚 We have a new library.
-新しい図書館があります。
-🏫 The school is old but nice.
-学校は古いですが素敵です。
-🚉 The train station is small.
+        title: "13. Cooking (First/Then)",
+        content: `🍛 I made curry rice yesterday.
+昨日カレーライスを作りました。
+🥕 First, I cut the vegetables.
+まず、野菜を切りました。
+🥩 I cut some meat, too.
+肉も切りました。
+🔥 Then, I cooked them in a pot.
+それから、鍋でそれらを調理しました。
+💧 I added water and boiled it.
+水を加えて沸騰させました。
+🍛 I put the curry roux in.
+カレールーを入れました。
+🍚 We ate it with rice.
+ご飯と一緒に食べました。
+😋 It was very spicy but good.
+とても辛かったですが美味しかったです。
+🧼 Finally, I washed the dishes.
+最後に、お皿を洗いました。
+👨‍🍳 Cooking is fun.
+料理は楽しいです。
+🍛 Can you make curry?
+カレーを作れますか？
+🥕 Do you like cutting vegetables?
+野菜を切るのは好きですか？
+🥩 Do you like meat or fish?
+肉と魚、どちらが好きですか？
+🔥 Do you use fire to cook?
+料理に火を使いますか？
+💧 Do you drink water every day?
+毎日水を飲みますか？
+🍛 Do you like spicy food?
+辛い食べ物は好きですか？
+🍚 Do you eat rice for breakfast?
+朝食にご飯を食べますか？
+😋 Was your dinner delicious yesterday?
+昨日の夕食は美味しかったですか？
+🧼 Do you wash the dishes?
+お皿を洗いますか？
+👨‍🍳 Do you help your mother cook?
+お母さんの料理を手伝いますか？`
+    },
+    {
+        title: "14. A Sick Friend (Should)",
+        content: `🤒 My friend Mike is sick.
+友達のマイクは病気です。
+🏫 He was absent from school today.
+彼は今日学校を休みました。
+🏥 He went to the doctor.
+彼は医者に行きました。
+💊 He must take some medicine.
+彼は薬を飲まなければなりません。
+🛏️ He should stay in bed.
+彼はベッドで寝ているべきです。
+📺 He should not watch TV.
+彼はテレビを見るべきではありません。
+🍊 He should eat some fruit.
+彼は果物を食べるべきです。
+🥤 He should drink a lot of water.
+彼は水をたくさん飲むべきです。
+🙏 I hope he gets well soon.
+彼がすぐに良くなるといいです。
+💌 I will write a card for him.
+彼にカードを書くつもりです。
+🤒 Are you sick now?
+今、病気ですか？
+🏫 Were you absent from school recently?
+最近学校を休みましたか？
+🏥 Do you like doctors?
+お医者さんは好きですか？
+💊 Can you take medicine easily?
+薬を簡単に飲めますか？
+🛏️ Do you sleep in a bed?
+ベッドで寝ていますか？
+📺 How long do you watch TV?
+どのくらいテレビを見ますか？
+🍊 Do you like oranges?
+オレンジは好きですか？
+🥤 Do you drink water when you are sick?
+病気の時、水を飲みますか？
+🙏 What do you say to a sick friend?
+病気の友達に何と言いますか？
+💌 Do you write cards on birthdays?
+誕生日にカードを書きますか？`
+    },
+    {
+        title: "15. The Weather (It is...)",
+        content: `☀️ It is sunny today.
+今日は晴れです。
+🌡️ It is very hot.
+とても暑いです。
+☁️ Yesterday it was cloudy.
+昨日は曇りでした。
+☔ It will be rainy tomorrow.
+明日は雨でしょう。
+🌀 A typhoon is coming.
+台風が来ています。
+💨 The wind is very strong.
+風がとても強いです。
+🌂 I need my umbrella.
+傘が必要です。
+🧥 In winter, it is snowy.
+冬には雪が降ります。
+🌈 I saw a rainbow after the rain.
+雨の後に虹を見ました。
+😊 I like sunny days the best.
+私は晴れの日が一番好きです。
+☀️ How is the weather today?
+今日の天気はどうですか？
+🌡️ Is it hot now?
+今、暑いですか？
+☁️ Was it cloudy yesterday?
+昨日は曇りでしたか？
+☔ Do you like rainy days?
+雨の日は好きですか？
+🌀 Are typhoons scary?
+台風は怖いですか？
+💨 Is it windy today?
+今日は風が強いですか？
+🌂 Do you have an umbrella?
+傘を持っていますか？
+🧥 Does it snow in your town?
+あなたの町では雪が降りますか？
+🌈 Have you seen a rainbow?
+虹を見たことがありますか？
+😊 What weather do you like?
+どんな天気が好きですか？`
+    },
+    {
+        title: "16. My Room (Prepositions)",
+        content: `🛏️ This is my room.
+これは私の部屋です。
+📦 There is a box under the bed.
+ベッドの下に箱があります。
+👕 My clothes are in the box.
+私の服はその箱の中にあります。
+📚 There are books on the desk.
+机の上に本があります。
+🎒 My bag is by the desk.
+カバンは机のそばにあります。
+🖼️ There is a picture on the wall.
+壁に絵があります。
+🐈 My cat is sleeping on the chair.
+猫が椅子の上で寝ています。
+🕰️ The clock is above the door.
+時計はドアの上にあります。
+🚪 The desk is near the window.
+机は窓の近くにあります。
+🧹 I clean my room every Sunday.
+私は毎週日曜日に部屋を掃除します。
+🛏️ Do you have your own room?
+自分の部屋を持っていますか？
+📦 What is under your bed?
+ベッドの下に何がありますか？
+👕 Where are your clothes?
+服はどこにありますか？
+📚 Is your desk clean?
+机はきれいですか？
+🎒 Where do you put your bag?
+カバンはどこに置きますか？
+🖼️ Is there a poster on your wall?
+壁にポスターはありますか？
+🐈 Is there a chair in your room?
+部屋に椅子はありますか？
+🕰️ Where is the clock in your classroom?
+教室の時計はどこにありますか？
+🚪 Is your bed near the window?
+ベッドは窓の近くにありますか？
+🧹 When do you clean your room?
+いつ部屋を掃除しますか？`
+    },
+    {
+        title: "17. History Class (Past Tense: Irregular)",
+        content: `🏯 We studied history yesterday.
+昨日、歴史を勉強しました。
+📖 I read a book about samurais.
+侍についての本を読みました。
+🤔 It was very interesting.
+とても面白かったです。
+✍️ I wrote a report about old castles.
+古い城についてのレポートを書きました。
+🗣️ The teacher told us about Kyoto.
+先生は私たちに京都について話しました。
+🚌 We went to the museum last month.
+先月、博物館に行きました。
+👀 We saw old swords there.
+そこで古い刀を見ました。
+📸 I took pictures of them.
+それらの写真を撮りました。
+🧠 I learnt many things.
+たくさんのことを学びました。
+📚 History is my favorite subject.
+歴史は私の一番好きな教科です。
+🏯 Do you like history?
+歴史は好きですか？
+📖 What book did you read recently?
+最近どんな本を読みましたか？
+🤔 Is history interesting for you?
+歴史はあなたにとって面白いですか？
+✍️ Do you like writing reports?
+レポートを書くのは好きですか？
+🗣️ Did your teacher speak English today?
+今日、先生は英語を話しましたか？
+🚌 Have you been to a museum?
+博物館に行ったことがありますか？
+👀 What did you see on your way to school?
+学校へ来る途中で何を見ましたか？
+📸 Do you have a camera?
+カメラを持っていますか？
+🧠 Do you learn English every day?
+毎日英語を学びますか？
+📚 What is your favorite subject?
+一番好きな教科は何ですか？`
+    },
+    {
+        title: "18. Music Concert (Future: Will)",
+        content: `🎻 I will go to a concert next Sunday.
+次の日曜日、コンサートに行きます。
+🎫 I will buy the ticket tomorrow.
+明日チケットを買います。
+👗 I will wear my nice dress.
+素敵なドレスを着ていきます。
+🎼 My sister will play the violin.
+妹がバイオリンを弾きます。
+👪 My parents will come, too.
+両親も来ます。
+🎹 We will listen to piano music.
+私たちはピアノの音楽を聴きます。
+👏 We will clap our hands.
+私たちは手をたたきます。
+💐 I will give flowers to my sister.
+妹に花をあげます。
+🍽️ We will eat dinner at a restaurant.
+レストランで夕食を食べます。
+😊 It will be a great day.
+素晴らしい一日になるでしょう。
+🎻 Do you like music?
+音楽は好きですか？
+🎫 Do you buy tickets for concerts?
+コンサートのチケットを買いますか？
+👗 What will you wear tomorrow?
+明日は何を着ますか？
+🎼 Can you play the violin?
+バイオリンを弾けますか？
+👪 Will your parents be home tonight?
+今夜、両親は家にいますか？
+🎹 Do you like piano music?
+ピアノの音楽は好きですか？
+👏 Can you clap your hands?
+手をたたけますか？
+💐 Who will you give flowers to?
+誰に花をあげますか？
+🍽️ Will you eat at a restaurant next week?
+来週レストランで食事をしますか？
+😊 Will it be sunny tomorrow?
+明日は晴れるでしょうか？`
+    },
+    {
+        title: "19. Pets (Comparisons/Description)",
+        content: `🐶 I have a dog named Pochi.
+ポチという名前の犬を飼っています。
+🐕 He is bigger than a cat.
+彼は猫より大きいです。
+🐈 My friend has a small cat.
+友達は小さな猫を飼っています。
+🏃 My dog runs very fast.
+私の犬はとても速く走ります。
+🐾 His tail is long.
+彼のしっぽは長いです。
+👂 His ears are big.
+彼の耳は大きいです。
+🦴 He likes bones and meat.
+彼は骨と肉が好きです。
+🏞️ We walk in the park every morning.
+毎朝公園を散歩します。
+😊 He is very cute.
+彼はとてもかわいいです。
+👪 He is a member of my family.
+彼は家族の一員です。
+🐶 Do you have a dog?
+犬を飼っていますか？
+🐕 Which is bigger, a dog or a hamster?
+犬とハムスター、どちらが大きいですか？
+🐈 Do you like cats?
+猫は好きですか？
+🏃 Does your pet run fast?
+あなたのペットは速く走りますか？
+🐾 Is a rabbit's tail long?
+ウサギのしっぽは長いですか？
+👂 Are an elephant's ears small?
+ゾウの耳は小さいですか？
+🦴 What does a dog like?
+犬は何が好きですか？
+🏞️ Do you walk every day?
+毎日歩きますか？
+😊 Is a panda cute?
+パンダはかわいいですか？
+👪 How many people are in your family?
+家族は何人ですか？`
+    },
+    {
+        title: "20. Festivals (There was)",
+        content: `🏮 There was a summer festival yesterday.
+昨日、夏祭りがありました。
+👘 Many people wore yukata.
+たくさんの人が浴衣を着ていました。
+🥁 There were big drums.
+大きな太鼓がありました。
+🕺 People danced in a circle.
+人々は輪になって踊りました。
+🍢 There were many food stalls.
+たくさんの屋台がありました。
+🐙 I ate takoyaki.
+たこ焼きを食べました。
+🍧 I also ate shaved ice.
+かき氷も食べました。
+🎆 There were beautiful fireworks at night.
+夜には美しい花火がありました。
+😲 They were very loud.
+それらはとても大きな音でした。
+😊 I enjoyed the festival.
+お祭りを楽しみました。
+🏮 Do you like festivals?
+お祭りは好きですか？
+👘 Do you have a yukata?
+浴衣を持っていますか？
+🥁 Can you play the drums?
+太鼓を叩けますか？
+🕺 Do you like dancing?
+踊るのは好きですか？
+🍢 Do you like festival food?
+お祭りの食べ物は好きですか？
+🐙 Can you eat octopus?
+タコを食べられますか？
+🍧 Do you like ice cream or shaved ice?
+アイスクリームとかき氷、どちらが好きですか？
+🎆 Did you see fireworks this year?
+今年、花火を見ましたか？
+😲 Are fireworks loud?
+花火は音が大きいですか？
+😊 Did you enjoy your weekend?
+週末を楽しみましたか？`
+    },
+    {
+        title: "21. Before School (Routine)",
+        content: `⏰ I get up at six thirty.
+私は6時半に起きます。
+🚿 I wash my face and brush my teeth.
+顔を洗って歯を磨きます。
+👕 I change into my school uniform.
+制服に着替えます。
+🍞 I eat toast and drink milk.
+トーストを食べて牛乳を飲みます。
+📰 My father reads the newspaper.
+父は新聞を読みます。
+🎒 I put my books in my bag.
+カバンに本を入れます。
+👋 I say "I'm leaving" to my mother.
+母に「行ってきます」と言います。
+🚶 I walk to school with my friend.
+友達と歩いて学校へ行きます。
+🏫 We arrive at school at eight fifteen.
+8時15分に学校に着きます。
+🧹 We clean the classroom before class.
+授業の前に教室を掃除します。
+⏰ What time do you get up?
+何時に起きますか？
+🚿 Do you wash your face in the morning?
+朝、顔を洗いますか？
+👕 Do you wear a uniform?
+制服を着ていますか？
+🍞 What do you eat for breakfast?
+朝食に何を食べますか？
+📰 Does your father read the newspaper?
+お父さんは新聞を読みますか？
+🎒 Is your bag heavy?
+カバンは重いですか？
+👋 What do you say when you leave home?
+家を出る時、何と言いますか？
+🚶 How do you go to school?
+どうやって学校に行きますか？
+🏫 What time does your school start?
+学校は何時に始まりますか？
+🧹 Do you clean your classroom?
+教室を掃除しますか？`
+    },
+    {
+        title: "22. The Zoo (Past Tense)",
+        content: `🦁 I went to the zoo with my class.
+クラスのみんなと動物園に行きました。
+🦒 I saw a tall giraffe.
+背の高いキリンを見ました。
+🐘 The elephant had a long nose.
+ゾウは長い鼻をしていました。
+🐼 The pandas were eating bamboo.
+パンダは笹を食べていました。
+🐒 The monkeys were jumping.
+サルたちはジャンプしていました。
+🐨 The koala was sleeping on a tree.
+コアラは木の上で寝ていました。
+🍱 We ate lunch near the lions.
+ライオンの近くで昼食を食べました。
+🐧 The penguins were swimming.
+ペンギンたちは泳いでいました。
+📸 I took many photos of animals.
+動物の写真をたくさん撮りました。
+😊 Animals are very interesting.
+動物はとても面白いです。
+🦁 Do you like zoos?
+動物園は好きですか？
+🦒 Have you seen a giraffe?
+キリンを見たことがありますか？
+🐘 Is an elephant big?
+ゾウは大きいですか？
+🐼 Are pandas popular?
+パンダは人気がありますか？
+🐒 Do you like monkeys?
+サルは好きですか？
+🐨 Do koalas sleep a lot?
+コアラはたくさん寝ますか？
+🍱 Where do you want to eat lunch?
+どこで昼食を食べたいですか？
+🐧 Can penguins fly?
+ペンギンは飛べますか？
+📸 Do you take photos of your pet?
+ペットの写真を撮りますか？
+😊 What is your favorite animal?
+一番好きな動物は何ですか？`
+    },
+    {
+        title: "23. New Bike (Adjectives)",
+        content: `🚲 I have a new bike.
+私は新しい自転車を持っています。
+🔵 It is blue and silver.
+それは青と銀色です。
+✨ It is very shiny.
+とてもピカピカです。
+💨 It is fast and light.
+それは速くて軽いです。
+🛑 It has good brakes.
+良いブレーキがついています。
+🔔 The bell has a nice sound.
+ベルはいい音がします。
+🧺 I put my bag in the basket.
+カゴにカバンを入れます。
+🚵 I ride it carefully.
+私は注意深く乗ります。
+🏪 I ride it to the convenience store.
+コンビニまでそれに乗って行きます。
+😊 I like riding my bike.
+自転車に乗るのが好きです。
+🚲 Do you have a bike?
+自転車を持っていますか？
+🔵 What color is your bike?
+あなたの自転車は何色ですか？
+✨ Is your bike new or old?
+あなたの自転車は新しいですか、古いですか？
+💨 Can you ride fast?
+速く乗れますか？
+🛑 Do you stop at red lights?
+赤信号で止まりますか？
+🔔 Do you use the bell?
+ベルを使いますか？
+🧺 What do you put in the basket?
+カゴに何を入れますか？
+🚵 Are you careful when you ride?
+乗る時、気をつけていますか？
+🏪 Do you go to the convenience store?
+コンビニに行きますか？
+😊 Is riding a bike fun?
+自転車に乗るのは楽しいですか？`
+    },
+    {
+        title: "24. Birthday Party (Future)",
+        content: `🎂 Tomorrow is my birthday.
+明日は私の誕生日です。
+🎉 I will have a party at home.
+家でパーティーをします。
+🥘 My mother will cook special food.
+母が特別な料理を作ります。
+🎁 My friends will give me presents.
+友達が私にプレゼントをくれます。
+🕯️ We will light candles on the cake.
+ケーキのろうそくに火をつけます。
+🎶 We will sing "Happy Birthday".
+「ハッピーバースデー」を歌います。
+🍰 We will eat strawberry cake.
+イチゴのケーキを食べます。
+🎮 We will play games together.
+一緒にゲームをします。
+📸 My father will take pictures.
+父が写真を撮ります。
+😊 I am excited.
+私はワクワクしています。
+🎂 When is your birthday?
+誕生日はいつですか？
+🎉 Do you have birthday parties?
+誕生日パーティーをしますか？
+🥘 What food do you like for parties?
+パーティーにはどんな料理が好きですか？
+🎁 Do you like giving presents?
+プレゼントをあげるのは好きですか？
+🕯️ How old are you?
+何歳ですか？
+🎶 Can you sing "Happy Birthday"?
+「ハッピーバースデー」を歌えますか？
+🍰 What cake do you like?
+どんなケーキが好きですか？
+🎮 What games do you play with friends?
+友達とどんなゲームをしますか？
+📸 Who takes pictures in your family?
+家族で誰が写真を撮りますか？
+😊 Are you excited for your next birthday?
+次の誕生日は楽しみですか？`
+    },
+    {
+        title: "25. My Town (There is)",
+        content: `🏙️ I live in a quiet town.
+私は静かな町に住んでいます。
+🏞️ There is a clean river.
+きれいな川があります。
+🌳 There are many parks.
+たくさんの公園があります。
+⛩️ There is an old shrine.
+古い神社があります。
+🚉 The station is small.
 駅は小さいです。
-🌸 In spring, many people visit to see flowers.
-春には、多くの人が花を見に訪れます。
-👋 Everyone is friendly here.
-ここのみんなは親切です。
+🏥 There is a big hospital near the station.
+駅の近くに大きな病院があります。
+🍞 There is a famous bakery.
+有名なパン屋があります。
+🏫 There are three schools in my town.
+町には3つの学校があります。
+🌸 In spring, there are many cherry blossoms.
+春には、たくさんの桜があります。
 ❤️ I love my town.
 私は自分の町が大好きです。
-🏘️ Do you live in a big city?
-大都市に住んでいますか？
-🌳 Are there trees?
-木はありますか？
-🏞️ Is the river dirty?
-川は汚いですか？
-🎣 What do people do at the river?
-人々は川で何をしますか？
-📚 Is the library old?
-図書館は古いですか？
-🏫 How is the school?
-学校はどうですか？
-🚉 Is the station big?
-駅は大きいですか？
-🌸 When do people visit?
-人々はいつ訪れますか？
-👋 Are people friendly?
-人々は親切ですか？
+🏙️ Do you live in a city or a town?
+都会に住んでいますか、それとも町ですか？
+🏞️ Is there a river near your house?
+家の近くに川はありますか？
+🌳 Are there parks in your town?
+町に公園はありますか？
+⛩️ Do you go to a shrine on New Year's Day?
+元日に神社に行きますか？
+🚉 Is the station big or small?
+駅は大きいですか、小さいですか？
+🏥 Where is the hospital?
+病院はどこにありますか？
+🍞 Do you like bread?
+パンは好きですか？
+🏫 How many schools are there?
+学校はいくつありますか？
+🌸 Do you like cherry blossoms?
+桜は好きですか？
 ❤️ Do you like your town?
 自分の町が好きですか？`
     },
     {
-        title: "46. English Speech Contest",
-        content: `🎤 I took part in an English speech contest.
-英語のスピーチコンテストに参加しました。
-📝 I wrote a speech about "My Hero".
-「私のヒーロー」についてスピーチを書きました。
-👩‍🏫 My teacher checked my English.
-先生が私の英語をチェックしました。
-🗣️ I practiced speaking every day.
-毎日話す練習をしました。
-😵 On the day, I was very nervous.
-当日はとても緊張しました。
-👀 Many people were watching me.
-たくさんの人が私を見ていました。
-🎤 I spoke in a loud voice.
-私は大きな声で話しました。
-😌 I didn't forget my words.
-言葉を忘れませんでした。
-🥈 I won second prize.
-2等賞を取りました。
-😊 I was very happy.
-とても嬉しかったです。
-🎤 What did you take part in?
-何に参加しましたか？
-📝 What did you write about?
-何について書きましたか？
-👩‍🏫 Who helped you?
-誰が助けてくれましたか？
-🗣️ Did you practice?
-練習しましたか？
-😵 How did you feel?
-どう感じましたか？
-👀 Were there many people?
-たくさんの人がいましたか？
-🎤 How did you speak?
-どうやって話しましたか？
-😌 Did you make a mistake?
-間違えましたか？
-🥈 Did you win?
-勝ちましたか？
-😊 Was it a good experience?
-良い経験でしたか？`
+        title: "26. English Class (Classroom English)",
+        content: `🏫 I have English class on Tuesday.
+火曜日に英語の授業があります。
+👩‍🏫 Ms. Smith is our teacher.
+スミス先生が私たちの先生です。
+🗣️ She speaks English very fast.
+彼女は英語をとても速く話します。
+📖 She says, "Open your books."
+彼女は「本を開いて」と言います。
+👂 We listen to her carefully.
+私たちは彼女の言うことを注意深く聞きます。
+📝 We write sentences in our notebooks.
+ノートに文を書きます。
+🙋 I raise my hand to answer.
+答えるために手を挙げます。
+❓ I ask questions in English.
+英語で質問します。
+🤝 We practice in pairs.
+ペアで練習します。
+😊 English is fun but hard.
+英語は楽しいですが難しいです。
+🏫 Do you like English class?
+英語の授業は好きですか？
+👩‍🏫 Who is your English teacher?
+英語の先生は誰ですか？
+🗣️ Can you speak English?
+英語を話せますか？
+📖 Do you bring your textbook every day?
+毎日教科書を持ってきますか？
+👂 Do you listen to English music?
+英語の音楽を聴きますか？
+📝 Do you have a notebook?
+ノートを持っていますか？
+🙋 Do you raise your hand in class?
+授業中に手を挙げますか？
+❓ Do you ask questions?
+質問をしますか？
+🤝 Do you practice with your friends?
+友達と練習しますか？
+😊 Is English hard for you?
+英語はあなたにとって難しいですか？`
     },
     {
-        title: "47. Christmas Morning",
-        content: `🎄 It was Christmas morning.
-クリスマスの朝でした。
-🛌 I woke up at six o'clock.
-私は6時に起きました。
-🧦 I looked at my stocking.
-靴下を見ました。
-🎁 It was full of candies.
-キャンディでいっぱいでした。
-🌲 There was a big box under the tree.
-木の下に大きな箱がありました。
-🏷️ It had my name on it.
-私の名前が書いてありました。
-📦 I opened it quickly.
-急いで開けました。
-🚲 It was the red bike I wanted!
-欲しかった赤い自転車でした！
-😄 I shouted, "Thank you, Santa!"
-「サンタさんありがとう！」と叫びました。
-🥞 Then I ate pancakes for breakfast.
-それから朝食にパンケーキを食べました。
-🎄 What morning was it?
-何の朝でしたか？
-🛌 What time did you wake up?
-何時に起きましたか？
-🧦 What did you look at?
-何を見ましたか？
-🎁 What was in the stocking?
-靴下の中に何が入っていましたか？
-🌲 Where was the box?
-箱はどこにありましたか？
-🏷️ Whose name was on it?
-誰の名前がありましたか？
-📦 Did you open it slowly?
-ゆっくり開けましたか？
-🚲 What was inside?
-中に何がありましたか？
-😄 Who did you thank?
-誰に感謝しましたか？
-🥞 What did you eat?
-何を食べましたか？`
+        title: "27. Doctor (Health)",
+        content: `😷 I have a cold.
+風邪をひいています。
+🌡️ I have a fever, too.
+熱もあります。
+🏥 I went to the clinic yesterday.
+昨日クリニックに行きました。
+👨‍⚕️ The doctor was kind.
+医者は親切でした。
+🩺 He listened to my chest.
+彼は私の胸の音を聴きました。
+😮 He said, "Open your mouth."
+彼は「口を開けて」と言いました。
+💊 He gave me some medicine.
+彼は私に薬をくれました。
+🏠 I must sleep at home.
+家で寝なければなりません。
+🥣 I ate hot soup.
+温かいスープを食べました。
+💪 I want to get well soon.
+早く元気になりたいです。
+😷 Do you catch colds often?
+よく風邪をひきますか？
+🌡️ What do you do when you have a fever?
+熱がある時どうしますか？
+🏥 Is there a clinic near your house?
+家の近くにクリニックはありますか？
+👨‍⚕️ Do you want to be a doctor?
+医者になりたいですか？
+🩺 Have you seen a stethoscope?
+聴診器を見たことがありますか？
+😮 Can you open your mouth wide?
+口を大きく開けられますか？
+💊 Do you take medicine with water?
+水で薬を飲みますか？
+🏠 Do you stay home when you are sick?
+病気の時は家にいますか？
+🥣 Do you like soup?
+スープは好きですか？
+💪 Are you healthy now?
+今、健康ですか？`
     },
     {
-        title: "48. My Dream",
-        content: `💭 I have a dream for the future.
-私には将来の夢があります。
-👩‍⚕️ I want to be a doctor.
-私は医者になりたいです。
-🏥 I want to work in a big hospital.
-大きな病院で働きたいです。
-💊 I want to help sick people.
-病気の人を助けたいです。
-📚 To be a doctor, I must study hard.
-医者になるために、一生懸命勉強しなければなりません。
-🔬 I like science and math.
-私は理科と数学が好きです。
-🇺🇸 I also want to study English.
-英語も勉強したいです。
-✈️ Maybe I can go to other countries.
-たぶん他の国へ行けるでしょう。
-😊 I will do my best.
-ベストを尽くします。
-👨‍👩‍👧 My parents support my dream.
-両親は私の夢を応援してくれています。
-💭 Do you have a dream?
-夢はありますか？
-👩‍⚕️ What do you want to be?
-何になりたいですか？
-🏥 Where do you want to work?
-どこで働きたいですか？
-💊 Who do you want to help?
-誰を助けたいですか？
-📚 What must you do?
-何をしなければなりませんか？
-🔬 What subjects do you like?
-どの教科が好きですか？
-🇺🇸 Do you want to study English?
-英語を勉強したいですか？
-✈️ Where do you want to go?
-どこへ行きたいですか？
-😊 Will you do your best?
-ベストを尽くしますか？
-👨‍👩‍👧 Who supports you?
-誰があなたを応援していますか？`
+        title: "28. Library (Rules/Can)",
+        content: `📚 I can borrow books from the library.
+図書館から本を借りることができます。
+💳 I have a library card.
+図書カードを持っています。
+📖 I can read many stories.
+たくさんの物語を読むことができます。
+🤫 We cannot talk loudly.
+大声で話すことはできません。
+🏃 We cannot run inside.
+中で走ることはできません。
+💻 We can use the computer to search.
+調べるためにコンピュータを使うことができます。
+📅 I can keep the books for two weeks.
+2週間本を持っていることができます。
+🔙 I must return them by the due date.
+期限までに返さなければなりません。
+👩‍💼 The librarian is helpful.
+司書さんは助けになります。
+😊 I go there every Saturday.
+毎週土曜日にそこへ行きます。
+📚 Do you go to the library?
+図書館へ行きますか？
+💳 Do you have a card?
+カードを持っていますか？
+📖 What books can you read?
+どんな本が読めますか？
+🤫 Can you talk in the library?
+図書館で話せますか？
+🏃 Can you run in the library?
+図書館で走れますか？
+💻 Can you use a computer?
+コンピュータを使えますか？
+📅 How long can you borrow books?
+どのくらい本を借りられますか？
+🔙 Do you return books on time?
+時間通りに本を返しますか？
+👩‍💼 Is the librarian kind?
+司書さんは親切ですか？
+😊 When do you go to the library?
+いつ図書館に行きますか？`
+    },
+    {
+        title: "29. My Cat (Description)",
+        content: `🐈 I have a cat named Tama.
+タマという名前の猫を飼っています。
+⚪ She is white and soft.
+彼女は白くて柔らかいです。
+💤 She sleeps on my bed.
+彼女は私のベッドで寝ます。
+🐟 She likes eating fish.
+彼女は魚を食べるのが好きです。
+🧶 She plays with a ball.
+彼女はボールで遊びます。
+🧗 She can climb trees.
+彼女は木に登ることができます。
+🐭 She can catch mice.
+彼女はネズミを捕まえることができます。
+👀 Her eyes are green.
+彼女の目は緑色です。
+🔔 She has a small bell.
+彼女は小さな鈴をつけています。
+❤️ I love her very much.
+私は彼女が大好きです。
+🐈 Do you like cats?
+猫は好きですか？
+⚪ What color is a white cat?
+白い猫は何色ですか？
+💤 Where do you sleep?
+どこで寝ますか？
+🐟 Do cats like fish?
+猫は魚が好きですか？
+🧶 What do cats play with?
+猫は何で遊びますか？
+🧗 Can you climb trees?
+木に登れますか？
+🐭 Are you afraid of mice?
+ネズミは怖いですか？
+👀 What color are your eyes?
+あなたの目は何色ですか？
+🔔 Do you have a bell on your bag?
+カバンに鈴をつけていますか？
+❤️ Do you love animals?
+動物は好きですか？`
+    },
+    {
+        title: "30. Restaurant (Ordering)",
+        content: `🍽️ I went to a restaurant for lunch.
+昼食にレストランへ行きました。
+👨‍🍳 The waiter brought the menu.
+ウェイターがメニューを持ってきました。
+📖 I looked at the menu.
+私はメニューを見ました。
+🍝 I ordered spaghetti.
+スパゲッティを注文しました。
+🥗 My mother ordered a salad.
+母はサラダを注文しました。
+🍹 I also wanted orange juice.
+オレンジジュースも欲しかったです。
+😋 The food was delicious.
+食べ物はおいしかったです。
+🍰 We ate cake for dessert.
+デザートにケーキを食べました。
+💳 My father paid the money.
+父がお金を払いました。
+🙏 We said "Gochisosama".
+「ごちそうさま」と言いました。
+🍽️ Do you like restaurants?
+レストランは好きですか？
+👨‍🍳 Do you want to be a waiter?
+ウェイターになりたいですか？
+📖 Is it easy to read a menu?
+メニューを読むのは簡単ですか？
+🍝 Do you like spaghetti?
+スパゲッティは好きですか？
+🥗 Do you eat salad?
+サラダを食べますか？
+🍹 What juice do you like?
+何のジュースが好きですか？
+😋 What is delicious for you?
+あなたにとって何がおいしいですか？
+🍰 Do you eat dessert?
+デザートを食べますか？
+💳 Do you pay for your lunch?
+自分の昼食代を払いますか？
+🙏 What do you say after eating?
+食べた後、何と言いますか？`
+    },
+    {
+        title: "31. Cleaning Day (Must/Have to)",
+        content: `🧹 Today is cleaning day.
+今日は掃除の日です。
+🏠 I have to clean my room.
+自分の部屋を掃除しなければなりません。
+🗑️ I must throw away trash.
+ゴミを捨てなければなりません。
+👖 I have to pick up my clothes.
+服を拾わなければなりません。
+🪟 I must wipe the windows.
+窓を拭かなければなりません。
+🧹 I use a vacuum cleaner.
+掃除機を使います。
+✨ My room becomes clean.
+部屋がきれいになります。
+🧼 I also help clean the bathroom.
+お風呂掃除も手伝います。
+😫 It is hard work.
+大変な仕事です。
+😊 But I feel good.
+でもいい気分です。
+🧹 Do you clean your room?
+部屋を掃除しますか？
+🏠 What do you have to do today?
+今日何をしなければなりませんか？
+🗑️ Do you throw away trash?
+ゴミを捨てますか？
+👖 Where do you put your clothes?
+服をどこに置きますか？
+🪟 Are the windows clean?
+窓はきれいですか？
+🧹 Do you know how to use a vacuum?
+掃除機の使い方を知っていますか？
+✨ Is your room clean now?
+今、部屋はきれいですか？
+🧼 Do you clean the bathroom?
+お風呂を掃除しますか？
+😫 Is cleaning hard for you?
+掃除はあなたにとって大変ですか？
+😊 Do you feel good after cleaning?
+掃除の後はいい気分ですか？`
+    },
+    {
+        title: "32. Train Trip (Transportation)",
+        content: `🚆 We went to Tokyo by train.
+電車で東京に行きました。
+🎫 We bought tickets at the station.
+駅で切符を買いました。
+🛤️ The train was very fast.
+電車はとても速かったです。
+💺 We sat in comfortable seats.
+快適な席に座りました。
+🍱 We ate station bentos.
+駅弁を食べました。
+富士山 We saw Mt. Fuji from the window.
+窓から富士山が見えました。
+😴 I slept for a little while.
+少しの間眠りました。
+🚉 We arrived at Tokyo Station.
+東京駅に着きました。
+人 There were many people.
+たくさんの人がいました。
+👜 We enjoyed shopping there.
+そこで買い物を楽しみました。
+🚆 Do you like trains?
+電車は好きですか？
+🎫 Do you buy tickets or use a card?
+切符を買いますか、それともカードを使いますか？
+🛤️ Is the Shinkansen fast?
+新幹線は速いですか？
+💺 Do you like sitting by the window?
+窓際に座るのが好きですか？
+🍱 Do you eat on the train?
+電車の中で食べますか？
+富士山 Have you seen Mt. Fuji?
+富士山を見たことがありますか？
+😴 Do you sleep on the train?
+電車の中で寝ますか？
+🚉 Which station do you use?
+どの駅を使いますか？
+人 Are there many people in Tokyo?
+東京にはたくさんの人がいますか？
+👜 Do you like shopping?
+買い物は好きですか？`
+    },
+    {
+        title: "33. My Father's Job (Third Person)",
+        content: `👨‍💼 My father works in an office.
+父はオフィスで働いています。
+💻 He uses a computer every day.
+彼は毎日コンピュータを使います。
+📧 He writes many emails.
+彼はたくさんのメールを書きます。
+📞 He talks on the phone often.
+彼はよく電話で話します。
+👔 He wears a suit and tie.
+彼はスーツとネクタイを着用します。
+🕗 He goes to work at eight.
+彼は8時に仕事に行きます。
+🚗 He drives his car to the office.
+彼は車を運転してオフィスに行きます。
+🏠 He comes home at seven.
+彼は7時に帰宅します。
+🛁 He takes a bath after dinner.
+彼は夕食後にお風呂に入ります。
+😴 He is tired on Friday nights.
+彼は金曜の夜は疲れています。
+👨‍💼 What does your father do?
+お父さんは何をしていますか？
+💻 Can you use a computer?
+コンピュータを使えますか？
+📧 Do you write emails?
+メールを書きますか？
+📞 Do you talk to your father?
+お父さんと話しますか？
+👔 Does your father wear a suit?
+お父さんはスーツを着ますか？
+🕗 What time does he go to work?
+彼は何時に仕事に行きますか？
+🚗 Does he drive a car?
+彼は車を運転しますか？
+🏠 What time does he come home?
+彼は何時に帰ってきますか？
+🛁 Does he take a bath?
+彼はお風呂に入りますか？
+😴 Is he tired?
+彼は疲れていますか？`
+    },
+    {
+        title: "34. Halloween (Special Days)",
+        content: `🎃 October 31st is Halloween.
+10月31日はハロウィンです。
+👻 Children wear scary costumes.
+子供たちは怖い衣装を着ます。
+🧙‍♀️ Some girls dress as witches.
+魔女の格好をする女の子もいます。
+🧛‍♂️ Some boys dress as vampires.
+吸血鬼の格好をする男の子もいます。
+🍬 They say "Trick or Treat".
+彼らは「トリック・オア・トリート」と言います。
+🍭 Adults give them candy.
+大人は彼らにキャンディをあげます。
+🏚️ We decorate the house.
+家を飾り付けます。
+🎃 We make jack-o'-lanterns with pumpkins.
+カボチャでジャック・オ・ランタンを作ります。
+🎉 We have a party at school.
+学校でパーティーをします。
+😄 It is a fun festival.
+楽しいお祭りです。
+🎃 When is Halloween?
+ハロウィンはいつですか？
+👻 Do you wear a costume?
+衣装を着ますか？
+🧙‍♀️ Do you like witches?
+魔女は好きですか？
+🧛‍♂️ Are vampires scary?
+吸血鬼は怖いですか？
+🍬 Do you like candy?
+キャンディは好きですか？
+🍭 Do you say "Trick or Treat"?
+「トリック・オア・トリート」と言いますか？
+🏚️ Do you decorate your room?
+部屋を飾り付けますか？
+🎃 Do you like pumpkins?
+カボチャは好きですか？
+🎉 Do you have school parties?
+学校のパーティーはありますか？
+😄 Is Halloween fun?
+ハロウィンは楽しいですか？`
+    },
+    {
+        title: "35. Sports Day (Past Tense)",
+        content: `🏃 We had Sports Day last month.
+先月、運動会がありました。
+👟 I ran the 100-meter race.
+100メートル走を走りました。
+💨 I ran very fast.
+とても速く走りました。
+🥇 I got first place.
+1位になりました。
+💃 We danced with everyone.
+みんなと踊りました。
+🍱 My mother made a special bento.
+母が特別なお弁当を作ってくれました。
+🍙 I ate three rice balls.
+おにぎりを3つ食べました。
+📣 My parents cheered for me.
+両親が私を応援してくれました。
+🏆 Our team won the trophy.
+私たちのチームがトロフィーを取りました。
+😊 I was happy but tired.
+嬉しかったですが疲れました。
+🏃 Do you like Sports Day?
+運動会は好きですか？
+👟 Can you run fast?
+速く走れますか？
+💨 Do you like running?
+走るのは好きですか？
+🥇 Do you want to be first place?
+1位になりたいですか？
+💃 Do you like dancing?
+踊るのは好きですか？
+🍱 Do you like bentos?
+お弁当は好きですか？
+🍙 How many rice balls can you eat?
+おにぎりを何個食べられますか？
+📣 Do your parents cheer for you?
+両親はあなたを応援してくれますか？
+🏆 Have you won a trophy?
+トロフィーを取ったことがありますか？
+😊 Are you tired after sports?
+スポーツの後は疲れますか？`
+    },
+    {
+        title: "36. Playing Games (Gerunds)",
+        content: `🎮 I like playing video games.
+私はテレビゲームをするのが好きです。
+🕹️ I play with my brother.
+兄と一緒に遊びます。
+👾 We enjoy fighting monsters.
+私たちはモンスターと戦うのを楽しみます。
+⏳ We play for one hour.
+1時間遊びます。
+🚫 My mother says, "Stop playing."
+母は「遊ぶのをやめなさい」と言います。
+👀 Playing too much is bad for eyes.
+遊びすぎは目に悪いです。
+🌳 We also like playing outside.
+外で遊ぶのも好きです。
+⚽ Playing soccer is fun, too.
+サッカーをするのも楽しいです。
+🃏 Sometimes we play cards.
+時々トランプをします。
+😊 Playing with friends is the best.
+友達と遊ぶのが一番です。
+🎮 Do you play video games?
+テレビゲームをしますか？
+🕹️ Who do you play with?
+誰と遊びますか？
+👾 Do you like fighting games?
+格闘ゲームは好きですか？
+⏳ How long do you play?
+どのくらい遊びますか？
+🚫 Does your mother get angry?
+お母さんは怒りますか？
+👀 Are your eyes good?
+目はいいですか？
+🌳 Do you play outside?
+外で遊びますか？
+⚽ Is soccer fun?
+サッカーは楽しいですか？
+🃏 Do you play cards?
+トランプをしますか？
+😊 Is playing alone fun?
+一人で遊ぶのは楽しいですか？`
+    },
+    {
+        title: "37. My Aunt (Relative/Family)",
+        content: `👩 My aunt lives in Canada.
+私のおばさんはカナダに住んでいます。
+🇨🇦 She is my father's sister.
+彼女は父の妹です。
+📧 She sends me emails in English.
+彼女は英語でメールを送ってくれます。
+🎁 She sent me a doll last year.
+去年、人形を送ってくれました。
+✈️ She visits us in summer.
+彼女は夏に私たちを訪ねてきます。
+🗣️ She speaks English and Japanese.
+彼女は英語と日本語を話します。
+🍪 She makes good cookies.
+彼女は美味しいクッキーを作ります。
+💁‍♀️ She is very kind and funny.
+彼女はとても親切で面白いです。
+🗺️ I want to go to Canada someday.
+いつかカナダに行きたいです。
+🛫 I will visit her next year.
+来年彼女を訪ねるつもりです。
+👩 Do you have an aunt?
+おばさんはいますか？
+🇨🇦 Where does she live?
+彼女はどこに住んでいますか？
+📧 Do you send emails?
+メールを送りますか？
+🎁 Do you like dolls?
+人形は好きですか？
+✈️ Do you like airplanes?
+飛行機は好きですか？
+🗣️ Can you speak English?
+英語を話せますか？
+🍪 Can you make cookies?
+クッキーを作れますか？
+💁‍♀️ Is your aunt kind?
+あなたのおばさんは親切ですか？
+🗺️ Do you want to go to Canada?
+カナダに行きたいですか？
+🛫 Where do you want to travel?
+どこへ旅行したいですか？`
+    },
+    {
+        title: "38. Breakfast (Food)",
+        content: `🍞 I eat breakfast every morning.
+私は毎朝朝食を食べます。
+🍳 usually eat eggs and toast.
+たいてい卵とトーストを食べます。
+🥛 I drink a glass of milk.
+牛乳を一杯飲みます。
+🥗 Sometimes I eat salad.
+時々サラダを食べます。
+🍚 My father eats rice and miso soup.
+父はご飯と味噌汁を食べます。
+🐟 He likes Japanese food.
+彼は日本食が好きです。
+🍎 I eat fruit, too.
+私は果物も食べます。
+🍌 Bananas are my favorite.
+バナナが私のお気に入りです。
+😋 Breakfast gives me energy.
+朝食は私にエネルギーをくれます。
+🏫 I go to school full of energy.
+私は元気いっぱいで学校に行きます。
+🍞 Do you eat breakfast?
+朝食を食べますか？
+🍳 Do you like eggs?
+卵は好きですか？
+🥛 Do you drink milk or juice?
+牛乳とジュース、どちらを飲みますか？
+🥗 Do you eat vegetables?
+野菜を食べますか？
+🍚 Do you like rice?
+ご飯は好きですか？
+🐟 Do you like Japanese food?
+日本食は好きですか？
+🍎 Do you eat an apple every day?
+毎日リンゴを食べますか？
+🍌 What is your favorite fruit?
+一番好きな果物は何ですか？
+😋 Are you hungry in the morning?
+朝はお腹が空いていますか？
+🏫 Are you full of energy today?
+今日は元気いっぱいですか？`
+    },
+    {
+        title: "39. Asking for Help (Can you)",
+        content: `🤔 I cannot do this math problem.
+この数学の問題ができません。
+🙋 Excuse me, Ms. Sato.
+すみません、佐藤先生。
+❓ Can you help me?
+手伝ってくれますか？
+📖 I don't understand this question.
+この質問がわかりません。
+🗣️ Can you speak more slowly?
+もっとゆっくり話してくれますか？
+✍️ Can you write it on the board?
+黒板に書いてくれますか？
+💡 Oh, I understand now.
+あ、今わかりました。
+🎒 Can you help me carry this bag?
+このカバンを運ぶのを手伝ってくれますか？
+🚪 Can you open the door?
+ドアを開けてくれますか？
+🙏 Thank you for your help.
+助けてくれてありがとうございます。
+🤔 Do you like math?
+数学は好きですか？
+🙋 Do you ask teachers for help?
+先生に助けを求めますか？
+❓ Can you help your friends?
+友達を助けられますか？
+📖 Do you understand English?
+英語がわかりますか？
+🗣️ Can you speak slowly?
+ゆっくり話せますか？
+✍️ Can you write your name?
+名前を書けますか？
+💡 Do you have a question?
+質問はありますか？
+🎒 Is your bag heavy?
+カバンは重いですか？
+🚪 Can you close the window?
+窓を閉めてくれますか？
+🙏 Do you say "Thank you"?
+「ありがとう」と言いますか？`
+    },
+    {
+        title: "40. Christmas (Present)",
+        content: `🎄 December 25th is Christmas.
+12月25日はクリスマスです。
+🎅 Santa Claus comes at night.
+夜にサンタクロースが来ます。
+🛷 He rides a sleigh.
+彼はそりに乗っています。
+🦌 Reindeer pull the sleigh.
+トナカイがそりを引きます。
+🎁 He brings presents for children.
+彼は子供たちにプレゼントを持ってきます。
+🧦 I put a big sock by my bed.
+ベッドのそばに大きな靴下を置きます。
+🍗 We eat chicken and cake.
+私たちはチキンとケーキを食べます。
+❄️ It is cold and snowy.
+寒くて雪が降っています。
+😄 I want a new video game.
+新しいテレビゲームが欲しいです。
+💤 I must sleep early.
+早く寝なければなりません。
+🎄 Do you like Christmas?
+クリスマスは好きですか？
+🎅 Do you believe in Santa?
+サンタを信じていますか？
+🛷 Have you seen a sleigh?
+そりを見たことがありますか？
+🦌 Do you like reindeer?
+トナカイは好きですか？
+🎁 What present do you want?
+どんなプレゼントが欲しいですか？
+🧦 Do you have a big sock?
+大きな靴下を持っていますか？
+🍗 Do you like chicken?
+チキンは好きですか？
+❄️ Is it cold in December?
+12月は寒いですか？
+😄 Do you play games?
+ゲームをしますか？
+💤 What time do you sleep?
+何時に寝ますか？`
+    },
+    {
+        title: "41. Camping (Past Tense)",
+        content: `⛺ I went camping last summer.
+去年の夏、キャンプに行きました。
+🌲 We went to the mountains.
+山に行きました。
+⛺ My father set up the tent.
+父がテントを張りました。
+🔥 We made a fire.
+火をおこしました。
+🍛 We cooked curry outside.
+外でカレーを作りました。
+🌌 We saw beautiful stars at night.
+夜には美しい星を見ました。
+😴 We slept in sleeping bags.
+寝袋で寝ました。
+🦟 There were many mosquitoes.
+蚊がたくさんいました。
+🎣 We fished in the river the next day.
+次の日、川で釣りをしました。
+😊 It was a great experience.
+素晴らしい経験でした。
+⛺ Do you like camping?
+キャンプは好きですか？
+🌲 Do you like mountains or sea?
+山と海、どちらが好きですか？
+⛺ Can you set up a tent?
+テントを張れますか？
+🔥 Is fire hot?
+火は熱いですか？
+🍛 Do you like curry?
+カレーは好きですか？
+🌌 Can you see stars in your town?
+あなたの町で星が見えますか？
+😴 Have you slept in a sleeping bag?
+寝袋で寝たことがありますか？
+🦟 Do you like insects?
+昆虫は好きですか？
+🎣 Can you fish?
+釣りができますか？
+😊 Did you have a good summer?
+良い夏でしたか？`
+    },
+    {
+        title: "42. Library Book (Borrowing)",
+        content: `📖 I borrowed a book yesterday.
+昨日本を借りました。
+🧙‍♂️ It is a story about a wizard.
+それは魔法使いの話です。
+👓 He wears glasses.
+彼は眼鏡をかけています。
+🦉 He has a white owl.
+彼は白いフクロウを飼っています。
+🪄 He can use magic.
+彼は魔法を使えます。
+🧹 He flies on a broom.
+彼はほうきで飛びます。
+🏫 He goes to a magic school.
+彼は魔法学校に通っています。
+👿 He fights bad wizards.
+彼は悪い魔法使いと戦います。
+😲 It is very exciting.
+とてもワクワクします。
+📚 I want to read the next book.
+次の本も読みたいです。
+📖 Do you borrow books?
+本を借りますか？
+🧙‍♂️ Do you like magic stories?
+魔法の話は好きですか？
+👓 Do you wear glasses?
+眼鏡をかけていますか？
+🦉 Do you like owls?
+フクロウは好きですか？
+🪄 If you can use magic, what do you do?
+もし魔法が使えたら何をしますか？
+🧹 Can you fly?
+飛べますか？
+🏫 Do you like your school?
+学校は好きですか？
+👿 Is fighting good?
+戦うことは良いことですか？
+😲 What is exciting for you?
+あなたにとってワクワクすることは何ですか？
+📚 Do you read many books?
+たくさん本を読みますか？`
+    },
+    {
+        title: "43. Spring (Seasons)",
+        content: `🌸 Spring has come.
+春が来ました。
+🌡️ It is getting warmer.
+だんだん暖かくなってきました。
+🌷 Tulips are blooming in the garden.
+庭にチューリップが咲いています。
+🐦 Birds are singing.
+鳥が歌っています。
+🍡 I ate dango at the park.
+公園で団子を食べました。
+🎒 The new school year starts.
+新しい学年が始まります。
+🏫 I am in the second grade now.
+私は今2年生です。
+🤝 I made new friends.
+新しい友達ができました。
+🐝 I saw a bee on a flower.
+花の上にハチを見ました。
+😊 I feel happy in spring.
+春は幸せな気分になります。
+🌸 Do you like spring?
+春は好きですか？
+🌡️ Is it warm today?
+今日は暖かいですか？
+🌷 What flowers do you like?
+どんな花が好きですか？
+🐦 Do you like birds?
+鳥は好きですか？
+🍡 Do you like Japanese sweets?
+和菓子は好きですか？
+🎒 When does school start?
+学校はいつ始まりますか？
+🏫 What grade are you in?
+あなたは何年生ですか？
+🤝 Do you have many friends?
+友達はたくさんいますか？
+🐝 Are bees scary?
+ハチは怖いですか？
+😊 Are you happy now?
+今、幸せですか？`
+    },
+    {
+        title: "44. Lost Child (Past Continuous)",
+        content: `🏬 I was shopping with my mom.
+母と買い物をしていました。
+👀 I was looking at toys.
+私はおもちゃを見ていました。
+😱 Suddenly, I was alone.
+突然、一人になりました。
+😢 I was crying.
+私は泣いていました。
+👩‍💼 A store clerk came to me.
+店員さんが私のところに来ました。
+🗣️ "What is your name?" she asked.
+「名前は何？」と彼女は聞きました。
+📢 She called my mother.
+彼女は母を呼び出しました。
+🏃 My mother came running.
+母が走って来ました。
+🤗 She hugged me.
+彼女は私を抱きしめました。
+🤝 I held her hand after that.
+その後、私は彼女の手を握りました。
+🏬 Do you go shopping alone?
+一人で買い物に行きますか？
+👀 Do you like toys?
+おもちゃは好きですか？
+😱 Have you been lost?
+迷子になったことがありますか？
+😢 Do you cry when you are sad?
+悲しい時、泣きますか？
+👩‍💼 Are store clerks kind?
+店員さんは親切ですか？
+🗣️ Can you say your name?
+名前を言えますか？
+📢 Do you listen to announcements?
+アナウンスを聞きますか？
+🏃 Can you run fast?
+速く走れますか？
+🤗 Do you hug your mother?
+お母さんを抱きしめますか？
+🤝 Do you hold hands?
+手を繋ぎますか？`
+    },
+    {
+        title: "45. My Computer (Possession/Use)",
+        content: `💻 This is my father's computer.
+これは父のコンピュータです。
+⌨️ I can use it sometimes.
+時々それを使えます。
+🖱️ I use the mouse to click.
+クリックするためにマウスを使います。
+🌐 I search for information on the internet.
+インターネットで情報を探します。
+🎥 I watch videos on YouTube.
+YouTubeで動画を見ます。
+📧 I send emails to my grandma.
+おばあちゃんにメールを送ります。
+🎮 I don't play games on it.
+それデゲームはしません。
+🖼️ I draw pictures with it.
+それで絵を描きます。
+🖨️ I print out my homework.
+宿題を印刷します。
+🤖 Computers are very useful.
+コンピュータはとても便利です。
+💻 Do you have a computer?
+コンピュータを持っていますか？
+⌨️ Can you type?
+タイプできますか？
+🖱️ Do you use a mouse?
+マウスを使いますか？
+🌐 Do you use the internet?
+インターネットを使いますか？
+🎥 Do you watch YouTube?
+YouTubeを見ますか？
+📧 Who do you email?
+誰にメールしますか？
+🎮 Do you play computer games?
+コンピュータゲームをしますか？
+🖼️ Can you draw on a computer?
+コンピュータで絵を描けますか？
+🖨️ Do you have a printer?
+プリンターを持っていますか？
+🤖 Is a smartphone useful?
+スマホは便利ですか？`
+    },
+    {
+        title: "46. Study Plan (Going to)",
+        content: `📝 I have a test tomorrow.
+明日テストがあります。
+🏠 I am going to study at home.
+家で勉強するつもりです。
+📵 I am not going to watch TV.
+テレビは見ないつもりです。
+📚 I am going to read my textbook.
+教科書を読むつもりです。
+✍️ I am going to write new words.
+新しい単語を書くつもりです。
+🕘 I am going to study until nine.
+9時まで勉強するつもりです。
+🛁 Then I am going to take a bath.
+それからお風呂に入るつもりです。
+🛏️ I am going to sleep early.
+早く寝るつもりです。
+🍳 I am going to eat a good breakfast.
+良い朝食を食べるつもりです。
+💯 I am going to do my best.
+ベストを尽くすつもりです。
+📝 Do you have a test soon?
+もうすぐテストがありますか？
+🏠 Where do you study?
+どこで勉強しますか？
+📵 Do you watch TV every day?
+毎日テレビを見ますか？
+📚 Do you read textbooks?
+教科書を読みますか？
+✍️ Do you write neatly?
+丁寧に字を書きますか？
+🕘 How long do you study?
+どのくらい勉強しますか？
+🛁 Do you like baths?
+お風呂は好きですか？
+🛏️ What time do you sleep?
+何時に寝ますか？
+🍳 Do you cook breakfast?
+朝食を作りますか？
+💯 Do you do your best?
+ベストを尽くしますか？`
+    },
+    {
+        title: "47. New Year (Culture)",
+        content: `🎍 January 1st is New Year's Day.
+1月1日は元日です。
+🌅 We get up early to see the sunrise.
+日の出を見るために早く起きます。
+⛩️ We go to a shrine.
+神社に行きます。
+🙏 We pray for a good year.
+良い年になるように祈ります。
+🧧 I get otoshidama from my parents.
+両親からお年玉をもらいます。
+🍱 We eat osechi.
+おせちを食べます。
+🥣 We also eat mochi soup.
+お餅のスープ（お雑煮）も食べます。
+🪁 I fly a kite with my cousins.
+いとこと凧揚げをします。
+📺 We watch TV shows.
+テレビ番組を見ます。
+😊 I like New Year's Day.
+私はお正月が好きです。
+🎍 Do you like New Year's Day?
+お正月は好きですか？
+🌅 Do you see the sunrise?
+日の出を見ますか？
+⛩️ Do you go to a shrine?
+神社に行きますか？
+🙏 Do you pray?
+祈りますか？
+🧧 Do you get otoshidama?
+お年玉をもらいますか？
+🍱 Do you like osechi?
+おせちは好きですか？
+🥣 Do you eat mochi?
+お餅を食べますか？
+🪁 Can you fly a kite?
+凧揚げができますか？
+📺 Do you watch TV?
+テレビを見ますか？
+😊 Are you happy in January?
+1月は幸せですか？`
+    },
+    {
+        title: "48. Leaving Message (Functional)",
+        content: `📝 Mom, I am going to the park.
+お母さん、公園に行ってきます。
+⚽ I will play soccer with Ken.
+ケンとサッカーをしてきます。
+🚲 I will ride my bike.
+自転車に乗っていきます。
+🥤 I have my water bottle.
+水筒を持っています。
+🧢 I am wearing my cap.
+帽子をかぶっています。
+🕓 I will be back at four.
+4時に戻ります。
+🔑 I have the house key.
+家の鍵を持っています。
+🍬 I ate a snack.
+おやつを食べました。
+☔ I have an umbrella, too.
+傘も持っています。
+👋 See you later.
+またね。
+📝 Do you leave messages?
+伝言を残しますか？
+⚽ Do you play with Ken?
+ケンと遊びますか？
+🚲 Do you ride a bike safely?
+安全に自転車に乗りますか？
+🥤 Do you have a water bottle?
+水筒を持っていますか？
+🧢 Do you wear a cap?
+帽子をかぶりますか？
+🕓 What time will you be back?
+何時に戻りますか？
+🔑 Do you have a key?
+鍵を持っていますか？
+🍬 Do you eat snacks?
+おやつを食べますか？
+☔ Do you need an umbrella?
+傘が必要ですか？
+👋 What do you say when you leave?
+出かける時、何と言いますか？`
     }
 ];
