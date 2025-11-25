@@ -469,8 +469,6 @@ SNSに写真を投稿するのは好きですか？
 🗣️ What creates a good group leader?
 何が良いグループリーダーを作りますか？`
     },
-// eikenpre2_part2.js - Stories 11–30
-const eikenpre2_part2 = [
     // Story 11 - A School Festival Day
     // Target Grammar: Passive Voice / Be covered with
     {
@@ -1410,8 +1408,7 @@ YouTubeで料理の動画を見ますか？
 🌟 Do you have a hobby you want to start?
 始めたい趣味はありますか？`
     },
-// eikenpre2_part3.js - Stories 31–48 (Final Batch)
-const eikenpre2_part3 = [
+
     // Story 31 - Experiencing a Cultural Event
     // Target Grammar: Passive Voice / Be interested in
     {
@@ -2258,3 +2255,4 @@ SNSでニュースを共有しますか？
 学校生活に満足していますか？`
     }
 ];
+
