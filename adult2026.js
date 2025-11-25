@@ -4317,4 +4317,416 @@ Zoom会議。「ミュートになってますよ」。今年の流行語。
 50. 👗 Wear what makes you happy! Confidence is the best fashion.
 自分が幸せになる服を着よう！自信が最高のファッションです。`
         }, 
+        {
+            title: "Week 41: Sports & Thanksgiving (Oct 8 – Oct 14)",
+            content: `1. 🏃‍♂️ Sports Day (Taiiku no Hi) is this week. Do you exercise?
+今週はスポーツの日です。運動しますか？
+2. 🦃 Canadian Thanksgiving is also this week. Did you know Canada celebrates early?
+カナダの感謝祭も今週です。カナダが早く祝うことを知っていましたか？
+3. 🍱 Bento boxes for Sports Day are special. Fried chicken (Karaage) and Onigiri?
+運動会のお弁当は特別です。唐揚げとおにぎり？
+4. 🦃 Turkey is the symbol of Thanksgiving. Have you ever eaten roast turkey?
+七面鳥は感謝祭の象徴です。ローストターキーを食べたことはありますか？
+5. 🏃‍♀️ Relay races are exciting. Are you a fast runner?
+リレー競争は興奮します。足は速いですか？
+6. 🥔 Mashed potatoes and gravy. Is this the ultimate comfort food?
+マッシュポテトとグレービーソース。これは究極の癒やしフードですか？
+7. 🤸‍♂️ Human Pyramids (Kumitaiso) are dangerous and often banned now. Did you do them?
+組体操は危険で、今は禁止されていることが多いです。やりましたか？
+8. 🥧 Pumpkin Pie is a Thanksgiving dessert. Do you like cinnamon?
+パンプキンパイは感謝祭のデザートです。シナモンは好きですか？
+9. 👟 Buying new running shoes. Do they make you run faster?
+新しいランニングシューズを買う。速く走れるようになりますか？
+10. 🍁 Autumn in Canada is beautiful (Maple leaves). Is the Japanese Momiji better?
+カナダの秋（メープル）は美しいです。日本の紅葉の方がいいですか？
+11. 🏆 Winning isn't everything. Participating is what counts. Do you agree?
+勝つことが全てではありません。参加することに意義があります。同意しますか？
+12. 🥘 Cranberry sauce on meat. Americans love it. Do you like fruit with meat?
+肉にクランベリーソース。アメリカ人は大好きです。肉とフルーツの組み合わせは好きですか？
+13. 👯 Folk dancing at Sports Day (Oklahoma Mixer). Was it awkward holding hands?
+運動会のフォークダンス（オクラホマミキサー）。手を繋ぐのは気まずかったですか？
+14. 👪 Parents running in the "Parents' Relay." Do they fall down often?
+「保護者リレー」で走る親たち。よく転びますか？
+15. 🏉 Rugby matches are intense. Do you understand the rules of rugby?
+ラグビーの試合は激しいです。ラグビーのルールは分かりますか？
+16. 🌽 Harvest festivals involve thanking the earth. Do you say "Itadakimasu"?
+収穫祭は大地に感謝することです。「いただきます」と言いますか？
+17. 🏅 Participation medals. Should everyone get a trophy?
+参加賞のメダル。全員がトロフィーをもらうべきですか？
+18. 🍂 Raking leaves in the yard. Is it good exercise?
+庭の落ち葉かき。良い運動ですか？
+19. 🏈 American Football is big on Thanksgiving. Do you watch sports after eating?
+感謝祭ではアメフトが盛んです。食後にスポーツを見ますか？
+20. 🧺 Tug of War (Tsunahiki). It requires teamwork and heavy people.
+綱引き。チームワークと体重の重い人が必要です。
+21. 🍽️ Overeating is traditional on Thanksgiving. Do you undo your belt?
+感謝祭では食べ過ぎるのが伝統です。ベルトを緩めますか？
+22. 📣 Cheering Squad (Ouendan). Are they scary or encouraging?
+応援団。怖いですか、それとも励みになりますか？
+23. 🥔 Sweet potatoes (Yaki-imo) are perfect energy for sports.
+焼き芋はスポーツに最適なエネルギーです。
+24. 🏃‍♂️ Marathon season is starting. Have you ever run 42.195km?
+マラソンシーズンが始まります。42.195キロを走ったことはありますか？
+25. 🛍️ Black Friday is in November (US), but sales start early now.
+ブラックフライデーは11月（米国）ですが、今はセールが早く始まります。
+26. 🚶‍♀️ Walking 10,000 steps a day. Do you track your steps?
+1日1万歩歩く。歩数を記録していますか？
+27. 🥧 Pecan Pie is very sweet. Do you have a sweet tooth?
+ピーカンパイはとても甘いです。甘党ですか？
+28. 👟 White sneakers get dirty easily at Sports Day. How do you clean them?
+白いスニーカーは運動会ですぐ汚れます。どうやって洗いますか？
+29. 🇨🇦 Canada is colder than Japan. Do you like winter sports?
+カナダは日本より寒いです。ウィンタースポーツは好きですか？
+30. 🧘‍♀️ Yoga in the park. Connecting with nature and your body.
+公園でヨガ。自然と体と繋がる。
+31. 🦃 "Cold Turkey" means quitting a habit suddenly. Have you quit smoking/sugar?
+「コールドターキー」は習慣を突然やめることです。タバコや砂糖をやめましたか？
+32. 🏟️ The 1964 Tokyo Olympics moved Sports Day to October. Did you know?
+1964年の東京五輪がスポーツの日を10月に動かしました。知っていましたか？
+33. 🚶‍♂️ Hiking Mt. Takao or Mt. Rokko. It is crowded in autumn.
+高尾山や六甲山へのハイキング。秋は混んでいます。
+34. 👨‍👩‍👧‍👦 Family time. Thanksgiving is about family. Is family stressful?
+家族の時間。感謝祭は家族についてのものです。家族はストレスですか？
+35. 🥪 Leftover turkey sandwiches. Leftovers are the best part.
+残ったターキーのサンドイッチ。残飯（残り物）が最高です。
+36. 🏀 Basketball courts in the park. Do you shoot hoops?
+公園のバスケットコート。シュートを打ちますか？
+37. 📸 Fathers with big cameras at Sports Day. Are you a camera papa?
+運動会のカメラパパ。あなたはカメラパパですか？
+38. 🏋️‍♂️ Muscle pain (筋肉痛) the next day. Or two days later?
+翌日の筋肉痛。それとも二日後？
+39. 🥗 Eating healthy before the big meal. Do you diet?
+ご馳走の前に健康的な食事をする。ダイエットしますか？
+40. 🍁 The smell of bonfire (Takibi). Is it allowed in the city?
+焚き火の匂い。都会で許可されていますか？
+41. 🚲 Tour de Kyushu/Hokkaido. Cycling touring is popular.
+ツール・ド・九州/北海道。サイクリングツーリングが人気です。
+42. 🥐 Stuffing (bread inside the turkey). Sounds weird but tastes good.
+スタフィング（ターキーの中のパン）。変に聞こえるけど美味しいです。
+43. 🏃‍♀️ Three-legged race (Ninin-sankyaku). Coordination is key.
+二人三脚。協調性が鍵です。
+44. 🏟️ Renting a gym for sports. Badminton or Volleyball?
+ジムを借りてスポーツ。バドミントン、それともバレーボール？
+45. 📺 Watching the NFL (American Football). The rules are confusing.
+NFLを見る。ルールがややこしいです。
+46. 🦃 Vegans eat Tofurky (Tofu Turkey). Would you try it?
+ヴィーガンはトーフーキー（豆腐ターキー）を食べます。試したいですか？
+47. 🏅 Gold medals are made of silver. Did you know?
+金メダルは銀でできています。知っていましたか？
+48. 🧴 Sunburn in October? The autumn sun can be strong.
+10月の日焼け？秋の日差しは強いことがあります。
+49. 🥧 Apple Cider (juice). Hot cider with spices is delicious.
+アップルサイダー（ジュース）。スパイス入りのホットサイダーは美味しいです。
+50. 🙏 "Thank you." Say it to someone today.
+「ありがとう」。今日誰かに言ってください。`
+        },
+        {
+            title: "Week 42: Autumn Leaves (Oct 15 – Oct 21)",
+            content: `1. 🍁 "Momiji-gari" (Hunting for autumn leaves). Have you gone yet?
+「紅葉狩り」。もう行きましたか？
+2. 🏞️ Minoo Park in Osaka is famous for red leaves and... monkeys. Be careful!
+大阪の箕面公園は紅葉と…猿で有名です。気をつけて！
+3. 🍂 Momiji Tempura (Fried maple leaves). Do they taste like leaves or batter?
+もみじの天ぷら。葉っぱの味ですか、衣の味ですか？
+4. 🇺🇸 New England (USA) is famous for "Leaf Peepers" (tourists looking at leaves).
+ニューイングランド（米国）は「リーフピーパー」（紅葉を見る観光客）で有名です。
+5. 📸 The contrast of red leaves and blue sky. Do you take good photos?
+赤い葉と青い空のコントラスト。良い写真が撮れますか？
+6. 🚄 Kyoto is overcrowded in autumn. Do you know a secret spot?
+秋の京都は超満員です。秘密の場所を知っていますか？
+7. 🌡️ It gets cold suddenly. Do you have a light jacket?
+急に寒くなります。薄手の上着を持っていますか？
+8. 🍵 Drinking matcha under a red maple tree. Very Japanese.
+赤い紅葉の下で抹茶を飲む。とても日本的です。
+9. 🍂 Gingko trees turn bright yellow. They smell bad but look good.
+イチョウの木が鮮やかな黄色になります。臭いけど見た目はいいです。
+10. 🛤️ Scenic railway trains (Torokko). Do you like slow trains?
+トロッコ列車。遅い電車は好きですか？
+11. 📚 Books use "fallen leaves" as bookmarks. Do you do this?
+本に「落ち葉」を栞として挟む。やりますか？
+12. 🌰 Roasted chestnuts (Tenshin Amaguri). They are hard to peel.
+天津甘栗。剥くのが難しいです。
+13. 🧣 Wearing a scarf for the first time this season. Cozy?
+今シーズン初めてのマフラー。暖かい？
+14. 🖌️ Painting the autumn scenery. Are you artistic?
+秋の景色を描く。芸術的ですか？
+15. 🍁 Why do leaves change color? (Chlorophyll breaks down). Science is cool.
+なぜ葉は色を変えるのか？（クロロフィルが分解される）。科学はすごいです。
+16. 🛋️ Carpet of red leaves. Do you want to lie down on it?
+赤い葉の絨毯。その上に寝転がりたいですか？
+17. 🦌 Deer in Nara Park under the autumn leaves. Perfect photo op.
+紅葉の下の奈良公園の鹿。絶好の写真チャンス。
+18. 🚶‍♂️ Hiking boots. Are they comfortable?
+ハイキングブーツ。履き心地はいいですか？
+19. 🍱 Autumn bento with mushrooms and salmon.
+きのこと鮭の秋の弁当。
+20. 🏙️ Midosuji street illumination starts soon.
+御堂筋のイルミネーションがもうすぐ始まります。
+21. 🍂 Raking leaves is a chore in the US. In Japan, we sweep.
+米国では落ち葉かきは家事です。日本では掃きます。
+22. 🍡 Hanami Dango vs. Momiji Dango. Which is better?
+花見団子対紅葉団子。どっちがいい？
+23. 🌬️ The wind is colder. "Kogarashi" (Cold winter wind) is coming.
+風が冷たいです。「木枯らし」がやってきます。
+24. 🏞️ Arashiyama (Kyoto) is beautiful but impossible to walk.
+嵐山（京都）は美しいですが歩くのは不可能です。
+25. 🧤 Cold hands. Do you hold hands to stay warm?
+冷たい手。暖めるために手を繋ぎますか？
+26. 🧥 Trench coats match the autumn colors.
+トレンチコートは秋の色に合います。
+27. 🛀 Hot springs (Onsen) with a view of the leaves. Heaven?
+紅葉が見える温泉。天国？
+28. 🎃 Pumpkins are orange like the leaves.
+カボチャは葉っぱのようにオレンジ色です。
+29. 🕰️ Daylight saving time ends in Europe. Dark evenings.
+欧州でサマータイム終了。暗い夜。
+30. 🍵 Hojicha (Roasted tea) matches the brown leaves.
+ほうじ茶は茶色い葉っぱに合います。
+31. 🚶‍♀️ Walking alone in the park. Is it lonely or peaceful?
+公園を一人で歩く。寂しいですか、平和ですか？
+32. 🐿️ Squirrels are busy storing food. Are you busy?
+リスは食料貯蔵で忙しいです。あなたは忙しいですか？
+33. 🍂 Dry leaves crumble in your hand. Satisfying?
+枯れ葉が手の中で崩れる。満足感？
+34. 🖼️ Changing your phone wallpaper to autumn leaves.
+スマホの壁紙を紅葉に変える。
+35. 🚘 Drive to the countryside. The mountains are on fire (with color).
+田舎へドライブ。山が（色で）燃えています。
+36. 🥶 Cold feet in the morning. Where are your socks?
+朝、足が冷たい。靴下はどこ？
+37. 🍲 Pot-au-feu (French stew). Warm food for cold days.
+ポトフ。寒い日の温かい食べ物。
+38. 🕯️ Lighting candles earlier because it's dark.
+暗いので早めにキャンドルを灯す。
+39. 🌆 Sunsets are earlier and redder.
+夕日は早く、より赤くなります。
+40. 🍁 Maple syrup comes from maple trees. Do you like pancakes?
+メープルシロップはカエデの木から来ます。パンケーキは好きですか？
+41. 🤳 Selfie with a red leaf covering one eye. Cliché?
+赤い葉で片目を隠してセルフィー。ありきたり？
+42. 🍂 The sound of wind in the dry leaves. Rustle rustle.
+枯れ葉を揺らす風の音。カサカサ。
+43. 🤧 First cold of the season. Take Vitamin C.
+今シーズン最初の風邪。ビタミンCを摂って。
+44. 🛋️ Staying in under a blanket. The best weekend plan.
+毛布にくるまって家にいる。最高の週末プラン。
+45. 🏔️ Snow on the top of Fuji, red leaves at the bottom.
+富士山の頂上には雪、麓には紅葉。
+46. 🧹 Sweeping leaves every morning. Zen practice?
+毎朝落ち葉を掃く。禅の修行？
+47. 🚌 Bus tours for seniors to see leaves. Are they having fun?
+高齢者のための紅葉バスツアー。楽しんでますか？
+48. 🎏 Carp die? No, they hibernate. Nature sleeps.
+鯉は死ぬ？いいえ、冬眠します。自然は眠ります。
+49. 🍁 "Autumn fan" (discarded lover). An old sad metaphor.
+「秋の扇」（捨てられた恋人）。古い悲しい比喩。
+50. 🍂 Nothing lasts forever. That is the beauty of autumn.
+永遠に続くものはありません。それが秋の美しさです。`
+        },
+        {
+            title: "Week 43: Spooky Prep (Oct 22 – Oct 28)",
+            content: `1. 🎃 Halloween is coming! Do you carve a Jack-o'-lantern?
+ハロウィンが来ます！ジャック・オー・ランタンを彫りますか？
+2. 👻 Have you decided on a costume? Witch? Zombie? Minion?
+仮装は決めましたか？魔女？ゾンビ？ミニオン？
+3. 🍬 Buying candy for Trick-or-Treaters. Do kids come to your house?
+トリック・オア・トリートのためのキャンディを買う。子供は家に来ますか？
+4. 🦇 Bats are spooky. Are you afraid of them?
+コウモリは不気味です。怖いですか？
+5. 🧛‍♂️ Vampires hate garlic. Do you love garlic?
+吸血鬼はニンニクが嫌いです。ニンニクは大好きですか？
+6. 🧟 Zombie makeup tutorial on YouTube. Have you tried it?
+YouTubeのゾンビメイク講座。試しましたか？
+7. 🏚️ Haunted Houses (Obakeyashiki) are busy. Do you pay to be scared?
+お化け屋敷は混んでいます。怖がるためにお金を払いますか？
+8. 🐈 Black cats are bad luck in the West, good luck in Japan. Which is true?
+黒猫は西洋では不吉、日本では幸運。どっちが本当？
+9. 🕸️ Spider webs as decoration. Fake webs are sticky!
+飾りのクモの巣。偽物の巣はベタベタします！
+10. 🍿 Watching horror movies. "The Ring" or "Halloween"?
+ホラー映画を見る。「リング」か「ハロウィン」か？
+11. 💀 Skeletons in the closet. Do you have secrets?
+クローゼットの中の骸骨（秘密）。秘密はありますか？
+12. 🌕 Full Moon on Halloween is rare. Spooky atmosphere.
+ハロウィンの満月は珍しいです。不気味な雰囲気。
+13. 🧙‍♀️ Witches brew potions. Can you cook soup?
+魔女はポーションを煮込みます。スープを作れますか？
+14. 🍬 Candy Corn (US candy). It tastes like wax. Have you tried it?
+キャンディコーン（米国の飴）。ワックスの味がします。食べたことありますか？
+15. 🎭 Cosplay is high quality in Japan. Is Halloween just Cosplay Day?
+日本のコスプレは高品質です。ハロウィンはただのコスプレの日ですか？
+16. 👠 Walking in heels as part of a costume. Feet hurt!
+衣装の一部としてヒールで歩く。足が痛い！
+17. 👹 Japanese demons (Oni) vs. Western demons. Who wins?
+日本の鬼対西洋の悪魔。どっちが勝つ？
+18. 🕯️ Lighting candles inside a pumpkin. It smells like cooked pumpkin.
+カボチャの中でキャンドルを灯す。焼けたカボチャの匂いがします。
+19. 😱 Jump scares in movies. Do you scream?
+映画のジャンプスケア（急な驚かし）。叫びますか？
+20. 🐺 Werewolf transformation. Do you have a lot of body hair?
+狼男の変身。体毛は濃いですか？
+21. 🩸 Fake blood. It stains clothes. Be careful.
+偽の血。服にシミがつきます。気をつけて。
+22. 🍬 "Trick or Treat!" Give me candy or I will prank you.
+「トリック・オア・トリート！」お菓子をくれなきゃいたずらするぞ。
+23. 🏛️ Old castles are full of ghosts. Would you sleep in one?
+古城は幽霊でいっぱいです。そこで眠れますか？
+24. 🧹 Flying on a broomstick. Faster than the train?
+ほうきで飛ぶ。電車より速い？
+25. 🧟‍♂️ The Walking Dead. What is your survival plan?
+ウォーキング・デッド。あなたの生存計画は？
+26. 🤡 Scary clowns (IT). Why are clowns scary?
+怖いピエロ（IT）。なぜピエロは怖いのでしょう？
+27. 🦉 Owls hooting. "Who? Who?"
+フクロウが鳴く。「フー？フー？（誰？）」
+28. 🧡 Orange is the color of the season. Do you look good in orange?
+オレンジはこの季節の色です。オレンジは似合いますか？
+29. 🧪 Mad Scientist. Mixing colored drinks.
+マッドサイエンティスト。色のついた飲み物を混ぜる。
+30. 👻 Sheet ghost. The easiest costume.
+シーツのお化け。一番簡単な仮装。
+31. 🔪 Slasher movies (Jason, Freddy). Too violent?
+スラッシャー映画（ジェイソン、フレディ）。暴力的すぎますか？
+32. 🚪 Knocking on strangers' doors. Is it safe in 2026?
+知らない人のドアをノックする。2026年でも安全ですか？
+33. 🍂 Crunching leaves sounds like footsteps behind you.
+葉を踏む音が後ろの足音に聞こえる。
+34. 🎭 Mask wearing. It gets hot and sweaty inside.
+マスク（仮面）を被る。中は暑くて汗だくになります。
+35. 💃 "Thriller" dance by Michael Jackson. Can you do the zombie dance?
+マイケル・ジャクソンの「スリラー」。ゾンビダンスができますか？
+36. 👽 Alien abduction costume. Funny or scary?
+宇宙人誘拐の仮装。面白いですか、怖いですか？
+37. 👶 Baby in a pumpkin costume. Cute overload.
+カボチャの衣装を着た赤ちゃん。可愛すぎます。
+38. 📸 Taking photos in the dark. Use the flash!
+暗闇で写真を撮る。フラッシュを使って！
+39. 🧟‍♀️ Zombie walk. Dragging one foot. Practice makes perfect.
+ゾンビウォーク。片足を引きずる。練習あるのみ。
+40. 🏰 Dracula's castle is in Romania. Do you want to go?
+ドラキュラの城はルーマニアにあります。行きたいですか？
+41. 🍬 Sugar rush. Kids eating too much candy go crazy.
+シュガーラッシュ。お菓子を食べすぎた子供が暴れます。
+42. 🕸️ Cobwebs in your house. Real or decoration?
+家のクモの巣。本物ですか、飾りですか？
+43. 🚂 Ghost Train ride. Scream if you want to go faster.
+幽霊列車の乗り物。速く行きたいなら叫んで。
+44. 👯 Couples costumes. Ketchup and Mustard?
+カップルの仮装。ケチャップとマスタード？
+45. 🦴 Skeleton dance. "Spooky Scary Skeletons."
+骸骨のダンス。「スプーキー・スケアリー・スケルトンズ」。
+46. 🌑 Dark moonless night. Perfect for scaring people.
+月のない暗い夜。人を怖がらせるのに最適。
+47. 👢 Witch's boots. Pointy toes.
+魔女のブーツ。つま先が尖っています。
+48. 🧛‍♀️ Vampire fangs. Hard to talk.
+吸血鬼の牙。話しにくい。
+49. 🎃 Pumpkin spice latte. Love it or hate it?
+パンプキンスパイスラテ。大好き、それとも大嫌い？
+50. 👻 Boo! Did I scare you?
+ばあ！怖かった？`
+        },
+        {
+            title: "Week 44: Halloween Madness (Oct 29 – Nov 4)",
+            content: `1. 🎃 Happy Halloween (Oct 31)! Are you going to a party?
+ハッピーハロウィン（10月31日）！パーティーに行きますか？
+2. 🌉 Dotonbori in Osaka is chaotic on Halloween. Have you seen the crowds?
+大阪の道頓堀はハロウィンで混沌とします。人混みを見ましたか？
+3. 👮‍♂️ Police closing roads. Is it a riot or a party?
+警察が道路を封鎖。暴動ですか、パーティーですか？
+4. 🗑️ The morning after Halloween, the streets are dirty. Do you help clean?
+ハロウィンの翌朝、道は汚いです。掃除を手伝いますか？
+5. 🚛 Famous incident: Turning over a truck in Shibuya. Crazy!
+有名な事件：渋谷でトラックをひっくり返す。クレイジー！
+6. 🎭 "Jimi Halloween" (Mundane Halloween). Costumes like "Guy who forgot his umbrella."
+「地味ハロウィン」。仮装例「傘を忘れた人」。
+7. 🧟 Zombies on the train. Is it scary for regular passengers?
+電車のゾンビ。一般の乗客には怖いですか？
+8. 🍬 Eating leftover candy. Stomach ache?
+売れ残ったお菓子を食べる。胃が痛い？
+9. 🤡 Don Quijote stores are sold out of costumes. Last minute shopping?
+ドン・キホーテの衣装が売り切れ。土壇場の買い物？
+10. 🧛‍♀️ Vampire teeth left on the sink.
+洗面台に置き忘れた吸血鬼の牙。
+11. 💄 Removing heavy makeup is hard. Is your face red?
+濃いメイクを落とすのは大変です。顔が赤くなりましたか？
+12. 🥶 It is usually cold on Halloween night. Is your costume warm?
+ハロウィンの夜はたいてい寒いです。衣装は暖かいですか？
+13. 👯 Sexy costumes vs. Scary costumes. Which do you prefer?
+セクシーな衣装対怖い衣装。どっちが好きですか？
+14. 🚔 Don't get arrested. Have fun but be safe.
+逮捕されないで。楽しんで、でも安全に。
+15. 🕰️ November 1st. Halloween is over instantly. Christmas songs start.
+11月1日。ハロウィンは一瞬で終わり。クリスマスソングが始まります。
+16. 🎄 Mariah Carey "All I Want for Christmas" starts playing. Too soon?
+マライア・キャリーの「恋人たちのクリスマス」が流れ始めます。早すぎ？
+17. 🍂 November is the bridge between autumn and winter.
+11月は秋と冬の架け橋です。
+18. 🍫 Discount candy at the supermarket on Nov 1st.
+11月1日にスーパーでキャンディが値引きされます。
+19. 🧥 Putting away the costume. Will you wear it next year?
+衣装を片付ける。来年も着ますか？
+20. 🤧 Caught a cold standing outside in a thin costume.
+薄着の衣装で外に立っていて風邪をひいた。
+21. 🕴️ Changing from zombie mode back to salaryman mode.
+ゾンビモードからサラリーマンモードへの切り替え。
+22. 📅 The year is almost over. Two months left!
+一年がほぼ終わりました。あと2ヶ月！
+23. 🦃 Thanksgiving is coming soon (in the US). Turkey time.
+もうすぐ感謝祭です（米国）。ターキーの時間。
+24. 🌬️ The wind feels like winter. Kogarashi number 1.
+風が冬のように感じます。木枯らし1号。
+25. 🍊 Kotatsu season begins. Oranges on the table.
+こたつの季節が始まります。テーブルにミカン。
+26. 🍵 Hot drinks in vending machines turn red (Hot).
+自販機の温かい飲み物が赤（あったか〜い）になります。
+27. 🧥 Buying a winter coat. Sales are starting.
+冬のコートを買う。セールが始まっています。
+28. 🧣 Scarf season officially starts.
+マフラーの季節が正式にスタート。
+29. 🕯️ All Saints' Day (Nov 1). Visiting graves in Europe.
+諸聖人の日（11月1日）。ヨーロッパではお墓参りをします。
+30. 🕰️ "Fall back" time change in the US. Extra hour of sleep.
+米国の「フォールバック」時間変更。1時間多く眠れます。
+31. 🍲 Nabe (Hot pot) parties replace BBQ parties.
+鍋パーティーがBBQパーティーに取って代わります。
+32. 🧖‍♀️ Steam rising from the bath.
+お風呂から湯気が立つ。
+33. 🦠 Flu shots. Did you get your influenza vaccine?
+インフルエンザの予防接種。ワクチンを打ちましたか？
+34. 🏙️ Winter illuminations are being set up. Wires everywhere.
+冬のイルミネーションの準備中。配線だらけ。
+35. 🥶 Shivering in the morning. Turn on the heater?
+朝、震える。ヒーターをつける？
+36. 🛍️ Christmas cake reservations begin. Have you booked?
+クリスマスケーキの予約開始。予約しましたか？
+37. 🍗 KFC taking orders for Christmas chicken. Only in Japan.
+KFCがクリスマスチキンの注文受付。日本だけです。
+38. 🧥 Static electricity (Bachi!). Do you get shocked touching doors?
+静電気（バチッ！）。ドアに触れてショックを受けますか？
+39. 👃 The smell of kerosene (Stove). Nostalgic smell?
+灯油の匂い（ストーブ）。懐かしい匂い？
+40. 🛁 Yuzu bath. Putting citrus in the bath warms you up.
+ゆず湯。お風呂に柑橘類を入れると温まります。
+41. 🎿 Ski resorts are praying for snow.
+スキー場は雪を祈っています。
+42. 🌫️ Foggy mornings. Drive carefully.
+霧の朝。運転に気をつけて。
+43. 🧱 The Berlin Wall fell in Nov 1989. History.
+1989年11月にベルリンの壁が崩壊。歴史。
+44. ♏ Scorpio season (Zodiac). Are you a Scorpio?
+蠍座の季節。蠍座ですか？
+45. 🐿️ Squirrels are sleeping. Hibernation prep.
+リスは眠っています。冬眠の準備。
+46. 📖 Reading long novels on long nights.
+長い夜に長編小説を読む。
+47. 🍷 Hot wine (Mulled wine). Spices and orange.
+ホットワイン。スパイスとオレンジ。
+48. 🎩 Guy Fawkes Night (Nov 5) in UK. Bonfires and fireworks.
+英国のガイ・フォークス・ナイト（11月5日）。焚き火と花火。
+49. 🎭 "Remember, remember the 5th of November."
+「忘れるな、11月5日を」。
+50. 👋 Goodbye Halloween. See you next year!
+さようならハロウィン。また来年！`
+        },
         
