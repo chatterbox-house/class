@@ -5142,3 +5142,417 @@ Netflixでクリスマス映画。また「ホーム・アローン」？
 50. ✨ December magic. Enjoy the festive mood!
 12月の魔法。お祭り気分を楽しんで！`
         },
+{
+            title: "Week 49: Lights of the City (Dec 3 – Dec 9)",
+            content: `1. 💡 The Midosuji Illumination is famous. It is the longest illuminated street. Have you walked it?
+御堂筋イルミネーションは有名です。最も長いイルミネーションストリートです。歩きましたか？
+2. 🕯️ Kobe Luminarie is beautiful but sad (memorial). Do you go every year?
+神戸ルミナリエは美しいですが悲しい（追悼）です。毎年行きますか？
+3. 🎄 The Rockefeller Center Christmas Tree in NYC is huge. Is big always better?
+NYCのロックフェラーセンターのツリーは巨大です。大きいことは常に良いことですか？
+4. 💡 LED lights vs. Old bulbs. Do you prefer the bright white or warm yellow?
+LEDライト対古い電球。明るい白と温かい黄色、どっちが好きですか？
+5. 🏠 Some houses decorate their gardens with insane lights. Do you have a neighbor like that?
+庭を狂ったようなライトで飾る家があります。そんな近所の人がいますか？
+6. 🌌 Nakanoshima "Hikari no Renaissance." Projection mapping is popular.
+中之島「光のルネサンス」。プロジェクションマッピングが人気です。
+7. 🥶 Looking at lights is romantic, but freezing. Do you hold hands to stay warm?
+イルミネーションを見るのはロマンチックですが、凍えます。手を繋いで暖まりますか？
+8. 🔋 Electricity bills go up in December. Do you worry about the cost?
+12月は電気代が上がります。コストが心配ですか？
+9. 🤳 Taking selfies with lights in the background. Is the lighting tricky?
+ライトを背景に自撮り。照明が難しくないですか？
+10. 🕯️ Candles create a cozy atmosphere (Hygge). Do you light candles at dinner?
+キャンドルは居心地の良い雰囲気（ヒュッゲ）を作ります。夕食時にキャンドルを灯しますか？
+11. 🎆 Winter fireworks. Clear air makes them brighter.
+冬の花火。空気が澄んでいるのでより明るく見えます。
+12. 🌃 Night view from Mt. Rokko. "Ten Million Dollar View."
+六甲山からの夜景。「1000万ドルの夜景」。
+13. 🔦 Flashlight tag. Did you play in the dark as a kid?
+懐中電灯鬼ごっこ。子供の頃暗闇で遊びましたか？
+14. 💡 Smart lights (Hue). Can you change the color of your room with your phone?
+スマートライト（Hue）。スマホで部屋の色を変えられますか？
+15. 🛤️ Train stations are decorated. Does it improve your commute?
+駅が装飾されています。通勤が楽しくなりますか？
+16. 🎢 USJ Christmas tree holds a Guinness Record for lights. Too dazzling?
+USJのツリーは電飾数でギネス記録を持っています。眩しすぎますか？
+17. 🔭 Stargazing in winter. Orion is very clear.
+冬の天体観測。オリオン座がとてもはっきり見えます。
+18. 🏙️ Office buildings leaving lights on to make patterns.
+オフィスビルが明かりを残して模様を作る。
+19. 🏮 Lanterns in temples vs. Neon in the city. Old vs New.
+寺の提灯対街のネオン。新旧対決。
+20. 🚘 Driving through "Tunnel of Lights" (Nabana no Sato). Is it worth the drive?
+「光のトンネル」（なばなの里）をドライブ。運転していく価値はありますか？
+21. 💍 Proposing under the Christmas tree. Is it romantic or cliché?
+クリスマスツリーの下でプロポーズ。ロマンチックですか、ありきたりですか？
+22. 🧤 Touchscreen gloves. Can you take photos without freezing your fingers?
+スマホ対応手袋。指を凍らせずに写真が撮れますか？
+23. ☕ Hot wine (Glühwein) at the German Christmas Market. Have you been to the one in Umeda?
+ドイツクリスマスマーケットのホットワイン。梅田のマーケットに行きましたか？
+24. 🧥 Wearing white in winter. Do you match the snow (if there is any)?
+冬に白を着る。雪（あれば）に合わせますか？
+25. 🕰️ The days are so short. Sunset is 4:45 PM. Do you need more sun?
+日がとても短いです。日没は午後4時45分。もっと太陽が必要ですか？
+26. 💡 Blue lights are said to be calming. Do you like blue illuminations?
+青い光は落ち着くと言われています。青いイルミネーションは好きですか？
+27. 🕯️ Advent wreath. 4 candles. Patience is required.
+アドベントリース。4本のキャンドル。忍耐が必要です。
+28. ❄️ Artificial snow machines. If it doesn't snow, make it!
+人工降雪機。雪が降らないなら作っちゃえ！
+29. 🛍️ Window shopping at department stores. The displays are art.
+デパートのウィンドウショッピング。ディスプレイは芸術です。
+30. 🧣 Sharing a scarf (Muffler). Anime cliché?
+マフラーをシェアする。アニメの決まり文句？
+31. 🎇 Sparklers in winter. Senko-hanabi in the snow.
+冬の線香花火。雪の中の線香花火。
+32. 🌉 Rainbow Bridge in Tokyo vs. Akashi Bridge in Kobe. Light up battle.
+東京のレインボーブリッジ対神戸の明石海峡大橋。ライトアップ対決。
+33. 🥶 Shivering creates heat. Are you shivering?
+震えると熱が生まれます。震えていますか？
+34. 🧥 Puffer jacket makes you look like the Michelin Man.
+ダウンジャケットを着るとミシュランマンみたいに見えます。
+35. 🚶‍♀️ Walking alone in the illumination. Is it lonely?
+イルミネーションの中を一人で歩く。寂しいですか？
+36. 📸 Bokeh photos (blurry lights). Are you a good photographer?
+ボケ写真（光がぼやけた写真）。写真は上手ですか？
+37. 🎠 Merry-Go-Round lights. Magical or childish?
+メリーゴーランドの明かり。魔法のようですか、子供っぽいですか？
+38. 🕯️ Power outage in winter. Do you have candles ready?
+冬の停電。キャンドルの準備はできていますか？
+39. 🦌 Reindeer decorations. Rudoph has a red nose (light).
+トナカイの飾り。ルドルフは赤い鼻（ライト）を持っています。
+40. 🎁 Wrapping paper with shiny foil. Do you recycle it?
+キラキラした包装紙。リサイクルしますか？
+41. 🌆 City skyline at night. Osaka is a concrete jungle.
+夜の街のスカイライン。大阪はコンクリートジャングルです。
+42. 🕶️ Lights are too bright? Do you wear sunglasses at night? (No!)
+光が眩しすぎる？夜にサングラスをかけますか？（まさか！）
+43. 🗼 Tokyo Tower vs. Skytree vs. Tsutenkaku. Which light up is best?
+東京タワー対スカイツリー対通天閣。どのライトアップが一番？
+44. ❄️ Snow light festivals in the north (Kamakura). Igloo party?
+北国の雪灯り祭り（かまくら）。イグルーでパーティー？
+45. 🕰️ Counting down the days. Are you stressed or excited?
+日数をカウントダウンする。ストレスですか、ワクワクですか？
+46. 🧣 Turtleneck sweaters. Cozy or choking?
+タートルネックセーター。暖かい、それとも首が苦しい？
+47. 🍬 Candy canes hanging on the tree. Peppermint flavor.
+ツリーに吊るされたキャンディケイン。ペパーミント味。
+48. 🏠 Coming home to a warm house. The best feeling.
+暖かい家に帰る。最高の気分。
+49. 🛁 Yuzu bath warms you to the bone.
+ゆず湯は骨まで温まります。
+50. ✨ You are the light of the world. Shine bright!
+あなたは世の光です。輝いて！`
+        },
+        {
+            title: "Week 50: Party Season (Dec 10 – Dec 16)",
+            content: `1. 🍻 "Bonenkai" means "Forget the Year Party." What do you want to forget from 2026?
+「忘年会」は年を忘れるパーティーです。2026年の何を忘れたいですか？
+2. 👔 Company Bonenkai. Is it mandatory? Do you hate it?
+会社の忘年会。強制ですか？嫌いですか？
+3. 🎤 Karaoke is essential. What is your "Juhachiban" (Best Song)?
+カラオケは必須です。あなたの「十八番」は何ですか？
+4. 🤮 Ukon no Chikara (Turmeric drink). Do you drink it before drinking alcohol?
+ウコンの力。お酒を飲む前に飲みますか？
+5. 💸 The party fee is 5,000 yen. Is it too expensive?
+会費は5000円です。高すぎますか？
+6. 🍺 "Bureiko" means rank doesn't matter tonight. Is that a lie?
+「無礼講」は今夜は無礼でもいいという意味です。それは嘘ですか？
+7. 🍲 Nabe at the Bonenkai. Sharing a pot with the boss. Hygienic?
+忘年会で鍋。上司と鍋をつつく。衛生的ですか？
+8. 🗣️ Drunk colleagues telling secrets. Do you listen?
+酔った同僚が秘密を話す。聞きますか？
+9. 🙅‍♂️ Drinking harassment (Al-hara). Can you say "No" to alcohol?
+アルハラ。お酒を断れますか？
+10. 🚌 Missing the last train (Shuden). Taxi or Internet Cafe?
+終電を逃す。タクシー、それともネットカフェ？
+11. 🍜 Shime-no-Ramen (Ending Ramen). Why are we hungry again?
+締めのラーメン。なぜまたお腹が空くのでしょう？
+12. 🤢 Hangover (Futsukayoi) next morning. Can you work?
+翌朝の二日酔い。働けますか？
+13. 🕴️ The quiet guy becomes loud when drunk. Transformation!
+静かな人が飲むとうるさくなる。変身！
+14. 📅 Schedule is full. Double booking?
+スケジュールがいっぱいです。ダブルブッキング？
+15. 🎄 Christmas Party vs. Bonenkai. Which is more fun?
+クリスマスパーティー対忘年会。どっちが楽しい？
+16. 🎁 Bingo games at the party. Did you win anything good?
+パーティーでのビンゴ大会。何かいいもの当たりましたか？
+17. 👗 Dressing up for the party. Sequins and velvet?
+パーティーのためにドレスアップ。スパンコールとベルベット？
+18. 🎩 Performing a talent (Gei) at the party. Can you juggle?
+パーティーで芸を披露する。ジャグリングできますか？
+19. 🍷 Red wine spills on a white shirt. Disaster!
+赤ワインが白いシャツにこぼれる。大惨事！
+20. 🕰️ "Nijikai" (Second party). Do you go or go home?
+「二次会」。行きますか、帰りますか？
+21. 🤐 "What happens at the Bonenkai, stays at the Bonenkai."
+「忘年会で起きたことは、忘年会に置いていく」。
+22. 📸 Embarrassing photos posted on social media. Be careful.
+恥ずかしい写真がSNSに投稿される。気をつけて。
+23. 🥂 "Kampai!" (Cheers). Toasting speech. Are you good at speeches?
+「乾杯！」乾杯の挨拶。スピーチは得意ですか？
+24. 🍻 "Nomihodai" (All you can drink). Do you try to drink your money's worth?
+「飲み放題」。元を取ろうとしますか？
+25. 🍵 Green tea for the non-drinkers. Are they having fun?
+下戸のための緑茶。彼らは楽しんでいますか？
+26. 🏃‍♂️ Running for the train. Drunk running is dangerous.
+電車に向かって走る。酔っ払い走りは危険です。
+27. 👔 Necktie around the head. Classic Japanese drunk style. Have you seen it?
+ネクタイを頭に巻く。古典的な日本の酔っ払いスタイル。見たことありますか？
+28. 🍽️ Leftover food. "Mottainai." Do you take it home (Doggy bag)?
+残った食べ物。「もったいない」。持ち帰りますか（ドギーバッグ）？
+29. 🏘️ House party vs. Restaurant. Which is less stress?
+ホームパーティー対レストラン。どっちがストレス少ない？
+30. 🕺 Dancing on the table. Please don't.
+テーブルの上で踊る。やめてください。
+31. 🌬️ Standing outside in the cold saying goodbye for 20 minutes. Japanese custom.
+寒い外で20分間さよならを言い続ける。日本の習慣。
+32. 🏨 Sleeping at the station. Don't be that person.
+駅で寝る。そんな人にならないで。
+33. 💊 Headache medicine. Keep it in your bag.
+頭痛薬。カバンに入れておいて。
+34. 🍲 Sukiyaki. Beef, sugar, soy sauce. Everyone loves it.
+すき焼き。牛肉、砂糖、醤油。みんな大好きです。
+35. 🦀 Crab feast. Silent eating because peeling crab is hard.
+カニの宴会。カニを剥くのが大変なので無言になる。
+36. 🚬 Smoking area conversation. Is that where decisions are made?
+喫煙所の会話。そこで決定がなされるのですか？
+37. 🤵 Designated driver. The hero of the night.
+ハンドルキーパー。夜のヒーロー。
+38. 🤳 Group selfie. Squeeze in!
+グループセルフィー。詰めて！
+39. 📅 Planning the "Shinnenkai" (New Year Party) already?
+もう「新年会」の計画？
+40. 🧼 Spilling sauce on the tatami. Oops.
+畳にタレをこぼす。おっと。
+41. 🥣 Miso soup in the morning cures the soul.
+朝の味噌汁は魂を癒やします。
+42. 🕴️ The boss pays more. "Tilt the payment" (Keisha-haibun).
+上司が多く払う。「傾斜配分」。
+43. 🛋️ Falling asleep on the train and waking up in the countryside.
+電車で寝てしまい、田舎で目覚める。
+44. 🍹 Mocktails (Non-alcoholic cocktails) are fancy now.
+モクテル（ノンアルカクテル）は今おしゃれです。
+45. 🤝 Shaking hands with people you don't like. Peace for one night.
+嫌いな人と握手。一晩だけの平和。
+46. 🕰️ "Last Order!" Order 5 drinks at once?
+「ラストオーダー！」一度に5杯頼む？
+47. 🚉 The platform is crowded with drunk zombies.
+ホームは酔っ払いゾンビで混雑しています。
+48. 🚽 The toilet line is long. Emergency!
+トイレの列が長い。緊急事態！
+49. 🌆 The sunrise after an all-nighter. Regret?
+徹夜明けの日の出。後悔？
+50. 🗓️ One more week until Christmas. Survive!
+クリスマスまであと1週間。生き残れ！`
+        },
+        {
+            title: "Week 51: Fried Chicken or Roast? (Dec 17 – Dec 23)",
+            content: `1. 🍗 KFC for Christmas is a Japanese tradition. Foreigners are shocked. Are you?
+クリスマスのKFCは日本の伝統です。外国人はショックを受けます。あなたは？
+2. 🦃 Roast Turkey is the Western tradition. Do you have an oven big enough?
+ローストターキーは西洋の伝統です。十分大きなオーブンがありますか？
+3. 🎂 Christmas Cake in Japan is Sponge Cake with Strawberries. Why?
+日本のクリスマスケーキはイチゴのショートケーキです。なぜ？
+4. 🍰 In the UK, "Christmas Pudding" is a dense fruit cake with brandy. It burns!
+英国の「クリスマスプディング」はブランデー入りの濃厚なフルーツケーキです。燃えます！
+5. 🍓 Strawberries are expensive in December. "Christmas Tax."
+12月のイチゴは高いです。「クリスマス税」。
+6. 🍖 Roast Beef. A luxurious alternative to chicken.
+ローストビーフ。チキンの代わりの贅沢。
+7. 🍗 Standing in line at KFC. Did you make a reservation?
+KFCの行列。予約しましたか？
+8. 🍕 Pizza delivery is chaos on Christmas Eve. 2 hour wait?
+クリスマスイブのピザ配達はカオスです。2時間待ち？
+9. 🍪 Leaving cookies and milk for Santa. Does Santa like sake?
+サンタにクッキーとミルクを置いておく。サンタは日本酒が好きかな？
+10. 🥕 Carrots for the reindeer. Don't forget Rudolph.
+トナカイに人参。ルドルフを忘れないで。
+11. 🥗 Potato Salad arranged like a Christmas tree (Broccoli tree).
+クリスマスツリーのように盛り付けたポテトサラダ（ブロッコリーツリー）。
+12. 🍾 Champagne pops! Can you open it without hitting someone?
+シャンパンがポンッ！誰かに当てずに開けられますか？
+13. 🍷 Hot Wine (Mulled Wine). Cinnamon and cloves scent.
+ホットワイン。シナモンとクローブの香り。
+14. 🕯️ Candlelight dinner at home vs. Expensive restaurant.
+家でのキャンドルディナー対高級レストラン。
+15. 💑 Christmas Eve in Japan is for couples. In the West, it's for family.
+日本のクリスマスイブはカップルのため。西洋では家族のため。
+16. 🎅 Santa Claus is watching. Are you on the Naughty List or Nice List?
+サンタクロースは見ています。悪い子リスト、それとも良い子リスト？
+17. 🎁 Wrapping presents. Are you good at it?
+プレゼントを包む。得意ですか？
+18. 🧦 Stockings hung by the fireplace. Or by the AC unit?
+暖炉に吊るされた靴下。それともエアコンの下？
+19. 🎄 Real tree vs. Plastic tree. Real trees smell nice but drop needles.
+本物の木対プラスチックの木。本物は良い匂いですが葉が落ちます。
+20. 🧒 Kids waking up at 4 AM to check presents. Parents are tired.
+プレゼントを確認するために朝4時に起きる子供。親は疲れています。
+21. 🍗 Chicken leg (Hone-tsuki). Eat with your hands!
+骨付きチキン。手で食べて！
+22. 🥧 Mince Pies (UK). Sweet pies with dried fruit. Not meat.
+ミンスパイ（英国）。ドライフルーツの甘いパイ。肉じゃないです。
+23. 📅 December 23rd used to be a holiday (Emperor's Birthday). We miss it.
+12月23日はかつて祝日でした（天皇誕生日）。恋しいです。
+24. 🎼 "Silent Night." Can you sing it in English?
+「きよしこの夜」。英語で歌えますか？
+25. 🏢 Working on Christmas Day. It is a normal weekday in Japan. Sad?
+クリスマス当日に働く。日本では普通の平日です。悲しい？
+26. ⛸️ Ice skating date. Holding hands so you don't fall.
+アイススケートデート。転ばないように手を繋ぐ。
+27. 💒 Going to church for Midnight Mass. Even if you aren't Christian?
+真夜中のミサのために教会へ行く。クリスチャンじゃなくても？
+28. 🎥 "Love Actually." The ultimate Christmas rom-com.
+「ラブ・アクチュアリー」。究極のクリスマスロマコメ。
+29. 🐈 Dressing the cat as Santa. The cat hates it.
+猫にサンタの格好をさせる。猫は嫌がっています。
+30. 🥣 Corn soup / Clam chowder. Warm soup is essential.
+コーンスープ/クラムチャウダー。温かいスープは必須。
+31. 🍗 Convenience store chicken (Famichiki). Is it good enough for Christmas?
+コンビニチキン（ファミチキ）。クリスマスにそれで十分？
+32. 🧀 Cheese fondue. A fun party meal. Don't drop the bread!
+チーズフォンデュ。楽しいパーティー料理。パンを落とさないで！
+33. 🍞 Stollen (German bread). Eat a slice every day.
+シュトーレン（ドイツのパン）。毎日一切れ食べる。
+34. 🍭 Candy Canes. They make your hands sticky.
+キャンディケイン。手がベタベタになります。
+35. 📬 Sending Christmas cards. The deadline is past!
+クリスマスカードを送る。締め切り過ぎてる！
+36. 🧑‍🎄 "I saw Mommy kissing Santa Claus." Scandal?
+「ママがサンタにキスしてるのを見た」。スキャンダル？
+37. 🎻 The Nutcracker ballet. Tchaikovsky's music.
+くるみ割り人形のバレエ。チャイコフスキーの音楽。
+38. 🔔 Sleigh bells ring. Can you hear them?
+そりの鈴が鳴る。聞こえますか？
+39. 🛍️ Last minute shopping on Dec 24th. Panic buying.
+24日の土壇場の買い物。パニック買い。
+40. 🎁 A puppy for Christmas? A big responsibility.
+クリスマスに子犬？大きな責任です。
+41. 🏙️ Tokyo Disney Land is magical at Christmas. Osaka USJ is wild.
+東京ディズニーランドのクリスマスは魔法です。大阪USJはワイルドです。
+42. 🥪 Leftover chicken sandwiches for the next 3 days.
+向こう3日間は残ったチキンのサンドイッチ。
+43. 🍽️ Using the "good plates." Don't break them.
+「良いお皿」を使う。割らないで。
+44. 🍷 Eggnog (Drink with egg, milk, alcohol). Delicious or gross?
+エッグノッグ（卵、牛乳、酒の飲み物）。美味しい、それとも気持ち悪い？
+45. 🌲 The smell of pine needles.
+松葉の香り。
+46. 🕺 Office Christmas Party. Different from Bonenkai?
+オフィスクリスマスパーティー。忘年会とは違う？
+47. 👔 Wearing a reindeer tie to work. Is it allowed?
+トナカイのネクタイをして出勤。許されますか？
+48. 🛌 Kids trying to stay awake to see Santa. They always fail.
+サンタを見ようと起きている子供たち。いつも失敗します。
+49. 🌟 The Star of Bethlehem. The reason for the season.
+ベツレヘムの星。この季節の理由。
+50. 🎅 Merry Christmas! (Say it on the 25th, not the 24th!).
+メリークリスマス！（24日じゃなくて25日に言ってね！）。`
+        },
+        {
+            title: "Week 52: Christmas & Boxing Day (Dec 24 – Dec 30)",
+            content: `1. 🎁 Christmas Day (Dec 25). Did you get what you wanted?
+クリスマス当日（12/25）。欲しかったものはもらえましたか？
+2. 📦 Boxing Day (Dec 26) in UK. It's for shopping, not fighting.
+ボクシング・デー（12/26、英国）。買い物の日です、戦う日ではありません。
+3. 🧹 Dec 26th in Japan: Christmas decorations vanish instantly. Kadomatsu appear.
+日本の12月26日：クリスマスの飾りが瞬時に消えます。門松が現れます。
+4. 🎍 New Year preparation (Oshogatsu prep). Are you busy?
+お正月の準備。忙しいですか？
+5. 🍲 Toshikoshi Soba (Year-crossing noodles). Buying ingredients.
+年越しそば。材料を買う。
+6. 🧹 Big Cleaning (O-souji). Windows, kitchen, bath. Scrub scrub!
+大掃除。窓、キッチン、お風呂。ゴシゴシ！
+7. 🎍 Shimekazari (Rope decoration). Putting it on the door.
+しめ飾り。ドアに飾る。
+8. 🧧 Otoshidama (New Year money). Getting new bills at the bank.
+お年玉。銀行で新札を用意する。
+9. 💴 Spending money flows like water in December. Wallet is empty.
+12月はお金が水のように流れていきます。財布は空っぽ。
+10. 📺 Year-end TV specials. Comedy and Music.
+年末のテレビ特番。お笑いと音楽。
+11. 🕴️ "Yoi Otoshi Wo" (Have a good year). When do you start saying it?
+「良いお年を」。いつから言い始めますか？
+12. 📅 The last work day (Goyo-osame). Dec 28th?
+仕事納め。12月28日？
+13. 🚆 Returning home (Kisei). Shinkansen is 200% full.
+帰省。新幹線は乗車率200％。
+14. 🦀 Eating Crab (Kani) is a year-end luxury. Expensive!
+カニを食べるのは年末の贅沢です。高い！
+15. 🥣 Mochi making (Mochitsuki). Do you pound the rice?
+餅つき。お米をつきますか？
+16. 🕰️ Looking back at 2026. Was it a good year?
+2026年を振り返る。良い年でしたか？
+17. 📉 Regrets of the year. "I should have..."
+一年の後悔。「すればよかった…」。
+18. 📈 Best memory of 2026. What made you smile?
+2026年の最高の思い出。何があなたを笑顔にしましたか？
+19. 🗓️ Buying the New Year calendar. Did you get one?
+新年のカレンダーを買う。手に入れましたか？
+20. 🥶 It is freezing. Is it snowing in your hometown?
+凍えるようです。故郷では雪が降っていますか？
+21. 🎿 Skiing trip for the holidays. Expensive but fun.
+休日のスキー旅行。高いけど楽しい。
+22. 🍱 Osechi Ryori ordering. Did you make it or buy it?
+おせち料理の注文。作りましたか、買いましたか？
+23. 🔔 Joya no Kane (108 bells). Will you go to the temple on NYE?
+除夜の鐘（108回）。大晦日に寺に行きますか？
+24. 📺 Kohaku Uta Gassen (Red and White Song Battle). Do you watch it?
+紅白歌合戦。見ますか？
+25. 🍜 Eating Soba at midnight. Long noodles = Long life.
+真夜中にそばを食べる。長い麺＝長寿。
+26. 🕰️ Countdown parties. USJ or Crossing?
+カウントダウンパーティー。USJ、それとも交差点？
+27. 🛌 Sleeping through the New Year. "Nebosuke" (Sleepyhead).
+寝正月。「寝坊助」。
+28. 🌄 Hatsuhinode (First Sunrise). Will you wake up early?
+初日の出。早起きしますか？
+29. 🎲 Board games with family. Monopoly fights?
+家族とボードゲーム。モノポリーで喧嘩？
+30. 🍊 Eating Mikan under the Kotatsu. Peace.
+こたつでミカンを食べる。平和。
+31. 🚗 Washing the car. It must be clean for the new year.
+洗車。新年にはきれいでなければなりません。
+32. 💇‍♂️ Last haircut of the year. Fresh start.
+今年最後の散髪。新たなスタート。
+33. 💳 Points expiring? Check your cards!
+ポイントの有効期限？カードをチェックして！
+34. 🚮 Last garbage collection day. Don't miss it!
+年内最後のゴミ収集日。逃さないで！
+35. 🐟 Buying expensive Tuna (Maguro). Feast time.
+高いマグロを買う。ご馳走の時間。
+36. 🚪 Decorating the entrance (Kadomatsu). Bamboo and pine.
+玄関を飾る（門松）。竹と松。
+37. 📓 New diary. Writing resolutions.
+新しい日記。抱負を書く。
+38. 🤝 Meeting friends you haven't seen all year.
+一年会っていなかった友達に会う。
+39. 🦠 Don't get sick on New Year's Eve. Hospitals are closed.
+大晦日に病気にならないで。病院は休みです。
+40. 🤳 "Best Nine" on Instagram. Your top photos.
+インスタの「ベストナイン」。あなたのトップ写真。
+41. 🥂 Champagne toast at midnight.
+真夜中にシャンパンで乾杯。
+42. 🕯️ Reflection. What did you learn this year?
+省察。今年何を学びましたか？
+43. 👔 Forget work. Relax.
+仕事を忘れて。リラックス。
+44. 👴 Aging. You are one year older soon.
+加齢。もうすぐ1つ年をとります。
+45. 🕰️ Tick tock. The clock is ticking.
+チクタク。時計が進んでいます。
+46. 🌃 The city gets quiet on Dec 31st. Everyone is home.
+12月31日、街は静かになります。みんな家にいます。
+47. 📺 "Gaki no Tsukai" (Laughing bat). Is it still on?
+「ガキの使い」（笑ってはいけない）。まだやってますか？
+48. 🙏 Thank you, 2026. You were interesting.
+ありがとう、2026年。面白かったよ。
+49. 👋 Goodbye 2026. No regrets.
+さようなら2026年。後悔はない。
+50. 🎉 Happy New Year! (Almost). See you in 2027!
+明けましておめでとう！（もう少し）。2027年に会いましょう！`
+        }
+    ]
+};
