@@ -2618,7 +2618,524 @@ False. The Moon is much larger.
 
 100. If I could surprise my future self, I’d say…
      　未来の自分を驚かせるなら、私は…と言う。`  
-  }
+} ,
+var adult_2025_end = {
+    stories: [
+        {
+            title: "Week 1: Thanksgiving & Black Friday (Nov 25 – Dec 1, 2025)",
+            content: `1. 🦃 Thanksgiving (US) is this Thursday, Nov 27th. What are you thankful for this year?
+感謝祭（米国）は今週木曜の11月27日です。今年、何に感謝していますか？
+2. 🛍️ Black Friday is Nov 28th. Are you planning to buy anything on sale?
+ブラックフライデーは11月28日です。セールで何か買う予定ですか？
+3. 🍂 November is ending. Did you see enough autumn leaves (Momiji)?
+11月が終わります。紅葉は十分に見ましたか？
+4. 🧥 It is getting colder. Have you switched to your winter coat yet?
+寒くなってきました。もう冬のコートに替えましたか？
+5. 🥧 Pumpkin Pie is traditional for Thanksgiving. Do you like pumpkin desserts?
+感謝祭にはパンプキンパイが伝統的です。カボチャのデザートは好きですか？
+6. 🏃‍♂️ Cyber Monday (Dec 1st) is for online shopping. Do you prefer Amazon or Rakuten?
+サイバーマンデー（12月1日）はネット通販の日です。アマゾンと楽天、どっちが好きですか？
+7. 🦃 Turkey meat is hard to find in Osaka. Have you ever cooked a whole turkey?
+大阪でターキー（七面鳥）を見つけるのは難しいです。七面鳥を丸ごと料理したことはありますか？
+8. 🏘️ Family gatherings can be stressful. Do you get along with your relatives?
+親戚の集まりはストレスになることがあります。親戚とは仲が良いですか？
+9. 🏙️ The sun sets very early now (around 4:50 PM). Does the darkness make you sleepy?
+日が沈むのがとても早いです（午後4時50分頃）。暗くなると眠くなりますか？
+10. 🍠 Yaki-imo (Roasted Sweet Potato) trucks are driving around. Do you buy them?
+焼き芋屋さんのトラックが回っています。買いますか？
+11. 🍲 Nabe (Hot Pot) season has truly begun. What is your favorite soup base?
+鍋の季節が本格的に始まりました。好きなスープの素は何ですか？
+12. 🧣 Do you wear a scarf (muffler) to work?
+仕事にマフラーをしていきますか？
+13. 🤧 Dry skin season. Which hand cream do you recommend?
+乾燥肌の季節です。どのハンドクリームがおすすめですか？
+14. 🏈 American Football is big on Thanksgiving. Do you understand the rules?
+感謝祭ではアメフトが盛んです。ルールは分かりますか？
+15. 🛁 Taking a long bath is the best way to warm up. Do you use bath salts (Nyuyokuzai)?
+長風呂は温まるのに最高の方法です。入浴剤を使いますか？
+16. 📆 December starts next week. Are you ready for the end of the year?
+来週から12月です。年末の準備はいいですか？
+17. 🤛 Crowds at Black Friday sales can be dangerous. Do you hate crowds?
+ブラックフライデーのセールの人混みは危険なこともあります。人混みは嫌いですか？
+18. 🌽 Cornbread and mashed potatoes. Do you like heavy side dishes?
+コーンブレッドとマッシュポテト。重たいサイドメニューは好きですか？
+19. 🧘‍♀️ Gratitude journaling. Writing down 3 happy things every day. Try it?
+感謝日記。毎日3つの幸せなことを書き留める。やってみますか？
+20. 🌬️ The wind is called "Kogarashi" (Tree Withering Wind). Is it windy today?
+風は「木枯らし」と呼ばれます。今日は風が強いですか？
+21. 🚴 Cycling in late November requires gloves. Do you have warm gloves?
+11月下旬のサイクリングには手袋が必要です。暖かい手袋を持っていますか？
+22. 🍵 Drinking hot tea (Hojicha) is relaxing. Coffee or Tea in the evening?
+熱いお茶（ほうじ茶）を飲むと落ち着きます。夜はコーヒーですか、お茶ですか？
+23. 👔 "Cool Biz" is long gone. Are you wearing a tie again?
+クールビズはずっと前に終わりました。またネクタイをしていますか？
+24. 🦃 The US President "pardons" a turkey (saves its life). Is that a funny tradition?
+米国大統領はターキーに「恩赦」を与えます（命を救います）。面白い伝統ですか？
+25. 🛍️ Buying Christmas gifts early to avoid the rush. Are you organized?
+混雑を避けるために早めにクリスマスプレゼントを買う。計画的ですか？
+26. 🛌 Using a heavy duvet (Umo-buton). Is it hard to get out of bed?
+羽毛布団を使う。ベッドから出るのが大変ですか？
+27. 🍁 Gingko trees (Icho) drop yellow leaves. The street looks gold.
+イチョウの木が黄色い葉を落とします。通りが金色に見えます。
+28. 😷 Mask wearing increases for flu prevention. Do you wear a mask?
+インフルエンザ予防でマスク着用が増えます。マスクをしますか？
+29. 📺 Watching movies at home on the holiday. What is your comfort movie?
+休日に家で映画を見る。あなたの「癒やしの映画」は何ですか？
+30. 🍲 Oden at the convenience store. What is the best item? (Daikon? Egg?)
+コンビニのおでん。一番いい具は何ですか？（大根？卵？）
+31. 🕰️ "Time flies." Can you believe 2025 is almost over?
+「光陰矢の如し」。2025年がもうすぐ終わるなんて信じられますか？
+32. 🍫 Hot Cocoa with marshmallows. Too sweet or just right?
+マシュマロ入りホットココア。甘すぎですか、丁度いいですか？
+33. 🥔 Sweet potato sweets (Suito Poteto). Do you bake?
+スイートポテト。お菓子作りをしますか？
+34. 🚶‍♂️ Walking in the crisp air clears the head. Do you walk for health?
+澄んだ空気の中を歩くと頭がすっきりします。健康のために歩きますか？
+35. 🦃 Leftover turkey sandwiches. Leftovers are delicious. Agree?
+残ったターキーのサンドイッチ。残り物は美味しいです。同意しますか？
+36. 🏙️ Winter illuminations are starting to light up. Have you seen them?
+冬のイルミネーションが点灯し始めています。見ましたか？
+37. 💳 Credit card bills will be high in January. Careful!
+1月のカード請求額が高くなります。気をつけて！
+38. 🍊 Mandarins (Mikan) are appearing in supermarkets.
+スーパーにミカンが出回っています。
+39. 🧥 Layering clothes (Kasane-gi). How many layers do you wear?
+重ね着。何枚着ていますか？
+40. 🏘️ Putting up Christmas lights on your house. Do you decorate?
+家の外にクリスマスのライトを飾る。飾り付けをしますか？
+41. 🤧 "Kazekko" (Child of the wind - healthy kid). Were you healthy as a child?
+「風の子」。子供の頃は健康でしたか？
+42. 🥣 Cream stew. White or Brown sauce?
+クリームシチュー。ホワイトソース、それともブラウンソース？
+43. 🍾 Opening a bottle of wine for celebration. Red or White?
+お祝いにワインを開ける。赤、それとも白？
+44. 🧱 Building a fire (if you have a fireplace). Most Japanese don't.
+火をおこす（暖炉があれば）。日本人のほとんどは持っていませんが。
+45. 😴 Napping after a big meal. "Food Coma."
+大食いの後の昼寝。「フードコマ（食後の昏睡）」。
+46. 🐿️ Squirrels gathering nuts for winter. Are you saving money?
+冬のために木の実を集めるリス。お金を貯めていますか？
+47. 🌂 November rain is cold. Do not forget your umbrella.
+11月の雨は冷たいです。傘を忘れないで。
+48. 🕯️ Lighting candles creates a warm atmosphere.
+キャンドルを灯すと暖かい雰囲気になります。
+49. 👖 Corduroy pants are warmer than jeans. Do you own any?
+コーデュロイのズボンはジーンズより暖かいです。持っていますか？
+50. 🙏 Gratitude is the best attitude. Thank someone today.
+感謝は最高の態度です。今日誰かに感謝しましょう。`
+        },
+        {
+            title: "Week 2: Illuminations & Winter Warmth (Dec 2 – Dec 8, 2025)",
+            content: `1. 💡 Midosuji Illumination is the world's longest illuminated street. Have you walked it this year?
+御堂筋イルミネーションは世界一長いイルミネーション通りです。今年歩きましたか？
+2. 📅 Advent Calendars start on Dec 1st. Do you open one window a day?
+アドベントカレンダーは12月1日に始まります。1日1つ窓を開けますか？
+3. 🎄 Putting up the Christmas tree. Real tree or plastic tree?
+クリスマスツリーを飾る。本物の木、それともプラスチック？
+4. 🥶 It is suddenly very cold. Did you turn on the heater (Danbo)?
+急に寒くなりました。暖房をつけましたか？
+5. 🍊 Eating Mikan under the Kotatsu. Is this the perfect Japanese winter?
+こたつでミカンを食べる。これは完璧な日本の冬ですか？
+6. 🧥 Down jackets (Uniqlo) are everywhere. Do you have one?
+ダウンジャケット（ユニクロ）があちこちにあります。持っていますか？
+7. 🕯️ Kobe Luminarie (Memorial light festival). It is crowded but beautiful.
+神戸ルミナリエ（追悼の光の祭典）。混んでいますが美しいです。
+8. 🧤 Gloves and Ear Muffs. Do you lose gloves easily?
+手袋と耳当て。手袋をすぐになくしませんか？
+9. 🍜 Hot Ramen tastes amazing in December. Miso or Tonkotsu?
+12月の熱いラーメンは最高です。味噌、それとも豚骨？
+10. 🏙️ Osaka Station "Twilight Fantasy." Have you seen the lights at the station?
+大阪駅の「トワイライトファンタジー」。駅の明かりを見ましたか？
+11. 🎼 Christmas songs are playing in every shop. Are you tired of "Last Christmas"?
+どのお店でもクリスマスソングが流れています。「ラストクリスマス」には飽きましたか？
+12. 🎅 Writing a letter to Santa. Did you do this as a child?
+サンタへの手紙を書く。子供の頃やりましたか？
+13. 🍵 Hot Sake (Atsukan) warms the body. Do you like hot alcohol?
+熱燗は体を温めます。温かいお酒は好きですか？
+14. ❄️ Will it snow in Osaka this year? Do you want snow?
+今年大阪に雪は降るでしょうか？雪が降ってほしいですか？
+15. 🧼 Washing your hands to prevent flu. Do you carry hand sanitizer?
+インフルエンザ予防の手洗い。消毒液を持ち歩いていますか？
+16. 🧣 Sharing a scarf (Muffler) with a partner. Is it romantic or silly?
+パートナーとマフラーをシェアする。ロマンチックですか、バカバカしいですか？
+17. 🍪 Baking Christmas cookies (Gingerbread men). Can you bake?
+クリスマスクッキー（ジンジャーブレッドマン）を焼く。お菓子作りはできますか？
+18. 📦 Packages arriving. Delivery drivers are very busy in December.
+荷物が届く。12月の配達員さんはとても忙しいです。
+19. 📺 Year-end music specials (FNS, etc.) on TV. Do you watch them?
+年末の音楽特番（FNSなど）。見ますか？
+20. 💇‍♂️ Getting a haircut before the New Year. Is the salon crowded?
+新年の前に散髪する。美容院は混んでいますか？
+21. 🏠 Decorating the front door with a wreath.
+玄関にリースを飾る。
+22. 🍲 Oden season. Do you put mustard (Karashi) on it?
+おでんの季節。からしをつけますか？
+23. 🕯️ Candles smell like cinnamon or pine. Scented candles?
+シナモンや松の香りのキャンドル。アロマキャンドル？
+24. 🚲 Cycling is freezing. The wind hurts your face.
+サイクリングは凍えます。風で顔が痛いです。
+25. 🧦 Fuzzy socks (Moko-moko) for wearing at home.
+家で履くもこもこ靴下。
+26. 👔 Bonus day (Winter Bonus). Did you get a bonus? What will you buy?
+ボーナス日（冬のボーナス）。ボーナスは出ましたか？何を買いますか？
+27. 🎿 Ski resorts are opening. Do you plan to ski or snowboard?
+スキー場がオープンしています。スキーかスノボの予定はありますか？
+28. 🤧 Someone sneezing on the train. Do you move away?
+電車で誰かがくしゃみをする。離れますか？
+29. ☕ Hot Chocolate. Do you add marshmallows?
+ホットチョコレート。マシュマロを入れますか？
+30. 🌉 Nakanoshima Illumination. The river reflection is pretty.
+中之島のイルミネーション。川の反射がきれいです。
+31. 🕰️ Dark mornings. It is hard to wake up when it is dark.
+暗い朝。暗いと起きるのが大変です。
+32. 🎁 Buying gifts for friends. Is it hard to choose?
+友達へのプレゼントを買う。選ぶのは難しいですか？
+33. 🍬 Candy Canes. Peppermint flavor. Do you like mint?
+キャンディケイン。ペパーミント味。ミントは好きですか？
+34. 🦠 Humidifier (Kashitsuki). Essential for dry Japanese winters.
+加湿器。日本の乾燥した冬には必須です。
+35. 🛌 Electric blanket. Once you enter, you cannot leave.
+電気毛布。一度入ったら出られません。
+36. 👔 Year-end adjustments (Tax). Paperwork is boring.
+年末調整。書類仕事は退屈です。
+37. 🏙️ The city looks beautiful at night but gray in the day.
+街は夜は美しいですが、昼は灰色です。
+38. 🛁 Yuzu bath. Putting whole yuzu fruit in the bath.
+ゆず湯。お風呂に柚子を丸ごと入れる。
+39. 🐿️ Hibernation. Do you want to sleep until spring?
+冬眠。春まで眠っていたいですか？
+40. 🍷 Mulled Wine (Hot wine with spices). Have you tried it?
+ホットワイン（スパイス入り）。試したことはありますか？
+41. 🥯 Steamed buns (Nikuman) at the convenience store. Pizza-man or Curry-man?
+コンビニの肉まん。ピザまん、それともカレーまん？
+42. 🤳 Selfies with illuminations. Is the lighting difficult?
+イルミネーションで自撮り。照明が難しくないですか？
+43. 🧥 Heattech inner wear. Are you wearing it now?
+ヒートテックのインナー。今着ていますか？
+44. 🕯️ 1/f fluctuation (candle flame movement). It is relaxing.
+1/fゆらぎ（ろうそくの炎の動き）。リラックスできます。
+45. 🐕 Dogs wearing winter sweaters. Cute?
+冬のセーターを着た犬。可愛い？
+46. 📅 Checking the calendar for holidays. No holidays in December!
+カレンダーで祝日を確認。12月には祝日がありません！
+47. 🧹 Little cleaning every day makes the Big Cleaning easier.
+毎日少しずつの掃除が大掃除を楽にします。
+48. 🦌 Reindeer decorations. Rudolph has a red nose.
+トナカイの飾り。ルドルフは赤い鼻を持っています。
+49. 🌆 Sunset is early. The day feels short.
+日没が早いです。一日が短く感じます。
+50. ✨ Shine bright like a diamond (or an LED light).
+ダイヤモンド（またはLEDライト）のように輝いて。`
+        },
+        {
+            title: "Week 3: Reflections & Forget-the-Year (Dec 9 – Dec 15, 2025)",
+            content: `1. 🖌️ "Kanji of the Year" is announced on Dec 12th (usually). What is your Kanji for 2025?
+12月12日（たいてい）に「今年の漢字」が発表されます。あなたの2025年の漢字は何ですか？
+2. 🍻 "Bonenkai" (Forget the Year Party). Do you have many scheduled?
+忘年会。予定はたくさんありますか？
+3. 🧹 O-souji (Big Cleaning). Have you started cleaning your house?
+大掃除。家の掃除を始めましたか？
+4. 🕰️ Looking back at 2025. Was it a good year or a bad year?
+2025年を振り返る。良い年でしたか、悪い年でしたか？
+5. 🤐 "What happens at the Bonenkai, stays at the Bonenkai." Secrets?
+「忘年会で起きたことは、忘年会に置いていく」。秘密？
+6. 🎤 Karaoke. Singing "All I Want for Christmas" is popular now.
+カラオケ。今は「恋人たちのクリスマス」を歌うのが人気です。
+7. 🤢 Hangover (Futsuka-yoi). Do you have a cure?
+二日酔い。治す方法はありますか？
+8. 🎁 O-seibo (Year-end gifts). Did you send gifts to your boss/clients?
+お歳暮。上司や取引先にギフトを送りましたか？
+9. 👔 Drunk salarymen sleeping on the train. A December tradition?
+電車で寝ている酔っ払いサラリーマン。12月の風物詩？
+10. ✍️ Writing Nengajo (New Year Cards). The deadline is soon (Dec 25)!
+年賀状を書く。締め切り（12月25日）はもうすぐです！
+11. 🧧 Buying Otoshidama envelopes (Pochibukuro).
+お年玉袋（ポチ袋）を買う。
+12. 🦀 Eating Crab (Kani) is a winter luxury. Expensive but delicious.
+カニを食べるのは冬の贅沢です。高いけど美味しい。
+13. 📅 Buying a 2026 diary/planner. Digital or Paper?
+2026年の手帳を買う。デジタル、それとも紙？
+14. 🧥 Dry cleaning winter coats. Do you clean them often?
+冬のコートのクリーニング。頻繁に出しますか？
+15. 🍲 Nabe parties at home. Sukiyaki or Shabu-shabu?
+家で鍋パーティー。すき焼き、それともしゃぶしゃぶ？
+16. 🚄 Booking Shinkansen for New Year. It is already full!
+正月の新幹線の予約。もう満席です！
+17. 🎅 Secret Santa at work. Did you buy a 1000 yen gift?
+職場でのシークレットサンタ。1000円のプレゼントを買いましたか？
+18. 🥶 The temperature is dropping. Is it freezing today?
+気温が下がっています。今日は凍える寒さですか？
+19. 🏃‍♂️ "Shiwasu" (December) means "Teachers run." Everyone is busy.
+「師走」（12月）は「先生が走る」という意味です。みんな忙しいです。
+20. 🥤 Ukon (Turmeric) drinks before alcohol. Do you believe in them?
+お酒の前のウコン。信じますか？
+21. 🎭 Year-end comedy shows. Laughing away the stress.
+年末のお笑い番組。ストレスを笑い飛ばす。
+22. 💇‍♀️ Beauty salons are crowded. Everyone wants to look good for New Year.
+美容院は混んでいます。みんな新年をきれいに迎えたいのです。
+23. 💸 Money flies away in December. Parties, gifts, food.
+12月はお金が飛んでいきます。パーティー、プレゼント、食べ物。
+24. 🥬 Winter vegetables (Daikon, Hakusai) are sweet.
+冬野菜（大根、白菜）は甘いです。
+25. 🏙️ The city rushes. People walk faster in December.
+街が急いでいます。12月は人々が早く歩きます。
+26. 🍵 Green tea and warm Manju. A break from the cold.
+緑茶と温かい饅頭。寒さからの休憩。
+27. 🗑️ Throwing away old things (Danshari). Start the new year fresh.
+古いものを捨てる（断捨離）。新年を新鮮にスタート。
+28. 🤧 Everyone is coughing. Stay healthy!
+みんな咳をしています。健康でいて！
+29. 🍗 Ordering Christmas Chicken (KFC). Have you reserved it?
+クリスマスチキン（KFC）の注文。予約しましたか？
+30. 🎂 Ordering Christmas Cake. Sponge cake with strawberries.
+クリスマスケーキの注文。イチゴのスポンジケーキ。
+31. 🍜 Ramen (Shime-no-ramen) after drinking. Why is it so good?
+飲んだ後のラーメン（締め）。なぜあんなに美味しいの？
+32. 🧼 Cleaning windows is cold work. Do you do it?
+窓拭きは寒い仕事です。やりますか？
+33. 🕯️ 3rd Sunday of Advent. Lighting the pink candle.
+アドベント第3主日。ピンクのキャンドルを灯す。
+34. 🧤 Losing one glove. Where is the other one?
+手袋を片方なくす。もう片方はどこ？
+35. 🕰️ The sun sets before 5 PM. The night is long.
+午後5時前に日が沈みます。夜が長いです。
+36. 🎡 Ferris wheels with illumination. Romantic date spot.
+イルミネーション付き観覧車。ロマンチックなデートスポット。
+37. 🍺 "Kampai!" (Cheers). How many times have you said it this week?
+「乾杯！」今週何回言いましたか？
+38. 🤐 Listening to the boss's long speech at the party. Boring?
+パーティーでの上司の長い話を聞く。退屈？
+39. 🚶‍♀️ Walking home in the cold air. It wakes you up.
+冷たい空気の中を歩いて帰る。目が覚めます。
+40. 🌠 Geminids Meteor Shower (Dec 14). Look up at the sky!
+ふたご座流星群（12月14日）。空を見上げて！
+41. 🛁 Bath bombs. Fizzy and smelly (in a good way).
+バスボム。シュワシュワして（良い意味で）匂います。
+42. 🕰️ Regrets of 2025. "I should have studied more."
+2025年の後悔。「もっと勉強すればよかった」。
+43. 📈 Goals for 2026. "I will study more."
+2026年の目標。「もっと勉強するぞ」。
+44. 🍲 Mochi is appearing in supermarkets. Do you like Mochi?
+スーパーにお餅が出てきました。お餅は好きですか？
+45. 🦀 Crab hot pot (Kani-nabe). Silent dinner (because peeling crab).
+カニ鍋。静かな夕食（カニを剥くから）。
+46. 🧥 Wool coat vs. Down coat. Style or Warmth?
+ウールコート対ダウンコート。スタイル、それとも暖かさ？
+47. 🧣 Knitted scarf. Did you make it or buy it?
+ニットのマフラー。作りましたか、買いましたか？
+48. 🤧 Vitamin C (Mikan) prevents colds. Eat 3 a day.
+ビタミンC（ミカン）は風邪を防ぎます。1日3個食べて。
+49. 🛌 Sleeping in on Sunday. It is too cold to get up.
+日曜の朝寝坊。寒すぎて起きられません。
+50. 🙏 Thank you, 2025. You are almost done.
+ありがとう、2025年。もうすぐ終わりですね。`
+        },
+        {
+            title: "Week 4: The Winter Solstice & Rush (Dec 16 – Dec 22, 2025)",
+            content: `1. 🌞 Winter Solstice (Toji) is Dec 21st. The shortest day of the year.
+冬至は12月21日です。一年で最も日が短い日です。
+2. 🎃 On Winter Solstice, we eat Pumpkin (Kabocha). Did you eat it?
+冬至にはカボチャを食べます。食べましたか？
+3. 🛁 Yuzu Bath (Yuzu-yu). Floating citrus in the bath warms you up.
+ゆず湯。お風呂に柑橘類を浮かべると温まります。
+4. 🏃‍♂️ The end-of-year rush. Are you running around?
+年末の慌ただしさ。走り回っていますか？
+5. 🎄 Christmas is next week! Are you excited or stressed?
+来週はクリスマスです！ワクワクしますか、ストレスですか？
+6. 🎁 Wrapping presents. Are you good with tape and ribbons?
+プレゼントを包む。テープとリボンの扱いは得意ですか？
+7. 💳 Last minute shopping. The malls are crazy crowded.
+土壇場の買い物。モールは恐ろしく混んでいます。
+8. 🎅 Santa Claus is coming to town. Have you been good?
+サンタが街にやってくる。良い子にしていましたか？
+9. 🥶 It is freezing! Is it snowing in your hometown?
+凍えるようです！故郷では雪が降っていますか？
+10. 🍜 Toshikoshi Soba (Year-crossing noodles). Have you bought the ingredients?
+年越しそば。材料は買いましたか？
+11. 🍻 One last Bonenkai. Can your liver survive?
+最後の忘年会。肝臓は生き残れますか？
+12. 👔 Working until Dec 28th? When is your "Goyo-osame" (Last work day)?
+28日まで仕事ですか？仕事納めはいつですか？
+13. 🧹 Kitchen ventilation fan cleaning. The worst job of the year.
+キッチンの換気扇掃除。一年で最悪の仕事。
+14. 📮 Posting Nengajo. If you post by Dec 25, it arrives on Jan 1.
+年賀状を投函する。25日までに出せば元旦に届きます。
+15. 🧒 Kids are on Winter Break soon. Are they happy?
+子供たちはもうすぐ冬休みです。嬉しそうですか？
+16. ⛷️ Ski trip planning. Are you going to Hokkaido or Nagano?
+スキー旅行の計画。北海道に行きますか、長野に行きますか？
+17. 🍗 Fried Chicken shortage? Order early!
+フライドチキン不足？早めに注文して！
+18. 🍷 Mulled Wine (Hot Wine). It smells like Christmas markets.
+ホットワイン。クリスマスマーケットの匂いがします。
+19. 🦌 Reindeer antlers headband. Will you wear it at the party?
+トナカイの角のカチューシャ。パーティーで着けますか？
+20. 🕯️ 4th Sunday of Advent. All candles are lit.
+アドベント第4主日。全てのキャンドルが灯りました。
+21. 🍰 Strawberry Shortcake. The price of strawberries goes up now.
+イチゴのショートケーキ。今、イチゴの値段が上がります。
+22. 🎼 Handel's "Messiah" (Hallelujah Chorus). Do you like classical music?
+ヘンデルの「メサイア」（ハレルヤ・コーラス）。クラシック音楽は好きですか？
+23. 🏙️ Illuminations are at their peak beauty.
+イルミネーションの美しさがピークです。
+24. 🧤 Frozen fingers. Texting outside is impossible.
+凍った指。外でのメール打ちは不可能です。
+25. 😷 Masks keep your face warm and prevent flu. Win-win.
+マスクは顔を温め、インフルエンザを防ぎます。一石二鳥。
+26. 🧥 Coat Check at the restaurant. Don't lose your ticket.
+レストランのクローク。引換券をなくさないで。
+27. 🛌 Staying in bed all Sunday. Hibernation mode.
+日曜はずっとベッドにいる。冬眠モード。
+28. 🥡 Ordering pizza because you are too busy to cook.
+忙しすぎて料理できないのでピザを頼む。
+29. 🍫 Chocolate advent calendar. Only a few chocolates left!
+チョコのアドベントカレンダー。あと数個しか残っていません！
+30. 🏘️ Neighbors' lights are bright. Too bright?
+近所の家のライトが明るい。明るすぎ？
+31. 🕴️ "Yoi Otoshi Wo" (Have a good year). Start saying it now.
+「良いお年を」。今から言い始めましょう。
+32. 🏦 Banks are crowded. Get new bills for Otoshidama.
+銀行は混んでいます。お年玉用の新札を手に入れて。
+33. 🍣 Ordering Osechi (New Year Food) or Sushi.
+おせちや寿司の注文。
+34. 🛒 Supermarkets are full of expensive New Year foods (Kamaboko).
+スーパーは高い正月食材（かまぼこ）でいっぱいです。
+35. 🍵 Hot green tea and a kotatsu. I never want to move.
+熱い緑茶とこたつ。二度と動きたくない。
+36. 🌬️ Cold wind hurts the skin. Use moisturizer.
+冷たい風が肌を痛めます。保湿剤を使って。
+37. 🕯️ Candlelight dinner. Practice for Christmas Eve?
+キャンドルディナー。イブの練習？
+38. 👯 Couples walking holding hands in pockets.
+ポケットの中で手を繋いで歩くカップル。
+39. 📺 TV specials are boring? Or fun?
+テレビ特番は退屈？それとも楽しい？
+40. 💇‍♀️ New hair for the New Year. Fresh start.
+新年のための新しい髪型。新鮮なスタート。
+41. 🤧 Don't catch a cold before the holidays!
+休みの前に風邪をひかないで！
+42. 🚆 Shinkansen packed to 200% capacity. Standing room only.
+新幹線は乗車率200％。立ち席のみ。
+43. 🐟 Buying a whole fish (Bur or Tai) for New Year.
+正月用に魚を丸ごと買う（ブリやタイ）。
+44. 👞 Polishing shoes. Clean shoes for a clean year.
+靴磨き。きれいな靴できれいな一年を。
+45. 🕰️ The days start getting longer after Solstice! Good news.
+冬至を過ぎれば日が長くなり始めます！朗報です。
+46. 🍊 Peeling a mikan in one piece. Can you do it?
+ミカンの皮を繋げて剥く。できますか？
+47. 🍪 Cookies for Santa. Do you eat them yourself?
+サンタ用クッキー。自分で食べちゃいますか？
+48. 🛁 Bath salts with forest scent. Relaxing.
+森の香りのバスソルト。リラックス。
+49. 📅 Reviewing your 2025 goals. Did you succeed?
+2025年の目標を見直す。成功しましたか？
+50. ✨ Almost Christmas! Breathe and enjoy the lights.
+もうすぐクリスマス！深呼吸して明かりを楽しんで。`
+        },
+        {
+            title: "Week 5: The Christmas Climax (Dec 23 – Dec 25, 2025)",
+            content: `1. 🎄 Dec 23rd. Tomorrow is Christmas Eve! Are you ready?
+12月23日。明日はクリスマスイブです！準備はいいですか？
+2. 🍗 Dec 24th (Eve). Eating KFC and Cake. The Japanese way.
+12月24日（イブ）。KFCとケーキを食べる。日本流です。
+3. 🎅 Dec 25th (Day). Santa came! Did you get presents?
+12月25日（当日）。サンタが来た！プレゼントをもらいましたか？
+4. 💑 Christmas Eve is for couples in Japan. Date night?
+日本ではイブはカップルの日です。デートナイト？
+5. 👨‍👩‍👧‍👦 Christmas Day is a normal work day in Japan. Sad?
+日本ではクリスマス当日は普通の仕事の日です。悲しい？
+6. 🦃 Roast Turkey. Did you find one in Osaka?
+ローストターキー。大阪で見つけられましたか？
+7. 🎂 Sponge cake with strawberries. Did you eat the Santa sugar doll?
+イチゴのショートケーキ。サンタの砂糖菓子を食べましたか？
+8. 🍷 Champagne toast. Cheers!
+シャンパンで乾杯。乾杯！
+9. 🎁 Opening presents. Tearing the paper!
+プレゼントを開ける。紙を破って！
+10. 🕯️ Silent Night. Is your neighborhood quiet?
+きよしこの夜。近所は静かですか？
+11. ⛪ Midnight Mass at church. Have you ever gone?
+教会の真夜中のミサ。行ったことはありますか？
+12. 🥶 It is cold! Maybe it will snow (White Christmas)?
+寒いです！雪が降るかも（ホワイトクリスマス）？
+13. 🦌 Rudolph the Red-Nosed Reindeer. Can you sing it?
+赤鼻のトナカイ。歌えますか？
+14. 🍗 Chicken bones. Making soup with leftovers?
+チキンの骨。残りでスープを作りますか？
+15. 🧒 Kids waking up at 5 AM. "Santa was here!"
+朝5時に起きる子供たち。「サンタがいた！」
+16. 📦 Boxing Day (Dec 26). In the UK, this is a shopping day.
+ボクシングデー（12月26日）。英国では買い物の日です。
+17. 🎍 Dec 26th in Japan: Christmas trees disappear, Kadomatsu appear.
+日本の12月26日：ツリーが消え、門松が現れます。
+18. 🧹 The switch from Christmas to New Year is instant. Fast!
+クリスマスから正月への切り替えは一瞬です。速い！
+19. 💏 Did you confess your love on Christmas Eve?
+クリスマスイブに告白しましたか？
+20. 🏨 Love Hotels are fully booked on Dec 24. (Adult topic!)
+12月24日、ラブホテルは満室です。（大人の話題！）
+21. 🍕 Ordering pizza on Eve. 3 hour wait time?
+イブにピザを頼む。3時間待ち？
+22. 🏙️ The illuminations look their best tonight.
+今夜、イルミネーションが最高に見えます。
+23. 🧥 Wearing red or green clothes. Festive fashion.
+赤や緑の服を着る。お祭りファッション。
+24. 🧦 Stockings filled with candy. Did you hang one?
+お菓子が詰まった靴下。吊るしましたか？
+25. 🎥 "Home Alone" or "Die Hard"? Best Christmas movie?
+「ホーム・アローン」か「ダイ・ハード」か？最高のクリスマス映画は？
+26. 🎶 Wham! "Last Christmas". Are you sick of it yet?
+ワム！の「ラストクリスマス」。もううんざり？
+27. 🥂 Drinking too much wine. Headache tomorrow?
+ワインを飲みすぎる。明日は頭痛？
+28. 🕯️ Candles on the table. Don't burn the house down.
+テーブルの上のキャンドル。家を燃やさないで。
+29. 🧀 Cheese fondue party. Warm and delicious.
+チーズフォンデュパーティー。温かくて美味しい。
+30. 🥪 Leftover chicken sandwiches for lunch.
+ランチは残ったチキンのサンドイッチ。
+31. 🕺 Office party. Did the boss wear a Santa hat?
+オフィスパーティー。上司はサンタ帽を被りましたか？
+32. 💔 Breaking up before Christmas. "Christmas breakup."
+クリスマス前に別れる。「クリスマスの破局」。
+33. 💍 Proposing on Christmas. A diamond ring?
+クリスマスにプロポーズ。ダイヤモンドの指輪？
+34. 🤶 Mrs. Claus. Does she do all the work?
+ミセス・クロース（サンタの妻）。彼女が仕事を全部やってるの？
+35. 🍪 Gingerbread house. Did you make one?
+ジンジャーブレッドハウス。作りましたか？
+36. 🍬 Candy Canes. Sticky hands.
+キャンディケイン。手がベタベタ。
+37. 🌃 The city is sparkling. Osaka looks magical.
+街が輝いています。大阪は魔法のようです。
+38. 🧣 It's freezing outside. Stay warm inside.
+外は凍えます。中で暖かくして。
+39. 🕰️ The year is almost over. 6 days left!
+一年がほぼ終わりました。あと6日！
+40. 🎍 Buying New Year decorations.
+正月飾りを買う。
+41. 📮 Writing the last Nengajo. Hurry!
+最後の年賀状を書く。急いで！
+42. 🛁 Relaxing bath after the party.
+パーティーの後のリラックスお風呂。
+43. 😴 Tired parents. Santa is exhausted.
+疲れた親たち。サンタはヘトヘトです。
+44. 🏙️ Tokyo vs Osaka Christmas. Which is better?
+東京対大阪のクリスマス。どっちがいい？
+45. ⛸️ Skating rink date. Romantic?
+スケートリンクデート。ロマンチック？
+46. 🍷 Eggnog. Have you ever tried this drink?
+エッグノッグ。この飲み物を試したことはありますか？
+47. 🌟 The star on top of the tree. Who puts it on?
+ツリーのてっぺんの星。誰が乗せますか？
+48. 🎁 Giving is better than receiving. Do you agree?
+与えることは受け取ることより良い。同意しますか？
+49. 🗓️ Next stop: New Year's Eve. Get ready.
+次は大晦日。準備して。
+50. 🎅 Merry Christmas to all, and to all a good night!
+みなさんメリークリスマス、そしておやすみなさい！`
+        }
     ]
 };
 
