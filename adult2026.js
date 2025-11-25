@@ -4730,3 +4730,415 @@ KFCがクリスマスチキンの注文受付。日本だけです。
 さようならハロウィン。また来年！`
         },
         
+{
+            title: "Week 45: Remembering (Nov 5 – Nov 11)",
+            content: `1. 🔥 November 5th is Guy Fawkes Night in the UK. They light big bonfires. Do you like fire?
+11月5日は英国のガイ・フォークス・ナイトです。大きな焚き火をします。火は好きですか？
+2. 🌺 Remembrance Day (Nov 11) in the UK/Canada. People wear red poppies. Have you seen them?
+英国やカナダではリメンバーランス・デー（11月11日）。人々は赤いポピーを身につけます。見たことありますか？
+3. 🍫 November 11th is "Pocky Day" in Japan. Did you buy Pocky?
+日本では11月11日は「ポッキーの日」です。ポッキーを買いましたか？
+4. 🛍️ "Singles Day" (11/11) in China is the biggest shopping day in the world. Did you buy anything online?
+中国の「独身の日」（11/11）は世界最大のショッピングデーです。ネットで何か買いましたか？
+5. 🎖️ Veterans Day in the US honors soldiers. Do you know anyone in the military?
+米国の退役軍人の日は兵士を称えます。軍関係の知り合いはいますか？
+6. 🪵 Bonfires smell like winter. Do you have memories of campfires?
+焚き火は冬の匂いがします。キャンプファイヤーの思い出はありますか？
+7. 🧣 It is getting colder. Have you started wearing a scarf?
+寒くなってきました。マフラーをし始めましたか？
+8. 🍲 Nabe (Hot pot) season is officially here. Kimchi Nabe or Chanko Nabe?
+鍋の季節が正式に到来しました。キムチ鍋、それともちゃんこ鍋？
+9. 🍫 Pocky or Pretz? Sweet or Salty?
+ポッキー派、プリッツ派？甘い、しょっぱい？
+10. 🕚 At 11:00 on 11/11, silence is observed in the UK. Can you be silent for 2 minutes?
+英国では11月11日の11時に黙祷を捧げます。2分間黙っていられますか？
+11. 🍂 Fallen leaves are everywhere. Do you like the sound of crunching leaves?
+落ち葉があちこちにあります。葉を踏む音は好きですか？
+12. 🛌 Waking up is hard when the duvet is warm. Do you hit snooze?
+布団が暖かいと起きるのが辛いです。スヌーズボタンを押しますか？
+13. 🤧 Dry air causes sore throats. Do you have a humidifier?
+乾燥した空気は喉の痛みを引き起こします。加湿器を持っていますか？
+14. 🧥 Trench coats vs. Puffer jackets. Which is more stylish?
+トレンチコート対ダウンジャケット。どっちがスタイリッシュですか？
+15. 🕰️ The sun sets at 5 PM. The days are short. Do you get sad?
+午後5時には日が沈みます。日が短いです。悲しくなりますか？
+16. 🍵 Roasted sweet potato (Yaki-imo) trucks. The song is catchy.
+焼き芋屋さんのトラック。あの歌は耳に残ります。
+17. 🎆 Winter fireworks exist, but summer is better. Agree?
+冬の花火もありますが、夏の方がいいですよね。同意しますか？
+18. 🕯️ Lighting a candle for peace. Do you pray for world peace?
+平和のためにキャンドルを灯す。世界平和を祈りますか？
+19. 🚲 Cycling in the cold wind. Gloves are necessary.
+冷たい風の中のサイクリング。手袋が必要です。
+20. 🍫 Sharing Pocky with friends. "Pocky Game" (eating from both ends). Have you played?
+友達とポッキーをシェア。「ポッキーゲーム」（両端から食べる）。やったことありますか？
+21. 🧤 Touchscreen gloves. Do they actually work?
+スマホ対応手袋。本当に使えますか？
+22. 🥔 Stew and soup season. Cream stew with rice or bread?
+シチューとスープの季節。クリームシチューにはご飯、それともパン？
+23. 😷 Masks keep your face warm. Is that a benefit of wearing a mask?
+マスクは顔を暖かく保ちます。それはマスクの利点ですか？
+24. 🌡️ Temperature difference between day and night is huge. Don't catch a cold.
+昼夜の気温差が激しいです。風邪をひかないで。
+25. 📺 Christmas commercials start appearing. Too early?
+クリスマスのCMが流れ始めます。早すぎますか？
+26. 🚶‍♂️ Walking in the crisp autumn air. It clears the mind.
+秋の澄んだ空気の中を歩く。頭がすっきりします。
+27. 💇‍♀️ Changing hair color to a darker shade for winter.
+冬に向けて髪色を暗くする。
+28. 🍜 Ramen tastes better in November. Miso Ramen?
+11月のラーメンはより美味しいです。味噌ラーメン？
+29. 📅 Only 7 weeks left in the year. Are you panicking?
+今年もあと7週間です。パニックになっていますか？
+30. 🛁 Long baths with bath salts. What is your favorite scent?
+バスソルトを入れて長風呂。好きな香りは何ですか？
+31. 👢 Boots fashion. High heels or flat boots?
+ブーツファッション。ハイヒール、それともフラット？
+32. 🧱 Guy Fawkes tried to blow up Parliament (Gunpowder Plot). A rebel hero?
+ガイ・フォークスは国会を爆破しようとしました（火薬陰謀事件）。反逆のヒーロー？
+33. 🦠 Virus season. Wash your hands!
+ウイルスの季節。手を洗って！
+34. 🍵 Hot Lemonade or Hot Ginger Ale. Good for colds.
+ホットレモネードやホットジンジャーエール。風邪に良いです。
+35. 🥧 Meat pies are traditional in UK winter. Steak and Kidney?
+ミートパイは英国の冬の伝統です。ステーキ＆キドニー？
+36. 🧶 Wearing a wool sweater. Is it itchy?
+ウールのセーターを着る。チクチクしますか？
+37. 🐿️ Squirrels storing nuts. Are you saving money for Christmas?
+木の実を貯めるリス。クリスマスのために貯金していますか？
+38. 🛌 Electric blanket (Denki-mofu). Once you use it, you can't go back.
+電気毛布。一度使ったら戻れません。
+39. 🌬️ The wind is called "Kogarashi". It means "Tree Withering Wind".
+風は「木枯らし」と呼ばれます。「木を枯らす風」という意味です。
+40. 🍊 Eating mandarins (Mikan) at your desk. Your fingers turn yellow.
+机でミカンを食べる。指が黄色くなります。
+41. 🛍️ Pre-Christmas sales. Do you buy gifts early?
+クリスマス前のセール。早めにプレゼントを買いますか？
+42. 🎼 Classical concerts. Beethoven's 9th Symphony is coming.
+クラシックコンサート。ベートーヴェンの第九がやってきます。
+43. 🤧 Sniffling on the train. Everyone is sick.
+電車ですする鼻水。みんな病気です。
+44. 🏰 Castles look lonely in winter.
+冬の城は寂しげに見えます。
+45. 🕰️ "Lest we forget." (Phrase for Remembrance). Do you remember your ancestors?
+「我々が忘れないように（追悼の言葉）」。先祖を覚えていますか？
+46. 🧣 Knitting a scarf for a boyfriend. Is it heavy love?
+彼氏にマフラーを編む。愛が重いですか？
+47. 🏙️ The city lights look brighter in cold air.
+冷たい空気の中で街の明かりがより明るく見えます。
+48. 🍫 Hot Chocolate with marshmallows. Comfort in a cup.
+マシュマロ入りホットチョコレート。カップの中の癒やし。
+49. 🐕 Dogs wearing sweaters. Cute or silly?
+セーターを着た犬。可愛いですか、バカバカしいですか？
+50. 🔥 Keep the fire burning. Stay warm!
+火を絶やさないで。暖かくして！`
+        },
+        {
+            title: "Week 46: Children's Milestones (Nov 12 – Nov 18)",
+            content: `1. 👘 November 15th is Shichi-Go-San (7-5-3). Did you celebrate it as a child?
+11月15日は七五三です。子供の頃お祝いしましたか？
+2. 🍬 Chitose-ame (Long candy). It symbolizes long life. Did you eat it?
+千歳飴（長い飴）。長寿を象徴します。食べましたか？
+3. 📸 Photo studios are busy with kids in Kimono. Do you like having your photo taken?
+写真館は着物姿の子供で忙しいです。写真を撮られるのは好きですか？
+4. 🧒 3 years old, 5 years old, 7 years old. Which age is the cutest?
+3歳、5歳、7歳。どの年齢が一番可愛いですか？
+5. 👔 Dressing up in formal clothes. Do kids hate it?
+正装する。子供はそれを嫌がりますか？
+6. ⛩️ Visiting the shrine to pray for health. Do you go to shrines often?
+健康を祈るために神社へ行く。よく神社に行きますか？
+7. 🎢 Taking kids to a theme park as a reward. Bribery?
+ご褒美に子供をテーマパークに連れて行く。賄賂ですか？
+8. 👴 Grandparents buy expensive Kimono. Who pays in your family?
+祖父母が高い着物を買います。あなたの家では誰が払いますか？
+9. 🕰️ "Children grow up so fast." Do you agree?
+「子供の成長は早い」。同意しますか？
+10. 👶 Do you have photos of yourself as a baby?
+赤ちゃんの頃の自分の写真はありますか？
+11. 🎂 Birthday parties vs. Traditional celebrations. Which is more important?
+誕生日パーティー対伝統的なお祝い。どっちが大事ですか？
+12. 🍱 Eating Red Rice (Sekihan) for celebration. Do you like sticky rice?
+お祝いに赤飯を食べる。もち米は好きですか？
+13. 💇‍♀️ Kids doing hair and makeup. They look like mini adults.
+ヘアメイクをする子供たち。小さな大人のようです。
+14. 🧥 It is cold at the shrine. Kids crying in the cold.
+神社は寒いです。寒さで泣く子供たち。
+15. 🎁 Toys today are high-tech. Did you play with simple toys?
+今のおもちゃはハイテクです。単純なおもちゃで遊びましたか？
+16. 🧒 "The terrible twos" (Rebellious age). Were you a difficult child?
+「魔の2歳児」（反抗期）。あなたは手のかかる子供でしたか？
+17. 📏 Measuring height on a pillar. Did your parents mark your height?
+柱で身長を測る。親はあなたの身長を記録しましたか？
+18. 🦷 Losing baby teeth. Did you throw them on the roof or under the pillow?
+乳歯が抜ける。屋根に投げましたか、枕の下に入れましたか？
+19. 🚲 Learning to ride a bike. Did you fall down a lot?
+自転車の練習。たくさん転びましたか？
+20. 🎒 First day of school. Were you excited or scared?
+学校の初日。ワクワクしましたか、怖かったですか？
+21. 👨‍👩‍👧‍👦 Parenting is hard work. Do you want a big family?
+子育ては重労働です。大家族が欲しいですか？
+22. 🧸 Keeping childhood toys. Do you still have a teddy bear?
+子供の頃のおもちゃを取っておく。まだテディベアを持っていますか？
+23. 📺 Kids watch YouTube now. Did you watch cartoons?
+今の子供はYouTubeを見ます。アニメを見ましたか？
+24. 🎮 Video games limit. 1 hour a day?
+ゲームの制限。1日1時間？
+25. 🍬 Sugar makes kids hyperactive. Do you limit sugar?
+砂糖は子供を興奮させます。砂糖を制限しますか？
+26. 🏞️ Playing outside vs. Playing inside. Which is better?
+外遊び対家遊び。どっちがいい？
+27. 🥋 Learning piano or swimming. Did you have lessons?
+ピアノや水泳を習う。習い事をしていましたか？
+28. 🛌 Bedtime stories. What was your favorite story?
+寝る前のお話。好きなお話は何でしたか？
+29. 🤱 A mother's love. Is it the strongest force on earth?
+母の愛。地上で最強の力ですか？
+30. 👨‍👦 Like father, like son. Do you have your father's habits?
+似た者親子。父親の癖を受け継いでいますか？
+31. 📸 Digital photos vs. Printed albums. Do you print photos?
+デジタル写真対アルバム。写真を現像しますか？
+32. 👵 Grandparents spoiling grandkids. Is it their job?
+孫を甘やかす祖父母。それが彼らの仕事ですか？
+33. 👶 The smell of a baby. Powder and milk.
+赤ちゃんの匂い。パウダーとミルク。
+34. 🐢 Turtles live a long time. Chitose-ame bags have turtles on them.
+亀は長生きします。千歳飴の袋には亀が描かれています。
+35. 🦗 Catching bugs. Kids are not afraid. Are you?
+虫捕り。子供は怖がりません。あなたは？
+36. 🎨 Kids' drawings. Are they art or scribbles?
+子供の絵。芸術ですか、落書きですか？
+37. 🤧 Kids get sick often. Parents need patience.
+子供はよく病気になります。親には忍耐が必要です。
+38. 🧥 Hand-me-down clothes (O-sagari). Did you wear your brother's clothes?
+お下がりの服。兄弟の服を着ましたか？
+39. 🕰️ "Enjoy it while it lasts." Childhood is short.
+「今のうちに楽しんで」。子供時代は短いです。
+40. 🎓 Graduation is a milestone. Crying parents.
+卒業は節目です。泣く親たち。
+41. 🧒 Innocence. Do you miss being innocent?
+無邪気さ。無邪気だった頃が恋しいですか？
+42. 🛤️ The path of life. 7-5-3 is just the beginning.
+人生の道。七五三は始まりに過ぎません。
+43. 👘 Hakama for 5-year-old boys. They feel like Samurai.
+5歳の男の子の袴。彼らは侍気分です。
+44. 💇‍♀️ 7-year-old girls wearing Obi. It is tight and uncomfortable.
+7歳の女の子の帯。きつくて不快です。
+45. 🍬 The candy is sticky and breaks teeth. Be careful.
+飴はベタベタして歯が欠けます。気をつけて。
+46. ⛩️ Omikuji (Fortune) at the shrine. Did you get Daikichi (Great luck)?
+神社のおみくじ。大吉が出ましたか？
+47. 📸 Smiling for the camera. "Say Cheese!"
+カメラに向かって笑顔。「ハイ、チーズ！」
+48. 🌇 Walking home holding hands. A precious memory.
+手を繋いで歩いて帰る。大切な思い出。
+49. 👨‍👩‍👧‍👦 Family dinner to celebrate. Sushi or Steak?
+お祝いの家族ディナー。寿司、それともステーキ？
+50. 🌟 Every child is a star. Let them shine.
+すべての子供は星です。輝かせてあげて。`
+        },
+        {
+            title: "Week 47: Gratitude (Nov 19 – Nov 25)",
+            content: `1. 🌾 November 23rd is Labor Thanksgiving Day in Japan. Who do you thank?
+11月23日は日本の勤労感謝の日です。誰に感謝しますか？
+2. 🦃 In the US, Thanksgiving is next week. Are you ready for a feast?
+米国では来週が感謝祭です。ご馳走の準備はいいですか？
+3. 👷‍♂️ Thanking workers. Do you say thank you to bus drivers/cashiers?
+労働者に感謝する。バスの運転手やレジ係にありがとうと言いますか？
+4. 🍽️ Harvest festival. Rice, wheat, vegetables. Are you thankful for food?
+収穫祭。米、小麦、野菜。食べ物に感謝していますか？
+5. 🚜 Tractors on the road. Farmers work hard. Do you buy local?
+道路上のトラクター。農家は懸命に働いています。地元のものを買いますか？
+6. 🙏 "Itadakimasu" (I humbly receive). A beautiful Japanese custom.
+「いただきます」。美しい日本の習慣です。
+7. 🦃 Turkey vs. Chicken. Which bird tastes better?
+ターキー対チキン。どっちの鳥が美味しい？
+8. 🥧 Pumpkin Pie with whipped cream. Too sweet?
+ホイップクリーム付きパンプキンパイ。甘すぎ？
+9. 👨‍👩‍👧‍👦 Family gathering. Do you discuss politics at dinner? (Dangerous!)
+家族の集まり。夕食時に政治の話をしますか？（危険です！）
+10. 🏉 Watching sports after dinner. Do you fall asleep on the sofa?
+食後にスポーツを見る。ソファで寝てしまいますか？
+11. 🛍️ Black Friday ads are everywhere. Are you making a shopping list?
+ブラックフライデーの広告があちこちに。買い物リストを作っていますか？
+12. 🍂 Raking leaves before the snow comes. Is your garden ready?
+雪が降る前の落ち葉かき。庭の準備はできていますか？
+13. 👔 "Thank you for your hard work" (Otsukaresama). Do you say this 100 times a day?
+「お疲れ様です」。1日100回言いますか？
+14. 🎁 Gift giving season is approaching. Are you generous?
+贈り物の季節が近づいています。あなたは気前がいいですか？
+15. 🛁 Relaxing in an Onsen on the holiday. Best way to say thanks to your body.
+休日に温泉でリラックス。自分の体に感謝する最良の方法。
+16. 📝 Writing a gratitude journal. 3 things you are happy about.
+感謝日記を書く。嬉しかったこと3つ。
+17. 🤝 Shaking hands or hugging? How do you greet family?
+握手、それともハグ？家族にどう挨拶しますか？
+18. 🍷 Beaujolais Nouveau (French wine) is released this week (3rd Thursday). Do you drink it?
+ボジョレーヌーボー（フランスワイン）が今週（第3木曜）解禁です。飲みますか？
+19. 🍇 Is young wine delicious or just juice?
+若いワインは美味しいですか、それともただのジュース？
+20. 🤒 Don't work too hard. Rest is important too.
+働きすぎないで。休息も重要です。
+21. 🌽 Cornucopia (Horn of Plenty). Symbol of abundance. Do you have enough?
+コーヌコピア（豊穣の角）。豊かさの象徴。あなたは十分持っていますか？
+22. 🥔 Mashed potatoes. Lumpy or smooth?
+マッシュポテト。粒あり、それとも滑らか？
+23. 🥣 Cranberry sauce. Canned or fresh?
+クランベリーソース。缶詰、それとも生？
+24. 🚶‍♂️ Post-dinner walk to digest. Do you walk or nap?
+消化のための食後の散歩。歩きますか、寝ますか？
+25. 🏙️ Winter illuminations are starting. Midosuji is sparkling.
+冬のイルミネーションが始まっています。御堂筋が輝いています。
+26. 🧥 Wearing a heavy coat. Is it too hot on the train?
+厚手のコートを着る。電車の中は暑すぎませんか？
+27. 🤧 Everyone has a sniffle. Are you taking vitamins?
+みんな鼻をすすっています。ビタミンを摂っていますか？
+28. 🍵 Green tea helps digestion. Tea after a meal?
+緑茶は消化を助けます。食後にお茶？
+29. 🕰️ The year is almost over. Who helped you this year?
+1年がほぼ終わります。今年誰があなたを助けてくれましたか？
+30. 💌 Sending a Thank You card. Handwritten is best.
+お礼状を送る。手書きが一番です。
+31. 🍁 Momiji are falling. The ground is red.
+紅葉が散っています。地面が赤いです。
+32. 🧱 Building a fire in the fireplace. (Or turning on the heater).
+暖炉に火をおこす。（またはヒーターをつける）。
+33. 🥘 Potluck party (Everyone brings a dish). What do you cook?
+持ち寄りパーティー。あなたは何を作りますか？
+34. 🥧 Apple Pie. With cheese? (Some people do this).
+アップルパイ。チーズと一緒に？（そうする人もいます）。
+35. 👨‍🍳 Who cooks the big meal? Mom? Dad? You?
+誰がご馳走を作りますか？ママ？パパ？あなた？
+36. 🥶 Cold wind. Winter is knocking on the door.
+冷たい風。冬がドアをノックしています。
+37. 🛍️ Cyber Monday is coming. Do you shop online?
+サイバーマンデーが来ます。ネットで買い物しますか？
+38. 💳 Credit card bill will be high next month. Warning!
+来月のカード請求額が高くなります。警告！
+39. 🚲 Cycling in winter requires gloves and ear muffs.
+冬のサイクリングには手袋と耳当てが必要です。
+40. 🕯️ Candles on the table. Cozy atmosphere.
+テーブルにキャンドル。居心地の良い雰囲気。
+41. 🦃 Pardoning the Turkey. The US President saves one bird. Weird?
+ターキーへの恩赦。大統領が一羽の鳥を救います。変ですか？
+42. 🕰️ Cooking takes 6 hours, eating takes 20 minutes. Is it fair?
+料理に6時間、食べるのに20分。公平ですか？
+43. 😴 Food coma (Sleepy after eating). Tryptophan in turkey?
+フードコマ（食べて眠くなる）。ターキーのトリプトファン？
+44. 🏘️ Neighbors. Do you know them well enough to share food?
+近所の人。食べ物を分け合うほど親しいですか？
+45. ❄️ First snow in Hokkaido. Osaka is just rain.
+北海道で初雪。大阪はただの雨。
+46. 🧣 Scarf fashion. Checkered or plain?
+マフラーのファッション。チェック柄、それとも無地？
+47. 👢 Boots. Keeping your toes warm is priority #1.
+ブーツ。つま先を暖めるのが最優先。
+48. 🍫 Hot Cocoa season. With marshmallows.
+ホットココアの季節。マシュマロ入り。
+49. 👃 The smell of roasting meat. Makes you hungry.
+肉を焼く匂い。お腹が空きます。
+50. 🙏 Gratitude changes your attitude. Be thankful.
+感謝は態度を変えます。感謝しましょう。`
+        },
+        {
+            title: "Week 48: Turkey & Shopping (Nov 26 – Dec 2)",
+            content: `1. 🦃 Happy Thanksgiving (US - Nov 26). Did you eat too much?
+ハッピーサンクスギビング（米国11/26）。食べすぎましたか？
+2. 🛍️ Black Friday (Nov 27). Did you fight for a cheap TV?
+ブラックフライデー（11/27）。安いテレビのために戦いましたか？
+3. 🛒 Cyber Monday (Nov 30). Shopping in your pajamas at work.
+サイバーマンデー（11/30）。仕事中にパジャマで買い物。
+4. 🎄 December 1st. Is it okay to put up the Christmas tree now?
+12月1日。もうクリスマスツリーを飾ってもいいですか？
+5. 🍗 Leftover turkey soup, turkey sandwich, turkey salad. Are you sick of turkey?
+残ったターキーのスープ、サンドイッチ、サラダ。ターキーにはうんざり？
+6. 🏃‍♂️ Diet starts tomorrow. Or maybe January 1st?
+ダイエットは明日から。それとも1月1日？
+7. 📅 Advent Calendar. One chocolate a day. Do you cheat and eat two?
+アドベントカレンダー。1日1個のチョコ。ズルして2個食べますか？
+8. 🧥 Winter coat is essential now. Down or Wool?
+冬のコートが必須です。ダウン、それともウール？
+9. 🥶 December is here. The final countdown begins.
+12月が来ました。最後のカウントダウンが始まります。
+10. 🍻 Bonenkai (Forget the Year Party) planning. How many parties do you have?
+忘年会の計画。いくつパーティーがありますか？
+11. 🎤 Karaoke Bonenkai. Can you sing "All I Want for Christmas"?
+カラオケ忘年会。「恋人たちのクリスマス」を歌えますか？
+12. 🎁 Secret Santa (Gift exchange). Spending limit 1000 yen. What do you buy?
+シークレットサンタ（プレゼント交換）。予算千円。何を買いますか？
+13. 🧣 Red and Green are the colors everywhere. Christmas colors.
+どこも赤と緑です。クリスマスカラー。
+14. 🏙️ Midosuji Illumination is beautiful. Have you walked down the street?
+御堂筋のイルミネーションは美しいです。通りを歩きましたか？
+15. ❄️ Will it snow this year? Osaka rarely gets snow.
+今年雪は降るでしょうか？大阪はめったに降りません。
+16. 🎅 Do you believe in Santa? Or do you *be* Santa?
+サンタを信じますか？それともサンタに*なります*か？
+17. 📦 Packages arriving every day. The delivery man is tired.
+毎日荷物が届く。配達員さんは疲れています。
+18. 🕯️ Lighting the first Advent candle. Counting weeks to Christmas.
+最初のアドベントキャンドルを灯す。クリスマスまで週を数える。
+19. 🥣 Hot soup in a thermos. Lunch warmth.
+魔法瓶に入れた熱いスープ。ランチの温もり。
+20. 🍊 Mikan season is peaking. Do you buy a box (hako-gai)?
+ミカンの季節がピークです。箱買いしますか？
+21. 🛌 Getting out of bed is a struggle. It's dark and cold.
+ベッドから出るのが闘いです。暗くて寒いです。
+22. 📺 Christmas movies on Netflix. "Home Alone" again?
+Netflixでクリスマス映画。また「ホーム・アローン」？
+23. ⛸️ Ice skating rinks open. Can you skate or do you fall?
+スケートリンクがオープン。滑れますか、転びますか？
+24. 🧤 Lost gloves. Did you lose one glove? Where is it?
+片方なくした手袋。どこにありますか？
+25. 🤧 Flu season. Wear a mask on the train.
+インフルエンザの季節。電車ではマスクをして。
+26. 🍵 Hot Sake (Atsukan). Warms the body and soul.
+熱燗。体と魂を温めます。
+27. 🗓️ Buying a new planner for 2027. Are you organized?
+2027年の手帳を買う。整理整頓できていますか？
+28. 🧹 Osouji (Big Cleaning) list. Don't leave it until Dec 31st.
+大掃除リスト。12月31日まで残さないで。
+29. 🏠 Decoration wars. Neighbors competing with lights. Is your house bright?
+デコレーション戦争。近所同士でライトを競う。あなたの家は明るいですか？
+30. 👔 Year-end adjustments (Nenmatsu Chosei). Paperwork headache.
+年末調整。書類の頭痛。
+31. 🎿 Ski trip planning. Niseko or Hakuba?
+スキー旅行の計画。ニセコ、それとも白馬？
+32. 🍲 Oden season. Daikon is hot! Watch your mouth.
+おでんの季節。大根は熱いです！口元注意。
+33. 🍫 Hot cocoa with peppermint. Tastes like toothpaste?
+ペパーミント入りホットココア。歯磨き粉の味？
+34. 🧦 Fuzzy socks. Walking around the house sliding.
+もこもこ靴下。家の中を滑って歩く。
+35. 💳 Credit card points. Use them for gifts.
+クレジットカードのポイント。プレゼントに使おう。
+36. 🎶 Wham! "Last Christmas". You will hear this 500 times.
+ワム！の「ラストクリスマス」。500回聴くことになります。
+37. 🍗 Ordering KFC for Christmas. Did you reserve the bucket?
+クリスマスのKFCを注文。バーレルを予約しましたか？
+38. 🎂 Christmas cake. Sponge cake with strawberries.
+クリスマスケーキ。イチゴのスポンジケーキ。
+39. 🍾 Champagne or Sparkling Wine? Time to celebrate.
+シャンパン、それともスパークリングワイン？お祝いの時間。
+40. 🕯️ Candles smell like pine trees. Artificial nature.
+松の木の香りのキャンドル。人工の自然。
+41. 🧑‍🎄 Santa costume. Do you wear it for the kids (or for fun)?
+サンタの衣装。子供のために（または楽しみのために）着ますか？
+42. 🦌 Reindeer antlers headband. Wearing it at the party.
+トナカイの角のカチューシャ。パーティーで着ける。
+43. 📮 Nengajo (New Year Cards). You must write them soon!
+年賀状。もうすぐ書かないといけません！
+44. 🥶 Dry skin. Use lotion.
+乾燥肌。ローションを使って。
+45. 🏙️ Osaka Station illuminations. Twilight Fantasy.
+大阪駅のイルミネーション。トワイライトファンタジー。
+46. 🛍️ Crowded malls. Fighting for parking spots.
+混雑したモール。駐車場の争奪戦。
+47. 🍬 Gingerbread houses. Looks good, tastes like cardboard.
+ジンジャーブレッドハウス。見た目はいいけど段ボールの味。
+48. 🕰️ Winter Solstice is coming. Days are shortest.
+冬至が近づいています。日が一番短いです。
+49. 🛁 Yuzu bath on Winter Solstice. Don't catch a cold.
+冬至のゆず湯。風邪をひかないで。
+50. ✨ December magic. Enjoy the festive mood!
+12月の魔法。お祭り気分を楽しんで！`
+        },
