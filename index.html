@@ -598,28 +598,27 @@
         background-color: var(--accent);
     }
 
-    .fruit-toggle {
+.fruit-toggle {
         background-color: var(--warning);
         color: white;
         border: 2px solid var(--warning);
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        font-size: 1.2rem;
+        min-width: 45px; /* Made wider */
+        height: 45px;    /* Made taller for TV visibility */
+        border-radius: 12px; /* Softer corners */
+        font-size: 1.5rem;
         cursor: pointer;
-        box-shadow: none;
+        box-shadow: 0 4px 0 rgba(0,0,0,0.2); /* 3D effect */
         flex-shrink: 0;
-        margin: 0 3px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
+        margin: 0 2px;
     }
 
-    .fruit-toggle.on {
-        background-color: var(--warning);
-        border-color: var(--success);
-        box-shadow: 0 0 10px var(--success);
+    .fruit-toggle:active {
+        box-shadow: none;
+        transform: translateY(4px);
     }
 
 
@@ -727,6 +726,11 @@
     .translation-overlay.active {
         display: block;
     }
+
+
+
+
+
 
 
     /* ============ */
@@ -1197,7 +1201,10 @@
         <button id="displayBoth" class="display-btn">BOTH</button>
     </div>
     
-    <button id="fruitToggle" class="fruit-toggle">🎰 Fruit Game OFF</button>
+    <div style="display: flex; gap: 5px; margin: 0 10px;">
+        <button id="fruitToggle" class="fruit-toggle" title="Fruit Match Game">🍎</button>
+        <button id="sentenceToggle" class="fruit-toggle" title="Silly Sentence Game">🔤</button>
+    </div>
 
     <button id="prevSentence" class="nav-btn">←</button>
     <button id="nextSentence" class="nav-btn">→</button>
@@ -2221,475 +2228,291 @@ function applyFontSize() {
         return word || null;
     }
 
+
+
+
+
+
+ // ====================
+    // GAME SYSTEM (FRUIT & SENTENCES)
     // ====================
-    // FRUIT GAME
-    // ====================
-    const categories = [
-        { 
-            name: 'Basic Actions', 
-            items: [
-                {emoji: '🏃', name: 'run'}, 
-                {emoji: '🚶', name: 'walk'},
-                {emoji: '🛌', name: 'sleep'},
-                {emoji: '🍽️', name: 'eat'},
-                {emoji: '🚿', name: 'wash'},
-                {emoji: '📚', name: 'study'},
-                {emoji: '🎸', name: 'play'},
-                {emoji: '📖', name: 'read'},
-                {emoji: '✍️', name: 'write'},
-                {emoji: '🎤', name: 'sing'}
-            ]
-        },
-        { 
-            name: 'Daily Activities', 
-            items: [
-                {emoji: '🛒', name: 'shop'}, 
-                {emoji: '🚴', name: 'ride'},
-                {emoji: '🏊', name: 'swim'},
-                {emoji: '🚗', name: 'drive'},
-                {emoji: '🧹', name: 'clean'},
-                {emoji: '🍳', name: 'cook'},
-                {emoji: '💃', name: 'dance'},
-                {emoji: '🚲', name: 'cycle'},
-                {emoji: '🎮', name: 'game'},
-                {emoji: '🎭', name: 'act'}
-            ]
-        },
-        { 
-            name: 'Movement Verbs', 
-            items: [
-                {emoji: '🏃‍♂️', name: 'jog'}, 
-                {emoji: '🧗', name: 'climb'},
-                {emoji: '🤸', name: 'jump'},
-                {emoji: '🤾', name: 'throw'},
-                {emoji: '🏌️', name: 'golf'},
-                {emoji: '🏄', name: 'surf'},
-                {emoji: '⛷️', name: 'ski'},
-                {emoji: '🤽', name: 'dive'},
-                {emoji: '🚣', name: 'row'},
-                {emoji: '🛹', name: 'skate'}
-            ]
-        },
-        { 
-            name: 'Basic Descriptions', 
-            items: [
-                {emoji: '🌞', name: 'sunny'}, 
-                {emoji: '❄️', name: 'cold'},
-                {emoji: '🔥', name: 'hot'},
-                {emoji: '💧', name: 'wet'},
-                {emoji: '🌈', name: 'colorful'},
-                {emoji: '⚡', name: 'fast'},
-                {emoji: '🐌', name: 'slow'},
-                {emoji: '🐘', name: 'big'},
-                {emoji: '🐜', name: 'small'},
-                {emoji: '❤️', name: 'happy'}
-            ]
-        },
-        { 
-            name: 'Personality Traits', 
-            items: [
-                {emoji: '😊', name: 'friendly'}, 
-                {emoji: '🧠', name: 'smart'},
-                {emoji: '💪', name: 'strong'},
-                {emoji: '🦸', name: 'brave'},
-                {emoji: '🤗', name: 'kind'},
-                {emoji: '🤓', name: 'clever'},
-                {emoji: '😴', name: 'sleepy'},
-                {emoji: '🤡', name: 'silly'},
-                {emoji: '👑', name: 'proud'},
-                {emoji: '🧐', name: 'curious'}
-            ]
-        },
-        { 
-            name: 'Sensory Words', 
-            items: [
-                {emoji: '🍯', name: 'sweet'}, 
-                {emoji: '🍋', name: 'sour'},
-                {emoji: '🧂', name: 'salty'},
-                {emoji: '☕', name: 'bitter'},
-                {emoji: '🦔', name: 'rough'},
-                {emoji: '🪶', name: 'soft'},
-                {emoji: '🔊', name: 'loud'},
-                {emoji: '🔇', name: 'quiet'},
-                {emoji: '💡', name: 'bright'},
-                {emoji: '🌑', name: 'dark'}
-            ]
-        },
-        { 
-            name: 'Everyday Objects', 
-            items: [
-                {emoji: '📖', name: 'a book'},
-                {emoji: '✏️', name: 'a pencil'},
-                {emoji: '💻', name: 'a computer'},
-                {emoji: '📱', name: 'a phone'},
-                {emoji: '⌚', name: 'a watch'},
-                {emoji: '🔑', name: 'a key'},
-                {emoji: '💡', name: 'a light'},
-                {emoji: '🧸', name: 'a toy'},
-                {emoji: '🧦', name: 'socks'},
-                {emoji: '👓', name: 'glasses'}
-            ]
-        },
-        { 
-            name: 'Animals', 
-            items: [
-                {emoji: '🐶', name: 'a dog'},
-                {emoji: '🐱', name: 'a cat'},
-                {emoji: '🐰', name: 'a rabbit'},
-                {emoji: '🦊', name: 'a fox'},
-                {emoji: '🐻', name: 'a bear'},
-                {emoji: '🦁', name: 'a lion'},
-                {emoji: '🐯', name: 'a tiger'},
-                {emoji: '🦄', name: 'a unicorn'},
-                {emoji: '🐧', name: 'a penguin'},
-                {emoji: '🦉', name: 'an owl'}
-            ]
-        },
-        { 
-            name: 'Food & Drink', 
-            items: [
-                {emoji: '🍎', name: 'an apple'}, 
-                {emoji: '🍌', name: 'a banana'},
-                {emoji: '🍕', name: 'a pizza'},
-                {emoji: '🍔', name: 'a burger'},
-                {emoji: '🍜', name: 'noodles'},
-                {emoji: '🍦', name: 'ice cream'},
-                {emoji: '🍩', name: 'a donut'},
-                {emoji: '☕', name: 'coffee'},
-                {emoji: '🍵', name: 'tea'},
-                {emoji: '🥤', name: 'a drink'}
-            ]
-        },
-        { 
-            name: 'Places', 
-            items: [
-                {emoji: '🏠', name: 'a house'},
-                {emoji: '🏫', name: 'a school'},
-                {emoji: '🏥', name: 'a hospital'},
-                {emoji: '🏖️', name: 'a beach'},
-                {emoji: '🏞️', name: 'a park'},
-                {emoji: '🏪', name: 'a store'},
-                {emoji: '🏟️', name: 'a stadium'},
-                {emoji: '⛪', name: 'a church'},
-                {emoji: '🏰', name: 'a castle'},
-                {emoji: '🌋', name: 'a volcano'}
-            ]
-        }
+    
+    // Eiken 5 Level Vocabulary Data
+    const fruitData = [
+        {emoji: '🍎', name: 'an apple'}, {emoji: '🍌', name: 'a banana'}, 
+        {emoji: '🍇', name: 'grapes'}, {emoji: '🍊', name: 'an orange'}, 
+        {emoji: '🍩', name: 'a donut'}, {emoji: '🍰', name: 'cake'}, 
+        {emoji: '🍦', name: 'ice cream'}, {emoji: '🍪', name: 'a cookie'}
     ];
 
-    function updateFruitButtonState() {
-        if (fruitGameEnabled) {
-            fruitToggleBtn.innerHTML = '🍏';
-            fruitToggleBtn.style.color = 'var(--success)';
-        } else {
-            fruitToggleBtn.innerHTML = '🍎';
-            fruitToggleBtn.style.color = 'var(--warning)';
-        }
-        
-        fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
-        fruitToggleBtn.title = fruitGameEnabled ? 'Fruit Game is ON' : 'Fruit Game is OFF';
-        
-        if (fruitGameEnabled) {
-            fruitToggleBtn.style.boxShadow = '0 0 10px var(--success)';
-            fruitToggleBtn.style.border = '2px solid var(--success)';
-        } else {
-            fruitToggleBtn.style.boxShadow = 'none';
-            fruitToggleBtn.style.border = '2px solid var(--warning)';
-        }
-    }
-    
-    function toggleFruitGame() {
-        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+    const sentenceData = {
+        subjects: [
+            {emoji: '👨‍🏫', name: 'The teacher'}, {emoji: '👩', name: 'My mother'}, 
+            {emoji: '👨', name: 'My father'}, {emoji: '🐶', name: 'The dog'}, 
+            {emoji: '🐱', name: 'The cat'}, {emoji: '👮', name: 'The officer'}, 
+            {emoji: '👽', name: 'An alien'}, {emoji: '🤖', name: 'A robot'}
+        ],
+        verbs: [
+            {emoji: '🍽️', name: 'eats'}, {emoji: '🍳', name: 'cooks'}, 
+            {emoji: '🧹', name: 'cleans'}, {emoji: '🦵', name: 'kicks'}, 
+            {emoji: '👀', name: 'sees'}, {emoji: '🎨', name: 'paints'}, 
+            {emoji: '🛒', name: 'buys'}, {emoji: '🧟', name: 'becomes'}
+        ],
+        objects: [
+            {emoji: '🍕', name: 'pizza'}, {emoji: '👞', name: 'a shoe'}, 
+            {emoji: '🚗', name: 'a car'}, {emoji: '🐛', name: 'a bug'}, 
+            {emoji: '🎸', name: 'a guitar'}, {emoji: '🏠', name: 'my house'}, 
+            {emoji: '🦕', name: 'a monster'}, {emoji: '💩', name: 'poo'} 
+        ]
+    };
+
+    let activeGameMode = null; // 'fruit' or 'sentence' or null
+    let manualStopMode = false; // Toggle for "Skill Stop"
+    let reelsStopping = [false, false, false];
+    let activeIntervals = [null, null, null];
+
+    function toggleGame(mode) {
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') return;
+
+        // If clicking the same button, close the game
+        if (activeGameMode === mode) {
+            hideGame();
             return;
         }
 
-        fruitGameEnabled = !fruitGameEnabled;
-        updateFruitButtonState();
-        
-        if (fruitGameEnabled) {
-            playSound('activate');
-            if (navigator.vibrate) navigator.vibrate(50);
-        } else {
-            if (fruitGameActive) {
-                hideFruitGame();
-            }
-        }
-        
-        localStorage.setItem('fruitGameEnabled', fruitGameEnabled);
-        console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
+        activeGameMode = mode;
+        showGameUI();
     }
     
-    function showFruitGame() {
-        if (!fruitGameEnabled || fruitGameActive) {
-            console.log('Fruit game not shown - enabled:', fruitGameEnabled, 'active:', fruitGameActive);
-            return;
-        }
-        
+    // Hook up the buttons (Add this to your initEventListeners area or run it once)
+    document.getElementById('fruitToggle').onclick = () => toggleGame('fruit');
+    document.getElementById('sentenceToggle').onclick = () => toggleGame('sentence');
+
+    function showGameUI() {
         stopSpeech();
-        fruitGameActive = true;
+        
+        // Remove existing game if any
+        const existing = document.querySelector('.fruit-game-container');
+        if (existing) existing.remove();
+
+        const title = activeGameMode === 'fruit' ? "🎰 LUCKY MATCH" : "🤪 SILLY SENTENCES";
         
         const gameContainer = document.createElement('div');
         gameContainer.className = 'fruit-game-container';
         gameContainer.innerHTML = `
             <div class="fruit-game">
-                <h2>Fruit Machine!</h2>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">${title}</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <button id="skillStopToggle" class="btn" style="background-color: var(--info); padding: 10px 20px;">
+                        ${manualStopMode ? '✋ Manual Stop: ON' : '🤖 Auto Stop: ON'}
+                    </button>
+                </div>
+
                 <div class="fruit-reels">
                     <div class="reel-container">
-                        <div class="fruit-reel" id="reel1">🍎</div>
+                        <div class="fruit-reel" id="reel0">❓</div>
+                        <div class="fruit-name" id="name0"></div>
+                    </div>
+                    <div class="reel-container">
+                        <div class="fruit-reel" id="reel1">❓</div>
                         <div class="fruit-name" id="name1"></div>
                     </div>
                     <div class="reel-container">
-                        <div class="fruit-reel" id="reel2">🍊</div>
+                        <div class="fruit-reel" id="reel2">❓</div>
                         <div class="fruit-name" id="name2"></div>
                     </div>
-                    <div class="reel-container">
-                        <div class="fruit-reel" id="reel3">🍇</div>
-                        <div class="fruit-name" id="name3"></div>
-                    </div>
                 </div>
-                <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
-                <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
+                
+                <div id="gameResult" style="font-size: 2rem; min-height: 80px; margin: 20px 0; font-weight: bold; color: var(--text);"></div>
+                
+                <div style="display: flex; gap: 20px; justify-content: center;">
+                    <button id="spinBtn" class="btn" style="background-color: var(--success); font-size: 1.5rem;">SPIN!</button>
+                    <button id="exitGame" class="btn" style="background-color: var(--warning);">EXIT</button>
+                </div>
             </div>
         `;
         
         document.body.appendChild(gameContainer);
-        spinReels();
-        document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
+        
+        // Button Events
+        document.getElementById('exitGame').onclick = hideGame;
+        document.getElementById('spinBtn').onclick = startGameLoop;
+        document.getElementById('skillStopToggle').onclick = function() {
+            manualStopMode = !manualStopMode;
+            this.textContent = manualStopMode ? '✋ Manual Stop: ON' : '🤖 Auto Stop: ON';
+            this.style.backgroundColor = manualStopMode ? 'var(--warning)' : 'var(--info)';
+        };
+
+        // Focus the Spin button immediately for TV Remote
+        setTimeout(() => document.getElementById('spinBtn').focus(), 100);
+
+        // Add keyboard listener for Skill Stop
+        document.addEventListener('keydown', handleGameKeys);
     }
 
-    function hideFruitGame() {
-        const game = document.querySelector('.fruit-game-container');
-        if (game && game.parentNode) {
-            game.parentNode.removeChild(game);
-        }
+    function handleGameKeys(e) {
+        if (!activeGameMode) return;
         
-        fruitGameActive = false;
-        
-        if (window.AudioContext) {
-            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            audioCtx.close();
-        }
-        
-        closeTranslationPopupHandler();
-        
-        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
-            return;
-        }
-        
-        setTimeout(() => {
-            if (shouldAdvanceAfterGame) {
-                const isLastPage = currentSentenceIndex >= sentences.length - 1;
-                currentSentenceIndex = isLastPage ? 0 : currentSentenceIndex + 1;
-                shouldAdvanceAfterGame = false;
+        if (e.key === 'Enter') {
+            // If reels are spinning and we are in manual mode (or user forces a stop)
+            if (activeIntervals.some(i => i !== null)) {
+                stopNextReel();
+                e.stopPropagation();
+                e.preventDefault();
             }
-            displayCurrentSentence();
-        }, 500);
-    }
-    
-    function spinReels() {
-        const currentCategory = categories[Math.floor(Math.random() * categories.length)];
-        const items = currentCategory.items;
-        const reels = [
-            document.getElementById('reel1'),
-            document.getElementById('reel2'),
-            document.getElementById('reel3')
-        ];
-        const resultDisplay = document.getElementById('fruitResult');
-        
-        resultDisplay.textContent = '';
-        resultDisplay.style.color = '';
-        playSound('spin');
-        
-        const shouldMatch = Math.random() < 0.33;
-        let matchingItem = '';
-        
-        if (shouldMatch) {
-            matchingItem = items[Math.floor(Math.random() * items.length)];
-            matchingItem = items.find(item => item.emoji === matchingItem.emoji) || matchingItem;
         }
-        
-        spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
-            playSound('reelStop');
-            spinReel(reels[1], 300, items, matchingItem, shouldMatch, () => {
-                playSound('reelStop');
-                spinReel(reels[2], 300, items, matchingItem, shouldMatch, () => {
-                    playSound('reelStop');
-                    
-                    setTimeout(() => {
-                        if (shouldMatch && reels[0].textContent === reels[1].textContent && 
-                            reels[1].textContent === reels[2].textContent) {
-                            playSound('win');
-                            playSound('coin');
-                            resultDisplay.textContent = '🎉 WINNER! 🎉';
-                            resultDisplay.style.color = 'var(--success)';
-                            resultDisplay.style.fontWeight = 'bold';
-                            
-                            reels.forEach(reel => {
-                                reel.style.transform = 'scale(1.2)';
-                                reel.style.transition = 'all 0.3s';
-                                reel.style.boxShadow = '0 0 20px gold';
-                            });
-                            
-                            setTimeout(() => {
-                                createConfetti();
-                            }, 500);
-                            
-                            setTimeout(hideFruitGame, 3000);
-                        } else {
-                            playSound('lose');
-                            resultDisplay.textContent = 'Try again!';
-                            resultDisplay.style.color = 'var(--warning)';
-                            
-                            reels.forEach(reel => {
-                                reel.style.animation = 'shake 0.5s';
-                            });
-                            
-                            setTimeout(hideFruitGame, 2000);
-                        }
-                    }, 300);
-                });
-            });
-        });
     }
 
-    function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
-        const reelNumber = reel.id.replace('reel', '');
-        const nameElement = document.getElementById(`name${reelNumber}`);
+    function hideGame() {
+        const game = document.querySelector('.fruit-game-container');
+        if (game) game.remove();
+        activeGameMode = null;
+        stopAllReels();
+        document.removeEventListener('keydown', handleGameKeys);
         
+        // Refocus to navigation
         setTimeout(() => {
-            let spins = 0;
-            const spinInterval = setInterval(() => {
-                if (spins < 10) {
-                    const randomItem = items[Math.floor(Math.random() * items.length)];
-                    reel.textContent = randomItem.emoji;
-                    nameElement.textContent = '';
-                } 
-                else if (spins < 15) {
-                    if (spins % 2 === 0) {
-                        const randomItem = items[Math.floor(Math.random() * items.length)];
-                        reel.textContent = randomItem.emoji;
-                        nameElement.textContent = '';
-                    }
-                } 
-                else {
-                    clearInterval(spinInterval);
-                    let finalItem;
-                    if (shouldMatch) {
-                        finalItem = matchingItem;
-                    } else {
-                        finalItem = items[Math.floor(Math.random() * items.length)];
-                    }
-                    reel.textContent = finalItem.emoji;
-                    nameElement.textContent = finalItem.name;
-                    
-                    if (window.speechSynthesis) {
-                        const utterance = new SpeechSynthesisUtterance(finalItem.name);
-                        utterance.rate = 0.9;
-                        window.speechSynthesis.speak(utterance);
-                    }
-                    
-                    if (callback) callback();
-                }
-                spins++;
-            }, 100);
-        }, delay);
+            const nextBtn = document.getElementById('nextSentence');
+            if (nextBtn) nextBtn.focus();
+        }, 100);
     }
 
-    function createConfetti() {
-        const container = document.querySelector('.fruit-game-container');
-        if (!container) return;
+    function stopAllReels() {
+        activeIntervals.forEach(i => clearInterval(i));
+        activeIntervals = [null, null, null];
+    }
+
+    function startGameLoop() {
+        if (activeIntervals.some(i => i !== null)) return; // Already running
+
+        playSound('spin');
+        const resultDisplay = document.getElementById('gameResult');
+        resultDisplay.textContent = '...';
         
-        for (let i = 0; i < 100; i++) {
-            const confetti = document.createElement('div');
-            confetti.style.position = 'absolute';
-            confetti.style.width = '10px';
-            confetti.style.height = '10px';
-            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            confetti.style.borderRadius = '50%';
-            confetti.style.left = `${Math.random() * 100}%`;
-            confetti.style.top = '-10px';
-            confetti.style.opacity = '0.8';
-            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-            confetti.style.animation = `confetti-fall ${2 + Math.random() * 3}s linear forwards`;
-            
-            container.appendChild(confetti);
-            
-            setTimeout(() => {
-                confetti.remove();
-            }, 5000);
+        // Reset Visuals
+        [0, 1, 2].forEach(i => {
+            document.getElementById(`reel${i}`).style.transform = 'none';
+            document.getElementById(`reel${i}`).style.boxShadow = 'none';
+            document.getElementById(`name${i}`).textContent = '';
+        });
+
+        // Start Spinning
+        [0, 1, 2].forEach(i => startReelSpin(i));
+
+        // Setup stopping logic
+        reelsStopping = [false, false, false];
+
+        if (!manualStopMode) {
+            // Auto Stop Sequence
+            setTimeout(() => stopReel(0), 2000);
+            setTimeout(() => stopReel(1), 3500);
+            setTimeout(() => stopReel(2), 5000);
+        } else {
+            resultDisplay.textContent = "Press OK to stop reels!";
         }
     }
 
-    function playSound(type) {
-        if (!window.AudioContext) return;
+    function startReelSpin(index) {
+        const reel = document.getElementById(`reel${index}`);
+        let items;
+
+        if (activeGameMode === 'fruit') {
+            items = fruitData;
+        } else {
+            // Sentence Mode: 0=Subject, 1=Verb, 2=Object
+            if (index === 0) items = sentenceData.subjects;
+            else if (index === 1) items = sentenceData.verbs;
+            else items = sentenceData.objects;
+        }
+
+        activeIntervals[index] = setInterval(() => {
+            const randomItem = items[Math.floor(Math.random() * items.length)];
+            reel.textContent = randomItem.emoji;
+        }, 100); // Speed of spin
+    }
+
+    function stopNextReel() {
+        // Find first reel that is still spinning
+        for (let i = 0; i < 3; i++) {
+            if (activeIntervals[i] !== null && !reelsStopping[i]) {
+                stopReel(i);
+                break;
+            }
+        }
+    }
+
+    function stopReel(index) {
+        if (activeIntervals[index] === null) return;
         
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        let oscillator = audioCtx.createOscillator();
-        let gainNode = audioCtx.createGain();
+        reelsStopping[index] = true;
+        clearInterval(activeIntervals[index]);
+        activeIntervals[index] = null;
         
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
+        playSound('reelStop');
+
+        const reel = document.getElementById(`reel${index}`);
+        const nameEl = document.getElementById(`name${index}`);
         
-        switch(type) {
-            case 'spin':
-                oscillator.type = 'sawtooth';
-                oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
-                oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
-                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.8);
-                break;
-                
-            case 'reelStop':
-                oscillator.type = 'square';
-                oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime);
-                gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.1);
-                break;
-                
-            case 'win':
-                oscillator.type = 'sine';
-                oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime);
-                oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
-                oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2);
-                oscillator.frequency.setValueAtTime(1046.5, audioCtx.currentTime + 0.3);
-                gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.5);
-                break;
-                
-            case 'lose':
-                oscillator.type = 'square';
-                oscillator.frequency.setValueAtTime(349.23, audioCtx.currentTime);
-                oscillator.frequency.exponentialRampToValueAtTime(261.63, audioCtx.currentTime + 0.5);
-                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.6);
-                break;
-                
-            case 'activate':
-                oscillator.type = 'sine';
-                oscillator.frequency.setValueAtTime(784, audioCtx.currentTime);
-                oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.3);
-                break;
-                
-            case 'coin':
-                oscillator.type = 'triangle';
-                oscillator.frequency.setValueAtTime(988, audioCtx.currentTime);
-                oscillator.frequency.exponentialRampToValueAtTime(1318, audioCtx.currentTime + 0.1);
-                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
-                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
-                oscillator.start();
-                oscillator.stop(audioCtx.currentTime + 0.2);
-                break;
+        // DETERMINE RESULT
+        let finalItem;
+        
+        if (activeGameMode === 'fruit') {
+            // Fruit Logic: 33% chance to match the previous reel to make it exciting
+            // But simple random is usually fairer for class games
+            finalItem = fruitData[Math.floor(Math.random() * fruitData.length)];
+            
+            // "Rig" the game slightly for fun? (Force win if first two match?) 
+            // Let's stick to random for now to keep it honest.
+        } else {
+            // Sentence Logic
+            const category = index === 0 ? sentenceData.subjects : 
+                             index === 1 ? sentenceData.verbs : sentenceData.objects;
+            finalItem = category[Math.floor(Math.random() * category.length)];
+        }
+
+        reel.textContent = finalItem.emoji;
+        nameEl.textContent = finalItem.name;
+        
+        // Animation
+        reel.style.animation = 'pulse 0.3s';
+
+        // Check if all stopped
+        if (activeIntervals.every(i => i === null)) {
+            checkWinCondition();
+        }
+    }
+
+    function checkWinCondition() {
+        const r0 = document.getElementById('name0').textContent;
+        const r1 = document.getElementById('name1').textContent;
+        const r2 = document.getElementById('name2').textContent;
+        const resultDisplay = document.getElementById('gameResult');
+
+        if (activeGameMode === 'fruit') {
+            if (r0 === r1 && r1 === r2) {
+                // JACKPOT
+                playSound('win');
+                resultDisplay.textContent = "🎉 WINNER! 🎉";
+                resultDisplay.style.color = "var(--warning)";
+                createConfetti();
+                speakSentence(`Three ${r0}s! You win!`, 'en-US');
+            } else if (r0 === r1 || r1 === r2 || r0 === r2) {
+                // CLOSE
+                resultDisplay.textContent = "So close!";
+                playSound('lose');
+            } else {
+                resultDisplay.textContent = "Try again!";
+            }
+        } else {
+            // SENTENCE MODE - Always a "Win" because it's funny
+            const sentence = `${r0} ${r1} ${r2}.`;
+            resultDisplay.textContent = sentence;
+            resultDisplay.style.color = "var(--primary)";
+            playSound('coin'); // Nice 'ding' sound
+            
+            // Read the silly sentence
+            setTimeout(() => speakSentence(sentence, 'en-US'), 500);
         }
     }
 
@@ -2934,6 +2757,5 @@ function toggleNightMode() {
 </script>   
 </body>
 </html>
-
 
 
