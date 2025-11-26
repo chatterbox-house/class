@@ -598,31 +598,28 @@
         background-color: var(--accent);
     }
 
-.fruit-toggle {
+    .fruit-toggle {
         background-color: var(--warning);
         color: white;
         border: 2px solid var(--warning);
-        min-width: 45px; /* Made wider */
-        height: 45px;    /* Made taller for TV visibility */
-        border-radius: 12px; /* Softer corners */
-        font-size: 1.5rem;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        font-size: 1.2rem;
         cursor: pointer;
-        box-shadow: 0 4px 0 rgba(0,0,0,0.2); /* 3D effect */
+        box-shadow: none;
         flex-shrink: 0;
+        margin: 0 3px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.2s ease;
-        margin: 0 2px;
+        transition: all 0.3s ease;
     }
 
-/* Style for when the game button is ON */
-    .fruit-toggle.active {
-        background-color: var(--success) !important;
-        border-color: white !important;
-        box-shadow: 0 0 15px var(--success) !important;
-        transform: scale(1.1);
-        z-index: 100;
+    .fruit-toggle.on {
+        background-color: var(--warning);
+        border-color: var(--success);
+        box-shadow: 0 0 10px var(--success);
     }
 
 
@@ -730,11 +727,6 @@
     .translation-overlay.active {
         display: block;
     }
-
-
-
-
-
 
 
     /* ============ */
@@ -1086,18 +1078,6 @@
         box-shadow: 0 0 0 0 rgba(247, 37, 133, 0);
     }
 }
-/* TV REMOTE FOCUS STYLES */
-    button:focus, 
-    select:focus, 
-    a:focus, 
-    .file-input-label:focus {
-        outline: 5px solid #ffcc00 !important; /* Bright Yellow Outline */
-        box-shadow: 0 0 20px #ffcc00 !important; /* Glowing effect */
-        transform: scale(1.05); /* Make it pop out slightly */
-        z-index: 9999;
-        position: relative;
-        background-color: #5a7cff; /* Lighten the background */
-    }
 </style>
 
 </head>
@@ -1107,7 +1087,7 @@
 <div class="container" id="mainContainer">
     <div class="header">CHATTERBOX HOUSE</div>
 
-    <a href="eiken5vocab.html" tabindex="0" class="news-button" style="
+    <a href="eiken5vocab.html" class="news-button" style="
         display: inline-block;
         background-color: #f72585;
         color: white;
@@ -1124,7 +1104,7 @@
         animation: pulse 2s infinite;
     ">Eiken 5 Vocabulary</a>
 
-    <a href="news.html" tabindex="0" class="news-button" style="
+    <a href="news.html" class="news-button" style="
         display: inline-block;
         background-color: #f72585;
         color: white;
@@ -1194,23 +1174,17 @@
 </div>
         
 <div class="reading-footer">
+    <button id="prevSentence" class="nav-btn">←</button>
     <div class="font-controls">
         <button id="decreaseFont" class="font-btn">A-</button>
         <button id="increaseFont" class="font-btn">A+</button>
     </div>
-    
-    <div class="display-toggle">
-        <button id="displayEnglish" class="display-btn active">EN</button>
-        <button id="displayJapanese" class="display-btn">JP</button>
-        <button id="displayBoth" class="display-btn">BOTH</button>
-    </div>
-    
-    <div style="display: flex; gap: 5px; margin: 0 10px;">
-        <button id="fruitToggle" class="fruit-toggle" title="Fruit Match Game">🍎</button>
-        <button id="sentenceToggle" class="fruit-toggle" title="Silly Sentence Game">🔤</button>
-    </div>
-
-    <button id="prevSentence" class="nav-btn">←</button>
+<div class="display-toggle">
+    <button id="displayEnglish" class="display-btn active">EN</button>
+    <button id="displayJapanese" class="display-btn">JP</button>
+    <button id="displayBoth" class="display-btn">BOTH</button>
+</div>
+    <button id="fruitToggle" class="fruit-toggle">🎰 Fruit Game OFF</button>
     <button id="nextSentence" class="nav-btn">→</button>
 </div>
     </div>
@@ -1327,7 +1301,7 @@ const maxFontSize = 8; // vw/rem units
         });
     }
 
-function setupEventListeners() {
+    function setupEventListeners() {
         // Class and story selection
         if (classSelector) classSelector.addEventListener('change', handleClassSelect);
         storySelector.addEventListener('change', handleStorySelect);
@@ -1344,20 +1318,10 @@ function setupEventListeners() {
         // Reading mode navigation
         prevSentenceBtn.addEventListener('click', showPreviousSentence);
         nextSentenceBtn.addEventListener('click', showNextSentence);
-        
-        // Play buttons (if visible)
-        if(playEnglishBtn) playEnglishBtn.addEventListener('click', () => playSentence('english'));
-        if(playJapaneseBtn) playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
-        
+        playEnglishBtn.addEventListener('click', () => playSentence('english'));
+        playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
         exitReadingBtn.addEventListener('click', exitReadingMode);
-
-        // --- NEW GAME LISTENERS ---
-        // This connects the Apple and ABC buttons to the new game system
-        const fruitBtn = document.getElementById('fruitToggle');
-        const sentenceBtn = document.getElementById('sentenceToggle');
-        
-        if (fruitBtn) fruitBtn.addEventListener('click', () => toggleGame('fruit'));
-        if (sentenceBtn) sentenceBtn.addEventListener('click', () => toggleGame('sentence'));
+        fruitToggleBtn.addEventListener('click', toggleFruitGame);
 
         // Night mode toggle
         document.getElementById('nightModeToggle').addEventListener('click', toggleNightMode);
@@ -1370,13 +1334,14 @@ function setupEventListeners() {
             window.speechSynthesis.onvoiceschanged = function() {
                 console.log('Voices loaded');
             };
+            
             if (window.speechSynthesis.getVoices().length === 0) {
                 window.speechSynthesis.getVoices();
             }
         }
     }
 
-function loadSavedPreferences() {
+    function loadSavedPreferences() {
         // Night mode
         const savedNightMode = localStorage.getItem('nightMode') === 'true';
         if (savedNightMode) {
@@ -1396,6 +1361,11 @@ function loadSavedPreferences() {
         if (savedDisplayMode && ['english', 'japanese', 'both'].includes(savedDisplayMode)) {
             displayMode = savedDisplayMode;
         }
+
+        // Fruit game state
+        const savedFruitGameState = localStorage.getItem('fruitGameEnabled');
+        fruitGameEnabled = savedFruitGameState === 'true';
+        updateFruitButtonState();
 
         // Initialize button states
         document.getElementById('displayEnglish').classList.toggle('active', displayMode === 'english');
@@ -1835,16 +1805,19 @@ function applyFontSize() {
     // ====================
     // NAVIGATION
     // ====================
-function showNextSentence() {
+    function showNextSentence() {
         stopSpeech();
         closeTranslationPopupHandler();
         
-        // If a game is currently open on screen, do nothing
-        if (activeGameMode) return;
-        
-        if (sentences.length === 0) return;
+        if (sentences.length === 0 || fruitGameActive) return;
         
         const isLastPage = currentSentenceIndex >= sentences.length - 1;
+        
+        if (fruitGameEnabled) {
+            shouldAdvanceAfterGame = true;
+            showFruitGame();
+            return;
+        }
         
         if (isLastPage) {
             currentSentenceIndex = 0;
@@ -2233,296 +2206,475 @@ function showNextSentence() {
         return word || null;
     }
 
-
-// ====================
-    // GAME SYSTEM (FRUIT & SENTENCES)
     // ====================
-    
-    // Eiken 5 Level Vocabulary Data
-    const fruitData = [
-        {emoji: '🍎', name: 'an apple'}, {emoji: '🍌', name: 'a banana'}, 
-        {emoji: '🍇', name: 'grapes'}, {emoji: '🍊', name: 'an orange'}, 
-        {emoji: '🍩', name: 'a donut'}, {emoji: '🍰', name: 'cake'}, 
-        {emoji: '🍦', name: 'ice cream'}, {emoji: '🍪', name: 'a cookie'}
+    // FRUIT GAME
+    // ====================
+    const categories = [
+        { 
+            name: 'Basic Actions', 
+            items: [
+                {emoji: '🏃', name: 'run'}, 
+                {emoji: '🚶', name: 'walk'},
+                {emoji: '🛌', name: 'sleep'},
+                {emoji: '🍽️', name: 'eat'},
+                {emoji: '🚿', name: 'wash'},
+                {emoji: '📚', name: 'study'},
+                {emoji: '🎸', name: 'play'},
+                {emoji: '📖', name: 'read'},
+                {emoji: '✍️', name: 'write'},
+                {emoji: '🎤', name: 'sing'}
+            ]
+        },
+        { 
+            name: 'Daily Activities', 
+            items: [
+                {emoji: '🛒', name: 'shop'}, 
+                {emoji: '🚴', name: 'ride'},
+                {emoji: '🏊', name: 'swim'},
+                {emoji: '🚗', name: 'drive'},
+                {emoji: '🧹', name: 'clean'},
+                {emoji: '🍳', name: 'cook'},
+                {emoji: '💃', name: 'dance'},
+                {emoji: '🚲', name: 'cycle'},
+                {emoji: '🎮', name: 'game'},
+                {emoji: '🎭', name: 'act'}
+            ]
+        },
+        { 
+            name: 'Movement Verbs', 
+            items: [
+                {emoji: '🏃‍♂️', name: 'jog'}, 
+                {emoji: '🧗', name: 'climb'},
+                {emoji: '🤸', name: 'jump'},
+                {emoji: '🤾', name: 'throw'},
+                {emoji: '🏌️', name: 'golf'},
+                {emoji: '🏄', name: 'surf'},
+                {emoji: '⛷️', name: 'ski'},
+                {emoji: '🤽', name: 'dive'},
+                {emoji: '🚣', name: 'row'},
+                {emoji: '🛹', name: 'skate'}
+            ]
+        },
+        { 
+            name: 'Basic Descriptions', 
+            items: [
+                {emoji: '🌞', name: 'sunny'}, 
+                {emoji: '❄️', name: 'cold'},
+                {emoji: '🔥', name: 'hot'},
+                {emoji: '💧', name: 'wet'},
+                {emoji: '🌈', name: 'colorful'},
+                {emoji: '⚡', name: 'fast'},
+                {emoji: '🐌', name: 'slow'},
+                {emoji: '🐘', name: 'big'},
+                {emoji: '🐜', name: 'small'},
+                {emoji: '❤️', name: 'happy'}
+            ]
+        },
+        { 
+            name: 'Personality Traits', 
+            items: [
+                {emoji: '😊', name: 'friendly'}, 
+                {emoji: '🧠', name: 'smart'},
+                {emoji: '💪', name: 'strong'},
+                {emoji: '🦸', name: 'brave'},
+                {emoji: '🤗', name: 'kind'},
+                {emoji: '🤓', name: 'clever'},
+                {emoji: '😴', name: 'sleepy'},
+                {emoji: '🤡', name: 'silly'},
+                {emoji: '👑', name: 'proud'},
+                {emoji: '🧐', name: 'curious'}
+            ]
+        },
+        { 
+            name: 'Sensory Words', 
+            items: [
+                {emoji: '🍯', name: 'sweet'}, 
+                {emoji: '🍋', name: 'sour'},
+                {emoji: '🧂', name: 'salty'},
+                {emoji: '☕', name: 'bitter'},
+                {emoji: '🦔', name: 'rough'},
+                {emoji: '🪶', name: 'soft'},
+                {emoji: '🔊', name: 'loud'},
+                {emoji: '🔇', name: 'quiet'},
+                {emoji: '💡', name: 'bright'},
+                {emoji: '🌑', name: 'dark'}
+            ]
+        },
+        { 
+            name: 'Everyday Objects', 
+            items: [
+                {emoji: '📖', name: 'a book'},
+                {emoji: '✏️', name: 'a pencil'},
+                {emoji: '💻', name: 'a computer'},
+                {emoji: '📱', name: 'a phone'},
+                {emoji: '⌚', name: 'a watch'},
+                {emoji: '🔑', name: 'a key'},
+                {emoji: '💡', name: 'a light'},
+                {emoji: '🧸', name: 'a toy'},
+                {emoji: '🧦', name: 'socks'},
+                {emoji: '👓', name: 'glasses'}
+            ]
+        },
+        { 
+            name: 'Animals', 
+            items: [
+                {emoji: '🐶', name: 'a dog'},
+                {emoji: '🐱', name: 'a cat'},
+                {emoji: '🐰', name: 'a rabbit'},
+                {emoji: '🦊', name: 'a fox'},
+                {emoji: '🐻', name: 'a bear'},
+                {emoji: '🦁', name: 'a lion'},
+                {emoji: '🐯', name: 'a tiger'},
+                {emoji: '🦄', name: 'a unicorn'},
+                {emoji: '🐧', name: 'a penguin'},
+                {emoji: '🦉', name: 'an owl'}
+            ]
+        },
+        { 
+            name: 'Food & Drink', 
+            items: [
+                {emoji: '🍎', name: 'an apple'}, 
+                {emoji: '🍌', name: 'a banana'},
+                {emoji: '🍕', name: 'a pizza'},
+                {emoji: '🍔', name: 'a burger'},
+                {emoji: '🍜', name: 'noodles'},
+                {emoji: '🍦', name: 'ice cream'},
+                {emoji: '🍩', name: 'a donut'},
+                {emoji: '☕', name: 'coffee'},
+                {emoji: '🍵', name: 'tea'},
+                {emoji: '🥤', name: 'a drink'}
+            ]
+        },
+        { 
+            name: 'Places', 
+            items: [
+                {emoji: '🏠', name: 'a house'},
+                {emoji: '🏫', name: 'a school'},
+                {emoji: '🏥', name: 'a hospital'},
+                {emoji: '🏖️', name: 'a beach'},
+                {emoji: '🏞️', name: 'a park'},
+                {emoji: '🏪', name: 'a store'},
+                {emoji: '🏟️', name: 'a stadium'},
+                {emoji: '⛪', name: 'a church'},
+                {emoji: '🏰', name: 'a castle'},
+                {emoji: '🌋', name: 'a volcano'}
+            ]
+        }
     ];
 
-    const sentenceData = {
-        subjects: [
-            {emoji: '👨‍🏫', name: 'The teacher'}, {emoji: '👩', name: 'My mother'}, 
-            {emoji: '👨', name: 'My father'}, {emoji: '🐶', name: 'The dog'}, 
-            {emoji: '🐱', name: 'The cat'}, {emoji: '👮', name: 'The officer'}, 
-            {emoji: '👽', name: 'An alien'}, {emoji: '🤖', name: 'A robot'}
-        ],
-        verbs: [
-            {emoji: '🍽️', name: 'eats'}, {emoji: '🍳', name: 'cooks'}, 
-            {emoji: '🧹', name: 'cleans'}, {emoji: '🦵', name: 'kicks'}, 
-            {emoji: '👀', name: 'sees'}, {emoji: '🎨', name: 'paints'}, 
-            {emoji: '🛒', name: 'buys'}, {emoji: '🧟', name: 'becomes'}
-        ],
-        objects: [
-            {emoji: '🍕', name: 'pizza'}, {emoji: '👞', name: 'a shoe'}, 
-            {emoji: '🚗', name: 'a car'}, {emoji: '🐛', name: 'a bug'}, 
-            {emoji: '🎸', name: 'a guitar'}, {emoji: '🏠', name: 'my house'}, 
-            {emoji: '🦕', name: 'a monster'}, {emoji: '💩', name: 'poo'} 
-        ]
-    };
-
-    let activeGameMode = null; 
-    let manualStopMode = false;
-    let reelsStopping = [false, false, false];
-    let activeIntervals = [null, null, null];
-
-    function toggleGame(mode) {
-        // Safety check: only work if reading mode is open
-        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') return;
-
-        const fruitBtn = document.getElementById('fruitToggle');
-        const sentenceBtn = document.getElementById('sentenceToggle');
-
-        // 1. If clicking the same button that is already on, Turn it OFF.
-        if (activeGameMode === mode) {
-            hideGame();
+    function updateFruitButtonState() {
+        if (fruitGameEnabled) {
+            fruitToggleBtn.innerHTML = '🍏';
+            fruitToggleBtn.style.color = 'var(--success)';
+        } else {
+            fruitToggleBtn.innerHTML = '🍎';
+            fruitToggleBtn.style.color = 'var(--warning)';
+        }
+        
+        fruitToggleBtn.classList.toggle('on', fruitGameEnabled);
+        fruitToggleBtn.title = fruitGameEnabled ? 'Fruit Game is ON' : 'Fruit Game is OFF';
+        
+        if (fruitGameEnabled) {
+            fruitToggleBtn.style.boxShadow = '0 0 10px var(--success)';
+            fruitToggleBtn.style.border = '2px solid var(--success)';
+        } else {
+            fruitToggleBtn.style.boxShadow = 'none';
+            fruitToggleBtn.style.border = '2px solid var(--warning)';
+        }
+    }
+    
+    function toggleFruitGame() {
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
             return;
         }
 
-        // 2. Turn ON the new mode
-        activeGameMode = mode;
+        fruitGameEnabled = !fruitGameEnabled;
+        updateFruitButtonState();
         
-        // 3. Update Visuals (Make the buttons glow)
-        if(fruitBtn) {
-            fruitBtn.classList.toggle('active', mode === 'fruit');
+        if (fruitGameEnabled) {
+            playSound('activate');
+            if (navigator.vibrate) navigator.vibrate(50);
+        } else {
+            if (fruitGameActive) {
+                hideFruitGame();
+            }
         }
-        if(sentenceBtn) {
-            sentenceBtn.classList.toggle('active', mode === 'sentence');
-        }
-
-        showGameUI();
+        
+        localStorage.setItem('fruitGameEnabled', fruitGameEnabled);
+        console.log('Fruit game is now', fruitGameEnabled ? 'ON' : 'OFF');
     }
     
-    function showGameUI() {
-        stopSpeech();
+    function showFruitGame() {
+        if (!fruitGameEnabled || fruitGameActive) {
+            console.log('Fruit game not shown - enabled:', fruitGameEnabled, 'active:', fruitGameActive);
+            return;
+        }
         
-        // Remove existing game UI if it exists to prevent duplicates
-        const existing = document.querySelector('.fruit-game-container');
-        if (existing) existing.remove();
-
-        const title = activeGameMode === 'fruit' ? "🎰 LUCKY MATCH" : "🤪 SILLY SENTENCES";
+        stopSpeech();
+        fruitGameActive = true;
         
         const gameContainer = document.createElement('div');
         gameContainer.className = 'fruit-game-container';
         gameContainer.innerHTML = `
             <div class="fruit-game">
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">${title}</h2>
-                
-                <div style="margin-bottom: 20px;">
-                    <button id="skillStopToggle" class="btn" style="background-color: var(--info); padding: 10px 20px;">
-                        ${manualStopMode ? '✋ Manual Stop: ON' : '🤖 Auto Stop: ON'}
-                    </button>
-                </div>
-
+                <h2>Fruit Machine!</h2>
                 <div class="fruit-reels">
                     <div class="reel-container">
-                        <div class="fruit-reel" id="reel0">❓</div>
-                        <div class="fruit-name" id="name0"></div>
-                    </div>
-                    <div class="reel-container">
-                        <div class="fruit-reel" id="reel1">❓</div>
+                        <div class="fruit-reel" id="reel1">🍎</div>
                         <div class="fruit-name" id="name1"></div>
                     </div>
                     <div class="reel-container">
-                        <div class="fruit-reel" id="reel2">❓</div>
+                        <div class="fruit-reel" id="reel2">🍊</div>
                         <div class="fruit-name" id="name2"></div>
                     </div>
+                    <div class="reel-container">
+                        <div class="fruit-reel" id="reel3">🍇</div>
+                        <div class="fruit-name" id="name3"></div>
+                    </div>
                 </div>
-                
-                <div id="gameResult" style="font-size: 2rem; min-height: 80px; margin: 20px 0; font-weight: bold; color: var(--text);"></div>
-                
-                <div style="display: flex; gap: 20px; justify-content: center;">
-                    <button id="spinBtn" class="btn" style="background-color: var(--success); font-size: 1.5rem;">SPIN!</button>
-                    <button id="exitGame" class="btn" style="background-color: var(--warning);">EXIT</button>
-                </div>
+                <div id="fruitResult" style="font-size: 2rem; min-height: 60px; margin: 20px 0;"></div>
+                <button id="exitFruitGame" class="btn" style="margin-top: 20px; background-color: var(--warning);">Exit Game</button>
             </div>
         `;
         
         document.body.appendChild(gameContainer);
-        
-        // Button Events
-        document.getElementById('exitGame').onclick = hideGame;
-        document.getElementById('spinBtn').onclick = startGameLoop;
-        document.getElementById('skillStopToggle').onclick = function() {
-            manualStopMode = !manualStopMode;
-            this.textContent = manualStopMode ? '✋ Manual Stop: ON' : '🤖 Auto Stop: ON';
-            this.style.backgroundColor = manualStopMode ? 'var(--warning)' : 'var(--info)';
-        };
-
-        // SAFER FOCUS: Only try to focus if the element actually exists
-        setTimeout(() => {
-            const spinBtn = document.getElementById('spinBtn');
-            if (spinBtn) spinBtn.focus();
-        }, 100);
-
-        // Add keyboard listener
-        document.addEventListener('keydown', handleGameKeys);
+        spinReels();
+        document.getElementById('exitFruitGame').addEventListener('click', hideFruitGame);
     }
 
-    function handleGameKeys(e) {
-        if (!activeGameMode) return;
-        
-        if (e.key === 'Enter') {
-            // If reels are spinning and we are in manual mode
-            if (activeIntervals.some(i => i !== null)) {
-                stopNextReel();
-                e.stopPropagation();
-                e.preventDefault();
-            }
-        }
-    }
-
-    function hideGame() {
+    function hideFruitGame() {
         const game = document.querySelector('.fruit-game-container');
-        if (game) game.remove();
+        if (game && game.parentNode) {
+            game.parentNode.removeChild(game);
+        }
         
-        activeGameMode = null;
-        stopAllReels();
-        document.removeEventListener('keydown', handleGameKeys);
-
-        // Remove glow from buttons
-        const fruitBtn = document.getElementById('fruitToggle');
-        const sentenceBtn = document.getElementById('sentenceToggle');
-        if(fruitBtn) fruitBtn.classList.remove('active');
-        if(sentenceBtn) sentenceBtn.classList.remove('active');
+        fruitGameActive = false;
         
-        // Refocus to navigation
+        if (window.AudioContext) {
+            const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            audioCtx.close();
+        }
+        
+        closeTranslationPopupHandler();
+        
+        if (!readingModeContainer || readingModeContainer.style.display !== 'flex') {
+            return;
+        }
+        
         setTimeout(() => {
-            const nextBtn = document.getElementById('nextSentence');
-            if (nextBtn) nextBtn.focus();
-        }, 100);
+            if (shouldAdvanceAfterGame) {
+                const isLastPage = currentSentenceIndex >= sentences.length - 1;
+                currentSentenceIndex = isLastPage ? 0 : currentSentenceIndex + 1;
+                shouldAdvanceAfterGame = false;
+            }
+            displayCurrentSentence();
+        }, 500);
     }
-
-    function stopAllReels() {
-        activeIntervals.forEach(i => clearInterval(i));
-        activeIntervals = [null, null, null];
-    }
-
-    function startGameLoop() {
-        if (activeIntervals.some(i => i !== null)) return; // Already running
-
+    
+    function spinReels() {
+        const currentCategory = categories[Math.floor(Math.random() * categories.length)];
+        const items = currentCategory.items;
+        const reels = [
+            document.getElementById('reel1'),
+            document.getElementById('reel2'),
+            document.getElementById('reel3')
+        ];
+        const resultDisplay = document.getElementById('fruitResult');
+        
+        resultDisplay.textContent = '';
+        resultDisplay.style.color = '';
         playSound('spin');
-        const resultDisplay = document.getElementById('gameResult');
-        resultDisplay.textContent = '...';
         
-        // Reset Visuals
-        [0, 1, 2].forEach(i => {
-            document.getElementById(`reel${i}`).style.transform = 'none';
-            document.getElementById(`reel${i}`).style.boxShadow = 'none';
-            document.getElementById(`name${i}`).textContent = '';
+        const shouldMatch = Math.random() < 0.33;
+        let matchingItem = '';
+        
+        if (shouldMatch) {
+            matchingItem = items[Math.floor(Math.random() * items.length)];
+            matchingItem = items.find(item => item.emoji === matchingItem.emoji) || matchingItem;
+        }
+        
+        spinReel(reels[0], 0, items, matchingItem, shouldMatch, () => {
+            playSound('reelStop');
+            spinReel(reels[1], 300, items, matchingItem, shouldMatch, () => {
+                playSound('reelStop');
+                spinReel(reels[2], 300, items, matchingItem, shouldMatch, () => {
+                    playSound('reelStop');
+                    
+                    setTimeout(() => {
+                        if (shouldMatch && reels[0].textContent === reels[1].textContent && 
+                            reels[1].textContent === reels[2].textContent) {
+                            playSound('win');
+                            playSound('coin');
+                            resultDisplay.textContent = '🎉 WINNER! 🎉';
+                            resultDisplay.style.color = 'var(--success)';
+                            resultDisplay.style.fontWeight = 'bold';
+                            
+                            reels.forEach(reel => {
+                                reel.style.transform = 'scale(1.2)';
+                                reel.style.transition = 'all 0.3s';
+                                reel.style.boxShadow = '0 0 20px gold';
+                            });
+                            
+                            setTimeout(() => {
+                                createConfetti();
+                            }, 500);
+                            
+                            setTimeout(hideFruitGame, 3000);
+                        } else {
+                            playSound('lose');
+                            resultDisplay.textContent = 'Try again!';
+                            resultDisplay.style.color = 'var(--warning)';
+                            
+                            reels.forEach(reel => {
+                                reel.style.animation = 'shake 0.5s';
+                            });
+                            
+                            setTimeout(hideFruitGame, 2000);
+                        }
+                    }, 300);
+                });
+            });
         });
-
-        // Start Spinning
-        [0, 1, 2].forEach(i => startReelSpin(i));
-
-        reelsStopping = [false, false, false];
-
-        if (!manualStopMode) {
-            // Auto Stop Sequence
-            setTimeout(() => stopReel(0), 2000);
-            setTimeout(() => stopReel(1), 3500);
-            setTimeout(() => stopReel(2), 5000);
-        } else {
-            resultDisplay.textContent = "Press OK to stop reels!";
-        }
     }
 
-    function startReelSpin(index) {
-        const reel = document.getElementById(`reel${index}`);
-        let items;
-
-        if (activeGameMode === 'fruit') {
-            items = fruitData;
-        } else {
-            // Sentence Mode: 0=Subject, 1=Verb, 2=Object
-            if (index === 0) items = sentenceData.subjects;
-            else if (index === 1) items = sentenceData.verbs;
-            else items = sentenceData.objects;
-        }
-
-        activeIntervals[index] = setInterval(() => {
-            const randomItem = items[Math.floor(Math.random() * items.length)];
-            reel.textContent = randomItem.emoji;
-        }, 100); 
-    }
-
-    function stopNextReel() {
-        for (let i = 0; i < 3; i++) {
-            if (activeIntervals[i] !== null && !reelsStopping[i]) {
-                stopReel(i);
-                break;
-            }
-        }
-    }
-
-    function stopReel(index) {
-        if (activeIntervals[index] === null) return;
+    function spinReel(reel, delay, items, matchingItem, shouldMatch, callback) {
+        const reelNumber = reel.id.replace('reel', '');
+        const nameElement = document.getElementById(`name${reelNumber}`);
         
-        reelsStopping[index] = true;
-        clearInterval(activeIntervals[index]);
-        activeIntervals[index] = null;
-        
-        playSound('reelStop');
-
-        const reel = document.getElementById(`reel${index}`);
-        const nameEl = document.getElementById(`name${index}`);
-        
-        let finalItem;
-        
-        if (activeGameMode === 'fruit') {
-            finalItem = fruitData[Math.floor(Math.random() * fruitData.length)];
-        } else {
-            const category = index === 0 ? sentenceData.subjects : 
-                             index === 1 ? sentenceData.verbs : sentenceData.objects;
-            finalItem = category[Math.floor(Math.random() * category.length)];
-        }
-
-        reel.textContent = finalItem.emoji;
-        nameEl.textContent = finalItem.name;
-        reel.style.animation = 'pulse 0.3s';
-
-        if (activeIntervals.every(i => i === null)) {
-            checkWinCondition();
-        }
-    }
-
-    function checkWinCondition() {
-        const r0 = document.getElementById('name0').textContent;
-        const r1 = document.getElementById('name1').textContent;
-        const r2 = document.getElementById('name2').textContent;
-        const resultDisplay = document.getElementById('gameResult');
-
-        if (activeGameMode === 'fruit') {
-            if (r0 === r1 && r1 === r2) {
-                playSound('win');
-                resultDisplay.textContent = "🎉 WINNER! 🎉";
-                resultDisplay.style.color = "var(--warning)";
-                createConfetti();
-                // Safety check for speech
-                if ('speechSynthesis' in window) {
-                   speakSentence(`Three ${r0}s! You win!`, 'en-US');
+        setTimeout(() => {
+            let spins = 0;
+            const spinInterval = setInterval(() => {
+                if (spins < 10) {
+                    const randomItem = items[Math.floor(Math.random() * items.length)];
+                    reel.textContent = randomItem.emoji;
+                    nameElement.textContent = '';
+                } 
+                else if (spins < 15) {
+                    if (spins % 2 === 0) {
+                        const randomItem = items[Math.floor(Math.random() * items.length)];
+                        reel.textContent = randomItem.emoji;
+                        nameElement.textContent = '';
+                    }
+                } 
+                else {
+                    clearInterval(spinInterval);
+                    let finalItem;
+                    if (shouldMatch) {
+                        finalItem = matchingItem;
+                    } else {
+                        finalItem = items[Math.floor(Math.random() * items.length)];
+                    }
+                    reel.textContent = finalItem.emoji;
+                    nameElement.textContent = finalItem.name;
+                    
+                    if (window.speechSynthesis) {
+                        const utterance = new SpeechSynthesisUtterance(finalItem.name);
+                        utterance.rate = 0.9;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                    
+                    if (callback) callback();
                 }
-            } else if (r0 === r1 || r1 === r2 || r0 === r2) {
-                resultDisplay.textContent = "So close!";
-                playSound('lose');
-            } else {
-                resultDisplay.textContent = "Try again!";
-            }
-        } else {
-            const sentence = `${r0} ${r1} ${r2}.`;
-            resultDisplay.textContent = sentence;
-            resultDisplay.style.color = "var(--primary)";
-            playSound('coin'); 
+                spins++;
+            }, 100);
+        }, delay);
+    }
+
+    function createConfetti() {
+        const container = document.querySelector('.fruit-game-container');
+        if (!container) return;
+        
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'absolute';
+            confetti.style.width = '10px';
+            confetti.style.height = '10px';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.borderRadius = '50%';
+            confetti.style.left = `${Math.random() * 100}%`;
+            confetti.style.top = '-10px';
+            confetti.style.opacity = '0.8';
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            confetti.style.animation = `confetti-fall ${2 + Math.random() * 3}s linear forwards`;
             
-            if ('speechSynthesis' in window) {
-                setTimeout(() => speakSentence(sentence, 'en-US'), 500);
-            }
+            container.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+    }
+
+    function playSound(type) {
+        if (!window.AudioContext) return;
+        
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let oscillator = audioCtx.createOscillator();
+        let gainNode = audioCtx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        switch(type) {
+            case 'spin':
+                oscillator.type = 'sawtooth';
+                oscillator.frequency.setValueAtTime(200, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.8);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.8);
+                break;
+                
+            case 'reelStop':
+                oscillator.type = 'square';
+                oscillator.frequency.setValueAtTime(1000, audioCtx.currentTime);
+                gainNode.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.1);
+                break;
+                
+            case 'win':
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime);
+                oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1);
+                oscillator.frequency.setValueAtTime(783.99, audioCtx.currentTime + 0.2);
+                oscillator.frequency.setValueAtTime(1046.5, audioCtx.currentTime + 0.3);
+                gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.5);
+                break;
+                
+            case 'lose':
+                oscillator.type = 'square';
+                oscillator.frequency.setValueAtTime(349.23, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(261.63, audioCtx.currentTime + 0.5);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.6);
+                break;
+                
+            case 'activate':
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(784, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(1046.5, audioCtx.currentTime + 0.2);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.3);
+                break;
+                
+            case 'coin':
+                oscillator.type = 'triangle';
+                oscillator.frequency.setValueAtTime(988, audioCtx.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(1318, audioCtx.currentTime + 0.1);
+                gainNode.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.2);
+                oscillator.start();
+                oscillator.stop(audioCtx.currentTime + 0.2);
+                break;
         }
     }
 
@@ -2553,6 +2705,15 @@ function loadLessonsData() {
         try {
             // Standard format for all classes
             const classData = {
+                'Bronze': {
+                    stories: typeof bronzeStories !== 'undefined' ? bronzeStories : []
+                },
+                'Silver': {
+                    stories: typeof silverStories !== 'undefined' ? silverStories : []
+                },
+                'Gold': {
+                    stories: typeof goldStories !== 'undefined' ? goldStories : []
+                },
                 'Adult': adult,
                 'X': x,
                 'C': c,
@@ -2605,16 +2766,19 @@ function loadLessonsData() {
                 }
             };
 
-            // Process each class to ensure consistent structure
+// Process each class to ensure consistent structure
             Object.entries(classData).forEach(([className, data]) => {
                 if (!data) return; // Skip if data not loaded
                 
                 if (Array.isArray(data)) {
-                    // For classes that are just arrays of content
+                    // UPDATED LOGIC HERE:
+                    // Check if the items inside the array are Objects with a 'title' property
                     lessonsData[className] = {
-                        stories: data.map((content, i) => ({
-                            title: `Story ${i+1}`,
-                            content: content
+                        stories: data.map((item, i) => ({
+                            // If item.title exists, use it. If not, make a generic "Story X" title.
+                            title: item.title ? item.title : `Story ${i+1}`,
+                            // If item.content exists, use it. If item is just a string, use item itself.
+                            content: item.content ? item.content : item
                         }))
                     };
                 } else if (data.stories || data.questions) {
@@ -2650,105 +2814,71 @@ function loadLessonsData() {
     // ====================
     // UTILITY FUNCTIONS
     // ====================
-    
-function toggleNightMode() {
+    function toggleNightMode() {
         isNightMode = !isNightMode;
         document.body.classList.toggle('dark-mode', isNightMode);
         document.getElementById('nightModeToggle').textContent = isNightMode ? '☀️' : '🌙';
         localStorage.setItem('nightMode', isNightMode);
     }
 
-    // --- NEW TV REMOTE LOGIC START ---
     function handleRemoteInput(e) {
-        // Map D-Pad keys
-        const navKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
+        const activeElement = document.activeElement;
         
-        if (navKeys.includes(e.key)) {
-            e.preventDefault(); 
-            spatialNavigation(e.key);
-        } else if (e.key === 'Enter') {
-            if (document.activeElement) {
-                document.activeElement.click();
-            }
-        } else if (e.key === 'Backspace' || e.key === 'Escape') {
-            if (fruitGameActive) {
-                hideFruitGame();
-            } else if (document.getElementById('readingModeContainer').style.display === 'flex') {
+        switch(e.key) {
+            case 'ArrowUp':
+                navigateFocus('up');
+                e.preventDefault();
+                break;
+            case 'ArrowDown':
+                navigateFocus('down');
+                e.preventDefault();
+                break;
+            case 'ArrowLeft':
+                if (activeElement === prevSentenceBtn) {
+                    showPreviousSentence();
+                } else {
+                    navigateFocus('left');
+                }
+                e.preventDefault();
+                break;
+            case 'ArrowRight':
+                if (activeElement === nextSentenceBtn) {
+                    showNextSentence();
+                } else {
+                    navigateFocus('right');
+                }
+                e.preventDefault();
+                break;
+            case 'Enter':
+                if (activeElement) {
+                    activeElement.click();
+                }
+                break;
+            case 'Backspace':
                 exitReadingMode();
-            }
+                break;
         }
     }
 
-    function spatialNavigation(direction) {
-        const activeEl = document.activeElement;
-        // Find everything we can click on that is currently visible
-        const allFocusable = Array.from(document.querySelectorAll('button, a, select, input, [tabindex="0"]'))
-            .filter(el => {
-                const style = window.getComputedStyle(el);
-                return el.offsetParent !== null && 
-                       !el.disabled && 
-                       style.display !== 'none' && 
-                       style.visibility !== 'hidden';
-            });
-
-        if (!activeEl || !allFocusable.includes(activeEl)) {
-            if (allFocusable.length > 0) allFocusable[0].focus();
+    function navigateFocus(direction) {
+        const focusable = Array.from(document.querySelectorAll('button, select, [tabindex="0"]'));
+        const currentIndex = focusable.indexOf(document.activeElement);
+        
+        if (currentIndex === -1) {
+            if (focusable.length > 0) focusable[0].focus();
             return;
         }
-
-        const curRect = activeEl.getBoundingClientRect();
-        const curCenter = {
-            x: curRect.left + curRect.width / 2,
-            y: curRect.top + curRect.height / 2
-        };
-
-        let bestCandidate = null;
-        let minDistance = Infinity;
-
-        allFocusable.forEach(el => {
-            if (el === activeEl) return;
-
-            const rect = el.getBoundingClientRect();
-            const center = {
-                x: rect.left + rect.width / 2,
-                y: rect.top + rect.height / 2
-            };
-
-            const xDiff = center.x - curCenter.x;
-            const yDiff = center.y - curCenter.y;
-            let isValid = false;
-
-            // Check if the button is generally in the right direction
-            switch (direction) {
-                case 'ArrowUp': if (yDiff < -5) isValid = true; break;
-                case 'ArrowDown': if (yDiff > 5) isValid = true; break;
-                case 'ArrowLeft': if (xDiff < -5) isValid = true; break;
-                case 'ArrowRight': if (xDiff > 5) isValid = true; break;
-            }
-
-            if (isValid) {
-                // Math to find the closest button, prioritizing the correct axis
-                // (e.g. if pressing DOWN, we punish buttons that are far to the left/right)
-                let weightedDist;
-                if (direction === 'ArrowUp' || direction === 'ArrowDown') {
-                    weightedDist = Math.sqrt((xDiff * xDiff * 3) + (yDiff * yDiff));
-                } else {
-                    weightedDist = Math.sqrt((xDiff * xDiff) + (yDiff * yDiff * 3));
-                }
-
-                if (weightedDist < minDistance) {
-                    minDistance = weightedDist;
-                    bestCandidate = el;
-                }
-            }
-        });
-
-        if (bestCandidate) {
-            bestCandidate.focus();
-            bestCandidate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        let nextIndex = currentIndex;
+        
+        if (direction === 'up' || direction === 'left') {
+            nextIndex = Math.max(0, currentIndex - 1);
+        } else {
+            nextIndex = Math.min(focusable.length - 1, currentIndex + 1);
         }
+        
+        focusable[nextIndex].focus();
     }
-    // --- NEW TV REMOTE LOGIC END ---
 
     // ====================
     // INITIALIZATION
@@ -2767,7 +2897,6 @@ function toggleNightMode() {
 </script>   
 </body>
 </html>
-
 
 
 
