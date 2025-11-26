@@ -1323,7 +1323,7 @@ const maxFontSize = 8; // vw/rem units
         });
     }
 
-    function setupEventListeners() {
+function setupEventListeners() {
         // Class and story selection
         if (classSelector) classSelector.addEventListener('change', handleClassSelect);
         storySelector.addEventListener('change', handleStorySelect);
@@ -1340,10 +1340,20 @@ const maxFontSize = 8; // vw/rem units
         // Reading mode navigation
         prevSentenceBtn.addEventListener('click', showPreviousSentence);
         nextSentenceBtn.addEventListener('click', showNextSentence);
-        playEnglishBtn.addEventListener('click', () => playSentence('english'));
-        playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
+        
+        // Play buttons (if visible)
+        if(playEnglishBtn) playEnglishBtn.addEventListener('click', () => playSentence('english'));
+        if(playJapaneseBtn) playJapaneseBtn.addEventListener('click', () => playSentence('japanese'));
+        
         exitReadingBtn.addEventListener('click', exitReadingMode);
-        fruitToggleBtn.addEventListener('click', toggleFruitGame);
+
+        // --- NEW GAME LISTENERS ---
+        // This connects the Apple and ABC buttons to the new game system
+        const fruitBtn = document.getElementById('fruitToggle');
+        const sentenceBtn = document.getElementById('sentenceToggle');
+        
+        if (fruitBtn) fruitBtn.addEventListener('click', () => toggleGame('fruit'));
+        if (sentenceBtn) sentenceBtn.addEventListener('click', () => toggleGame('sentence'));
 
         // Night mode toggle
         document.getElementById('nightModeToggle').addEventListener('click', toggleNightMode);
@@ -1356,7 +1366,6 @@ const maxFontSize = 8; // vw/rem units
             window.speechSynthesis.onvoiceschanged = function() {
                 console.log('Voices loaded');
             };
-            
             if (window.speechSynthesis.getVoices().length === 0) {
                 window.speechSynthesis.getVoices();
             }
@@ -2757,5 +2766,6 @@ function toggleNightMode() {
 </script>   
 </body>
 </html>
+
 
 
