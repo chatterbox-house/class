@@ -1372,7 +1372,7 @@ function setupEventListeners() {
         }
     }
 
-    function loadSavedPreferences() {
+function loadSavedPreferences() {
         // Night mode
         const savedNightMode = localStorage.getItem('nightMode') === 'true';
         if (savedNightMode) {
@@ -1392,11 +1392,6 @@ function setupEventListeners() {
         if (savedDisplayMode && ['english', 'japanese', 'both'].includes(savedDisplayMode)) {
             displayMode = savedDisplayMode;
         }
-
-        // Fruit game state
-        const savedFruitGameState = localStorage.getItem('fruitGameEnabled');
-        fruitGameEnabled = savedFruitGameState === 'true';
-        updateFruitButtonState();
 
         // Initialize button states
         document.getElementById('displayEnglish').classList.toggle('active', displayMode === 'english');
@@ -1836,19 +1831,16 @@ function applyFontSize() {
     // ====================
     // NAVIGATION
     // ====================
-    function showNextSentence() {
+function showNextSentence() {
         stopSpeech();
         closeTranslationPopupHandler();
         
-        if (sentences.length === 0 || fruitGameActive) return;
+        // If a game is currently open on screen, do nothing
+        if (activeGameMode) return;
+        
+        if (sentences.length === 0) return;
         
         const isLastPage = currentSentenceIndex >= sentences.length - 1;
-        
-        if (fruitGameEnabled) {
-            shouldAdvanceAfterGame = true;
-            showFruitGame();
-            return;
-        }
         
         if (isLastPage) {
             currentSentenceIndex = 0;
@@ -2766,6 +2758,7 @@ function toggleNightMode() {
 </script>   
 </body>
 </html>
+
 
 
 
