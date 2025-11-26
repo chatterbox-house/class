@@ -1078,6 +1078,18 @@
         box-shadow: 0 0 0 0 rgba(247, 37, 133, 0);
     }
 }
+/* TV REMOTE FOCUS STYLES */
+    button:focus, 
+    select:focus, 
+    a:focus, 
+    .file-input-label:focus {
+        outline: 5px solid #ffcc00 !important; /* Bright Yellow Outline */
+        box-shadow: 0 0 20px #ffcc00 !important; /* Glowing effect */
+        transform: scale(1.05); /* Make it pop out slightly */
+        z-index: 9999;
+        position: relative;
+        background-color: #5a7cff; /* Lighten the background */
+    }
 </style>
 
 </head>
@@ -1087,7 +1099,7 @@
 <div class="container" id="mainContainer">
     <div class="header">CHATTERBOX HOUSE</div>
 
-    <a href="eiken5vocab.html" class="news-button" style="
+    <a href="eiken5vocab.html" tabindex="0" class="news-button" style="
         display: inline-block;
         background-color: #f72585;
         color: white;
@@ -1104,7 +1116,7 @@
         animation: pulse 2s infinite;
     ">Eiken 5 Vocabulary</a>
 
-    <a href="news.html" class="news-button" style="
+    <a href="news.html" tabindex="0" class="news-button" style="
         display: inline-block;
         background-color: #f72585;
         color: white;
@@ -2705,15 +2717,6 @@ function loadLessonsData() {
         try {
             // Standard format for all classes
             const classData = {
-                'Bronze': {
-                    stories: typeof bronzeStories !== 'undefined' ? bronzeStories : []
-                },
-                'Silver': {
-                    stories: typeof silverStories !== 'undefined' ? silverStories : []
-                },
-                'Gold': {
-                    stories: typeof goldStories !== 'undefined' ? goldStories : []
-                },
                 'Adult': adult,
                 'X': x,
                 'C': c,
@@ -2766,19 +2769,16 @@ function loadLessonsData() {
                 }
             };
 
-// Process each class to ensure consistent structure
+            // Process each class to ensure consistent structure
             Object.entries(classData).forEach(([className, data]) => {
                 if (!data) return; // Skip if data not loaded
                 
                 if (Array.isArray(data)) {
-                    // UPDATED LOGIC HERE:
-                    // Check if the items inside the array are Objects with a 'title' property
+                    // For classes that are just arrays of content
                     lessonsData[className] = {
-                        stories: data.map((item, i) => ({
-                            // If item.title exists, use it. If not, make a generic "Story X" title.
-                            title: item.title ? item.title : `Story ${i+1}`,
-                            // If item.content exists, use it. If item is just a string, use item itself.
-                            content: item.content ? item.content : item
+                        stories: data.map((content, i) => ({
+                            title: `Story ${i+1}`,
+                            content: content
                         }))
                     };
                 } else if (data.stories || data.questions) {
@@ -2814,71 +2814,105 @@ function loadLessonsData() {
     // ====================
     // UTILITY FUNCTIONS
     // ====================
-    function toggleNightMode() {
+    
+function toggleNightMode() {
         isNightMode = !isNightMode;
         document.body.classList.toggle('dark-mode', isNightMode);
         document.getElementById('nightModeToggle').textContent = isNightMode ? '☀️' : '🌙';
         localStorage.setItem('nightMode', isNightMode);
     }
 
+    // --- NEW TV REMOTE LOGIC START ---
     function handleRemoteInput(e) {
-        const activeElement = document.activeElement;
+        // Map D-Pad keys
+        const navKeys = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
         
-        switch(e.key) {
-            case 'ArrowUp':
-                navigateFocus('up');
-                e.preventDefault();
-                break;
-            case 'ArrowDown':
-                navigateFocus('down');
-                e.preventDefault();
-                break;
-            case 'ArrowLeft':
-                if (activeElement === prevSentenceBtn) {
-                    showPreviousSentence();
-                } else {
-                    navigateFocus('left');
-                }
-                e.preventDefault();
-                break;
-            case 'ArrowRight':
-                if (activeElement === nextSentenceBtn) {
-                    showNextSentence();
-                } else {
-                    navigateFocus('right');
-                }
-                e.preventDefault();
-                break;
-            case 'Enter':
-                if (activeElement) {
-                    activeElement.click();
-                }
-                break;
-            case 'Backspace':
+        if (navKeys.includes(e.key)) {
+            e.preventDefault(); 
+            spatialNavigation(e.key);
+        } else if (e.key === 'Enter') {
+            if (document.activeElement) {
+                document.activeElement.click();
+            }
+        } else if (e.key === 'Backspace' || e.key === 'Escape') {
+            if (fruitGameActive) {
+                hideFruitGame();
+            } else if (document.getElementById('readingModeContainer').style.display === 'flex') {
                 exitReadingMode();
-                break;
+            }
         }
     }
 
-    function navigateFocus(direction) {
-        const focusable = Array.from(document.querySelectorAll('button, select, [tabindex="0"]'));
-        const currentIndex = focusable.indexOf(document.activeElement);
-        
-        if (currentIndex === -1) {
-            if (focusable.length > 0) focusable[0].focus();
+    function spatialNavigation(direction) {
+        const activeEl = document.activeElement;
+        // Find everything we can click on that is currently visible
+        const allFocusable = Array.from(document.querySelectorAll('button, a, select, input, [tabindex="0"]'))
+            .filter(el => {
+                const style = window.getComputedStyle(el);
+                return el.offsetParent !== null && 
+                       !el.disabled && 
+                       style.display !== 'none' && 
+                       style.visibility !== 'hidden';
+            });
+
+        if (!activeEl || !allFocusable.includes(activeEl)) {
+            if (allFocusable.length > 0) allFocusable[0].focus();
             return;
         }
-        
-        let nextIndex = currentIndex;
-        
-        if (direction === 'up' || direction === 'left') {
-            nextIndex = Math.max(0, currentIndex - 1);
-        } else {
-            nextIndex = Math.min(focusable.length - 1, currentIndex + 1);
+
+        const curRect = activeEl.getBoundingClientRect();
+        const curCenter = {
+            x: curRect.left + curRect.width / 2,
+            y: curRect.top + curRect.height / 2
+        };
+
+        let bestCandidate = null;
+        let minDistance = Infinity;
+
+        allFocusable.forEach(el => {
+            if (el === activeEl) return;
+
+            const rect = el.getBoundingClientRect();
+            const center = {
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+            };
+
+            const xDiff = center.x - curCenter.x;
+            const yDiff = center.y - curCenter.y;
+            let isValid = false;
+
+            // Check if the button is generally in the right direction
+            switch (direction) {
+                case 'ArrowUp': if (yDiff < -5) isValid = true; break;
+                case 'ArrowDown': if (yDiff > 5) isValid = true; break;
+                case 'ArrowLeft': if (xDiff < -5) isValid = true; break;
+                case 'ArrowRight': if (xDiff > 5) isValid = true; break;
+            }
+
+            if (isValid) {
+                // Math to find the closest button, prioritizing the correct axis
+                // (e.g. if pressing DOWN, we punish buttons that are far to the left/right)
+                let weightedDist;
+                if (direction === 'ArrowUp' || direction === 'ArrowDown') {
+                    weightedDist = Math.sqrt((xDiff * xDiff * 3) + (yDiff * yDiff));
+                } else {
+                    weightedDist = Math.sqrt((xDiff * xDiff) + (yDiff * yDiff * 3));
+                }
+
+                if (weightedDist < minDistance) {
+                    minDistance = weightedDist;
+                    bestCandidate = el;
+                }
+            }
+        });
+
+        if (bestCandidate) {
+            bestCandidate.focus();
+            bestCandidate.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        
-        focusable[nextIndex].focus();
     }
+    // --- NEW TV REMOTE LOGIC END ---
 
     // ====================
     // INITIALIZATION
@@ -2897,9 +2931,5 @@ function loadLessonsData() {
 </script>   
 </body>
 </html>
-
-
-
-
 
 
