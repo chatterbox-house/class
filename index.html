@@ -616,9 +616,13 @@
         margin: 0 2px;
     }
 
-    .fruit-toggle:active {
-        box-shadow: none;
-        transform: translateY(4px);
+/* Style for when the game button is ON */
+    .fruit-toggle.active {
+        background-color: var(--success) !important;
+        border-color: white !important;
+        box-shadow: 0 0 15px var(--success) !important;
+        transform: scale(1.1);
+        z-index: 100;
     }
 
 
@@ -2230,11 +2234,7 @@ function showNextSentence() {
     }
 
 
-
-
-
-
- // ====================
+// ====================
     // GAME SYSTEM (FRUIT & SENTENCES)
     // ====================
     
@@ -2267,32 +2267,42 @@ function showNextSentence() {
         ]
     };
 
-    let activeGameMode = null; // 'fruit' or 'sentence' or null
-    let manualStopMode = false; // Toggle for "Skill Stop"
+    let activeGameMode = null; 
+    let manualStopMode = false;
     let reelsStopping = [false, false, false];
     let activeIntervals = [null, null, null];
 
     function toggleGame(mode) {
+        // Safety check: only work if reading mode is open
         if (!readingModeContainer || readingModeContainer.style.display !== 'flex') return;
 
-        // If clicking the same button, close the game
+        const fruitBtn = document.getElementById('fruitToggle');
+        const sentenceBtn = document.getElementById('sentenceToggle');
+
+        // 1. If clicking the same button that is already on, Turn it OFF.
         if (activeGameMode === mode) {
             hideGame();
             return;
         }
 
+        // 2. Turn ON the new mode
         activeGameMode = mode;
+        
+        // 3. Update Visuals (Make the buttons glow)
+        if(fruitBtn) {
+            fruitBtn.classList.toggle('active', mode === 'fruit');
+        }
+        if(sentenceBtn) {
+            sentenceBtn.classList.toggle('active', mode === 'sentence');
+        }
+
         showGameUI();
     }
     
-    // Hook up the buttons (Add this to your initEventListeners area or run it once)
-    document.getElementById('fruitToggle').onclick = () => toggleGame('fruit');
-    document.getElementById('sentenceToggle').onclick = () => toggleGame('sentence');
-
     function showGameUI() {
         stopSpeech();
         
-        // Remove existing game if any
+        // Remove existing game UI if it exists to prevent duplicates
         const existing = document.querySelector('.fruit-game-container');
         if (existing) existing.remove();
 
@@ -2345,10 +2355,13 @@ function showNextSentence() {
             this.style.backgroundColor = manualStopMode ? 'var(--warning)' : 'var(--info)';
         };
 
-        // Focus the Spin button immediately for TV Remote
-        setTimeout(() => document.getElementById('spinBtn').focus(), 100);
+        // SAFER FOCUS: Only try to focus if the element actually exists
+        setTimeout(() => {
+            const spinBtn = document.getElementById('spinBtn');
+            if (spinBtn) spinBtn.focus();
+        }, 100);
 
-        // Add keyboard listener for Skill Stop
+        // Add keyboard listener
         document.addEventListener('keydown', handleGameKeys);
     }
 
@@ -2356,7 +2369,7 @@ function showNextSentence() {
         if (!activeGameMode) return;
         
         if (e.key === 'Enter') {
-            // If reels are spinning and we are in manual mode (or user forces a stop)
+            // If reels are spinning and we are in manual mode
             if (activeIntervals.some(i => i !== null)) {
                 stopNextReel();
                 e.stopPropagation();
@@ -2368,9 +2381,16 @@ function showNextSentence() {
     function hideGame() {
         const game = document.querySelector('.fruit-game-container');
         if (game) game.remove();
+        
         activeGameMode = null;
         stopAllReels();
         document.removeEventListener('keydown', handleGameKeys);
+
+        // Remove glow from buttons
+        const fruitBtn = document.getElementById('fruitToggle');
+        const sentenceBtn = document.getElementById('sentenceToggle');
+        if(fruitBtn) fruitBtn.classList.remove('active');
+        if(sentenceBtn) sentenceBtn.classList.remove('active');
         
         // Refocus to navigation
         setTimeout(() => {
@@ -2401,7 +2421,6 @@ function showNextSentence() {
         // Start Spinning
         [0, 1, 2].forEach(i => startReelSpin(i));
 
-        // Setup stopping logic
         reelsStopping = [false, false, false];
 
         if (!manualStopMode) {
@@ -2430,11 +2449,10 @@ function showNextSentence() {
         activeIntervals[index] = setInterval(() => {
             const randomItem = items[Math.floor(Math.random() * items.length)];
             reel.textContent = randomItem.emoji;
-        }, 100); // Speed of spin
+        }, 100); 
     }
 
     function stopNextReel() {
-        // Find first reel that is still spinning
         for (let i = 0; i < 3; i++) {
             if (activeIntervals[i] !== null && !reelsStopping[i]) {
                 stopReel(i);
@@ -2455,18 +2473,11 @@ function showNextSentence() {
         const reel = document.getElementById(`reel${index}`);
         const nameEl = document.getElementById(`name${index}`);
         
-        // DETERMINE RESULT
         let finalItem;
         
         if (activeGameMode === 'fruit') {
-            // Fruit Logic: 33% chance to match the previous reel to make it exciting
-            // But simple random is usually fairer for class games
             finalItem = fruitData[Math.floor(Math.random() * fruitData.length)];
-            
-            // "Rig" the game slightly for fun? (Force win if first two match?) 
-            // Let's stick to random for now to keep it honest.
         } else {
-            // Sentence Logic
             const category = index === 0 ? sentenceData.subjects : 
                              index === 1 ? sentenceData.verbs : sentenceData.objects;
             finalItem = category[Math.floor(Math.random() * category.length)];
@@ -2474,11 +2485,8 @@ function showNextSentence() {
 
         reel.textContent = finalItem.emoji;
         nameEl.textContent = finalItem.name;
-        
-        // Animation
         reel.style.animation = 'pulse 0.3s';
 
-        // Check if all stopped
         if (activeIntervals.every(i => i === null)) {
             checkWinCondition();
         }
@@ -2492,28 +2500,29 @@ function showNextSentence() {
 
         if (activeGameMode === 'fruit') {
             if (r0 === r1 && r1 === r2) {
-                // JACKPOT
                 playSound('win');
                 resultDisplay.textContent = "🎉 WINNER! 🎉";
                 resultDisplay.style.color = "var(--warning)";
                 createConfetti();
-                speakSentence(`Three ${r0}s! You win!`, 'en-US');
+                // Safety check for speech
+                if ('speechSynthesis' in window) {
+                   speakSentence(`Three ${r0}s! You win!`, 'en-US');
+                }
             } else if (r0 === r1 || r1 === r2 || r0 === r2) {
-                // CLOSE
                 resultDisplay.textContent = "So close!";
                 playSound('lose');
             } else {
                 resultDisplay.textContent = "Try again!";
             }
         } else {
-            // SENTENCE MODE - Always a "Win" because it's funny
             const sentence = `${r0} ${r1} ${r2}.`;
             resultDisplay.textContent = sentence;
             resultDisplay.style.color = "var(--primary)";
-            playSound('coin'); // Nice 'ding' sound
+            playSound('coin'); 
             
-            // Read the silly sentence
-            setTimeout(() => speakSentence(sentence, 'en-US'), 500);
+            if ('speechSynthesis' in window) {
+                setTimeout(() => speakSentence(sentence, 'en-US'), 500);
+            }
         }
     }
 
@@ -2758,6 +2767,7 @@ function toggleNightMode() {
 </script>   
 </body>
 </html>
+
 
 
 
