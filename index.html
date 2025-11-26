@@ -2221,155 +2221,155 @@ function applyFontSize() {
     // ====================
     // FRUIT GAME
     // ====================
-    const categories = [
+const categories = [
         { 
-            name: 'Basic Actions', 
+            name: 'Animals (Singular)', 
             items: [
-                {emoji: '🏃', name: 'run'}, 
-                {emoji: '🚶', name: 'walk'},
-                {emoji: '🛌', name: 'sleep'},
-                {emoji: '🍽️', name: 'eat'},
-                {emoji: '🚿', name: 'wash'},
-                {emoji: '📚', name: 'study'},
-                {emoji: '🎸', name: 'play'},
-                {emoji: '📖', name: 'read'},
-                {emoji: '✍️', name: 'write'},
-                {emoji: '🎤', name: 'sing'}
-            ]
-        },
-        { 
-            name: 'Daily Activities', 
-            items: [
-                {emoji: '🛒', name: 'shop'}, 
-                {emoji: '🚴', name: 'ride'},
-                {emoji: '🏊', name: 'swim'},
-                {emoji: '🚗', name: 'drive'},
-                {emoji: '🧹', name: 'clean'},
-                {emoji: '🍳', name: 'cook'},
-                {emoji: '💃', name: 'dance'},
-                {emoji: '🚲', name: 'cycle'},
-                {emoji: '🎮', name: 'game'},
-                {emoji: '🎭', name: 'act'}
-            ]
-        },
-        { 
-            name: 'Movement Verbs', 
-            items: [
-                {emoji: '🏃‍♂️', name: 'jog'}, 
-                {emoji: '🧗', name: 'climb'},
-                {emoji: '🤸', name: 'jump'},
-                {emoji: '🤾', name: 'throw'},
-                {emoji: '🏌️', name: 'golf'},
-                {emoji: '🏄', name: 'surf'},
-                {emoji: '⛷️', name: 'ski'},
-                {emoji: '🤽', name: 'dive'},
-                {emoji: '🚣', name: 'row'},
-                {emoji: '🛹', name: 'skate'}
-            ]
-        },
-        { 
-            name: 'Basic Descriptions', 
-            items: [
-                {emoji: '🌞', name: 'sunny'}, 
-                {emoji: '❄️', name: 'cold'},
-                {emoji: '🔥', name: 'hot'},
-                {emoji: '💧', name: 'wet'},
-                {emoji: '🌈', name: 'colorful'},
-                {emoji: '⚡', name: 'fast'},
-                {emoji: '🐌', name: 'slow'},
-                {emoji: '🐘', name: 'big'},
-                {emoji: '🐜', name: 'small'},
-                {emoji: '❤️', name: 'happy'}
-            ]
-        },
-        { 
-            name: 'Personality Traits', 
-            items: [
-                {emoji: '😊', name: 'friendly'}, 
-                {emoji: '🧠', name: 'smart'},
-                {emoji: '💪', name: 'strong'},
-                {emoji: '🦸', name: 'brave'},
-                {emoji: '🤗', name: 'kind'},
-                {emoji: '🤓', name: 'clever'},
-                {emoji: '😴', name: 'sleepy'},
-                {emoji: '🤡', name: 'silly'},
-                {emoji: '👑', name: 'proud'},
-                {emoji: '🧐', name: 'curious'}
-            ]
-        },
-        { 
-            name: 'Sensory Words', 
-            items: [
-                {emoji: '🍯', name: 'sweet'}, 
-                {emoji: '🍋', name: 'sour'},
-                {emoji: '🧂', name: 'salty'},
-                {emoji: '☕', name: 'bitter'},
-                {emoji: '🦔', name: 'rough'},
-                {emoji: '🪶', name: 'soft'},
-                {emoji: '🔊', name: 'loud'},
-                {emoji: '🔇', name: 'quiet'},
-                {emoji: '💡', name: 'bright'},
-                {emoji: '🌑', name: 'dark'}
-            ]
-        },
-        { 
-            name: 'Everyday Objects', 
-            items: [
-                {emoji: '📖', name: 'a book'},
-                {emoji: '✏️', name: 'a pencil'},
-                {emoji: '💻', name: 'a computer'},
-                {emoji: '📱', name: 'a phone'},
-                {emoji: '⌚', name: 'a watch'},
-                {emoji: '🔑', name: 'a key'},
-                {emoji: '💡', name: 'a light'},
-                {emoji: '🧸', name: 'a toy'},
-                {emoji: '🧦', name: 'socks'},
-                {emoji: '👓', name: 'glasses'}
-            ]
-        },
-        { 
-            name: 'Animals', 
-            items: [
-                {emoji: '🐶', name: 'a dog'},
+                {emoji: '🐶', name: 'a dog'}, 
                 {emoji: '🐱', name: 'a cat'},
+                {emoji: '🐭', name: 'a mouse'},
                 {emoji: '🐰', name: 'a rabbit'},
                 {emoji: '🦊', name: 'a fox'},
                 {emoji: '🐻', name: 'a bear'},
+                {emoji: '🐸', name: 'a frog'},
                 {emoji: '🦁', name: 'a lion'},
-                {emoji: '🐯', name: 'a tiger'},
-                {emoji: '🦄', name: 'a unicorn'},
-                {emoji: '🐧', name: 'a penguin'},
-                {emoji: '🦉', name: 'an owl'}
+                {emoji: '🐮', name: 'a cow'},
+                {emoji: '🐦', name: 'a bird'}
             ]
         },
         { 
-            name: 'Food & Drink', 
+            name: 'Fruit & Food', 
             items: [
                 {emoji: '🍎', name: 'an apple'}, 
+                {emoji: '🍊', name: 'an orange'},
                 {emoji: '🍌', name: 'a banana'},
-                {emoji: '🍕', name: 'a pizza'},
+                {emoji: '🥚', name: 'an egg'},
+                {emoji: '🍈', name: 'a melon'},
+                {emoji: '🍑', name: 'a peach'},
                 {emoji: '🍔', name: 'a burger'},
-                {emoji: '🍜', name: 'noodles'},
-                {emoji: '🍦', name: 'ice cream'},
-                {emoji: '🍩', name: 'a donut'},
-                {emoji: '☕', name: 'coffee'},
-                {emoji: '🍵', name: 'tea'},
-                {emoji: '🥤', name: 'a drink'}
+                {emoji: '🥪', name: 'a sandwich'},
+                {emoji: '🌭', name: 'a hot dog'},
+                {emoji: '🍩', name: 'a donut'}
             ]
         },
         { 
-            name: 'Places', 
+            name: 'Action Verbs 1', 
             items: [
-                {emoji: '🏠', name: 'a house'},
+                {emoji: '🏃', name: 'run'}, 
+                {emoji: '🚶', name: 'walk'},
+                {emoji: '🏊', name: 'swim'},
+                {emoji: '✈️', name: 'fly'},
+                {emoji: '🚴', name: 'ride'},
+                {emoji: '🛑', name: 'stop'},
+                {emoji: '💃', name: 'dance'},
+                {emoji: '🤸', name: 'jump'},
+                {emoji: '🧗', name: 'climb'},
+                {emoji: '🎣', name: 'fish'}
+            ]
+        },
+        { 
+            name: 'Action Verbs 2', 
+            items: [
+                {emoji: '🥣', name: 'eat'}, 
+                {emoji: '🥛', name: 'drink'},
+                {emoji: '😴', name: 'sleep'},
+                {emoji: '📖', name: 'read'},
+                {emoji: '✍️', name: 'write'},
+                {emoji: '🍳', name: 'cook'},
+                {emoji: '🛀', name: 'wash'},
+                {emoji: '🛒', name: 'shop'},
+                {emoji: '🎤', name: 'sing'},
+                {emoji: '🎮', name: 'play'}
+            ]
+        },
+        { 
+            name: 'Adjectives (Feeling)', 
+            items: [
+                {emoji: '😊', name: 'happy'}, 
+                {emoji: '😢', name: 'sad'},
+                {emoji: '😠', name: 'angry'},
+                {emoji: '😴', name: 'sleepy'},
+                {emoji: '😨', name: 'scared'},
+                {emoji: '😫', name: 'tired'},
+                {emoji: '😋', name: 'hungry'},
+                {emoji: '🥵', name: 'hot'},
+                {emoji: '🥶', name: 'cold'},
+                {emoji: '🤩', name: 'excited'}
+            ]
+        },
+        { 
+            name: 'Adjectives (Describing)', 
+            items: [
+                {emoji: '🐘', name: 'big'}, 
+                {emoji: '🐜', name: 'small'},
+                {emoji: '🐇', name: 'fast'},
+                {emoji: '🐢', name: 'slow'},
+                {emoji: '🆕', name: 'new'},
+                {emoji: '🏚️', name: 'old'},
+                {emoji: '🧴', name: 'clean'},
+                {emoji: '💩', name: 'dirty'},
+                {emoji: '🍬', name: 'sweet'},
+                {emoji: '🌶️', name: 'spicy'}
+            ]
+        },
+        { 
+            name: 'School Objects', 
+            items: [
+                {emoji: '✏️', name: 'a pencil'}, 
+                {emoji: '🖊️', name: 'a pen'},
+                {emoji: '📕', name: 'a book'},
+                {emoji: '📓', name: 'a notebook'},
+                {emoji: '📏', name: 'a ruler'},
+                {emoji: '🧴', name: 'glue'},
+                {emoji: '🎒', name: 'a bag'},
+                {emoji: '💻', name: 'a computer'},
                 {emoji: '🏫', name: 'a school'},
-                {emoji: '🏥', name: 'a hospital'},
-                {emoji: '🏖️', name: 'a beach'},
+                {emoji: '👨‍🏫', name: 'a teacher'}
+            ]
+        },
+        { 
+            name: 'Prepositions & Logic', 
+            items: [
+                {emoji: '⬆️', name: 'up'},
+                {emoji: '⬇️', name: 'down'},
+                {emoji: '📥', name: 'in'},
+                {emoji: '📤', name: 'out'},
+                {emoji: '🔛', name: 'on'},
+                {emoji: '🏁', name: 'start'},
+                {emoji: '🔚', name: 'end'},
+                {emoji: '🚫', name: 'no'},
+                {emoji: '⭕', name: 'yes'},
+                {emoji: '🤝', name: 'with'}
+            ]
+        },
+        { 
+            name: 'Town & Vehicles', 
+            items: [
+                {emoji: '🚗', name: 'a car'}, 
+                {emoji: '🚌', name: 'a bus'},
+                {emoji: '🚲', name: 'a bike'},
+                {emoji: '🚕', name: 'a taxi'},
+                {emoji: '🏠', name: 'a house'},
                 {emoji: '🏞️', name: 'a park'},
+                {emoji: '🏥', name: 'a hospital'},
                 {emoji: '🏪', name: 'a store'},
-                {emoji: '🏟️', name: 'a stadium'},
-                {emoji: '⛪', name: 'a church'},
-                {emoji: '🏰', name: 'a castle'},
-                {emoji: '🌋', name: 'a volcano'}
+                {emoji: '🛤️', name: 'a station'},
+                {emoji: '✈️', name: 'a plane'}
+            ]
+        },
+        { 
+            name: 'Clothes', 
+            items: [
+                {emoji: '👕', name: 'a t-shirt'}, 
+                {emoji: '🧢', name: 'a cap'},
+                {emoji: '🧥', name: 'a coat'},
+                {emoji: '👗', name: 'a dress'},
+                {emoji: '👔', name: 'a shirt'},
+                {emoji: '🧣', name: 'a scarf'},
+                {emoji: '🧤', name: 'gloves'},
+                {emoji: '🧦', name: 'socks'},
+                {emoji: '👟', name: 'shoes'},
+                {emoji: '👢', name: 'boots'}
             ]
         }
     ];
@@ -2909,6 +2909,7 @@ function loadLessonsData() {
 </script>   
 </body>
 </html>
+
 
 
 
