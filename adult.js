@@ -2826,316 +2826,312 @@ False. The Moon is much larger.
 ダイヤモンド（またはLEDライト）のように輝いて。`
         },
         {
-            title: "Week 3: Reflections & Forget-the-Year (Dec 9 – Dec 15, 2025)",
-            content: `1. 🖌️ "Kanji of the Year" is announced on Dec 12th (usually). What is your Kanji for 2025?
-12月12日（たいてい）に「今年の漢字」が発表されます。あなたの2025年の漢字は何ですか？
-2. 🍻 "Bonenkai" (Forget the Year Party). Do you have many scheduled?
-忘年会。予定はたくさんありますか？
-3. 🧹 O-souji (Big Cleaning). Have you started cleaning your house?
-大掃除。家の掃除を始めましたか？
-4. 🕰️ Looking back at 2025. Was it a good year or a bad year?
-2025年を振り返る。良い年でしたか、悪い年でしたか？
-5. 🤐 "What happens at the Bonenkai, stays at the Bonenkai." Secrets?
-「忘年会で起きたことは、忘年会に置いていく」。秘密？
-6. 🎤 Karaoke. Singing "All I Want for Christmas" is popular now.
-カラオケ。今は「恋人たちのクリスマス」を歌うのが人気です。
-7. 🤢 Hangover (Futsuka-yoi). Do you have a cure?
-二日酔い。治す方法はありますか？
-8. 🎁 O-seibo (Year-end gifts). Did you send gifts to your boss/clients?
-お歳暮。上司や取引先にギフトを送りましたか？
-9. 👔 Drunk salarymen sleeping on the train. A December tradition?
-電車で寝ている酔っ払いサラリーマン。12月の風物詩？
-10. ✍️ Writing Nengajo (New Year Cards). The deadline is soon (Dec 25)!
-年賀状を書く。締め切り（12月25日）はもうすぐです！
-11. 🧧 Buying Otoshidama envelopes (Pochibukuro).
-お年玉袋（ポチ袋）を買う。
-12. 🦀 Eating Crab (Kani) is a winter luxury. Expensive but delicious.
-カニを食べるのは冬の贅沢です。高いけど美味しい。
-13. 📅 Buying a 2026 diary/planner. Digital or Paper?
-2026年の手帳を買う。デジタル、それとも紙？
-14. 🧥 Dry cleaning winter coats. Do you clean them often?
-冬のコートのクリーニング。頻繁に出しますか？
-15. 🍲 Nabe parties at home. Sukiyaki or Shabu-shabu?
-家で鍋パーティー。すき焼き、それともしゃぶしゃぶ？
-16. 🚄 Booking Shinkansen for New Year. It is already full!
-正月の新幹線の予約。もう満席です！
-17. 🎅 Secret Santa at work. Did you buy a 1000 yen gift?
-職場でのシークレットサンタ。1000円のプレゼントを買いましたか？
-18. 🥶 The temperature is dropping. Is it freezing today?
-気温が下がっています。今日は凍える寒さですか？
-19. 🏃‍♂️ "Shiwasu" (December) means "Teachers run." Everyone is busy.
-「師走」（12月）は「先生が走る」という意味です。みんな忙しいです。
-20. 🥤 Ukon (Turmeric) drinks before alcohol. Do you believe in them?
-お酒の前のウコン。信じますか？
-21. 🎭 Year-end comedy shows. Laughing away the stress.
-年末のお笑い番組。ストレスを笑い飛ばす。
-22. 💇‍♀️ Beauty salons are crowded. Everyone wants to look good for New Year.
-美容院は混んでいます。みんな新年をきれいに迎えたいのです。
-23. 💸 Money flies away in December. Parties, gifts, food.
-12月はお金が飛んでいきます。パーティー、プレゼント、食べ物。
-24. 🥬 Winter vegetables (Daikon, Hakusai) are sweet.
-冬野菜（大根、白菜）は甘いです。
-25. 🏙️ The city rushes. People walk faster in December.
-街が急いでいます。12月は人々が早く歩きます。
-26. 🍵 Green tea and warm Manju. A break from the cold.
-緑茶と温かい饅頭。寒さからの休憩。
-27. 🗑️ Throwing away old things (Danshari). Start the new year fresh.
-古いものを捨てる（断捨離）。新年を新鮮にスタート。
-28. 🤧 Everyone is coughing. Stay healthy!
-みんな咳をしています。健康でいて！
-29. 🍗 Ordering Christmas Chicken (KFC). Have you reserved it?
-クリスマスチキン（KFC）の注文。予約しましたか？
-30. 🎂 Ordering Christmas Cake. Sponge cake with strawberries.
-クリスマスケーキの注文。イチゴのスポンジケーキ。
-31. 🍜 Ramen (Shime-no-ramen) after drinking. Why is it so good?
-飲んだ後のラーメン（締め）。なぜあんなに美味しいの？
-32. 🧼 Cleaning windows is cold work. Do you do it?
-窓拭きは寒い仕事です。やりますか？
-33. 🕯️ 3rd Sunday of Advent. Lighting the pink candle.
-アドベント第3主日。ピンクのキャンドルを灯す。
-34. 🧤 Losing one glove. Where is the other one?
-手袋を片方なくす。もう片方はどこ？
-35. 🕰️ The sun sets before 5 PM. The night is long.
-午後5時前に日が沈みます。夜が長いです。
-36. 🎡 Ferris wheels with illumination. Romantic date spot.
-イルミネーション付き観覧車。ロマンチックなデートスポット。
-37. 🍺 "Kampai!" (Cheers). How many times have you said it this week?
-「乾杯！」今週何回言いましたか？
-38. 🤐 Listening to the boss's long speech at the party. Boring?
-パーティーでの上司の長い話を聞く。退屈？
-39. 🚶‍♀️ Walking home in the cold air. It wakes you up.
-冷たい空気の中を歩いて帰る。目が覚めます。
-40. 🌠 Geminids Meteor Shower (Dec 14). Look up at the sky!
-ふたご座流星群（12月14日）。空を見上げて！
-41. 🛁 Bath bombs. Fizzy and smelly (in a good way).
-バスボム。シュワシュワして（良い意味で）匂います。
-42. 🕰️ Regrets of 2025. "I should have studied more."
-2025年の後悔。「もっと勉強すればよかった」。
-43. 📈 Goals for 2026. "I will study more."
-2026年の目標。「もっと勉強するぞ」。
-44. 🍲 Mochi is appearing in supermarkets. Do you like Mochi?
-スーパーにお餅が出てきました。お餅は好きですか？
-45. 🦀 Crab hot pot (Kani-nabe). Silent dinner (because peeling crab).
-カニ鍋。静かな夕食（カニを剥くから）。
-46. 🧥 Wool coat vs. Down coat. Style or Warmth?
-ウールコート対ダウンコート。スタイル、それとも暖かさ？
-47. 🧣 Knitted scarf. Did you make it or buy it?
-ニットのマフラー。作りましたか、買いましたか？
-48. 🤧 Vitamin C (Mikan) prevents colds. Eat 3 a day.
-ビタミンC（ミカン）は風邪を防ぎます。1日3個食べて。
-49. 🛌 Sleeping in on Sunday. It is too cold to get up.
-日曜の朝寝坊。寒すぎて起きられません。
-50. 🙏 Thank you, 2025. You are almost done.
-ありがとう、2025年。もうすぐ終わりですね。`
+            title: "Week 3: Reflections & Nobel Prizes (Dec 9 – Dec 15, 2025)",
+            content: `1. 👑 December 9th is Empress Masako's birthday; do you follow news about the Imperial Family?
+12月9日は雅子皇后の誕生日ですが、皇室のニュースをフォローしていますか？
+
+2. 📜 December 10th is Human Rights Day; do you think human rights are respected equally around the world today?
+12月10日は人権デーですが、今日、世界中で人権は平等に尊重されていると思いますか？
+
+3. 🏔️ December 11th is International Mountain Day; have you ever climbed a mountain that was difficult for you?
+12月11日は国際山岳デーですが、登るのが大変だった山に登ったことはありますか？
+
+4. 🖌️ The "Kanji of the Year" is usually announced on December 12th; what single kanji would represent your 2025?
+「今年の漢字」はたいてい12月12日に発表されますが、あなたの2025年を漢字一文字で表すと何ですか？
+
+5. 🎤 Frank Sinatra was born on December 12th; do you agree with his philosophy of doing things "My Way"?
+フランク・シナトラは12月12日生まれですが、「自分の道を行く（マイ・ウェイ）」という彼の哲学に共感しますか？
+
+6. 🕯️ St. Lucy's Day is celebrated in Scandinavia on December 13th with candles; do you enjoy candlelit atmospheres?
+北欧では12月13日に聖ルチア祭がキャンドルとともに行われますが、キャンドルの灯る雰囲気は好きですか？
+
+7. 🌠 The Geminids meteor shower peaks around December 14th; will you try to stay up late to watch the shooting stars?
+ふたご座流星群は12月14日頃に極大を迎えますが、流れ星を見るために夜更かししてみますか？
+
+8. 🐭 Walt Disney died on December 15th; which Disney movie had the biggest impact on your childhood?
+ウォルト・ディズニーは12月15日に亡くなりましたが、子供の頃に最も影響を受けたディズニー映画は何ですか？
+
+9. 🍻 The "Bonenkai" season is in full swing; do you think these parties are necessary for good team building?
+忘年会シーズン真っ只中ですが、こうしたパーティーは良いチーム作りのために必要だと思いますか？
+
+10. 🎻 The Nobel Prize Award Ceremony takes place on December 10th; if you could win a Nobel Prize, which category would you choose?
+ノーベル賞授賞式は12月10日に行われますが、もしノーベル賞を取れるなら、どの部門を選びますか？
+
+11. 🧹 Have you started your "O-souji" (big cleaning) yet, or do you leave it all until the last day of the year?
+大掃除はもう始めましたか、それとも大晦日まで全部残しておく派ですか？
+
+12. 🧥 As the temperature drops, do you prefer wearing heavy wool coats or lightweight down jackets?
+気温が下がるにつれて、厚手のウールコートと軽量のダウンジャケット、どちらを着るのが好きですか？
+
+13. 🤧 Colds and flu spread easily in December; what is your secret strategy for staying healthy during winter?
+12月は風邪やインフルエンザが広まりやすいですが、冬の間健康を保つためのあなたの秘策は何ですか？
+
+14. 💴 December creates many expenses; are you good at saving money, or do you tend to overspend during the holidays?
+12月は出費がかさみますが、お金を節約するのは得意ですか、それとも休日の間は使いすぎてしまう傾向がありますか？
+
+15. 🕰️ Looking back at 2025, what is the most important lesson you have learned this year?
+2025年を振り返って、今年学んだ最も重要な教訓は何ですか？
+
+16. 🎁 Have you already purchased and wrapped all your end-of-year gifts, or are you a last-minute shopper?
+年末の贈り物はもうすべて買って包みましたか、それとも土壇場で買うタイプですか？
+
+17. 🍜 Do you believe that eating Ramen after drinking alcohol is a bad habit, or is it the best part of the night?
+飲酒後のラーメンは悪い習慣だと思いますか、それとも夜の最高の楽しみだと思いますか？
+
+18. 🤝 When you attend a year-end party, do you prefer to sit with close friends or mix with new people?
+忘年会に参加する時、親しい友人と座るのが好きですか、それとも新しい人と交流するのが好きですか？
+
+19. 🔮 Nostradamus was born on December 14th; do you believe that anyone can truly predict the future?
+ノストラダムスは12月14日生まれですが、誰かが本当に未来を予言できると信じますか？
+
+20. 🏛️ December 15th is also associated with the Roman Emperor Nero; are you interested in ancient Roman history?
+12月15日はローマ皇帝ネロにも関連していますが、古代ローマの歴史に興味はありますか？
+
+21. 🍳 December mornings are dark and cold; does a warm breakfast help you wake up better?
+12月の朝は暗くて寒いですが、温かい朝食は目覚めを良くしてくれますか？
+
+22. 📉 Do you have any regrets about things you did not achieve in 2025?
+2025年に達成できなかったことについて、何か後悔はありますか？
+
+23. 📈 Have you started thinking about your New Year's resolutions for 2026 yet?
+2026年の新年の抱負について、もう考え始めていますか？
+
+24. 🛁 Do you prefer taking a long hot bath or a quick shower when the weather is freezing?
+天気が凍えるように寒い時、熱いお風呂にゆっくり入るのと、さっとシャワーを浴びるの、どちらが好きですか？
+
+25. 🦀 Crab is a popular winter delicacy in Japan; do you think it is worth the high price and the effort to eat it?
+カニは日本の冬の人気のご馳走ですが、高い値段と食べる手間に見合う価値があると思いますか？
+
+26. 🍵 Do you enjoy drinking hot green tea while sitting under a Kotatsu during the evening?
+夜、こたつに入って熱い緑茶を飲むのは好きですか？
+
+27. 📺 Many special TV programs air in December; do you watch comedy shows or music specials?
+12月には多くの特番が放送されますが、お笑い番組と音楽特番、どちらを見ますか？
+
+28. ❄️ If it snowed in Osaka tomorrow, would you be excited or annoyed by the disruption?
+もし明日大阪で雪が降ったら、ワクワクしますか、それとも混乱にイライラしますか？
+
+29. 🧣 Do you think that scarves are a fashionable accessory or just a practical necessity?
+マフラーはファッショナブルなアクセサリーだと思いますか、それとも単なる実用的な必需品だと思いますか？
+
+30. 🕰️ Why does time seem to pass so much faster in December compared to other months?
+他の月に比べて、なぜ12月は時間が過ぎるのがこんなに早く感じるのでしょうか？
+
+31. 💆‍♀️ Do you plan to go to a hair salon or spa to refresh yourself before the New Year?
+新年の前にリフレッシュするために、美容院やスパに行く予定はありますか？
+
+32. 🍷 Beaujolais Nouveau was released last month; have you drunk any wine recently?
+ボジョレーヌーボーは先月解禁されましたが、最近ワインを飲みましたか？
+
+33. 🕯️ In Sweden, St. Lucy's Day involves saffron buns; have you ever tried baking bread at home?
+スウェーデンの聖ルチア祭ではサフランパンを食べますが、家でパンを焼いてみたことはありますか？
+
+34. 🎅 Do you tell children the truth about Santa Claus, or do you let them believe in the fantasy?
+子供たちにサンタクロースの真実を教えますか、それともファンタジーを信じさせておきますか？
+
+35. 🥶 Is your office heating set too high, or do you often feel cold while working?
+オフィスの暖房設定は高すぎますか、それとも仕事中によく寒さを感じますか？
+
+36. 🌌 The winter sky is very clear; can you identify the constellation Orion?
+冬の空はとても澄んでいますが、オリオン座を見つけることができますか？
+
+37. 🤳 Do you take photos of the winter illuminations to post on social media?
+冬のイルミネーションの写真を撮ってSNSに投稿しますか？
+
+38. 🧤 Have you ever lost a glove and tried to find it, or did you just buy a new pair?
+手袋を片方なくして探そうとしたことがありますか、それともただ新しいのを買いましたか？
+
+39. 🚲 Is it dangerous to ride a bicycle in December when the wind is strong?
+風が強い12月に自転車に乗るのは危険ですか？
+
+40. 🎭 Do you enjoy watching year-end comedy shows like M-1 Grand Prix?
+M-1グランプリのような年末のお笑い番組を見るのは好きですか？
+
+41. 🧼 Cleaning windows is difficult in the cold; do you hire a professional or do it yourself?
+寒い中での窓拭きは大変ですが、プロを雇いますか、それとも自分でやりますか？
+
+42. 🍓 Strawberries become expensive in December; do you buy them for Christmas cakes?
+12月になるとイチゴが高くなりますが、クリスマスケーキのために買いますか？
+
+43. 🧱 The Berlin Wall fell in winter; do you think physical walls divide people or protect them?
+ベルリンの壁は冬に崩壊しましたが、物理的な壁は人を分断すると思いますか、それとも守ると思いますか？
+
+44. 📅 How do you organize your schedule during the busy month of December?
+忙しい12月の間、どのようにスケジュールを管理していますか？
+
+45. 👨‍👩‍👧‍👦 Do you prioritize spending time with your family or your friends during the holiday season?
+ホリデーシーズン中は、家族と過ごす時間と友人と過ごす時間、どちらを優先しますか？
+
+46. 🥣 Do you crave hot soup or stew for dinner when you get home from work?
+仕事から帰った時、夕食に温かいスープやシチューが無性に食べたくなりますか？
+
+47. 🎼 Beethoven's 9th Symphony is popular in Japan in December; do you like classical music?
+日本では12月にベートーヴェンの第九が人気ですが、クラシック音楽は好きですか？
+
+48. 🧛 Bram Stoker (author of Dracula) died in colder months; do you enjoy reading horror stories in winter?
+ブラム・ストーカー（ドラキュラの著者）は寒い時期に亡くなりましたが、冬にホラー小説を読むのは好きですか？
+
+49. 🥃 Hot whiskey with honey is a traditional cold remedy; do you believe in old home remedies?
+蜂蜜入りのホットウイスキーは伝統的な風邪薬ですが、昔ながらの民間療法を信じますか？
+
+50. ✨ If you could describe your mood this December in one word, what word would you choose?
+この12月のあなたの気分を一言で表すなら、どの言葉を選びますか？`
         },
         {
-            title: "Week 4: The Winter Solstice & Rush (Dec 16 – Dec 22, 2025)",
-            content: `1. 🌞 Winter Solstice (Toji) is Dec 21st. The shortest day of the year.
-冬至は12月21日です。一年で最も日が短い日です。
-2. 🎃 On Winter Solstice, we eat Pumpkin (Kabocha). Did you eat it?
-冬至にはカボチャを食べます。食べましたか？
-3. 🛁 Yuzu Bath (Yuzu-yu). Floating citrus in the bath warms you up.
-ゆず湯。お風呂に柑橘類を浮かべると温まります。
-4. 🏃‍♂️ The end-of-year rush. Are you running around?
-年末の慌ただしさ。走り回っていますか？
-5. 🎄 Christmas is next week! Are you excited or stressed?
-来週はクリスマスです！ワクワクしますか、ストレスですか？
-6. 🎁 Wrapping presents. Are you good with tape and ribbons?
-プレゼントを包む。テープとリボンの扱いは得意ですか？
-7. 💳 Last minute shopping. The malls are crazy crowded.
-土壇場の買い物。モールは恐ろしく混んでいます。
-8. 🎅 Santa Claus is coming to town. Have you been good?
-サンタが街にやってくる。良い子にしていましたか？
-9. 🥶 It is freezing! Is it snowing in your hometown?
-凍えるようです！故郷では雪が降っていますか？
-10. 🍜 Toshikoshi Soba (Year-crossing noodles). Have you bought the ingredients?
-年越しそば。材料は買いましたか？
-11. 🍻 One last Bonenkai. Can your liver survive?
-最後の忘年会。肝臓は生き残れますか？
-12. 👔 Working until Dec 28th? When is your "Goyo-osame" (Last work day)?
-28日まで仕事ですか？仕事納めはいつですか？
-13. 🧹 Kitchen ventilation fan cleaning. The worst job of the year.
-キッチンの換気扇掃除。一年で最悪の仕事。
-14. 📮 Posting Nengajo. If you post by Dec 25, it arrives on Jan 1.
-年賀状を投函する。25日までに出せば元旦に届きます。
-15. 🧒 Kids are on Winter Break soon. Are they happy?
-子供たちはもうすぐ冬休みです。嬉しそうですか？
-16. ⛷️ Ski trip planning. Are you going to Hokkaido or Nagano?
-スキー旅行の計画。北海道に行きますか、長野に行きますか？
-17. 🍗 Fried Chicken shortage? Order early!
-フライドチキン不足？早めに注文して！
-18. 🍷 Mulled Wine (Hot Wine). It smells like Christmas markets.
-ホットワイン。クリスマスマーケットの匂いがします。
-19. 🦌 Reindeer antlers headband. Will you wear it at the party?
-トナカイの角のカチューシャ。パーティーで着けますか？
-20. 🕯️ 4th Sunday of Advent. All candles are lit.
-アドベント第4主日。全てのキャンドルが灯りました。
-21. 🍰 Strawberry Shortcake. The price of strawberries goes up now.
-イチゴのショートケーキ。今、イチゴの値段が上がります。
-22. 🎼 Handel's "Messiah" (Hallelujah Chorus). Do you like classical music?
-ヘンデルの「メサイア」（ハレルヤ・コーラス）。クラシック音楽は好きですか？
-23. 🏙️ Illuminations are at their peak beauty.
-イルミネーションの美しさがピークです。
-24. 🧤 Frozen fingers. Texting outside is impossible.
-凍った指。外でのメール打ちは不可能です。
-25. 😷 Masks keep your face warm and prevent flu. Win-win.
-マスクは顔を温め、インフルエンザを防ぎます。一石二鳥。
-26. 🧥 Coat Check at the restaurant. Don't lose your ticket.
-レストランのクローク。引換券をなくさないで。
-27. 🛌 Staying in bed all Sunday. Hibernation mode.
-日曜はずっとベッドにいる。冬眠モード。
-28. 🥡 Ordering pizza because you are too busy to cook.
-忙しすぎて料理できないのでピザを頼む。
-29. 🍫 Chocolate advent calendar. Only a few chocolates left!
-チョコのアドベントカレンダー。あと数個しか残っていません！
-30. 🏘️ Neighbors' lights are bright. Too bright?
-近所の家のライトが明るい。明るすぎ？
-31. 🕴️ "Yoi Otoshi Wo" (Have a good year). Start saying it now.
-「良いお年を」。今から言い始めましょう。
-32. 🏦 Banks are crowded. Get new bills for Otoshidama.
-銀行は混んでいます。お年玉用の新札を手に入れて。
-33. 🍣 Ordering Osechi (New Year Food) or Sushi.
-おせちや寿司の注文。
-34. 🛒 Supermarkets are full of expensive New Year foods (Kamaboko).
-スーパーは高い正月食材（かまぼこ）でいっぱいです。
-35. 🍵 Hot green tea and a kotatsu. I never want to move.
-熱い緑茶とこたつ。二度と動きたくない。
-36. 🌬️ Cold wind hurts the skin. Use moisturizer.
-冷たい風が肌を痛めます。保湿剤を使って。
-37. 🕯️ Candlelight dinner. Practice for Christmas Eve?
-キャンドルディナー。イブの練習？
-38. 👯 Couples walking holding hands in pockets.
-ポケットの中で手を繋いで歩くカップル。
-39. 📺 TV specials are boring? Or fun?
-テレビ特番は退屈？それとも楽しい？
-40. 💇‍♀️ New hair for the New Year. Fresh start.
-新年のための新しい髪型。新鮮なスタート。
-41. 🤧 Don't catch a cold before the holidays!
-休みの前に風邪をひかないで！
-42. 🚆 Shinkansen packed to 200% capacity. Standing room only.
-新幹線は乗車率200％。立ち席のみ。
-43. 🐟 Buying a whole fish (Bur or Tai) for New Year.
-正月用に魚を丸ごと買う（ブリやタイ）。
-44. 👞 Polishing shoes. Clean shoes for a clean year.
-靴磨き。きれいな靴できれいな一年を。
-45. 🕰️ The days start getting longer after Solstice! Good news.
-冬至を過ぎれば日が長くなり始めます！朗報です。
-46. 🍊 Peeling a mikan in one piece. Can you do it?
-ミカンの皮を繋げて剥く。できますか？
-47. 🍪 Cookies for Santa. Do you eat them yourself?
-サンタ用クッキー。自分で食べちゃいますか？
-48. 🛁 Bath salts with forest scent. Relaxing.
-森の香りのバスソルト。リラックス。
-49. 📅 Reviewing your 2025 goals. Did you succeed?
-2025年の目標を見直す。成功しましたか？
-50. ✨ Almost Christmas! Breathe and enjoy the lights.
-もうすぐクリスマス！深呼吸して明かりを楽しんで。`
-        },
-        {
-            title: "Week 5: The Christmas Climax (Dec 23 – Dec 25, 2025)",
-            content: `1. 🎄 Dec 23rd. Tomorrow is Christmas Eve! Are you ready?
-12月23日。明日はクリスマスイブです！準備はいいですか？
-2. 🍗 Dec 24th (Eve). Eating KFC and Cake. The Japanese way.
-12月24日（イブ）。KFCとケーキを食べる。日本流です。
-3. 🎅 Dec 25th (Day). Santa came! Did you get presents?
-12月25日（当日）。サンタが来た！プレゼントをもらいましたか？
-4. 💑 Christmas Eve is for couples in Japan. Date night?
-日本ではイブはカップルの日です。デートナイト？
-5. 👨‍👩‍👧‍👦 Christmas Day is a normal work day in Japan. Sad?
-日本ではクリスマス当日は普通の仕事の日です。悲しい？
-6. 🦃 Roast Turkey. Did you find one in Osaka?
-ローストターキー。大阪で見つけられましたか？
-7. 🎂 Sponge cake with strawberries. Did you eat the Santa sugar doll?
-イチゴのショートケーキ。サンタの砂糖菓子を食べましたか？
-8. 🍷 Champagne toast. Cheers!
-シャンパンで乾杯。乾杯！
-9. 🎁 Opening presents. Tearing the paper!
-プレゼントを開ける。紙を破って！
-10. 🕯️ Silent Night. Is your neighborhood quiet?
-きよしこの夜。近所は静かですか？
-11. ⛪ Midnight Mass at church. Have you ever gone?
-教会の真夜中のミサ。行ったことはありますか？
-12. 🥶 It is cold! Maybe it will snow (White Christmas)?
-寒いです！雪が降るかも（ホワイトクリスマス）？
-13. 🦌 Rudolph the Red-Nosed Reindeer. Can you sing it?
-赤鼻のトナカイ。歌えますか？
-14. 🍗 Chicken bones. Making soup with leftovers?
-チキンの骨。残りでスープを作りますか？
-15. 🧒 Kids waking up at 5 AM. "Santa was here!"
-朝5時に起きる子供たち。「サンタがいた！」
-16. 📦 Boxing Day (Dec 26). In the UK, this is a shopping day.
-ボクシングデー（12月26日）。英国では買い物の日です。
-17. 🎍 Dec 26th in Japan: Christmas trees disappear, Kadomatsu appear.
-日本の12月26日：ツリーが消え、門松が現れます。
-18. 🧹 The switch from Christmas to New Year is instant. Fast!
-クリスマスから正月への切り替えは一瞬です。速い！
-19. 💏 Did you confess your love on Christmas Eve?
-クリスマスイブに告白しましたか？
-20. 🏨 Love Hotels are fully booked on Dec 24. (Adult topic!)
-12月24日、ラブホテルは満室です。（大人の話題！）
-21. 🍕 Ordering pizza on Eve. 3 hour wait time?
-イブにピザを頼む。3時間待ち？
-22. 🏙️ The illuminations look their best tonight.
-今夜、イルミネーションが最高に見えます。
-23. 🧥 Wearing red or green clothes. Festive fashion.
-赤や緑の服を着る。お祭りファッション。
-24. 🧦 Stockings filled with candy. Did you hang one?
-お菓子が詰まった靴下。吊るしましたか？
-25. 🎥 "Home Alone" or "Die Hard"? Best Christmas movie?
-「ホーム・アローン」か「ダイ・ハード」か？最高のクリスマス映画は？
-26. 🎶 Wham! "Last Christmas". Are you sick of it yet?
-ワム！の「ラストクリスマス」。もううんざり？
-27. 🥂 Drinking too much wine. Headache tomorrow?
-ワインを飲みすぎる。明日は頭痛？
-28. 🕯️ Candles on the table. Don't burn the house down.
-テーブルの上のキャンドル。家を燃やさないで。
-29. 🧀 Cheese fondue party. Warm and delicious.
-チーズフォンデュパーティー。温かくて美味しい。
-30. 🥪 Leftover chicken sandwiches for lunch.
-ランチは残ったチキンのサンドイッチ。
-31. 🕺 Office party. Did the boss wear a Santa hat?
-オフィスパーティー。上司はサンタ帽を被りましたか？
-32. 💔 Breaking up before Christmas. "Christmas breakup."
-クリスマス前に別れる。「クリスマスの破局」。
-33. 💍 Proposing on Christmas. A diamond ring?
-クリスマスにプロポーズ。ダイヤモンドの指輪？
-34. 🤶 Mrs. Claus. Does she do all the work?
-ミセス・クロース（サンタの妻）。彼女が仕事を全部やってるの？
-35. 🍪 Gingerbread house. Did you make one?
-ジンジャーブレッドハウス。作りましたか？
-36. 🍬 Candy Canes. Sticky hands.
-キャンディケイン。手がベタベタ。
-37. 🌃 The city is sparkling. Osaka looks magical.
-街が輝いています。大阪は魔法のようです。
-38. 🧣 It's freezing outside. Stay warm inside.
-外は凍えます。中で暖かくして。
-39. 🕰️ The year is almost over. 6 days left!
-一年がほぼ終わりました。あと6日！
-40. 🎍 Buying New Year decorations.
-正月飾りを買う。
-41. 📮 Writing the last Nengajo. Hurry!
-最後の年賀状を書く。急いで！
-42. 🛁 Relaxing bath after the party.
-パーティーの後のリラックスお風呂。
-43. 😴 Tired parents. Santa is exhausted.
-疲れた親たち。サンタはヘトヘトです。
-44. 🏙️ Tokyo vs Osaka Christmas. Which is better?
-東京対大阪のクリスマス。どっちがいい？
-45. ⛸️ Skating rink date. Romantic?
-スケートリンクデート。ロマンチック？
-46. 🍷 Eggnog. Have you ever tried this drink?
-エッグノッグ。この飲み物を試したことはありますか？
-47. 🌟 The star on top of the tree. Who puts it on?
-ツリーのてっぺんの星。誰が乗せますか？
-48. 🎁 Giving is better than receiving. Do you agree?
-与えることは受け取ることより良い。同意しますか？
-49. 🗓️ Next stop: New Year's Eve. Get ready.
-次は大晦日。準備して。
-50. 🎅 Merry Christmas to all, and to all a good night!
-みなさんメリークリスマス、そしておやすみなさい！`
+            title: "Week 4: Inventions & Winter Solstice (Dec 16 – Dec 22, 2025)",
+            content: `1. 🎹 Ludwig van Beethoven was born on December 16th; does listening to music help you concentrate or relax?
+ルートヴィヒ・ヴァン・ベートーヴェンは12月16日生まれですが、音楽を聴くことは集中やリラックスに役立ちますか？
+
+2. 📖 Jane Austen was born on December 16th; do you prefer reading classic literature or modern novels?
+ジェーン・オースティンは12月16日生まれですが、古典文学と現代小説、どちらを読むのが好きですか？
+
+3. ✈️ The Wright Brothers made their first flight on December 17th, 1903; are you afraid of flying in airplanes?
+ライト兄弟は1903年12月17日に初飛行を行いましたが、飛行機に乗るのが怖いですか？
+
+4. 🎬 Steven Spielberg was born on December 18th; what is the most memorable movie you have ever seen?
+スティーヴン・スピルバーグは12月18日生まれですが、これまでに見た中で最も記憶に残っている映画は何ですか？
+
+5. 👻 Charles Dickens published "A Christmas Carol" on December 19th; do you think people can truly change their personalities?
+チャールズ・ディケンズは12月19日に「クリスマス・キャロル」を出版しましたが、人は本当に性格を変えられると思いますか？
+
+6. 🧚 The Grimm Brothers published their fairy tales on December 20th; which fairy tale frightened you the most as a child?
+グリム兄弟は12月20日に童話集を出版しましたが、子供の頃に一番怖かったおとぎ話は何ですか？
+
+7. 🌞 The Winter Solstice usually falls on December 21st; how do you cope with the shortest day of the year?
+冬至はたいてい12月21日ですが、一年で最も短い日にどう対処しますか？
+
+8. 🎃 It is a Japanese tradition to eat pumpkin on the Winter Solstice; do you follow traditional food customs?
+冬至にカボチャを食べるのは日本の伝統ですが、伝統的な食習慣に従いますか？
+
+9. 🛁 Putting Yuzu fruit in the bath is a Solstice tradition; do you believe that citrus scents reduce stress?
+お風呂に柚子を入れるのは冬至の伝統ですが、柑橘系の香りはストレスを軽減すると信じますか？
+
+10. 🧩 December 21st is also Crossword Puzzle Day; do you enjoy solving puzzles to keep your brain active?
+12月21日はクロスワードパズルの日でもありますが、脳を活性化させるためにパズルを解くのは好きですか？
+
+11. 🎼 Giacomo Puccini was born on December 22nd; have you ever attended a live opera performance?
+ジャコモ・プッチーニは12月22日生まれですが、生のオペラ公演に行ったことはありますか？
+
+12. 🏃‍♂️ The streets are extremely crowded before Christmas; does the holiday rush make you feel energized or exhausted?
+クリスマスの前の通りは非常に混雑していますが、休日の慌ただしさはあなたに活力を与えますか、それとも疲れさせますか？
+
+13. 🍗 Have you already ordered your fried chicken for Christmas, or do you plan to cook something else?
+クリスマスのフライドチキンはもう注文しましたか、それとも何か別のものを作る予定ですか？
+
+14. 💳 Do you think that Christmas has become too commercialized in modern society?
+現代社会において、クリスマスは商業化されすぎていると思いますか？
+
+15. 📮 If you post your New Year cards by December 25th, they arrive on January 1st; are you on schedule?
+12月25日までに年賀状を出せば元旦に届きますが、予定通り進んでいますか？
+
+16. 🎿 Are you planning to visit a ski resort during the winter holidays, or do you prefer staying home?
+冬休みにスキー場に行く予定ですか、それとも家にいる方が好きですか？
+
+17. 🍷 Have you ever tried Mulled Wine (hot spiced wine) at a Christmas market?
+クリスマスマーケットでモルドワイン（スパイス入りのホットワイン）を試したことはありますか？
+
+18. 😷 Wearing a mask keeps your face warm in winter; do you wear one for warmth or for health?
+冬にマスクをすると顔が暖かいですが、暖かさのために着けますか、それとも健康のために着けますか？
+
+19. 🦌 Will you wear a reindeer headband or a Santa hat to your upcoming Christmas party?
+今度のクリスマスパーティーではトナカイのカチューシャかサンタの帽子を被りますか？
+
+20. 🍰 The price of Christmas cakes is very high; do you think it is better to bake your own cake?
+クリスマスケーキの値段はとても高いですが、自分で焼く方が良いと思いますか？
+
+21. 🏙️ Have you walked through the city center to see the peak of the winter illuminations?
+冬のイルミネーションのピークを見るために都心を歩きましたか？
+
+22. 🧥 Coat check services are common in restaurants in winter; do you worry about losing your ticket?
+冬のレストランではクロークサービスが一般的ですが、引換券をなくすのが心配になりませんか？
+
+23. 🛌 On cold Sundays, do you prefer to stay in bed all day and hibernate?
+寒い日曜日には、一日中ベッドにいて冬眠するのが好きですか？
+
+24. 🍕 Ordering delivery food is popular in December; is it because people are too busy to cook?
+12月はデリバリーフードの注文が人気ですが、それは人々が忙しすぎて料理できないからでしょうか？
+
+25. 🍫 If you have an Advent Calendar, have you eaten all the chocolates yet?
+アドベントカレンダーを持っている場合、もうチョコを全部食べてしまいましたか？
+
+26. 🏠 Some neighbors decorate their houses with bright lights; do you think this is beautiful or annoying?
+明るいライトで家を飾る近所の人もいますが、これは美しいと思いますか、それとも迷惑だと思いますか？
+
+27. 🏦 Banks are usually very crowded in December; do you use online banking to avoid the queues?
+12月の銀行はたいてい非常に混雑していますが、行列を避けるためにネットバンキングを使いますか？
+
+28. 🍵 Nothing beats hot green tea and a warm room; is this your definition of happiness?
+熱い緑茶と暖かい部屋に勝るものはありませんが、これがあなたの幸せの定義ですか？
+
+29. 🌬️ The cold wind damages the skin; do you change your skincare routine in the winter?
+冷たい風は肌を傷めますが、冬はスキンケアのルーティンを変えますか？
+
+30. 🕯️ Have you ever had a candlelight dinner at home just for a change of atmosphere?
+気晴らしのために、家でキャンドルディナーをしたことはありますか？
+
+31. 📺 Are year-end television specials becoming boring, or do you still enjoy them?
+年末のテレビ特番は退屈になってきていますか、それともまだ楽しんでいますか？
+
+32. 💇‍♀️ Many people change their hairstyle for the New Year; does a new look give you confidence?
+多くの人が新年に向けて髪型を変えますが、新しい見た目は自信を与えてくれますか？
+
+33. 🤧 Do you take extra vitamins in December to prevent catching a cold?
+風邪を予防するために、12月はビタミンを多めに摂りますか？
+
+34. 🚄 The Shinkansen is packed to 200% capacity at year-end; would you stand for 3 hours to see your family?
+年末の新幹線は乗車率200%になりますが、家族に会うために3時間立ち続けられますか？
+
+35. 🐟 It is traditional to buy a whole fish for the New Year; do you know how to prepare a fish?
+正月に魚を丸ごと買うのは伝統的ですが、魚のさばき方を知っていますか？
+
+36. 👞 Do you polish your shoes before the year ends to start the new year cleanly?
+新年をきれいに迎えるために、年が終わる前に靴を磨きますか？
+
+37. 🍊 Can you peel a mandarin orange in one single piece without breaking the skin?
+皮を破らずにミカンをひとかたまりで剥くことができますか？
+
+38. 🍪 Leaving cookies for Santa is a Western tradition; what snack would you leave for him?
+サンタにクッキーを残すのは西洋の伝統ですが、あなたなら彼にどんなおやつを置いておきますか？
+
+39. 🛁 Bath salts with a forest scent can be relaxing; do you use aromatherapy in your daily life?
+森の香りのバスソルトはリラックスできますが、日常生活でアロマテラピーを取り入れていますか？
+
+40. 📅 Have you reviewed your goals for 2025 and decided if you succeeded or failed?
+2025年の目標を見直して、成功したか失敗したか判断しましたか？
+
+41. 👫 Do you prefer to spend Christmas Eve with a romantic partner or with a group of friends?
+クリスマスイブは恋人と過ごすのが好きですか、それとも友人のグループと過ごすのが好きですか？
+
+42. 🎼 "The Messiah" is a long musical piece; do you have the patience to sit through a long concert?
+「メサイア」は長い楽曲ですが、長いコンサートの間座っていられる忍耐力はありますか？
+
+43. 🧤 Do you find that touchscreen gloves actually work, or do you have to take them off to use your phone?
+スマホ対応手袋は実際に使えると思いますか、それともスマホを使うために外さなければなりませんか？
+
+44. 🥡 Is eating Osechi Ryori (New Year food) something you look forward to, or do you prefer pizza?
+おせち料理を食べるのを楽しみにしていますか、それともピザの方が好きですか？
+
+45. 🛒 Supermarkets sell expensive festive foods in late December; do you spend more money on food than usual?
+12月下旬のスーパーでは高価な祝賀用食品が売られていますが、普段より食費にお金をかけますか？
+
+46. 🕯️ Lighting the fourth candle on the Advent wreath signifies Christmas is imminent; are you prepared?
+アドベントリースの4本目のキャンドルを灯すことはクリスマスが差し迫っていることを意味しますが、準備はできていますか？
+
+47. 👯 Do you think walking with hands in your partner's pocket is cute or embarrassing?
+パートナーのポケットに手を入れて歩くのは可愛いと思いますか、それとも恥ずかしいと思いますか？
+
+48. 🧛 Bram Stoker managed a theater in December; do you prefer live theater or movies?
+ブラム・ストーカーは12月に劇場を経営していましたが、生の演劇と映画、どちらが好きですか？
+
+49. 🚂 The steam engine was essential for the industrial revolution; do you think AI is the steam engine of our time?
+蒸気機関は産業革命に不可欠でしたが、AIは現代の蒸気機関だと思いますか？
+
+50. ✨ As Christmas approaches, do you feel a sense of magic in the air?
+クリスマスが近づくにつれて、空気の中に魔法のような感覚を感じますか？`
         }
     ]
 };
+
 
 
 
