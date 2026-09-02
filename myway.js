@@ -1,4 +1,4 @@
-const myWay = {
+const myway = {
     questions: `#My Way (Discussion)
 1. "And now, the end is near." — What is something you wish you could do one more time before it ends?
 「そして今、終わりが近づいている」― 終わる前に、もう一度やりたいことは何？
