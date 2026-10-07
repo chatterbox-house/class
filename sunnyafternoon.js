@@ -1,7 +1,7 @@
 const sunnyafternoon = {
     questions: `#Sunny Afternoon (Discussion)
-1. "The tax man's taken all my dough." — If you had to pay a "fun tax" every time you did something you loved (video games, sweets, hanging out with friends), what would you refuse to pay for?
-  「税務署が俺の金を全部持って行った」― もし好きなこと（ゲーム、お菓子、友達と遊ぶこと）をするたびに「楽しい税」を払わないといけなかったら、絶対に払いたくないものは何？
+1. "The tax man's taken all my dough." — If you had to pay a "fun tax" every time you did something you loved (video games, sweets, hanging out with friends), what would you gladly keep paying for?
+  「税務署が俺の金を全部持って行った」― もし好きなこと（ゲーム、お菓子、友達と遊ぶこと）をするたびに「楽しい税」を払わないといけなかったら、それでも喜んで払い続けたいものは何？
 2. "And left me in this stately home." — If you were stuck at home for a whole weekend with no internet, what would you do to pass the time?
   「そして俺をこの立派な屋敷に置き去りにした」― もし週末ずっと家に閉じ込められて、インターネットもなかったら、何をして時間をつぶす？
 3. "Lazing on a sunny afternoon." — What's your absolute favorite way to do absolutely nothing?
