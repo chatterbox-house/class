@@ -45,6 +45,5 @@ const californiadreaming = {
 
 15. "California dreamin'." — Do you think dreaming about a different life makes people happier, or does it stop them from enjoying the life they already have?
     「カリフォルニアを夢見ている」― 違う人生を夢見ることは、人を幸せにすると思う？それとも、今の生活を楽しめなくしてしまうと思う？
-    `
+`
 };
-```
