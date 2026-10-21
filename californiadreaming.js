@@ -1,6 +1,5 @@
-```javascript
 const californiadreaming = {
-questions: `#California Dreaming' (Discussion)
+    questions: `# California Dreaming (Discussion)
 
 1. "All the leaves are brown." — What changes in nature do you notice most when the seasons change?
    「木の葉はすべて茶色だ」― 季節が変わるとき、自然のどんな変化に一番気づく？
