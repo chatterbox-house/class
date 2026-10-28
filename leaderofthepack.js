@@ -1,4 +1,4 @@
-const leaderOfthepack = {
+const leaderofthepack = {
 questions: `#Leader of the Pack (Discussion)
 
 1. "There she is, let's ask her. Betty, is that Jimmy's ring you're wearing?" — If you saw a friend wearing something that looked like a couple's ring, would you ask her about it? Why or why not?
