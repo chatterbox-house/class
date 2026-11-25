@@ -1,5 +1,5 @@
-// australia_new_zealand.js
-var australiaNewZealand = {
+// anz.js
+var anz = {
     questions: `#Australia & New Zealand Discussion Questions 
 1. Australia is one of the few countries where voting is compulsory, and people can be fined for not voting. Should Japan make voting compulsory too? Why or why not?
    オーストラリアは投票が義務の数少ない国の一つで、投票しないと罰金を科されることがあります。日本も投票を義務にすべきだと思いますか？理由は？
